@@ -1,13 +1,13 @@
 {
   "status": "PASS",
-  "checked_on": "2026-09-25",
+  "checked_on": "2026-10-04",
   "version": "4.3",
-  "scope": "Static repository, accounting, dependency-order and source-manifest checks, plus app.js in a mocked DOM. No real browser or hardware validation; supplier receipts and every original external URL were not verified.",
+  "scope": "Repository-wide static consistency audit: active task/hour/date parity, purchasing prerequisites and reuse, bilingual rendered content, source archive hashes/text/page/link counts, optional project accounting and app.js in a mocked DOM. No real-browser or hardware validation, new supplier quotes or full external-URL recheck.",
   "html_pages": 76,
   "main_pages": 10,
   "month_pages": 14,
-  "local_file_and_anchor_links": 4270,
-  "unique_external_link_targets": 751,
+  "local_file_and_anchor_links": 4282,
+  "unique_external_link_targets": 753,
   "all_external_link_targets_network_checked": false,
   "original_pdfs": 52,
   "original_pdf_pages": 1600,
@@ -20,7 +20,11 @@
     "html_extracted_character_counts_match": true,
     "pdf_annotation_links_match_html": true,
     "input_or_backup_zip_compared_in_this_audit": false,
-    "provenance_note": "The prior report recorded a retained backup ZIP comparison. This audit independently checked the repository PDFs against the retained SHA-256 manifest; it did not reopen that ZIP."
+    "provenance_note": "All 52 repository PDF hashes match the retained manifest; HTML page, extracted-character and annotation-link counts were rechecked on 2026-10-04. PDF page counts and exact annotation-target equality were last extracted on 2026-09-25; original PDF files remain byte-identical. Neither the old backup ZIP nor every external URL was reopened in this audit.",
+    "sha256_checked_on": "2026-10-04",
+    "html_counts_checked_on": "2026-10-04",
+    "html_annotation_link_counts_match": true,
+    "pdf_annotation_link_targets_checked_on": "2026-09-25"
   },
   "hours": {
     "base_hours": 2660,
@@ -62,12 +66,16 @@
     "site": {
       "command": "python3 tests/site_test.py",
       "status": "PASS",
-      "test_cases": 7
+      "test_cases": 8
     },
     "content": {
       "command": "python3 tests/content_test.py",
       "status": "PASS",
-      "test_cases": 6
+      "test_cases": 7
+    },
+    "procurement_render": {
+      "command": "python3 scripts/render_procurement.py --check",
+      "status": "PASS"
     }
   },
   "javascript": {
@@ -86,20 +94,20 @@
   },
   "language_element_counts": {
     "changes.html": {
-      "ru": 83,
-      "en": 83
+      "ru": 86,
+      "en": 86
     },
     "curriculum.html": {
-      "ru": 1259,
-      "en": 1259
+      "ru": 1265,
+      "en": 1265
     },
     "full-syllabus.html": {
       "ru": 380,
       "en": 380
     },
     "growth.html": {
-      "ru": 287,
-      "en": 287
+      "ru": 289,
+      "en": 289
     },
     "hexapod-review.html": {
       "ru": 234,
@@ -114,8 +122,8 @@
       "en": 735
     },
     "method.html": {
-      "ru": 127,
-      "en": 127
+      "ru": 130,
+      "en": 130
     },
     "months/2026-11.html": {
       "ru": 194,
@@ -150,12 +158,12 @@
       "en": 171
     },
     "months/2027-07.html": {
-      "ru": 152,
-      "en": 152
-    },
-    "months/2027-08.html": {
       "ru": 155,
       "en": 155
+    },
+    "months/2027-08.html": {
+      "ru": 158,
+      "en": 158
     },
     "months/2027-09.html": {
       "ru": 163,
@@ -174,12 +182,12 @@
       "en": 137
     },
     "procurement.html": {
-      "ru": 2189,
-      "en": 2189
+      "ru": 2211,
+      "en": 2211
     },
     "projects.html": {
-      "ru": 553,
-      "en": 553
+      "ru": 580,
+      "en": 580
     },
     "source-library/full-en.html": {
       "ru": 472,
@@ -395,5 +403,34 @@
     "No real-browser visual or interaction test.",
     "Archive hashes establish equality to the retained manifest, not authorship or provenance authenticity.",
     "Planned PASS gates, component delivery dates and hardware performance are not experimentally validated."
+  ],
+  "curriculum_task_rows_checked": 129,
+  "procurement_first_use_references_checked": 28,
+  "optional_project_extensions": 1,
+  "optional_projects_in_required_calendar": 0,
+  "consistency_findings_resolved": [
+    {
+      "id": "PROCUREMENT_FIRST_USE",
+      "detail": "Moved the arm gripper and shared 6 mm shaft to A1 before physical A04 work; synchronized purchase-calendar and monthly preparation notes, shared-stock references and passive-T1 versus powered-T2 spool scope."
+    },
+    {
+      "id": "CURRICULUM_MATERIAL_CONDITIONS",
+      "detail": "Restored three bilingual material-availability conditions in L1/A1/T2 curriculum task rows; all 129 rendered curriculum tasks now have an automated source-parity check."
+    },
+    {
+      "id": "GAIN_SCHEDULING_TRANSLATION",
+      "detail": "Aligned M10 Russian deferred scope with the English gain-scheduling study; ordinary PID gain tuning remains core."
+    },
+    {
+      "id": "OPTIONAL_SCOPE_AND_REPORTS",
+      "detail": "Qualified the procurement no-added-hours statement for core purchases, retained the optional PCB +40–60 h exception, separated content update from price-review dates and refreshed static audit counters."
+    }
+  ],
+  "unchanged_by_consistency_fixes": [
+    "Required task hours and calendar segments",
+    "300-hour contingency and 85 unallocated hours",
+    "340-hour tail and optional TAIL_PCB scope",
+    "Product prices, first basket and subsystem budget scenarios",
+    "Archived PDF files and extracted source text"
   ]
 }

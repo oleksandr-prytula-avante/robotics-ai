@@ -225,6 +225,38 @@ class SiteTests(unittest.TestCase):
                         quantity += Decimal(str(part['quantity']))
                     self.assertGreaterEqual(quantity, 15, 'Twelve installed resistors require at least three spares')
 
+    def test_procurement_stage_precedes_first_physical_use(self):
+        data = json.loads((ROOT / 'procurement.json').read_text())
+        estimate = json.loads((ROOT / 'estimate.json').read_text())
+        schedule = json.loads((ROOT / 'schedule.json').read_text())
+        stage_dates = {}
+        task_dates = {}
+        for segment in schedule['segments']:
+            if segment['hours'] <= 0:
+                continue
+            day = date.fromisoformat(segment['date'])
+            stage = segment['item']
+            stage_dates[stage] = min(day, stage_dates.get(stage, day))
+            key = (stage, segment['task'])
+            task_dates[key] = min(day, task_dates.get(key, day))
+
+        for item in data['items']:
+            for use in item.get('required_for', []):
+                with self.subTest(item=item['id'], use=use):
+                    self.assertIn(use['stage'], estimate['items'])
+                    tasks = estimate['items'][use['stage']]['tasks']
+                    matches = [
+                        index for index, task in enumerate(tasks)
+                        if use['task_ref'] in task.get('refs', [])
+                    ]
+                    self.assertEqual(len(matches), 1, 'Physical use must identify one existing task')
+                    key = (use['stage'], matches[0])
+                    self.assertIn(key, task_dates, 'Physical use must be scheduled')
+                    self.assertLessEqual(
+                        stage_dates[item['stage']], task_dates[key],
+                        f'{item["id"]} is first planned in {item["stage"]}, after {use} needs it',
+                    )
+
 
 if __name__ == '__main__':
     unittest.main()

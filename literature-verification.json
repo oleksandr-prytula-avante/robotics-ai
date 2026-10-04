@@ -22,5 +22,7 @@
     "scope": "Selected official publisher, author, standards and software-documentation pages rechecked for editions, versions, section mappings and access labels; original 2026-09-19 bibliography provenance retained.",
     "all_original_external_urls_fetched": false
   },
-  "scope": "Static bibliography/route consistency and selected primary-source factual checks. The 1,839 preserved PDF annotation links were compared locally, not all fetched. No visual browser, firmware or hardware validation."
+  "scope": "Static bibliography/route consistency and selected primary-source factual checks. The 1,839 preserved PDF annotation links were compared locally, not all fetched. No visual browser, firmware or hardware validation.",
+  "static_rechecked_on": "2026-10-04",
+  "static_recheck_scope": "All 41 bilingual reference entries compared with library.html; all route reference IDs, learning hours and monthly/curriculum occurrences checked locally. Primary-source review dates remain unchanged."
 }

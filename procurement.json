@@ -165,7 +165,13 @@
         "ru": "Первое использование: L1. Дата — в календаре закупок выше.",
         "en": "First use: L1. See the purchasing calendar above."
       },
-      "observed_on": "2026-09-19"
+      "observed_on": "2026-09-19",
+      "required_for": [
+        {
+          "stage": "L1",
+          "task_ref": "L1a"
+        }
+      ]
     },
     {
       "id": "HEX-TTL-USB",
@@ -207,7 +213,13 @@
         "ru": "Первое использование: L1. Дата — в календаре закупок выше.",
         "en": "First use: L1. See the purchasing calendar above."
       },
-      "observed_on": "2026-09-19"
+      "observed_on": "2026-09-19",
+      "required_for": [
+        {
+          "stage": "L1",
+          "task_ref": "L1a"
+        }
+      ]
     },
     {
       "id": "ARM-XM540",
@@ -256,7 +268,13 @@
         "url": "https://www.rcscomponents.kiev.ua/product/902-0133-000.html",
         "availability": "http://schema.org/InStock",
         "quantity_tier": 1
-      }
+      },
+      "required_for": [
+        {
+          "stage": "A1",
+          "task_ref": "A02"
+        }
+      ]
     },
     {
       "id": "ARM-XM430",
@@ -298,7 +316,13 @@
         "ru": "Первое использование: A1. Дата — в календаре закупок выше.",
         "en": "First use: A1. See the purchasing calendar above."
       },
-      "observed_on": "2026-09-25"
+      "observed_on": "2026-09-25",
+      "required_for": [
+        {
+          "stage": "A1",
+          "task_ref": "A04"
+        }
+      ]
     },
     {
       "id": "ARM-U2D2",
@@ -440,7 +464,13 @@
         "url": "https://prom.ua/ua/p984465311-komplekt-shagovyj-dvigatel.html",
         "availability": "http://schema.org/InStock",
         "quantity_tier": 1
-      }
+      },
+      "required_for": [
+        {
+          "stage": "A1",
+          "task_ref": "A02"
+        }
+      ]
     },
     {
       "id": "ARM-GEAR",
@@ -486,7 +516,13 @@
         "url": "https://grizlicnc.com.ua/tovar-planetarnyj-reduktor-nema23",
         "availability": "https://schema.org/InStock",
         "quantity_tier": 1
-      }
+      },
+      "required_for": [
+        {
+          "stage": "A1",
+          "task_ref": "A02"
+        }
+      ]
     },
     {
       "id": "ARM-ENC",
@@ -535,7 +571,13 @@
         "url": "https://www.rcscomponents.kiev.ua/product/as5048a%20adapterboard.html",
         "availability": "http://schema.org/InStock",
         "quantity_tier": 1
-      }
+      },
+      "required_for": [
+        {
+          "stage": "A1",
+          "task_ref": "A02"
+        }
+      ]
     },
     {
       "id": "POWER-12",
@@ -864,7 +906,13 @@
         "url": "https://prom.ua/ua/p3191546950-reduktornyj-dvigatel-37dx73l.html",
         "availability": "http://schema.org/PreOrder",
         "quantity_tier": 1
-      }
+      },
+      "required_for": [
+        {
+          "stage": "T2",
+          "task_ref": "T04"
+        }
+      ]
     },
     {
       "id": "tail_driver_mdd10a",
@@ -912,7 +960,13 @@
         "url": "https://zuma.in.ua/p3087462457-mdd10a-motor-driver.html",
         "availability": "http://schema.org/InStock",
         "quantity_tier": 1
-      }
+      },
+      "required_for": [
+        {
+          "stage": "T2",
+          "task_ref": "T04"
+        }
+      ]
     },
     {
       "id": "tail_current_acs724",
@@ -960,7 +1014,13 @@
         "url": "https://prom.ua/ua/p3179423669-derzhatel-datchika-toka.html",
         "availability": "http://schema.org/PreOrder",
         "quantity_tier": 1
-      }
+      },
+      "required_for": [
+        {
+          "stage": "T2",
+          "task_ref": "T04"
+        }
+      ]
     },
     {
       "id": "shared_petg",
@@ -1084,7 +1144,13 @@
         "url": "https://tvoe.ua/protiazka-dlia-kabelia-stekloplastikovaia-edrawrope384-d38-mm-l4-m-s068001",
         "availability": "https://schema.org/InStock",
         "quantity_tier": 1
-      }
+      },
+      "required_for": [
+        {
+          "stage": "T1",
+          "task_ref": "T02"
+        }
+      ]
     },
     {
       "id": "tail_tendon",
@@ -1123,7 +1189,13 @@
         "ru": "Первое использование: T1. Дата — в календаре закупок выше.",
         "en": "First use: T1. See the purchasing calendar above."
       },
-      "observed_on": "2026-09-19"
+      "observed_on": "2026-09-19",
+      "required_for": [
+        {
+          "stage": "T1",
+          "task_ref": "T03"
+        }
+      ]
     },
     {
       "id": "tail_ptfe",
@@ -1166,7 +1238,13 @@
         "url": "https://prom.ua/ua/p204295156-trubka-ptfe-24mm.html",
         "availability": "http://schema.org/InStock",
         "quantity_tier": 1
-      }
+      },
+      "required_for": [
+        {
+          "stage": "T1",
+          "task_ref": "T03"
+        }
+      ]
     },
     {
       "id": "shared_bearings_626",
@@ -1205,7 +1283,13 @@
         "ru": "Первое использование: T1. Дата — в календаре закупок выше.",
         "en": "First use: T1. See the purchasing calendar above."
       },
-      "observed_on": "2026-09-19"
+      "observed_on": "2026-09-19",
+      "required_for": [
+        {
+          "stage": "T1",
+          "task_ref": "T03"
+        }
+      ]
     },
     {
       "id": "shared_shaft_6mm",
@@ -1214,14 +1298,14 @@
         "en": "WV06 hardened 6 mm shaft, 300 mm length"
       },
       "group": "mechanics",
-      "stage": "T1",
+      "stage": "A1",
       "price": 99,
       "currency": "UAH",
       "url": "https://diyshop.com.ua/ua/linejnye-napravlyayuschie/val-dlya-chpu-cnc-3d-printera-sf06-wcs6-wv06-d-6mm-300mm",
       "seller": "DIYShop",
       "quantity_text": {
-        "ru": "1 отрезок 300 мм на образцы; дополнительные длины по CAD барабанов.",
-        "en": "One 300 mm length for samples; additional lengths from spool CAD."
+        "ru": "1 отрезок 300 мм: сначала две оси хвата A04, затем остаток на образцы барабанов T1. Дополнительные длины — по общему раскрою CAD.",
+        "en": "One 300 mm length: first two A04 gripper pins, then remaining stock for T1 spool samples. Additional lengths follow the combined CAD cut list."
       },
       "status_label": {
         "ru": "Карточка: в наличии / готов к отправке; количество партии не подтверждено.",
@@ -1241,10 +1325,20 @@
       },
       "sources": [],
       "timing": {
-        "ru": "Первое использование: T1. Дата — в календаре закупок выше.",
-        "en": "First use: T1. See the purchasing calendar above."
+        "ru": "Первое использование: A04 внутри A1; остаток повторно используется в T1. Подготовить отрезок до изготовления хвата.",
+        "en": "First use: A04 within A1; reuse the remaining stock in T1. Have the shaft available before gripper fabrication."
       },
-      "observed_on": "2026-09-25"
+      "observed_on": "2026-09-25",
+      "required_for": [
+        {
+          "stage": "A1",
+          "task_ref": "A04"
+        },
+        {
+          "stage": "T1",
+          "task_ref": "T03"
+        }
+      ]
     },
     {
       "id": "shared_m3_inserts_screws",
@@ -1322,7 +1416,13 @@
         "ru": "Первое использование: T3. Дата — в календаре закупок выше.",
         "en": "First use: T3. See the purchasing calendar above."
       },
-      "observed_on": "2026-09-19"
+      "observed_on": "2026-09-19",
+      "required_for": [
+        {
+          "stage": "T3",
+          "task_ref": "T08"
+        }
+      ]
     },
     {
       "id": "tail_padding",
@@ -1358,7 +1458,13 @@
         "ru": "Первое использование: T3. Дата — в календаре закупок выше.",
         "en": "First use: T3. See the purchasing calendar above."
       },
-      "observed_on": "2026-09-19"
+      "observed_on": "2026-09-19",
+      "required_for": [
+        {
+          "stage": "T3",
+          "task_ref": "T08"
+        }
+      ]
     },
     {
       "id": "arm_rgb_camera",
@@ -2677,7 +2783,13 @@
         "ru": "Первое использование: T2. Дата — в календаре закупок выше.",
         "en": "First use: T2. See the purchasing calendar above."
       },
-      "observed_on": "2026-09-19"
+      "observed_on": "2026-09-19",
+      "required_for": [
+        {
+          "stage": "T2",
+          "task_ref": "T04"
+        }
+      ]
     },
     {
       "id": "wb-solder-stand",
@@ -6818,7 +6930,13 @@
         "totals": {
           "UAH": 1117.0
         }
-      }
+      },
+      "required_for": [
+        {
+          "stage": "A1",
+          "task_ref": "A02"
+        }
+      ]
     },
     {
       "id": "arm-remaining-actuators",
@@ -6934,7 +7052,13 @@
         "totals": {
           "UAH": 135560.75
         }
-      }
+      },
+      "required_for": [
+        {
+          "stage": "A2",
+          "task_ref": "A05"
+        }
+      ]
     },
     {
       "id": "arm-gripper-kit",
@@ -6943,7 +7067,7 @@
         "en": "Gripper actuator, jaws and transmission"
       },
       "group": "arm",
-      "stage": "A2",
+      "stage": "A1",
       "price": 1166.0,
       "currency": "UAH",
       "url": null,
@@ -6973,8 +7097,8 @@
         "https://files.waveshare.com/upload/f/f4/ST3215_Servo_User_Manual.pdf"
       ],
       "timing": {
-        "ru": "Подготовить к этапу A2; дата использования указана в календаре закупок.",
-        "en": "Prepare for A2; see the purchasing calendar for the usage date."
+        "ru": "Подготовить к A04 внутри A1: привод, механизм и измерения хвата нужны до сборки полного манипулятора A2. Учитывать выбор после расчёта и срок поставки.",
+        "en": "Prepare for A04 within A1: the actuator, mechanism and measured gripper operation are needed before full-arm assembly in A2. Allow for selection after sizing and delivery."
       },
       "observed_on": "2026-09-25",
       "procurement_status": "priced_components",
@@ -7036,6 +7160,42 @@
             "sources": [
               "https://arduino.ua/prod3167-radialnii-podshipnik-626zz-6h19h6mm"
             ]
+          },
+          {
+            "name": {
+              "ru": "PETG 3DUN 1,75 мм, прозрачный, 1 кг",
+              "en": "3DUN PETG 1.75 mm, transparent, 1 kg"
+            },
+            "reused_from": "shared_petg",
+            "quantity": 1,
+            "unit": ""
+          },
+          {
+            "name": {
+              "ru": "Connexa TPU 95A 1,75 мм, серый, 1 кг",
+              "en": "Connexa TPU 95A 1.75 mm, grey, 1 kg"
+            },
+            "reused_from": "tail_tpu",
+            "quantity": 1,
+            "unit": ""
+          },
+          {
+            "name": {
+              "ru": "WV06: закалённый вал 6 мм, отрезок 300 мм",
+              "en": "WV06 hardened 6 mm shaft, 300 mm length"
+            },
+            "reused_from": "shared_shaft_6mm",
+            "quantity": 1,
+            "unit": ""
+          },
+          {
+            "name": {
+              "ru": "SPEC SP-1693A420: M3 резьбовые термовставки и винты, 420 шт.",
+              "en": "SPEC SP-1693A420: M3 heat-set inserts and screws, 420 pieces"
+            },
+            "reused_from": "shared_m3_inserts_screws",
+            "quantity": 1,
+            "unit": ""
           }
         ],
         "notes": {
@@ -7049,7 +7209,13 @@
         "totals": {
           "UAH": 1166.0
         }
-      }
+      },
+      "required_for": [
+        {
+          "stage": "A1",
+          "task_ref": "A04"
+        }
+      ]
     },
     {
       "id": "tail-spool-hardware",
@@ -7087,8 +7253,8 @@
         "https://www.pololu.com/product/4755"
       ],
       "timing": {
-        "ru": "Подготовить к этапу T2; дата использования указана в календаре закупок.",
-        "en": "Prepare for T2; see the purchasing calendar for the usage date."
+        "ru": "Печатные барабаны, натяжители и концевые крепления изготовить из общего запаса уже в T03 внутри T1. Покупные моторные ступицы этой строки нужны к T04 внутри T2, после выбора приводов.",
+        "en": "Fabricate passive spools, tensioners and tendon terminations from shared stock in T03 within T1. The purchased motor hubs in this row are needed for T04 within T2 after actuator selection."
       },
       "observed_on": "2026-09-25",
       "procurement_status": "priced_components",
@@ -7127,8 +7293,8 @@
           }
         ],
         "notes": {
-          "ru": "T2: купить одну пару ступиц для двух двигателей. После PASS первой активной секции T04 в рамках T2: ещё две пары, всего три. При поэтапной покупке 1 + 2 пары считать по обычной цене 62,61 PLN: всего 187,83 PLN. Цена TME 55,24 PLN за пару действует при единовременной покупке трёх комплектов и в этот поэтапный расчёт не включена. Ø6 мм совместим с круглым/D-валом Pololu. Два барабана, два винтовых натяжителя и четыре фиксатора концов тяги изготовить из PETG с общими M3; масштабирование 2/2/4→6/6/12. Для Dyneema использовать охват барабана и рассчитанное удержание конца; зажим для стального троса без проверки не подставлять. Вал, 626ZZ, PETG, тяга и PTFE уже учтены отдельно. Проверить прочность печати, ползучесть, диаметр навивки и осевую фиксацию.",
-          "en": "T2: purchase one hub pair for two motors. After first-active-section T04 PASS within T2: two more pairs, three total. For staged purchases of 1 + 2 pairs, budget the ordinary PLN 62.61 rate: PLN 187.83 total. TME lists PLN 55.24 per pair when ordering three together; that discount is excluded from this staged estimate. The 6 mm bore fits Pololu round/D shafts. Print two spools, two screw tensioners and four tendon terminations using PETG/shared M3; scale 2/2/4→6/6/12. Use capstan wraps and a validated end-retention design for Dyneema; do not substitute a steel-wire clamp without verification. Shaft, 626ZZ, PETG, tendon and PTFE are already separate rows. Validate print strength, creep, winding diameter and axial retention."
+          "ru": "Пассивные барабаны, натяжители и концевые крепления нужны уже в T03/T1 и изготавливаются из ранее учтённых PETG и M3; моторные ступицы для пассивных проверок не обязательны. T2: купить одну пару ступиц для двух двигателей. После PASS первой активной секции T04 в рамках T2: ещё две пары, всего три. При поэтапной покупке 1 + 2 пары считать по обычной цене 62,61 PLN: всего 187,83 PLN. Цена TME 55,24 PLN за пару действует при единовременной покупке трёх комплектов и в этот поэтапный расчёт не включена. Ø6 мм совместим с круглым/D-валом Pololu. Два барабана, два винтовых натяжителя и четыре фиксатора концов тяги изготовить из PETG с общими M3; масштабирование 2/2/4→6/6/12. Для Dyneema использовать охват барабана и рассчитанное удержание конца; зажим для стального троса без проверки не подставлять. Вал, 626ZZ, PETG, тяга и PTFE уже учтены отдельно. Проверить прочность печати, ползучесть, диаметр навивки и осевую фиксацию.",
+          "en": "Passive spools, tensioners and terminations are already needed in T03/T1 and use previously budgeted PETG and M3 stock; motor hubs are not required for passive tests. T2: purchase one hub pair for two motors. After first-active-section T04 PASS within T2: two more pairs, three total. For staged purchases of 1 + 2 pairs, budget the ordinary PLN 62.61 rate: PLN 187.83 total. TME lists PLN 55.24 per pair when ordering three together; that discount is excluded from this staged estimate. The 6 mm bore fits Pololu round/D shafts. Print two spools, two screw tensioners and four tendon terminations using PETG/shared M3; scale 2/2/4→6/6/12. Use capstan wraps and a validated end-retention design for Dyneema; do not substitute a steel-wire clamp without verification. Shaft, 626ZZ, PETG, tendon and PTFE are already separate rows. Validate print strength, creep, winding diameter and axial retention."
         },
         "scope": {
           "ru": "Первый образец T2: одна пара ступиц 62,61 PLN; расширение T2 после T04 PASS: ещё две пары 125,22 PLN. Всего 187,83 PLN до пересчёта налогов и доставки.",
@@ -7137,7 +7303,13 @@
         "totals": {
           "PLN": 62.61
         }
-      }
+      },
+      "required_for": [
+        {
+          "stage": "T2",
+          "task_ref": "T04"
+        }
+      ]
     },
     {
       "id": "tail-encoder-interface",
@@ -7279,7 +7451,13 @@
         "totals": {
           "UAH": 14.1
         }
-      }
+      },
+      "required_for": [
+        {
+          "stage": "T2",
+          "task_ref": "T04"
+        }
+      ]
     },
     {
       "id": "tail-current-interface",
@@ -7426,7 +7604,13 @@
         "totals": {
           "UAH": 62.97
         }
-      }
+      },
+      "required_for": [
+        {
+          "stage": "T2",
+          "task_ref": "T04"
+        }
+      ]
     },
     {
       "id": "tail-node-link",
@@ -7889,7 +8073,13 @@
         "totals": {
           "UAH": 600.0
         }
-      }
+      },
+      "required_for": [
+        {
+          "stage": "T3",
+          "task_ref": "T08"
+        }
+      ]
     },
     {
       "id": "optional-battery-system",
@@ -8534,7 +8724,13 @@
         "totals": {
           "EUR": 4.76
         }
-      }
+      },
+      "required_for": [
+        {
+          "stage": "A1",
+          "task_ref": "A02"
+        }
+      ]
     },
     {
       "id": "logic-supply-kit",
@@ -8636,7 +8832,13 @@
           "en": "One shared sensor 5 V rail, already budgeted in its own row."
         },
         "totals": {}
-      }
+      },
+      "required_for": [
+        {
+          "stage": "T2",
+          "task_ref": "T04"
+        }
+      ]
     }
   ],
   "dependency_notes": [

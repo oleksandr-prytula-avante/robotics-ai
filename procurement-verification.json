@@ -1,6 +1,6 @@
 {
   "status": "market_research_recorded",
-  "scope": "101 purchase rows: the existing 100-row supplier-source audit is dated 2026-09-25; one optional PCB planning allowance was added locally on 2026-10-04 without a supplier quote or fresh external checking. Arithmetic and rendering are checked locally; no physical qualification.",
+  "scope": "101 purchase rows: the 100-row supplier-source audit remains dated 2026-09-25; the optional PCB allowance is an unquoted planning estimate. On 2026-10-04, local arithmetic, rendered cards, first-use task links, material reuse and purchasing-calendar consistency were rechecked. No new supplier-price or physical qualification is claimed.",
   "version": "4.3",
   "observed_on": "2026-09-25",
   "product_rows": 101,
@@ -36,5 +36,7 @@
   ],
   "optional_planning_rows": 1,
   "unpriced_optional_rows": 1,
-  "local_content_updated_on": "2026-10-04"
+  "local_content_updated_on": "2026-10-04",
+  "local_consistency_checked_on": "2026-10-04",
+  "first_use_task_references_checked": 28
 }

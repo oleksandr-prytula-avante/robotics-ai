@@ -49,9 +49,15 @@ class ContentBlocks(HTMLParser):
             self.week = int(attrs['id'][5:])
         if tag not in self.VOID_TAGS:
             self.depth += 1
-        if tag == 'div' and ('data-task' in attrs or 'data-reading-stage' in attrs):
+        if tag in {'div', 'tr'} and ('data-task' in attrs or 'data-reading-stage' in attrs):
             self.active.append({'attrs': attrs, 'depth': self.depth,
-                                'week': self.week, 'text': [], 'refs': []})
+                                'week': self.week, 'text': [], 'refs': [],
+                                'cells': [], 'in_cell': False})
+        if tag == 'td':
+            for block in self.active:
+                if 'data-task' in block['attrs']:
+                    block['cells'].append([])
+                    block['in_cell'] = True
         if 'data-reading-ref' in attrs:
             for block in self.active:
                 if 'data-reading-stage' in block['attrs']:
@@ -65,9 +71,13 @@ class ContentBlocks(HTMLParser):
     def handle_endtag(self, tag):
         if tag in self.VOID_TAGS:
             return
+        if tag == 'td':
+            for block in self.active:
+                block['in_cell'] = False
         if self.active and self.active[-1]['depth'] == self.depth:
             block = self.active.pop()
             block['text'] = ''.join(block['text'])
+            block['cells'] = [''.join(cell) for cell in block['cells']]
             target = self.tasks if 'data-task' in block['attrs'] else self.readings
             target.append(block)
         self.depth -= 1
@@ -75,6 +85,8 @@ class ContentBlocks(HTMLParser):
     def handle_data(self, data):
         for block in self.active:
             block['text'].append(data)
+            if block['in_cell']:
+                block['cells'][-1].append(data)
 
 
 class ContentTests(unittest.TestCase):
@@ -191,6 +203,28 @@ class ContentTests(unittest.TestCase):
                         for language, value in task.get(field, {}).items():
                             self.assertIn(value, block['text'], f'{field}/{language} is stale or missing')
         self.assertEqual(actual, expected)
+
+    def test_curriculum_tasks_match_source_hours_and_material_conditions(self):
+        page = ContentBlocks(ROOT / 'curriculum.html')
+        expected = {
+            f'{stage}.{index}': task
+            for stage, item in self.items.items()
+            for index, task in enumerate(item['tasks'], 1)
+        }
+        self.assertEqual(Counter(block['attrs']['data-task'] for block in page.tasks),
+                         Counter({task_id: 1 for task_id in expected}))
+        for block in page.tasks:
+            task_id = block['attrs']['data-task']
+            with self.subTest(task=task_id):
+                task = expected[task_id]
+                self.assertEqual(len(block['cells']), 5)
+                hours = [0 if value == '—' else int(value)
+                         for value in block['cells'][1:]]
+                self.assertEqual(hours, [task[key] for key in (*CATEGORIES, 'hours')])
+                for field in ('title', 'result', 'material_ready_condition'):
+                    for language, value in task.get(field, {}).items():
+                        self.assertIn(value, block['cells'][0],
+                                      f'{field}/{language} is stale or missing')
 
     def test_reading_routes_references_and_hours_match(self):
         routes = self.literature['routes']

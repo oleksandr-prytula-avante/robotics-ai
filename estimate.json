@@ -785,7 +785,7 @@
       },
       "deferred": [
         {
-          "ru": "Полное сравнительное исследование диаграмм Боде и запасов устойчивости на 5–8 частотах, сравнение ZOH/Тастина и разных периодов Ts, настройка коэффициентов регулятора — D_FREQ.",
+          "ru": "Полное сравнительное исследование диаграмм Боде и запасов устойчивости на 5–8 частотах, сравнение ZOH/Тастина и разных периодов Ts, адаптация коэффициентов по рабочей точке (gain scheduling) — D_FREQ.",
           "en": "Full five-to-eight-frequency Bode/margins benchmarks, ZOH/Tustin/multiple-Ts comparisons and gain-scheduling study move to D_FREQ."
         }
       ],
@@ -5717,7 +5717,7 @@
           },
           "deferred": [
             {
-              "ru": "Полное сравнительное исследование диаграмм Боде и запасов устойчивости на 5–8 частотах, сравнение ZOH/Тастина и разных периодов Ts, настройка коэффициентов регулятора — D_FREQ.",
+              "ru": "Полное сравнительное исследование диаграмм Боде и запасов устойчивости на 5–8 частотах, сравнение ZOH/Тастина и разных периодов Ts, адаптация коэффициентов по рабочей точке (gain scheduling) — D_FREQ.",
               "en": "Full five-to-eight-frequency Bode/margins benchmarks, ZOH/Tustin/multiple-Ts comparisons and gain-scheduling study move to D_FREQ."
             }
           ],

@@ -1,6 +1,6 @@
 {
   "status": "PASS",
-  "checked_on": "2026-09-25",
+  "checked_on": "2026-10-04",
   "revision": "4.3",
   "verification_command": "python3 tests/content_test.py",
   "monthly_pages_checked": 14,
@@ -25,5 +25,5 @@
   ],
   "calendar_capacity_hours": 3045,
   "allocated_work_and_allowance_hours": 2960,
-  "scope": "Static task, result, material-condition, reading-reference and learning-hour parity; calendar and internal prerequisite-order checks. Dates model active effort and remain conditional on future gates and material receipt. No browser or hardware test."
+  "scope": "Static monthly task/result/material-condition and reading/hour parity; full curriculum task parity, calendar and internal prerequisite checks. Purchasing summaries now prepare the A04 gripper during A1. Dates remain conditional on actual gates and material receipt; no browser or hardware test."
 }
