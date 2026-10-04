@@ -1,9 +1,9 @@
 {
   "status": "market_research_recorded",
-  "scope": "All 100 purchase rows, linked component evidence, arithmetic, stage order and precision-divider materials; static and supplier-source audit, no physical qualification.",
+  "scope": "101 purchase rows: the existing 100-row supplier-source audit is dated 2026-09-25; one optional PCB planning allowance was added locally on 2026-10-04 without a supplier quote or fresh external checking. Arithmetic and rendering are checked locally; no physical qualification.",
   "version": "4.3",
   "observed_on": "2026-09-25",
-  "product_rows": 100,
+  "product_rows": 101,
   "priced_product_rows": 98,
   "multi_currency_rows": 2,
   "unpriced_requirement_rows": 0,
@@ -31,6 +31,10 @@
     "Waveshare cable shipping to Ukraine requires prior confirmation; Pololu carrier service to the exact destination remains unconfirmed.",
     "Shipping, currency conversion and import charges are excluded; reused materials and alternatives are not added twice.",
     "Printer model remains unspecified; nozzle alternatives are priced separately.",
-    "Resistor/IC seller minimum orders can exceed listed component subtotals; additional goods are not silently added to the budget."
-  ]
+    "Resistor/IC seller minimum orders can exceed listed component subtotals; additional goods are not silently added to the budget.",
+    "The optional TAIL_PCB allowance of UAH 3,000–6,000 is a rough unquoted pilot estimate including shipping and one possible revision; it is excluded from the first basket and required budget scenarios."
+  ],
+  "optional_planning_rows": 1,
+  "unpriced_optional_rows": 1,
+  "local_content_updated_on": "2026-10-04"
 }

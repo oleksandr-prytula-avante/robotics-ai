@@ -8220,6 +8220,71 @@
       }
     },
     {
+      "id": "tail-pcb-optional",
+      "feature_id": "TAIL_PCB",
+      "title": {
+        "ru": "Факультативная PCB: сигнальная плата узла хвоста",
+        "en": "Optional PCB: tail-node signal carrier board"
+      },
+      "group": "tail",
+      "stage": "T2",
+      "mandatory": false,
+      "price": null,
+      "currency": "UAH",
+      "url": null,
+      "seller": null,
+      "quantity_text": {
+        "ru": "0 по основному плану. Собрать и проверить 1 узел; только после PASS платы — до 3 одинаковых узлов. Размер партии голых плат уточнить при заказе.",
+        "en": "0 in the core plan. Assemble and validate 1 node; only after PCB PASS expand to at most 3 identical nodes. Confirm the bare-board batch size when ordering."
+      },
+      "status_label": {
+        "ru": "Только планирование: поставщик, состав и цена ещё не выбраны. Закупка необязательна.",
+        "en": "Planning only: supplier, BOM and quote are not selected. Purchase is optional."
+      },
+      "classification_label": {
+        "ru": "Факультативно · после T04 PASS",
+        "en": "Optional · after T04 PASS"
+      },
+      "compatibility": {
+        "ru": "Простая двухслойная слаботочная сигнальная плата под выбранную ESP32-S3 DevKitC-1: разъёмы и проверенное согласование сигналов энкодеров, входов и выходов. MDD10A и ACS724 остаются внешними модулями; моторное питание и силовой путь измерения тока через PCB не проходят. Базовая связь — USB; CAN для этой платы не требуется.",
+        "en": "A simple two-layer low-current carrier for the selected ESP32-S3 DevKitC-1: connectors and validated encoder/input/output signal conditioning. MDD10A and ACS724 remain external modules; motor power and the current-sensing power path do not pass through this PCB. USB remains the baseline link; this board does not require CAN."
+      },
+      "notes": {
+        "ru": "Отдельный приблизительный резерв 3 000–6 000 грн на пилот: до двух малых партий плат с одной возможной ревизией, детали по BOM и доставка. Это оценка для планирования, не проверенная котировка; сумму уточнить после схемы и предложения изготовителя. Дополнительную сборку и интеграцию узлов 2–3 оценить отдельно. Переиспользовать ESP32-S3, T12, мультиметр, БП с ограничением тока, логический анализатор, пинцет, держатель с лупой, флюс и оплётку из M04/M06. Инструменты и внешние модули повторно не покупать. Первая корзина и основные бюджетные сценарии этот резерв не включают.",
+        "en": "Separate rough pilot allowance of UAH 3,000–6,000: up to two small board batches with one possible revision, BOM parts and shipping. This is a planning estimate, not a checked quote; confirm the total after the schematic and manufacturer quote. Estimate assembly and integration of nodes 2–3 separately. Reuse the ESP32-S3, T12, multimeter, current-limited PSU, logic analyser, tweezers, magnifying holder, flux and wick from M04/M06. Do not repurchase tools or external modules. The first basket and core budget scenarios exclude this allowance."
+      },
+      "sources": [],
+      "timing": {
+        "ru": "Начинать только после T04 PASS первой активной секции. Утвердить распиновку, схемы сигналов и BOM; затем заказать и испытать пилотную PCB. Расширять до трёх узлов после PASS пилота. Основной T2 продолжается с готовыми модулями, если PCB отложена.",
+        "en": "Start only after T04 PASS for the first active section. Confirm pin mapping, signal circuits and BOM before ordering and testing the pilot PCB. Expand to three nodes after pilot PASS. Core T2 continues with ready-made modules if the PCB is deferred."
+      },
+      "procurement_status": "optional_planning_allowance",
+      "added_on": "2026-10-04",
+      "planning_allowance": {
+        "min": 3000,
+        "max": 6000,
+        "currency": "UAH",
+        "kind": "rough_unquoted_estimate",
+        "included_in_required_budget": false,
+        "includes_shipping": true,
+        "possible_revisions": 1
+      },
+      "project_link": "projects.html#tail-pcb",
+      "start_gate": "T04_PASS",
+      "reused_items": [
+        "tail-esp32-s3",
+        "wb-solder",
+        "wb-meter",
+        "wb-psu",
+        "wb-logic",
+        "wb-hand-tools",
+        "wb-mat-holder",
+        "wb-flux-wick",
+        "tail_driver_mdd10a",
+        "tail_current_acs724"
+      ]
+    },
+    {
       "id": "optional-pi-card-reader",
       "title": {
         "ru": "Кардридер, корпус и крепление Raspberry Pi",
@@ -8723,7 +8788,7 @@
   ],
   "baseline_hours_unchanged": 2960,
   "first_basket_subtotal_uah": 22319.5,
-  "updated_on": "2026-09-25",
+  "updated_on": "2026-10-04",
   "first_basket_unpriced_rows": 0,
   "budget_note": {
     "ru": "Для всех 38 ранее неоценённых строк подобраны товары с опубликованными ценами либо указан повторный расход уже учтённых материалов. Сумма каждой карточки относится только к её перечисленному составу и этапу; альтернативы не складываются. Валюты сохранены отдельно. Доставка, импортные платежи, работа и дополнительные детали после CAD не включены. Комплект образца не означает готовую спецификацию всего робота. Минимальная сумма заказа отдельных магазинов раскрыта в карточках; недостающая до неё сумма не добавлена как неуказанный товар. Для некоторых комплектов поэтому потребуется объединённый заказ.",

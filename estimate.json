@@ -3842,8 +3842,8 @@
       },
       "assumptions": [
         {
-          "ru": "Готовые DC-моторы с редуктором/энкодером и готовые драйверы; нет разработки редуктора/FOC/PCB с нуля. Два привода проверяются сначала, ещё четыре добавляются после допуска активной секции.",
-          "en": "Stock geared DC motors/encoders and drivers; no gearbox/FOC/PCB development from scratch. Qualify two drives first; add four after the active-section gate."
+          "ru": "Основная версия использует готовые DC-моторы с редуктором/энкодером и готовые драйверы; разработка редуктора, FOC и силовых PCB не входит в 340 ч. Два привода проверяются сначала, ещё четыре добавляются после допуска активной секции. Своя сигнальная плата TAIL_PCB — отдельная опция после PASS T04, без обязательного изменения основной версии.",
+          "en": "The core version uses stock geared DC motors/encoders and drivers; gearbox, FOC and power-PCB development are outside the 340 h. Qualify two drives first; add four after the active-section gate. The custom signal carrier TAIL_PCB is a separate option after T04 PASS and does not require changing the core version."
         },
         {
           "ru": "Планово: три варианта шага позвонка, три варианта хребта в короткой секции, две ревизии тросовой секции/шкивов, одна полная сборка и одна локальная коррекция развязки/направляющих.",
@@ -3881,7 +3881,137 @@
       "learning": 50,
       "building": 193,
       "verification": 97,
-      "retained_physical_scope": true
+      "retained_physical_scope": true,
+      "optional_extensions": [
+        {
+          "id": "TAIL_PCB",
+          "title": {
+            "ru": "Опционально: своя плата двухмоторного узла хвоста",
+            "en": "Optional: custom PCB for a two-motor tail node"
+          },
+          "optional": true,
+          "scheduled": false,
+          "not_in_core_total": true,
+          "required_for_core_acceptance": false,
+          "prerequisites": [
+            "M04",
+            "M06",
+            "M07",
+            "TAIL.T04"
+          ],
+          "entry": {
+            "ru": "Начинать после фактического PASS T04: первая секция с двумя моторами работает на стенде, распиновка, уровни энкодеров и измерение тока проверены. Зафиксировать размеры и распиновку конкретной ESP32-S3 DevKit, разъёмы и доступ к USB. Плановая дата T04 сама по себе не означает готовность.",
+            "en": "Start after actual T04 PASS: the first two-motor section works on the bench, and pin assignments, encoder levels and current measurement are validated. Freeze the actual ESP32-S3 DevKit dimensions/pinout, connectors and USB access. The nominal T04 date alone does not establish readiness."
+          },
+          "purpose": {
+            "ru": "Закрепить уже проверенную схему на одной воспроизводимой плате: меньше отдельных переходников, подписанные соединения и удобная замена узла. В текущей архитектуре хвоста три узла по два двигателя; одна разработка может повторяться до трёх раз.",
+            "en": "Put the validated circuit on one reproducible board: fewer separate adapters, labelled connections and easier node replacement. The current tail architecture has three two-motor nodes; one design can be repeated up to three times."
+          },
+          "result": {
+            "ru": "Одна собранная и проверенная двухслойная интерфейсная плата для готовой ESP32-S3 DevKit. Сохранены проект KiCad, схема, карта разъёмов, перечень компонентов (BOM), Gerber и файлы сверловки, версия прошивки и протокол сравнения со стендом. Изготовление и приёмку второго и третьего экземпляра оценить отдельно перед тиражированием.",
+            "en": "One assembled and validated two-layer interface PCB for a ready-made ESP32-S3 DevKit. Retain the KiCad project, schematic, connector map, bill of materials (BOM), Gerbers/drill files, firmware version and comparison with the bench prototype. Estimate assembly and acceptance of the second and third copies separately before replication."
+          },
+          "scope": [
+            {
+              "ru": "Гнёзда под готовую ESP32-S3 DevKit, фиксируемые или однозначно маркированные разъёмы, контрольные точки и крепёж; проверить посадочные места, доступ к USB и зону антенны.",
+              "en": "Sockets for the ready-made ESP32-S3 DevKit, locking or clearly labelled connectors, test points and mounting; check footprints, USB access and antenna clearance."
+            },
+            {
+              "ru": "Два энкодера: четыре канала A/B с уже проверенным согласованием уровней до 3,3 В. Два аналоговых входа от готовых датчиков тока с проверенными масштабированием и фильтрацией.",
+              "en": "Two encoders: four A/B channels using validated level conversion to 3.3 V. Two analogue inputs from stock current sensors with validated scaling and filtering."
+            },
+            {
+              "ru": "Два PWM и два DIR к готовому MDD10A; разъёмы концевиков и диагностических сигналов по проверенной карте GPIO. Связь остаётся USB, прошивка и протоколы повторно используются.",
+              "en": "Two PWM and two DIR outputs to the stock MDD10A; limit-switch and diagnostic connectors following the validated GPIO map. Retain USB communication and reuse firmware and protocols."
+            }
+          ],
+          "boundaries": {
+            "ru": "На PCB только логика и сигнальные интерфейсы. MDD10A, силовые датчики ACS724 и моторная проводка остаются внешними. Сохранить проверенную общую землю и раздельные положительные линии USB 5 В, внешних 5 В датчиков и 12 В моторов; исключить обратное питание USB. Независимая остановка сохраняется. Собственный силовой драйвер, FOC, CAN, голый чип ESP32 и RF-разводка в этот блок не входят.",
+            "en": "The PCB carries only logic and signal interfaces. MDD10A, the high-current ACS724 modules and motor wiring stay external. Preserve the validated common ground and separate USB 5 V, external sensor 5 V and motor 12 V positive rails; prevent USB back-powering. Retain independent stopping. A custom power driver, FOC, CAN, a bare ESP32 chip and RF routing are outside this block."
+          },
+          "approximate_extra_hours_range": {
+            "low": 40,
+            "high": 60,
+            "unit": "hours",
+            "basis": {
+              "ru": "Дополнительные активные часы после общей базы: один умеренный проект из проверенных схем, один рабочий экземпляр и одна небольшая корректировка. Это инженерная оценка; крупная переделка или изменение схемы требуют пересчёта.",
+              "en": "Additional active hours after shared foundations: one modest design using validated circuits, one working unit and one small correction. This is an engineering estimate; major rework or circuit changes require re-estimation."
+            }
+          },
+          "work_packages": [
+            {
+              "title": {
+                "ru": "KiCad, проверка интерфейсов, схема и ERC",
+                "en": "KiCad, interface review, schematic and ERC"
+              },
+              "low": 10,
+              "high": 15
+            },
+            {
+              "title": {
+                "ru": "Посадочные места, размещение, трассировка, DRC и файлы производства",
+                "en": "Footprints, placement, routing, DRC and fabrication files"
+              },
+              "low": 12,
+              "high": 18
+            },
+            {
+              "title": {
+                "ru": "Сборка, первый запуск и одна небольшая корректировка",
+                "en": "Assembly, bring-up and one small correction"
+              },
+              "low": 12,
+              "high": 18
+            },
+            {
+              "title": {
+                "ru": "Повторные проверки двухмоторного узла и комплект документации",
+                "en": "Two-motor node revalidation and release files"
+              },
+              "low": 6,
+              "high": 9
+            }
+          ],
+          "acceptance": [
+            {
+              "ru": "Схема и PCB согласованы, проверки ERC/DRC разобраны; размеры и распиновка подтверждены реальными деталями. До установки контроллера проверены замыкания, полярность и линии питания.",
+              "en": "Schematic and PCB agree, ERC/DRC findings are resolved or justified, and dimensions/pinout match actual parts. Check shorts, polarity and power rails before fitting the controller."
+            },
+            {
+              "ru": "На рабочем диапазоне двух моторов повторены проверки счёта энкодеров, нуля/масштаба и отклика датчиков тока, PWM/DIR и задержек. Результаты сопоставлены с исходным стендом по прежним критериям.",
+              "en": "Across the two-motor operating envelope, repeat encoder counting, current-sensor offset/scale/response, PWM/DIR and timing checks. Compare with the original bench setup using the existing criteria."
+            },
+            {
+              "ru": "Повторены проверки включения, сброса, потери USB-связи, сторожевого таймера и независимой остановки. При установке платы в хвост действуют все прежние критерии проекта; отказ платы не засчитывается как PASS.",
+              "en": "Repeat power-up, reset, USB-link loss, watchdog and independent-stop checks. All existing project criteria apply when the board is fitted to the tail; a board failure is not a PASS."
+            }
+          ],
+          "calendar": {
+            "ru": "Опция не включена в 340 ч хвоста, 2 960 ч программы с резервом и помесячное расписание. Отказ от неё не мешает завершить хвост на проверенных готовых модулях и проводке. Если выбрать 40–60 ч и пересчитать календарь, из 85 свободных часов останется 45–25 ч, а резерв 300 ч сохранится; общий объём с резервом станет 3 000–3 020 ч. Сейчас свободные часы стоят в декабре 2027: более ранняя работа требует перестановки этапов. Изготовление и доставка — отдельное календарное ожидание; рабочий стенд сохраняется на это время.",
+            "en": "This option is excluded from the tail's 340 h, the programme's 2,960 h including contingency and the monthly schedule. Skipping it does not block completing the tail with validated stock modules and wiring. If selected and rescheduled, 40–60 h leaves 45–25 of the 85 unallocated hours while retaining 300 h contingency; total effort including contingency becomes 3,000–3,020 h. The free hours currently fall in December 2027, so earlier work requires resequencing. Fabrication and delivery add elapsed waiting time; retain the working bench setup while waiting."
+          },
+          "procurement_id": "tail-pcb-optional",
+          "reading": [
+            {
+              "title": "KiCad — Getting Started",
+              "url": "https://docs.kicad.org/10.0/en/getting_started_in_kicad/getting_started_in_kicad.html",
+              "scope": {
+                "ru": "Выборочно: схема, посадочные места, ERC/DRC, двухслойная разводка и файлы производства; изучение входит в 40–60 ч. Версию руководства сверить с установленным KiCad.",
+                "en": "Selected topics: schematic, footprints, ERC/DRC, two-layer layout and fabrication outputs; study is inside the 40–60 h. Match the guide to the installed KiCad version."
+              }
+            },
+            {
+              "title": "Espressif — ESP32-S3 PCB Layout Design",
+              "url": "https://docs.espressif.com/projects/esp-hardware-design-guidelines/en/latest/esp32s3/pcb-layout-design.html",
+              "scope": {
+                "ru": "Для платы-носителя: размещение модуля и свободная зона антенны. Размеры и распиновку готовой DevKit проверить отдельно по конкретному экземпляру.",
+                "en": "For the carrier: module placement and antenna clearance. Separately verify the actual DevKit dimensions and pinout."
+              }
+            }
+          ],
+          "updated_on": "2026-10-04"
+        }
+      ]
     },
     "A1": {
       "id": "A1",

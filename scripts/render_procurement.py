@@ -35,6 +35,10 @@ def total_text(amounts):
     return ' + '.join(money(value, currency) for currency, value in amounts.items())
 
 def price(item):
+    if item.get('planning_allowance'):
+        allowance = item['planning_allowance']
+        amount = money(allowance['min'], allowance['currency']) + '–' + money(allowance['max'], allowance['currency'])
+        return amount + ' · ' + span(bi('ориентир', 'planning allowance'))
     if item.get('market'):
         amounts = item['market']['totals']
         if amounts:
@@ -111,18 +115,23 @@ def card(item):
     researched = bool(item.get('market'))
     out = '<article class="purchase-card anchor' + (' researched' if researched else '') + '" id="item-' + item['id'] + '">'
     out += '<div class="purchase-head"><span class="tag">' + span(item['classification_label']) + '</span><strong>' + price(item) + '</strong></div>'
-    label = bi('Стоимость указанного состава; доставка отдельно.','Cost of the listed components; shipping excluded.') if researched else bi('Цена за единицу или указанный комплект.','Price per unit or stated bundle.')
+    if item.get('planning_allowance'):
+        label = bi('Отдельный приблизительный резерв; не проверенная цена продавца и не часть обязательного бюджета.', 'Separate rough allowance; not a checked supplier quote or part of the required budget.')
+    else:
+        label = bi('Стоимость указанного состава; доставка отдельно.','Cost of the listed components; shipping excluded.') if researched else bi('Цена за единицу или указанный комплект.','Price per unit or stated bundle.')
     out += '<p class="small">' + span(label) + '</p><h3>' + span(item['title']) + '</h3>'
     for key, css in [('quantity_text',''),('status_label','small'),('timing','small'),('compatibility',''),('notes','small')]:
         if item.get(key) and any(item[key].values()):
             out += '<p' + (' class="'+css+'"' if css else '') + '>' + span(item[key]) + '</p>'
     if researched:
         out += market_details(item['market'])
-    else:
+    elif not item.get('planning_allowance'):
         out += '<p class="small">' + span(bi('Дата проверки цены: ','Price checked: ')) + item['observed_on'] + '</p>'
     out += '<div class="purchase-links">'
     if item.get('url') and not researched:
         out += link(item['url'], html.escape(item['seller'] or 'Product')) + ' · '
+    if item.get('project_link'):
+        out += link(item['project_link'], span(bi('Факультативный PCB-проект хвоста', 'Optional tail PCB project'))) + ' '
     for n, url in enumerate(item.get('sources', []), 1):
         out += link(url, span(bi(f'Технический источник {n}',f'Technical source {n}'))) + ' '
     return out + '</div></article>'
