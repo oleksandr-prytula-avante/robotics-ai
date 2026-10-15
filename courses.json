@@ -1,0 +1,1449 @@
+{
+  "checked_on": "2026-10-15",
+  "currency": "USD",
+  "verification_scope": "Public Udemy syllabus, requirements, metadata and visible individual-purchase offer; paid lessons were not watched. Price is a session-specific snapshot, not a quote. No purchase made.",
+  "courses": [
+    {
+      "id": "cpp",
+      "url": "https://www.udemy.com/course/beginning-c-plus-plus-programming/",
+      "title": "Beginning C++ Programming - From Beginner to Beyond",
+      "instructor": "Frank Mitropoulos / Tim Buchalka",
+      "duration": "45h 51m",
+      "updated": "2026-10",
+      "language": "English",
+      "rating": 4.6,
+      "ratings": 81913,
+      "price_usd_snapshot": 11.99,
+      "purchase_verified": true,
+      "tier": "selected",
+      "watch": {
+        "ru": "Указатели, ссылки, классы, владение ресурсами, smart pointers и STL. Базовый синтаксис проходить по необходимости.",
+        "en": "Pointers, references, classes, resource ownership, smart pointers and STL. Skip familiar introductory syntax."
+      },
+      "limitations": {
+        "ru": "C++14/17. CMake, санитайзеры и сборку ARM64 отдельно отработать в проекте.",
+        "en": "C++14/17. Practise CMake, sanitizers and ARM64 builds separately in the project."
+      }
+    },
+    {
+      "id": "ros",
+      "url": "https://www.udemy.com/course/ros2-for-beginners/",
+      "title": "ROS 2 for Beginners (ROS Jazzy - 2026)",
+      "instructor": "Edouard Renard",
+      "duration": "13h 13m",
+      "updated": "2026-01",
+      "language": "English",
+      "rating": 4.7,
+      "ratings": 7010,
+      "price_usd_snapshot": 11.99,
+      "purchase_verified": true,
+      "tier": "selected",
+      "watch": {
+        "ru": "Узлы C++/Python, topics, services, сообщения, параметры, launch и запись данных.",
+        "en": "C++/Python nodes, topics, services, messages, parameters, launch and recording."
+      },
+      "limitations": {
+        "ru": "Jazzy / Ubuntu 24.04 подходят плану. Работу VM, USB и графики ARM64 проверить на своём Mac.",
+        "en": "Jazzy / Ubuntu 24.04 match the plan. Qualify VM, USB and ARM64 graphics on your Mac."
+      }
+    },
+    {
+      "id": "algebra",
+      "url": "https://www.udemy.com/course/linear-algebra-theory-and-implementation/",
+      "title": "Master linear algebra: theory and implementation in code",
+      "instructor": "Mike X Cohen",
+      "duration": "33h 45m",
+      "updated": "2026-08",
+      "language": "English",
+      "rating": 4.8,
+      "ratings": 7026,
+      "price_usd_snapshot": 12.99,
+      "purchase_verified": true,
+      "tier": "selected",
+      "watch": {
+        "ru": "Векторы, матрицы, системы уравнений, least squares и SVD; использовать Python.",
+        "en": "Vectors, matrices, linear systems, least squares and SVD; use Python."
+      },
+      "limitations": {
+        "ru": "Это линейная алгебра. Производные, ОДУ и геометрию вращений дополнять литературой M02.",
+        "en": "This covers linear algebra. Add derivatives, ODEs and rotation geometry from the M02 reading."
+      }
+    },
+    {
+      "id": "stats",
+      "url": "https://www.udemy.com/course/statsml_x/",
+      "title": "Master statistics & machine learning: intuition, math, code",
+      "instructor": "Mike X Cohen",
+      "duration": "38h 19m",
+      "updated": "2026-08",
+      "language": "English",
+      "rating": 4.8,
+      "ratings": 3093,
+      "price_usd_snapshot": 12.99,
+      "purchase_verified": true,
+      "tier": "selected",
+      "watch": {
+        "ru": "Распределения, выбросы, доверительные интервалы, проверка гипотез и регрессия.",
+        "en": "Distributions, outliers, confidence intervals, hypothesis tests and regression."
+      },
+      "limitations": {
+        "ru": "Использовать Python; не проходить весь ML повторно. Калибровку и утечку данных проверять на своих измерениях.",
+        "en": "Use Python; avoid duplicating the entire ML syllabus. Test calibration and data leakage on your own measurements."
+      }
+    },
+    {
+      "id": "electronics",
+      "url": "https://www.udemy.com/course/crash-course-electronics-and-pcb-design/",
+      "title": "Crash Course Electronics and PCB Design",
+      "instructor": "Andre LaMothe",
+      "duration": "112h",
+      "updated": "2026-07",
+      "language": "English",
+      "rating": 4.7,
+      "ratings": 19631,
+      "price_usd_snapshot": 14.99,
+      "purchase_verified": true,
+      "tier": "selected",
+      "watch": {
+        "ru": "Цепи постоянного тока, RC, измерительные приборы, питание и пайка.",
+        "en": "DC circuits, RC, instruments, power and soldering."
+      },
+      "limitations": {
+        "ru": "112 часов — большая библиотека. PCB-инструменты курса требуют Windows; для этой программы выбрать теорию и стендовые разделы.",
+        "en": "112 hours is a large reference library. Course PCB tools require Windows; select theory and bench sections for this programme."
+      }
+    },
+    {
+      "id": "signals",
+      "url": "https://www.udemy.com/course/signal-processing/",
+      "title": "Signal processing problems, solved in MATLAB and in Python",
+      "instructor": "Mike X Cohen",
+      "duration": "12h 33m",
+      "updated": "2026-08",
+      "language": "English",
+      "rating": 4.5,
+      "ratings": 2643,
+      "price_usd_snapshot": 11.99,
+      "purchase_verified": true,
+      "tier": "selected",
+      "watch": {
+        "ru": "Фильтрация, Fourier/FFT, спектр и шум; Python-примеры.",
+        "en": "Filtering, Fourier/FFT, spectrum and noise; Python examples."
+      },
+      "limitations": {
+        "ru": "Офлайн-фильтр без фазового сдвига нельзя напрямую переносить в причинный цикл MCU. Задержку измерить отдельно.",
+        "en": "An offline zero-phase filter cannot be copied directly into a causal MCU loop. Measure latency separately."
+      }
+    },
+    {
+      "id": "cad",
+      "url": "https://www.udemy.com/course/fusion-360-beginners-course/",
+      "title": "Fusion 360 Beginners Course",
+      "instructor": "Jaiprakash Pandey",
+      "duration": "15h 19m",
+      "updated": "2023-02",
+      "language": "English",
+      "rating": 4.5,
+      "ratings": 6438,
+      "price_usd_snapshot": 13.99,
+      "purchase_verified": true,
+      "tier": "selected",
+      "watch": {
+        "ru": "Эскизы с ограничениями, параметрические детали, сборки и чертежи.",
+        "en": "Constrained sketches, parametric parts, assemblies and drawings."
+      },
+      "limitations": {
+        "ru": "Интерфейс 2023 года; Fusion для Mac/Windows. Прочность FDM, допуски печати и испытания детали курсом не подтверждены.",
+        "en": "2023 interface; Fusion on Mac/Windows. FDM strength, print tolerances and part validation remain separate."
+      }
+    },
+    {
+      "id": "machine",
+      "url": "https://www.udemy.com/course/robotics-mechatronics-2-3d-cad-machine-design-fusion-360-conveyor-cnc/",
+      "title": "Robotics & Mechatronics 2: 3D Modelling & Machine Design",
+      "instructor": "Mouhammad Hamsho / Kemalaldin Hamso",
+      "duration": "10h 23m",
+      "updated": "2023-12",
+      "language": "English",
+      "rating": 4.5,
+      "ratings": 275,
+      "price_usd_snapshot": 11.99,
+      "purchase_verified": true,
+      "tier": "selected",
+      "watch": {
+        "ru": "Сборки, крепёж, направляющие и ременные передачи в CAD.",
+        "en": "CAD assemblies, fasteners, guides and belt transmissions."
+      },
+      "limitations": {
+        "ru": "Пример — машина/конвейер. Тросовый хвост, преднатяг, трение и усталость троса необходимо проектировать и проверять отдельно.",
+        "en": "The example is a machine/conveyor. Tendon routing, pretension, friction and cable fatigue need separate design and testing."
+      }
+    },
+    {
+      "id": "esp32",
+      "url": "https://www.udemy.com/course/iot-application-development-with-the-esp32-using-the-esp-idf/",
+      "title": "IoT Application Development with the ESP32 Using the ESP-IDF",
+      "instructor": "Kevin Aguilar",
+      "duration": "8h 48m",
+      "updated": "2026-01",
+      "language": "English",
+      "rating": 4.2,
+      "ratings": 1503,
+      "price_usd_snapshot": 12.99,
+      "purchase_verified": true,
+      "tier": "selected",
+      "watch": {
+        "ru": "Структура ESP-IDF-проекта, FreeRTOS, очереди, синхронизация и GPIO/PWM. Wi-Fi/AWS — по желанию.",
+        "en": "ESP-IDF project structure, FreeRTOS, queues, synchronization and GPIO/PWM. Wi-Fi/AWS are optional."
+      },
+      "limitations": {
+        "ru": "Классический ESP32 и установка Eclipse в Windows. Для ESP32-S3 и Mac нужны свои pinout/toolchain; энкодер, watchdog и драйвер мотора дополнить документацией Espressif.",
+        "en": "Classic ESP32 and Windows Eclipse setup. Adapt pinout/toolchain for ESP32-S3 and Mac; add encoder, watchdog and motor-driver work from Espressif documentation."
+      }
+    },
+    {
+      "id": "drives",
+      "url": "https://www.udemy.com/course/robotic-drives-and-physics/",
+      "title": "Robotic Drives & Physics: Robotics, learn by building III",
+      "instructor": "Ian Juby",
+      "duration": "10h 49m",
+      "updated": "2023-09",
+      "language": "English",
+      "rating": 4.7,
+      "ratings": 511,
+      "price_usd_snapshot": 11.99,
+      "purchase_verified": true,
+      "tier": "selected",
+      "watch": {
+        "ru": "Момент, рычаги, двигатели, передаточные отношения и механика привода.",
+        "en": "Torque, levers, motors, gearing and drive mechanics."
+      },
+      "limitations": {
+        "ru": "Полезная основа; не готовая конструкция ноги. Собственные нагрузки, нагрев и запасы момента считать и измерять.",
+        "en": "Useful foundations, not a complete leg design. Calculate and measure your loads, heating and torque margins."
+      }
+    },
+    {
+      "id": "control",
+      "url": "https://www.udemy.com/course/control-systems-made-simple-modeling-simulation-control/",
+      "title": "Control Systems Made Simple | Beginner's Guide",
+      "instructor": "Ryan Ahmed / Mitchell Bouchard / Stemplicity",
+      "duration": "7h 27m",
+      "updated": "2018-09",
+      "language": "English",
+      "rating": 4.6,
+      "ratings": 1419,
+      "price_usd_snapshot": 11.99,
+      "purchase_verified": true,
+      "tier": "selected",
+      "watch": {
+        "ru": "Механическая модель, DC-мотор, передаточные функции и PID.",
+        "en": "Mechanical modelling, DC motor, transfer functions and PID."
+      },
+      "limitations": {
+        "ru": "Старый курс с MATLAB/Simulink. Формулы переносить в Python; дискретизацию, насыщение, watchdog и задержки отработать отдельно.",
+        "en": "Older MATLAB/Simulink course. Port equations to Python; separately address discretization, saturation, watchdogs and delays."
+      }
+    },
+    {
+      "id": "kalman",
+      "url": "https://www.udemy.com/course/advanced-kalman-filtering-and-sensor-fusion/",
+      "title": "Advanced Kalman Filtering and Sensor Fusion",
+      "instructor": "Steven Dumble",
+      "duration": "8h 20m",
+      "updated": "2021-07",
+      "language": "English",
+      "rating": 4.8,
+      "ratings": 1046,
+      "price_usd_snapshot": 12.99,
+      "purchase_verified": true,
+      "tier": "selected",
+      "watch": {
+        "ru": "Сначала линейный KF, ковариации и настройка; EKF/UKF — для углубления. Есть реализация C++.",
+        "en": "Start with linear KF, covariance and tuning; reserve EKF/UKF for deeper study. Includes C++ implementation."
+      },
+      "limitations": {
+        "ru": "Нужны линейная алгебра и вероятность. Пример автомобиля не заменяет калибровку IMU и проверку наблюдаемости наклона ноги.",
+        "en": "Requires linear algebra and probability. A vehicle example does not replace IMU calibration or leg attitude observability checks."
+      }
+    },
+    {
+      "id": "model",
+      "url": "https://www.udemy.com/course/ros2-tf-urdf-rviz-gazebo/",
+      "title": "ROS 2 for Beginners Level 2 - TF | URDF | RViz | Gazebo",
+      "instructor": "Edouard Renard",
+      "duration": "13h 45m",
+      "updated": "2025-11",
+      "language": "English",
+      "rating": 4.8,
+      "ratings": 1886,
+      "price_usd_snapshot": 13.99,
+      "purchase_verified": true,
+      "tier": "selected",
+      "watch": {
+        "ru": "TF, URDF/xacro, RViz, новая ветка Gazebo, bridge и датчики.",
+        "en": "TF, URDF/xacro, RViz, the new Gazebo branch, bridge and sensors."
+      },
+      "limitations": {
+        "ru": "В общей длительности есть 4 ч 19 мин старого Gazebo Classic. Этот блок пропустить; работать по ветке нового Gazebo.",
+        "en": "Total duration includes 4h 19m of old Gazebo Classic material. Skip that block and follow the new Gazebo branch."
+      }
+    },
+    {
+      "id": "advanced",
+      "url": "https://www.udemy.com/course/ros2-advanced-core-concepts/",
+      "title": "ROS 2 for Beginners Level 3 - Advanced Concepts",
+      "instructor": "Edouard Renard",
+      "duration": "13h 58m",
+      "updated": "2025-11",
+      "language": "English",
+      "rating": 4.7,
+      "ratings": 531,
+      "price_usd_snapshot": 11.99,
+      "purchase_verified": true,
+      "tier": "selected",
+      "watch": {
+        "ru": "Actions, отмена команд, lifecycle, executors и components.",
+        "en": "Actions, cancellation, lifecycle, executors and components."
+      },
+      "limitations": {
+        "ru": "В примерах указан Humble / Ubuntu 22.04: API сверять с Jazzy. Это не курс по ros2_control.",
+        "en": "Examples name Humble / Ubuntu 22.04: check APIs against Jazzy. This is not the ros2_control course."
+      }
+    },
+    {
+      "id": "hardware",
+      "url": "https://www.udemy.com/course/ros2_control/",
+      "title": "ROS 2 - Hardware and ros2_control, Step by Step",
+      "instructor": "Edouard Renard",
+      "duration": "7h 11m",
+      "updated": "2025-11",
+      "language": "English",
+      "rating": 4.7,
+      "ratings": 247,
+      "price_usd_snapshot": 12.99,
+      "purchase_verified": true,
+      "tier": "selected",
+      "watch": {
+        "ru": "C++ hardware interface, чтение/запись оборудования, controller manager и симуляция.",
+        "en": "C++ hardware interfaces, hardware read/write, controller manager and simulation."
+      },
+      "limitations": {
+        "ru": "Основной путь Ubuntu 24.04. Собственный протокол MCU, таймауты и безопасную остановку реализовать для своего стенда.",
+        "en": "Main path uses Ubuntu 24.04. Implement your MCU protocol, timeouts and safe stop for your actual bench."
+      }
+    },
+    {
+      "id": "moveit",
+      "url": "https://www.udemy.com/course/ros2-moveit2/",
+      "title": "ROS 2 Moveit 2 - Control a Robotic Arm",
+      "instructor": "Edouard Renard",
+      "duration": "7h 8m",
+      "updated": "2025-11",
+      "language": "English",
+      "rating": 4.7,
+      "ratings": 238,
+      "price_usd_snapshot": 11.99,
+      "purchase_verified": true,
+      "tier": "selected",
+      "watch": {
+        "ru": "Конфигурация MoveIt, URDF, планирование, захват и API Python/C++.",
+        "en": "MoveIt configuration, URDF, planning, gripper and Python/C++ APIs."
+      },
+      "limitations": {
+        "ru": "Ubuntu 24.04. Ограничения собственной руки, коллизии и фактическое исполнение необходимо валидировать.",
+        "en": "Ubuntu 24.04. Validate your own arm limits, collisions and actual execution."
+      }
+    },
+    {
+      "id": "arm",
+      "url": "https://www.udemy.com/course/robotics-and-ros-2-learn-by-doing-manipulators/",
+      "title": "Robotics and ROS 2 - Learn by Doing! Manipulators",
+      "instructor": "Antonio Brandi",
+      "duration": "21h 41m",
+      "updated": "2026-01",
+      "language": "English",
+      "rating": 4.3,
+      "ratings": 902,
+      "price_usd_snapshot": 11.99,
+      "purchase_verified": true,
+      "tier": "selected",
+      "watch": {
+        "ru": "Кинематика, цифровой двойник, сборка, последовательный интерфейс, ros2_control и MoveIt.",
+        "en": "Kinematics, digital twin, assembly, serial interface, ros2_control and MoveIt."
+      },
+      "limitations": {
+        "ru": "Выбирать Jazzy/24.04; есть также Humble. Alexa/cloud пропустить. Учебная рука не доказывает грузоподъёмность своей конструкции.",
+        "en": "Choose Jazzy/24.04; a Humble path also exists. Skip Alexa/cloud. The teaching arm does not validate your own payload design."
+      }
+    },
+    {
+      "id": "vision",
+      "url": "https://www.udemy.com/course/python-for-computer-vision-with-opencv-and-deep-learning/",
+      "title": "Python for Computer Vision with OpenCV and Deep Learning",
+      "instructor": "Jose Portilla / Pierian Training",
+      "duration": "14h 4m",
+      "updated": "2021-03",
+      "language": "English",
+      "rating": 4.5,
+      "ratings": 13436,
+      "price_usd_snapshot": 11.99,
+      "purchase_verified": true,
+      "tier": "selected",
+      "watch": {
+        "ru": "OpenCV: изображения, пороги, морфология, контуры, признаки и трекинг.",
+        "en": "OpenCV images, thresholds, morphology, contours, features and tracking."
+      },
+      "limitations": {
+        "ru": "Классическая часть полезна, зависимости старые. TensorFlow-блок пропустить; полную метрическую и hand–eye калибровку дополнить отдельно.",
+        "en": "Classical material is useful; dependencies are old. Skip TensorFlow; add complete metric and hand–eye calibration separately."
+      }
+    },
+    {
+      "id": "torch",
+      "url": "https://www.udemy.com/course/pytorch-for-deep-learning/",
+      "title": "PyTorch for Deep Learning Bootcamp",
+      "instructor": "Daniel Bourke / Andrei Neagoie",
+      "duration": "52h 13m",
+      "updated": "2026-02",
+      "language": "English",
+      "rating": 4.6,
+      "ratings": 6446,
+      "price_usd_snapshot": 11.99,
+      "purchase_verified": true,
+      "tier": "selected",
+      "watch": {
+        "ru": "Tensors, обучение/валидация, classification, свои datasets, CNN и transfer learning.",
+        "en": "Tensors, training/validation, classification, custom datasets, CNNs and transfer learning."
+      },
+      "limitations": {
+        "ru": "Выбирать небольшой CPU-эксперимент. CUDA не считать доступной на Mac; все 52 часа для M18 не нужны.",
+        "en": "Choose a small CPU experiment. Do not assume CUDA on Mac; M18 does not require all 52 hours."
+      }
+    },
+    {
+      "id": "dynamics",
+      "url": "https://www.udemy.com/course/robotics-dynamics-control-and-motion-planning-part-2/",
+      "title": "Robotics: Dynamics, Control and Motion planning (Part 2)",
+      "instructor": "Inderpreet Singh",
+      "duration": "3h 51m",
+      "updated": "2026-05",
+      "language": "English",
+      "rating": 4.6,
+      "ratings": 23,
+      "price_usd_snapshot": 11.99,
+      "purchase_verified": true,
+      "tier": "optional",
+      "watch": {
+        "ru": "Euler–Lagrange, Newton–Euler и динамика манипулятора.",
+        "en": "Euler–Lagrange, Newton–Euler and manipulator dynamics."
+      },
+      "limitations": {
+        "ru": "Всего 23 оценки: дополнительное объяснение, не основной источник. Проверить вывод на своей 1–2 DOF модели.",
+        "en": "Only 23 ratings: supplementary explanation, not the primary source. Verify the derivation on your own 1–2 DOF model."
+      }
+    },
+    {
+      "id": "nav",
+      "url": "https://www.udemy.com/course/ros2-nav2-stack/",
+      "title": "ROS 2 Nav2 [Navigation 2 Stack] - with SLAM and Navigation",
+      "instructor": "Edouard Renard",
+      "duration": "6h 4m",
+      "updated": "2025-11",
+      "language": "English",
+      "rating": 4.7,
+      "ratings": 1244,
+      "price_usd_snapshot": 11.99,
+      "purchase_verified": true,
+      "tier": "optional",
+      "watch": {
+        "ru": "Карта, SLAM, локализация и навигационные цели Nav2.",
+        "en": "Mapping, SLAM, localization and Nav2 goals."
+      },
+      "limitations": {
+        "ru": "Только отложенное направление. Примеры Humble требуют адаптации к Jazzy; колёсная навигация не обучает походке.",
+        "en": "Deferred track only. Humble examples need Jazzy adaptation; wheeled navigation does not teach gait control."
+      }
+    },
+    {
+      "id": "rl",
+      "url": "https://www.udemy.com/course/actor-critic-methods-from-paper-to-code-with-pytorch/",
+      "title": "Modern Reinforcement Learning: Actor-Critic Agents",
+      "instructor": "Phil Tabor",
+      "duration": "10h 21m",
+      "updated": "2023-08",
+      "language": "English",
+      "rating": 4.2,
+      "ratings": 587,
+      "price_usd_snapshot": 11.99,
+      "purchase_verified": true,
+      "tier": "optional",
+      "watch": {
+        "ru": "Actor–critic, DDPG, TD3 и SAC с PyTorch.",
+        "en": "Actor–critic, DDPG, TD3 and SAC with PyTorch."
+      },
+      "limitations": {
+        "ru": "Дополнение после M18. Старые Gym-зависимости; покрытие PPO, BC/DAgger и sim-to-real этим курсом не подтверждено.",
+        "en": "Supplement after M18. Older Gym dependencies; PPO, BC/DAgger and sim-to-real coverage is not established."
+      }
+    },
+    {
+      "id": "stm32",
+      "url": "https://www.udemy.com/course/mastering-microcontroller-with-peripheral-driver-development/",
+      "title": "Mastering Microcontroller and Embedded Driver Development",
+      "instructor": "FastBit Embedded Brain Academy / Kiran Nayak",
+      "duration": "28h 34m",
+      "updated": "2026-10",
+      "language": "English",
+      "rating": 4.6,
+      "ratings": 13562,
+      "price_usd_snapshot": 12.99,
+      "purchase_verified": true,
+      "tier": "alternative",
+      "watch": {
+        "ru": "Регистры, GPIO, SPI, I2C, UART и драйверы. Только при выборе STM32.",
+        "en": "Registers, GPIO, SPI, I2C, UART and drivers. Only if choosing STM32."
+      },
+      "limitations": {
+        "ru": "Примеры STM32F407 Discovery; NUCLEO-F446RE требует переноса. Для основного ESP32-S3 этот курс не покупать.",
+        "en": "Examples use STM32F407 Discovery; NUCLEO-F446RE needs porting. Do not buy this for the main ESP32-S3 path."
+      }
+    }
+  ],
+  "core_routes": {
+    "M01": {
+      "courses": [
+        "cpp",
+        "ros"
+      ],
+      "status": "partial",
+      "note": {
+        "ru": "C++ — выборочно по пробелам; ROS — установка и первый обмен. Результат: сборка и диагностика своей библиотеки.",
+        "en": "Use C++ selectively for gaps; ROS for setup and first messages. Deliver a buildable, diagnosable library."
+      },
+      "title": {
+        "ru": "Одна рабочая C++/Python-среда",
+        "en": "One working C++/Python environment"
+      }
+    },
+    "S1": {
+      "courses": [
+        "ros",
+        "model"
+      ],
+      "status": "strong",
+      "note": {
+        "ru": "Сначала узлы и интерфейсы, затем URDF/TF и новый Gazebo. Сделать простой сустав и записать данные.",
+        "en": "Start with nodes/interfaces, then URDF/TF and new Gazebo. Build a simple joint and record data."
+      },
+      "title": {
+        "ru": "Раннее знакомство с ROS на простой имитации сустава",
+        "en": "Early ROS with a simple mock joint"
+      }
+    },
+    "M02": {
+      "courses": [
+        "algebra"
+      ],
+      "status": "partial",
+      "note": {
+        "ru": "Решение систем и least squares применить к измерениям; геометрию вращений, производные и ОДУ взять из литературы секции.",
+        "en": "Apply linear systems and least squares to measurements; use section reading for rotations, derivatives and ODEs."
+      },
+      "title": {
+        "ru": "Математика для измерений и движения",
+        "en": "Mathematics for measurement and motion"
+      }
+    },
+    "M04": {
+      "courses": [
+        "electronics",
+        "signals"
+      ],
+      "status": "partial",
+      "note": {
+        "ru": "Из электроники выбрать питание и измерения; из signals — шум/фильтр. Проверить цепь и сигнал своим прибором.",
+        "en": "Select power and measurement material, then noise/filtering. Verify a circuit and signal with your instruments."
+      },
+      "title": {
+        "ru": "Электроника, измерения и сигналы",
+        "en": "Electronics, measurement and signals"
+      }
+    },
+    "M05": {
+      "courses": [
+        "cad",
+        "machine"
+      ],
+      "status": "partial",
+      "note": {
+        "ru": "CAD — основной; machine — дополнение по соединениям. Обязательны собственные FDM-образцы, допуски и нагрузочный тест.",
+        "en": "CAD is primary; machine design supplements joints. Make FDM coupons, measure tolerances and perform a load test."
+      },
+      "title": {
+        "ru": "CAD, конструкции, FDM и пассивная нога",
+        "en": "CAD, structures, FDM and a passive leg"
+      }
+    },
+    "M06": {
+      "courses": [
+        "esp32"
+      ],
+      "status": "partial",
+      "note": {
+        "ru": "Основной путь ESP32-S3: структура прошивки и RTOS. Отдельно реализовать реальные I2C/SPI/UART, энкодер и watchdog. STM32 — только альтернативная ветка.",
+        "en": "Main ESP32-S3 path: firmware structure and RTOS. Implement actual I2C/SPI/UART, encoder and watchdog separately. STM32 is an alternative only."
+      },
+      "title": {
+        "ru": "Встраиваемый контроллер и реальные интерфейсы",
+        "en": "Embedded controller and physical interfaces"
+      }
+    },
+    "M07": {
+      "courses": [
+        "drives",
+        "control"
+      ],
+      "status": "partial",
+      "note": {
+        "ru": "Связать момент/передачу с моделью и PID. Идентификация, насыщение и нагрев должны быть измерены на одном приводе.",
+        "en": "Connect torque/gearing to the model and PID. Measure identification, saturation and heating on one actuator."
+      },
+      "title": {
+        "ru": "Один привод: стенд, управление и идентификация",
+        "en": "One actuator: rig, control and identification"
+      }
+    },
+    "M08": {
+      "courses": [
+        "arm"
+      ],
+      "status": "partial",
+      "note": {
+        "ru": "Выбрать кинематику и модель; перенести FK/IK на свою 3DOF ногу, проверить численно и на ограничениях.",
+        "en": "Select kinematics and modelling; transfer FK/IK to your 3DOF leg and check numerically against limits."
+      },
+      "title": {
+        "ru": "Рабочая кинематика ноги и основы манипулятора",
+        "en": "Working leg kinematics and manipulator foundations"
+      }
+    },
+    "D1": {
+      "courses": [
+        "drives"
+      ],
+      "status": "partial",
+      "note": {
+        "ru": "Повторить момент и плечо силы. Собственный расчёт на худшую позу и нагрузку обязателен.",
+        "en": "Review torque and moment arms. Calculate the worst pose and load for your design."
+      },
+      "title": {
+        "ru": "Статика и нагрузки до первой ноги",
+        "en": "Statics and loads before the first leg"
+      }
+    },
+    "L1": {
+      "courses": [
+        "hardware",
+        "arm"
+      ],
+      "status": "partial",
+      "note": {
+        "ru": "Использовать аппаратный интерфейс и приёмы сборки. Для ноги отдельно выполнить homing, лимиты и тест аварийного останова.",
+        "en": "Use the hardware interface and assembly methods. Add leg-specific homing, limits and emergency-stop tests."
+      },
+      "title": {
+        "ru": "Первая физическая трёхкоординатная нога",
+        "en": "First physical 3-DOF leg"
+      }
+    },
+    "G1": {
+      "courses": [],
+      "status": "no_purchase",
+      "note": {
+        "ru": "Новый курс не покупать. Выполнить критерии PASS/HOLD секции; при пробеле вернуться к курсу соответствующего модуля.",
+        "en": "Do not buy a new course. Apply the section PASS/HOLD criteria; revisit the relevant module course for specific gaps."
+      },
+      "title": {
+        "ru": "Первая нога: решение PASS/HOLD",
+        "en": "First leg: PASS/HOLD decision"
+      }
+    },
+    "R1": {
+      "courses": [],
+      "status": "no_purchase",
+      "note": {
+        "ru": "Это резерв/свободная ёмкость, не учебная тема. Выбирать курс только под выявленный пробел; заранее резерв не заполнять.",
+        "en": "This is contingency/free capacity, not a teaching topic. Select a course only for an identified gap; leave the reserve unallocated."
+      },
+      "title": {
+        "ru": "Резерв: новая инженерная база и первая нога",
+        "en": "Allowance: engineering foundations and first leg"
+      }
+    },
+    "M03": {
+      "courses": [
+        "stats"
+      ],
+      "status": "strong",
+      "note": {
+        "ru": "Выбрать статистику повторных измерений и регрессию; построить свою калибровку и оценить остатки.",
+        "en": "Select repeated-measurement statistics and regression; build your calibration and evaluate residuals."
+      },
+      "title": {
+        "ru": "Измерения, калибровка и достоверность вывода",
+        "en": "Measurements, calibration and credible conclusions"
+      }
+    },
+    "S2": {
+      "courses": [
+        "hardware",
+        "model"
+      ],
+      "status": "strong",
+      "note": {
+        "ru": "Основной — ros2_control; model повторно для TF/URDF. Сопоставить модель, реальные единицы и запись стендовых данных.",
+        "en": "Use ros2_control as primary; revisit TF/URDF. Reconcile the model, physical units and recorded bench data."
+      },
+      "title": {
+        "ru": "ROS: модель, реальные интерфейсы и данные",
+        "en": "ROS: model, real interfaces and data"
+      }
+    },
+    "D2": {
+      "courses": [
+        "control",
+        "dynamics"
+      ],
+      "status": "partial",
+      "note": {
+        "ru": "Control — базовая модель; dynamics — необязательное объяснение вывода. Сравнить прогноз и измерения своей системы.",
+        "en": "Control provides the basic model; dynamics is an optional derivation aid. Compare prediction with measured behaviour."
+      },
+      "title": {
+        "ru": "Динамика и проверка на готовом стенде",
+        "en": "Dynamics and validation on the existing rig"
+      }
+    },
+    "M11": {
+      "courses": [
+        "signals",
+        "kalman"
+      ],
+      "status": "partial",
+      "note": {
+        "ru": "Начать с фильтрации и простого оценивания. Kalman — только при готовой математике; bias, timestamp и наблюдаемость IMU проверить отдельно.",
+        "en": "Begin with filtering and simple estimation. Use Kalman only with the prerequisites; separately test IMU bias, timing and observability."
+      },
+      "title": {
+        "ru": "Практическая IMU-фильтрация и наблюдаемость",
+        "en": "Practical IMU filtering and observability"
+      }
+    },
+    "M10": {
+      "courses": [
+        "control",
+        "arm"
+      ],
+      "status": "partial",
+      "note": {
+        "ru": "PID применить к приводу, кинематику — к позе корпуса. Координацию нескольких ног и ограничения проверять своим экспериментом.",
+        "en": "Apply PID to the actuator and kinematics to body pose. Test multi-leg coordination and constraints in your experiment."
+      },
+      "title": {
+        "ru": "Управление приводом и позой корпуса",
+        "en": "Actuator and body-pose control"
+      }
+    },
+    "M13": {
+      "courses": [
+        "hardware",
+        "model",
+        "esp32"
+      ],
+      "status": "partial",
+      "note": {
+        "ru": "Переиспользовать три курса для цепочки модель → ROS → MCU. HIL, сбои связи и сравнение телеметрии — собственные работы.",
+        "en": "Reuse these courses for model → ROS → MCU integration. HIL, communication faults and telemetry comparison are your own work."
+      },
+      "title": {
+        "ru": "Одна нога: модель, MCU HIL и реальные измерения",
+        "en": "One leg: model, MCU HIL and physical measurements"
+      }
+    },
+    "A1": {
+      "courses": [
+        "cad",
+        "drives",
+        "arm"
+      ],
+      "status": "partial",
+      "note": {
+        "ru": "Выбрать сборку руки и кинематику; по CAD/приводам возвращаться к нужным темам. Грузоподъёмность и захват считать отдельно.",
+        "en": "Select arm assembly and kinematics; revisit CAD/drives as needed. Calculate payload and gripper loads separately."
+      },
+      "title": {
+        "ru": "Нагруженный сустав, CAD всего манипулятора и хват",
+        "en": "Loaded joint, full-arm CAD and gripper"
+      }
+    },
+    "T1": {
+      "courses": [
+        "machine",
+        "drives"
+      ],
+      "status": "gap",
+      "note": {
+        "ru": "Только механические основы. Прямого проверенного курса по вашему многосекционному тросовому хвосту не найдено.",
+        "en": "Mechanical foundations only. No vetted direct course for your multi-section tendon-driven tail was found."
+      },
+      "title": {
+        "ru": "Хвост: пассивная механика и передача",
+        "en": "Tail: passive mechanics and transmission"
+      }
+    },
+    "M19": {
+      "courses": [
+        "model",
+        "arm"
+      ],
+      "status": "gap",
+      "note": {
+        "ru": "Материалы лишь для симуляции и кинематики. Контакты, опорный многоугольник и медленную походку изучать по литературе M19.",
+        "en": "Material supports simulation and kinematics only. Use M19 reading for contacts, support polygons and slow gait."
+      },
+      "title": {
+        "ru": "Медленная походка, контакты и устойчивость в симуляции",
+        "en": "Slow gait, contact and stability in simulation"
+      }
+    },
+    "M22": {
+      "courses": [
+        "hardware",
+        "drives"
+      ],
+      "status": "gap",
+      "note": {
+        "ru": "Переиспользовать интеграцию и расчёт приводов. Переход к четырём ногам, питание, устойчивость и падения требуют собственных испытаний.",
+        "en": "Reuse integration and actuator sizing. Four-leg coordination, power, stability and falls need your own tests."
+      },
+      "title": {
+        "ru": "Четыре ноги: первая полная физическая платформа",
+        "en": "Four legs: first complete physical platform"
+      }
+    },
+    "G2": {
+      "courses": [],
+      "status": "no_purchase",
+      "note": {
+        "ru": "Новый курс не покупать. Выполнить критерии PASS/HOLD секции; при пробеле вернуться к курсу соответствующего модуля.",
+        "en": "Do not buy a new course. Apply the section PASS/HOLD criteria; revisit the relevant module course for specific gaps."
+      },
+      "title": {
+        "ru": "Четыре ноги: допуск к расширению",
+        "en": "Four legs: clearance to expand"
+      }
+    },
+    "R2": {
+      "courses": [],
+      "status": "no_purchase",
+      "note": {
+        "ru": "Это резерв/свободная ёмкость, не учебная тема. Выбирать курс только под выявленный пробел; заранее резерв не заполнять.",
+        "en": "This is contingency/free capacity, not a teaching topic. Select a course only for an identified gap; leave the reserve unallocated."
+      },
+      "title": {
+        "ru": "Резерв: платформа, питание и расширение",
+        "en": "Allowance: platform, power and expansion"
+      }
+    },
+    "T2": {
+      "courses": [
+        "esp32",
+        "control"
+      ],
+      "status": "gap",
+      "note": {
+        "ru": "Повторить RTOS и управление. Калибровка трёх секций, преднатяг и гистерезис хвоста остаются собственной работой.",
+        "en": "Revisit RTOS and control. Three-section calibration, pretension and tail hysteresis remain your own work."
+      },
+      "title": {
+        "ru": "Хвост: три активные секции и калибровка",
+        "en": "Tail: three active sections and calibration"
+      }
+    },
+    "M23": {
+      "courses": [
+        "hardware",
+        "model"
+      ],
+      "status": "gap",
+      "note": {
+        "ru": "Новых покупок не требуется. Масштабировать шину, питание, модель и походку на шесть ног; готовый курс это не закрывает.",
+        "en": "No new purchase needed. Scale bus, power, model and gait to six legs; these courses do not cover that complete task."
+      },
+      "title": {
+        "ru": "Расширение до гексапода и измеренный рабочий диапазон",
+        "en": "Hexapod expansion and measured operating envelope"
+      }
+    },
+    "M16": {
+      "courses": [
+        "moveit"
+      ],
+      "status": "strong",
+      "note": {
+        "ru": "Основной курс по MoveIt; настроить свою модель, сцены коллизий и планирование.",
+        "en": "Primary MoveIt course; configure your model, collision scenes and planning."
+      },
+      "title": {
+        "ru": "MoveIt и ограниченные траектории собственного манипулятора",
+        "en": "MoveIt and bounded trajectories for the custom arm"
+      }
+    },
+    "A2": {
+      "courses": [
+        "arm",
+        "hardware"
+      ],
+      "status": "partial",
+      "note": {
+        "ru": "Сборка и ros2_control; собственные нули, люфт и точность проверить на физической руке.",
+        "en": "Assembly and ros2_control; verify zeros, backlash and accuracy on the physical arm."
+      },
+      "title": {
+        "ru": "Физическая сборка и калибровка",
+        "en": "Physical assembly and calibration"
+      }
+    },
+    "M17": {
+      "courses": [
+        "advanced",
+        "moveit"
+      ],
+      "status": "strong",
+      "note": {
+        "ru": "Actions/lifecycle использовать для контракта запуска, отмены и завершения; связать с исполнением MoveIt.",
+        "en": "Use actions/lifecycle for start, cancel and completion contracts; connect to MoveIt execution."
+      },
+      "title": {
+        "ru": "Контракт манипуляции и управление оператором",
+        "en": "Manipulation contract and operator control"
+      }
+    },
+    "M14": {
+      "courses": [
+        "vision"
+      ],
+      "status": "partial",
+      "note": {
+        "ru": "Классический OpenCV baseline. Калибровку intrinsics/extrinsics, hand–eye и метрическую погрешность дополнить материалами секции.",
+        "en": "Build the classical OpenCV baseline. Add intrinsics/extrinsics, hand–eye and metric-error validation from section resources."
+      },
+      "title": {
+        "ru": "Зрение для манипулятора: измеримая геометрия и классическая база",
+        "en": "Arm vision: measurable geometry and a classical baseline"
+      }
+    },
+    "M18": {
+      "courses": [
+        "torch",
+        "stats"
+      ],
+      "status": "strong",
+      "note": {
+        "ru": "Небольшой CPU-проект, свои данные, независимая проверка и сравнение с baseline. Статистику повторять по необходимости.",
+        "en": "Small CPU project, your data, independent validation and baseline comparison. Revisit statistics only as needed."
+      },
+      "title": {
+        "ru": "Один полезный эксперимент машинного обучения для манипулятора",
+        "en": "One useful ML experiment for the arm"
+      }
+    },
+    "A3": {
+      "courses": [
+        "moveit",
+        "advanced"
+      ],
+      "status": "partial",
+      "note": {
+        "ru": "Повторное использование: исполнитель, отмена, ошибки и ограничения. PASS определяется реальным испытанием руки.",
+        "en": "Reuse execution, cancellation, errors and limits. PASS depends on a real arm test."
+      },
+      "title": {
+        "ru": "Реальное исполнение и проверяемый выпуск",
+        "en": "Physical execution and validated release"
+      }
+    },
+    "G3": {
+      "courses": [],
+      "status": "no_purchase",
+      "note": {
+        "ru": "Новый курс не покупать. Выполнить критерии PASS/HOLD секции; при пробеле вернуться к курсу соответствующего модуля.",
+        "en": "Do not buy a new course. Apply the section PASS/HOLD criteria; revisit the relevant module course for specific gaps."
+      },
+      "title": {
+        "ru": "Манипулятор и ИИ: физическая приёмка",
+        "en": "Arm and AI: physical acceptance"
+      }
+    },
+    "R3": {
+      "courses": [],
+      "status": "no_purchase",
+      "note": {
+        "ru": "Это резерв/свободная ёмкость, не учебная тема. Выбирать курс только под выявленный пробел; заранее резерв не заполнять.",
+        "en": "This is contingency/free capacity, not a teaching topic. Select a course only for an identified gap; leave the reserve unallocated."
+      },
+      "title": {
+        "ru": "Резерв: манипулятор, калибровка и интеграция ИИ",
+        "en": "Allowance: arm, calibration and AI integration"
+      }
+    },
+    "T3": {
+      "courses": [
+        "control",
+        "stats"
+      ],
+      "status": "gap",
+      "note": {
+        "ru": "Без новых покупок: повторяемость движения и анализ ресурсного испытания. Специального курса по ресурсу такого хвоста не подтверждено.",
+        "en": "No new purchases: motion repeatability and lifetime-test analysis. No direct course for this tail lifetime test is verified."
+      },
+      "title": {
+        "ru": "Хвост: движения, ресурс и выпуск",
+        "en": "Tail: motions, endurance and release"
+      }
+    },
+    "R4": {
+      "courses": [],
+      "status": "no_purchase",
+      "note": {
+        "ru": "Это резерв/свободная ёмкость, не учебная тема. Выбирать курс только под выявленный пробел; заранее резерв не заполнять.",
+        "en": "This is contingency/free capacity, not a teaching topic. Select a course only for an identified gap; leave the reserve unallocated."
+      },
+      "title": {
+        "ru": "Резерв: хвост и итоговые исправления",
+        "en": "Allowance: tail and final corrections"
+      }
+    },
+    "M24": {
+      "courses": [],
+      "status": "no_purchase",
+      "note": {
+        "ru": "Отдельный курс не нужен: собрать воспроизводимый release, протоколы и доказательства по трём проектам. Покупка общего курса не заменяет приёмку.",
+        "en": "No separate course needed: assemble a reproducible release, protocols and evidence for all three projects. A general course does not replace acceptance."
+      },
+      "title": {
+        "ru": "Единый выпуск и доказательства трёх проектов",
+        "en": "One release and evidence package for three projects"
+      }
+    },
+    "G4": {
+      "courses": [],
+      "status": "no_purchase",
+      "note": {
+        "ru": "Новый курс не покупать. Выполнить критерии PASS/HOLD секции; при пробеле вернуться к курсу соответствующего модуля.",
+        "en": "Do not buy a new course. Apply the section PASS/HOLD criteria; revisit the relevant module course for specific gaps."
+      },
+      "title": {
+        "ru": "Три проекта: итоговая приёмка",
+        "en": "Three projects: final acceptance"
+      }
+    },
+    "CAP": {
+      "courses": [],
+      "status": "no_purchase",
+      "note": {
+        "ru": "Это резерв/свободная ёмкость, не учебная тема. Выбирать курс только под выявленный пробел; заранее резерв не заполнять.",
+        "en": "This is contingency/free capacity, not a teaching topic. Select a course only for an identified gap; leave the reserve unallocated."
+      },
+      "title": {
+        "ru": "Свободная ёмкость до конца 2027",
+        "en": "Unallocated capacity before the end of 2027"
+      }
+    }
+  },
+  "legacy_routes": {
+    "M09": {
+      "title": {
+        "ru": "Динамика: теперь D2",
+        "en": "Dynamics: now D2"
+      },
+      "courses": [
+        "control",
+        "dynamics"
+      ],
+      "status": "partial",
+      "note": {
+        "ru": "См. D2: модель, вывод и стендовая проверка.",
+        "en": "See D2: modelling, derivation and bench validation."
+      }
+    },
+    "M12": {
+      "title": {
+        "ru": "ROS: теперь S1/S2",
+        "en": "ROS: now S1/S2"
+      },
+      "courses": [
+        "ros",
+        "model",
+        "hardware"
+      ],
+      "status": "partial",
+      "note": {
+        "ru": "См. S1/S2; эти же покупки повторно не нужны.",
+        "en": "See S1/S2; these are the same purchases."
+      }
+    },
+    "M15": {
+      "title": {
+        "ru": "SLAM: отложенное направление",
+        "en": "SLAM: deferred track"
+      },
+      "courses": [
+        "nav"
+      ],
+      "status": "partial",
+      "note": {
+        "ru": "Только при выборе SLAM; не включать в основной план.",
+        "en": "Only if choosing SLAM; keep outside the core plan."
+      }
+    },
+    "M20": {
+      "title": {
+        "ru": "Whole-body control / QP",
+        "en": "Whole-body control / QP"
+      },
+      "courses": [],
+      "status": "gap",
+      "note": {
+        "ru": "Подходящего проверенного Udemy-курса не выбрано; использовать литературу и треки D_FORCE/D_MPC.",
+        "en": "No suitable vetted Udemy course selected; use reading and D_FORCE/D_MPC."
+      }
+    },
+    "M21": {
+      "title": {
+        "ru": "Imitation learning / RL",
+        "en": "Imitation learning / RL"
+      },
+      "courses": [
+        "rl"
+      ],
+      "status": "partial",
+      "note": {
+        "ru": "RL — частичная база. PPO и BC/DAgger этим курсом не закрыты; отложенное направление.",
+        "en": "RL provides partial foundations. PPO and BC/DAgger remain uncovered; deferred track."
+      }
+    }
+  },
+  "growth_routes": {
+    "D_NUM": {
+      "courses": [
+        "algebra"
+      ],
+      "status": "partial",
+      "note": {
+        "ru": "Линейная алгебра; интеграторы и анализ сходимости — дополнительно.",
+        "en": "Linear algebra; add integrators and convergence analysis."
+      },
+      "title": {
+        "ru": "Численные методы и дополнительные математические упражнения",
+        "en": "Numerical methods and additional mathematics"
+      }
+    },
+    "D_STATS": {
+      "courses": [
+        "stats",
+        "control"
+      ],
+      "status": "partial",
+      "note": {
+        "ru": "Регрессия и модель привода; специализированную идентификацию дополнить.",
+        "en": "Regression and actuator models; supplement specialist identification."
+      },
+      "title": {
+        "ru": "Расширенная статистика и идентификация",
+        "en": "Advanced statistics and identification"
+      }
+    },
+    "D-H07-IDENTIFICATION": {
+      "courses": [
+        "stats",
+        "control"
+      ],
+      "status": "partial",
+      "note": {
+        "ru": "Регрессия и модель привода; специализированную идентификацию дополнить.",
+        "en": "Regression and actuator models; supplement specialist identification."
+      },
+      "title": {
+        "ru": "Параметрическая идентификация привода",
+        "en": "Parametric actuator identification"
+      }
+    },
+    "D_KIN": {
+      "courses": [
+        "arm"
+      ],
+      "status": "partial",
+      "note": {
+        "ru": "База кинематики; альтернативные представления дополнить литературой.",
+        "en": "Kinematics foundations; add alternative representations from reading."
+      },
+      "title": {
+        "ru": "Углублённая кинематика и альтернативные представления",
+        "en": "Deeper kinematics and alternative representations"
+      }
+    },
+    "D_DYN": {
+      "courses": [
+        "dynamics"
+      ],
+      "status": "partial",
+      "note": {
+        "ru": "Дополнение с малым числом оценок; собственный вывод обязателен.",
+        "en": "Supplement with few ratings; your own derivation remains necessary."
+      },
+      "title": {
+        "ru": "Собственный вывод многозвенной динамики",
+        "en": "Deriving multibody dynamics"
+      }
+    },
+    "D_FREQ": {
+      "courses": [
+        "control",
+        "signals"
+      ],
+      "status": "partial",
+      "note": {
+        "ru": "Базовое управление и сигналы; частотный синтез покрыт частично.",
+        "en": "Basic control and signals; frequency-domain design is only partially covered."
+      },
+      "title": {
+        "ru": "Частотное управление и расширенная настройка",
+        "en": "Frequency-domain control and advanced tuning"
+      }
+    },
+    "D_STATE": {
+      "courses": [
+        "kalman"
+      ],
+      "status": "partial",
+      "note": {
+        "ru": "KF/EKF; LQR и контактное оценивание требуют других материалов.",
+        "en": "KF/EKF; LQR and contact estimation need other material."
+      },
+      "title": {
+        "ru": "KF/EKF, LQR и контактное оценивание",
+        "en": "KF/EKF, LQR and contact-aided estimation"
+      }
+    },
+    "D_FORCE": {
+      "courses": [],
+      "status": "gap",
+      "note": {
+        "ru": "Прямого проверенного курса для этого результата не выбрано. Использовать материалы трека; не покупать смежный курс ради формального покрытия.",
+        "en": "No vetted direct course selected for this outcome. Use track resources; do not buy a neighbouring topic merely to fill a slot."
+      },
+      "title": {
+        "ru": "Распределение сил через QP",
+        "en": "QP contact-force allocation"
+      }
+    },
+    "D_MPC": {
+      "courses": [],
+      "status": "gap",
+      "note": {
+        "ru": "Прямого проверенного курса для этого результата не выбрано. Использовать материалы трека; не покупать смежный курс ради формального покрытия.",
+        "en": "No vetted direct course selected for this outcome. Use track resources; do not buy a neighbouring topic merely to fill a slot."
+      },
+      "title": {
+        "ru": "MPC и постановка задач управления всем телом",
+        "en": "MPC and whole-body formulations"
+      }
+    },
+    "D_IL": {
+      "courses": [],
+      "status": "gap",
+      "note": {
+        "ru": "Прямого проверенного курса для этого результата не выбрано. Использовать материалы трека; не покупать смежный курс ради формального покрытия.",
+        "en": "No vetted direct course selected for this outcome. Use track resources; do not buy a neighbouring topic merely to fill a slot."
+      },
+      "title": {
+        "ru": "Обучение по демонстрациям: BC и DAgger",
+        "en": "Imitation learning: BC and DAgger"
+      }
+    },
+    "G-MULTILANGUAGE": {
+      "courses": [],
+      "status": "gap",
+      "note": {
+        "ru": "Прямого проверенного курса для этого результата не выбрано. Использовать материалы трека; не покупать смежный курс ради формального покрытия.",
+        "en": "No vetted direct course selected for this outcome. Use track resources; do not buy a neighbouring topic merely to fill a slot."
+      },
+      "title": {
+        "ru": "Rust и сравнение реализаций",
+        "en": "Rust and implementation comparisons"
+      }
+    },
+    "G-SECURITY-HRI": {
+      "courses": [],
+      "status": "gap",
+      "note": {
+        "ru": "Прямого проверенного курса для этого результата не выбрано. Использовать материалы трека; не покупать смежный курс ради формального покрытия.",
+        "en": "No vetted direct course selected for this outcome. Use track resources; do not buy a neighbouring topic merely to fill a slot."
+      },
+      "title": {
+        "ru": "Защита, HRI и промышленная интеграция",
+        "en": "Security, HRI and industrial integration"
+      }
+    },
+    "G-ENGINEERING-EVIDENCE": {
+      "courses": [],
+      "status": "gap",
+      "note": {
+        "ru": "Прямого проверенного курса для этого результата не выбрано. Использовать материалы трека; не покупать смежный курс ради формального покрытия.",
+        "en": "No vetted direct course selected for this outcome. Use track resources; do not buy a neighbouring topic merely to fill a slot."
+      },
+      "title": {
+        "ru": "Расширенная верификация и инженерная коммуникация",
+        "en": "Extended verification and engineering communication"
+      }
+    },
+    "D-H05-FEA": {
+      "courses": [],
+      "status": "gap",
+      "note": {
+        "ru": "Прямого проверенного курса для этого результата не выбрано. Использовать материалы трека; не покупать смежный курс ради формального покрытия.",
+        "en": "No vetted direct course selected for this outcome. Use track resources; do not buy a neighbouring topic merely to fill a slot."
+      },
+      "title": {
+        "ru": "FEA и сходимость по трём сеткам",
+        "en": "FEA and three-mesh convergence"
+      }
+    },
+    "D_RL": {
+      "courses": [
+        "rl"
+      ],
+      "status": "partial",
+      "note": {
+        "ru": "Основа actor–critic; это не полный маршрут PPO и sim-to-real.",
+        "en": "Actor–critic foundations; not a complete PPO or sim-to-real route."
+      },
+      "title": {
+        "ru": "Ограниченный PPO и проверка переноса",
+        "en": "Bounded PPO and transfer evaluation"
+      }
+    },
+    "G-ROS-PERFORMANCE": {
+      "courses": [
+        "advanced"
+      ],
+      "status": "partial",
+      "note": {
+        "ru": "Executors/components; измерение DDS, задержек и throughput выполнять отдельно.",
+        "en": "Executors/components; separately measure DDS, latency and throughput."
+      },
+      "title": {
+        "ru": "Промежуточное ПО ROS и производительность",
+        "en": "ROS middleware and performance"
+      }
+    },
+    "G-SIM-FIDELITY": {
+      "courses": [
+        "model"
+      ],
+      "status": "partial",
+      "note": {
+        "ru": "База модели; идентификация контактов и достоверность симуляции требуют экспериментов.",
+        "en": "Model foundations; contact identification and simulation fidelity need experiments."
+      },
+      "title": {
+        "ru": "Углублённая модель цифрового двойника",
+        "en": "Deeper digital-twin validation"
+      }
+    },
+    "G-ADV-VISION": {
+      "courses": [
+        "vision",
+        "torch"
+      ],
+      "status": "partial",
+      "note": {
+        "ru": "Классическое зрение и PyTorch; 3D-геометрия покрыта не полностью.",
+        "en": "Classical vision and PyTorch; 3D geometry remains incompletely covered."
+      },
+      "title": {
+        "ru": "3D-зрение и обучаемое восприятие",
+        "en": "3D vision and learned perception"
+      }
+    },
+    "G-CONTACT-ML": {
+      "courses": [
+        "torch",
+        "stats"
+      ],
+      "status": "partial",
+      "note": {
+        "ru": "Инструменты ML; датасет контактов и валидация — собственные.",
+        "en": "ML tools; contact datasets and validation are your own work."
+      },
+      "title": {
+        "ru": "ML для контакта и состояния гексапода",
+        "en": "ML for hexapod contact and state"
+      }
+    },
+    "G-SLAM": {
+      "courses": [
+        "nav"
+      ],
+      "status": "partial",
+      "note": {
+        "ru": "Отложенный Nav2/SLAM; перенос с колёсного примера потребует адаптации.",
+        "en": "Deferred Nav2/SLAM; adapting a wheeled example requires additional work."
+      },
+      "title": {
+        "ru": "Локализация и SLAM",
+        "en": "Localization and SLAM"
+      }
+    },
+    "G-NAVIGATION": {
+      "courses": [
+        "nav"
+      ],
+      "status": "partial",
+      "note": {
+        "ru": "Отложенный Nav2/SLAM; перенос с колёсного примера потребует адаптации.",
+        "en": "Deferred Nav2/SLAM; adapting a wheeled example requires additional work."
+      },
+      "title": {
+        "ru": "Автономная навигация и сравнение планировщиков",
+        "en": "Autonomous navigation and planner comparisons"
+      }
+    },
+    "D-H04-SPECTRUM": {
+      "courses": [
+        "signals"
+      ],
+      "status": "partial",
+      "note": {
+        "ru": "Основной подходящий видеокурс для спектрального анализа.",
+        "en": "The principal matching video course for spectral analysis."
+      },
+      "title": {
+        "ru": "Расширенный спектральный анализ сигналов",
+        "en": "Extended signal spectrum analysis"
+      }
+    }
+  },
+  "starter": [
+    "cpp",
+    "ros",
+    "algebra"
+  ],
+  "next": [
+    "electronics",
+    "cad",
+    "esp32"
+  ]
+}
