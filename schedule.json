@@ -2496,8 +2496,8 @@
         {
           "id": "A1",
           "title": {
-            "ru": "Требования к приводу и механическая модель",
-            "en": "Actuator requirements and mechanical model"
+            "ru": "Требования к приводу, шестерёнки и механическая модель",
+            "en": "Actuator requirements, gears and mechanical model"
           },
           "learn": 11,
           "build": 10,
@@ -2507,8 +2507,8 @@
             "M07.A1"
           ],
           "result": {
-            "ru": "Требования к одному приводу: опорные нагрузки, момент–скорость, питание/интерфейс и длительный режим; выбран один проверяемый кандидат для настольного DC-стенда.",
-            "en": "One-drive requirements: support loads, torque–speed, supply/interface and sustained duty; one testable candidate selected for the tabletop DC rig."
+            "ru": "Требования к одному приводу: опорные нагрузки, момент–скорость, питание/интерфейс и длительный режим; выбран один проверяемый кандидат для настольного DC-стенда. В начале задания — 6 ч на зацепление, типы редукторов, скорость/момент/КПД, обратную приводимость и модель пары 20/60. Результат: схема, сравнение четырёх типов, расчёты и план измерения люфта.",
+            "en": "One-drive requirements: support loads, torque–speed, supply/interface and sustained duty; one testable candidate selected for the tabletop DC rig. Start with 6 h on meshing, gearbox types, speed/torque/efficiency, backdrivability and a 20/60 gear-pair model. Deliver a diagram, four-type comparison, calculations and a backlash measurement plan."
           },
           "required_prerequisites": [
             "P_STATICS",
@@ -2554,7 +2554,16 @@
             }
           ],
           "start": "2027-01-11",
-          "end": "2027-01-14"
+          "end": "2027-01-14",
+          "lesson": {
+            "source": "gear-basics.json",
+            "anchor": "M07-gears",
+            "hours": 6,
+            "learn": 3,
+            "build": 2,
+            "verify": 1,
+            "included_in_task": true
+          }
         },
         {
           "id": "A2",
@@ -2704,8 +2713,8 @@
             "M07.A4"
           ],
           "result": {
-            "ru": "Наблюдаемые люфт/мёртвая зона/задержка, несколько обоснованных нагрузочных точек, тепловой цикл и повтор после охлаждения. При отсутствии независимого измерения момент помечается оценкой.",
-            "en": "Observed backlash/dead zone/latency, justified load points, a thermal cycle and repeat after cooling. Torque is labeled an estimate without independent measurement."
+            "ru": "Наблюдаемые люфт/мёртвая зона/задержка, несколько обоснованных нагрузочных точек, тепловой цикл и повтор после охлаждения. При отсутствии независимого измерения момент помечается оценкой. Люфт оценить в градусах по независимому наблюдению выхода при реверсах, с указанием разрешения; отделить от упругости и мёртвой зоны. Моторного энкодера для этого недостаточно.",
+            "en": "Observed backlash/dead zone/latency, justified load points, a thermal cycle and repeat after cooling. Torque is labeled an estimate without independent measurement. Estimate backlash in degrees from independent output observations during reversals, stating resolution; distinguish compliance and dead zone. A motor-side encoder alone is insufficient."
           },
           "required_prerequisites": [
             "P_STATICS",
@@ -2747,8 +2756,8 @@
         }
       ],
       "kept": {
-        "ru": "Требования к одному приводу: опорные нагрузки, момент–скорость, питание/интерфейс и длительный режим; выбран один проверяемый кандидат для настольного DC-стенда. Все аппаратные пределы, измерения и критерии допуска исходника сохранены, кроме явно отложенных теоретико-модельных результатов.",
-        "en": "One-drive requirements: support loads, torque–speed, supply/interface and sustained duty; one testable candidate selected for the tabletop DC rig. All source hardware limits, measurements and progression criteria remain except explicitly deferred theory/model outputs."
+        "ru": "Требования к одному приводу: опорные нагрузки, момент–скорость, питание/интерфейс и длительный режим; выбран один проверяемый кандидат для настольного DC-стенда. В начале задания — 6 ч на зацепление, типы редукторов, скорость/момент/КПД, обратную приводимость и модель пары 20/60. Результат: схема, сравнение четырёх типов, расчёты и план измерения люфта. Все аппаратные пределы, измерения и критерии допуска исходника сохранены, кроме явно отложенных теоретико-модельных результатов.",
+        "en": "One-drive requirements: support loads, torque–speed, supply/interface and sustained duty; one testable candidate selected for the tabletop DC rig. Start with 6 h on meshing, gearbox types, speed/torque/efficiency, backdrivability and a 20/60 gear-pair model. Deliver a diagram, four-type comparison, calculations and a backlash measurement plan. All source hardware limits, measurements and progression criteria remain except explicitly deferred theory/model outputs."
       },
       "deferred": [
         {
@@ -2777,8 +2786,8 @@
         }
       ],
       "core_reading": {
-        "ru": "Исходный M07: требования и сравнение, оснастка и калибровки, ограниченное управление, люфт и тепловой опыт; паспорта реальных привода, драйвера и питания. Частотная развёртка, полная подгонка модели и модельные F9/F10 отложены. Чтение входит в 32 учебных часа.",
-        "en": "Original M07: requirements/comparison, fixture/calibration, bounded control, backlash and thermal trial; actual drive/driver/supply datasheets. Chirp, full fitting and model F9/F10 are deferred. Reading is inside 32 learning hours."
+        "ru": "Исходный M07: требования и сравнение, оснастка и калибровки, ограниченное управление, люфт и тепловой опыт; паспорта реальных привода, драйвера и питания. Частотная развёртка, полная подгонка модели и модельные F9/F10 отложены. Чтение входит в 32 учебных часа. В начале A1 — вводный блок «Шестерёнки и редукторы»: Modern Robotics §8.9, схемы KHK и анимация Harmonic Drive; 3 ч изучения уже внутри 11 ч A1.",
+        "en": "Original M07: requirements/comparison, fixture/calibration, bounded control, backlash and thermal trial; actual drive/driver/supply datasheets. Chirp, full fitting and model F9/F10 are deferred. Reading is inside 32 learning hours. Begin A1 with the Gears and gearboxes introduction: Modern Robotics §8.9, KHK diagrams and Harmonic Drive animation; 3 h learning already within A1’s 11 h."
       },
       "base": 100,
       "track": "core",
