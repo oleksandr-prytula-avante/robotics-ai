@@ -1,6 +1,6 @@
 {
-  "version": "4.3",
-  "start": "2026-11-01",
+  "version": "4.4",
+  "start": "2026-12-01",
   "deadline": "2027-12-31",
   "items": {
     "M02": {
@@ -3124,8 +3124,8 @@
             "en": "Three drives, harness and stop operate on a protected fixture; energy and commands have separately verified paths."
           },
           "material_ready_condition": {
-            "ru": "Поставка: образец привода нужен к началу L1 15.02.2027. Ещё два совместимых привода заказываются после проверки образца, намеченной на 16.02; сборка трёх приводов с 18.02 возможна только после их получения. Время доставки не подтверждено. Пока детали в пути, выполнять независимые CAD/подготовительные работы и пересчитать даты зависимой сборки и испытаний.",
-            "en": "Materials: the actuator sample is needed before L1 on 15 February 2027. Order two more compatible drives after the sample check targeted for 16 February; the three-drive assembly slot from 18 February is conditional on receipt. Delivery time is unconfirmed. Use independent CAD/preparation work during the wait and reforecast dependent assembly and trials."
+            "ru": "Поставка: образец привода нужен к началу L1 18.03.2027. Ещё два совместимых привода заказываются после проверки образца, намеченной на 19.03; сборка трёх приводов с 22.03 возможна только после их получения. Время доставки не подтверждено. Пока детали в пути, выполнять независимые CAD/подготовительные работы и пересчитать даты зависимой сборки и испытаний.",
+            "en": "Materials: the actuator sample is needed before L1 on 18 March 2027. Order two more compatible drives after the sample check targeted for 19 March; the three-drive assembly slot from 22 March is conditional on receipt. Delivery time is unconfirmed. Use independent CAD/preparation work during the wait and reforecast dependent assembly and trials."
           }
         },
         {
@@ -3511,8 +3511,8 @@
             "en": "Most loaded joint passes holding/motion/thermal tests under equivalent load before the full order."
           },
           "material_ready_condition": {
-            "ru": "Поставка: выбор плечевого привода завершается по плану 30.04.2027; PR5 разрешает заказ только после этого. 30.04 — начало планового слота A02, а не обещание получения привода в тот же день. Работы с приводом и нагрузочная проверка ждут фактической поставки; независимую подготовку оснастки можно продолжать. Если ожидание не помещается в перестановку работ, пересчитать окончание A02 и последующие даты.",
-            "en": "Materials: shoulder-actuator selection is targeted for 30 April 2027; PR5 permits ordering only afterward. 30 April is the nominal A02 work slot, not a promise of same-day receipt. Motor-dependent work and loaded qualification wait for actual delivery; independent fixture preparation may continue. If resequencing cannot absorb the wait, reforecast A02 completion and dependent dates."
+            "ru": "Поставка: выбор плечевого привода завершается по плану 25.05.2027; PR5 разрешает заказ только после этого. 25.05 — начало планового слота A02, а не обещание получения привода в тот же день. Работы с приводом и нагрузочная проверка ждут фактической поставки; независимую подготовку оснастки можно продолжать. Если ожидание не помещается в перестановку работ, пересчитать окончание A02 и последующие даты.",
+            "en": "Materials: shoulder-actuator selection is targeted for 25 May 2027; PR5 permits ordering only afterward. 25 May is the nominal A02 work slot, not a promise of same-day receipt. Motor-dependent work and loaded qualification wait for actual delivery; independent fixture preparation may continue. If resequencing cannot absorb the wait, reforecast A02 completion and dependent dates."
           }
         },
         {
@@ -3783,8 +3783,8 @@
             "en": "Three sections/six drives assembled; distal tendon routing and inter-section coupling verified."
           },
           "material_ready_condition": {
-            "ru": "Поставка: ещё четыре привода заказываются только после PASS первой активной секции T04, намеченного на 04.08.2027. Слот T05 с 04.08 не предполагает поставку в тот же день. Монтаж этих приводов, полная калибровка и завершение T05 зависят от получения деталей; на время доставки перенести независимые работы и при необходимости пересчитать даты. 85 ч свободной ёмкости не гарантируют покрытие календарного срока доставки.",
-            "en": "Materials: order the other four drives only after first-active-section T04 PASS, targeted for 4 August 2027. The T05 slot from 4 August does not assume same-day delivery. Installing these drives, full calibration and T05 completion depend on receipt; bring independent work forward during shipping and reforecast dates when needed. The 85 h of unallocated capacity do not guarantee coverage of elapsed delivery time."
+            "ru": "Поставка: ещё четыре привода заказываются только после PASS первой активной секции T04, намеченного на 17.08.2027. Слот T05 с 17.08 не предполагает поставку в тот же день. Монтаж этих приводов, полная калибровка и завершение T05 зависят от получения деталей; на время доставки перенести независимые работы и при необходимости пересчитать даты. 148 ч 20 мин свободной ёмкости не гарантируют покрытие календарного срока доставки.",
+            "en": "Materials: order the other four drives only after first-active-section T04 PASS, targeted for 17 August 2027. The T05 slot from 17 August does not assume same-day delivery. Installing these drives, full calibration and T05 completion depend on receipt; bring independent work forward during shipping and reforecast dates when needed. The 148 h 20 min of unallocated capacity do not guarantee coverage of elapsed delivery time."
           }
         },
         {
@@ -3996,8 +3996,8 @@
             }
           ],
           "calendar": {
-            "ru": "Опция не включена в 340 ч хвоста, 2 960 ч программы с резервом и помесячное расписание. Отказ от неё не мешает завершить хвост на проверенных готовых модулях и проводке. Если выбрать 40–60 ч и пересчитать календарь, из 85 свободных часов останется 45–25 ч, а резерв 300 ч сохранится; общий объём с резервом станет 3 000–3 020 ч. Сейчас свободные часы стоят в декабре 2027: более ранняя работа требует перестановки этапов. Изготовление и доставка — отдельное календарное ожидание; рабочий стенд сохраняется на это время.",
-            "en": "This option is excluded from the tail's 340 h, the programme's 2,960 h including contingency and the monthly schedule. Skipping it does not block completing the tail with validated stock modules and wiring. If selected and rescheduled, 40–60 h leaves 45–25 of the 85 unallocated hours while retaining 300 h contingency; total effort including contingency becomes 3,000–3,020 h. The free hours currently fall in December 2027, so earlier work requires resequencing. Fabrication and delivery add elapsed waiting time; retain the working bench setup while waiting."
+            "ru": "Опция не включена в 340 ч хвоста, 2 660 ч обязательной программы и помесячное расписание. Если добавить 40–60 ч, запас 148 ч 20 мин уменьшится до 108 ч 20 мин — 88 ч 20 мин; финиш необходимо пересчитать. Отказ от опции не мешает завершению хвоста. Изготовление и доставка требуют отдельного календарного времени.",
+            "en": "The option is outside the tail’s 340 h, the required programme’s 2,660 h and the monthly schedule. Adding 40–60 h reduces the 148 h 20 min buffer to 108 h 20 min–88 h 20 min; reforecast completion. Skipping it does not block tail completion. Fabrication and delivery require elapsed time."
           },
           "procurement_id": "tail-pcb-optional",
           "reading": [
@@ -4063,8 +4063,8 @@
             "en": "Most loaded joint passes holding/motion/thermal tests under equivalent load before the full order."
           },
           "material_ready_condition": {
-            "ru": "Поставка: выбор плечевого привода завершается по плану 30.04.2027; PR5 разрешает заказ только после этого. 30.04 — начало планового слота A02, а не обещание получения привода в тот же день. Работы с приводом и нагрузочная проверка ждут фактической поставки; независимую подготовку оснастки можно продолжать. Если ожидание не помещается в перестановку работ, пересчитать окончание A02 и последующие даты.",
-            "en": "Materials: shoulder-actuator selection is targeted for 30 April 2027; PR5 permits ordering only afterward. 30 April is the nominal A02 work slot, not a promise of same-day receipt. Motor-dependent work and loaded qualification wait for actual delivery; independent fixture preparation may continue. If resequencing cannot absorb the wait, reforecast A02 completion and dependent dates."
+            "ru": "Поставка: выбор плечевого привода завершается по плану 25.05.2027; PR5 разрешает заказ только после этого. 25.05 — начало планового слота A02, а не обещание получения привода в тот же день. Работы с приводом и нагрузочная проверка ждут фактической поставки; независимую подготовку оснастки можно продолжать. Если ожидание не помещается в перестановку работ, пересчитать окончание A02 и последующие даты.",
+            "en": "Materials: shoulder-actuator selection is targeted for 25 May 2027; PR5 permits ordering only afterward. 25 May is the nominal A02 work slot, not a promise of same-day receipt. Motor-dependent work and loaded qualification wait for actual delivery; independent fixture preparation may continue. If resequencing cannot absorb the wait, reforecast A02 completion and dependent dates."
           }
         },
         {
@@ -4344,8 +4344,8 @@
             "en": "Three sections/six drives assembled; distal tendon routing and inter-section coupling verified."
           },
           "material_ready_condition": {
-            "ru": "Поставка: ещё четыре привода заказываются только после PASS первой активной секции T04, намеченного на 04.08.2027. Слот T05 с 04.08 не предполагает поставку в тот же день. Монтаж этих приводов, полная калибровка и завершение T05 зависят от получения деталей; на время доставки перенести независимые работы и при необходимости пересчитать даты. 85 ч свободной ёмкости не гарантируют покрытие календарного срока доставки.",
-            "en": "Materials: order the other four drives only after first-active-section T04 PASS, targeted for 4 August 2027. The T05 slot from 4 August does not assume same-day delivery. Installing these drives, full calibration and T05 completion depend on receipt; bring independent work forward during shipping and reforecast dates when needed. The 85 h of unallocated capacity do not guarantee coverage of elapsed delivery time."
+            "ru": "Поставка: ещё четыре привода заказываются только после PASS первой активной секции T04, намеченного на 17.08.2027. Слот T05 с 17.08 не предполагает поставку в тот же день. Монтаж этих приводов, полная калибровка и завершение T05 зависят от получения деталей; на время доставки перенести независимые работы и при необходимости пересчитать даты. 148 ч 20 мин свободной ёмкости не гарантируют покрытие календарного срока доставки.",
+            "en": "Materials: order the other four drives only after first-active-section T04 PASS, targeted for 17 August 2027. The T05 slot from 17 August does not assume same-day delivery. Installing these drives, full calibration and T05 completion depend on receipt; bring independent work forward during shipping and reforecast dates when needed. The 148 h 20 min of unallocated capacity do not guarantee coverage of elapsed delivery time."
           }
         },
         {
@@ -4870,21 +4870,10 @@
         "en": "Allowance: engineering foundations and first leg"
       },
       "track": "reserve",
-      "base": 60,
-      "tasks": [
-        {
-          "title": {
-            "ru": "Резерв: новая инженерная база и первая нога",
-            "en": "Allowance: engineering foundations and first leg"
-          },
-          "learn": 0,
-          "build": 0,
-          "verify": 0,
-          "hours": 60,
-          "allocation_kind": "reserve",
-          "refs": []
-        }
-      ]
+      "base": 0,
+      "tasks": [],
+      "scheduled": false,
+      "note": "Risk guidance only; uses the shared CAP buffer when needed."
     },
     "R2": {
       "id": "R2",
@@ -4893,21 +4882,10 @@
         "en": "Allowance: platform, power and expansion"
       },
       "track": "reserve",
-      "base": 70,
-      "tasks": [
-        {
-          "title": {
-            "ru": "Резерв: платформа, питание и расширение",
-            "en": "Allowance: platform, power and expansion"
-          },
-          "learn": 0,
-          "build": 0,
-          "verify": 0,
-          "hours": 70,
-          "allocation_kind": "reserve",
-          "refs": []
-        }
-      ]
+      "base": 0,
+      "tasks": [],
+      "scheduled": false,
+      "note": "Risk guidance only; uses the shared CAP buffer when needed."
     },
     "R3": {
       "id": "R3",
@@ -4916,21 +4894,10 @@
         "en": "Allowance: arm, calibration and AI integration"
       },
       "track": "reserve",
-      "base": 90,
-      "tasks": [
-        {
-          "title": {
-            "ru": "Резерв: манипулятор, калибровка и интеграция ИИ",
-            "en": "Allowance: arm, calibration and AI integration"
-          },
-          "learn": 0,
-          "build": 0,
-          "verify": 0,
-          "hours": 90,
-          "allocation_kind": "reserve",
-          "refs": []
-        }
-      ]
+      "base": 0,
+      "tasks": [],
+      "scheduled": false,
+      "note": "Risk guidance only; uses the shared CAP buffer when needed."
     },
     "R4": {
       "id": "R4",
@@ -4939,37 +4906,27 @@
         "en": "Allowance: tail and final corrections"
       },
       "track": "reserve",
-      "base": 80,
-      "tasks": [
-        {
-          "title": {
-            "ru": "Резерв: хвост и итоговые исправления",
-            "en": "Allowance: tail and final corrections"
-          },
-          "learn": 0,
-          "build": 0,
-          "verify": 0,
-          "hours": 80,
-          "allocation_kind": "reserve",
-          "refs": []
-        }
-      ]
+      "base": 0,
+      "tasks": [],
+      "scheduled": false,
+      "note": "Risk guidance only; uses the shared CAP buffer when needed."
     },
     "CAP": {
       "id": "CAP",
       "title": {
-        "ru": "Свободная ёмкость до конца 2027",
-        "en": "Unallocated capacity before the end of 2027"
+        "ru": "Запас на задержки и переделки до конца 2027",
+        "en": "Buffer for delays and rework through 2027"
       },
-      "base": 85,
+      "base": 148.33333333333334,
       "track": "capacity",
       "tasks": [
         {
           "title": {
-            "ru": "85 ч остаются доступными; это не обязательное задание.",
-            "en": "85 h remain available; this is not required work."
+            "ru": "148 ч 20 мин запаса после завершения программы; это не обязательное задание.",
+            "en": "148 h 20 min of buffer after programme completion; not a required task."
           },
-          "hours": 85,
+          "hours": 148.33333333333334,
+          "minutes": 8900,
           "learn": 0,
           "build": 0,
           "verify": 0,
@@ -4991,7 +4948,6 @@
     "D1",
     "L1",
     "G1",
-    "R1",
     "M03",
     "S2",
     "D2",
@@ -5003,7 +4959,6 @@
     "M19",
     "M22",
     "G2",
-    "R2",
     "T2",
     "M23",
     "M16",
@@ -5013,21 +4968,19 @@
     "M18",
     "A3",
     "G3",
-    "R3",
     "T3",
-    "R4",
     "M24",
     "G4",
     "CAP"
   ],
   "base_hours": 2660,
-  "reserve_hours": 300,
-  "allocated_hours": 2960,
-  "hours": 3045,
-  "padding_hours": 85,
-  "weeks": 61,
-  "full_weeks": 60,
-  "final_partial_week_hours": 45,
+  "reserve_hours": 0,
+  "allocated_hours": 2660,
+  "hours": 2808.3333333333335,
+  "padding_hours": 148.33333333333334,
+  "weeks": 57,
+  "full_weeks": 55,
+  "final_partial_week_hours": 33.333333333333336,
   "source_model": "task-based selected core; engineering estimate, not a statistical learning norm",
   "reports": {
     "math": {
@@ -11147,8 +11100,8 @@
                 "M06"
               ],
               "material_ready_condition": {
-                "ru": "Поставка: образец привода нужен к началу L1 15.02.2027. Ещё два совместимых привода заказываются после проверки образца, намеченной на 16.02; сборка трёх приводов с 18.02 возможна только после их получения. Время доставки не подтверждено. Пока детали в пути, выполнять независимые CAD/подготовительные работы и пересчитать даты зависимой сборки и испытаний.",
-                "en": "Materials: the actuator sample is needed before L1 on 15 February 2027. Order two more compatible drives after the sample check targeted for 16 February; the three-drive assembly slot from 18 February is conditional on receipt. Delivery time is unconfirmed. Use independent CAD/preparation work during the wait and reforecast dependent assembly and trials."
+                "ru": "Поставка: образец привода нужен к началу L1 18.03.2027. Ещё два совместимых привода заказываются после проверки образца, намеченной на 19.03; сборка трёх приводов с 22.03 возможна только после их получения. Время доставки не подтверждено. Пока детали в пути, выполнять независимые CAD/подготовительные работы и пересчитать даты зависимой сборки и испытаний.",
+                "en": "Materials: the actuator sample is needed before L1 on 18 March 2027. Order two more compatible drives after the sample check targeted for 19 March; the three-drive assembly slot from 22 March is conditional on receipt. Delivery time is unconfirmed. Use independent CAD/preparation work during the wait and reforecast dependent assembly and trials."
               }
             },
             {
@@ -11582,8 +11535,8 @@
                 "M07"
               ],
               "material_ready_condition": {
-                "ru": "Поставка: выбор плечевого привода завершается по плану 30.04.2027; PR5 разрешает заказ только после этого. 30.04 — начало планового слота A02, а не обещание получения привода в тот же день. Работы с приводом и нагрузочная проверка ждут фактической поставки; независимую подготовку оснастки можно продолжать. Если ожидание не помещается в перестановку работ, пересчитать окончание A02 и последующие даты.",
-                "en": "Materials: shoulder-actuator selection is targeted for 30 April 2027; PR5 permits ordering only afterward. 30 April is the nominal A02 work slot, not a promise of same-day receipt. Motor-dependent work and loaded qualification wait for actual delivery; independent fixture preparation may continue. If resequencing cannot absorb the wait, reforecast A02 completion and dependent dates."
+                "ru": "Поставка: выбор плечевого привода завершается по плану 25.05.2027; PR5 разрешает заказ только после этого. 25.05 — начало планового слота A02, а не обещание получения привода в тот же день. Работы с приводом и нагрузочная проверка ждут фактической поставки; независимую подготовку оснастки можно продолжать. Если ожидание не помещается в перестановку работ, пересчитать окончание A02 и последующие даты.",
+                "en": "Materials: shoulder-actuator selection is targeted for 25 May 2027; PR5 permits ordering only afterward. 25 May is the nominal A02 work slot, not a promise of same-day receipt. Motor-dependent work and loaded qualification wait for actual delivery; independent fixture preparation may continue. If resequencing cannot absorb the wait, reforecast A02 completion and dependent dates."
               }
             },
             {
@@ -12033,8 +11986,8 @@
                 "TAIL_T04_PASS"
               ],
               "material_ready_condition": {
-                "ru": "Поставка: ещё четыре привода заказываются только после PASS первой активной секции T04, намеченного на 04.08.2027. Слот T05 с 04.08 не предполагает поставку в тот же день. Монтаж этих приводов, полная калибровка и завершение T05 зависят от получения деталей; на время доставки перенести независимые работы и при необходимости пересчитать даты. 85 ч свободной ёмкости не гарантируют покрытие календарного срока доставки.",
-                "en": "Materials: order the other four drives only after first-active-section T04 PASS, targeted for 4 August 2027. The T05 slot from 4 August does not assume same-day delivery. Installing these drives, full calibration and T05 completion depend on receipt; bring independent work forward during shipping and reforecast dates when needed. The 85 h of unallocated capacity do not guarantee coverage of elapsed delivery time."
+                "ru": "Поставка: ещё четыре привода заказываются только после PASS первой активной секции T04, намеченного на 17.08.2027. Слот T05 с 17.08 не предполагает поставку в тот же день. Монтаж этих приводов, полная калибровка и завершение T05 зависят от получения деталей; на время доставки перенести независимые работы и при необходимости пересчитать даты. 148 ч 20 мин свободной ёмкости не гарантируют покрытие календарного срока доставки.",
+                "en": "Materials: order the other four drives only after first-active-section T04 PASS, targeted for 17 August 2027. The T05 slot from 17 August does not assume same-day delivery. Installing these drives, full calibration and T05 completion depend on receipt; bring independent work forward during shipping and reforecast dates when needed. The 148 h 20 min of unallocated capacity do not guarantee coverage of elapsed delivery time."
               }
             },
             {
@@ -14750,8 +14703,8 @@
     "supplier_lead_times_validated": false,
     "elapsed_waits_reserved": false,
     "explanation": {
-      "ru": "Даты распределяют активные часы и зависят от прохождения проверок и получения деталей. Доставка, печать без участия человека и охлаждение занимают календарное время, но отдельные длительности здесь не зарезервированы. Переставлять можно только независимые работы, сохраняя лимит 50 ч в полную неделю. Если готовых работ нет, срок сдвигается. 85 ч свободной ёмкости — активные часы до конца 2027 года, а не гарантированный запас на поставки.",
-      "en": "Dates allocate active effort and are conditional on passed gates and received parts. Shipping, unattended printing and cooling occupy elapsed time but have no separate reserved durations here. Resequence only independent work within the 50 h full-week limit. If no ready work remains, the finish moves. The 85 h of unallocated capacity are active hours before the end of 2027, not a guaranteed delivery buffer."
+      "ru": "50 ч в неделю: Пн–Сб по 8 ч 20 мин, Вс свободно. 31.12.2026, 01.01.2027 и 31.12.2027 — выходные; прочие праздники и отпуск не вычтены. Обязательная работа заканчивается 10.12.2027. Оставшиеся 148 ч 20 мин до 31.12.2027 — единый запас на задержки и переделки, не дополнительные задания. Даты зависят от приёмок и получения деталей. Поставка, автономная печать и охлаждение требуют календарного времени; их отдельные длительности не зарезервированы. Запас не гарантирует покрытие сроков поставки.",
+      "en": "50 h/week: Mon–Sat 8 h 20 min/day, Sunday off. 31 December 2026, 1 January 2027 and 31 December 2027 are days off; other holidays and vacation are not deducted. Required work finishes on 10 December 2027. The remaining 148 h 20 min through 31 December form one buffer for delays and rework, not additional tasks. Dates depend on gates and material receipt. Shipping, unattended printing and cooling require elapsed time with no separate durations reserved; the buffer does not guarantee delivery coverage."
     },
     "material_ready_conditions": [
       {
@@ -14759,12 +14712,12 @@
         "stage": "L1",
         "task_index": 2,
         "source_task": "L1.L1c",
-        "nominal_slot_start": "2027-02-18",
+        "nominal_slot_start": "2027-03-22",
         "order_gate": "L1.L1a",
-        "nominal_gate_finish": "2027-02-16",
+        "nominal_gate_finish": "2027-03-19",
         "condition": {
-          "ru": "Поставка: образец привода нужен к началу L1 15.02.2027. Ещё два совместимых привода заказываются после проверки образца, намеченной на 16.02; сборка трёх приводов с 18.02 возможна только после их получения. Время доставки не подтверждено. Пока детали в пути, выполнять независимые CAD/подготовительные работы и пересчитать даты зависимой сборки и испытаний.",
-          "en": "Materials: the actuator sample is needed before L1 on 15 February 2027. Order two more compatible drives after the sample check targeted for 16 February; the three-drive assembly slot from 18 February is conditional on receipt. Delivery time is unconfirmed. Use independent CAD/preparation work during the wait and reforecast dependent assembly and trials."
+          "ru": "Поставка: образец привода нужен к началу L1 18.03.2027. Ещё два совместимых привода заказываются после проверки образца, намеченной на 19.03; сборка трёх приводов с 22.03 возможна только после их получения. Время доставки не подтверждено. Пока детали в пути, выполнять независимые CAD/подготовительные работы и пересчитать даты зависимой сборки и испытаний.",
+          "en": "Materials: the actuator sample is needed before L1 on 18 March 2027. Order two more compatible drives after the sample check targeted for 19 March; the three-drive assembly slot from 22 March is conditional on receipt. Delivery time is unconfirmed. Use independent CAD/preparation work during the wait and reforecast dependent assembly and trials."
         }
       },
       {
@@ -14772,12 +14725,12 @@
         "stage": "A1",
         "task_index": 1,
         "source_task": "ARM.A02",
-        "nominal_slot_start": "2027-04-30",
+        "nominal_slot_start": "2027-05-25",
         "order_gate": "ARM.A01",
-        "nominal_gate_finish": "2027-04-30",
+        "nominal_gate_finish": "2027-05-25",
         "condition": {
-          "ru": "Поставка: выбор плечевого привода завершается по плану 30.04.2027; PR5 разрешает заказ только после этого. 30.04 — начало планового слота A02, а не обещание получения привода в тот же день. Работы с приводом и нагрузочная проверка ждут фактической поставки; независимую подготовку оснастки можно продолжать. Если ожидание не помещается в перестановку работ, пересчитать окончание A02 и последующие даты.",
-          "en": "Materials: shoulder-actuator selection is targeted for 30 April 2027; PR5 permits ordering only afterward. 30 April is the nominal A02 work slot, not a promise of same-day receipt. Motor-dependent work and loaded qualification wait for actual delivery; independent fixture preparation may continue. If resequencing cannot absorb the wait, reforecast A02 completion and dependent dates."
+          "ru": "Поставка: выбор плечевого привода завершается по плану 25.05.2027; PR5 разрешает заказ только после этого. 25.05 — начало планового слота A02, а не обещание получения привода в тот же день. Работы с приводом и нагрузочная проверка ждут фактической поставки; независимую подготовку оснастки можно продолжать. Если ожидание не помещается в перестановку работ, пересчитать окончание A02 и последующие даты.",
+          "en": "Materials: shoulder-actuator selection is targeted for 25 May 2027; PR5 permits ordering only afterward. 25 May is the nominal A02 work slot, not a promise of same-day receipt. Motor-dependent work and loaded qualification wait for actual delivery; independent fixture preparation may continue. If resequencing cannot absorb the wait, reforecast A02 completion and dependent dates."
         }
       },
       {
@@ -14785,14 +14738,30 @@
         "stage": "T2",
         "task_index": 1,
         "source_task": "TAIL.T05",
-        "nominal_slot_start": "2027-08-04",
+        "nominal_slot_start": "2027-08-17",
         "order_gate": "TAIL_T04_PASS",
-        "nominal_gate_finish": "2027-08-04",
+        "nominal_gate_finish": "2027-08-17",
         "condition": {
-          "ru": "Поставка: ещё четыре привода заказываются только после PASS первой активной секции T04, намеченного на 04.08.2027. Слот T05 с 04.08 не предполагает поставку в тот же день. Монтаж этих приводов, полная калибровка и завершение T05 зависят от получения деталей; на время доставки перенести независимые работы и при необходимости пересчитать даты. 85 ч свободной ёмкости не гарантируют покрытие календарного срока доставки.",
-          "en": "Materials: order the other four drives only after first-active-section T04 PASS, targeted for 4 August 2027. The T05 slot from 4 August does not assume same-day delivery. Installing these drives, full calibration and T05 completion depend on receipt; bring independent work forward during shipping and reforecast dates when needed. The 85 h of unallocated capacity do not guarantee coverage of elapsed delivery time."
+          "ru": "Поставка: ещё четыре привода заказываются только после PASS первой активной секции T04, намеченного на 17.08.2027. Слот T05 с 17.08 не предполагает поставку в тот же день. Монтаж этих приводов, полная калибровка и завершение T05 зависят от получения деталей; на время доставки перенести независимые работы и при необходимости пересчитать даты. 148 ч 20 мин свободной ёмкости не гарантируют покрытие календарного срока доставки.",
+          "en": "Materials: order the other four drives only after first-active-section T04 PASS, targeted for 17 August 2027. The T05 slot from 17 August does not assume same-day delivery. Installing these drives, full calibration and T05 completion depend on receipt; bring independent work forward during shipping and reforecast dates when needed. The 148 h 20 min of unallocated capacity do not guarantee coverage of elapsed delivery time."
         }
       }
     ]
-  }
+  },
+  "work_finish": "2027-12-10",
+  "calendar_finish": "2027-12-30",
+  "calendar_capacity_minutes": 168500,
+  "allocated_minutes": 159600,
+  "buffer_minutes": 8900,
+  "daily_minutes": 500,
+  "weekly_hours": 50,
+  "week_start": "2026-11-30",
+  "first_partial_week_minutes": 2500,
+  "final_partial_week_minutes": 2000,
+  "excluded_dates": [
+    "2026-12-31",
+    "2027-01-01",
+    "2027-12-31"
+  ],
+  "interior_excluded_minutes": 1000
 }

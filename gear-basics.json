@@ -5,36 +5,90 @@
   "learn": 3,
   "build": 2,
   "verify": 1,
-  "title": {"ru": "Шестерёнки и редукторы: от зубьев к суставу робота", "en": "Gears and gearboxes: from teeth to a robot joint"},
-  "budget": {"ru": "Пройти в начале M07.A1, 11–12 января 2027, до сборки стенда. 6 часов внутри существующих 25 часов A1: 3 ч изучения, 2 ч модели и расчётов, 1 ч проверки. На остальные требования и выбор привода остаётся 19 ч (8/8/3). M07 сохраняет 100 ч и даты 11–25 января; испытания A2–A4 сохраняются полностью.", "en": "Complete at the start of M07.A1 on 11–12 January 2027, before assembling the rig. Six hours within A1’s existing 25: 3 h learning, 2 h modeling/calculation, 1 h verification. Other requirements and actuator selection retain 19 h (8/8/3). M07 remains 100 h on 11–25 January; all A2–A4 tests are retained."},
+  "title": {
+    "ru": "Шестерёнки и редукторы: от зубьев к суставу робота",
+    "en": "Gears and gearboxes: from teeth to a robot joint"
+  },
+  "budget": {
+    "ru": "Пройти в начале M07.A1 до сборки стенда; даты указаны в действующем календаре. 6 часов внутри существующих 25 часов A1: 3 ч изучения, 2 ч модели и расчётов, 1 ч проверки. На остальные требования и выбор привода остаётся 19 ч (8/8/3). M07 сохраняет 100 ч; испытания A2–A4 сохраняются полностью.",
+    "en": "Complete at the start of M07.A1 before assembling the rig; use the dates in the active calendar. Six hours within A1’s existing 25: 3 h learning, 2 h modeling/calculation, 1 h verification. Other requirements and actuator selection retain 19 h (8/8/3). M07 remains 100 h; all A2–A4 tests are retained."
+  },
   "steps": [
     {
-      "title": {"ru": "1 ч · Зацепление и передаточное отношение", "en": "1 h · Meshing and gear ratio"},
-      "text": {"ru": "Разобрать ведущую и ведомую шестерни, число зубьев, делительную окружность, модуль и межосевое расстояние. Для стандартной прямозубой пары без смещения: d=mz, a=m(z₁+z₂)/2; модуль и угол давления пары должны совпадать. Две внешние шестерни вращаются в противоположные стороны. Промежуточная шестерня меняет направление, но не модуль общего отношения; в составном редукторе отношения ступеней перемножаются.", "en": "Identify driver/driven gears, tooth count, pitch circle, module and center distance. For a standard unshifted spur pair: d=mz, a=m(z₁+z₂)/2; module and pressure angle must match. Two external gears rotate in opposite directions. An idler changes direction but not the overall ratio magnitude; compound stages multiply their ratios."}
+      "title": {
+        "ru": "1 ч · Зацепление и передаточное отношение",
+        "en": "1 h · Meshing and gear ratio"
+      },
+      "text": {
+        "ru": "Разобрать ведущую и ведомую шестерни, число зубьев, делительную окружность, модуль и межосевое расстояние. Для стандартной прямозубой пары без смещения: d=mz, a=m(z₁+z₂)/2; модуль и угол давления пары должны совпадать. Две внешние шестерни вращаются в противоположные стороны. Промежуточная шестерня меняет направление, но не модуль общего отношения; в составном редукторе отношения ступеней перемножаются.",
+        "en": "Identify driver/driven gears, tooth count, pitch circle, module and center distance. For a standard unshifted spur pair: d=mz, a=m(z₁+z₂)/2; module and pressure angle must match. Two external gears rotate in opposite directions. An idler changes direction but not the overall ratio magnitude; compound stages multiply their ratios."
+      }
     },
     {
-      "title": {"ru": "1 ч · Скорость, момент и потери", "en": "1 h · Speed, torque and losses"},
-      "text": {"ru": "Использовать N=|ωвх/ωвых|=zведомой/zведущей; направление отмечать отдельно. При передаче мощности от мотора: |ωвых|=|ωвх|/N, |τвых|≈ηN|τвх|, Pвых≈ηPвх. Посчитать пары 20→60 и 60→20, затем две последовательные ступени 20→60 и 20→40 с общей промежуточной осью. Объяснить, почему редуктор не создаёт мощность и почему большой N не гарантирует точность или пригодность для ноги.", "en": "Use N=|ωin/ωout|=driven teeth/driver teeth; mark direction separately. For power flowing from motor to load: |ωout|=|ωin|/N, |τout|≈ηN|τin|, Pout≈ηPin. Calculate 20→60 and 60→20 pairs, then compound 20→60 and 20→40 stages with a shared intermediate shaft. Explain why gearing creates no power and why a large N does not guarantee accuracy or suitability for a leg."}
+      "title": {
+        "ru": "1 ч · Скорость, момент и потери",
+        "en": "1 h · Speed, torque and losses"
+      },
+      "text": {
+        "ru": "Использовать N=|ωвх/ωвых|=zведомой/zведущей; направление отмечать отдельно. При передаче мощности от мотора: |ωвых|=|ωвх|/N, |τвых|≈ηN|τвх|, Pвых≈ηPвх. Посчитать пары 20→60 и 60→20, затем две последовательные ступени 20→60 и 20→40 с общей промежуточной осью. Объяснить, почему редуктор не создаёт мощность и почему большой N не гарантирует точность или пригодность для ноги.",
+        "en": "Use N=|ωin/ωout|=driven teeth/driver teeth; mark direction separately. For power flowing from motor to load: |ωout|=|ωin|/N, |τout|≈ηN|τin|, Pout≈ηPin. Calculate 20→60 and 60→20 pairs, then compound 20→60 and 20→40 stages with a shared intermediate shaft. Explain why gearing creates no power and why a large N does not guarantee accuracy or suitability for a leg."
+      }
     },
     {
-      "title": {"ru": "1 ч · Четыре устройства редуктора", "en": "1 h · Four gearbox arrangements"},
-      "text": {"ru": "По схемам и анимациям сравнить прямозубую передачу, планетарный, червячный и волновой редукторы. В планетарном найти солнце, сателлиты, водило и корону, обязательно указать закреплённое звено; в волновом — генератор волн, гибкое и жёсткое колёса. Составить таблицу: компоновка, редукция, люфт, упругость, потери и обратная приводимость — возможность провернуть вход, воздействуя на выход. Самоторможение червячного редуктора зависит от геометрии и трения; название типа его не гарантирует. Малый люфт не означает бесконечную жёсткость.", "en": "Use diagrams and animations to compare spur, planetary, worm and strain-wave gearboxes. Identify sun, planets, carrier and ring in a planetary set and specify its fixed member; identify wave generator, flexspline and circular spline in a strain-wave drive. Tabulate layout, reduction, backlash, compliance, losses and backdrivability—the ability to turn the input by driving the output. Worm self-locking depends on geometry and friction, not the type name alone. Low backlash does not imply infinite stiffness."}
+      "title": {
+        "ru": "1 ч · Четыре устройства редуктора",
+        "en": "1 h · Four gearbox arrangements"
+      },
+      "text": {
+        "ru": "По схемам и анимациям сравнить прямозубую передачу, планетарный, червячный и волновой редукторы. В планетарном найти солнце, сателлиты, водило и корону, обязательно указать закреплённое звено; в волновом — генератор волн, гибкое и жёсткое колёса. Составить таблицу: компоновка, редукция, люфт, упругость, потери и обратная приводимость — возможность провернуть вход, воздействуя на выход. Самоторможение червячного редуктора зависит от геометрии и трения; название типа его не гарантирует. Малый люфт не означает бесконечную жёсткость.",
+        "en": "Use diagrams and animations to compare spur, planetary, worm and strain-wave gearboxes. Identify sun, planets, carrier and ring in a planetary set and specify its fixed member; identify wave generator, flexspline and circular spline in a strain-wave drive. Tabulate layout, reduction, backlash, compliance, losses and backdrivability—the ability to turn the input by driving the output. Worm self-locking depends on geometry and friction, not the type name alone. Low backlash does not imply infinite stiffness."
+      }
     },
     {
-      "title": {"ru": "2 ч · Наглядная модель и расчёт", "en": "2 h · Visual model and calculation"},
-      "text": {"ru": "Собрать в CAD кинематическую модель пары 20/60 с метками валов и ручным изменением входного угла; показать три оборота входа и один противоположный оборот выхода. Сохранить короткую запись или последовательность кадров. Добавить промежуточное колесо и проверить направление. Для 300 об/мин, 0,1 Н·м на входе и учебного η=0,8 рассчитать выход и баланс мощности. CAD-связь проверяет кинематику, но не прочность зубьев, КПД или реальный контакт. Дополнительная покупка не нужна; ручная печатная модель возможна при наличии времени внутри этих 2 ч.", "en": "Build a CAD kinematic model of a 20/60 pair with shaft markers and a manually varied input angle; show three input turns and one opposite output turn. Save a short recording or a frame sequence. Add an idler and verify direction. For 300 rpm, 0.1 N·m input and assumed η=0.8, calculate output and power balance. A CAD motion relation verifies kinematics, not tooth strength, efficiency or real contact. No extra purchase is required; a hand-driven printed model is optional within these 2 h."}
+      "title": {
+        "ru": "2 ч · Наглядная модель и расчёт",
+        "en": "2 h · Visual model and calculation"
+      },
+      "text": {
+        "ru": "Собрать в CAD кинематическую модель пары 20/60 с метками валов и ручным изменением входного угла; показать три оборота входа и один противоположный оборот выхода. Сохранить короткую запись или последовательность кадров. Добавить промежуточное колесо и проверить направление. Для 300 об/мин, 0,1 Н·м на входе и учебного η=0,8 рассчитать выход и баланс мощности. CAD-связь проверяет кинематику, но не прочность зубьев, КПД или реальный контакт. Дополнительная покупка не нужна; ручная печатная модель возможна при наличии времени внутри этих 2 ч.",
+        "en": "Build a CAD kinematic model of a 20/60 pair with shaft markers and a manually varied input angle; show three input turns and one opposite output turn. Save a short recording or a frame sequence. Add an idler and verify direction. For 300 rpm, 0.1 N·m input and assumed η=0.8, calculate output and power balance. A CAD motion relation verifies kinematics, not tooth strength, efficiency or real contact. No extra purchase is required; a hand-driven printed model is optional within these 2 h."
+      }
     },
     {
-      "title": {"ru": "1 ч · Проверка перед стендом", "en": "1 h · Check before the rig"},
-      "text": {"ru": "Без подсказки объяснить направление и отношение пары и составной передачи; показать расчёты с единицами. Проверочный результат пары 20/60: 100 об/мин, 0,24 Н·м; Pвх≈3,14 Вт, Pвых≈2,51 Вт. Для идеальной двухступенчатой передачи 3×2 получить N=6 и одинаковое направление входа/выхода. По разрезу выбранного привода отметить мотор, редуктор, выход и расположение энкодера. Подготовить схему измерения люфта для A4 и обосновать выбор передачи для ноги или захвата по нагрузке, скорости и допустимому люфту.", "en": "Explain pair/compound direction and ratio without prompts and show calculations with units. Pair 20/60 check: 100 rpm, 0.24 N·m; Pin≈3.14 W, Pout≈2.51 W. The ideal compound 3×2 train gives N=6 and matching input/output directions. On a section drawing of the selected actuator, mark motor, gearbox, output and encoder location. Prepare an A4 backlash measurement diagram and justify a leg or gripper transmission using load, speed and allowable backlash."}
+      "title": {
+        "ru": "1 ч · Проверка перед стендом",
+        "en": "1 h · Check before the rig"
+      },
+      "text": {
+        "ru": "Без подсказки объяснить направление и отношение пары и составной передачи; показать расчёты с единицами. Проверочный результат пары 20/60: 100 об/мин, 0,24 Н·м; Pвх≈3,14 Вт, Pвых≈2,51 Вт. Для идеальной двухступенчатой передачи 3×2 получить N=6 и одинаковое направление входа/выхода. По разрезу выбранного привода отметить мотор, редуктор, выход и расположение энкодера. Подготовить схему измерения люфта для A4 и обосновать выбор передачи для ноги или захвата по нагрузке, скорости и допустимому люфту.",
+        "en": "Explain pair/compound direction and ratio without prompts and show calculations with units. Pair 20/60 check: 100 rpm, 0.24 N·m; Pin≈3.14 W, Pout≈2.51 W. The ideal compound 3×2 train gives N=6 and matching input/output directions. On a section drawing of the selected actuator, mark motor, gearbox, output and encoder location. Prepare an A4 backlash measurement diagram and justify a leg or gripper transmission using load, speed and allowable backlash."
+      }
     }
   ],
-  "rig": {"ru": "Продолжение в A4, 22–25 января: при малых ограниченных реверсах записать движение входа и независимое положение выхода; оценить угловой люфт и повторяемость в нескольких положениях. Указать разрешение измерения и отличить люфт от упругого прогиба и мёртвой зоны управления. Один энкодер на моторе не измеряет люфт выхода; без независимого наблюдения результат пометить как ограниченный. Использовать готовый закреплённый привод; вскрывать редуктор или принудительно проворачивать выход не требуется.", "en": "Continue in A4 on 22–25 January: during small bounded reversals, record input movement and independent output position; estimate angular backlash and repeatability at several positions. State measurement resolution and distinguish backlash from elastic deflection and control dead zone. A motor-side encoder alone cannot measure output backlash; label evidence as limited without independent observation. Use the mounted stock actuator; no gearbox teardown or forced backdriving is required."},
-  "scope": {"ru": "Результат: схема передачи, таблица четырёх типов, расчёт скорости/момента/мощности и наглядная модель; затем журнал измерения люфта в A4. Детальный расчёт эвольвенты, прочности зубьев и изготовление собственного нагруженного редуктора остаются за пределами этого вводного блока.", "en": "Deliverables: transmission diagram, four-type comparison, speed/torque/power calculation and visual model, followed by the A4 backlash log. Detailed involute design, tooth-strength analysis and manufacturing a custom loaded gearbox are outside this introduction."},
+  "rig": {
+    "ru": "Продолжение в A4 по действующему календарю: при малых ограниченных реверсах записать движение входа и независимое положение выхода; оценить угловой люфт и повторяемость в нескольких положениях. Указать разрешение измерения и отличить люфт от упругого прогиба и мёртвой зоны управления. Один энкодер на моторе не измеряет люфт выхода; без независимого наблюдения результат пометить как ограниченный. Использовать готовый закреплённый привод; вскрывать редуктор или принудительно проворачивать выход не требуется.",
+    "en": "Continue in A4 according to the active calendar: during small bounded reversals, record input movement and independent output position; estimate angular backlash and repeatability at several positions. State measurement resolution and distinguish backlash from elastic deflection and control dead zone. A motor-side encoder alone cannot measure output backlash; label evidence as limited without independent observation. Use the mounted stock actuator; no gearbox teardown or forced backdriving is required."
+  },
+  "scope": {
+    "ru": "Результат: схема передачи, таблица четырёх типов, расчёт скорости/момента/мощности и наглядная модель; затем журнал измерения люфта в A4. Детальный расчёт эвольвенты, прочности зубьев и изготовление собственного нагруженного редуктора остаются за пределами этого вводного блока.",
+    "en": "Deliverables: transmission diagram, four-type comparison, speed/torque/power calculation and visual model, followed by the A4 backlash log. Detailed involute design, tooth-strength analysis and manufacturing a custom loaded gearbox are outside this introduction."
+  },
   "sources": [
-    {"title": "Modern Robotics §8.9 — Actuation, Gearing, and Friction", "url": "https://modernrobotics.northwestern.edu/nu-gm-book-resource/8-9-actuation-gearing-and-friction/"},
-    {"title": "KHK — Types of Gears", "url": "https://khkgears.net/new/gear_knowledge/introduction_to_gears/types_of_gears.html"},
-    {"title": "KHK — Calculation of Gear Dimensions", "url": "https://khkgears.net/gear-knowledge/gear-technical-reference/calculation-gear-dimensions/"},
-    {"title": "Harmonic Drive — Strain Wave Gear Technology", "url": "https://www.harmonicdrive.net/technology/harmonicdrive"}
+    {
+      "title": "Modern Robotics §8.9 — Actuation, Gearing, and Friction",
+      "url": "https://modernrobotics.northwestern.edu/nu-gm-book-resource/8-9-actuation-gearing-and-friction/"
+    },
+    {
+      "title": "KHK — Types of Gears",
+      "url": "https://khkgears.net/new/gear_knowledge/introduction_to_gears/types_of_gears.html"
+    },
+    {
+      "title": "KHK — Calculation of Gear Dimensions",
+      "url": "https://khkgears.net/gear-knowledge/gear-technical-reference/calculation-gear-dimensions/"
+    },
+    {
+      "title": "Harmonic Drive — Strain Wave Gear Technology",
+      "url": "https://www.harmonicdrive.net/technology/harmonicdrive"
+    }
   ]
 }

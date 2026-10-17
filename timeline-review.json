@@ -1,0 +1,3534 @@
+{
+  "status": "verified_active_calendar",
+  "reviewed_on": "2026-10-17",
+  "source": "estimate.json",
+  "verified_calendar": "schedule.json",
+  "source_version": "4.4",
+  "start": "2026-12-01",
+  "deadline": "2027-12-31",
+  "weekly_hours": 50,
+  "workdays": [
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday"
+  ],
+  "excluded_dates": [
+    "2026-12-31",
+    "2027-01-01",
+    "2027-12-31"
+  ],
+  "daily_minutes": 500,
+  "workday_count": 337,
+  "capacity_minutes": 168500,
+  "base_hours": 2660,
+  "category_minutes": {
+    "learn": 37680,
+    "build": 76800,
+    "verify": 45120
+  },
+  "work_finish": "2027-12-10",
+  "buffer_minutes": 8900,
+  "assumptions": [
+    "Equal 8 h 20 min workdays; Sunday off; 31 Dec 2026, 1 Jan 2027 and 31 Dec 2027 off; other holidays and vacation not deducted.",
+    "Mandatory task hours, outcomes and execution order are unchanged.",
+    "Selected reading and course study are already included in learning hours.",
+    "Dates assume materials are ready and acceptance gates pass; delivery and unattended printing are elapsed time, not active work.",
+    "One shared deadline buffer; reserve is not additional required study."
+  ],
+  "months": [
+    {
+      "month": "2026-12",
+      "capacity_minutes": 13000,
+      "allocated_minutes": 13000,
+      "buffer_minutes": 0
+    },
+    {
+      "month": "2027-01",
+      "capacity_minutes": 12500,
+      "allocated_minutes": 12500,
+      "buffer_minutes": 0
+    },
+    {
+      "month": "2027-02",
+      "capacity_minutes": 12000,
+      "allocated_minutes": 12000,
+      "buffer_minutes": 0
+    },
+    {
+      "month": "2027-03",
+      "capacity_minutes": 13500,
+      "allocated_minutes": 13500,
+      "buffer_minutes": 0
+    },
+    {
+      "month": "2027-04",
+      "capacity_minutes": 13000,
+      "allocated_minutes": 13000,
+      "buffer_minutes": 0
+    },
+    {
+      "month": "2027-05",
+      "capacity_minutes": 13000,
+      "allocated_minutes": 13000,
+      "buffer_minutes": 0
+    },
+    {
+      "month": "2027-06",
+      "capacity_minutes": 13000,
+      "allocated_minutes": 13000,
+      "buffer_minutes": 0
+    },
+    {
+      "month": "2027-07",
+      "capacity_minutes": 13500,
+      "allocated_minutes": 13500,
+      "buffer_minutes": 0
+    },
+    {
+      "month": "2027-08",
+      "capacity_minutes": 13000,
+      "allocated_minutes": 13000,
+      "buffer_minutes": 0
+    },
+    {
+      "month": "2027-09",
+      "capacity_minutes": 13000,
+      "allocated_minutes": 13000,
+      "buffer_minutes": 0
+    },
+    {
+      "month": "2027-10",
+      "capacity_minutes": 13000,
+      "allocated_minutes": 13000,
+      "buffer_minutes": 0
+    },
+    {
+      "month": "2027-11",
+      "capacity_minutes": 13000,
+      "allocated_minutes": 13000,
+      "buffer_minutes": 0
+    },
+    {
+      "month": "2027-12",
+      "capacity_minutes": 13000,
+      "allocated_minutes": 4100,
+      "buffer_minutes": 8900
+    }
+  ],
+  "core": {
+    "total_minutes": 159600,
+    "finish": "2027-12-10",
+    "stages": [
+      {
+        "id": "M01",
+        "title": {
+          "ru": "Одна рабочая C++/Python-среда",
+          "en": "One working C++/Python environment"
+        },
+        "track": "core",
+        "hours": 40,
+        "start": "2026-12-01",
+        "end": "2026-12-05"
+      },
+      {
+        "id": "S1",
+        "title": {
+          "ru": "Раннее знакомство с ROS на простой имитации сустава",
+          "en": "Early ROS with a simple mock joint"
+        },
+        "track": "core",
+        "hours": 30,
+        "start": "2026-12-05",
+        "end": "2026-12-10"
+      },
+      {
+        "id": "M02",
+        "title": {
+          "ru": "Математика для измерений и движения",
+          "en": "Mathematics for measurement and motion"
+        },
+        "track": "core",
+        "hours": 72,
+        "start": "2026-12-10",
+        "end": "2026-12-21"
+      },
+      {
+        "id": "M04",
+        "title": {
+          "ru": "Электроника, измерения и сигналы",
+          "en": "Electronics, measurement and signals"
+        },
+        "track": "core",
+        "hours": 110,
+        "start": "2026-12-21",
+        "end": "2027-01-07"
+      },
+      {
+        "id": "M05",
+        "title": {
+          "ru": "CAD, конструкции, FDM и пассивная нога",
+          "en": "CAD, structures, FDM and a passive leg"
+        },
+        "track": "core",
+        "hours": 145,
+        "start": "2027-01-07",
+        "end": "2027-01-27"
+      },
+      {
+        "id": "M06",
+        "title": {
+          "ru": "Встраиваемый контроллер и реальные интерфейсы",
+          "en": "Embedded controller and physical interfaces"
+        },
+        "track": "core",
+        "hours": 110,
+        "start": "2027-01-27",
+        "end": "2027-02-11"
+      },
+      {
+        "id": "M07",
+        "title": {
+          "ru": "Один привод: стенд, управление и идентификация",
+          "en": "One actuator: rig, control and identification"
+        },
+        "track": "core",
+        "hours": 100,
+        "start": "2027-02-11",
+        "end": "2027-02-25"
+      },
+      {
+        "id": "M08",
+        "title": {
+          "ru": "Рабочая кинематика ноги и основы манипулятора",
+          "en": "Working leg kinematics and manipulator foundations"
+        },
+        "track": "core",
+        "hours": 108,
+        "start": "2027-02-25",
+        "end": "2027-03-12"
+      },
+      {
+        "id": "D1",
+        "title": {
+          "ru": "Статика и нагрузки до первой ноги",
+          "en": "Statics and loads before the first leg"
+        },
+        "track": "core",
+        "hours": 40,
+        "start": "2027-03-12",
+        "end": "2027-03-18"
+      },
+      {
+        "id": "L1",
+        "title": {
+          "ru": "Первая физическая трёхкоординатная нога",
+          "en": "First physical 3-DOF leg"
+        },
+        "track": "hexapod",
+        "hours": 70,
+        "start": "2027-03-18",
+        "end": "2027-03-27"
+      },
+      {
+        "id": "G1",
+        "title": {
+          "ru": "Первая нога: решение PASS/HOLD",
+          "en": "First leg: PASS/HOLD decision"
+        },
+        "track": "gate",
+        "hours": 10,
+        "start": "2027-03-29",
+        "end": "2027-03-30"
+      },
+      {
+        "id": "M03",
+        "title": {
+          "ru": "Измерения, калибровка и достоверность вывода",
+          "en": "Measurements, calibration and credible conclusions"
+        },
+        "track": "core",
+        "hours": 56,
+        "start": "2027-03-30",
+        "end": "2027-04-06"
+      },
+      {
+        "id": "S2",
+        "title": {
+          "ru": "ROS: модель, реальные интерфейсы и данные",
+          "en": "ROS: model, real interfaces and data"
+        },
+        "track": "core",
+        "hours": 40,
+        "start": "2027-04-06",
+        "end": "2027-04-12"
+      },
+      {
+        "id": "D2",
+        "title": {
+          "ru": "Динамика и проверка на готовом стенде",
+          "en": "Dynamics and validation on the existing rig"
+        },
+        "track": "core",
+        "hours": 58,
+        "start": "2027-04-12",
+        "end": "2027-04-20"
+      },
+      {
+        "id": "M11",
+        "title": {
+          "ru": "Практическая IMU-фильтрация и наблюдаемость",
+          "en": "Practical IMU filtering and observability"
+        },
+        "track": "core",
+        "hours": 60,
+        "start": "2027-04-20",
+        "end": "2027-04-28"
+      },
+      {
+        "id": "M10",
+        "title": {
+          "ru": "Управление приводом и позой корпуса",
+          "en": "Actuator and body-pose control"
+        },
+        "track": "core",
+        "hours": 80,
+        "start": "2027-04-28",
+        "end": "2027-05-10"
+      },
+      {
+        "id": "M13",
+        "title": {
+          "ru": "Одна нога: модель, MCU HIL и реальные измерения",
+          "en": "One leg: model, MCU HIL and physical measurements"
+        },
+        "track": "core",
+        "hours": 70,
+        "start": "2027-05-10",
+        "end": "2027-05-19"
+      },
+      {
+        "id": "A1",
+        "title": {
+          "ru": "Нагруженный сустав, CAD всего манипулятора и хват",
+          "en": "Loaded joint, full-arm CAD and gripper"
+        },
+        "track": "arm",
+        "hours": 170,
+        "start": "2027-05-19",
+        "end": "2027-06-12"
+      },
+      {
+        "id": "T1",
+        "title": {
+          "ru": "Хвост: пассивная механика и передача",
+          "en": "Tail: passive mechanics and transmission"
+        },
+        "track": "tail",
+        "hours": 125,
+        "start": "2027-06-12",
+        "end": "2027-06-30"
+      },
+      {
+        "id": "M19",
+        "title": {
+          "ru": "Медленная походка, контакты и устойчивость в симуляции",
+          "en": "Slow gait, contact and stability in simulation"
+        },
+        "track": "hexapod",
+        "hours": 136,
+        "start": "2027-06-30",
+        "end": "2027-07-19"
+      },
+      {
+        "id": "M22",
+        "title": {
+          "ru": "Четыре ноги: первая полная физическая платформа",
+          "en": "Four legs: first complete physical platform"
+        },
+        "track": "hexapod",
+        "hours": 155,
+        "start": "2027-07-19",
+        "end": "2027-08-10"
+      },
+      {
+        "id": "G2",
+        "title": {
+          "ru": "Четыре ноги: допуск к расширению",
+          "en": "Four legs: clearance to expand"
+        },
+        "track": "gate",
+        "hours": 10,
+        "start": "2027-08-10",
+        "end": "2027-08-11"
+      },
+      {
+        "id": "T2",
+        "title": {
+          "ru": "Хвост: три активные секции и калибровка",
+          "en": "Tail: three active sections and calibration"
+        },
+        "track": "tail",
+        "hours": 145,
+        "start": "2027-08-11",
+        "end": "2027-08-31"
+      },
+      {
+        "id": "M23",
+        "title": {
+          "ru": "Расширение до гексапода и измеренный рабочий диапазон",
+          "en": "Hexapod expansion and measured operating envelope"
+        },
+        "track": "hexapod",
+        "hours": 155,
+        "start": "2027-08-31",
+        "end": "2027-09-22"
+      },
+      {
+        "id": "M16",
+        "title": {
+          "ru": "MoveIt и ограниченные траектории собственного манипулятора",
+          "en": "MoveIt and bounded trajectories for the custom arm"
+        },
+        "track": "core",
+        "hours": 40,
+        "start": "2027-09-22",
+        "end": "2027-09-28"
+      },
+      {
+        "id": "A2",
+        "title": {
+          "ru": "Физическая сборка и калибровка",
+          "en": "Physical assembly and calibration"
+        },
+        "track": "arm",
+        "hours": 135,
+        "start": "2027-09-28",
+        "end": "2027-10-16"
+      },
+      {
+        "id": "M17",
+        "title": {
+          "ru": "Контракт манипуляции и управление оператором",
+          "en": "Manipulation contract and operator control"
+        },
+        "track": "core",
+        "hours": 25,
+        "start": "2027-10-16",
+        "end": "2027-10-20"
+      },
+      {
+        "id": "M14",
+        "title": {
+          "ru": "Зрение для манипулятора: измеримая геометрия и классическая база",
+          "en": "Arm vision: measurable geometry and a classical baseline"
+        },
+        "track": "core",
+        "hours": 55,
+        "start": "2027-10-20",
+        "end": "2027-10-27"
+      },
+      {
+        "id": "M18",
+        "title": {
+          "ru": "Один полезный эксперимент машинного обучения для манипулятора",
+          "en": "One useful ML experiment for the arm"
+        },
+        "track": "core",
+        "hours": 70,
+        "start": "2027-10-28",
+        "end": "2027-11-06"
+      },
+      {
+        "id": "A3",
+        "title": {
+          "ru": "Реальное исполнение и проверяемый выпуск",
+          "en": "Physical execution and validated release"
+        },
+        "track": "arm",
+        "hours": 120,
+        "start": "2027-11-06",
+        "end": "2027-11-23"
+      },
+      {
+        "id": "G3",
+        "title": {
+          "ru": "Манипулятор и ИИ: физическая приёмка",
+          "en": "Arm and AI: physical acceptance"
+        },
+        "track": "gate",
+        "hours": 10,
+        "start": "2027-11-23",
+        "end": "2027-11-24"
+      },
+      {
+        "id": "T3",
+        "title": {
+          "ru": "Хвост: движения, ресурс и выпуск",
+          "en": "Tail: motions, endurance and release"
+        },
+        "track": "tail",
+        "hours": 70,
+        "start": "2027-11-25",
+        "end": "2027-12-04"
+      },
+      {
+        "id": "M24",
+        "title": {
+          "ru": "Единый выпуск и доказательства трёх проектов",
+          "en": "One release and evidence package for three projects"
+        },
+        "track": "core",
+        "hours": 30,
+        "start": "2027-12-04",
+        "end": "2027-12-08"
+      },
+      {
+        "id": "G4",
+        "title": {
+          "ru": "Три проекта: итоговая приёмка",
+          "en": "Three projects: final acceptance"
+        },
+        "track": "gate",
+        "hours": 10,
+        "start": "2027-12-09",
+        "end": "2027-12-10"
+      }
+    ],
+    "segments": [
+      {
+        "date": "2026-12-01",
+        "stage": "M01",
+        "task_index": 0,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2026-12-02",
+        "stage": "M01",
+        "task_index": 0,
+        "minutes": 340,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2026-12-02",
+        "stage": "M01",
+        "task_index": 1,
+        "minutes": 160,
+        "day_offset_minutes": 340
+      },
+      {
+        "date": "2026-12-03",
+        "stage": "M01",
+        "task_index": 1,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2026-12-04",
+        "stage": "M01",
+        "task_index": 1,
+        "minutes": 180,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2026-12-04",
+        "stage": "M01",
+        "task_index": 2,
+        "minutes": 320,
+        "day_offset_minutes": 180
+      },
+      {
+        "date": "2026-12-05",
+        "stage": "M01",
+        "task_index": 2,
+        "minutes": 40,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2026-12-05",
+        "stage": "M01",
+        "task_index": 3,
+        "minutes": 360,
+        "day_offset_minutes": 40
+      },
+      {
+        "date": "2026-12-05",
+        "stage": "S1",
+        "task_index": 0,
+        "minutes": 100,
+        "day_offset_minutes": 400
+      },
+      {
+        "date": "2026-12-07",
+        "stage": "S1",
+        "task_index": 0,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2026-12-08",
+        "stage": "S1",
+        "task_index": 1,
+        "minutes": 240,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2026-12-08",
+        "stage": "S1",
+        "task_index": 2,
+        "minutes": 260,
+        "day_offset_minutes": 240
+      },
+      {
+        "date": "2026-12-09",
+        "stage": "S1",
+        "task_index": 2,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2026-12-10",
+        "stage": "S1",
+        "task_index": 2,
+        "minutes": 200,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2026-12-10",
+        "stage": "M02",
+        "task_index": 0,
+        "minutes": 300,
+        "day_offset_minutes": 200
+      },
+      {
+        "date": "2026-12-11",
+        "stage": "M02",
+        "task_index": 0,
+        "minutes": 60,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2026-12-11",
+        "stage": "M02",
+        "task_index": 1,
+        "minutes": 440,
+        "day_offset_minutes": 60
+      },
+      {
+        "date": "2026-12-12",
+        "stage": "M02",
+        "task_index": 1,
+        "minutes": 400,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2026-12-12",
+        "stage": "M02",
+        "task_index": 2,
+        "minutes": 100,
+        "day_offset_minutes": 400
+      },
+      {
+        "date": "2026-12-14",
+        "stage": "M02",
+        "task_index": 2,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2026-12-15",
+        "stage": "M02",
+        "task_index": 2,
+        "minutes": 480,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2026-12-15",
+        "stage": "M02",
+        "task_index": 3,
+        "minutes": 20,
+        "day_offset_minutes": 480
+      },
+      {
+        "date": "2026-12-16",
+        "stage": "M02",
+        "task_index": 3,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2026-12-17",
+        "stage": "M02",
+        "task_index": 3,
+        "minutes": 320,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2026-12-17",
+        "stage": "M02",
+        "task_index": 4,
+        "minutes": 180,
+        "day_offset_minutes": 320
+      },
+      {
+        "date": "2026-12-18",
+        "stage": "M02",
+        "task_index": 4,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2026-12-19",
+        "stage": "M02",
+        "task_index": 4,
+        "minutes": 160,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2026-12-19",
+        "stage": "M02",
+        "task_index": 5,
+        "minutes": 340,
+        "day_offset_minutes": 160
+      },
+      {
+        "date": "2026-12-21",
+        "stage": "M02",
+        "task_index": 5,
+        "minutes": 20,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2026-12-21",
+        "stage": "M04",
+        "task_index": 0,
+        "minutes": 480,
+        "day_offset_minutes": 20
+      },
+      {
+        "date": "2026-12-22",
+        "stage": "M04",
+        "task_index": 0,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2026-12-23",
+        "stage": "M04",
+        "task_index": 0,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2026-12-24",
+        "stage": "M04",
+        "task_index": 0,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2026-12-25",
+        "stage": "M04",
+        "task_index": 0,
+        "minutes": 180,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2026-12-25",
+        "stage": "M04",
+        "task_index": 1,
+        "minutes": 320,
+        "day_offset_minutes": 180
+      },
+      {
+        "date": "2026-12-26",
+        "stage": "M04",
+        "task_index": 1,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2026-12-28",
+        "stage": "M04",
+        "task_index": 1,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2026-12-29",
+        "stage": "M04",
+        "task_index": 1,
+        "minutes": 240,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2026-12-29",
+        "stage": "M04",
+        "task_index": 2,
+        "minutes": 260,
+        "day_offset_minutes": 240
+      },
+      {
+        "date": "2026-12-30",
+        "stage": "M04",
+        "task_index": 2,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-01-02",
+        "stage": "M04",
+        "task_index": 2,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-01-04",
+        "stage": "M04",
+        "task_index": 2,
+        "minutes": 180,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-01-04",
+        "stage": "M04",
+        "task_index": 3,
+        "minutes": 320,
+        "day_offset_minutes": 180
+      },
+      {
+        "date": "2027-01-05",
+        "stage": "M04",
+        "task_index": 3,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-01-06",
+        "stage": "M04",
+        "task_index": 3,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-01-07",
+        "stage": "M04",
+        "task_index": 3,
+        "minutes": 120,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-01-07",
+        "stage": "M05",
+        "task_index": 0,
+        "minutes": 380,
+        "day_offset_minutes": 120
+      },
+      {
+        "date": "2027-01-08",
+        "stage": "M05",
+        "task_index": 0,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-01-09",
+        "stage": "M05",
+        "task_index": 0,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-01-11",
+        "stage": "M05",
+        "task_index": 0,
+        "minutes": 420,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-01-11",
+        "stage": "M05",
+        "task_index": 1,
+        "minutes": 80,
+        "day_offset_minutes": 420
+      },
+      {
+        "date": "2027-01-12",
+        "stage": "M05",
+        "task_index": 1,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-01-13",
+        "stage": "M05",
+        "task_index": 1,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-01-14",
+        "stage": "M05",
+        "task_index": 1,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-01-15",
+        "stage": "M05",
+        "task_index": 1,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-01-16",
+        "stage": "M05",
+        "task_index": 1,
+        "minutes": 320,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-01-16",
+        "stage": "M05",
+        "task_index": 2,
+        "minutes": 180,
+        "day_offset_minutes": 320
+      },
+      {
+        "date": "2027-01-18",
+        "stage": "M05",
+        "task_index": 2,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-01-19",
+        "stage": "M05",
+        "task_index": 2,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-01-20",
+        "stage": "M05",
+        "task_index": 2,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-01-21",
+        "stage": "M05",
+        "task_index": 2,
+        "minutes": 120,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-01-21",
+        "stage": "M05",
+        "task_index": 3,
+        "minutes": 380,
+        "day_offset_minutes": 120
+      },
+      {
+        "date": "2027-01-22",
+        "stage": "M05",
+        "task_index": 3,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-01-23",
+        "stage": "M05",
+        "task_index": 3,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-01-25",
+        "stage": "M05",
+        "task_index": 3,
+        "minutes": 420,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-01-25",
+        "stage": "M05",
+        "task_index": 4,
+        "minutes": 80,
+        "day_offset_minutes": 420
+      },
+      {
+        "date": "2027-01-26",
+        "stage": "M05",
+        "task_index": 4,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-01-27",
+        "stage": "M05",
+        "task_index": 4,
+        "minutes": 320,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-01-27",
+        "stage": "M06",
+        "task_index": 0,
+        "minutes": 180,
+        "day_offset_minutes": 320
+      },
+      {
+        "date": "2027-01-28",
+        "stage": "M06",
+        "task_index": 0,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-01-29",
+        "stage": "M06",
+        "task_index": 0,
+        "minutes": 400,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-01-29",
+        "stage": "M06",
+        "task_index": 1,
+        "minutes": 100,
+        "day_offset_minutes": 400
+      },
+      {
+        "date": "2027-01-30",
+        "stage": "M06",
+        "task_index": 1,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-02-01",
+        "stage": "M06",
+        "task_index": 1,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-02-02",
+        "stage": "M06",
+        "task_index": 1,
+        "minutes": 460,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-02-02",
+        "stage": "M06",
+        "task_index": 2,
+        "minutes": 40,
+        "day_offset_minutes": 460
+      },
+      {
+        "date": "2027-02-03",
+        "stage": "M06",
+        "task_index": 2,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-02-04",
+        "stage": "M06",
+        "task_index": 2,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-02-05",
+        "stage": "M06",
+        "task_index": 2,
+        "minutes": 40,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-02-05",
+        "stage": "M06",
+        "task_index": 3,
+        "minutes": 460,
+        "day_offset_minutes": 40
+      },
+      {
+        "date": "2027-02-06",
+        "stage": "M06",
+        "task_index": 3,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-02-08",
+        "stage": "M06",
+        "task_index": 3,
+        "minutes": 360,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-02-08",
+        "stage": "M06",
+        "task_index": 4,
+        "minutes": 140,
+        "day_offset_minutes": 360
+      },
+      {
+        "date": "2027-02-09",
+        "stage": "M06",
+        "task_index": 4,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-02-10",
+        "stage": "M06",
+        "task_index": 4,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-02-11",
+        "stage": "M06",
+        "task_index": 4,
+        "minutes": 420,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-02-11",
+        "stage": "M07",
+        "task_index": 0,
+        "minutes": 80,
+        "day_offset_minutes": 420
+      },
+      {
+        "date": "2027-02-12",
+        "stage": "M07",
+        "task_index": 0,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-02-13",
+        "stage": "M07",
+        "task_index": 0,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-02-15",
+        "stage": "M07",
+        "task_index": 0,
+        "minutes": 420,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-02-15",
+        "stage": "M07",
+        "task_index": 1,
+        "minutes": 80,
+        "day_offset_minutes": 420
+      },
+      {
+        "date": "2027-02-16",
+        "stage": "M07",
+        "task_index": 1,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-02-17",
+        "stage": "M07",
+        "task_index": 1,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-02-18",
+        "stage": "M07",
+        "task_index": 1,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-02-19",
+        "stage": "M07",
+        "task_index": 1,
+        "minutes": 220,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-02-19",
+        "stage": "M07",
+        "task_index": 2,
+        "minutes": 280,
+        "day_offset_minutes": 220
+      },
+      {
+        "date": "2027-02-20",
+        "stage": "M07",
+        "task_index": 2,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-02-22",
+        "stage": "M07",
+        "task_index": 2,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-02-23",
+        "stage": "M07",
+        "task_index": 2,
+        "minutes": 220,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-02-23",
+        "stage": "M07",
+        "task_index": 3,
+        "minutes": 280,
+        "day_offset_minutes": 220
+      },
+      {
+        "date": "2027-02-24",
+        "stage": "M07",
+        "task_index": 3,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-02-25",
+        "stage": "M07",
+        "task_index": 3,
+        "minutes": 420,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-02-25",
+        "stage": "M08",
+        "task_index": 0,
+        "minutes": 80,
+        "day_offset_minutes": 420
+      },
+      {
+        "date": "2027-02-26",
+        "stage": "M08",
+        "task_index": 0,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-02-27",
+        "stage": "M08",
+        "task_index": 0,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-03-01",
+        "stage": "M08",
+        "task_index": 1,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-03-02",
+        "stage": "M08",
+        "task_index": 1,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-03-03",
+        "stage": "M08",
+        "task_index": 1,
+        "minutes": 200,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-03-03",
+        "stage": "M08",
+        "task_index": 2,
+        "minutes": 300,
+        "day_offset_minutes": 200
+      },
+      {
+        "date": "2027-03-04",
+        "stage": "M08",
+        "task_index": 2,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-03-05",
+        "stage": "M08",
+        "task_index": 2,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-03-06",
+        "stage": "M08",
+        "task_index": 2,
+        "minutes": 20,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-03-06",
+        "stage": "M08",
+        "task_index": 3,
+        "minutes": 480,
+        "day_offset_minutes": 20
+      },
+      {
+        "date": "2027-03-08",
+        "stage": "M08",
+        "task_index": 3,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-03-09",
+        "stage": "M08",
+        "task_index": 3,
+        "minutes": 220,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-03-09",
+        "stage": "M08",
+        "task_index": 4,
+        "minutes": 280,
+        "day_offset_minutes": 220
+      },
+      {
+        "date": "2027-03-10",
+        "stage": "M08",
+        "task_index": 4,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-03-11",
+        "stage": "M08",
+        "task_index": 4,
+        "minutes": 60,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-03-11",
+        "stage": "M08",
+        "task_index": 5,
+        "minutes": 440,
+        "day_offset_minutes": 60
+      },
+      {
+        "date": "2027-03-12",
+        "stage": "M08",
+        "task_index": 5,
+        "minutes": 400,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-03-12",
+        "stage": "D1",
+        "task_index": 0,
+        "minutes": 100,
+        "day_offset_minutes": 400
+      },
+      {
+        "date": "2027-03-13",
+        "stage": "D1",
+        "task_index": 0,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-03-15",
+        "stage": "D1",
+        "task_index": 0,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-03-16",
+        "stage": "D1",
+        "task_index": 0,
+        "minutes": 100,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-03-16",
+        "stage": "D1",
+        "task_index": 1,
+        "minutes": 400,
+        "day_offset_minutes": 100
+      },
+      {
+        "date": "2027-03-17",
+        "stage": "D1",
+        "task_index": 1,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-03-18",
+        "stage": "D1",
+        "task_index": 1,
+        "minutes": 300,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-03-18",
+        "stage": "L1",
+        "task_index": 0,
+        "minutes": 200,
+        "day_offset_minutes": 300
+      },
+      {
+        "date": "2027-03-19",
+        "stage": "L1",
+        "task_index": 0,
+        "minutes": 400,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-03-19",
+        "stage": "L1",
+        "task_index": 1,
+        "minutes": 100,
+        "day_offset_minutes": 400
+      },
+      {
+        "date": "2027-03-20",
+        "stage": "L1",
+        "task_index": 1,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-03-22",
+        "stage": "L1",
+        "task_index": 1,
+        "minutes": 120,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-03-22",
+        "stage": "L1",
+        "task_index": 2,
+        "minutes": 380,
+        "day_offset_minutes": 120
+      },
+      {
+        "date": "2027-03-23",
+        "stage": "L1",
+        "task_index": 2,
+        "minutes": 340,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-03-23",
+        "stage": "L1",
+        "task_index": 3,
+        "minutes": 160,
+        "day_offset_minutes": 340
+      },
+      {
+        "date": "2027-03-24",
+        "stage": "L1",
+        "task_index": 3,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-03-25",
+        "stage": "L1",
+        "task_index": 3,
+        "minutes": 180,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-03-25",
+        "stage": "L1",
+        "task_index": 4,
+        "minutes": 320,
+        "day_offset_minutes": 180
+      },
+      {
+        "date": "2027-03-26",
+        "stage": "L1",
+        "task_index": 4,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-03-27",
+        "stage": "L1",
+        "task_index": 4,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-03-29",
+        "stage": "G1",
+        "task_index": 0,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-03-30",
+        "stage": "G1",
+        "task_index": 0,
+        "minutes": 100,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-03-30",
+        "stage": "M03",
+        "task_index": 0,
+        "minutes": 400,
+        "day_offset_minutes": 100
+      },
+      {
+        "date": "2027-03-31",
+        "stage": "M03",
+        "task_index": 0,
+        "minutes": 320,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-03-31",
+        "stage": "M03",
+        "task_index": 1,
+        "minutes": 180,
+        "day_offset_minutes": 320
+      },
+      {
+        "date": "2027-04-01",
+        "stage": "M03",
+        "task_index": 1,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-04-02",
+        "stage": "M03",
+        "task_index": 1,
+        "minutes": 400,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-04-02",
+        "stage": "M03",
+        "task_index": 2,
+        "minutes": 100,
+        "day_offset_minutes": 400
+      },
+      {
+        "date": "2027-04-03",
+        "stage": "M03",
+        "task_index": 2,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-04-05",
+        "stage": "M03",
+        "task_index": 2,
+        "minutes": 240,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-04-05",
+        "stage": "M03",
+        "task_index": 3,
+        "minutes": 260,
+        "day_offset_minutes": 240
+      },
+      {
+        "date": "2027-04-06",
+        "stage": "M03",
+        "task_index": 3,
+        "minutes": 460,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-04-06",
+        "stage": "S2",
+        "task_index": 0,
+        "minutes": 40,
+        "day_offset_minutes": 460
+      },
+      {
+        "date": "2027-04-07",
+        "stage": "S2",
+        "task_index": 0,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-04-08",
+        "stage": "S2",
+        "task_index": 0,
+        "minutes": 300,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-04-08",
+        "stage": "S2",
+        "task_index": 1,
+        "minutes": 200,
+        "day_offset_minutes": 300
+      },
+      {
+        "date": "2027-04-09",
+        "stage": "S2",
+        "task_index": 1,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-04-10",
+        "stage": "S2",
+        "task_index": 1,
+        "minutes": 140,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-04-10",
+        "stage": "S2",
+        "task_index": 2,
+        "minutes": 360,
+        "day_offset_minutes": 140
+      },
+      {
+        "date": "2027-04-12",
+        "stage": "S2",
+        "task_index": 2,
+        "minutes": 360,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-04-12",
+        "stage": "D2",
+        "task_index": 0,
+        "minutes": 140,
+        "day_offset_minutes": 360
+      },
+      {
+        "date": "2027-04-13",
+        "stage": "D2",
+        "task_index": 0,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-04-14",
+        "stage": "D2",
+        "task_index": 0,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-04-15",
+        "stage": "D2",
+        "task_index": 0,
+        "minutes": 60,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-04-15",
+        "stage": "D2",
+        "task_index": 1,
+        "minutes": 440,
+        "day_offset_minutes": 60
+      },
+      {
+        "date": "2027-04-16",
+        "stage": "D2",
+        "task_index": 1,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-04-17",
+        "stage": "D2",
+        "task_index": 1,
+        "minutes": 20,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-04-17",
+        "stage": "D2",
+        "task_index": 2,
+        "minutes": 480,
+        "day_offset_minutes": 20
+      },
+      {
+        "date": "2027-04-19",
+        "stage": "D2",
+        "task_index": 2,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-04-20",
+        "stage": "D2",
+        "task_index": 2,
+        "minutes": 340,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-04-20",
+        "stage": "M11",
+        "task_index": 0,
+        "minutes": 160,
+        "day_offset_minutes": 340
+      },
+      {
+        "date": "2027-04-21",
+        "stage": "M11",
+        "task_index": 0,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-04-22",
+        "stage": "M11",
+        "task_index": 0,
+        "minutes": 60,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-04-22",
+        "stage": "M11",
+        "task_index": 1,
+        "minutes": 440,
+        "day_offset_minutes": 60
+      },
+      {
+        "date": "2027-04-23",
+        "stage": "M11",
+        "task_index": 1,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-04-24",
+        "stage": "M11",
+        "task_index": 1,
+        "minutes": 260,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-04-24",
+        "stage": "M11",
+        "task_index": 2,
+        "minutes": 240,
+        "day_offset_minutes": 260
+      },
+      {
+        "date": "2027-04-26",
+        "stage": "M11",
+        "task_index": 2,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-04-27",
+        "stage": "M11",
+        "task_index": 2,
+        "minutes": 340,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-04-27",
+        "stage": "M11",
+        "task_index": 3,
+        "minutes": 160,
+        "day_offset_minutes": 340
+      },
+      {
+        "date": "2027-04-28",
+        "stage": "M11",
+        "task_index": 3,
+        "minutes": 440,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-04-28",
+        "stage": "M10",
+        "task_index": 0,
+        "minutes": 60,
+        "day_offset_minutes": 440
+      },
+      {
+        "date": "2027-04-29",
+        "stage": "M10",
+        "task_index": 0,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-04-30",
+        "stage": "M10",
+        "task_index": 0,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-05-01",
+        "stage": "M10",
+        "task_index": 0,
+        "minutes": 140,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-05-01",
+        "stage": "M10",
+        "task_index": 1,
+        "minutes": 360,
+        "day_offset_minutes": 140
+      },
+      {
+        "date": "2027-05-03",
+        "stage": "M10",
+        "task_index": 1,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-05-04",
+        "stage": "M10",
+        "task_index": 1,
+        "minutes": 100,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-05-04",
+        "stage": "M10",
+        "task_index": 2,
+        "minutes": 400,
+        "day_offset_minutes": 100
+      },
+      {
+        "date": "2027-05-05",
+        "stage": "M10",
+        "task_index": 2,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-05-06",
+        "stage": "M10",
+        "task_index": 2,
+        "minutes": 180,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-05-06",
+        "stage": "M10",
+        "task_index": 3,
+        "minutes": 320,
+        "day_offset_minutes": 180
+      },
+      {
+        "date": "2027-05-07",
+        "stage": "M10",
+        "task_index": 3,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-05-08",
+        "stage": "M10",
+        "task_index": 3,
+        "minutes": 260,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-05-08",
+        "stage": "M10",
+        "task_index": 4,
+        "minutes": 240,
+        "day_offset_minutes": 260
+      },
+      {
+        "date": "2027-05-10",
+        "stage": "M10",
+        "task_index": 4,
+        "minutes": 240,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-05-10",
+        "stage": "M13",
+        "task_index": 0,
+        "minutes": 260,
+        "day_offset_minutes": 240
+      },
+      {
+        "date": "2027-05-11",
+        "stage": "M13",
+        "task_index": 0,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-05-12",
+        "stage": "M13",
+        "task_index": 0,
+        "minutes": 440,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-05-12",
+        "stage": "M13",
+        "task_index": 1,
+        "minutes": 60,
+        "day_offset_minutes": 440
+      },
+      {
+        "date": "2027-05-13",
+        "stage": "M13",
+        "task_index": 1,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-05-14",
+        "stage": "M13",
+        "task_index": 1,
+        "minutes": 340,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-05-14",
+        "stage": "M13",
+        "task_index": 2,
+        "minutes": 160,
+        "day_offset_minutes": 340
+      },
+      {
+        "date": "2027-05-15",
+        "stage": "M13",
+        "task_index": 2,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-05-17",
+        "stage": "M13",
+        "task_index": 2,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-05-18",
+        "stage": "M13",
+        "task_index": 2,
+        "minutes": 40,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-05-18",
+        "stage": "M13",
+        "task_index": 3,
+        "minutes": 460,
+        "day_offset_minutes": 40
+      },
+      {
+        "date": "2027-05-19",
+        "stage": "M13",
+        "task_index": 3,
+        "minutes": 440,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-05-19",
+        "stage": "A1",
+        "task_index": 0,
+        "minutes": 60,
+        "day_offset_minutes": 440
+      },
+      {
+        "date": "2027-05-20",
+        "stage": "A1",
+        "task_index": 0,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-05-21",
+        "stage": "A1",
+        "task_index": 0,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-05-22",
+        "stage": "A1",
+        "task_index": 0,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-05-24",
+        "stage": "A1",
+        "task_index": 0,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-05-25",
+        "stage": "A1",
+        "task_index": 0,
+        "minutes": 40,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-05-25",
+        "stage": "A1",
+        "task_index": 1,
+        "minutes": 460,
+        "day_offset_minutes": 40
+      },
+      {
+        "date": "2027-05-26",
+        "stage": "A1",
+        "task_index": 1,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-05-27",
+        "stage": "A1",
+        "task_index": 1,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-05-28",
+        "stage": "A1",
+        "task_index": 1,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-05-29",
+        "stage": "A1",
+        "task_index": 1,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-05-31",
+        "stage": "A1",
+        "task_index": 1,
+        "minutes": 240,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-05-31",
+        "stage": "A1",
+        "task_index": 2,
+        "minutes": 260,
+        "day_offset_minutes": 240
+      },
+      {
+        "date": "2027-06-01",
+        "stage": "A1",
+        "task_index": 2,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-06-02",
+        "stage": "A1",
+        "task_index": 2,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-06-03",
+        "stage": "A1",
+        "task_index": 2,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-06-04",
+        "stage": "A1",
+        "task_index": 2,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-06-05",
+        "stage": "A1",
+        "task_index": 2,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-06-07",
+        "stage": "A1",
+        "task_index": 2,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-06-08",
+        "stage": "A1",
+        "task_index": 2,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-06-09",
+        "stage": "A1",
+        "task_index": 2,
+        "minutes": 140,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-06-09",
+        "stage": "A1",
+        "task_index": 3,
+        "minutes": 360,
+        "day_offset_minutes": 140
+      },
+      {
+        "date": "2027-06-10",
+        "stage": "A1",
+        "task_index": 3,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-06-11",
+        "stage": "A1",
+        "task_index": 3,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-06-12",
+        "stage": "A1",
+        "task_index": 3,
+        "minutes": 140,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-06-12",
+        "stage": "T1",
+        "task_index": 0,
+        "minutes": 360,
+        "day_offset_minutes": 140
+      },
+      {
+        "date": "2027-06-14",
+        "stage": "T1",
+        "task_index": 0,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-06-15",
+        "stage": "T1",
+        "task_index": 0,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-06-16",
+        "stage": "T1",
+        "task_index": 0,
+        "minutes": 440,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-06-16",
+        "stage": "T1",
+        "task_index": 1,
+        "minutes": 60,
+        "day_offset_minutes": 440
+      },
+      {
+        "date": "2027-06-17",
+        "stage": "T1",
+        "task_index": 1,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-06-18",
+        "stage": "T1",
+        "task_index": 1,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-06-19",
+        "stage": "T1",
+        "task_index": 1,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-06-21",
+        "stage": "T1",
+        "task_index": 1,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-06-22",
+        "stage": "T1",
+        "task_index": 1,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-06-23",
+        "stage": "T1",
+        "task_index": 1,
+        "minutes": 440,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-06-23",
+        "stage": "T1",
+        "task_index": 2,
+        "minutes": 60,
+        "day_offset_minutes": 440
+      },
+      {
+        "date": "2027-06-24",
+        "stage": "T1",
+        "task_index": 2,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-06-25",
+        "stage": "T1",
+        "task_index": 2,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-06-26",
+        "stage": "T1",
+        "task_index": 2,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-06-28",
+        "stage": "T1",
+        "task_index": 2,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-06-29",
+        "stage": "T1",
+        "task_index": 2,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-06-30",
+        "stage": "T1",
+        "task_index": 2,
+        "minutes": 140,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-06-30",
+        "stage": "M19",
+        "task_index": 0,
+        "minutes": 360,
+        "day_offset_minutes": 140
+      },
+      {
+        "date": "2027-07-01",
+        "stage": "M19",
+        "task_index": 0,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-07-02",
+        "stage": "M19",
+        "task_index": 0,
+        "minutes": 100,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-07-02",
+        "stage": "M19",
+        "task_index": 1,
+        "minutes": 400,
+        "day_offset_minutes": 100
+      },
+      {
+        "date": "2027-07-03",
+        "stage": "M19",
+        "task_index": 1,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-07-05",
+        "stage": "M19",
+        "task_index": 1,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-07-06",
+        "stage": "M19",
+        "task_index": 1,
+        "minutes": 40,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-07-06",
+        "stage": "M19",
+        "task_index": 2,
+        "minutes": 460,
+        "day_offset_minutes": 40
+      },
+      {
+        "date": "2027-07-07",
+        "stage": "M19",
+        "task_index": 2,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-07-08",
+        "stage": "M19",
+        "task_index": 2,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-07-09",
+        "stage": "M19",
+        "task_index": 2,
+        "minutes": 100,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-07-09",
+        "stage": "M19",
+        "task_index": 3,
+        "minutes": 400,
+        "day_offset_minutes": 100
+      },
+      {
+        "date": "2027-07-10",
+        "stage": "M19",
+        "task_index": 3,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-07-12",
+        "stage": "M19",
+        "task_index": 3,
+        "minutes": 420,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-07-12",
+        "stage": "M19",
+        "task_index": 4,
+        "minutes": 80,
+        "day_offset_minutes": 420
+      },
+      {
+        "date": "2027-07-13",
+        "stage": "M19",
+        "task_index": 4,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-07-14",
+        "stage": "M19",
+        "task_index": 4,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-07-15",
+        "stage": "M19",
+        "task_index": 4,
+        "minutes": 480,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-07-15",
+        "stage": "M19",
+        "task_index": 5,
+        "minutes": 20,
+        "day_offset_minutes": 480
+      },
+      {
+        "date": "2027-07-16",
+        "stage": "M19",
+        "task_index": 5,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-07-17",
+        "stage": "M19",
+        "task_index": 5,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-07-19",
+        "stage": "M19",
+        "task_index": 5,
+        "minutes": 300,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-07-19",
+        "stage": "M22",
+        "task_index": 0,
+        "minutes": 200,
+        "day_offset_minutes": 300
+      },
+      {
+        "date": "2027-07-20",
+        "stage": "M22",
+        "task_index": 0,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-07-21",
+        "stage": "M22",
+        "task_index": 0,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-07-22",
+        "stage": "M22",
+        "task_index": 1,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-07-23",
+        "stage": "M22",
+        "task_index": 1,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-07-24",
+        "stage": "M22",
+        "task_index": 1,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-07-26",
+        "stage": "M22",
+        "task_index": 1,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-07-27",
+        "stage": "M22",
+        "task_index": 1,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-07-28",
+        "stage": "M22",
+        "task_index": 1,
+        "minutes": 200,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-07-28",
+        "stage": "M22",
+        "task_index": 2,
+        "minutes": 300,
+        "day_offset_minutes": 200
+      },
+      {
+        "date": "2027-07-29",
+        "stage": "M22",
+        "task_index": 2,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-07-30",
+        "stage": "M22",
+        "task_index": 2,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-07-31",
+        "stage": "M22",
+        "task_index": 2,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-08-02",
+        "stage": "M22",
+        "task_index": 3,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-08-03",
+        "stage": "M22",
+        "task_index": 3,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-08-04",
+        "stage": "M22",
+        "task_index": 3,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-08-05",
+        "stage": "M22",
+        "task_index": 3,
+        "minutes": 300,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-08-05",
+        "stage": "M22",
+        "task_index": 4,
+        "minutes": 200,
+        "day_offset_minutes": 300
+      },
+      {
+        "date": "2027-08-06",
+        "stage": "M22",
+        "task_index": 4,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-08-07",
+        "stage": "M22",
+        "task_index": 4,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-08-09",
+        "stage": "M22",
+        "task_index": 4,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-08-10",
+        "stage": "M22",
+        "task_index": 4,
+        "minutes": 100,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-08-10",
+        "stage": "G2",
+        "task_index": 0,
+        "minutes": 400,
+        "day_offset_minutes": 100
+      },
+      {
+        "date": "2027-08-11",
+        "stage": "G2",
+        "task_index": 0,
+        "minutes": 200,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-08-11",
+        "stage": "T2",
+        "task_index": 0,
+        "minutes": 300,
+        "day_offset_minutes": 200
+      },
+      {
+        "date": "2027-08-12",
+        "stage": "T2",
+        "task_index": 0,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-08-13",
+        "stage": "T2",
+        "task_index": 0,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-08-14",
+        "stage": "T2",
+        "task_index": 0,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-08-16",
+        "stage": "T2",
+        "task_index": 0,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-08-17",
+        "stage": "T2",
+        "task_index": 0,
+        "minutes": 400,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-08-17",
+        "stage": "T2",
+        "task_index": 1,
+        "minutes": 100,
+        "day_offset_minutes": 400
+      },
+      {
+        "date": "2027-08-18",
+        "stage": "T2",
+        "task_index": 1,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-08-19",
+        "stage": "T2",
+        "task_index": 1,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-08-20",
+        "stage": "T2",
+        "task_index": 1,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-08-21",
+        "stage": "T2",
+        "task_index": 1,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-08-23",
+        "stage": "T2",
+        "task_index": 1,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-08-24",
+        "stage": "T2",
+        "task_index": 1,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-08-25",
+        "stage": "T2",
+        "task_index": 1,
+        "minutes": 200,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-08-25",
+        "stage": "T2",
+        "task_index": 2,
+        "minutes": 300,
+        "day_offset_minutes": 200
+      },
+      {
+        "date": "2027-08-26",
+        "stage": "T2",
+        "task_index": 2,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-08-27",
+        "stage": "T2",
+        "task_index": 2,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-08-28",
+        "stage": "T2",
+        "task_index": 2,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-08-30",
+        "stage": "T2",
+        "task_index": 2,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-08-31",
+        "stage": "T2",
+        "task_index": 2,
+        "minutes": 400,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-08-31",
+        "stage": "M23",
+        "task_index": 0,
+        "minutes": 100,
+        "day_offset_minutes": 400
+      },
+      {
+        "date": "2027-09-01",
+        "stage": "M23",
+        "task_index": 0,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-09-02",
+        "stage": "M23",
+        "task_index": 0,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-09-03",
+        "stage": "M23",
+        "task_index": 0,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-09-04",
+        "stage": "M23",
+        "task_index": 0,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-09-06",
+        "stage": "M23",
+        "task_index": 1,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-09-07",
+        "stage": "M23",
+        "task_index": 1,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-09-08",
+        "stage": "M23",
+        "task_index": 1,
+        "minutes": 200,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-09-08",
+        "stage": "M23",
+        "task_index": 2,
+        "minutes": 300,
+        "day_offset_minutes": 200
+      },
+      {
+        "date": "2027-09-09",
+        "stage": "M23",
+        "task_index": 2,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-09-10",
+        "stage": "M23",
+        "task_index": 2,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-09-11",
+        "stage": "M23",
+        "task_index": 2,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-09-13",
+        "stage": "M23",
+        "task_index": 2,
+        "minutes": 120,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-09-13",
+        "stage": "M23",
+        "task_index": 3,
+        "minutes": 380,
+        "day_offset_minutes": 120
+      },
+      {
+        "date": "2027-09-14",
+        "stage": "M23",
+        "task_index": 3,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-09-15",
+        "stage": "M23",
+        "task_index": 3,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-09-16",
+        "stage": "M23",
+        "task_index": 3,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-09-17",
+        "stage": "M23",
+        "task_index": 3,
+        "minutes": 100,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-09-17",
+        "stage": "M23",
+        "task_index": 4,
+        "minutes": 400,
+        "day_offset_minutes": 100
+      },
+      {
+        "date": "2027-09-18",
+        "stage": "M23",
+        "task_index": 4,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-09-20",
+        "stage": "M23",
+        "task_index": 4,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-09-21",
+        "stage": "M23",
+        "task_index": 4,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-09-22",
+        "stage": "M23",
+        "task_index": 4,
+        "minutes": 200,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-09-22",
+        "stage": "M16",
+        "task_index": 0,
+        "minutes": 300,
+        "day_offset_minutes": 200
+      },
+      {
+        "date": "2027-09-23",
+        "stage": "M16",
+        "task_index": 0,
+        "minutes": 300,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-09-23",
+        "stage": "M16",
+        "task_index": 1,
+        "minutes": 200,
+        "day_offset_minutes": 300
+      },
+      {
+        "date": "2027-09-24",
+        "stage": "M16",
+        "task_index": 1,
+        "minutes": 400,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-09-24",
+        "stage": "M16",
+        "task_index": 2,
+        "minutes": 100,
+        "day_offset_minutes": 400
+      },
+      {
+        "date": "2027-09-25",
+        "stage": "M16",
+        "task_index": 2,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-09-27",
+        "stage": "M16",
+        "task_index": 3,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-09-28",
+        "stage": "M16",
+        "task_index": 3,
+        "minutes": 100,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-09-28",
+        "stage": "A2",
+        "task_index": 0,
+        "minutes": 400,
+        "day_offset_minutes": 100
+      },
+      {
+        "date": "2027-09-29",
+        "stage": "A2",
+        "task_index": 0,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-09-30",
+        "stage": "A2",
+        "task_index": 0,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-10-01",
+        "stage": "A2",
+        "task_index": 0,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-10-02",
+        "stage": "A2",
+        "task_index": 0,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-10-04",
+        "stage": "A2",
+        "task_index": 0,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-10-05",
+        "stage": "A2",
+        "task_index": 0,
+        "minutes": 100,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-10-05",
+        "stage": "A2",
+        "task_index": 1,
+        "minutes": 400,
+        "day_offset_minutes": 100
+      },
+      {
+        "date": "2027-10-06",
+        "stage": "A2",
+        "task_index": 1,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-10-07",
+        "stage": "A2",
+        "task_index": 1,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-10-08",
+        "stage": "A2",
+        "task_index": 1,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-10-09",
+        "stage": "A2",
+        "task_index": 1,
+        "minutes": 200,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-10-09",
+        "stage": "A2",
+        "task_index": 2,
+        "minutes": 300,
+        "day_offset_minutes": 200
+      },
+      {
+        "date": "2027-10-11",
+        "stage": "A2",
+        "task_index": 2,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-10-12",
+        "stage": "A2",
+        "task_index": 2,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-10-13",
+        "stage": "A2",
+        "task_index": 2,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-10-14",
+        "stage": "A2",
+        "task_index": 2,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-10-15",
+        "stage": "A2",
+        "task_index": 2,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-10-16",
+        "stage": "A2",
+        "task_index": 2,
+        "minutes": 200,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-10-16",
+        "stage": "M17",
+        "task_index": 0,
+        "minutes": 300,
+        "day_offset_minutes": 200
+      },
+      {
+        "date": "2027-10-18",
+        "stage": "M17",
+        "task_index": 0,
+        "minutes": 300,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-10-18",
+        "stage": "M17",
+        "task_index": 1,
+        "minutes": 200,
+        "day_offset_minutes": 300
+      },
+      {
+        "date": "2027-10-19",
+        "stage": "M17",
+        "task_index": 1,
+        "minutes": 280,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-10-19",
+        "stage": "M17",
+        "task_index": 2,
+        "minutes": 220,
+        "day_offset_minutes": 280
+      },
+      {
+        "date": "2027-10-20",
+        "stage": "M17",
+        "task_index": 2,
+        "minutes": 200,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-10-20",
+        "stage": "M14",
+        "task_index": 0,
+        "minutes": 300,
+        "day_offset_minutes": 200
+      },
+      {
+        "date": "2027-10-21",
+        "stage": "M14",
+        "task_index": 0,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-10-22",
+        "stage": "M14",
+        "task_index": 0,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-10-23",
+        "stage": "M14",
+        "task_index": 0,
+        "minutes": 20,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-10-23",
+        "stage": "M14",
+        "task_index": 1,
+        "minutes": 480,
+        "day_offset_minutes": 20
+      },
+      {
+        "date": "2027-10-25",
+        "stage": "M14",
+        "task_index": 1,
+        "minutes": 240,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-10-25",
+        "stage": "M14",
+        "task_index": 2,
+        "minutes": 260,
+        "day_offset_minutes": 240
+      },
+      {
+        "date": "2027-10-26",
+        "stage": "M14",
+        "task_index": 2,
+        "minutes": 460,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-10-26",
+        "stage": "M14",
+        "task_index": 3,
+        "minutes": 40,
+        "day_offset_minutes": 460
+      },
+      {
+        "date": "2027-10-27",
+        "stage": "M14",
+        "task_index": 3,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-10-28",
+        "stage": "M18",
+        "task_index": 0,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-10-29",
+        "stage": "M18",
+        "task_index": 0,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-10-30",
+        "stage": "M18",
+        "task_index": 0,
+        "minutes": 200,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-10-30",
+        "stage": "M18",
+        "task_index": 1,
+        "minutes": 300,
+        "day_offset_minutes": 200
+      },
+      {
+        "date": "2027-11-01",
+        "stage": "M18",
+        "task_index": 1,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-11-02",
+        "stage": "M18",
+        "task_index": 1,
+        "minutes": 400,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-11-02",
+        "stage": "M18",
+        "task_index": 2,
+        "minutes": 100,
+        "day_offset_minutes": 400
+      },
+      {
+        "date": "2027-11-03",
+        "stage": "M18",
+        "task_index": 2,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-11-04",
+        "stage": "M18",
+        "task_index": 2,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-11-05",
+        "stage": "M18",
+        "task_index": 2,
+        "minutes": 100,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-11-05",
+        "stage": "M18",
+        "task_index": 3,
+        "minutes": 400,
+        "day_offset_minutes": 100
+      },
+      {
+        "date": "2027-11-06",
+        "stage": "M18",
+        "task_index": 3,
+        "minutes": 200,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-11-06",
+        "stage": "A3",
+        "task_index": 0,
+        "minutes": 300,
+        "day_offset_minutes": 200
+      },
+      {
+        "date": "2027-11-08",
+        "stage": "A3",
+        "task_index": 0,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-11-09",
+        "stage": "A3",
+        "task_index": 0,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-11-10",
+        "stage": "A3",
+        "task_index": 0,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-11-11",
+        "stage": "A3",
+        "task_index": 0,
+        "minutes": 300,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-11-11",
+        "stage": "A3",
+        "task_index": 1,
+        "minutes": 200,
+        "day_offset_minutes": 300
+      },
+      {
+        "date": "2027-11-12",
+        "stage": "A3",
+        "task_index": 1,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-11-13",
+        "stage": "A3",
+        "task_index": 1,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-11-15",
+        "stage": "A3",
+        "task_index": 1,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-11-16",
+        "stage": "A3",
+        "task_index": 1,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-11-17",
+        "stage": "A3",
+        "task_index": 1,
+        "minutes": 200,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-11-17",
+        "stage": "A3",
+        "task_index": 2,
+        "minutes": 300,
+        "day_offset_minutes": 200
+      },
+      {
+        "date": "2027-11-18",
+        "stage": "A3",
+        "task_index": 2,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-11-19",
+        "stage": "A3",
+        "task_index": 2,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-11-20",
+        "stage": "A3",
+        "task_index": 2,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-11-22",
+        "stage": "A3",
+        "task_index": 2,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-11-23",
+        "stage": "A3",
+        "task_index": 2,
+        "minutes": 400,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-11-23",
+        "stage": "G3",
+        "task_index": 0,
+        "minutes": 100,
+        "day_offset_minutes": 400
+      },
+      {
+        "date": "2027-11-24",
+        "stage": "G3",
+        "task_index": 0,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-11-25",
+        "stage": "T3",
+        "task_index": 0,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-11-26",
+        "stage": "T3",
+        "task_index": 0,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-11-27",
+        "stage": "T3",
+        "task_index": 0,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-11-29",
+        "stage": "T3",
+        "task_index": 0,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-11-30",
+        "stage": "T3",
+        "task_index": 0,
+        "minutes": 100,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-11-30",
+        "stage": "T3",
+        "task_index": 1,
+        "minutes": 400,
+        "day_offset_minutes": 100
+      },
+      {
+        "date": "2027-12-01",
+        "stage": "T3",
+        "task_index": 1,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-12-02",
+        "stage": "T3",
+        "task_index": 1,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-12-03",
+        "stage": "T3",
+        "task_index": 1,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-12-04",
+        "stage": "T3",
+        "task_index": 1,
+        "minutes": 200,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-12-04",
+        "stage": "M24",
+        "task_index": 0,
+        "minutes": 300,
+        "day_offset_minutes": 200
+      },
+      {
+        "date": "2027-12-06",
+        "stage": "M24",
+        "task_index": 0,
+        "minutes": 60,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-12-06",
+        "stage": "M24",
+        "task_index": 1,
+        "minutes": 440,
+        "day_offset_minutes": 60
+      },
+      {
+        "date": "2027-12-07",
+        "stage": "M24",
+        "task_index": 1,
+        "minutes": 40,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-12-07",
+        "stage": "M24",
+        "task_index": 2,
+        "minutes": 460,
+        "day_offset_minutes": 40
+      },
+      {
+        "date": "2027-12-08",
+        "stage": "M24",
+        "task_index": 2,
+        "minutes": 20,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-12-08",
+        "stage": "M24",
+        "task_index": 3,
+        "minutes": 480,
+        "day_offset_minutes": 20
+      },
+      {
+        "date": "2027-12-09",
+        "stage": "G4",
+        "task_index": 0,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2027-12-10",
+        "stage": "G4",
+        "task_index": 0,
+        "minutes": 100,
+        "day_offset_minutes": 0
+      }
+    ]
+  }
+}

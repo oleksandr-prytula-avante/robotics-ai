@@ -18,14 +18,15 @@ def read_json(name):
 
 
 def daily_capacity(day):
-    """The published calendar contract: nine weekday hours, five on Saturday."""
-    return 9 if day.weekday() < 5 else 5 if day.weekday() == 5 else 0
+    """Exact minutes: eight hours twenty minutes, Monday through Saturday."""
+    days_off = {date(2026, 12, 31), date(2027, 1, 1), date(2027, 12, 31)}
+    return 500 if day.weekday() < 6 and day not in days_off else 0
 
 
 def span(segments):
     return (
-        min((part['date'], part['day_offset']) for part in segments),
-        max((part['date'], part['day_offset'] + part['hours']) for part in segments),
+        min((part['date'], part['day_offset_minutes']) for part in segments),
+        max((part['date'], part['day_offset_minutes'] + part['minutes']) for part in segments),
     )
 
 
@@ -125,7 +126,7 @@ class ContentTests(unittest.TestCase):
                                  [part for task in item['tasks'] for part in task['segments']])
                 for index, task in enumerate(item['tasks']):
                     self.assertTrue(task['segments'])
-                    self.assertEqual(task['hours'], sum(part['hours'] for part in task['segments']))
+                    self.assertEqual(round(task['hours'] * 60), sum(part['minutes'] for part in task['segments']))
                     self.assertEqual((task['start'], task['end']),
                                      (span(task['segments'])[0][0], span(task['segments'])[1][0]))
                     for part in task['segments']:
@@ -144,7 +145,7 @@ class ContentTests(unittest.TestCase):
         self.assertEqual(totals['reserve'], schedule['contingency_hours'])
         self.assertEqual(totals['capacity'], schedule['unallocated_hours'])
         self.assertEqual(core + totals['reserve'], schedule['allocated_hours'])
-        self.assertEqual(sum(totals.values()), schedule['calendar_capacity_hours'])
+        self.assertEqual(sum(round(value * 60) for value in totals.values()), schedule['calendar_capacity_minutes'])
 
     def test_calendar_has_no_gaps_overlaps_or_excess_daily_hours(self):
         schedule = self.schedule
@@ -154,7 +155,7 @@ class ContentTests(unittest.TestCase):
             day = date.fromisoformat(part['date'])
             self.assertLessEqual(start, day)
             self.assertLessEqual(day, end)
-            self.assertEqual(part['week'], (day - start).days // 7 + 1)
+            self.assertEqual(part['week'], (day - date.fromisoformat(schedule['week_start'])).days // 7 + 1)
             by_day[day].append(part)
         capacities = Counter()
         allocations = Counter()
@@ -162,41 +163,66 @@ class ContentTests(unittest.TestCase):
         while day <= end:
             with self.subTest(day=day.isoformat()):
                 used = 0
-                for part in sorted(by_day[day], key=lambda part: part['day_offset']):
-                    self.assertEqual(part['day_offset'], used, 'Gap or overlap in active time')
-                    used += part['hours']
+                for part in sorted(by_day[day], key=lambda part: part['day_offset_minutes']):
+                    self.assertEqual(part['day_offset_minutes'], used, 'Gap or overlap in active time')
+                    used += part['minutes']
                     if part['item'] != 'CAP':
-                        allocations[day.strftime('%Y-%m')] += part['hours']
+                        allocations[day.strftime('%Y-%m')] += part['minutes']
                 self.assertEqual(used, daily_capacity(day))
                 capacities[day.strftime('%Y-%m')] += daily_capacity(day)
             day += timedelta(days=1)
-        self.assertEqual(sum(capacities.values()), schedule['calendar_capacity_hours'])
-        self.assertEqual(schedule['calendar_finish'], end.isoformat())
+        self.assertEqual(sum(capacities.values()), schedule['calendar_capacity_minutes'])
+        self.assertEqual(schedule['calendar_finish'], max(part['date'] for part in schedule['segments']))
+        self.assertEqual(schedule['excluded_dates'], ['2026-12-31', '2027-01-01', '2027-12-31'])
         self.assertEqual(schedule['work_finish'], max(
             part['date'] for part in schedule['segments'] if part['item'] != 'CAP'))
-        self.assertEqual(schedule['weeks'], (end - start).days // 7 + 1)
-        self.assertEqual(divmod(sum(capacities.values()), 50),
-                         (schedule['full_weeks'], schedule['final_partial_week_hours']))
+        self.assertEqual(schedule['weeks'], (end - date.fromisoformat(schedule['week_start'])).days // 7 + 1)
+        self.assertEqual(sum(capacities.values()), schedule['full_weeks'] * 3000 +
+                         schedule['first_partial_week_minutes'] + schedule['final_partial_week_minutes'] -
+                         schedule['interior_excluded_minutes'])
         self.assertEqual(len(schedule['months']), len(capacities))
         for month in schedule['months']:
             key = f"{month['year']}-{month['month']:02}"
-            self.assertEqual(month['capacity_hours'], capacities[key])
-            self.assertEqual(month['allocated_hours'], allocations[key])
+            self.assertEqual(month['capacity_minutes'], capacities[key])
+            self.assertEqual(month['allocated_minutes'], allocations[key])
+
+    def test_completion_and_buffer_are_separate(self):
+        schedule = self.schedule
+        self.assertEqual(schedule['start'], '2026-12-01')
+        self.assertEqual(schedule['work_finish'], '2027-12-10')
+        self.assertEqual(schedule['deadline'], '2027-12-31')
+        self.assertEqual(schedule['buffer_minutes'], 148 * 60 + 20)
+        self.assertEqual(schedule['allocated_minutes'], 2660 * 60)
+        self.assertFalse(any(item['track'] == 'reserve' for item in schedule['items']))
+        parts = schedule['segments']
+        first_buffer = next(i for i, part in enumerate(parts) if part['item'] == 'CAP')
+        self.assertTrue(all(part['item'] == 'CAP' for part in parts[first_buffer:]))
+        self.assertEqual(parts[first_buffer]['date'], '2027-12-10')
+        self.assertEqual(parts[first_buffer]['minutes'], 400)
+        self.assertEqual(sum(part['minutes'] for part in parts[first_buffer:]), 8900)
+
+    def test_material_dates_match_their_scheduled_tasks(self):
+        for condition in self.schedule['calendar_assumptions']['material_ready_conditions']:
+            item = self.items[condition['stage']]
+            task = item['tasks'][condition['task_index']]
+            self.assertEqual(condition['nominal_slot_start'], task['start'])
+            self.assertEqual(condition['nominal_gate_finish'], item['tasks'][0]['end'])
+            self.assertEqual(task['material_ready_condition'], condition['condition'])
 
     def test_monthly_tasks_match_source_outcomes_and_segments(self):
         expected, actual = Counter(), Counter()
         for stage, item in self.items.items():
             for index, task in enumerate(item['tasks'], 1):
                 for part in task['segments']:
-                    expected[(part['date'][:7], part['week'], f'{stage}.{index}')] += part['hours']
+                    expected[(part['date'][:7], part['week'], f'{stage}.{index}')] += part['minutes']
         for month, page in self.month_pages.items():
             for block in page.tasks:
                 task_id = block['attrs']['data-task']
                 stage, index = task_id.rsplit('.', 1)
                 with self.subTest(month=month, task=task_id):
                     task = self.items[stage]['tasks'][int(index) - 1]
-                    self.assertEqual(int(block['attrs']['data-total-hours']), task['hours'])
-                    part_hours = int(block['attrs']['data-part-hours'])
+                    self.assertEqual(int(block['attrs']['data-total-minutes']), round(task['hours'] * 60))
+                    part_hours = int(block['attrs']['data-part-minutes'])
                     self.assertGreater(part_hours, 0)
                     actual[(month, block['week'], task_id)] += part_hours
                     for field in ('title', 'result', 'material_ready_condition'):
@@ -218,9 +244,10 @@ class ContentTests(unittest.TestCase):
             with self.subTest(task=task_id):
                 task = expected[task_id]
                 self.assertEqual(len(block['cells']), 5)
-                hours = [0 if value == '—' else int(value)
-                         for value in block['cells'][1:]]
-                self.assertEqual(hours, [task[key] for key in (*CATEGORIES, 'hours')])
+                minutes = [0 if value == '—' else
+                           (int(value.split(':')[0]) * 60 + int(value.split(':')[1]) if ':' in value else int(value) * 60)
+                           for value in block['cells'][1:]]
+                self.assertEqual(minutes, [round(task[key] * 60) for key in (*CATEGORIES, 'hours')])
                 for field in ('title', 'result', 'material_ready_condition'):
                     for language, value in task.get(field, {}).items():
                         self.assertIn(value, block['cells'][0],

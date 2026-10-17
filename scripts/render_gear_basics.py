@@ -19,6 +19,8 @@ def main():
     args = parser.parse_args()
     lesson = json.loads((ROOT / 'gear-basics.json').read_text())
     estimate = json.loads((ROOT / 'estimate.json').read_text())
+    schedule = json.loads((ROOT / 'schedule.json').read_text())
+    gear_months = sorted({part['date'][:7] for part in schedule['segments'] if part['item'] == 'M07'})
     task = estimate['items']['M07']['tasks'][0]
     allocation = task['lesson']
     assert sum(lesson[k] for k in ('learn', 'build', 'verify')) == lesson['hours']
@@ -42,14 +44,15 @@ def main():
     note += f'<p>{bi(lesson["budget"])}</p><a href="curriculum.html#M07-gears">{label}</a></div>'
     outputs = {
         'curriculum.html': (detail, '<div class="reading-route" data-reading-stage="M07">'),
-        'months/2027-01.html': (
-            f'<p><a href="../curriculum.html#M07-gears">{label}</a></p>',
-            '<div class="reading-route" data-reading-stage="M07">'),
         'library.html': (
             f'<div class="note"><a href="curriculum.html#M07-gears">{label}</a></div>',
             '<main class="main">'),
         'changes.html': (note, '<div class="note" data-optional-project="TAIL_PCB">'),
     }
+    for month in gear_months:
+        outputs[f'months/{month}.html'] = (
+            f'<p><a href="../curriculum.html#M07-gears">{label}</a></p>',
+            '<div class="reading-route" data-reading-stage="M07">')
     stale = []
     for name, (content, anchor) in outputs.items():
         path = ROOT / name

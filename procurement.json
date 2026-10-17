@@ -8988,7 +8988,7 @@
       "sources": []
     }
   ],
-  "baseline_hours_unchanged": 2960,
+  "baseline_hours_unchanged": 2660,
   "first_basket_subtotal_uah": 22319.5,
   "updated_on": "2026-10-04",
   "first_basket_unpriced_rows": 0,
@@ -9199,5 +9199,6 @@
   "research_records": [
     "procurement-link-verification.json",
     "procurement-verification.json"
-  ]
+  ],
+  "calendar_updated_on": "2026-10-17"
 }

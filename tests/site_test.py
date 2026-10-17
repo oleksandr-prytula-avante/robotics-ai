@@ -94,7 +94,7 @@ class SiteTests(unittest.TestCase):
                 subtotal += Decimal(str(item['price'])) * row['quantity']
         self.assertEqual(subtotal, Decimal(str(data['first_basket_subtotal_uah'])))
         self.assertEqual(unpriced, data['first_basket_unpriced_rows'])
-        self.assertEqual(data['baseline_hours_unchanged'], 2960)
+        self.assertEqual(data['baseline_hours_unchanged'], 2660)
         page = PAGES[ROOT / 'procurement.html']
         for item in items.values():
             self.assertIn('item-' + item['id'], page.ids)
@@ -111,10 +111,10 @@ class SiteTests(unittest.TestCase):
             with self.subTest(path=path.name):
                 json.loads(path.read_text())
         schedule = json.loads((ROOT / 'schedule.json').read_text())
-        self.assertEqual(schedule['base_hours'] + schedule['contingency_hours'], 2960)
-        self.assertEqual(schedule['allocated_hours'], 2960)
-        self.assertEqual(schedule['calendar_capacity_hours'], 3045)
-        self.assertEqual(schedule['unallocated_hours'], 85)
+        self.assertEqual(schedule['base_hours'] + schedule['contingency_hours'], 2660)
+        self.assertEqual(schedule['allocated_hours'], 2660)
+        self.assertEqual(schedule['calendar_capacity_minutes'], 168500)
+        self.assertEqual(schedule['buffer_minutes'], 8900)
 
     def test_procurement_component_costs_and_reuse(self):
         data = json.loads((ROOT / 'procurement.json').read_text())
