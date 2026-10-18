@@ -11,6 +11,7 @@ from collections import defaultdict
 from datetime import date, timedelta
 from html.parser import HTMLParser
 from pathlib import Path
+from render_timeline_infographic import update_homepage
 
 ROOT = Path(__file__).resolve().parents[1]
 START, DEADLINE = date(2026, 12, 1), date(2027, 12, 31)
@@ -354,6 +355,8 @@ def main():
         if path.name == 'changes.html':
             text = text.replace('<td>300</td><td>300</td><td>0</td>', '<td>300</td><td>0</td><td>−300</td>')
             text = text.replace('<td>4 155</td><td>2 960</td><td>−1 195</td>', '<td>4 155</td><td>2 660</td><td>−1 495</td>')
+        if path.name == 'index.html':
+            text = update_homepage(text, schedule, bi, duration, POLICY)
         pages[path] = text
 
     # Reuse the existing stage reading/gate guides, then rebuild monthly task
