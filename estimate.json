@@ -770,6 +770,29 @@
           "refs": [
             "M10 pp8,11–14"
           ]
+        },
+        {
+          "id": "M10-F",
+          "title": {
+            "ru": "Robust Control: вводный практикум на одном суставе",
+            "en": "Robust Control: introductory single-joint lab"
+          },
+          "learn": 6,
+          "build": 7,
+          "verify": 7,
+          "hours": 20,
+          "result": {
+            "ru": "На модели M09 задать обоснованные интервалы инерции и демпфирования и границу задержки. Для линейной модели сравнить номинальную и консервативную настройку PD/PID по полюсам, запасам устойчивости и ошибке слежения; отдельно проверить насыщение, возмущение и крайние параметры в симуляции. Представить условия применимости анализа и контрпример за их пределами. Сетка испытаний не считается доказательством устойчивости всего диапазона. H∞, μ-синтез и robust MPC остаются дальнейшим развитием.",
+            "en": "On the M09 model, specify justified inertia/damping intervals and a delay bound. Compare nominal and conservative PD/PID tuning using linear-model poles, stability margins and tracking error; separately simulate saturation, disturbances and parameter extremes. Report analysis assumptions and a counterexample outside them. A test grid is not a proof of stability over the whole range. H-infinity, mu-synthesis and robust MPC remain further development."
+          },
+          "source_refs": [
+            "https://underactuated.mit.edu/robust.html",
+            "https://fbswiki.org/wiki/index.php/FBS"
+          ],
+          "refs": [
+            "https://underactuated.mit.edu/robust.html",
+            "https://fbswiki.org/wiki/index.php/FBS"
+          ]
         }
       ],
       "prerequisites": [
@@ -778,7 +801,7 @@
         "M09",
         "M11"
       ],
-      "hours": 80,
+      "hours": 100,
       "kept": {
         "ru": "Практический PID, цифровые задержки, ограничения, стендовая проверка и внешний позиционный контур обязательны.",
         "en": "Practical PID, digital delay, limits, bench validation and outer position control remain compulsory."
@@ -790,8 +813,8 @@
         }
       ],
       "rationale": {
-        "ru": "80 ч используют готовые стенд M07 и модель M09. Встроенный PID сервопривода с закрытой реализацией не считается собственным контуром управления моментом; физическая проверка крена и тангажа здесь повторно не учитывается.",
-        "en": "80 hours reuse the M07/M09 rig and model. A proprietary servo PID is not presented as a custom torque loop, and physical roll/pitch testing is not counted twice."
+        "ru": "100 ч используют готовые стенд M07 и модель M09. Встроенный PID сервопривода с закрытой реализацией не считается собственным контуром управления моментом; физическая проверка крена и тангажа здесь повторно не учитывается. Добавлен отдельный вводный практикум: 20 ч; оценка предполагает готовую инфраструктуру предыдущих заданий.",
+        "en": "100 hours reuse the M07/M09 rig and model. A proprietary servo PID is not presented as a custom torque loop, and physical roll/pitch testing is not counted twice. A separate introductory lab adds 20 h, assuming the preceding tasks provide working infrastructure."
       },
       "gate": {
         "ru": "Измеренный контур выполняет заранее выбранные требования и предсказуемо обрабатывает устаревшие данные/пределы; оценка до физических испытаний корпуса остаётся модельной.",
@@ -801,7 +824,7 @@
         "ru": "Исходный M10, pp3–7: PID/упреждающее воздействие, насыщение/защита от интегрального насыщения, Ts/задержки и внешний контур крена и тангажа; pp11–14 — устаревшие данные, насыщение и восстановление. Частотную терминологию понять; полный эксперимент по диаграммам Боде и запасам устойчивости читать при выборе D_FREQ.",
         "en": "Original M10 pp3–7: PID/feedforward, saturation/anti-windup, Ts/delay and outer roll/pitch control; pp11–14 cover stale data, saturation and recovery. Understand frequency terminology; assign the full Bode/margins experiment only with D_FREQ."
       },
-      "base": 80,
+      "base": 100,
       "track": "core"
     },
     "M11": {
@@ -1080,6 +1103,29 @@
             "M19 pp7–8,11–14",
             "M22/M23 acceptance"
           ]
+        },
+        {
+          "id": "M19-G",
+          "title": {
+            "ru": "Force Distribution Optimization: плоская задача двух опор",
+            "en": "Force Distribution Optimization: planar two-support problem"
+          },
+          "learn": 7,
+          "build": 10,
+          "verify": 7,
+          "hours": 24,
+          "result": {
+            "ru": "В отдельном Python-блокноте сформулировать выпуклую QP для двух известных опор: баланс сил/момента, неотрицательные нормальные силы, |Ft| ≤ μFn и верхние границы нагрузки. Минимизировать квадратичное отклонение от выбранного распределения; решить готовым решателем. Сравнить с ручной симметричной задачей, затем сместить COM и приложить горизонтальную нагрузку. Независимо проверить невязки и ограничения, показать недопустимый случай и обработать статус отказа решателя. Это учебный расчёт вне контура управления; трёхмерный QP, переключение контактов, реальное время и передача сил приводам относятся к D_FORCE.",
+            "en": "In a standalone Python notebook, formulate a convex QP for two known planar supports: force/moment balance, nonnegative normal forces, |Ft| <= mu*Fn and load bounds. Minimize squared deviation from a chosen allocation using an existing solver. Compare with a hand-solved symmetric case, then shift COM and apply a horizontal load. Independently check residuals/constraints, demonstrate infeasibility and handle solver failure status. This is an offline teaching example; 3D QP, contact switching, real-time integration and actuator force commands belong to D_FORCE."
+          },
+          "source_refs": [
+            "https://osqp.org/docs/solver/index.html",
+            "https://underactuated.mit.edu/contact.html"
+          ],
+          "refs": [
+            "https://osqp.org/docs/solver/index.html",
+            "https://underactuated.mit.edu/contact.html"
+          ]
         }
       ],
       "prerequisites": [
@@ -1090,20 +1136,20 @@
         "M13",
         "L1"
       ],
-      "hours": 136,
+      "hours": 160,
       "kept": {
         "ru": "Свободный корпус, реальные контакты, геометрия опор и нагрузки, crawl, зазор при переносе ноги, остановка и позиционное выравнивание сохранены.",
         "en": "Floating body, actual contact, support geometry/loads, crawl, swing clearance, stopping and position-based levelling are retained."
       },
       "deferred": [
         {
-          "ru": "Сравнение нескольких алгоритмов оценивания с учётом контактов и оценка скорости по неподвижной стопе — D_STATE; силовое управление QP/MPC — D_FORCE/D_MPC; обученная походка — D_RL.",
-          "en": "Multiple contact-aided estimators and stationary-foot velocity estimation move to D_STATE; force-QP/MPC to D_FORCE/D_MPC; learned gait to D_RL."
+          "ru": "Оценивание — D_STATE; трёхмерное силовое управление QP и MPC — D_FORCE/D_MPC; обученная походка — D_RL. В основной программе есть только отдельный плоский QP-практикум вне контура управления.",
+          "en": "Estimation remains D_STATE; 3D force-QP/MPC remains D_FORCE/D_MPC; learned gait remains D_RL. Core includes only a standalone offline planar QP lab."
         }
       ],
       "rationale": {
-        "ru": "136 ч = 120 ч на интеграцию походки, контактов и управления + 16 ч на расширение модели. Это согласовано с M13, где моделируется одна нога. Повторный курс PID и ковариаций и физические испытания из M22/M23 сюда не входят.",
-        "en": "136 hours comprise 120 hours of gait/contact/control integration plus sixteen hours of model extension coordinated with the one-leg M13 scope. PID/covariance study and M22/M23 physical tests are not repeated."
+        "ru": "160 ч = 120 ч на интеграцию походки, контактов и управления + 16 ч на расширение модели + 24 ч на вводный плоский QP. Физические испытания принимаются отдельно в M22/M23.",
+        "en": "160 h = 120 h for gait/contact/control integration + 16 h for model expansion + 24 h for introductory planar QP. Physical tests are accepted separately in M22/M23."
       },
       "gate": {
         "ru": "Модель без скрытой фиксации проходит штатные и отказные сценарии. Контроллер использует только доступные датчики, а точное состояние симулятора применяется лишь для независимой оценки. Это допуск к физическим испытаниям, а не их замена.",
@@ -1113,7 +1159,7 @@
         "ru": "Исходный M19, с. 3–8: качество контакта и временное согласование, автомат походки crawl и перенос веса, перенос ноги и зазор над поверхностью, свободное стояние и ограничения; с. 15 — проверка опор и реакций. M22/M23 определяют интерфейс передачи в физический проект; сами проекты отвечают за полноту физических испытаний.",
         "en": "Original M19 pp3–8: contact quality/time alignment, crawl FSM/weight transfer, swing/clearance, free standing and bounds; p15 covers support/reaction checks. Read M22/M23 here for hardware handoff interfaces; those projects own physical acceptance."
       },
-      "base": 136,
+      "base": 160,
       "track": "hexapod"
     },
     "M01": {
@@ -1576,9 +1622,32 @@
             "M13 Task8",
             "M13 p7 fidelity"
           ]
+        },
+        {
+          "id": "M13.5",
+          "title": {
+            "ru": "Contact Dynamics: контакт, трение и шаг интегрирования",
+            "en": "Contact Dynamics: contact, friction and integration step"
+          },
+          "learn": 4,
+          "build": 7,
+          "verify": 5,
+          "hours": 16,
+          "result": {
+            "ru": "В существующем симуляторе исследовать одну стопу: касание, удержание, начало скольжения и отрыв. Записать нормальную/касательную реакции, проникновение и импульс; сравнить dt и dt/2, два коэффициента трения и две жёсткости контакта, если параметр доступен. Проверить простой эталон mg и порог скольжения μN; объяснить отличия силы от импульса и жёсткого контакта от податливого. Результат — воспроизводимый сценарий и границы достоверности. Новый физический движок и собственный решатель ударов не входят.",
+            "en": "In the existing simulator, study one foot touching down, sticking, beginning to slide and lifting off. Log normal/tangential reactions, penetration and impulse; compare dt with dt/2, two friction coefficients and two contact stiffnesses where configurable. Check simple mg and mu*N references; distinguish force from impulse and rigid from compliant contact. Deliver a reproducible scenario and validity limits. No second physics engine or custom impact solver."
+          },
+          "source_refs": [
+            "https://underactuated.mit.edu/contact.html",
+            "https://drake.mit.edu/doxygen_cxx/group__compliant__contact.html"
+          ],
+          "refs": [
+            "https://underactuated.mit.edu/contact.html",
+            "https://drake.mit.edu/doxygen_cxx/group__compliant__contact.html"
+          ]
         }
       ],
-      "hours": 70,
+      "hours": 86,
       "prerequisites": [
         "M12B",
         "L1",
@@ -1599,8 +1668,8 @@
         }
       ],
       "rationale": {
-        "ru": "70 ч сохраняют реальную аппаратную границу и проверку физики. Установка уже выполнена в M01; вся нога и её драйвер уже созданы в L1; сборка четырёхногой модели и генератор походки здесь повторно не оплачиваются.",
-        "en": "The 70 h retain the real hardware boundary and physics checks. M01 owns installation; L1 owns the leg and driver; the four-leg model and gait generator are not counted again here."
+        "ru": "86 ч сохраняют реальную аппаратную границу и проверку физики. Установка уже выполнена в M01; вся нога и её драйвер уже созданы в L1; сборка четырёхногой модели и генератор походки здесь повторно не оплачиваются. Добавлен отдельный вводный практикум: 16 ч; оценка предполагает готовую инфраструктуру предыдущих заданий.",
+        "en": "The 86 h retain the real hardware boundary and physics checks. M01 owns installation; L1 owns the leg and driver; the four-leg model and gait generator are not counted again here. A separate introductory lab adds 16 h, assuming the preceding tasks provide working infrastructure."
       },
       "core_reading": {
         "ru": "Исходный M13, с. 3–8, 14–15: эталонные физические задачи, контакт, различия SIL/PIL/HIL, ограничения часов и задача 8. Использовать одну обязательную эталонную сцену вместо набора миров.",
@@ -1616,7 +1685,7 @@
           "en": "Validate power-off stopping on the real supported mechanism; successful animation does not close this criterion."
         }
       ],
-      "base": 70,
+      "base": 86,
       "track": "core"
     },
     "M14": {
@@ -3511,8 +3580,8 @@
             "en": "Most loaded joint passes holding/motion/thermal tests under equivalent load before the full order."
           },
           "material_ready_condition": {
-            "ru": "Поставка: выбор плечевого привода завершается по плану 25.05.2027; PR5 разрешает заказ только после этого. 25.05 — начало планового слота A02, а не обещание получения привода в тот же день. Работы с приводом и нагрузочная проверка ждут фактической поставки; независимую подготовку оснастки можно продолжать. Если ожидание не помещается в перестановку работ, пересчитать окончание A02 и последующие даты.",
-            "en": "Materials: shoulder-actuator selection is targeted for 25 May 2027; PR5 permits ordering only afterward. 25 May is the nominal A02 work slot, not a promise of same-day receipt. Motor-dependent work and loaded qualification wait for actual delivery; independent fixture preparation may continue. If resequencing cannot absorb the wait, reforecast A02 completion and dependent dates."
+            "ru": "Поставка: выбор плечевого привода завершается по плану 29.05.2027; PR5 разрешает заказ только после этого. 29.05 — начало планового слота A02, а не обещание получения привода в тот же день. Работы с приводом и нагрузочная проверка ждут фактической поставки; независимую подготовку оснастки можно продолжать. Если ожидание не помещается в перестановку работ, пересчитать окончание A02 и последующие даты.",
+            "en": "Materials: shoulder-actuator selection is targeted for 29 May 2027; PR5 permits ordering only afterward. 29 May is the nominal A02 work slot, not a promise of same-day receipt. Motor-dependent work and loaded qualification wait for actual delivery; independent fixture preparation may continue. If resequencing cannot absorb the wait, reforecast A02 completion and dependent dates."
           }
         },
         {
@@ -3783,8 +3852,8 @@
             "en": "Three sections/six drives assembled; distal tendon routing and inter-section coupling verified."
           },
           "material_ready_condition": {
-            "ru": "Поставка: ещё четыре привода заказываются только после PASS первой активной секции T04, намеченного на 17.08.2027. Слот T05 с 17.08 не предполагает поставку в тот же день. Монтаж этих приводов, полная калибровка и завершение T05 зависят от получения деталей; на время доставки перенести независимые работы и при необходимости пересчитать даты. 148 ч 20 мин свободной ёмкости не гарантируют покрытие календарного срока доставки.",
-            "en": "Materials: order the other four drives only after first-active-section T04 PASS, targeted for 17 August 2027. The T05 slot from 17 August does not assume same-day delivery. Installing these drives, full calibration and T05 completion depend on receipt; bring independent work forward during shipping and reforecast dates when needed. The 148 h 20 min of unallocated capacity do not guarantee coverage of elapsed delivery time."
+            "ru": "Поставка: ещё четыре привода заказываются только после PASS первой активной секции T04, намеченного на 25.08.2027. Слот T05 с 25.08 не предполагает поставку в тот же день. Монтаж этих приводов, полная калибровка и завершение T05 зависят от получения деталей; на время доставки перенести независимые работы и при необходимости пересчитать даты. 88 ч 20 мин свободной ёмкости не гарантируют покрытие календарного срока доставки.",
+            "en": "Materials: order the other four drives only after first-active-section T04 PASS, targeted for 25 August 2027. The T05 slot from 25 August does not assume same-day delivery. Installing these drives, full calibration and T05 completion depend on receipt; bring independent work forward during shipping and reforecast dates when needed. The 88 h 20 min of unallocated capacity do not guarantee coverage of elapsed delivery time."
           }
         },
         {
@@ -3996,8 +4065,8 @@
             }
           ],
           "calendar": {
-            "ru": "Опция не включена в 340 ч хвоста, 2 660 ч обязательной программы и помесячное расписание. Если добавить 40–60 ч, запас 148 ч 20 мин уменьшится до 108 ч 20 мин — 88 ч 20 мин; финиш необходимо пересчитать. Отказ от опции не мешает завершению хвоста. Изготовление и доставка требуют отдельного календарного времени.",
-            "en": "The option is outside the tail’s 340 h, the required programme’s 2,660 h and the monthly schedule. Adding 40–60 h reduces the 148 h 20 min buffer to 108 h 20 min–88 h 20 min; reforecast completion. Skipping it does not block tail completion. Fabrication and delivery require elapsed time."
+            "ru": "Опция не включена в 340 ч хвоста, 2 720 ч обязательной программы и помесячное расписание. Если добавить 40–60 ч, запас 88 ч 20 мин уменьшится до 48 ч 20 мин — 28 ч 20 мин; финиш необходимо пересчитать. Отказ от опции не мешает завершению хвоста. Изготовление и доставка требуют отдельного календарного времени.",
+            "en": "The option is outside the tail’s 340 h, the required programme’s 2,720 h and the monthly schedule. Adding 40–60 h reduces the 88 h 20 min buffer to 48 h 20 min–28 h 20 min; reforecast completion. Skipping it does not block tail completion. Fabrication and delivery require elapsed time."
           },
           "procurement_id": "tail-pcb-optional",
           "reading": [
@@ -4063,8 +4132,8 @@
             "en": "Most loaded joint passes holding/motion/thermal tests under equivalent load before the full order."
           },
           "material_ready_condition": {
-            "ru": "Поставка: выбор плечевого привода завершается по плану 25.05.2027; PR5 разрешает заказ только после этого. 25.05 — начало планового слота A02, а не обещание получения привода в тот же день. Работы с приводом и нагрузочная проверка ждут фактической поставки; независимую подготовку оснастки можно продолжать. Если ожидание не помещается в перестановку работ, пересчитать окончание A02 и последующие даты.",
-            "en": "Materials: shoulder-actuator selection is targeted for 25 May 2027; PR5 permits ordering only afterward. 25 May is the nominal A02 work slot, not a promise of same-day receipt. Motor-dependent work and loaded qualification wait for actual delivery; independent fixture preparation may continue. If resequencing cannot absorb the wait, reforecast A02 completion and dependent dates."
+            "ru": "Поставка: выбор плечевого привода завершается по плану 29.05.2027; PR5 разрешает заказ только после этого. 29.05 — начало планового слота A02, а не обещание получения привода в тот же день. Работы с приводом и нагрузочная проверка ждут фактической поставки; независимую подготовку оснастки можно продолжать. Если ожидание не помещается в перестановку работ, пересчитать окончание A02 и последующие даты.",
+            "en": "Materials: shoulder-actuator selection is targeted for 29 May 2027; PR5 permits ordering only afterward. 29 May is the nominal A02 work slot, not a promise of same-day receipt. Motor-dependent work and loaded qualification wait for actual delivery; independent fixture preparation may continue. If resequencing cannot absorb the wait, reforecast A02 completion and dependent dates."
           }
         },
         {
@@ -4344,8 +4413,8 @@
             "en": "Three sections/six drives assembled; distal tendon routing and inter-section coupling verified."
           },
           "material_ready_condition": {
-            "ru": "Поставка: ещё четыре привода заказываются только после PASS первой активной секции T04, намеченного на 17.08.2027. Слот T05 с 17.08 не предполагает поставку в тот же день. Монтаж этих приводов, полная калибровка и завершение T05 зависят от получения деталей; на время доставки перенести независимые работы и при необходимости пересчитать даты. 148 ч 20 мин свободной ёмкости не гарантируют покрытие календарного срока доставки.",
-            "en": "Materials: order the other four drives only after first-active-section T04 PASS, targeted for 17 August 2027. The T05 slot from 17 August does not assume same-day delivery. Installing these drives, full calibration and T05 completion depend on receipt; bring independent work forward during shipping and reforecast dates when needed. The 148 h 20 min of unallocated capacity do not guarantee coverage of elapsed delivery time."
+            "ru": "Поставка: ещё четыре привода заказываются только после PASS первой активной секции T04, намеченного на 25.08.2027. Слот T05 с 25.08 не предполагает поставку в тот же день. Монтаж этих приводов, полная калибровка и завершение T05 зависят от получения деталей; на время доставки перенести независимые работы и при необходимости пересчитать даты. 88 ч 20 мин свободной ёмкости не гарантируют покрытие календарного срока доставки.",
+            "en": "Materials: order the other four drives only after first-active-section T04 PASS, targeted for 25 August 2027. The T05 slot from 25 August does not assume same-day delivery. Installing these drives, full calibration and T05 completion depend on receipt; bring independent work forward during shipping and reforecast dates when needed. The 88 h 20 min of unallocated capacity do not guarantee coverage of elapsed delivery time."
           }
         },
         {
@@ -4917,16 +4986,16 @@
         "ru": "Запас на задержки и переделки до конца 2027",
         "en": "Buffer for delays and rework through 2027"
       },
-      "base": 148.33333333333334,
+      "base": 88.33333333333333,
       "track": "capacity",
       "tasks": [
         {
           "title": {
-            "ru": "148 ч 20 мин запаса после завершения программы; это не обязательное задание.",
-            "en": "148 h 20 min of buffer after programme completion; not a required task."
+            "ru": "88 ч 20 мин запаса после завершения программы; это не обязательное задание.",
+            "en": "88 h 20 min of buffer after programme completion; not a required task."
           },
-          "hours": 148.33333333333334,
-          "minutes": 8900,
+          "hours": 88.33333333333333,
+          "minutes": 5300,
           "learn": 0,
           "build": 0,
           "verify": 0,
@@ -4973,11 +5042,11 @@
     "G4",
     "CAP"
   ],
-  "base_hours": 2660,
+  "base_hours": 2720,
   "reserve_hours": 0,
-  "allocated_hours": 2660,
+  "allocated_hours": 2720,
   "hours": 2808.3333333333335,
-  "padding_hours": 148.33333333333334,
+  "padding_hours": 88.33333333333333,
   "weeks": 57,
   "full_weeks": 55,
   "final_partial_week_hours": 33.333333333333336,
@@ -5588,7 +5657,10 @@
               "result": {
                 "ru": "Базовый PID/PD, при необходимости с упреждающим воздействием; насыщение, защита от интегрального насыщения и измеримые критерии качества. Для интеллектуального сервопривода собственная низкоуровневая прошивка двигателя не обязательна.",
                 "en": "A baseline PID/PD uses feedforward if justified, saturation, anti-windup and measurable quality criteria; a smart servo does not require custom motor firmware."
-              }
+              },
+              "refs": [
+                "M10 pp3–4,9"
+              ]
             },
             {
               "id": "M10-B",
@@ -5606,7 +5678,10 @@
               "result": {
                 "ru": "Период Ts выбран с запасом; измерены время обновления, возраст данных и разброс задержек. Проверены задержка и пропуск; превышение времени ожидания переводит систему в заранее определённое безопасное состояние.",
                 "en": "Ts is selected with margin; update rate/data age/jitter are measured, delay/dropout tested, and timeout enters a predefined safe state."
-              }
+              },
+              "refs": [
+                "M10 pp5–6,10"
+              ]
             },
             {
               "id": "M10-C",
@@ -5625,7 +5700,11 @@
               "result": {
                 "ru": "Настройка по ступени/ограниченной траектории на M07; отдельные подтверждающие повторы показывают перерегулирование, время установления и ошибку слежения, пределы и температуру.",
                 "en": "Step/bounded-trajectory tuning on M07 is confirmed by separate repeats reporting overshoot/settling/tracking, limits and temperature."
-              }
+              },
+              "refs": [
+                "M10 pp4–5,9",
+                "M07 rig"
+              ]
             },
             {
               "id": "M10-D",
@@ -5645,7 +5724,12 @@
               "result": {
                 "ru": "Проверенная оценка по IMU → ограниченная заданная поза корпуса → неподвижные точки опоры → IK → команды положения. Углы, скорость, высота и приближение к сингулярностям ограничены.",
                 "en": "Validated IMU estimate → bounded desired body pose → fixed stance points → IK → position commands, with angle/rate/height/singularity limits."
-              }
+              },
+              "refs": [
+                "M10 pp6–7,10–11",
+                "M08 fixed stance point",
+                "M11 IMU filter"
+              ]
             },
             {
               "id": "M10-E",
@@ -5663,7 +5747,33 @@
               "result": {
                 "ru": "До эксперимента выбрать среднеквадратическую и максимальную ошибки, время установления и окно оценки. Регрессионное воспроизведение проверяет устаревшие данные, насыщение и восстановление. Физическое выравнивание проверяется в M22/M23.",
                 "en": "RMSE/peak/settling criteria and evaluation windows are fixed before testing; regression replay checks stale data, saturation and recovery. Physical body levelling remains in M22/M23."
-              }
+              },
+              "refs": [
+                "M10 pp8,11–14"
+              ]
+            },
+            {
+              "id": "M10-F",
+              "title": {
+                "ru": "Robust Control: вводный практикум на одном суставе",
+                "en": "Robust Control: introductory single-joint lab"
+              },
+              "learn": 6,
+              "build": 7,
+              "verify": 7,
+              "hours": 20,
+              "result": {
+                "ru": "На модели M09 задать обоснованные интервалы инерции и демпфирования и границу задержки. Для линейной модели сравнить номинальную и консервативную настройку PD/PID по полюсам, запасам устойчивости и ошибке слежения; отдельно проверить насыщение, возмущение и крайние параметры в симуляции. Представить условия применимости анализа и контрпример за их пределами. Сетка испытаний не считается доказательством устойчивости всего диапазона. H∞, μ-синтез и robust MPC остаются дальнейшим развитием.",
+                "en": "On the M09 model, specify justified inertia/damping intervals and a delay bound. Compare nominal and conservative PD/PID tuning using linear-model poles, stability margins and tracking error; separately simulate saturation, disturbances and parameter extremes. Report analysis assumptions and a counterexample outside them. A test grid is not a proof of stability over the whole range. H-infinity, mu-synthesis and robust MPC remain further development."
+              },
+              "source_refs": [
+                "https://underactuated.mit.edu/robust.html",
+                "https://fbswiki.org/wiki/index.php/FBS"
+              ],
+              "refs": [
+                "https://underactuated.mit.edu/robust.html",
+                "https://fbswiki.org/wiki/index.php/FBS"
+              ]
             }
           ],
           "prerequisites": [
@@ -5672,7 +5782,7 @@
             "M09",
             "M11"
           ],
-          "hours": 80,
+          "hours": 100,
           "kept": {
             "ru": "Практический PID, цифровые задержки, ограничения, стендовая проверка и внешний позиционный контур обязательны.",
             "en": "Practical PID, digital delay, limits, bench validation and outer position control remain compulsory."
@@ -5684,8 +5794,8 @@
             }
           ],
           "rationale": {
-            "ru": "80 ч используют готовые стенд M07 и модель M09. Встроенный PID сервопривода с закрытой реализацией не считается собственным контуром управления моментом; физическая проверка крена и тангажа здесь повторно не учитывается.",
-            "en": "80 hours reuse the M07/M09 rig and model. A proprietary servo PID is not presented as a custom torque loop, and physical roll/pitch testing is not counted twice."
+            "ru": "100 ч используют готовые стенд M07 и модель M09. Встроенный PID сервопривода с закрытой реализацией не считается собственным контуром управления моментом; физическая проверка крена и тангажа здесь повторно не учитывается. Добавлен отдельный вводный практикум: 20 ч; оценка предполагает готовую инфраструктуру предыдущих заданий.",
+            "en": "100 hours reuse the M07/M09 rig and model. A proprietary servo PID is not presented as a custom torque loop, and physical roll/pitch testing is not counted twice. A separate introductory lab adds 20 h, assuming the preceding tasks provide working infrastructure."
           },
           "gate": {
             "ru": "Измеренный контур выполняет заранее выбранные требования и предсказуемо обрабатывает устаревшие данные/пределы; оценка до физических испытаний корпуса остаётся модельной.",
@@ -5839,7 +5949,12 @@
               "result": {
                 "ru": "В существующей среде M13 параметрически добавлены четыре или шесть ног, реальные преобразования тазобедренных суставов, оси, массы и моменты инерции, свободный корпус; проверены ошибки контакта и зеркального отражения.",
                 "en": "The same M13 environment gains parameterised four/six-leg layouts, actual hip transforms/axes/mass/inertia and a floating body, with contact/mirroring checks."
-              }
+              },
+              "refs": [
+                "M13 geometry extension",
+                "M19 pp1–3",
+                "M22/M23 interfaces"
+              ]
             },
             {
               "id": "M19-B",
@@ -5857,7 +5972,10 @@
               "result": {
                 "ru": "Оценка ориентации M11 и временные метки согласованы с проверенным каналом контакта. Гистерезис, неожиданная разгрузка, проскальзывание и пропуски данных блокируют следующий подъём ноги (LIFT). Сложный EKF с учётом контактов не обязателен.",
                 "en": "M11 orientation/timestamps combine with a validated contact channel; hysteresis, unexpected unload/slip and gaps block the next LIFT. A complex contact-aided EKF is not required."
-              }
+              },
+              "refs": [
+                "M19 pp3–4,7,9"
+              ]
             },
             {
               "id": "M19-C",
@@ -5875,7 +5993,10 @@
               "result": {
                 "ru": "Одна переносимая нога; до LIFT COM с запасом внутри невырожденного треугольника оставшихся опор, допустимы реакции/сцепление. Запуск/остановка и смена команды проверены по фазам.",
                 "en": "One leg swings; before LIFT the COM has margin inside the remaining nondegenerate support triangle with feasible reactions/traction. Start/stop and command changes are checked by phase."
-              }
+              },
+              "refs": [
+                "M19 pp5,9–10,15"
+              ]
             },
             {
               "id": "M19-D",
@@ -5893,7 +6014,10 @@
               "result": {
                 "ru": "IK, проверки столкновений и зазора охватывают всю дугу переноса ноги и ограниченную сетку точек на известной поверхности; недостижимая или неизвестная цель вызывает ограничение либо остановку.",
                 "en": "IK/collision/clearance checks cover the entire path and a bounded grid on known terrain; unreachable or unknown targets trigger restriction/stopping."
-              }
+              },
+              "refs": [
+                "M19 pp5–6,10"
+              ]
             },
             {
               "id": "M19-E",
@@ -5912,7 +6036,11 @@
               "result": {
                 "ru": "Модель стоит 60 с без фиксации корпуса, переносит вес и выдерживает малое возмущение при ограничениях позы и IK. Наклон поверхности отделён от заданной ориентации корпуса; точки опоры в мировой системе координат не движутся вместе с корпусом.",
                 "en": "Without body fixation, sixty-second simulated standing, weight transfer and small disturbances use bounded pose/IK. Surface angle and body target are distinct; world foot anchors do not move with the body."
-              }
+              },
+              "refs": [
+                "M19 pp6–8,10–11",
+                "M10 outer pose controller"
+              ]
             },
             {
               "id": "M19-F",
@@ -5931,7 +6059,34 @@
               "result": {
                 "ru": "Воспроизводимый набор штатных сценариев и проверок проскальзывания, разгрузки, отсутствия ожидаемого контакта, устаревших данных, недостижимой цели и остановки в каждой фазе. Пороги заданы заранее. Физические стояние, походки crawl/wave/ripple и выравнивание принимаются только в M22/M23.",
                 "en": "A repeatable suite covers nominal operation, slip/unload, missed touchdown, stale data, unreachable goals and phase-specific stopping, with thresholds set beforehand. Physical stand/crawl/wave/ripple/levelling close only in M22/M23."
-              }
+              },
+              "refs": [
+                "M19 pp7–8,11–14",
+                "M22/M23 acceptance"
+              ]
+            },
+            {
+              "id": "M19-G",
+              "title": {
+                "ru": "Force Distribution Optimization: плоская задача двух опор",
+                "en": "Force Distribution Optimization: planar two-support problem"
+              },
+              "learn": 7,
+              "build": 10,
+              "verify": 7,
+              "hours": 24,
+              "result": {
+                "ru": "В отдельном Python-блокноте сформулировать выпуклую QP для двух известных опор: баланс сил/момента, неотрицательные нормальные силы, |Ft| ≤ μFn и верхние границы нагрузки. Минимизировать квадратичное отклонение от выбранного распределения; решить готовым решателем. Сравнить с ручной симметричной задачей, затем сместить COM и приложить горизонтальную нагрузку. Независимо проверить невязки и ограничения, показать недопустимый случай и обработать статус отказа решателя. Это учебный расчёт вне контура управления; трёхмерный QP, переключение контактов, реальное время и передача сил приводам относятся к D_FORCE.",
+                "en": "In a standalone Python notebook, formulate a convex QP for two known planar supports: force/moment balance, nonnegative normal forces, |Ft| <= mu*Fn and load bounds. Minimize squared deviation from a chosen allocation using an existing solver. Compare with a hand-solved symmetric case, then shift COM and apply a horizontal load. Independently check residuals/constraints, demonstrate infeasibility and handle solver failure status. This is an offline teaching example; 3D QP, contact switching, real-time integration and actuator force commands belong to D_FORCE."
+              },
+              "source_refs": [
+                "https://osqp.org/docs/solver/index.html",
+                "https://underactuated.mit.edu/contact.html"
+              ],
+              "refs": [
+                "https://osqp.org/docs/solver/index.html",
+                "https://underactuated.mit.edu/contact.html"
+              ]
             }
           ],
           "prerequisites": [
@@ -5942,20 +6097,20 @@
             "M13",
             "L1"
           ],
-          "hours": 136,
+          "hours": 160,
           "kept": {
             "ru": "Свободный корпус, реальные контакты, геометрия опор и нагрузки, crawl, зазор при переносе ноги, остановка и позиционное выравнивание сохранены.",
             "en": "Floating body, actual contact, support geometry/loads, crawl, swing clearance, stopping and position-based levelling are retained."
           },
           "deferred": [
             {
-              "ru": "Сравнение нескольких алгоритмов оценивания с учётом контактов и оценка скорости по неподвижной стопе — D_STATE; силовое управление QP/MPC — D_FORCE/D_MPC; обученная походка — D_RL.",
-              "en": "Multiple contact-aided estimators and stationary-foot velocity estimation move to D_STATE; force-QP/MPC to D_FORCE/D_MPC; learned gait to D_RL."
+              "ru": "Оценивание — D_STATE; трёхмерное силовое управление QP и MPC — D_FORCE/D_MPC; обученная походка — D_RL. В основной программе есть только отдельный плоский QP-практикум вне контура управления.",
+              "en": "Estimation remains D_STATE; 3D force-QP/MPC remains D_FORCE/D_MPC; learned gait remains D_RL. Core includes only a standalone offline planar QP lab."
             }
           ],
           "rationale": {
-            "ru": "136 ч = 120 ч на интеграцию походки, контактов и управления + 16 ч на расширение модели. Это согласовано с M13, где моделируется одна нога. Повторный курс PID и ковариаций и физические испытания из M22/M23 сюда не входят.",
-            "en": "136 hours comprise 120 hours of gait/contact/control integration plus sixteen hours of model extension coordinated with the one-leg M13 scope. PID/covariance study and M22/M23 physical tests are not repeated."
+            "ru": "160 ч = 120 ч на интеграцию походки, контактов и управления + 16 ч на расширение модели + 24 ч на вводный плоский QP. Физические испытания принимаются отдельно в M22/M23.",
+            "en": "160 h = 120 h for gait/contact/control integration + 16 h for model expansion + 24 h for introductory planar QP. Physical tests are accepted separately in M22/M23."
           },
           "gate": {
             "ru": "Модель без скрытой фиксации проходит штатные и отказные сценарии. Контроллер использует только доступные датчики, а точное состояние симулятора применяется лишь для независимой оценки. Это допуск к физическим испытаниям, а не их замена.",
@@ -7643,14 +7798,14 @@
         }
       ],
       "totals": {
-        "core_hours": 610,
-        "learning_hours": 180,
-        "build_hours": 294,
-        "verify_hours": 136,
+        "core_hours": 654,
+        "learning_hours": 193,
+        "build_hours": 311,
+        "verify_hours": 150,
         "old_nine_module_hours": 1200,
         "old_seven_core_module_hours": 940,
         "old_task_count": 53,
-        "new_core_task_count": 36,
+        "new_core_task_count": 38,
         "general_reserve_hours": 0
       },
       "estimation_policy": {
@@ -7695,7 +7850,7 @@
     "software": {
       "version": "4.0",
       "author_scope": "software / integration / one applied AI experiment",
-      "base_hours": 400,
+      "base_hours": 416,
       "rows": [
         {
           "id": "M01",
@@ -8036,7 +8191,11 @@
               "result": {
                 "ru": "URDF/SDF, масса/инерция, коллизии, оси и реальные ограничения; один аналитический эталон и шаг dt/dt2. Модель расширяется параметрами, а не вторым симулятором.",
                 "en": "URDF/SDF, mass/inertia, collisions, axes and real limits; one analytical reference and dt/dt2 check. Extend by parameters rather than a second simulator."
-              }
+              },
+              "refs": [
+                "M13 Tasks1–3",
+                "M13 p7"
+              ]
             },
             {
               "id": "M13.2",
@@ -8055,7 +8214,11 @@
               "result": {
                 "ru": "Проверены контакт, скольжение, частота датчика, шум и устаревание данных; точное состояние симулятора отделено от наблюдений. Режим hold_joints и снятие усилия заданы явно; модельное положение не считается измерением реального привода.",
                 "en": "Verify contact/slip and sensor rate/noise/staleness; separate ground truth from observations. Set hold_joints and torque-removal behaviour explicitly; simulated position is not a measured actuator."
-              }
+              },
+              "refs": [
+                "M13 Tasks2,4",
+                "M13 F1–F3"
+              ]
             },
             {
               "id": "M13.3",
@@ -8074,7 +8237,11 @@
               "result": {
                 "ru": "Одинаковые вычисления выполняются на компьютере и микроконтроллере; небольшой фиксированный набор проверяет совпадение. Микроконтроллер действительно рассчитывает управление для модели. Записаны согласование часов, время кругового обмена RTT, возраст данных, p99, максимум и пропуски сроков выполнения.",
                 "en": "The same computations run on host and MCU; a small fixed set checks agreement. The MCU computes model control; retain clock mapping/RTT, data age, p99/max and missed deadlines."
-              }
+              },
+              "refs": [
+                "M13 Tasks5–7",
+                "M13 F4–F6"
+              ]
             },
             {
               "id": "M13.4",
@@ -8093,10 +8260,37 @@
               "result": {
                 "ru": "Одна согласованная низкоамплитудная последовательность на стенде и в модели; раздельные данные настройки/проверки, задержка/ошибка/насыщение и объяснённые расхождения.",
                 "en": "One matched low-amplitude sequence on the rig and model; separate fitting/check data, delay/error/saturation and explained discrepancies."
-              }
+              },
+              "refs": [
+                "M13 Task8",
+                "M13 p7 fidelity"
+              ]
+            },
+            {
+              "id": "M13.5",
+              "title": {
+                "ru": "Contact Dynamics: контакт, трение и шаг интегрирования",
+                "en": "Contact Dynamics: contact, friction and integration step"
+              },
+              "learn": 4,
+              "build": 7,
+              "verify": 5,
+              "hours": 16,
+              "result": {
+                "ru": "В существующем симуляторе исследовать одну стопу: касание, удержание, начало скольжения и отрыв. Записать нормальную/касательную реакции, проникновение и импульс; сравнить dt и dt/2, два коэффициента трения и две жёсткости контакта, если параметр доступен. Проверить простой эталон mg и порог скольжения μN; объяснить отличия силы от импульса и жёсткого контакта от податливого. Результат — воспроизводимый сценарий и границы достоверности. Новый физический движок и собственный решатель ударов не входят.",
+                "en": "In the existing simulator, study one foot touching down, sticking, beginning to slide and lifting off. Log normal/tangential reactions, penetration and impulse; compare dt with dt/2, two friction coefficients and two contact stiffnesses where configurable. Check simple mg and mu*N references; distinguish force from impulse and rigid from compliant contact. Deliver a reproducible scenario and validity limits. No second physics engine or custom impact solver."
+              },
+              "source_refs": [
+                "https://underactuated.mit.edu/contact.html",
+                "https://drake.mit.edu/doxygen_cxx/group__compliant__contact.html"
+              ],
+              "refs": [
+                "https://underactuated.mit.edu/contact.html",
+                "https://drake.mit.edu/doxygen_cxx/group__compliant__contact.html"
+              ]
             }
           ],
-          "hours": 70,
+          "hours": 86,
           "prerequisites": [
             "M12B",
             "L1",
@@ -8117,8 +8311,8 @@
             }
           ],
           "rationale": {
-            "ru": "70 ч сохраняют реальную аппаратную границу и проверку физики. Установка уже выполнена в M01; вся нога и её драйвер уже созданы в L1; сборка четырёхногой модели и генератор походки здесь повторно не оплачиваются.",
-            "en": "The 70 h retain the real hardware boundary and physics checks. M01 owns installation; L1 owns the leg and driver; the four-leg model and gait generator are not counted again here."
+            "ru": "86 ч сохраняют реальную аппаратную границу и проверку физики. Установка уже выполнена в M01; вся нога и её драйвер уже созданы в L1; сборка четырёхногой модели и генератор походки здесь повторно не оплачиваются. Добавлен отдельный вводный практикум: 16 ч; оценка предполагает готовую инфраструктуру предыдущих заданий.",
+            "en": "The 86 h retain the real hardware boundary and physics checks. M01 owns installation; L1 owns the leg and driver; the four-leg model and gait generator are not counted again here. A separate introductory lab adds 16 h, assuming the preceding tasks provide working infrastructure."
           },
           "core_reading": {
             "ru": "Исходный M13, с. 3–8, 14–15: эталонные физические задачи, контакт, различия SIL/PIL/HIL, ограничения часов и задача 8. Использовать одну обязательную эталонную сцену вместо набора миров.",
@@ -10371,8 +10565,8 @@
         "en": "All 40 previous software WBS packages are listed; source_refs retain links to exact original exercises. One source package may split across core, merged and development. Full originals and assignments are not rewritten or removed."
       },
       "accounting": {
-        "ru": "400 ч — оценка выбранных результатов, а не пропорциональное сокращение 920 ч. Используется один стек C++/Python; ответственность за M06/L1, A1/A2/A3, M19 и итоговые выпуски проектов распределена явно. Оценки дальнейшего развития относятся к дополнительной работе после обязательной программы и не складываются автоматически в новый обязательный план.",
-        "en": "The 400 h estimate selected outcomes, not a proportional cut of 920. One C++/Python stack; M06/L1, A1/A2/A3, M19 and project releases have separate owners. Growth ranges describe additional work after core and are not automatically summed into another mandatory plan."
+        "ru": "416 ч — оценка выбранных результатов, а не пропорциональное сокращение 920 ч. Используется один стек C++/Python; ответственность за M06/L1, A1/A2/A3, M19 и итоговые выпуски проектов распределена явно. Оценки дальнейшего развития относятся к дополнительной работе после обязательной программы и не складываются автоматически в новый обязательный план.",
+        "en": "The 416 h estimate selected outcomes, not a proportional cut of 920. One C++/Python stack; M06/L1, A1/A2/A3, M19 and project releases have separate owners. Growth ranges describe additional work after core and are not automatically summed into another mandatory plan."
       },
       "cross_owner_requirements": [
         {
@@ -11535,8 +11729,8 @@
                 "M07"
               ],
               "material_ready_condition": {
-                "ru": "Поставка: выбор плечевого привода завершается по плану 25.05.2027; PR5 разрешает заказ только после этого. 25.05 — начало планового слота A02, а не обещание получения привода в тот же день. Работы с приводом и нагрузочная проверка ждут фактической поставки; независимую подготовку оснастки можно продолжать. Если ожидание не помещается в перестановку работ, пересчитать окончание A02 и последующие даты.",
-                "en": "Materials: shoulder-actuator selection is targeted for 25 May 2027; PR5 permits ordering only afterward. 25 May is the nominal A02 work slot, not a promise of same-day receipt. Motor-dependent work and loaded qualification wait for actual delivery; independent fixture preparation may continue. If resequencing cannot absorb the wait, reforecast A02 completion and dependent dates."
+                "ru": "Поставка: выбор плечевого привода завершается по плану 29.05.2027; PR5 разрешает заказ только после этого. 29.05 — начало планового слота A02, а не обещание получения привода в тот же день. Работы с приводом и нагрузочная проверка ждут фактической поставки; независимую подготовку оснастки можно продолжать. Если ожидание не помещается в перестановку работ, пересчитать окончание A02 и последующие даты.",
+                "en": "Materials: shoulder-actuator selection is targeted for 29 May 2027; PR5 permits ordering only afterward. 29 May is the nominal A02 work slot, not a promise of same-day receipt. Motor-dependent work and loaded qualification wait for actual delivery; independent fixture preparation may continue. If resequencing cannot absorb the wait, reforecast A02 completion and dependent dates."
               }
             },
             {
@@ -11986,8 +12180,8 @@
                 "TAIL_T04_PASS"
               ],
               "material_ready_condition": {
-                "ru": "Поставка: ещё четыре привода заказываются только после PASS первой активной секции T04, намеченного на 17.08.2027. Слот T05 с 17.08 не предполагает поставку в тот же день. Монтаж этих приводов, полная калибровка и завершение T05 зависят от получения деталей; на время доставки перенести независимые работы и при необходимости пересчитать даты. 148 ч 20 мин свободной ёмкости не гарантируют покрытие календарного срока доставки.",
-                "en": "Materials: order the other four drives only after first-active-section T04 PASS, targeted for 17 August 2027. The T05 slot from 17 August does not assume same-day delivery. Installing these drives, full calibration and T05 completion depend on receipt; bring independent work forward during shipping and reforecast dates when needed. The 148 h 20 min of unallocated capacity do not guarantee coverage of elapsed delivery time."
+                "ru": "Поставка: ещё четыре привода заказываются только после PASS первой активной секции T04, намеченного на 25.08.2027. Слот T05 с 25.08 не предполагает поставку в тот же день. Монтаж этих приводов, полная калибровка и завершение T05 зависят от получения деталей; на время доставки перенести независимые работы и при необходимости пересчитать даты. 88 ч 20 мин свободной ёмкости не гарантируют покрытие календарного срока доставки.",
+                "en": "Materials: order the other four drives only after first-active-section T04 PASS, targeted for 25 August 2027. The T05 slot from 25 August does not assume same-day delivery. Installing these drives, full calibration and T05 completion depend on receipt; bring independent work forward during shipping and reforecast dates when needed. The 88 h 20 min of unallocated capacity do not guarantee coverage of elapsed delivery time."
               }
             },
             {
@@ -14703,8 +14897,8 @@
     "supplier_lead_times_validated": false,
     "elapsed_waits_reserved": false,
     "explanation": {
-      "ru": "50 ч в неделю: Пн–Сб по 8 ч 20 мин, Вс свободно. 31.12.2026, 01.01.2027 и 31.12.2027 — выходные; прочие праздники и отпуск не вычтены. Обязательная работа заканчивается 10.12.2027. Оставшиеся 148 ч 20 мин до 31.12.2027 — единый запас на задержки и переделки, не дополнительные задания. Даты зависят от приёмок и получения деталей. Поставка, автономная печать и охлаждение требуют календарного времени; их отдельные длительности не зарезервированы. Запас не гарантирует покрытие сроков поставки.",
-      "en": "50 h/week: Mon–Sat 8 h 20 min/day, Sunday off. 31 December 2026, 1 January 2027 and 31 December 2027 are days off; other holidays and vacation are not deducted. Required work finishes on 10 December 2027. The remaining 148 h 20 min through 31 December form one buffer for delays and rework, not additional tasks. Dates depend on gates and material receipt. Shipping, unattended printing and cooling require elapsed time with no separate durations reserved; the buffer does not guarantee delivery coverage."
+      "ru": "50 ч в неделю: Пн–Сб по 8 ч 20 мин, Вс свободно. 31.12.2026, 01.01.2027 и 31.12.2027 — выходные; прочие праздники и отпуск не вычтены. Обязательная работа заканчивается 18.12.2027. Оставшиеся 88 ч 20 мин до 31.12.2027 — единый запас на задержки и переделки, не дополнительные задания. Даты зависят от приёмок и получения деталей. Поставка, автономная печать и охлаждение требуют календарного времени; их отдельные длительности не зарезервированы. Запас не гарантирует покрытие сроков поставки.",
+      "en": "50 h/week: Mon–Sat 8 h 20 min/day, Sunday off. 31 December 2026, 1 January 2027 and 31 December 2027 are days off; other holidays and vacation are not deducted. Required work finishes on 18 December 2027. The remaining 88 h 20 min through 31 December form one buffer for delays and rework, not additional tasks. Dates depend on gates and material receipt. Shipping, unattended printing and cooling require elapsed time with no separate durations reserved; the buffer does not guarantee delivery coverage."
     },
     "material_ready_conditions": [
       {
@@ -14725,12 +14919,12 @@
         "stage": "A1",
         "task_index": 1,
         "source_task": "ARM.A02",
-        "nominal_slot_start": "2027-05-25",
+        "nominal_slot_start": "2027-05-29",
         "order_gate": "ARM.A01",
-        "nominal_gate_finish": "2027-05-25",
+        "nominal_gate_finish": "2027-05-29",
         "condition": {
-          "ru": "Поставка: выбор плечевого привода завершается по плану 25.05.2027; PR5 разрешает заказ только после этого. 25.05 — начало планового слота A02, а не обещание получения привода в тот же день. Работы с приводом и нагрузочная проверка ждут фактической поставки; независимую подготовку оснастки можно продолжать. Если ожидание не помещается в перестановку работ, пересчитать окончание A02 и последующие даты.",
-          "en": "Materials: shoulder-actuator selection is targeted for 25 May 2027; PR5 permits ordering only afterward. 25 May is the nominal A02 work slot, not a promise of same-day receipt. Motor-dependent work and loaded qualification wait for actual delivery; independent fixture preparation may continue. If resequencing cannot absorb the wait, reforecast A02 completion and dependent dates."
+          "ru": "Поставка: выбор плечевого привода завершается по плану 29.05.2027; PR5 разрешает заказ только после этого. 29.05 — начало планового слота A02, а не обещание получения привода в тот же день. Работы с приводом и нагрузочная проверка ждут фактической поставки; независимую подготовку оснастки можно продолжать. Если ожидание не помещается в перестановку работ, пересчитать окончание A02 и последующие даты.",
+          "en": "Materials: shoulder-actuator selection is targeted for 29 May 2027; PR5 permits ordering only afterward. 29 May is the nominal A02 work slot, not a promise of same-day receipt. Motor-dependent work and loaded qualification wait for actual delivery; independent fixture preparation may continue. If resequencing cannot absorb the wait, reforecast A02 completion and dependent dates."
         }
       },
       {
@@ -14738,21 +14932,21 @@
         "stage": "T2",
         "task_index": 1,
         "source_task": "TAIL.T05",
-        "nominal_slot_start": "2027-08-17",
+        "nominal_slot_start": "2027-08-26",
         "order_gate": "TAIL_T04_PASS",
-        "nominal_gate_finish": "2027-08-17",
+        "nominal_gate_finish": "2027-08-25",
         "condition": {
-          "ru": "Поставка: ещё четыре привода заказываются только после PASS первой активной секции T04, намеченного на 17.08.2027. Слот T05 с 17.08 не предполагает поставку в тот же день. Монтаж этих приводов, полная калибровка и завершение T05 зависят от получения деталей; на время доставки перенести независимые работы и при необходимости пересчитать даты. 148 ч 20 мин свободной ёмкости не гарантируют покрытие календарного срока доставки.",
-          "en": "Materials: order the other four drives only after first-active-section T04 PASS, targeted for 17 August 2027. The T05 slot from 17 August does not assume same-day delivery. Installing these drives, full calibration and T05 completion depend on receipt; bring independent work forward during shipping and reforecast dates when needed. The 148 h 20 min of unallocated capacity do not guarantee coverage of elapsed delivery time."
+          "ru": "Поставка: ещё четыре привода заказываются только после PASS первой активной секции T04, намеченного на 25.08.2027. Слот T05 с 25.08 не предполагает поставку в тот же день. Монтаж этих приводов, полная калибровка и завершение T05 зависят от получения деталей; на время доставки перенести независимые работы и при необходимости пересчитать даты. 88 ч 20 мин свободной ёмкости не гарантируют покрытие календарного срока доставки.",
+          "en": "Materials: order the other four drives only after first-active-section T04 PASS, targeted for 25 August 2027. The T05 slot from 25 August does not assume same-day delivery. Installing these drives, full calibration and T05 completion depend on receipt; bring independent work forward during shipping and reforecast dates when needed. The 88 h 20 min of unallocated capacity do not guarantee coverage of elapsed delivery time."
         }
       }
     ]
   },
-  "work_finish": "2027-12-10",
+  "work_finish": "2027-12-18",
   "calendar_finish": "2027-12-30",
   "calendar_capacity_minutes": 168500,
-  "allocated_minutes": 159600,
-  "buffer_minutes": 8900,
+  "allocated_minutes": 163200,
+  "buffer_minutes": 5300,
   "daily_minutes": 500,
   "weekly_hours": 50,
   "week_start": "2026-11-30",
@@ -14763,5 +14957,15 @@
     "2027-01-01",
     "2027-12-31"
   ],
-  "interior_excluded_minutes": 1000
+  "interior_excluded_minutes": 1000,
+  "practica_2027": {
+    "added_on": "2026-10-19",
+    "extra_hours": 60,
+    "scope": "introductory applied labs, not full-field mastery",
+    "tasks": [
+      "M10-F",
+      "M13.5",
+      "M19-G"
+    ]
+  }
 }

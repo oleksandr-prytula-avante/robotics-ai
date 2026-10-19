@@ -1897,8 +1897,8 @@
         "en": "Reading fits existing learn hours and split stages"
       },
       "issue": {
-        "ru": "610 ч включают 180 ч изучения, 294 ч реализации и 136 ч проверки. D1 = 40 ч, из них 12 ч изучения; D2 = 58 ч, из них 19 ч изучения. Силы, центр масс и опоры изучаются до L1; динамика по данным стенда — в D2. S1 не требует полного курса кинематики; S2 использует ранее проверенные системы координат, прямую кинематику и инерции. Повторное чтение в S2, ARM и TAIL не учитывается.",
-        "en": "610h includes180h learn,294h build,136h verify. D1=40h with12h learn; D2=58h with19h learn. Read forces/COM/supports before L1; rig-based dynamics belongs to D2. S1 does not require a full kinematics course; S2 reuses verified frames/FK/inertia. Do not count rereading again in S2, ARM and TAIL."
+        "ru": "654 ч включают 193 ч изучения, 311 ч реализации и 150 ч проверки. D1 = 40 ч, из них 12 ч изучения; D2 = 58 ч, из них 19 ч изучения. Силы, центр масс и опоры изучаются до L1; динамика по данным стенда — в D2. S1 не требует полного курса кинематики; S2 использует ранее проверенные системы координат, прямую кинематику и инерции. Повторное чтение в S2, ARM и TAIL не учитывается.",
+        "en": "654 h includes 193 h learn, 311 h build, 150 h verify. D1=40h with12h learn; D2=58h with19h learn. Read forces/COM/supports before L1; rig-based dynamics belongs to D2. S1 does not require a full kinematics course; S2 reuses verified frames/FK/inertia. Do not count rereading again in S2, ARM and TAIL."
       },
       "action": null,
       "urls": [],
@@ -2355,7 +2355,7 @@
         "en": "The official compatibility table confirms Jazzy + Harmonic. Newer releases on the site do not require changing this learning baseline."
       },
       "action": {
-        "ru": "Читать Harmonic и Jazzy-документацию; gz_ros2_control связывать с той же версией ROS. Второй симулятор не добавлять в обязательные 400 часов.",
+        "ru": "Читать Harmonic и Jazzy-документацию; gz_ros2_control связывать с той же версией ROS. Второй симулятор не добавлять в обязательные 416 часов.",
         "en": "Use Harmonic and Jazzy documentation; match gz_ros2_control to the same ROS version. Do not add a second simulator to the required 400 hours."
       },
       "urls": [
@@ -2796,7 +2796,7 @@
           }
         }
       ],
-      "learn_hours": 22
+      "learn_hours": 28
     },
     "M13": {
       "readings": [
@@ -2815,7 +2815,7 @@
           }
         }
       ],
-      "learn_hours": 21
+      "learn_hours": 25
     },
     "A1": {
       "readings": [
@@ -2901,7 +2901,7 @@
           }
         }
       ],
-      "learn_hours": 34
+      "learn_hours": 41
     },
     "M22": {
       "readings": [
@@ -3132,7 +3132,7 @@
       "learn_hours": 2
     }
   },
-  "learning_hours_total": 628,
+  "learning_hours_total": 645,
   "added_hours": 0,
   "original_roadmap_entries": 144,
   "original_roadmap_unique_urls": 133,

@@ -321,8 +321,8 @@
         "M19"
       ],
       "entry": {
-        "ru": "Начинать после прохождения указанных проверок основной программы и выбора этого направления.",
-        "en": "Start after passing the listed core gates and choosing this direction."
+        "ru": "После M19-G: повторно использовать плоский QP и его проверки; расширять до трёхмерной задачи и интеграции с симуляцией. Диапазон 80–125 ч — предварительный бюджет этого расширения, без повторного начисления 24 ч вводного практикума; уточнить после его приёмки.",
+        "en": "After M19-G, reuse the planar QP and its checks; extend to 3D and simulator integration. The 80–125 h range is a provisional extension budget excluding the 24 h introductory lab; refine after lab acceptance."
       },
       "results": {
         "ru": "В симуляции QP и независимая проверка результата обеспечивают баланс сил и моментов и соблюдение ограничений. Истечение времени ожидания и устаревшие данные контактов вызывают корректный переход в резервный режим.",

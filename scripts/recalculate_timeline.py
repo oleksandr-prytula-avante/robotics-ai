@@ -94,7 +94,7 @@ def main():
         assert used[part['date']] <= DAILY_MINUTES
 
     report = {
-        'status': 'verified_active_calendar', 'reviewed_on': '2026-10-17',
+        'status': 'verified_active_calendar', 'reviewed_on': '2026-10-19',
         'source': 'estimate.json', 'verified_calendar': 'schedule.json',
         'source_version': source['version'],
         'start': str(START), 'deadline': str(DEADLINE), 'weekly_hours': 50,
@@ -106,7 +106,7 @@ def main():
         'buffer_minutes': buffer_minutes,
         'assumptions': [
             'Equal 8 h 20 min workdays; Sunday off; 31 Dec 2026, 1 Jan 2027 and 31 Dec 2027 off; other holidays and vacation not deducted.',
-            'Mandatory task hours, outcomes and execution order are unchanged.',
+            'Includes 60 h of introductory contact dynamics, planar force QP and robust control labs; existing task order is preserved.',
             'Selected reading and course study are already included in learning hours.',
             'Dates assume materials are ready and acceptance gates pass; delivery and unattended printing are elapsed time, not active work.',
             'One shared deadline buffer; reserve is not additional required study.',
@@ -120,14 +120,14 @@ def main():
     (ROOT / 'timeline-review.json').write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n')
     lines = [
         '# Пересчёт программы от 1 декабря 2026', '',
-        'Расчёт проверен 17.10.2026. Отчёт соответствует текущему календарю schedule.json.', '',
+        'Расчёт проверен 19.10.2026. Отчёт соответствует текущему календарю schedule.json.', '',
         '**50 часов в неделю:** понедельник–суббота по 8 часов 20 минут; воскресенье — выходной. '
         '31.12.2026, 01.01.2027 и 31.12.2027 — выходные; прочие праздники и отпуск не вычтены. До 31.12.2027 включительно — '
         f'{report["workday_count"]} рабочих дней, {duration(report["capacity_minutes"])} доступного времени.', '',
         f'Обязательная программа: **{duration(core["total_minutes"])}** — изучение '
         f'{duration(categories["learn"])}, практика {duration(categories["build"])}, '
         f'проверка {duration(categories["verify"])}. Чтение и выбранные уроки курсов входят '
-        'в эти часы. Содержание заданий и их порядок сохранены.', '',
+        'в эти часы. Добавлены 60 ч вводных практикумов: Contact Dynamics — 16 ч, Force Distribution Optimization — 24 ч, Robust Control — 20 ч. Порядок прежних заданий сохранён.', '',
         f'**Плановое завершение — {date.fromisoformat(core["finish"]):%d.%m.%Y}.** '
         f'До 31.12.2027 остаётся **{duration(buffer_minutes)}** общего запаса на задержки и переделки '
         f'({buffer_minutes / core["total_minutes"]:.1%} обязательной работы). '

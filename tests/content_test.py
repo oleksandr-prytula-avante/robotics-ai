@@ -189,17 +189,17 @@ class ContentTests(unittest.TestCase):
     def test_completion_and_buffer_are_separate(self):
         schedule = self.schedule
         self.assertEqual(schedule['start'], '2026-12-01')
-        self.assertEqual(schedule['work_finish'], '2027-12-10')
+        self.assertEqual(schedule['work_finish'], '2027-12-18')
         self.assertEqual(schedule['deadline'], '2027-12-31')
-        self.assertEqual(schedule['buffer_minutes'], 148 * 60 + 20)
-        self.assertEqual(schedule['allocated_minutes'], 2660 * 60)
+        self.assertEqual(schedule['buffer_minutes'], 88 * 60 + 20)
+        self.assertEqual(schedule['allocated_minutes'], 2720 * 60)
         self.assertFalse(any(item['track'] == 'reserve' for item in schedule['items']))
         parts = schedule['segments']
         first_buffer = next(i for i, part in enumerate(parts) if part['item'] == 'CAP')
         self.assertTrue(all(part['item'] == 'CAP' for part in parts[first_buffer:]))
-        self.assertEqual(parts[first_buffer]['date'], '2027-12-10')
-        self.assertEqual(parts[first_buffer]['minutes'], 400)
-        self.assertEqual(sum(part['minutes'] for part in parts[first_buffer:]), 8900)
+        self.assertEqual(parts[first_buffer]['date'], '2027-12-18')
+        self.assertEqual(parts[first_buffer]['minutes'], 300)
+        self.assertEqual(sum(part['minutes'] for part in parts[first_buffer:]), 5300)
 
     def test_material_dates_match_their_scheduled_tasks(self):
         for condition in self.schedule['calendar_assumptions']['material_ready_conditions']:
