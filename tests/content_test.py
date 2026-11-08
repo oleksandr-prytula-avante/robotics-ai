@@ -19,7 +19,7 @@ def read_json(name):
 
 def daily_capacity(day):
     """Exact minutes: eight hours twenty minutes, Monday through Saturday."""
-    days_off = {date(2026, 12, 31), date(2027, 1, 1), date(2027, 12, 31)}
+    days_off = {date(2028, 12, 31)}
     return 500 if day.weekday() < 6 and day not in days_off else 0
 
 
@@ -173,7 +173,7 @@ class ContentTests(unittest.TestCase):
             day += timedelta(days=1)
         self.assertEqual(sum(capacities.values()), schedule['calendar_capacity_minutes'])
         self.assertEqual(schedule['calendar_finish'], max(part['date'] for part in schedule['segments']))
-        self.assertEqual(schedule['excluded_dates'], ['2026-12-31', '2027-01-01', '2027-12-31'])
+        self.assertEqual(schedule['excluded_dates'], ['2028-12-31'])
         self.assertEqual(schedule['work_finish'], max(
             part['date'] for part in schedule['segments'] if part['item'] != 'CAP'))
         self.assertEqual(schedule['weeks'], (end - date.fromisoformat(schedule['week_start'])).days // 7 + 1)
@@ -188,18 +188,13 @@ class ContentTests(unittest.TestCase):
 
     def test_completion_and_buffer_are_separate(self):
         schedule = self.schedule
-        self.assertEqual(schedule['start'], '2026-12-01')
-        self.assertEqual(schedule['work_finish'], '2027-12-18')
-        self.assertEqual(schedule['deadline'], '2027-12-31')
-        self.assertEqual(schedule['buffer_minutes'], 88 * 60 + 20)
-        self.assertEqual(schedule['allocated_minutes'], 2720 * 60)
+        self.assertEqual(schedule['start'], '2028-01-02')
+        self.assertEqual(schedule['work_finish'], '2028-12-30')
+        self.assertEqual(schedule['deadline'], '2028-12-31')
+        self.assertEqual(schedule['buffer_minutes'], 0)
+        self.assertEqual(schedule['allocated_minutes'], 2600 * 60)
         self.assertFalse(any(item['track'] == 'reserve' for item in schedule['items']))
-        parts = schedule['segments']
-        first_buffer = next(i for i, part in enumerate(parts) if part['item'] == 'CAP')
-        self.assertTrue(all(part['item'] == 'CAP' for part in parts[first_buffer:]))
-        self.assertEqual(parts[first_buffer]['date'], '2027-12-18')
-        self.assertEqual(parts[first_buffer]['minutes'], 300)
-        self.assertEqual(sum(part['minutes'] for part in parts[first_buffer:]), 5300)
+        self.assertFalse(any(part['item'] == 'CAP' for part in schedule['segments']))
 
     def test_material_dates_match_their_scheduled_tasks(self):
         for condition in self.schedule['calendar_assumptions']['material_ready_conditions']:

@@ -40,7 +40,7 @@ def render_infographic(schedule, bi, duration):
 
     out = ['<!-- timeline-infographic -->', '<section class="roadmap" id="timeline" aria-labelledby="timeline-title">',
            '<div class="roadmap-heading"><div><div class="eyebrow">'
-           + bi('Маршрут · 2026—2027', 'The route · 2026–2027')
+           + bi('Маршрут · 2028', 'The route · 2028')
            + '</div><h2 id="timeline-title">' + bi('От базы к трём роботам', 'From foundations to three robots')
            + '</h2></div><a class="roadmap-method" href="method.html">'
            + bi('Расчёт часов ↗', 'Hours & method ↗') + '</a></div>',
@@ -99,8 +99,8 @@ def render_infographic(schedule, bi, duration):
                    + short_date(item['end']) + '</time><strong>' + bi(ru, en) + '</strong></span></a>')
     out += ['</div><div class="roadmap-footer"><span>'
             + bi('50 ч/нед · Пн–Сб · 8 ч 20 мин/день', '50 h/week · Mon–Sat · 8 h 20 min/day')
-            + '</span><span>' + bi('Выходные: 31.12.26 · 01.01.27 · 31.12.27',
-                                  'Days off: 31.12.26 · 01.01.27 · 31.12.27')
+            + '</span><span>' + bi('Выходной: 31.12.28',
+                                  'Day off: 31.12.28')
             + '</span></div></section><!-- /timeline-infographic -->']
     return '\n'.join(out)
 

@@ -1,7 +1,7 @@
 {
-  "version": "4.4",
-  "start": "2026-12-01",
-  "deadline": "2027-12-31",
+  "version": "4.5",
+  "start": "2028-01-02",
+  "deadline": "2028-12-31",
   "items": {
     "M02": {
       "id": "M02",
@@ -37,10 +37,10 @@
             "ru": "Векторы, базисы и силы на геометрии будущей ноги",
             "en": "Vectors, frames and forces on the future leg geometry"
           },
-          "learn": 5,
+          "learn": 4,
           "build": 7,
           "verify": 2,
-          "hours": 14,
+          "hours": 13,
           "source_refs": [
             "M02 pp3,9,15",
             "M08 pp3–4"
@@ -60,10 +60,10 @@
             "ru": "Линейная калибровка и обусловленность",
             "en": "Linear calibration and conditioning"
           },
-          "learn": 6,
+          "learn": 5,
           "build": 8,
           "verify": 4,
-          "hours": 18,
+          "hours": 17,
           "source_refs": [
             "M02 pp4–5,9"
           ],
@@ -81,10 +81,10 @@
             "ru": "Производная и Якобиан через движение звена",
             "en": "Derivatives and Jacobians through link motion"
           },
-          "learn": 5,
+          "learn": 4,
           "build": 7,
           "verify": 2,
-          "hours": 14,
+          "hours": 13,
           "source_refs": [
             "M02 pp6,10,15"
           ],
@@ -102,10 +102,10 @@
             "ru": "Один динамический пример и шаг интегрирования",
             "en": "One dynamic example and integration timestep"
           },
-          "learn": 5,
+          "learn": 4,
           "build": 7,
           "verify": 2,
-          "hours": 14,
+          "hours": 13,
           "source_refs": [
             "M02 pp7,10",
             "M09 pp3–4"
@@ -144,7 +144,7 @@
       "prerequisites": [
         "M01"
       ],
-      "hours": 72,
+      "hours": 68,
       "kept": {
         "ru": "Прикладные матрицы, тригонометрия, производные, единицы и базовая численная устойчивость остаются обязательными.",
         "en": "Applied matrices, trigonometry, derivatives, units and basic numerical stability remain compulsory."
@@ -167,7 +167,7 @@
         "ru": "Исходный M02, pp3–7: векторы/базисы/момент, линейная калибровка и обусловленность, производная/Якобиан, один ОДУ-пример. Из pp9–10 выбрать задачи, проверяющие диагностические пробелы; p15 — связь ṗ=Jq̇. Полный старый список книг не является обязательным чтением.",
         "en": "Original M02 pp3–7: vectors/frames/moment, linear calibration/conditioning, derivative/Jacobian and one ODE example. Select pp9–10 exercises for diagnostic gaps; p15 supplies ṗ=Jq̇. The full former book list is not assigned reading."
       },
-      "base": 72,
+      "base": 68,
       "track": "core"
     },
     "M03": {
@@ -183,10 +183,10 @@
             "ru": "Шум и неопределённость реального датчика",
             "en": "Noise and uncertainty of a real sensor"
           },
-          "learn": 5,
+          "learn": 4,
           "build": 5,
           "verify": 2,
-          "hours": 12,
+          "hours": 11,
           "source_refs": [
             "M03 pp3–4,9"
           ],
@@ -204,10 +204,10 @@
             "ru": "Один протокол повторяемой физической калибровки",
             "en": "One repeatable physical calibration protocol"
           },
-          "learn": 5,
+          "learn": 4,
           "build": 9,
           "verify": 4,
-          "hours": 18,
+          "hours": 17,
           "source_refs": [
             "M03 pp5,9,14",
             "M02 calibration"
@@ -227,10 +227,10 @@
             "ru": "Ошибка результата и границы доверия",
             "en": "Result error and inference limits"
           },
-          "learn": 4,
+          "learn": 3,
           "build": 6,
           "verify": 4,
-          "hours": 14,
+          "hours": 13,
           "source_refs": [
             "M03 pp7–8,10,15"
           ],
@@ -248,10 +248,10 @@
             "ru": "Ограниченная подгонка и выбросы",
             "en": "Bounded fitting and outliers"
           },
-          "learn": 4,
+          "learn": 3,
           "build": 6,
           "verify": 2,
-          "hours": 12,
+          "hours": 11,
           "source_refs": [
             "M03 pp6,10–13"
           ],
@@ -268,7 +268,7 @@
         "M02",
         "M06"
       ],
-      "hours": 56,
+      "hours": 52,
       "kept": {
         "ru": "Физические повторы, независимая проверка, смещение и ковариация, ограничения, обусловленность и корректная единица эксперимента.",
         "en": "Physical repeats, independent validation, bias/covariance, bounds, conditioning and an honest experimental unit."
@@ -291,7 +291,7 @@
         "ru": "Исходный M03, pp3–8: систематическое смещение/шум/ковариация, независимые повторы и проверочная выборка, калибровка с ограничениями, обусловленность и один метод неопределённости; pp11–14 — ошибки достоверности по своей работе. Остальные сравнения методов — справочно.",
         "en": "Original M03 pp3–8: bias/noise/covariance, independent repeats/held-out runs, bounded calibration, conditioning and one uncertainty method; pp11–14 supply validity faults relevant to the project. Other method comparisons are reference material."
       },
-      "base": 56,
+      "base": 52,
       "track": "core"
     },
     "M08": {
@@ -307,10 +307,10 @@
             "ru": "Системы координат и реальные оси CAD",
             "en": "Coordinate frames and actual CAD axes"
           },
-          "learn": 6,
+          "learn": 5,
           "build": 9,
           "verify": 3,
-          "hours": 18,
+          "hours": 17,
           "source_refs": [
             "M08 pp3–4,9"
           ],
@@ -328,10 +328,10 @@
             "ru": "FK трёхосной ноги",
             "en": "Three-axis leg FK"
           },
-          "learn": 5,
+          "learn": 4,
           "build": 11,
           "verify": 4,
-          "hours": 20,
+          "hours": 19,
           "source_refs": [
             "M08 pp4–5,9,15"
           ],
@@ -349,10 +349,10 @@
             "ru": "IK и достижимость всей траектории",
             "en": "IK and whole-path reachability"
           },
-          "learn": 7,
+          "learn": 6,
           "build": 11,
           "verify": 4,
-          "hours": 22,
+          "hours": 21,
           "source_refs": [
             "M08 pp6,10"
           ],
@@ -370,10 +370,10 @@
             "ru": "Якобиан, скорость и нагрузка",
             "en": "Jacobian, velocity and loading"
           },
-          "learn": 7,
+          "learn": 6,
           "build": 9,
           "verify": 4,
-          "hours": 20,
+          "hours": 19,
           "source_refs": [
             "M08 pp7–8,10–12"
           ],
@@ -391,10 +391,10 @@
             "ru": "Одна численное решение IK на простом примере манипулятора",
             "en": "One numerical IK on a simple arm example"
           },
-          "learn": 5,
+          "learn": 4,
           "build": 7,
           "verify": 2,
-          "hours": 14,
+          "hours": 13,
           "source_refs": [
             "M08 p7,task9"
           ],
@@ -412,10 +412,10 @@
             "ru": "Неподвижная опора и общий контракт",
             "en": "Fixed stance point and shared contract"
           },
-          "learn": 3,
+          "learn": 2,
           "build": 7,
           "verify": 4,
-          "hours": 14,
+          "hours": 13,
           "source_refs": [
             "M08 pp8,11–14"
           ],
@@ -432,7 +432,7 @@
         "M02",
         "M05"
       ],
-      "hours": 108,
+      "hours": 102,
       "kept": {
         "ru": "FK/IK/Якобиан, реальные CAD-оси, сингулярности, пределы, зеркальность и перенос из системы корпуса в системы координат ног.",
         "en": "FK/IK/Jacobian, actual CAD axes, singularities, limits, mirroring and body-to-leg transforms."
@@ -455,7 +455,7 @@
         "ru": "Исходный M08, с. 3–8: системы координат и вращения, FK реальных осей, ветви решения IK, численное решение IK с демпфированием, Якобиан и виртуальная работа; с. 11–14 — ошибки, относящиеся к ноге. DH/PoE читать для понимания различий; вторая обязательная реализация не требуется.",
         "en": "Original M08 pp3–8: frames/rotations, actual-axis FK, IK branches, numerical damped IK and Jacobian/virtual work; pp11–14 supply leg-relevant faults. Read DH/PoE for awareness, without assigning a second implementation."
       },
-      "base": 108,
+      "base": 102,
       "track": "core"
     },
     "M09": {
@@ -666,10 +666,10 @@
             "ru": "PID на имеющейся модели сустава",
             "en": "PID on the existing joint model"
           },
-          "learn": 7,
+          "learn": 6,
           "build": 9,
           "verify": 4,
-          "hours": 20,
+          "hours": 19,
           "source_refs": [
             "M10 pp3–4,9"
           ],
@@ -687,10 +687,10 @@
             "ru": "Цифровой контур, задержки и свежесть данных",
             "en": "Digital loop, delays and data freshness"
           },
-          "learn": 5,
+          "learn": 4,
           "build": 8,
           "verify": 3,
-          "hours": 16,
+          "hours": 15,
           "source_refs": [
             "M10 pp5–6,10"
           ],
@@ -708,10 +708,10 @@
             "ru": "Настройка по реальному стендовому отклику",
             "en": "Tune against actual bench response"
           },
-          "learn": 4,
+          "learn": 3,
           "build": 10,
           "verify": 4,
-          "hours": 18,
+          "hours": 17,
           "source_refs": [
             "M10 pp4–5,9",
             "M07 rig"
@@ -731,10 +731,10 @@
             "ru": "Внешний контур крена и тангажа через заданную позу и IK",
             "en": "Outer roll/pitch control through pose and IK"
           },
-          "learn": 6,
+          "learn": 5,
           "build": 8,
           "verify": 4,
-          "hours": 18,
+          "hours": 17,
           "source_refs": [
             "M10 pp6–7,10–11",
             "M08 fixed stance point",
@@ -777,10 +777,10 @@
             "ru": "Robust Control: вводный практикум на одном суставе",
             "en": "Robust Control: introductory single-joint lab"
           },
-          "learn": 6,
+          "learn": 5,
           "build": 7,
           "verify": 7,
-          "hours": 20,
+          "hours": 19,
           "result": {
             "ru": "На модели M09 задать обоснованные интервалы инерции и демпфирования и границу задержки. Для линейной модели сравнить номинальную и консервативную настройку PD/PID по полюсам, запасам устойчивости и ошибке слежения; отдельно проверить насыщение, возмущение и крайние параметры в симуляции. Представить условия применимости анализа и контрпример за их пределами. Сетка испытаний не считается доказательством устойчивости всего диапазона. H∞, μ-синтез и robust MPC остаются дальнейшим развитием.",
             "en": "On the M09 model, specify justified inertia/damping intervals and a delay bound. Compare nominal and conservative PD/PID tuning using linear-model poles, stability margins and tracking error; separately simulate saturation, disturbances and parameter extremes. Report analysis assumptions and a counterexample outside them. A test grid is not a proof of stability over the whole range. H-infinity, mu-synthesis and robust MPC remain further development."
@@ -801,7 +801,7 @@
         "M09",
         "M11"
       ],
-      "hours": 100,
+      "hours": 95,
       "kept": {
         "ru": "Практический PID, цифровые задержки, ограничения, стендовая проверка и внешний позиционный контур обязательны.",
         "en": "Practical PID, digital delay, limits, bench validation and outer position control remain compulsory."
@@ -824,7 +824,7 @@
         "ru": "Исходный M10, pp3–7: PID/упреждающее воздействие, насыщение/защита от интегрального насыщения, Ts/задержки и внешний контур крена и тангажа; pp11–14 — устаревшие данные, насыщение и восстановление. Частотную терминологию понять; полный эксперимент по диаграммам Боде и запасам устойчивости читать при выборе D_FREQ.",
         "en": "Original M10 pp3–7: PID/feedforward, saturation/anti-windup, Ts/delay and outer roll/pitch control; pp11–14 cover stale data, saturation and recovery. Understand frequency terminology; assign the full Bode/margins experiment only with D_FREQ."
       },
-      "base": 100,
+      "base": 95,
       "track": "core"
     },
     "M11": {
@@ -840,10 +840,10 @@
             "ru": "Оси IMU, время и измеряемые величины",
             "en": "IMU axes, time and measured quantities"
           },
-          "learn": 4,
+          "learn": 3,
           "build": 5,
           "verify": 3,
-          "hours": 12,
+          "hours": 11,
           "source_refs": [
             "M11 pp3–5",
             "M03 calibration"
@@ -863,10 +863,10 @@
             "ru": "Один пригодный фильтр крена и тангажа",
             "en": "One suitable roll/pitch filter"
           },
-          "learn": 7,
+          "learn": 6,
           "build": 9,
           "verify": 4,
-          "hours": 20,
+          "hours": 19,
           "source_refs": [
             "M11 p5,task4",
             "M19 pp3–4"
@@ -886,10 +886,10 @@
             "ru": "Проверка ориентации, выбросов и отказов",
             "en": "Orientation, outlier and failure validation"
           },
-          "learn": 6,
+          "learn": 5,
           "build": 8,
           "verify": 4,
-          "hours": 18,
+          "hours": 17,
           "source_refs": [
             "M11 pp5,11–13",
             "M19 pp3–4,7"
@@ -933,7 +933,7 @@
         "M06",
         "M08"
       ],
-      "hours": 60,
+      "hours": 57,
       "kept": {
         "ru": "Практическая оценка ориентации, смещение, временное согласование, качество данных, отказы и наблюдаемость сохранены.",
         "en": "Practical orientation, bias, time alignment, quality, failure and observability are retained."
@@ -960,7 +960,7 @@
         "ru": "Исходный M11, с. 3–5: состояние и измерение, наблюдаемость, шум, смещение и ограничения оценки наклона; с. 11–13 — проверки ускорения, выбросов и пропусков. Использовать эти требования для выбранного AHRS или комплементарного фильтра; выводы KF/EKF, уравнения Риккати и QP не включать в обязательную программу.",
         "en": "Original M11 pp3–5: state/measurement, observability, noise/bias and tilt-estimation limits; pp11–13 cover acceleration/outlier/gap checks. Apply these requirements to the chosen AHRS/complementary filter; KF/EKF/Riccati/QP derivations are not core reading."
       },
-      "base": 60,
+      "base": 57,
       "track": "core"
     },
     "M19": {
@@ -976,10 +976,10 @@
             "ru": "Расширить одну модель ноги до четырёх и шести",
             "en": "Extend the one-leg model to four and six legs"
           },
-          "learn": 4,
+          "learn": 3,
           "build": 8,
           "verify": 4,
-          "hours": 16,
+          "hours": 15,
           "source_refs": [
             "M13 geometry extension",
             "M19 pp1–3",
@@ -1001,10 +1001,10 @@
             "ru": "Доверие к контакту и согласованное состояние",
             "en": "Contact confidence and consistent state"
           },
-          "learn": 6,
+          "learn": 5,
           "build": 12,
           "verify": 6,
-          "hours": 24,
+          "hours": 23,
           "source_refs": [
             "M19 pp3–4,7,9"
           ],
@@ -1022,10 +1022,10 @@
             "ru": "Автомат состояний медленной походки crawl и перенос веса",
             "en": "Crawl FSM and weight transfer"
           },
-          "learn": 7,
+          "learn": 6,
           "build": 14,
           "verify": 5,
-          "hours": 26,
+          "hours": 25,
           "source_refs": [
             "M19 pp5,9–10,15"
           ],
@@ -1043,10 +1043,10 @@
             "ru": "Перенос ноги и пригодность точки опоры",
             "en": "Swing and feasible footholds"
           },
-          "learn": 6,
+          "learn": 5,
           "build": 11,
           "verify": 5,
-          "hours": 22,
+          "hours": 21,
           "source_refs": [
             "M19 pp5–6,10"
           ],
@@ -1064,10 +1064,10 @@
             "ru": "Свободное стояние и выравнивание корпуса",
             "en": "Free standing and body levelling"
           },
-          "learn": 7,
+          "learn": 6,
           "build": 14,
           "verify": 5,
-          "hours": 26,
+          "hours": 25,
           "source_refs": [
             "M19 pp6–8,10–11",
             "M10 outer pose controller"
@@ -1087,10 +1087,10 @@
             "ru": "Регрессия походки и передача в физические проекты",
             "en": "Gait regression and handoff to hardware projects"
           },
-          "learn": 4,
+          "learn": 3,
           "build": 11,
           "verify": 7,
-          "hours": 22,
+          "hours": 21,
           "source_refs": [
             "M19 pp7–8,11–14",
             "M22/M23 acceptance"
@@ -1110,10 +1110,10 @@
             "ru": "Force Distribution Optimization: плоская задача двух опор",
             "en": "Force Distribution Optimization: planar two-support problem"
           },
-          "learn": 7,
+          "learn": 6,
           "build": 10,
           "verify": 7,
-          "hours": 24,
+          "hours": 23,
           "result": {
             "ru": "В отдельном Python-блокноте сформулировать выпуклую QP для двух известных опор: баланс сил/момента, неотрицательные нормальные силы, |Ft| ≤ μFn и верхние границы нагрузки. Минимизировать квадратичное отклонение от выбранного распределения; решить готовым решателем. Сравнить с ручной симметричной задачей, затем сместить COM и приложить горизонтальную нагрузку. Независимо проверить невязки и ограничения, показать недопустимый случай и обработать статус отказа решателя. Это учебный расчёт вне контура управления; трёхмерный QP, переключение контактов, реальное время и передача сил приводам относятся к D_FORCE.",
             "en": "In a standalone Python notebook, formulate a convex QP for two known planar supports: force/moment balance, nonnegative normal forces, |Ft| <= mu*Fn and load bounds. Minimize squared deviation from a chosen allocation using an existing solver. Compare with a hand-solved symmetric case, then shift COM and apply a horizontal load. Independently check residuals/constraints, demonstrate infeasibility and handle solver failure status. This is an offline teaching example; 3D QP, contact switching, real-time integration and actuator force commands belong to D_FORCE."
@@ -1136,7 +1136,7 @@
         "M13",
         "L1"
       ],
-      "hours": 160,
+      "hours": 153,
       "kept": {
         "ru": "Свободный корпус, реальные контакты, геометрия опор и нагрузки, crawl, зазор при переносе ноги, остановка и позиционное выравнивание сохранены.",
         "en": "Floating body, actual contact, support geometry/loads, crawl, swing clearance, stopping and position-based levelling are retained."
@@ -1159,7 +1159,7 @@
         "ru": "Исходный M19, с. 3–8: качество контакта и временное согласование, автомат походки crawl и перенос веса, перенос ноги и зазор над поверхностью, свободное стояние и ограничения; с. 15 — проверка опор и реакций. M22/M23 определяют интерфейс передачи в физический проект; сами проекты отвечают за полноту физических испытаний.",
         "en": "Original M19 pp3–8: contact quality/time alignment, crawl FSM/weight transfer, swing/clearance, free standing and bounds; p15 covers support/reaction checks. Read M22/M23 here for hardware handoff interfaces; those projects own physical acceptance."
       },
-      "base": 160,
+      "base": 153,
       "track": "hexapod"
     },
     "M01": {
@@ -1200,10 +1200,10 @@
             "ru": "C++ в рабочем репозитории: владение, CMake и диагностика",
             "en": "C++ in the actual repository: ownership, CMake and diagnostics"
           },
-          "learn": 6,
+          "learn": 5,
           "build": 6,
           "verify": 2,
-          "hours": 14,
+          "hours": 13,
           "source_refs": [
             "M01 C1–C4",
             "M01 D1–D2"
@@ -1223,10 +1223,10 @@
             "ru": "Единицы, каналы и Python-анализ одного сустава",
             "en": "Units, channels and Python analysis for one joint"
           },
-          "learn": 3,
+          "learn": 2,
           "build": 1,
           "verify": 2,
-          "hours": 6,
+          "hours": 5,
           "source_refs": [
             "M01 P1–P5",
             "M01 p13 motion definitions"
@@ -1268,7 +1268,7 @@
           ]
         }
       ],
-      "hours": 40,
+      "hours": 38,
       "prerequisites": [],
       "kept": {
         "ru": "Одна кодовая база C++, один Python-анализ, обязательная ранняя проверка фактической среды.",
@@ -1298,7 +1298,7 @@
           "en": "Do not repeat Python/Git study when the diagnostic demonstrates the skill. Retain versions and reproduction commands."
         }
       ],
-      "base": 40,
+      "base": 38,
       "track": "core"
     },
     "M12A": {
@@ -1537,10 +1537,10 @@
             "ru": "Модель одной ноги на уже установленном стеке",
             "en": "One-leg model on the installed stack"
           },
-          "learn": 6,
+          "learn": 5,
           "build": 8,
           "verify": 6,
-          "hours": 20,
+          "hours": 19,
           "source_refs": [
             "M13 Tasks1–3",
             "M13 p7"
@@ -1560,10 +1560,10 @@
             "ru": "Контакт, один сенсор и отсутствие фиктивного удержания",
             "en": "Contact, one sensor and no artificial holding"
           },
-          "learn": 5,
+          "learn": 4,
           "build": 5,
           "verify": 5,
-          "hours": 15,
+          "hours": 14,
           "source_refs": [
             "M13 Tasks2,4",
             "M13 F1–F3"
@@ -1583,10 +1583,10 @@
             "ru": "Общее ядро C++, проверка на целевом устройстве и замкнутый HIL",
             "en": "Shared C++ core, target check and closed-loop HIL"
           },
-          "learn": 6,
+          "learn": 5,
           "build": 7,
           "verify": 7,
-          "hours": 20,
+          "hours": 19,
           "source_refs": [
             "M13 Tasks5–7",
             "M13 F4–F6"
@@ -1606,10 +1606,10 @@
             "ru": "Сопоставление с реальной ногой и подтверждённые ограничения",
             "en": "Comparison with the real leg and demonstrated limits"
           },
-          "learn": 4,
+          "learn": 3,
           "build": 5,
           "verify": 6,
-          "hours": 15,
+          "hours": 14,
           "source_refs": [
             "M13 Task8",
             "M13 p7 fidelity"
@@ -1629,10 +1629,10 @@
             "ru": "Contact Dynamics: контакт, трение и шаг интегрирования",
             "en": "Contact Dynamics: contact, friction and integration step"
           },
-          "learn": 4,
+          "learn": 3,
           "build": 7,
           "verify": 5,
-          "hours": 16,
+          "hours": 15,
           "result": {
             "ru": "В существующем симуляторе исследовать одну стопу: касание, удержание, начало скольжения и отрыв. Записать нормальную/касательную реакции, проникновение и импульс; сравнить dt и dt/2, два коэффициента трения и две жёсткости контакта, если параметр доступен. Проверить простой эталон mg и порог скольжения μN; объяснить отличия силы от импульса и жёсткого контакта от податливого. Результат — воспроизводимый сценарий и границы достоверности. Новый физический движок и собственный решатель ударов не входят.",
             "en": "In the existing simulator, study one foot touching down, sticking, beginning to slide and lifting off. Log normal/tangential reactions, penetration and impulse; compare dt with dt/2, two friction coefficients and two contact stiffnesses where configurable. Check simple mg and mu*N references; distinguish force from impulse and rigid from compliant contact. Deliver a reproducible scenario and validity limits. No second physics engine or custom impact solver."
@@ -1647,7 +1647,7 @@
           ]
         }
       ],
-      "hours": 86,
+      "hours": 81,
       "prerequisites": [
         "M12B",
         "L1",
@@ -1685,7 +1685,7 @@
           "en": "Validate power-off stopping on the real supported mechanism; successful animation does not close this criterion."
         }
       ],
-      "base": 86,
+      "base": 81,
       "track": "core"
     },
     "M14": {
@@ -1701,10 +1701,10 @@
             "ru": "Одна камера и калибровка рабочей области",
             "en": "One camera and workspace calibration"
           },
-          "learn": 8,
+          "learn": 6,
           "build": 8,
           "verify": 6,
-          "hours": 22,
+          "hours": 20,
           "source_refs": [
             "M14 Tasks1–2"
           ],
@@ -1722,10 +1722,10 @@
             "ru": "Один классический базовый метод: определить целевой объект или отклонить результат",
             "en": "One classical target/reject baseline"
           },
-          "learn": 3,
+          "learn": 2,
           "build": 5,
           "verify": 4,
-          "hours": 12,
+          "hours": 11,
           "source_refs": [
             "M14 classical masks/features/RANSAC task"
           ],
@@ -1743,10 +1743,10 @@
             "ru": "Согласование с манипулятором и независимые границы",
             "en": "Arm alignment and independent bounds"
           },
-          "learn": 3,
+          "learn": 2,
           "build": 5,
           "verify": 4,
-          "hours": 12,
+          "hours": 11,
           "source_refs": [
             "M14 3D/frame task",
             "M14 ROS adapter"
@@ -1782,7 +1782,7 @@
           ]
         }
       ],
-      "hours": 55,
+      "hours": 51,
       "prerequisites": [
         "M02",
         "M08",
@@ -1817,7 +1817,7 @@
           "en": "Initial physical attempts use already-budgeted A3 trials: bounded speed, known geometry and operator authorization. No extra series outside A3 is added."
         }
       ],
-      "base": 55,
+      "base": 51,
       "track": "core"
     },
     "M16": {
@@ -1833,10 +1833,10 @@
             "ru": "Подключить готовую модель манипулятора к MoveIt",
             "en": "Connect the existing arm model to MoveIt"
           },
-          "learn": 3,
+          "learn": 2,
           "build": 4,
           "verify": 3,
-          "hours": 10,
+          "hours": 9,
           "source_refs": [
             "M16 C-space/MoveIt task"
           ],
@@ -1854,10 +1854,10 @@
             "ru": "Планировать проверяемый путь в одной сцене",
             "en": "Plan a verifiable path in one scene"
           },
-          "learn": 3,
+          "learn": 2,
           "build": 4,
           "verify": 3,
-          "hours": 10,
+          "hours": 9,
           "source_refs": [
             "M16 sampling/planning task"
           ],
@@ -1875,10 +1875,10 @@
             "ru": "Время, скорость, ускорение и проверка всего пути",
             "en": "Timing, velocity, acceleration and whole-path checking"
           },
-          "learn": 3,
+          "learn": 2,
           "build": 4,
           "verify": 3,
-          "hours": 10,
+          "hours": 9,
           "source_refs": [
             "M16 trajectory profiles task"
           ],
@@ -1896,10 +1896,10 @@
             "ru": "Отказ, устаревшая сцена и отмена",
             "en": "Failure, stale scene and cancellation"
           },
-          "learn": 3,
+          "learn": 2,
           "build": 4,
           "verify": 3,
-          "hours": 10,
+          "hours": 9,
           "source_refs": [
             "M16 FSM/BT/recovery task"
           ],
@@ -1912,7 +1912,7 @@
           ]
         }
       ],
-      "hours": 40,
+      "hours": 36,
       "prerequisites": [
         "M08",
         "M10",
@@ -1943,7 +1943,7 @@
           "en": "A successful plan is not authorization for physical execution; check hardware readiness immediately before launch."
         }
       ],
-      "base": 40,
+      "base": 36,
       "track": "core"
     },
     "M17": {
@@ -2065,10 +2065,10 @@
             "ru": "Данные, задача и независимые разбиения",
             "en": "Data, task and independent splits"
           },
-          "learn": 6,
+          "learn": 5,
           "build": 8,
           "verify": 6,
-          "hours": 20,
+          "hours": 19,
           "source_refs": [
             "M18 data/episode split task",
             "M14 annotation task"
@@ -2088,10 +2088,10 @@
             "ru": "Одна модель и понятный цикл обучения PyTorch",
             "en": "One model and an explainable PyTorch training loop"
           },
-          "learn": 8,
+          "learn": 6,
           "build": 8,
           "verify": 4,
-          "hours": 20,
+          "hours": 18,
           "source_refs": [
             "M18 autograd/logistic/MLP task"
           ],
@@ -2109,10 +2109,10 @@
             "ru": "Независимая тестовая выборка, классический базовый метод и отказ от решения",
             "en": "Holdout, classical baseline and abstention"
           },
-          "learn": 6,
+          "learn": 5,
           "build": 6,
           "verify": 8,
-          "hours": 20,
+          "hours": 19,
           "source_refs": [
             "M18 metrics/calibration/OOD task"
           ],
@@ -2148,7 +2148,7 @@
           ]
         }
       ],
-      "hours": 70,
+      "hours": 66,
       "prerequisites": [
         "M14",
         "M03",
@@ -2187,7 +2187,7 @@
           "en": "Retain all 30 positive physical A3 transfers. Test reject/unknown separately within already-budgeted A3 fault scenarios; record their N and results separately from transfers. Some positive trials use vision/ML, without a second transfer/endurance budget."
         }
       ],
-      "base": 70,
+      "base": 66,
       "track": "core"
     },
     "M24": {
@@ -2325,7 +2325,7 @@
       "learn": 51,
       "build": 41,
       "verify": 18,
-      "hours": 110,
+      "hours": 102,
       "tasks": [
         {
           "id": "E1",
@@ -2333,10 +2333,10 @@
             "ru": "DC, схемы, документация и простые расчёты",
             "en": "DC, schematics, documentation and calculations"
           },
-          "learn": 24,
+          "learn": 20,
           "build": 8,
           "verify": 4,
-          "hours": 36,
+          "hours": 32,
           "source_refs": [
             "M04.E1"
           ],
@@ -2358,10 +2358,10 @@
             "ru": "Мультиметр, пайка, обжим и проводка",
             "en": "Multimeter, soldering, crimping and wiring"
           },
-          "learn": 8,
+          "learn": 7,
           "build": 12,
           "verify": 6,
-          "hours": 26,
+          "hours": 25,
           "source_refs": [
             "M04.E2"
           ],
@@ -2383,10 +2383,10 @@
             "ru": "RC, логические уровни и индуктивная нагрузка",
             "en": "RC, logic levels and an inductive load"
           },
-          "learn": 7,
+          "learn": 6,
           "build": 12,
           "verify": 5,
-          "hours": 24,
+          "hours": 23,
           "source_refs": [
             "M04.E3"
           ],
@@ -2408,10 +2408,10 @@
             "ru": "Дискретизация, причинные фильтры и спектр",
             "en": "Sampling, causal filters and spectrum"
           },
-          "learn": 12,
+          "learn": 10,
           "build": 9,
           "verify": 3,
-          "hours": 24,
+          "hours": 22,
           "source_refs": [
             "M04.E4"
           ],
@@ -2460,7 +2460,7 @@
         "ru": "Исходный M04, страницы 3–7; на странице 8 — временная цепочка и короткая проверка усиления/задержки. Паспорт выбранных низковольтных компонентов. Углублённые PSD/Welch/режекторный фильтр отложены. Чтение входит в 51 учебный час.",
         "en": "Original M04, pages 3–7; page 8 timing chain and a short gain/lag check. Datasheets for selected low-voltage components. Extended PSD/Welch/notch is deferred. Reading is inside 51 learning hours."
       },
-      "base": 110,
+      "base": 102,
       "track": "core"
     },
     "M05": {
@@ -2472,7 +2472,7 @@
       "learn": 59,
       "build": 63,
       "verify": 23,
-      "hours": 145,
+      "hours": 135,
       "tasks": [
         {
           "id": "C1",
@@ -2480,10 +2480,10 @@
             "ru": "Эскизы, ограничения и первые детали",
             "en": "Sketches, constraints and first parts"
           },
-          "learn": 15,
+          "learn": 12,
           "build": 13,
           "verify": 2,
-          "hours": 30,
+          "hours": 27,
           "source_refs": [
             "M05.C1"
           ],
@@ -2506,10 +2506,10 @@
             "ru": "Параметрическая трёхкоординатная сборка и доступ к крепежу",
             "en": "Parametric 3-DOF assembly and fastener access"
           },
-          "learn": 12,
+          "learn": 10,
           "build": 23,
           "verify": 5,
-          "hours": 40,
+          "hours": 38,
           "source_refs": [
             "M05.C2"
           ],
@@ -2532,10 +2532,10 @@
             "ru": "Машинные элементы, посадки, чертёж и допуски",
             "en": "Machine elements, fits, drawing and tolerances"
           },
-          "learn": 12,
+          "learn": 10,
           "build": 12,
           "verify": 6,
-          "hours": 30,
+          "hours": 28,
           "source_refs": [
             "M05.C3"
           ],
@@ -2558,10 +2558,10 @@
             "ru": "Статика, материалы и прочность",
             "en": "Statics, materials and strength"
           },
-          "learn": 18,
+          "learn": 15,
           "build": 8,
           "verify": 4,
-          "hours": 30,
+          "hours": 27,
           "source_refs": [
             "M05.C4"
           ],
@@ -2638,7 +2638,7 @@
         "ru": "Исходный M05: CAD, сборки, посадки, ручная статика/прочность и физические образцы. Раздел самостоятельной FEA с тремя сетками отложен целиком. Документация одного CAD и реального материала читается по задаче; входит в 59 учебных часов.",
         "en": "Original M05: CAD, assemblies, fits, hand statics/strength and physical coupons. Standalone three-mesh FEA is deferred completely. Read one CAD tool and actual material documentation as needed; inside 59 learning hours."
       },
-      "base": 145,
+      "base": 135,
       "track": "core"
     },
     "M06": {
@@ -2650,7 +2650,7 @@
       "learn": 33,
       "build": 52,
       "verify": 25,
-      "hours": 110,
+      "hours": 104,
       "tasks": [
         {
           "id": "U1",
@@ -2658,10 +2658,10 @@
             "ru": "MCU/инструменты и электрические ограничения",
             "en": "MCU/toolchain and electrical limits"
           },
-          "learn": 8,
+          "learn": 7,
           "build": 8,
           "verify": 2,
-          "hours": 18,
+          "hours": 17,
           "source_refs": [
             "M06.U1"
           ],
@@ -2682,10 +2682,10 @@
             "ru": "GPIO/PWM/ADC, датчики и одна физическая шина",
             "en": "GPIO/PWM/ADC, sensors and one physical bus"
           },
-          "learn": 10,
+          "learn": 8,
           "build": 11,
           "verify": 5,
-          "hours": 26,
+          "hours": 24,
           "source_refs": [
             "M06.U2"
           ],
@@ -2706,10 +2706,10 @@
             "ru": "Телеметрия, владение данными и границы кадров",
             "en": "Telemetry, data ownership and framing"
           },
-          "learn": 3,
+          "learn": 2,
           "build": 11,
           "verify": 4,
-          "hours": 18,
+          "hours": 17,
           "source_refs": [
             "M06.U3"
           ],
@@ -2730,10 +2730,10 @@
             "ru": "RTOS, временные характеристики и сторожевой таймер",
             "en": "RTOS, timing and watchdog"
           },
-          "learn": 8,
+          "learn": 7,
           "build": 9,
           "verify": 5,
-          "hours": 22,
+          "hours": 21,
           "source_refs": [
             "M06.U4"
           ],
@@ -2754,10 +2754,10 @@
             "ru": "Состояния, независимая остановка и проверки для G1",
             "en": "States, independent stop and evidence for G1"
           },
-          "learn": 4,
+          "learn": 3,
           "build": 13,
           "verify": 9,
-          "hours": 26,
+          "hours": 25,
           "source_refs": [
             "M06.U5"
           ],
@@ -2799,7 +2799,7 @@
         "ru": "Исходный M06: все 12 задач и F1–F10. Только выбранные GPIO/PWM/ADC, API транспорта и датчика, основы прерываний, FreeRTOS и сторожевого таймера, параметры реального IMU. Не изучать пять шин как пять проектов. Чтение входит в 33 учебных часа.",
         "en": "Original M06, all 12 tasks and F1–F10. Selected GPIO/PWM/ADC, transport/sensor APIs, basic ISR/FreeRTOS/watchdog and the actual IMU settings. Do not treat five buses as five projects. Reading is inside 33 learning hours."
       },
-      "base": 110,
+      "base": 104,
       "track": "core"
     },
     "M07": {
@@ -2811,7 +2811,7 @@
       "learn": 32,
       "build": 41,
       "verify": 27,
-      "hours": 100,
+      "hours": 94,
       "tasks": [
         {
           "id": "A1",
@@ -2819,10 +2819,10 @@
             "ru": "Требования к приводу, шестерёнки и механическая модель",
             "en": "Actuator requirements, gears and mechanical model"
           },
-          "learn": 11,
+          "learn": 9,
           "build": 10,
           "verify": 4,
-          "hours": 25,
+          "hours": 23,
           "source_refs": [
             "M07.A1"
           ],
@@ -2855,10 +2855,10 @@
             "ru": "Крепление, питание и калибровки",
             "en": "Fixture, power and calibrations"
           },
-          "learn": 9,
+          "learn": 7,
           "build": 13,
           "verify": 8,
-          "hours": 30,
+          "hours": 28,
           "source_refs": [
             "M07.A2"
           ],
@@ -2882,10 +2882,10 @@
             "ru": "Позиционный контур и ограниченные профили",
             "en": "Position loop and bounded profiles"
           },
-          "learn": 8,
+          "learn": 7,
           "build": 12,
           "verify": 5,
-          "hours": 25,
+          "hours": 24,
           "source_refs": [
             "M07.A3"
           ],
@@ -2909,10 +2909,10 @@
             "ru": "Трение, задержка, нагрев и независимая валидация",
             "en": "Friction, delay, heating and independent validation"
           },
-          "learn": 4,
+          "learn": 3,
           "build": 6,
           "verify": 10,
-          "hours": 20,
+          "hours": 19,
           "source_refs": [
             "M07.A4"
           ],
@@ -2965,7 +2965,7 @@
         "ru": "Исходный M07: требования и сравнение, оснастка и калибровки, ограниченное управление, люфт и тепловой опыт; паспорта реальных привода, драйвера и питания. Частотная развёртка, полная подгонка модели и модельные F9/F10 отложены. Чтение входит в 32 учебных часа. В начале A1 — вводный блок «Шестерёнки и редукторы»: Modern Robotics §8.9, схемы KHK и анимация Harmonic Drive; 3 ч изучения уже внутри 11 ч A1.",
         "en": "Original M07: requirements/comparison, fixture/calibration, bounded control, backlash and thermal trial; actual drive/driver/supply datasheets. Chirp, full fitting and model F9/F10 are deferred. Reading is inside 32 learning hours. Begin A1 with the Gears and gearboxes introduction: Modern Robotics §8.9, KHK diagrams and Harmonic Drive animation; 3 h learning already within A1’s 11 h."
       },
-      "base": 100,
+      "base": 94,
       "track": "core"
     },
     "M12": {
@@ -3193,8 +3193,8 @@
             "en": "Three drives, harness and stop operate on a protected fixture; energy and commands have separately verified paths."
           },
           "material_ready_condition": {
-            "ru": "Поставка: образец привода нужен к началу L1 18.03.2027. Ещё два совместимых привода заказываются после проверки образца, намеченной на 19.03; сборка трёх приводов с 22.03 возможна только после их получения. Время доставки не подтверждено. Пока детали в пути, выполнять независимые CAD/подготовительные работы и пересчитать даты зависимой сборки и испытаний.",
-            "en": "Materials: the actuator sample is needed before L1 on 18 March 2027. Order two more compatible drives after the sample check targeted for 19 March; the three-drive assembly slot from 22 March is conditional on receipt. Delivery time is unconfirmed. Use independent CAD/preparation work during the wait and reforecast dependent assembly and trials."
+            "ru": "Поставка: образец привода нужен к началу L1 11.04.2028. Ещё два совместимых привода заказываются после проверки образца, намеченной на 12.04; сборка трёх приводов с 13.04 возможна только после их получения. Время доставки не подтверждено. Пока детали в пути, выполнять независимые CAD/подготовительные работы и пересчитать даты зависимой сборки и испытаний.",
+            "en": "Materials: the actuator sample is needed before L1 on 11 April 2028. Order two more compatible drives after the sample check targeted for 12 April; the three-drive assembly slot from 13 April is conditional on receipt. Delivery time is unconfirmed. Use independent CAD/preparation work during the wait and reforecast dependent assembly and trials."
           }
         },
         {
@@ -3285,10 +3285,10 @@
             "ru": "Интерфейсы, масса и бюджет питания",
             "en": "Interfaces, mass and power budget"
           },
-          "learn": 6,
+          "learn": 5,
           "build": 9,
           "verify": 5,
-          "hours": 20,
+          "hours": 19,
           "refs": [
             "Q1"
           ],
@@ -3302,10 +3302,10 @@
             "ru": "Ещё три ноги, корпус и монтаж",
             "en": "Three additional legs, body and assembly"
           },
-          "learn": 5,
+          "learn": 4,
           "build": 32,
           "verify": 8,
-          "hours": 45,
+          "hours": 44,
           "refs": [
             "Q2"
           ],
@@ -3319,10 +3319,10 @@
             "ru": "Жгуты, питание, остановка и последовательный запуск",
             "en": "Harnesses, power, stop and staged startup"
           },
-          "learn": 4,
+          "learn": 3,
           "build": 18,
           "verify": 8,
-          "hours": 30,
+          "hours": 29,
           "refs": [
             "Q3"
           ],
@@ -3336,10 +3336,10 @@
             "ru": "12 калибровок, шина и измерения",
             "en": "Twelve calibrations, bus and measurement"
           },
-          "learn": 4,
+          "learn": 3,
           "build": 14,
           "verify": 12,
-          "hours": 30,
+          "hours": 29,
           "refs": [
             "Q4"
           ],
@@ -3401,11 +3401,11 @@
         }
       ],
       "track": "hexapod",
-      "base": 155,
+      "base": 151,
       "learning": 20,
       "building": 82,
       "verification": 53,
-      "hours": 155,
+      "hours": 151,
       "retained_physical_scope": true
     },
     "M23": {
@@ -3420,10 +3420,10 @@
             "ru": "Две ноги и расширение корпуса",
             "en": "Two legs and frame expansion"
           },
-          "learn": 5,
+          "learn": 4,
           "build": 24,
           "verify": 6,
-          "hours": 35,
+          "hours": 34,
           "refs": [
             "X1"
           ],
@@ -3454,10 +3454,10 @@
             "ru": "Wave/ripple, переходы и контакты",
             "en": "Wave/ripple, transitions and contacts"
           },
-          "learn": 7,
+          "learn": 6,
           "build": 17,
           "verify": 8,
-          "hours": 32,
+          "hours": 31,
           "refs": [
             "X3"
           ],
@@ -3471,10 +3471,10 @@
             "ru": "Плоскость опоры, выравнивание и допустимые уклоны",
             "en": "Support plane, levelling and admissible slopes"
           },
-          "learn": 8,
+          "learn": 6,
           "build": 13,
           "verify": 12,
-          "hours": 33,
+          "hours": 31,
           "refs": [
             "X4"
           ],
@@ -3488,10 +3488,10 @@
             "ru": "Серия попыток, энергия, отказы, сервис и выпуск",
             "en": "Trial series, energy, faults, service and release"
           },
-          "learn": 3,
+          "learn": 2,
           "build": 10,
           "verify": 22,
-          "hours": 35,
+          "hours": 34,
           "refs": [
             "X5"
           ],
@@ -3532,11 +3532,11 @@
         }
       ],
       "track": "hexapod",
-      "base": 155,
+      "base": 150,
       "learning": 25,
       "building": 74,
       "verification": 56,
-      "hours": 155,
+      "hours": 150,
       "retained_physical_scope": true
     },
     "ARM": {
@@ -3580,8 +3580,8 @@
             "en": "Most loaded joint passes holding/motion/thermal tests under equivalent load before the full order."
           },
           "material_ready_condition": {
-            "ru": "Поставка: выбор плечевого привода завершается по плану 29.05.2027; PR5 разрешает заказ только после этого. 29.05 — начало планового слота A02, а не обещание получения привода в тот же день. Работы с приводом и нагрузочная проверка ждут фактической поставки; независимую подготовку оснастки можно продолжать. Если ожидание не помещается в перестановку работ, пересчитать окончание A02 и последующие даты.",
-            "en": "Materials: shoulder-actuator selection is targeted for 29 May 2027; PR5 permits ordering only afterward. 29 May is the nominal A02 work slot, not a promise of same-day receipt. Motor-dependent work and loaded qualification wait for actual delivery; independent fixture preparation may continue. If resequencing cannot absorb the wait, reforecast A02 completion and dependent dates."
+            "ru": "Поставка: выбор плечевого привода завершается по плану 17.06.2028; PR5 разрешает заказ только после этого. 17.06 — начало планового слота A02, а не обещание получения привода в тот же день. Работы с приводом и нагрузочная проверка ждут фактической поставки; независимую подготовку оснастки можно продолжать. Если ожидание не помещается в перестановку работ, пересчитать окончание A02 и последующие даты.",
+            "en": "Materials: shoulder-actuator selection is targeted for 17 June 2028; PR5 permits ordering only afterward. 17 June is the nominal A02 work slot, not a promise of same-day receipt. Motor-dependent work and loaded qualification wait for actual delivery; independent fixture preparation may continue. If resequencing cannot absorb the wait, reforecast A02 completion and dependent dates."
           }
         },
         {
@@ -3852,8 +3852,8 @@
             "en": "Three sections/six drives assembled; distal tendon routing and inter-section coupling verified."
           },
           "material_ready_condition": {
-            "ru": "Поставка: ещё четыре привода заказываются только после PASS первой активной секции T04, намеченного на 25.08.2027. Слот T05 с 25.08 не предполагает поставку в тот же день. Монтаж этих приводов, полная калибровка и завершение T05 зависят от получения деталей; на время доставки перенести независимые работы и при необходимости пересчитать даты. 88 ч 20 мин свободной ёмкости не гарантируют покрытие календарного срока доставки.",
-            "en": "Materials: order the other four drives only after first-active-section T04 PASS, targeted for 25 August 2027. The T05 slot from 25 August does not assume same-day delivery. Installing these drives, full calibration and T05 completion depend on receipt; bring independent work forward during shipping and reforecast dates when needed. The 88 h 20 min of unallocated capacity do not guarantee coverage of elapsed delivery time."
+            "ru": "Поставка: ещё четыре привода заказываются только после PASS первой активной секции T04, намеченного на 11.09.2028. Слот T05 с 11.09 не предполагает поставку в тот же день. Монтаж этих приводов, полная калибровка и завершение T05 зависят от получения деталей; на время доставки перенести независимые работы и при необходимости пересчитать даты. 0 ч свободной ёмкости не гарантируют покрытие календарного срока доставки.",
+            "en": "Materials: order the other four drives only after first-active-section T04 PASS, targeted for 11 September 2028. The T05 slot from 11 September does not assume same-day delivery. Installing these drives, full calibration and T05 completion depend on receipt; bring independent work forward during shipping and reforecast dates when needed. The 0 h of unallocated capacity do not guarantee coverage of elapsed delivery time."
           }
         },
         {
@@ -4065,8 +4065,8 @@
             }
           ],
           "calendar": {
-            "ru": "Опция не включена в 340 ч хвоста, 2 720 ч обязательной программы и помесячное расписание. Если добавить 40–60 ч, запас 88 ч 20 мин уменьшится до 48 ч 20 мин — 28 ч 20 мин; финиш необходимо пересчитать. Отказ от опции не мешает завершению хвоста. Изготовление и доставка требуют отдельного календарного времени.",
-            "en": "The option is outside the tail’s 340 h, the required programme’s 2,720 h and the monthly schedule. Adding 40–60 h reduces the 88 h 20 min buffer to 48 h 20 min–28 h 20 min; reforecast completion. Skipping it does not block tail completion. Fabrication and delivery require elapsed time."
+            "ru": "Опция не включена в 340 ч хвоста, 2 600 ч обязательной программы и помесячное расписание. Если добавить 40–60 ч, запас 0 ч уменьшится до 48 ч 20 мин — 28 ч 20 мин; финиш необходимо пересчитать. Отказ от опции не мешает завершению хвоста. Изготовление и доставка требуют отдельного календарного времени.",
+            "en": "The option is outside the tail’s 340 h, the required programme’s 2,600 h and the monthly schedule. Adding 40–60 h reduces the 0 h buffer to 48 h 20 min–28 h 20 min; reforecast completion. Skipping it does not block tail completion. Fabrication and delivery require elapsed time."
           },
           "procurement_id": "tail-pcb-optional",
           "reading": [
@@ -4103,10 +4103,10 @@
             "ru": "Требования, вылет и полезная нагрузка и выбор приводов",
             "en": "Requirements, reach/payload and actuator selection"
           },
-          "learn": 13,
+          "learn": 11,
           "build": 16,
           "verify": 6,
-          "hours": 35,
+          "hours": 33,
           "refs": [
             "A01"
           ],
@@ -4120,10 +4120,10 @@
             "ru": "Прототип самого нагруженного сустава",
             "en": "Prototype the most heavily loaded joint"
           },
-          "learn": 7,
+          "learn": 6,
           "build": 25,
           "verify": 13,
-          "hours": 45,
+          "hours": 44,
           "refs": [
             "A02"
           ],
@@ -4132,8 +4132,8 @@
             "en": "Most loaded joint passes holding/motion/thermal tests under equivalent load before the full order."
           },
           "material_ready_condition": {
-            "ru": "Поставка: выбор плечевого привода завершается по плану 29.05.2027; PR5 разрешает заказ только после этого. 29.05 — начало планового слота A02, а не обещание получения привода в тот же день. Работы с приводом и нагрузочная проверка ждут фактической поставки; независимую подготовку оснастки можно продолжать. Если ожидание не помещается в перестановку работ, пересчитать окончание A02 и последующие даты.",
-            "en": "Materials: shoulder-actuator selection is targeted for 29 May 2027; PR5 permits ordering only afterward. 29 May is the nominal A02 work slot, not a promise of same-day receipt. Motor-dependent work and loaded qualification wait for actual delivery; independent fixture preparation may continue. If resequencing cannot absorb the wait, reforecast A02 completion and dependent dates."
+            "ru": "Поставка: выбор плечевого привода завершается по плану 17.06.2028; PR5 разрешает заказ только после этого. 17.06 — начало планового слота A02, а не обещание получения привода в тот же день. Работы с приводом и нагрузочная проверка ждут фактической поставки; независимую подготовку оснастки можно продолжать. Если ожидание не помещается в перестановку работ, пересчитать окончание A02 и последующие даты.",
+            "en": "Materials: shoulder-actuator selection is targeted for 17 June 2028; PR5 permits ordering only afterward. 17 June is the nominal A02 work slot, not a promise of same-day receipt. Motor-dependent work and loaded qualification wait for actual delivery; independent fixture preparation may continue. If resequencing cannot absorb the wait, reforecast A02 completion and dependent dates."
           }
         },
         {
@@ -4141,10 +4141,10 @@
             "ru": "Собственная CAD-механика всех звеньев",
             "en": "Custom CAD mechanics for all links"
           },
-          "learn": 12,
+          "learn": 10,
           "build": 43,
           "verify": 10,
-          "hours": 65,
+          "hours": 63,
           "refs": [
             "A03"
           ],
@@ -4158,10 +4158,10 @@
             "ru": "Простой параллельный захват",
             "en": "Simple parallel gripper"
           },
-          "learn": 3,
+          "learn": 2,
           "build": 17,
           "verify": 5,
-          "hours": 25,
+          "hours": 24,
           "refs": [
             "A04"
           ],
@@ -4173,8 +4173,8 @@
       ],
       "track": "arm",
       "parent": "ARM",
-      "base": 170,
-      "hours": 170,
+      "base": 164,
+      "hours": 164,
       "retained_physical_scope": true
     },
     "A2": {
@@ -4189,10 +4189,10 @@
             "ru": "Изготовление, обработка и сборка",
             "en": "Manufacture, finishing and assembly"
           },
-          "learn": 3,
+          "learn": 2,
           "build": 37,
           "verify": 10,
-          "hours": 50,
+          "hours": 49,
           "refs": [
             "A05"
           ],
@@ -4206,10 +4206,10 @@
             "ru": "Питание, жгуты, остановка и границы движения",
             "en": "Power, harnesses, stop and motion boundaries"
           },
-          "learn": 3,
+          "learn": 2,
           "build": 22,
           "verify": 10,
-          "hours": 35,
+          "hours": 34,
           "refs": [
             "A06"
           ],
@@ -4223,10 +4223,10 @@
             "ru": "Калибровки, жёсткость и модель реального манипулятора",
             "en": "Calibration, stiffness and physical-arm model"
           },
-          "learn": 8,
+          "learn": 6,
           "build": 22,
           "verify": 20,
-          "hours": 50,
+          "hours": 48,
           "refs": [
             "A07"
           ],
@@ -4238,8 +4238,8 @@
       ],
       "track": "arm",
       "parent": "ARM",
-      "base": 135,
-      "hours": 135,
+      "base": 131,
+      "hours": 131,
       "retained_physical_scope": true
     },
     "A3": {
@@ -4254,10 +4254,10 @@
             "ru": "Реальное исполнение MoveIt/ros2_control",
             "en": "Physical execution with MoveIt/ros2_control"
           },
-          "learn": 3,
+          "learn": 2,
           "build": 22,
           "verify": 10,
-          "hours": 35,
+          "hours": 34,
           "refs": [
             "A08"
           ],
@@ -4271,10 +4271,10 @@
             "ru": "Повторяемый перенос объектов",
             "en": "Repeatable object transfer"
           },
-          "learn": 4,
+          "learn": 3,
           "build": 18,
           "verify": 18,
-          "hours": 40,
+          "hours": 39,
           "refs": [
             "A09"
           ],
@@ -4288,10 +4288,10 @@
             "ru": "Циклы, отказы, обслуживание и выпуск",
             "en": "Cycles, faults, maintenance and release"
           },
-          "learn": 4,
+          "learn": 3,
           "build": 20,
           "verify": 21,
-          "hours": 45,
+          "hours": 44,
           "refs": [
             "A10"
           ],
@@ -4303,8 +4303,8 @@
       ],
       "track": "arm",
       "parent": "ARM",
-      "base": 120,
-      "hours": 120,
+      "base": 117,
+      "hours": 117,
       "retained_physical_scope": true
     },
     "T1": {
@@ -4319,10 +4319,10 @@
             "ru": "Требования, постоянная кривизна и нагрузки",
             "en": "Requirements, constant-curvature and loads"
           },
-          "learn": 10,
+          "learn": 8,
           "build": 14,
           "verify": 6,
-          "hours": 30,
+          "hours": 28,
           "refs": [
             "T01"
           ],
@@ -4336,10 +4336,10 @@
             "ru": "Позвонки, три варианта хребта и пассивная секция",
             "en": "Vertebrae, three backbone variants and passive section"
           },
-          "learn": 10,
+          "learn": 8,
           "build": 28,
           "verify": 12,
-          "hours": 50,
+          "hours": 48,
           "refs": [
             "T02"
           ],
@@ -4353,10 +4353,10 @@
             "ru": "Шкивы, две замкнутые петли и натяжение",
             "en": "Spools, two closed loops and pretension"
           },
-          "learn": 7,
+          "learn": 6,
           "build": 27,
           "verify": 11,
-          "hours": 45,
+          "hours": 44,
           "refs": [
             "T03"
           ],
@@ -4368,8 +4368,8 @@
       ],
       "track": "tail",
       "parent": "TAIL",
-      "base": 125,
-      "hours": 125,
+      "base": 120,
+      "hours": 120,
       "retained_physical_scope": true
     },
     "T2": {
@@ -4384,10 +4384,10 @@
             "ru": "Два привода и одна активная секция",
             "en": "Two actuators and one active section"
           },
-          "learn": 6,
+          "learn": 5,
           "build": 27,
           "verify": 12,
-          "hours": 45,
+          "hours": 44,
           "refs": [
             "T04"
           ],
@@ -4401,10 +4401,10 @@
             "ru": "Полные три секции и шесть приводов",
             "en": "Complete three sections and six actuators"
           },
-          "learn": 5,
+          "learn": 4,
           "build": 38,
           "verify": 12,
-          "hours": 55,
+          "hours": 54,
           "refs": [
             "T05"
           ],
@@ -4413,8 +4413,8 @@
             "en": "Three sections/six drives assembled; distal tendon routing and inter-section coupling verified."
           },
           "material_ready_condition": {
-            "ru": "Поставка: ещё четыре привода заказываются только после PASS первой активной секции T04, намеченного на 25.08.2027. Слот T05 с 25.08 не предполагает поставку в тот же день. Монтаж этих приводов, полная калибровка и завершение T05 зависят от получения деталей; на время доставки перенести независимые работы и при необходимости пересчитать даты. 88 ч 20 мин свободной ёмкости не гарантируют покрытие календарного срока доставки.",
-            "en": "Materials: order the other four drives only after first-active-section T04 PASS, targeted for 25 August 2027. The T05 slot from 25 August does not assume same-day delivery. Installing these drives, full calibration and T05 completion depend on receipt; bring independent work forward during shipping and reforecast dates when needed. The 88 h 20 min of unallocated capacity do not guarantee coverage of elapsed delivery time."
+            "ru": "Поставка: ещё четыре привода заказываются только после PASS первой активной секции T04, намеченного на 11.09.2028. Слот T05 с 11.09 не предполагает поставку в тот же день. Монтаж этих приводов, полная калибровка и завершение T05 зависят от получения деталей; на время доставки перенести независимые работы и при необходимости пересчитать даты. 0 ч свободной ёмкости не гарантируют покрытие календарного срока доставки.",
+            "en": "Materials: order the other four drives only after first-active-section T04 PASS, targeted for 11 September 2028. The T05 slot from 11 September does not assume same-day delivery. Installing these drives, full calibration and T05 completion depend on receipt; bring independent work forward during shipping and reforecast dates when needed. The 0 h of unallocated capacity do not guarantee coverage of elapsed delivery time."
           }
         },
         {
@@ -4422,10 +4422,10 @@
             "ru": "Калибровка, гистерезис и удержание формы",
             "en": "Calibration, hysteresis and shape retention"
           },
-          "learn": 6,
+          "learn": 5,
           "build": 22,
           "verify": 17,
-          "hours": 45,
+          "hours": 44,
           "refs": [
             "T06"
           ],
@@ -4437,8 +4437,8 @@
       ],
       "track": "tail",
       "parent": "TAIL",
-      "base": 145,
-      "hours": 145,
+      "base": 142,
+      "hours": 142,
       "retained_physical_scope": true
     },
     "T3": {
@@ -4453,10 +4453,10 @@
             "ru": "Траектории, редактор и ROS",
             "en": "Trajectories, editor and ROS"
           },
-          "learn": 3,
+          "learn": 2,
           "build": 22,
           "verify": 10,
-          "hours": 35,
+          "hours": 34,
           "refs": [
             "T07"
           ],
@@ -4470,10 +4470,10 @@
             "ru": "Циклы, отказы, крепление, примерка и выпуск",
             "en": "Cycles, faults, mount, wearable trial and release"
           },
-          "learn": 3,
+          "learn": 2,
           "build": 15,
           "verify": 17,
-          "hours": 35,
+          "hours": 34,
           "refs": [
             "T08"
           ],
@@ -4485,8 +4485,8 @@
       ],
       "track": "tail",
       "parent": "TAIL",
-      "base": 70,
-      "hours": 70,
+      "base": 68,
+      "hours": 68,
       "retained_physical_scope": true
     },
     "D1": {
@@ -4502,10 +4502,10 @@
             "ru": "Масса, COM, инерция и расчёт приводов",
             "en": "Mass, COM, inertia and actuator loads"
           },
-          "learn": 6,
+          "learn": 5,
           "build": 10,
           "verify": 4,
-          "hours": 20,
+          "hours": 19,
           "source_refs": [
             "M09 pp3,9",
             "M05 load cases"
@@ -4526,10 +4526,10 @@
             "ru": "Опоры, сцепление и границы устойчивости",
             "en": "Support, traction and stability limits"
           },
-          "learn": 6,
+          "learn": 5,
           "build": 9,
           "verify": 5,
-          "hours": 20,
+          "hours": 19,
           "source_refs": [
             "M09 pp6–7,10",
             "M19 p15",
@@ -4547,13 +4547,14 @@
           ]
         }
       ],
-      "base": 40,
+      "base": 38,
       "track": "core",
       "parent": "M09",
       "gate": {
         "ru": "До L1 зафиксированы масса, позы, опорная нагрузка и расчётные моменты; проверены геометрия опор, трение и запас. Физическая нагрузочная проверка выполняется далее в L1, динамические невязки — в D2.",
         "en": "Before L1, record mass, poses, support loading and calculated torques; check support geometry, friction and margin. Physical load qualification follows in L1; dynamic residuals are checked in D2."
-      }
+      },
+      "hours": 38
     },
     "D2": {
       "id": "D2",
@@ -4568,10 +4569,10 @@
             "ru": "Одна ось: модель, энергия и трение",
             "en": "One axis: model, energy and friction"
           },
-          "learn": 7,
+          "learn": 6,
           "build": 9,
           "verify": 4,
-          "hours": 20,
+          "hours": 19,
           "source_refs": [
             "M09 pp3–4,9",
             "M02 dynamic model"
@@ -4592,10 +4593,10 @@
             "ru": "Связанные звенья: квазистатика против динамики",
             "en": "Coupled links: quasi-static versus dynamic loads"
           },
-          "learn": 6,
+          "learn": 5,
           "build": 7,
           "verify": 3,
-          "hours": 16,
+          "hours": 15,
           "source_refs": [
             "M09 pp5–6,10"
           ],
@@ -4614,10 +4615,10 @@
             "ru": "Проверка модели измеренным откликом",
             "en": "Validate the model against measured response"
           },
-          "learn": 6,
+          "learn": 5,
           "build": 11,
           "verify": 5,
-          "hours": 22,
+          "hours": 21,
           "source_refs": [
             "M09 pp7–8,11–14",
             "M07 actuator rig"
@@ -4633,13 +4634,14 @@
           ]
         }
       ],
-      "base": 58,
+      "base": 55,
       "track": "core",
       "parent": "M09",
       "gate": {
         "ru": "Проверенная на отдельных измерениях динамическая модель объясняет нагрузку и допустимое ускорение; невязка, ограничения и область применимости записаны.",
         "en": "A dynamics model validated on separate measurements explains loading and permissible acceleration; record residuals, limits and applicability."
-      }
+      },
+      "hours": 55
     },
     "S1": {
       "id": "S1",
@@ -4654,10 +4656,10 @@
             "ru": "Минимальный граф и стандартные сообщения",
             "en": "Minimal graph and standard messages"
           },
-          "learn": 4,
+          "learn": 3,
           "build": 4,
           "verify": 2,
-          "hours": 10,
+          "hours": 9,
           "source_refs": [
             "M12 Task1"
           ],
@@ -4696,10 +4698,10 @@
             "ru": "QoS, rosbag и первый журнал событий с временными связями",
             "en": "QoS, bag and the first causal log"
           },
-          "learn": 5,
+          "learn": 4,
           "build": 6,
           "verify": 5,
-          "hours": 16,
+          "hours": 15,
           "source_refs": [
             "M12 Task3",
             "M12 Task7",
@@ -4716,7 +4718,7 @@
           ]
         }
       ],
-      "base": 30,
+      "base": 28,
       "track": "core",
       "parent": "M12",
       "gates": [
@@ -4739,7 +4741,8 @@
       },
       "prerequisites": [
         "M01"
-      ]
+      ],
+      "hours": 28
     },
     "S2": {
       "id": "S2",
@@ -4754,10 +4757,10 @@
             "ru": "Одна URDF/Xacro и TF во времени",
             "en": "One URDF/Xacro and time-aware TF"
           },
-          "learn": 4,
+          "learn": 3,
           "build": 6,
           "verify": 4,
-          "hours": 14,
+          "hours": 13,
           "source_refs": [
             "M12 Task5",
             "M12 p15 URDF inertia"
@@ -4777,10 +4780,10 @@
             "ru": "Адаптер существующей шины микроконтроллера и жизненный цикл ros2_control",
             "en": "Existing MCU-bus adapter and ros2_control lifecycle"
           },
-          "learn": 4,
+          "learn": 3,
           "build": 6,
           "verify": 4,
-          "hours": 14,
+          "hours": 13,
           "source_refs": [
             "M12 Task6"
           ],
@@ -4798,10 +4801,10 @@
             "ru": "Отмена, устаревшие данные и автоматическое воспроизведение сценария отказа",
             "en": "Cancellation, stale data and automated fault replay"
           },
-          "learn": 3,
+          "learn": 2,
           "build": 4,
           "verify": 5,
-          "hours": 12,
+          "hours": 11,
           "source_refs": [
             "M12 Tasks2,4,7,8",
             "M12 F1–F6"
@@ -4816,7 +4819,7 @@
           ]
         }
       ],
-      "base": 40,
+      "base": 37,
       "track": "core",
       "parent": "M12",
       "gates": [
@@ -4842,7 +4845,8 @@
         "M06",
         "M08",
         "L1"
-      ]
+      ],
+      "hours": 37
     },
     "G1": {
       "id": "G1",
@@ -4864,7 +4868,8 @@
           "hours": 10,
           "refs": []
         }
-      ]
+      ],
+      "hours": 10
     },
     "G2": {
       "id": "G2",
@@ -4886,7 +4891,8 @@
           "hours": 10,
           "refs": []
         }
-      ]
+      ],
+      "hours": 10
     },
     "G3": {
       "id": "G3",
@@ -4908,7 +4914,8 @@
           "hours": 10,
           "refs": []
         }
-      ]
+      ],
+      "hours": 10
     },
     "G4": {
       "id": "G4",
@@ -4930,7 +4937,8 @@
           "hours": 10,
           "refs": []
         }
-      ]
+      ],
+      "hours": 10
     },
     "R1": {
       "id": "R1",
@@ -4983,26 +4991,13 @@
     "CAP": {
       "id": "CAP",
       "title": {
-        "ru": "Запас на задержки и переделки до конца 2027",
-        "en": "Buffer for delays and rework through 2027"
+        "ru": "Запас на задержки и переделки до конца 2028",
+        "en": "Buffer for delays and rework through 2028"
       },
-      "base": 88.33333333333333,
+      "base": 0,
       "track": "capacity",
-      "tasks": [
-        {
-          "title": {
-            "ru": "88 ч 20 мин запаса после завершения программы; это не обязательное задание.",
-            "en": "88 h 20 min of buffer after programme completion; not a required task."
-          },
-          "hours": 88.33333333333333,
-          "minutes": 5300,
-          "learn": 0,
-          "build": 0,
-          "verify": 0,
-          "allocation_kind": "capacity",
-          "refs": []
-        }
-      ]
+      "tasks": [],
+      "hours": 0
     }
   },
   "order": [
@@ -5039,17 +5034,16 @@
     "G3",
     "T3",
     "M24",
-    "G4",
-    "CAP"
+    "G4"
   ],
-  "base_hours": 2720,
+  "base_hours": 2600,
   "reserve_hours": 0,
-  "allocated_hours": 2720,
-  "hours": 2808.3333333333335,
-  "padding_hours": 88.33333333333333,
-  "weeks": 57,
-  "full_weeks": 55,
-  "final_partial_week_hours": 33.333333333333336,
+  "allocated_hours": 2600,
+  "hours": 2600,
+  "padding_hours": 0,
+  "weeks": 53,
+  "full_weeks": 52,
+  "final_partial_week_hours": 0,
   "source_model": "task-based selected core; engineering estimate, not a statistical learning norm",
   "reports": {
     "math": {
@@ -9862,8 +9856,8 @@
                 "G-ADV-VISION"
               ],
               "reason": {
-                "ru": "CNN с переносом обучения сохранены в программе, но не обязательны до конца 2027 года.",
-                "en": "CNN/transfer learning is retained but is no longer mandatory before the end of 2027."
+                "ru": "CNN с переносом обучения сохранены в программе, но не обязательны до конца 2028 года.",
+                "en": "CNN/transfer learning is retained but is no longer mandatory before the end of 2028."
               }
             }
           ]
@@ -11294,8 +11288,8 @@
                 "M06"
               ],
               "material_ready_condition": {
-                "ru": "Поставка: образец привода нужен к началу L1 18.03.2027. Ещё два совместимых привода заказываются после проверки образца, намеченной на 19.03; сборка трёх приводов с 22.03 возможна только после их получения. Время доставки не подтверждено. Пока детали в пути, выполнять независимые CAD/подготовительные работы и пересчитать даты зависимой сборки и испытаний.",
-                "en": "Materials: the actuator sample is needed before L1 on 18 March 2027. Order two more compatible drives after the sample check targeted for 19 March; the three-drive assembly slot from 22 March is conditional on receipt. Delivery time is unconfirmed. Use independent CAD/preparation work during the wait and reforecast dependent assembly and trials."
+                "ru": "Поставка: образец привода нужен к началу L1 11.04.2028. Ещё два совместимых привода заказываются после проверки образца, намеченной на 12.04; сборка трёх приводов с 13.04 возможна только после их получения. Время доставки не подтверждено. Пока детали в пути, выполнять независимые CAD/подготовительные работы и пересчитать даты зависимой сборки и испытаний.",
+                "en": "Materials: the actuator sample is needed before L1 on 11 April 2028. Order two more compatible drives after the sample check targeted for 12 April; the three-drive assembly slot from 13 April is conditional on receipt. Delivery time is unconfirmed. Use independent CAD/preparation work during the wait and reforecast dependent assembly and trials."
               }
             },
             {
@@ -11729,8 +11723,8 @@
                 "M07"
               ],
               "material_ready_condition": {
-                "ru": "Поставка: выбор плечевого привода завершается по плану 29.05.2027; PR5 разрешает заказ только после этого. 29.05 — начало планового слота A02, а не обещание получения привода в тот же день. Работы с приводом и нагрузочная проверка ждут фактической поставки; независимую подготовку оснастки можно продолжать. Если ожидание не помещается в перестановку работ, пересчитать окончание A02 и последующие даты.",
-                "en": "Materials: shoulder-actuator selection is targeted for 29 May 2027; PR5 permits ordering only afterward. 29 May is the nominal A02 work slot, not a promise of same-day receipt. Motor-dependent work and loaded qualification wait for actual delivery; independent fixture preparation may continue. If resequencing cannot absorb the wait, reforecast A02 completion and dependent dates."
+                "ru": "Поставка: выбор плечевого привода завершается по плану 17.06.2028; PR5 разрешает заказ только после этого. 17.06 — начало планового слота A02, а не обещание получения привода в тот же день. Работы с приводом и нагрузочная проверка ждут фактической поставки; независимую подготовку оснастки можно продолжать. Если ожидание не помещается в перестановку работ, пересчитать окончание A02 и последующие даты.",
+                "en": "Materials: shoulder-actuator selection is targeted for 17 June 2028; PR5 permits ordering only afterward. 17 June is the nominal A02 work slot, not a promise of same-day receipt. Motor-dependent work and loaded qualification wait for actual delivery; independent fixture preparation may continue. If resequencing cannot absorb the wait, reforecast A02 completion and dependent dates."
               }
             },
             {
@@ -12180,8 +12174,8 @@
                 "TAIL_T04_PASS"
               ],
               "material_ready_condition": {
-                "ru": "Поставка: ещё четыре привода заказываются только после PASS первой активной секции T04, намеченного на 25.08.2027. Слот T05 с 25.08 не предполагает поставку в тот же день. Монтаж этих приводов, полная калибровка и завершение T05 зависят от получения деталей; на время доставки перенести независимые работы и при необходимости пересчитать даты. 88 ч 20 мин свободной ёмкости не гарантируют покрытие календарного срока доставки.",
-                "en": "Materials: order the other four drives only after first-active-section T04 PASS, targeted for 25 August 2027. The T05 slot from 25 August does not assume same-day delivery. Installing these drives, full calibration and T05 completion depend on receipt; bring independent work forward during shipping and reforecast dates when needed. The 88 h 20 min of unallocated capacity do not guarantee coverage of elapsed delivery time."
+                "ru": "Поставка: ещё четыре привода заказываются только после PASS первой активной секции T04, намеченного на 11.09.2028. Слот T05 с 11.09 не предполагает поставку в тот же день. Монтаж этих приводов, полная калибровка и завершение T05 зависят от получения деталей; на время доставки перенести независимые работы и при необходимости пересчитать даты. 0 ч свободной ёмкости не гарантируют покрытие календарного срока доставки.",
+                "en": "Materials: order the other four drives only after first-active-section T04 PASS, targeted for 11 September 2028. The T05 slot from 11 September does not assume same-day delivery. Installing these drives, full calibration and T05 completion depend on receipt; bring independent work forward during shipping and reforecast dates when needed. The 0 h of unallocated capacity do not guarantee coverage of elapsed delivery time."
               }
             },
             {
@@ -14897,8 +14891,8 @@
     "supplier_lead_times_validated": false,
     "elapsed_waits_reserved": false,
     "explanation": {
-      "ru": "50 ч в неделю: Пн–Сб по 8 ч 20 мин, Вс свободно. 31.12.2026, 01.01.2027 и 31.12.2027 — выходные; прочие праздники и отпуск не вычтены. Обязательная работа заканчивается 18.12.2027. Оставшиеся 88 ч 20 мин до 31.12.2027 — единый запас на задержки и переделки, не дополнительные задания. Даты зависят от приёмок и получения деталей. Поставка, автономная печать и охлаждение требуют календарного времени; их отдельные длительности не зарезервированы. Запас не гарантирует покрытие сроков поставки.",
-      "en": "50 h/week: Mon–Sat 8 h 20 min/day, Sunday off. 31 December 2026, 1 January 2027 and 31 December 2027 are days off; other holidays and vacation are not deducted. Required work finishes on 18 December 2027. The remaining 88 h 20 min through 31 December form one buffer for delays and rework, not additional tasks. Dates depend on gates and material receipt. Shipping, unattended printing and cooling require elapsed time with no separate durations reserved; the buffer does not guarantee delivery coverage."
+      "ru": "50 ч в неделю: Пн–Сб по 8 ч 20 мин, Вс свободно. 31.12.2028 — выходной; прочие праздники и отпуск не вычтены. Обязательная работа заканчивается 30.12.2028, запас отсутствует. 120 ч чтения и целевого изучения сняты диагностикой; практика и проверка сохранены. Даты зависят от приёмок и получения деталей. Поставка, автономная печать и охлаждение требуют календарного времени; их отдельные длительности не зарезервированы.",
+      "en": "50 h/week: Mon–Sat 8 h 20 min/day, Sunday off. 31 December 2028 is a day off; other holidays and vacation are not deducted. Required work finishes on 30 December 2028 with no remaining buffer. 120 h of reading and targeted study are removed through diagnostics; practical and verification work is retained. Dates depend on gates and material receipt. Shipping, unattended printing and cooling require elapsed time with no separate durations reserved."
     },
     "material_ready_conditions": [
       {
@@ -14906,12 +14900,12 @@
         "stage": "L1",
         "task_index": 2,
         "source_task": "L1.L1c",
-        "nominal_slot_start": "2027-03-22",
+        "nominal_slot_start": "2028-04-13",
         "order_gate": "L1.L1a",
-        "nominal_gate_finish": "2027-03-19",
+        "nominal_gate_finish": "2028-04-12",
         "condition": {
-          "ru": "Поставка: образец привода нужен к началу L1 18.03.2027. Ещё два совместимых привода заказываются после проверки образца, намеченной на 19.03; сборка трёх приводов с 22.03 возможна только после их получения. Время доставки не подтверждено. Пока детали в пути, выполнять независимые CAD/подготовительные работы и пересчитать даты зависимой сборки и испытаний.",
-          "en": "Materials: the actuator sample is needed before L1 on 18 March 2027. Order two more compatible drives after the sample check targeted for 19 March; the three-drive assembly slot from 22 March is conditional on receipt. Delivery time is unconfirmed. Use independent CAD/preparation work during the wait and reforecast dependent assembly and trials."
+          "ru": "Поставка: образец привода нужен к началу L1 11.04.2028. Ещё два совместимых привода заказываются после проверки образца, намеченной на 12.04; сборка трёх приводов с 13.04 возможна только после их получения. Время доставки не подтверждено. Пока детали в пути, выполнять независимые CAD/подготовительные работы и пересчитать даты зависимой сборки и испытаний.",
+          "en": "Materials: the actuator sample is needed before L1 on 11 April 2028. Order two more compatible drives after the sample check targeted for 12 April; the three-drive assembly slot from 13 April is conditional on receipt. Delivery time is unconfirmed. Use independent CAD/preparation work during the wait and reforecast dependent assembly and trials."
         }
       },
       {
@@ -14919,12 +14913,12 @@
         "stage": "A1",
         "task_index": 1,
         "source_task": "ARM.A02",
-        "nominal_slot_start": "2027-05-29",
+        "nominal_slot_start": "2028-06-17",
         "order_gate": "ARM.A01",
-        "nominal_gate_finish": "2027-05-29",
+        "nominal_gate_finish": "2028-06-17",
         "condition": {
-          "ru": "Поставка: выбор плечевого привода завершается по плану 29.05.2027; PR5 разрешает заказ только после этого. 29.05 — начало планового слота A02, а не обещание получения привода в тот же день. Работы с приводом и нагрузочная проверка ждут фактической поставки; независимую подготовку оснастки можно продолжать. Если ожидание не помещается в перестановку работ, пересчитать окончание A02 и последующие даты.",
-          "en": "Materials: shoulder-actuator selection is targeted for 29 May 2027; PR5 permits ordering only afterward. 29 May is the nominal A02 work slot, not a promise of same-day receipt. Motor-dependent work and loaded qualification wait for actual delivery; independent fixture preparation may continue. If resequencing cannot absorb the wait, reforecast A02 completion and dependent dates."
+          "ru": "Поставка: выбор плечевого привода завершается по плану 17.06.2028; PR5 разрешает заказ только после этого. 17.06 — начало планового слота A02, а не обещание получения привода в тот же день. Работы с приводом и нагрузочная проверка ждут фактической поставки; независимую подготовку оснастки можно продолжать. Если ожидание не помещается в перестановку работ, пересчитать окончание A02 и последующие даты.",
+          "en": "Materials: shoulder-actuator selection is targeted for 17 June 2028; PR5 permits ordering only afterward. 17 June is the nominal A02 work slot, not a promise of same-day receipt. Motor-dependent work and loaded qualification wait for actual delivery; independent fixture preparation may continue. If resequencing cannot absorb the wait, reforecast A02 completion and dependent dates."
         }
       },
       {
@@ -14932,32 +14926,30 @@
         "stage": "T2",
         "task_index": 1,
         "source_task": "TAIL.T05",
-        "nominal_slot_start": "2027-08-26",
+        "nominal_slot_start": "2028-09-11",
         "order_gate": "TAIL_T04_PASS",
-        "nominal_gate_finish": "2027-08-25",
+        "nominal_gate_finish": "2028-09-11",
         "condition": {
-          "ru": "Поставка: ещё четыре привода заказываются только после PASS первой активной секции T04, намеченного на 25.08.2027. Слот T05 с 25.08 не предполагает поставку в тот же день. Монтаж этих приводов, полная калибровка и завершение T05 зависят от получения деталей; на время доставки перенести независимые работы и при необходимости пересчитать даты. 88 ч 20 мин свободной ёмкости не гарантируют покрытие календарного срока доставки.",
-          "en": "Materials: order the other four drives only after first-active-section T04 PASS, targeted for 25 August 2027. The T05 slot from 25 August does not assume same-day delivery. Installing these drives, full calibration and T05 completion depend on receipt; bring independent work forward during shipping and reforecast dates when needed. The 88 h 20 min of unallocated capacity do not guarantee coverage of elapsed delivery time."
+          "ru": "Поставка: ещё четыре привода заказываются только после PASS первой активной секции T04, намеченного на 11.09.2028. Слот T05 с 11.09 не предполагает поставку в тот же день. Монтаж этих приводов, полная калибровка и завершение T05 зависят от получения деталей; на время доставки перенести независимые работы и при необходимости пересчитать даты. 0 ч свободной ёмкости не гарантируют покрытие календарного срока доставки.",
+          "en": "Materials: order the other four drives only after first-active-section T04 PASS, targeted for 11 September 2028. The T05 slot from 11 September does not assume same-day delivery. Installing these drives, full calibration and T05 completion depend on receipt; bring independent work forward during shipping and reforecast dates when needed. The 0 h of unallocated capacity do not guarantee coverage of elapsed delivery time."
         }
       }
     ]
   },
-  "work_finish": "2027-12-18",
-  "calendar_finish": "2027-12-30",
-  "calendar_capacity_minutes": 168500,
-  "allocated_minutes": 163200,
-  "buffer_minutes": 5300,
+  "work_finish": "2028-12-30",
+  "calendar_finish": "2028-12-30",
+  "calendar_capacity_minutes": 156000,
+  "allocated_minutes": 156000,
+  "buffer_minutes": 0,
   "daily_minutes": 500,
   "weekly_hours": 50,
-  "week_start": "2026-11-30",
-  "first_partial_week_minutes": 2500,
-  "final_partial_week_minutes": 2000,
+  "week_start": "2027-12-27",
+  "first_partial_week_minutes": 0,
+  "final_partial_week_minutes": 0,
   "excluded_dates": [
-    "2026-12-31",
-    "2027-01-01",
-    "2027-12-31"
+    "2028-12-31"
   ],
-  "interior_excluded_minutes": 1000,
+  "interior_excluded_minutes": 0,
   "practica_2027": {
     "added_on": "2026-10-19",
     "extra_hours": 60,
@@ -14967,5 +14959,10 @@
       "M13.5",
       "M19-G"
     ]
+  },
+  "timeline_compression": {
+    "hours_removed": 120,
+    "category": "learn",
+    "method": "diagnostics and credit for demonstrated skills; build and verification hours unchanged"
   }
 }

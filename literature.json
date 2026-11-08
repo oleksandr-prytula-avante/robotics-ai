@@ -2534,7 +2534,7 @@
         "ru": "Знакомые Python/Git/Linux подтвердить диагностикой. Pro Git и A Tour of C++ — альтернативные справочники в каталоге, не дополнительные обязательные книги.",
         "en": "Demonstrate familiar Python/Git/Linux through a diagnostic. Pro Git and A Tour of C++ are alternative references in the catalog, not additional required books."
       },
-      "learn_hours": 12
+      "learn_hours": 10
     },
     "S1": {
       "readings": [
@@ -2556,7 +2556,7 @@
           ]
         }
       ],
-      "learn_hours": 10
+      "learn_hours": 8
     },
     "M02": {
       "readings": [
@@ -2579,7 +2579,7 @@
         "ru": "Повторять только темы, где диагностика выявила пробел. Полные MIT 18.06/18.03 не назначаются; ссылки на нужные конспекты есть в каталоге.",
         "en": "Refresh only diagnosed gaps. Full MIT 18.06/18.03 courses are not assigned; selected notes are linked in the catalog."
       },
-      "learn_hours": 23
+      "learn_hours": 19
     },
     "M04": {
       "readings": [
@@ -2591,7 +2591,7 @@
           }
         }
       ],
-      "learn_hours": 51
+      "learn_hours": 43
     },
     "M05": {
       "readings": [
@@ -2617,7 +2617,7 @@
           }
         }
       ],
-      "learn_hours": 59
+      "learn_hours": 49
     },
     "M06": {
       "readings": [
@@ -2629,7 +2629,7 @@
           }
         }
       ],
-      "learn_hours": 33
+      "learn_hours": 27
     },
     "M07": {
       "readings": [
@@ -2648,7 +2648,7 @@
           }
         }
       ],
-      "learn_hours": 32
+      "learn_hours": 26
     },
     "M08": {
       "readings": [
@@ -2660,7 +2660,7 @@
           }
         }
       ],
-      "learn_hours": 33
+      "learn_hours": 27
     },
     "D1": {
       "readings": [
@@ -2679,7 +2679,7 @@
           }
         }
       ],
-      "learn_hours": 12
+      "learn_hours": 10
     },
     "L1": {
       "readings": [
@@ -2717,7 +2717,7 @@
           }
         }
       ],
-      "learn_hours": 18
+      "learn_hours": 14
     },
     "S2": {
       "readings": [
@@ -2746,7 +2746,7 @@
           }
         }
       ],
-      "learn_hours": 11
+      "learn_hours": 8
     },
     "D2": {
       "readings": [
@@ -2765,7 +2765,7 @@
           }
         }
       ],
-      "learn_hours": 19
+      "learn_hours": 16
     },
     "M11": {
       "readings": [
@@ -2784,7 +2784,7 @@
           }
         }
       ],
-      "learn_hours": 19
+      "learn_hours": 16
     },
     "M10": {
       "readings": [
@@ -2796,7 +2796,7 @@
           }
         }
       ],
-      "learn_hours": 28
+      "learn_hours": 23
     },
     "M13": {
       "readings": [
@@ -2815,7 +2815,7 @@
           }
         }
       ],
-      "learn_hours": 25
+      "learn_hours": 20
     },
     "A1": {
       "readings": [
@@ -2856,7 +2856,7 @@
         "ru": "Перед заказом утвердить паспорт выбранного привода и редуктора в ведомости закупок. Архитектуры из литературы — ориентиры, не утверждённые комплектующие.",
         "en": "Before ordering, approve the selected motor/gearbox documentation in the purchasing record. Literature architectures are references, not qualified components."
       },
-      "learn_hours": 35
+      "learn_hours": 29
     },
     "T1": {
       "readings": [
@@ -2882,7 +2882,7 @@
           }
         }
       ],
-      "learn_hours": 27
+      "learn_hours": 22
     },
     "M19": {
       "readings": [
@@ -2901,7 +2901,7 @@
           }
         }
       ],
-      "learn_hours": 41
+      "learn_hours": 34
     },
     "M22": {
       "readings": [
@@ -2913,7 +2913,7 @@
           }
         }
       ],
-      "learn_hours": 20
+      "learn_hours": 16
     },
     "T2": {
       "readings": [
@@ -2957,7 +2957,7 @@
           }
         }
       ],
-      "learn_hours": 17
+      "learn_hours": 14
     },
     "M23": {
       "readings": [
@@ -2969,7 +2969,7 @@
           }
         }
       ],
-      "learn_hours": 25
+      "learn_hours": 20
     },
     "M16": {
       "readings": [
@@ -2994,7 +2994,7 @@
           }
         }
       ],
-      "learn_hours": 12
+      "learn_hours": 8
     },
     "A2": {
       "readings": [
@@ -3012,7 +3012,7 @@
           ]
         }
       ],
-      "learn_hours": 14
+      "learn_hours": 10
     },
     "M17": {
       "readings": [
@@ -3047,7 +3047,7 @@
         "ru": "Szeliski, 2-е издание, — дополнительное объяснение геометрии камеры в каталоге. Авторский PDF требует формы; покупка или доступ к этой книге не блокируют этап.",
         "en": "Szeliski, second edition, is an optional camera-geometry explanation in the catalog. The author PDF requires a form; purchase or access to that book does not block this stage."
       },
-      "learn_hours": 16
+      "learn_hours": 12
     },
     "M18": {
       "readings": [
@@ -3073,7 +3073,7 @@
           }
         }
       ],
-      "learn_hours": 22
+      "learn_hours": 18
     },
     "A3": {
       "readings": [
@@ -3098,7 +3098,7 @@
           ]
         }
       ],
-      "learn_hours": 11
+      "learn_hours": 8
     },
     "T3": {
       "readings": [
@@ -3117,7 +3117,7 @@
           }
         }
       ],
-      "learn_hours": 6
+      "learn_hours": 4
     },
     "M24": {
       "readings": [
@@ -3132,7 +3132,7 @@
       "learn_hours": 2
     }
   },
-  "learning_hours_total": 645,
+  "learning_hours_total": 525,
   "added_hours": 0,
   "original_roadmap_entries": 144,
   "original_roadmap_unique_urls": 133,

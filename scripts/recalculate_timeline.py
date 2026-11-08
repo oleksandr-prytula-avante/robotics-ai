@@ -9,10 +9,10 @@ from datetime import date, timedelta
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-START = date(2026, 12, 1)
-DEADLINE = date(2027, 12, 31)
+START = date(2028, 1, 2)
+DEADLINE = date(2028, 12, 31)
 DAILY_MINUTES = 500
-DAYS_OFF = {date(2026, 12, 31), date(2027, 1, 1), date(2027, 12, 31)}
+DAYS_OFF = {date(2028, 12, 31)}
 
 
 def duration(minutes):
@@ -94,7 +94,7 @@ def main():
         assert used[part['date']] <= DAILY_MINUTES
 
     report = {
-        'status': 'verified_active_calendar', 'reviewed_on': '2026-10-19',
+        'status': 'verified_active_calendar', 'reviewed_on': '2026-11-08',
         'source': 'estimate.json', 'verified_calendar': 'schedule.json',
         'source_version': source['version'],
         'start': str(START), 'deadline': str(DEADLINE), 'weekly_hours': 50,
@@ -105,11 +105,11 @@ def main():
         'category_minutes': categories, 'work_finish': core['finish'],
         'buffer_minutes': buffer_minutes,
         'assumptions': [
-            'Equal 8 h 20 min workdays; Sunday off; 31 Dec 2026, 1 Jan 2027 and 31 Dec 2027 off; other holidays and vacation not deducted.',
-            'Includes 60 h of introductory contact dynamics, planar force QP and robust control labs; existing task order is preserved.',
+            'Equal 8 h 20 min workdays; Sunday off; 31 Dec 2028 off; other holidays and vacation not deducted.',
+            'Includes all practical and verification work; 120 h of targeted learning are removed through diagnostics and demonstrated-skill credit; existing task order is preserved.',
             'Selected reading and course study are already included in learning hours.',
             'Dates assume materials are ready and acceptance gates pass; delivery and unattended printing are elapsed time, not active work.',
-            'One shared deadline buffer; reserve is not additional required study.',
+            'No deadline buffer remains after fitting the compressed required programme to 2028.',
         ],
         'months': [{'month': month, 'capacity_minutes': minutes,
                     'allocated_minutes': allocated[month],
@@ -119,19 +119,19 @@ def main():
     }
     (ROOT / 'timeline-review.json').write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n')
     lines = [
-        '# Пересчёт программы от 1 декабря 2026', '',
-        'Расчёт проверен 19.10.2026. Отчёт соответствует текущему календарю schedule.json.', '',
+        '# Пересчёт программы от 2 января 2028', '',
+        'Расчёт проверен 08.11.2026. Отчёт соответствует текущему календарю schedule.json.', '',
         '**50 часов в неделю:** понедельник–суббота по 8 часов 20 минут; воскресенье — выходной. '
-        '31.12.2026, 01.01.2027 и 31.12.2027 — выходные; прочие праздники и отпуск не вычтены. До 31.12.2027 включительно — '
+        '31.12.2028 — выходной; прочие праздники и отпуск не вычтены. До 31.12.2028 включительно — '
         f'{report["workday_count"]} рабочих дней, {duration(report["capacity_minutes"])} доступного времени.', '',
         f'Обязательная программа: **{duration(core["total_minutes"])}** — изучение '
         f'{duration(categories["learn"])}, практика {duration(categories["build"])}, '
         f'проверка {duration(categories["verify"])}. Чтение и выбранные уроки курсов входят '
-        'в эти часы. Добавлены 60 ч вводных практикумов: Contact Dynamics — 16 ч, Force Distribution Optimization — 24 ч, Robust Control — 20 ч. Порядок прежних заданий сохранён.', '',
+        'в эти часы. 120 ч чтения и целевого изучения сняты диагностикой и зачётом подтверждённых навыков; практика и проверка сохранены. Порядок прежних заданий сохранён.', '',
         f'**Плановое завершение — {date.fromisoformat(core["finish"]):%d.%m.%Y}.** '
-        f'До 31.12.2027 остаётся **{duration(buffer_minutes)}** общего запаса на задержки и переделки '
+        f'До 31.12.2028 остаётся **{duration(buffer_minutes)}** общего запаса на задержки и переделки '
         f'({buffer_minutes / core["total_minutes"]:.1%} обязательной работы). '
-        'Запас используется по необходимости и не отодвигает плановый финиш автоматически. '
+        'Запаса нет: любой пропуск или переделка отодвигает плановый финиш. '
         'R1–R4 обозначают направления риска без отдельных часов; их нельзя прибавлять к общему запасу.', '',
         'Даты предполагают прохождение приёмок и наличие деталей. Доставка, печать без участия '
         'человека и охлаждение занимают календарное время; их длительность не подтверждена. '

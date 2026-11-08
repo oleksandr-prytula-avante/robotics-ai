@@ -1,11 +1,11 @@
 {
   "status": "verified_active_calendar",
-  "reviewed_on": "2026-10-19",
+  "reviewed_on": "2026-11-08",
   "source": "estimate.json",
   "verified_calendar": "schedule.json",
-  "source_version": "4.4",
-  "start": "2026-12-01",
-  "deadline": "2027-12-31",
+  "source_version": "4.5",
+  "start": "2028-01-02",
+  "deadline": "2028-12-31",
   "weekly_hours": 50,
   "workdays": [
     "Monday",
@@ -16,111 +16,103 @@
     "Saturday"
   ],
   "excluded_dates": [
-    "2026-12-31",
-    "2027-01-01",
-    "2027-12-31"
+    "2028-12-31"
   ],
   "daily_minutes": 500,
-  "workday_count": 337,
-  "capacity_minutes": 168500,
-  "base_hours": 2720,
+  "workday_count": 312,
+  "capacity_minutes": 156000,
+  "base_hours": 2600,
   "category_minutes": {
-    "learn": 38700,
+    "learn": 31500,
     "build": 78240,
     "verify": 46260
   },
-  "work_finish": "2027-12-18",
-  "buffer_minutes": 5300,
+  "work_finish": "2028-12-30",
+  "buffer_minutes": 0,
   "assumptions": [
-    "Equal 8 h 20 min workdays; Sunday off; 31 Dec 2026, 1 Jan 2027 and 31 Dec 2027 off; other holidays and vacation not deducted.",
-    "Includes 60 h of introductory contact dynamics, planar force QP and robust control labs; existing task order is preserved.",
+    "Equal 8 h 20 min workdays; Sunday off; 31 Dec 2028 off; other holidays and vacation not deducted.",
+    "Includes all practical and verification work; 120 h of targeted learning are removed through diagnostics and demonstrated-skill credit; existing task order is preserved.",
     "Selected reading and course study are already included in learning hours.",
     "Dates assume materials are ready and acceptance gates pass; delivery and unattended printing are elapsed time, not active work.",
-    "One shared deadline buffer; reserve is not additional required study."
+    "No deadline buffer remains after fitting the compressed required programme to 2028."
   ],
   "months": [
     {
-      "month": "2026-12",
-      "capacity_minutes": 13000,
-      "allocated_minutes": 13000,
-      "buffer_minutes": 0
-    },
-    {
-      "month": "2027-01",
+      "month": "2028-01",
       "capacity_minutes": 12500,
       "allocated_minutes": 12500,
       "buffer_minutes": 0
     },
     {
-      "month": "2027-02",
-      "capacity_minutes": 12000,
-      "allocated_minutes": 12000,
+      "month": "2028-02",
+      "capacity_minutes": 12500,
+      "allocated_minutes": 12500,
       "buffer_minutes": 0
     },
     {
-      "month": "2027-03",
+      "month": "2028-03",
       "capacity_minutes": 13500,
       "allocated_minutes": 13500,
       "buffer_minutes": 0
     },
     {
-      "month": "2027-04",
-      "capacity_minutes": 13000,
-      "allocated_minutes": 13000,
+      "month": "2028-04",
+      "capacity_minutes": 12500,
+      "allocated_minutes": 12500,
       "buffer_minutes": 0
     },
     {
-      "month": "2027-05",
-      "capacity_minutes": 13000,
-      "allocated_minutes": 13000,
-      "buffer_minutes": 0
-    },
-    {
-      "month": "2027-06",
-      "capacity_minutes": 13000,
-      "allocated_minutes": 13000,
-      "buffer_minutes": 0
-    },
-    {
-      "month": "2027-07",
+      "month": "2028-05",
       "capacity_minutes": 13500,
       "allocated_minutes": 13500,
       "buffer_minutes": 0
     },
     {
-      "month": "2027-08",
+      "month": "2028-06",
       "capacity_minutes": 13000,
       "allocated_minutes": 13000,
       "buffer_minutes": 0
     },
     {
-      "month": "2027-09",
+      "month": "2028-07",
       "capacity_minutes": 13000,
       "allocated_minutes": 13000,
       "buffer_minutes": 0
     },
     {
-      "month": "2027-10",
+      "month": "2028-08",
+      "capacity_minutes": 13500,
+      "allocated_minutes": 13500,
+      "buffer_minutes": 0
+    },
+    {
+      "month": "2028-09",
       "capacity_minutes": 13000,
       "allocated_minutes": 13000,
       "buffer_minutes": 0
     },
     {
-      "month": "2027-11",
+      "month": "2028-10",
       "capacity_minutes": 13000,
       "allocated_minutes": 13000,
       "buffer_minutes": 0
     },
     {
-      "month": "2027-12",
+      "month": "2028-11",
       "capacity_minutes": 13000,
-      "allocated_minutes": 7700,
-      "buffer_minutes": 5300
+      "allocated_minutes": 13000,
+      "buffer_minutes": 0
+    },
+    {
+      "month": "2028-12",
+      "capacity_minutes": 13000,
+      "allocated_minutes": 13000,
+      "buffer_minutes": 0
     }
   ],
   "core": {
-    "total_minutes": 163200,
-    "finish": "2027-12-18",
+    "total_minutes": 156000,
+    "finish": "2028-12-30",
     "stages": [
       {
         "id": "M01",
@@ -129,9 +121,9 @@
           "en": "One working C++/Python environment"
         },
         "track": "core",
-        "hours": 40,
-        "start": "2026-12-01",
-        "end": "2026-12-05"
+        "hours": 38,
+        "start": "2028-01-03",
+        "end": "2028-01-07"
       },
       {
         "id": "S1",
@@ -140,9 +132,9 @@
           "en": "Early ROS with a simple mock joint"
         },
         "track": "core",
-        "hours": 30,
-        "start": "2026-12-05",
-        "end": "2026-12-10"
+        "hours": 28,
+        "start": "2028-01-07",
+        "end": "2028-01-11"
       },
       {
         "id": "M02",
@@ -151,9 +143,9 @@
           "en": "Mathematics for measurement and motion"
         },
         "track": "core",
-        "hours": 72,
-        "start": "2026-12-10",
-        "end": "2026-12-21"
+        "hours": 68,
+        "start": "2028-01-11",
+        "end": "2028-01-21"
       },
       {
         "id": "M04",
@@ -162,9 +154,9 @@
           "en": "Electronics, measurement and signals"
         },
         "track": "core",
-        "hours": 110,
-        "start": "2026-12-21",
-        "end": "2027-01-07"
+        "hours": 102,
+        "start": "2028-01-21",
+        "end": "2028-02-04"
       },
       {
         "id": "M05",
@@ -173,9 +165,9 @@
           "en": "CAD, structures, FDM and a passive leg"
         },
         "track": "core",
-        "hours": 145,
-        "start": "2027-01-07",
-        "end": "2027-01-27"
+        "hours": 135,
+        "start": "2028-02-04",
+        "end": "2028-02-23"
       },
       {
         "id": "M06",
@@ -184,9 +176,9 @@
           "en": "Embedded controller and physical interfaces"
         },
         "track": "core",
-        "hours": 110,
-        "start": "2027-01-27",
-        "end": "2027-02-11"
+        "hours": 104,
+        "start": "2028-02-23",
+        "end": "2028-03-08"
       },
       {
         "id": "M07",
@@ -195,9 +187,9 @@
           "en": "One actuator: rig, control and identification"
         },
         "track": "core",
-        "hours": 100,
-        "start": "2027-02-11",
-        "end": "2027-02-25"
+        "hours": 94,
+        "start": "2028-03-09",
+        "end": "2028-03-22"
       },
       {
         "id": "M08",
@@ -206,9 +198,9 @@
           "en": "Working leg kinematics and manipulator foundations"
         },
         "track": "core",
-        "hours": 108,
-        "start": "2027-02-25",
-        "end": "2027-03-12"
+        "hours": 102,
+        "start": "2028-03-22",
+        "end": "2028-04-05"
       },
       {
         "id": "D1",
@@ -217,9 +209,9 @@
           "en": "Statics and loads before the first leg"
         },
         "track": "core",
-        "hours": 40,
-        "start": "2027-03-12",
-        "end": "2027-03-18"
+        "hours": 38,
+        "start": "2028-04-05",
+        "end": "2028-04-11"
       },
       {
         "id": "L1",
@@ -229,8 +221,8 @@
         },
         "track": "hexapod",
         "hours": 70,
-        "start": "2027-03-18",
-        "end": "2027-03-27"
+        "start": "2028-04-11",
+        "end": "2028-04-20"
       },
       {
         "id": "G1",
@@ -240,8 +232,8 @@
         },
         "track": "gate",
         "hours": 10,
-        "start": "2027-03-29",
-        "end": "2027-03-30"
+        "start": "2028-04-20",
+        "end": "2028-04-21"
       },
       {
         "id": "M03",
@@ -250,9 +242,9 @@
           "en": "Measurements, calibration and credible conclusions"
         },
         "track": "core",
-        "hours": 56,
-        "start": "2027-03-30",
-        "end": "2027-04-06"
+        "hours": 52,
+        "start": "2028-04-21",
+        "end": "2028-04-28"
       },
       {
         "id": "S2",
@@ -261,9 +253,9 @@
           "en": "ROS: model, real interfaces and data"
         },
         "track": "core",
-        "hours": 40,
-        "start": "2027-04-06",
-        "end": "2027-04-12"
+        "hours": 37,
+        "start": "2028-04-28",
+        "end": "2028-05-04"
       },
       {
         "id": "D2",
@@ -272,9 +264,9 @@
           "en": "Dynamics and validation on the existing rig"
         },
         "track": "core",
-        "hours": 58,
-        "start": "2027-04-12",
-        "end": "2027-04-20"
+        "hours": 55,
+        "start": "2028-05-04",
+        "end": "2028-05-11"
       },
       {
         "id": "M11",
@@ -283,9 +275,9 @@
           "en": "Practical IMU filtering and observability"
         },
         "track": "core",
-        "hours": 60,
-        "start": "2027-04-20",
-        "end": "2027-04-28"
+        "hours": 57,
+        "start": "2028-05-11",
+        "end": "2028-05-19"
       },
       {
         "id": "M10",
@@ -294,9 +286,9 @@
           "en": "Actuator and body-pose control"
         },
         "track": "core",
-        "hours": 100,
-        "start": "2027-04-28",
-        "end": "2027-05-12"
+        "hours": 95,
+        "start": "2028-05-19",
+        "end": "2028-06-02"
       },
       {
         "id": "M13",
@@ -305,9 +297,9 @@
           "en": "One leg: model, MCU HIL and physical measurements"
         },
         "track": "core",
-        "hours": 86,
-        "start": "2027-05-12",
-        "end": "2027-05-25"
+        "hours": 81,
+        "start": "2028-06-02",
+        "end": "2028-06-13"
       },
       {
         "id": "A1",
@@ -316,9 +308,9 @@
           "en": "Loaded joint, full-arm CAD and gripper"
         },
         "track": "arm",
-        "hours": 170,
-        "start": "2027-05-25",
-        "end": "2027-06-17"
+        "hours": 164,
+        "start": "2028-06-13",
+        "end": "2028-07-06"
       },
       {
         "id": "T1",
@@ -327,9 +319,9 @@
           "en": "Tail: passive mechanics and transmission"
         },
         "track": "tail",
-        "hours": 125,
-        "start": "2027-06-17",
-        "end": "2027-07-05"
+        "hours": 120,
+        "start": "2028-07-06",
+        "end": "2028-07-22"
       },
       {
         "id": "M19",
@@ -338,9 +330,9 @@
           "en": "Slow gait, contact and stability in simulation"
         },
         "track": "hexapod",
-        "hours": 160,
-        "start": "2027-07-05",
-        "end": "2027-07-27"
+        "hours": 153,
+        "start": "2028-07-24",
+        "end": "2028-08-14"
       },
       {
         "id": "M22",
@@ -349,9 +341,9 @@
           "en": "Four legs: first complete physical platform"
         },
         "track": "hexapod",
-        "hours": 155,
-        "start": "2027-07-27",
-        "end": "2027-08-18"
+        "hours": 151,
+        "start": "2028-08-14",
+        "end": "2028-09-04"
       },
       {
         "id": "G2",
@@ -361,8 +353,8 @@
         },
         "track": "gate",
         "hours": 10,
-        "start": "2027-08-18",
-        "end": "2027-08-19"
+        "start": "2028-09-04",
+        "end": "2028-09-05"
       },
       {
         "id": "T2",
@@ -371,9 +363,9 @@
           "en": "Tail: three active sections and calibration"
         },
         "track": "tail",
-        "hours": 145,
-        "start": "2027-08-19",
-        "end": "2027-09-08"
+        "hours": 142,
+        "start": "2028-09-05",
+        "end": "2028-09-25"
       },
       {
         "id": "M23",
@@ -382,9 +374,9 @@
           "en": "Hexapod expansion and measured operating envelope"
         },
         "track": "hexapod",
-        "hours": 155,
-        "start": "2027-09-09",
-        "end": "2027-09-30"
+        "hours": 150,
+        "start": "2028-09-25",
+        "end": "2028-10-16"
       },
       {
         "id": "M16",
@@ -393,9 +385,9 @@
           "en": "MoveIt and bounded trajectories for the custom arm"
         },
         "track": "core",
-        "hours": 40,
-        "start": "2027-09-30",
-        "end": "2027-10-06"
+        "hours": 36,
+        "start": "2028-10-16",
+        "end": "2028-10-21"
       },
       {
         "id": "A2",
@@ -404,9 +396,9 @@
           "en": "Physical assembly and calibration"
         },
         "track": "arm",
-        "hours": 135,
-        "start": "2027-10-06",
-        "end": "2027-10-25"
+        "hours": 131,
+        "start": "2028-10-21",
+        "end": "2028-11-08"
       },
       {
         "id": "M17",
@@ -416,8 +408,8 @@
         },
         "track": "core",
         "hours": 25,
-        "start": "2027-10-25",
-        "end": "2027-10-28"
+        "start": "2028-11-08",
+        "end": "2028-11-11"
       },
       {
         "id": "M14",
@@ -426,9 +418,9 @@
           "en": "Arm vision: measurable geometry and a classical baseline"
         },
         "track": "core",
-        "hours": 55,
-        "start": "2027-10-28",
-        "end": "2027-11-05"
+        "hours": 51,
+        "start": "2028-11-11",
+        "end": "2028-11-18"
       },
       {
         "id": "M18",
@@ -437,9 +429,9 @@
           "en": "One useful ML experiment for the arm"
         },
         "track": "core",
-        "hours": 70,
-        "start": "2027-11-05",
-        "end": "2027-11-15"
+        "hours": 66,
+        "start": "2028-11-18",
+        "end": "2028-11-28"
       },
       {
         "id": "A3",
@@ -448,9 +440,9 @@
           "en": "Physical execution and validated release"
         },
         "track": "arm",
-        "hours": 120,
-        "start": "2027-11-15",
-        "end": "2027-12-01"
+        "hours": 117,
+        "start": "2028-11-28",
+        "end": "2028-12-14"
       },
       {
         "id": "G3",
@@ -460,8 +452,8 @@
         },
         "track": "gate",
         "hours": 10,
-        "start": "2027-12-02",
-        "end": "2027-12-03"
+        "start": "2028-12-14",
+        "end": "2028-12-16"
       },
       {
         "id": "T3",
@@ -470,9 +462,9 @@
           "en": "Tail: motions, endurance and release"
         },
         "track": "tail",
-        "hours": 70,
-        "start": "2027-12-03",
-        "end": "2027-12-13"
+        "hours": 68,
+        "start": "2028-12-16",
+        "end": "2028-12-26"
       },
       {
         "id": "M24",
@@ -482,8 +474,8 @@
         },
         "track": "core",
         "hours": 30,
-        "start": "2027-12-13",
-        "end": "2027-12-17"
+        "start": "2028-12-26",
+        "end": "2028-12-29"
       },
       {
         "id": "G4",
@@ -493,3124 +485,3033 @@
         },
         "track": "gate",
         "hours": 10,
-        "start": "2027-12-17",
-        "end": "2027-12-18"
+        "start": "2028-12-29",
+        "end": "2028-12-30"
       }
     ],
     "segments": [
       {
-        "date": "2026-12-01",
+        "date": "2028-01-03",
         "stage": "M01",
         "task_index": 0,
         "minutes": 500,
         "day_offset_minutes": 0
       },
       {
-        "date": "2026-12-02",
+        "date": "2028-01-04",
         "stage": "M01",
         "task_index": 0,
         "minutes": 340,
         "day_offset_minutes": 0
       },
       {
-        "date": "2026-12-02",
+        "date": "2028-01-04",
         "stage": "M01",
         "task_index": 1,
         "minutes": 160,
         "day_offset_minutes": 340
       },
       {
-        "date": "2026-12-03",
+        "date": "2028-01-05",
         "stage": "M01",
         "task_index": 1,
         "minutes": 500,
         "day_offset_minutes": 0
       },
       {
-        "date": "2026-12-04",
+        "date": "2028-01-06",
         "stage": "M01",
         "task_index": 1,
-        "minutes": 180,
+        "minutes": 120,
         "day_offset_minutes": 0
       },
       {
-        "date": "2026-12-04",
+        "date": "2028-01-06",
         "stage": "M01",
         "task_index": 2,
-        "minutes": 320,
-        "day_offset_minutes": 180
+        "minutes": 300,
+        "day_offset_minutes": 120
       },
       {
-        "date": "2026-12-05",
-        "stage": "M01",
-        "task_index": 2,
-        "minutes": 40,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2026-12-05",
+        "date": "2028-01-06",
         "stage": "M01",
         "task_index": 3,
-        "minutes": 360,
-        "day_offset_minutes": 40
+        "minutes": 80,
+        "day_offset_minutes": 420
       },
       {
-        "date": "2026-12-05",
-        "stage": "S1",
-        "task_index": 0,
-        "minutes": 100,
-        "day_offset_minutes": 400
-      },
-      {
-        "date": "2026-12-07",
-        "stage": "S1",
-        "task_index": 0,
-        "minutes": 500,
+        "date": "2028-01-07",
+        "stage": "M01",
+        "task_index": 3,
+        "minutes": 280,
         "day_offset_minutes": 0
       },
       {
-        "date": "2026-12-08",
+        "date": "2028-01-07",
+        "stage": "S1",
+        "task_index": 0,
+        "minutes": 220,
+        "day_offset_minutes": 280
+      },
+      {
+        "date": "2028-01-08",
+        "stage": "S1",
+        "task_index": 0,
+        "minutes": 320,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-01-08",
         "stage": "S1",
         "task_index": 1,
-        "minutes": 240,
-        "day_offset_minutes": 0
+        "minutes": 180,
+        "day_offset_minutes": 320
       },
       {
-        "date": "2026-12-08",
+        "date": "2028-01-10",
         "stage": "S1",
-        "task_index": 2,
-        "minutes": 260,
-        "day_offset_minutes": 240
-      },
-      {
-        "date": "2026-12-09",
-        "stage": "S1",
-        "task_index": 2,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2026-12-10",
-        "stage": "S1",
-        "task_index": 2,
-        "minutes": 200,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2026-12-10",
-        "stage": "M02",
-        "task_index": 0,
-        "minutes": 300,
-        "day_offset_minutes": 200
-      },
-      {
-        "date": "2026-12-11",
-        "stage": "M02",
-        "task_index": 0,
+        "task_index": 1,
         "minutes": 60,
         "day_offset_minutes": 0
       },
       {
-        "date": "2026-12-11",
-        "stage": "M02",
-        "task_index": 1,
+        "date": "2028-01-10",
+        "stage": "S1",
+        "task_index": 2,
         "minutes": 440,
         "day_offset_minutes": 60
       },
       {
-        "date": "2026-12-12",
-        "stage": "M02",
-        "task_index": 1,
-        "minutes": 400,
+        "date": "2028-01-11",
+        "stage": "S1",
+        "task_index": 2,
+        "minutes": 460,
         "day_offset_minutes": 0
       },
       {
-        "date": "2026-12-12",
+        "date": "2028-01-11",
         "stage": "M02",
-        "task_index": 2,
-        "minutes": 100,
-        "day_offset_minutes": 400
+        "task_index": 0,
+        "minutes": 40,
+        "day_offset_minutes": 460
       },
       {
-        "date": "2026-12-14",
+        "date": "2028-01-12",
+        "stage": "M02",
+        "task_index": 0,
+        "minutes": 320,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-01-12",
+        "stage": "M02",
+        "task_index": 1,
+        "minutes": 180,
+        "day_offset_minutes": 320
+      },
+      {
+        "date": "2028-01-13",
+        "stage": "M02",
+        "task_index": 1,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-01-14",
+        "stage": "M02",
+        "task_index": 1,
+        "minutes": 100,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-01-14",
+        "stage": "M02",
+        "task_index": 2,
+        "minutes": 400,
+        "day_offset_minutes": 100
+      },
+      {
+        "date": "2028-01-15",
         "stage": "M02",
         "task_index": 2,
         "minutes": 500,
         "day_offset_minutes": 0
       },
       {
-        "date": "2026-12-15",
+        "date": "2028-01-17",
         "stage": "M02",
+        "task_index": 2,
+        "minutes": 120,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-01-17",
+        "stage": "M02",
+        "task_index": 3,
+        "minutes": 380,
+        "day_offset_minutes": 120
+      },
+      {
+        "date": "2028-01-18",
+        "stage": "M02",
+        "task_index": 3,
+        "minutes": 400,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-01-18",
+        "stage": "M02",
+        "task_index": 4,
+        "minutes": 100,
+        "day_offset_minutes": 400
+      },
+      {
+        "date": "2028-01-19",
+        "stage": "M02",
+        "task_index": 4,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-01-20",
+        "stage": "M02",
+        "task_index": 4,
+        "minutes": 180,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-01-20",
+        "stage": "M02",
+        "task_index": 5,
+        "minutes": 320,
+        "day_offset_minutes": 180
+      },
+      {
+        "date": "2028-01-21",
+        "stage": "M02",
+        "task_index": 5,
+        "minutes": 40,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-01-21",
+        "stage": "M04",
+        "task_index": 0,
+        "minutes": 460,
+        "day_offset_minutes": 40
+      },
+      {
+        "date": "2028-01-22",
+        "stage": "M04",
+        "task_index": 0,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-01-24",
+        "stage": "M04",
+        "task_index": 0,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-01-25",
+        "stage": "M04",
+        "task_index": 0,
+        "minutes": 460,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-01-25",
+        "stage": "M04",
+        "task_index": 1,
+        "minutes": 40,
+        "day_offset_minutes": 460
+      },
+      {
+        "date": "2028-01-26",
+        "stage": "M04",
+        "task_index": 1,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-01-27",
+        "stage": "M04",
+        "task_index": 1,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-01-28",
+        "stage": "M04",
+        "task_index": 1,
+        "minutes": 460,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-01-28",
+        "stage": "M04",
+        "task_index": 2,
+        "minutes": 40,
+        "day_offset_minutes": 460
+      },
+      {
+        "date": "2028-01-29",
+        "stage": "M04",
+        "task_index": 2,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-01-31",
+        "stage": "M04",
+        "task_index": 2,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-02-01",
+        "stage": "M04",
+        "task_index": 2,
+        "minutes": 340,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-02-01",
+        "stage": "M04",
+        "task_index": 3,
+        "minutes": 160,
+        "day_offset_minutes": 340
+      },
+      {
+        "date": "2028-02-02",
+        "stage": "M04",
+        "task_index": 3,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-02-03",
+        "stage": "M04",
+        "task_index": 3,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-02-04",
+        "stage": "M04",
+        "task_index": 3,
+        "minutes": 160,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-02-04",
+        "stage": "M05",
+        "task_index": 0,
+        "minutes": 340,
+        "day_offset_minutes": 160
+      },
+      {
+        "date": "2028-02-05",
+        "stage": "M05",
+        "task_index": 0,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-02-07",
+        "stage": "M05",
+        "task_index": 0,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-02-08",
+        "stage": "M05",
+        "task_index": 0,
+        "minutes": 280,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-02-08",
+        "stage": "M05",
+        "task_index": 1,
+        "minutes": 220,
+        "day_offset_minutes": 280
+      },
+      {
+        "date": "2028-02-09",
+        "stage": "M05",
+        "task_index": 1,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-02-10",
+        "stage": "M05",
+        "task_index": 1,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-02-11",
+        "stage": "M05",
+        "task_index": 1,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-02-12",
+        "stage": "M05",
+        "task_index": 1,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-02-14",
+        "stage": "M05",
+        "task_index": 1,
+        "minutes": 60,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-02-14",
+        "stage": "M05",
+        "task_index": 2,
+        "minutes": 440,
+        "day_offset_minutes": 60
+      },
+      {
+        "date": "2028-02-15",
+        "stage": "M05",
+        "task_index": 2,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-02-16",
+        "stage": "M05",
+        "task_index": 2,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-02-17",
+        "stage": "M05",
+        "task_index": 2,
+        "minutes": 240,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-02-17",
+        "stage": "M05",
+        "task_index": 3,
+        "minutes": 260,
+        "day_offset_minutes": 240
+      },
+      {
+        "date": "2028-02-18",
+        "stage": "M05",
+        "task_index": 3,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-02-19",
+        "stage": "M05",
+        "task_index": 3,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-02-21",
+        "stage": "M05",
+        "task_index": 3,
+        "minutes": 360,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-02-21",
+        "stage": "M05",
+        "task_index": 4,
+        "minutes": 140,
+        "day_offset_minutes": 360
+      },
+      {
+        "date": "2028-02-22",
+        "stage": "M05",
+        "task_index": 4,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-02-23",
+        "stage": "M05",
+        "task_index": 4,
+        "minutes": 260,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-02-23",
+        "stage": "M06",
+        "task_index": 0,
+        "minutes": 240,
+        "day_offset_minutes": 260
+      },
+      {
+        "date": "2028-02-24",
+        "stage": "M06",
+        "task_index": 0,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-02-25",
+        "stage": "M06",
+        "task_index": 0,
+        "minutes": 280,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-02-25",
+        "stage": "M06",
+        "task_index": 1,
+        "minutes": 220,
+        "day_offset_minutes": 280
+      },
+      {
+        "date": "2028-02-26",
+        "stage": "M06",
+        "task_index": 1,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-02-28",
+        "stage": "M06",
+        "task_index": 1,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-02-29",
+        "stage": "M06",
+        "task_index": 1,
+        "minutes": 220,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-02-29",
+        "stage": "M06",
+        "task_index": 2,
+        "minutes": 280,
+        "day_offset_minutes": 220
+      },
+      {
+        "date": "2028-03-01",
+        "stage": "M06",
+        "task_index": 2,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-03-02",
+        "stage": "M06",
+        "task_index": 2,
+        "minutes": 240,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-03-02",
+        "stage": "M06",
+        "task_index": 3,
+        "minutes": 260,
+        "day_offset_minutes": 240
+      },
+      {
+        "date": "2028-03-03",
+        "stage": "M06",
+        "task_index": 3,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-03-04",
+        "stage": "M06",
+        "task_index": 3,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-03-06",
+        "stage": "M06",
+        "task_index": 4,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-03-07",
+        "stage": "M06",
+        "task_index": 4,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-03-08",
+        "stage": "M06",
+        "task_index": 4,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-03-09",
+        "stage": "M07",
+        "task_index": 0,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-03-10",
+        "stage": "M07",
+        "task_index": 0,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-03-11",
+        "stage": "M07",
+        "task_index": 0,
+        "minutes": 380,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-03-11",
+        "stage": "M07",
+        "task_index": 1,
+        "minutes": 120,
+        "day_offset_minutes": 380
+      },
+      {
+        "date": "2028-03-13",
+        "stage": "M07",
+        "task_index": 1,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-03-14",
+        "stage": "M07",
+        "task_index": 1,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-03-15",
+        "stage": "M07",
+        "task_index": 1,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-03-16",
+        "stage": "M07",
+        "task_index": 1,
+        "minutes": 60,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-03-16",
+        "stage": "M07",
+        "task_index": 2,
+        "minutes": 440,
+        "day_offset_minutes": 60
+      },
+      {
+        "date": "2028-03-17",
+        "stage": "M07",
+        "task_index": 2,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-03-18",
+        "stage": "M07",
+        "task_index": 2,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-03-20",
+        "stage": "M07",
+        "task_index": 3,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-03-21",
+        "stage": "M07",
+        "task_index": 3,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-03-22",
+        "stage": "M07",
+        "task_index": 3,
+        "minutes": 140,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-03-22",
+        "stage": "M08",
+        "task_index": 0,
+        "minutes": 360,
+        "day_offset_minutes": 140
+      },
+      {
+        "date": "2028-03-23",
+        "stage": "M08",
+        "task_index": 0,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-03-24",
+        "stage": "M08",
+        "task_index": 0,
+        "minutes": 160,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-03-24",
+        "stage": "M08",
+        "task_index": 1,
+        "minutes": 340,
+        "day_offset_minutes": 160
+      },
+      {
+        "date": "2028-03-25",
+        "stage": "M08",
+        "task_index": 1,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-03-27",
+        "stage": "M08",
+        "task_index": 1,
+        "minutes": 300,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-03-27",
+        "stage": "M08",
+        "task_index": 2,
+        "minutes": 200,
+        "day_offset_minutes": 300
+      },
+      {
+        "date": "2028-03-28",
+        "stage": "M08",
+        "task_index": 2,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-03-29",
+        "stage": "M08",
+        "task_index": 2,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-03-30",
+        "stage": "M08",
+        "task_index": 2,
+        "minutes": 60,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-03-30",
+        "stage": "M08",
+        "task_index": 3,
+        "minutes": 440,
+        "day_offset_minutes": 60
+      },
+      {
+        "date": "2028-03-31",
+        "stage": "M08",
+        "task_index": 3,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-04-01",
+        "stage": "M08",
+        "task_index": 3,
+        "minutes": 200,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-04-01",
+        "stage": "M08",
+        "task_index": 4,
+        "minutes": 300,
+        "day_offset_minutes": 200
+      },
+      {
+        "date": "2028-04-03",
+        "stage": "M08",
+        "task_index": 4,
+        "minutes": 480,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-04-03",
+        "stage": "M08",
+        "task_index": 5,
+        "minutes": 20,
+        "day_offset_minutes": 480
+      },
+      {
+        "date": "2028-04-04",
+        "stage": "M08",
+        "task_index": 5,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-04-05",
+        "stage": "M08",
+        "task_index": 5,
+        "minutes": 260,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-04-05",
+        "stage": "D1",
+        "task_index": 0,
+        "minutes": 240,
+        "day_offset_minutes": 260
+      },
+      {
+        "date": "2028-04-06",
+        "stage": "D1",
+        "task_index": 0,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-04-07",
+        "stage": "D1",
+        "task_index": 0,
+        "minutes": 400,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-04-07",
+        "stage": "D1",
+        "task_index": 1,
+        "minutes": 100,
+        "day_offset_minutes": 400
+      },
+      {
+        "date": "2028-04-08",
+        "stage": "D1",
+        "task_index": 1,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-04-10",
+        "stage": "D1",
+        "task_index": 1,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-04-11",
+        "stage": "D1",
+        "task_index": 1,
+        "minutes": 40,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-04-11",
+        "stage": "L1",
+        "task_index": 0,
+        "minutes": 460,
+        "day_offset_minutes": 40
+      },
+      {
+        "date": "2028-04-12",
+        "stage": "L1",
+        "task_index": 0,
+        "minutes": 140,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-04-12",
+        "stage": "L1",
+        "task_index": 1,
+        "minutes": 360,
+        "day_offset_minutes": 140
+      },
+      {
+        "date": "2028-04-13",
+        "stage": "L1",
+        "task_index": 1,
+        "minutes": 360,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-04-13",
+        "stage": "L1",
+        "task_index": 2,
+        "minutes": 140,
+        "day_offset_minutes": 360
+      },
+      {
+        "date": "2028-04-14",
+        "stage": "L1",
+        "task_index": 2,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-04-15",
+        "stage": "L1",
+        "task_index": 2,
+        "minutes": 80,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-04-15",
+        "stage": "L1",
+        "task_index": 3,
+        "minutes": 420,
+        "day_offset_minutes": 80
+      },
+      {
+        "date": "2028-04-17",
+        "stage": "L1",
+        "task_index": 3,
+        "minutes": 420,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-04-17",
+        "stage": "L1",
+        "task_index": 4,
+        "minutes": 80,
+        "day_offset_minutes": 420
+      },
+      {
+        "date": "2028-04-18",
+        "stage": "L1",
+        "task_index": 4,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-04-19",
+        "stage": "L1",
+        "task_index": 4,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-04-20",
+        "stage": "L1",
+        "task_index": 4,
+        "minutes": 240,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-04-20",
+        "stage": "G1",
+        "task_index": 0,
+        "minutes": 260,
+        "day_offset_minutes": 240
+      },
+      {
+        "date": "2028-04-21",
+        "stage": "G1",
+        "task_index": 0,
+        "minutes": 340,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-04-21",
+        "stage": "M03",
+        "task_index": 0,
+        "minutes": 160,
+        "day_offset_minutes": 340
+      },
+      {
+        "date": "2028-04-22",
+        "stage": "M03",
+        "task_index": 0,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-04-24",
+        "stage": "M03",
+        "task_index": 1,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-04-25",
+        "stage": "M03",
+        "task_index": 1,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-04-26",
+        "stage": "M03",
+        "task_index": 1,
+        "minutes": 20,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-04-26",
+        "stage": "M03",
+        "task_index": 2,
+        "minutes": 480,
+        "day_offset_minutes": 20
+      },
+      {
+        "date": "2028-04-27",
+        "stage": "M03",
+        "task_index": 2,
+        "minutes": 300,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-04-27",
+        "stage": "M03",
+        "task_index": 3,
+        "minutes": 200,
+        "day_offset_minutes": 300
+      },
+      {
+        "date": "2028-04-28",
+        "stage": "M03",
+        "task_index": 3,
+        "minutes": 460,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-04-28",
+        "stage": "S2",
+        "task_index": 0,
+        "minutes": 40,
+        "day_offset_minutes": 460
+      },
+      {
+        "date": "2028-04-29",
+        "stage": "S2",
+        "task_index": 0,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-05-01",
+        "stage": "S2",
+        "task_index": 0,
+        "minutes": 240,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-05-01",
+        "stage": "S2",
+        "task_index": 1,
+        "minutes": 260,
+        "day_offset_minutes": 240
+      },
+      {
+        "date": "2028-05-02",
+        "stage": "S2",
+        "task_index": 1,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-05-03",
+        "stage": "S2",
+        "task_index": 1,
+        "minutes": 20,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-05-03",
+        "stage": "S2",
+        "task_index": 2,
+        "minutes": 480,
+        "day_offset_minutes": 20
+      },
+      {
+        "date": "2028-05-04",
+        "stage": "S2",
+        "task_index": 2,
+        "minutes": 180,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-05-04",
+        "stage": "D2",
+        "task_index": 0,
+        "minutes": 320,
+        "day_offset_minutes": 180
+      },
+      {
+        "date": "2028-05-05",
+        "stage": "D2",
+        "task_index": 0,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-05-06",
+        "stage": "D2",
+        "task_index": 0,
+        "minutes": 320,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-05-06",
+        "stage": "D2",
+        "task_index": 1,
+        "minutes": 180,
+        "day_offset_minutes": 320
+      },
+      {
+        "date": "2028-05-08",
+        "stage": "D2",
+        "task_index": 1,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-05-09",
+        "stage": "D2",
+        "task_index": 1,
+        "minutes": 220,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-05-09",
+        "stage": "D2",
+        "task_index": 2,
+        "minutes": 280,
+        "day_offset_minutes": 220
+      },
+      {
+        "date": "2028-05-10",
+        "stage": "D2",
+        "task_index": 2,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-05-11",
+        "stage": "D2",
         "task_index": 2,
         "minutes": 480,
         "day_offset_minutes": 0
       },
       {
-        "date": "2026-12-15",
-        "stage": "M02",
+        "date": "2028-05-11",
+        "stage": "M11",
+        "task_index": 0,
+        "minutes": 20,
+        "day_offset_minutes": 480
+      },
+      {
+        "date": "2028-05-12",
+        "stage": "M11",
+        "task_index": 0,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-05-13",
+        "stage": "M11",
+        "task_index": 0,
+        "minutes": 140,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-05-13",
+        "stage": "M11",
+        "task_index": 1,
+        "minutes": 360,
+        "day_offset_minutes": 140
+      },
+      {
+        "date": "2028-05-15",
+        "stage": "M11",
+        "task_index": 1,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-05-16",
+        "stage": "M11",
+        "task_index": 1,
+        "minutes": 280,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-05-16",
+        "stage": "M11",
+        "task_index": 2,
+        "minutes": 220,
+        "day_offset_minutes": 280
+      },
+      {
+        "date": "2028-05-17",
+        "stage": "M11",
+        "task_index": 2,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-05-18",
+        "stage": "M11",
+        "task_index": 2,
+        "minutes": 300,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-05-18",
+        "stage": "M11",
+        "task_index": 3,
+        "minutes": 200,
+        "day_offset_minutes": 300
+      },
+      {
+        "date": "2028-05-19",
+        "stage": "M11",
+        "task_index": 3,
+        "minutes": 400,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-05-19",
+        "stage": "M10",
+        "task_index": 0,
+        "minutes": 100,
+        "day_offset_minutes": 400
+      },
+      {
+        "date": "2028-05-20",
+        "stage": "M10",
+        "task_index": 0,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-05-22",
+        "stage": "M10",
+        "task_index": 0,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-05-23",
+        "stage": "M10",
+        "task_index": 0,
+        "minutes": 40,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-05-23",
+        "stage": "M10",
+        "task_index": 1,
+        "minutes": 460,
+        "day_offset_minutes": 40
+      },
+      {
+        "date": "2028-05-24",
+        "stage": "M10",
+        "task_index": 1,
+        "minutes": 440,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-05-24",
+        "stage": "M10",
+        "task_index": 2,
+        "minutes": 60,
+        "day_offset_minutes": 440
+      },
+      {
+        "date": "2028-05-25",
+        "stage": "M10",
+        "task_index": 2,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-05-26",
+        "stage": "M10",
+        "task_index": 2,
+        "minutes": 460,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-05-26",
+        "stage": "M10",
+        "task_index": 3,
+        "minutes": 40,
+        "day_offset_minutes": 460
+      },
+      {
+        "date": "2028-05-27",
+        "stage": "M10",
+        "task_index": 3,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-05-29",
+        "stage": "M10",
+        "task_index": 3,
+        "minutes": 480,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-05-29",
+        "stage": "M10",
+        "task_index": 4,
+        "minutes": 20,
+        "day_offset_minutes": 480
+      },
+      {
+        "date": "2028-05-30",
+        "stage": "M10",
+        "task_index": 4,
+        "minutes": 460,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-05-30",
+        "stage": "M10",
+        "task_index": 5,
+        "minutes": 40,
+        "day_offset_minutes": 460
+      },
+      {
+        "date": "2028-05-31",
+        "stage": "M10",
+        "task_index": 5,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-06-01",
+        "stage": "M10",
+        "task_index": 5,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-06-02",
+        "stage": "M10",
+        "task_index": 5,
+        "minutes": 100,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-06-02",
+        "stage": "M13",
+        "task_index": 0,
+        "minutes": 400,
+        "day_offset_minutes": 100
+      },
+      {
+        "date": "2028-06-03",
+        "stage": "M13",
+        "task_index": 0,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-06-05",
+        "stage": "M13",
+        "task_index": 0,
+        "minutes": 240,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-06-05",
+        "stage": "M13",
+        "task_index": 1,
+        "minutes": 260,
+        "day_offset_minutes": 240
+      },
+      {
+        "date": "2028-06-06",
+        "stage": "M13",
+        "task_index": 1,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-06-07",
+        "stage": "M13",
+        "task_index": 1,
+        "minutes": 80,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-06-07",
+        "stage": "M13",
+        "task_index": 2,
+        "minutes": 420,
+        "day_offset_minutes": 80
+      },
+      {
+        "date": "2028-06-08",
+        "stage": "M13",
+        "task_index": 2,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-06-09",
+        "stage": "M13",
+        "task_index": 2,
+        "minutes": 220,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-06-09",
+        "stage": "M13",
+        "task_index": 3,
+        "minutes": 280,
+        "day_offset_minutes": 220
+      },
+      {
+        "date": "2028-06-10",
+        "stage": "M13",
+        "task_index": 3,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-06-12",
+        "stage": "M13",
+        "task_index": 3,
+        "minutes": 60,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-06-12",
+        "stage": "M13",
+        "task_index": 4,
+        "minutes": 440,
+        "day_offset_minutes": 60
+      },
+      {
+        "date": "2028-06-13",
+        "stage": "M13",
+        "task_index": 4,
+        "minutes": 460,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-06-13",
+        "stage": "A1",
+        "task_index": 0,
+        "minutes": 40,
+        "day_offset_minutes": 460
+      },
+      {
+        "date": "2028-06-14",
+        "stage": "A1",
+        "task_index": 0,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-06-15",
+        "stage": "A1",
+        "task_index": 0,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-06-16",
+        "stage": "A1",
+        "task_index": 0,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-06-17",
+        "stage": "A1",
+        "task_index": 0,
+        "minutes": 440,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-06-17",
+        "stage": "A1",
+        "task_index": 1,
+        "minutes": 60,
+        "day_offset_minutes": 440
+      },
+      {
+        "date": "2028-06-19",
+        "stage": "A1",
+        "task_index": 1,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-06-20",
+        "stage": "A1",
+        "task_index": 1,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-06-21",
+        "stage": "A1",
+        "task_index": 1,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-06-22",
+        "stage": "A1",
+        "task_index": 1,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-06-23",
+        "stage": "A1",
+        "task_index": 1,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-06-24",
+        "stage": "A1",
+        "task_index": 1,
+        "minutes": 80,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-06-24",
+        "stage": "A1",
+        "task_index": 2,
+        "minutes": 420,
+        "day_offset_minutes": 80
+      },
+      {
+        "date": "2028-06-26",
+        "stage": "A1",
+        "task_index": 2,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-06-27",
+        "stage": "A1",
+        "task_index": 2,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-06-28",
+        "stage": "A1",
+        "task_index": 2,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-06-29",
+        "stage": "A1",
+        "task_index": 2,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-06-30",
+        "stage": "A1",
+        "task_index": 2,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-07-01",
+        "stage": "A1",
+        "task_index": 2,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-07-03",
+        "stage": "A1",
+        "task_index": 2,
+        "minutes": 360,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-07-03",
+        "stage": "A1",
+        "task_index": 3,
+        "minutes": 140,
+        "day_offset_minutes": 360
+      },
+      {
+        "date": "2028-07-04",
+        "stage": "A1",
+        "task_index": 3,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-07-05",
+        "stage": "A1",
+        "task_index": 3,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-07-06",
+        "stage": "A1",
+        "task_index": 3,
+        "minutes": 300,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-07-06",
+        "stage": "T1",
+        "task_index": 0,
+        "minutes": 200,
+        "day_offset_minutes": 300
+      },
+      {
+        "date": "2028-07-07",
+        "stage": "T1",
+        "task_index": 0,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-07-08",
+        "stage": "T1",
+        "task_index": 0,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-07-10",
+        "stage": "T1",
+        "task_index": 0,
+        "minutes": 480,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-07-10",
+        "stage": "T1",
+        "task_index": 1,
+        "minutes": 20,
+        "day_offset_minutes": 480
+      },
+      {
+        "date": "2028-07-11",
+        "stage": "T1",
+        "task_index": 1,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-07-12",
+        "stage": "T1",
+        "task_index": 1,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-07-13",
+        "stage": "T1",
+        "task_index": 1,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-07-14",
+        "stage": "T1",
+        "task_index": 1,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-07-15",
+        "stage": "T1",
+        "task_index": 1,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-07-17",
+        "stage": "T1",
+        "task_index": 1,
+        "minutes": 360,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-07-17",
+        "stage": "T1",
+        "task_index": 2,
+        "minutes": 140,
+        "day_offset_minutes": 360
+      },
+      {
+        "date": "2028-07-18",
+        "stage": "T1",
+        "task_index": 2,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-07-19",
+        "stage": "T1",
+        "task_index": 2,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-07-20",
+        "stage": "T1",
+        "task_index": 2,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-07-21",
+        "stage": "T1",
+        "task_index": 2,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-07-22",
+        "stage": "T1",
+        "task_index": 2,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-07-24",
+        "stage": "M19",
+        "task_index": 0,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-07-25",
+        "stage": "M19",
+        "task_index": 0,
+        "minutes": 400,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-07-25",
+        "stage": "M19",
+        "task_index": 1,
+        "minutes": 100,
+        "day_offset_minutes": 400
+      },
+      {
+        "date": "2028-07-26",
+        "stage": "M19",
+        "task_index": 1,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-07-27",
+        "stage": "M19",
+        "task_index": 1,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-07-28",
+        "stage": "M19",
+        "task_index": 1,
+        "minutes": 280,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-07-28",
+        "stage": "M19",
+        "task_index": 2,
+        "minutes": 220,
+        "day_offset_minutes": 280
+      },
+      {
+        "date": "2028-07-29",
+        "stage": "M19",
+        "task_index": 2,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-07-31",
+        "stage": "M19",
+        "task_index": 2,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-08-01",
+        "stage": "M19",
+        "task_index": 2,
+        "minutes": 280,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-08-01",
+        "stage": "M19",
+        "task_index": 3,
+        "minutes": 220,
+        "day_offset_minutes": 280
+      },
+      {
+        "date": "2028-08-02",
+        "stage": "M19",
+        "task_index": 3,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-08-03",
+        "stage": "M19",
+        "task_index": 3,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-08-04",
+        "stage": "M19",
+        "task_index": 3,
+        "minutes": 40,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-08-04",
+        "stage": "M19",
+        "task_index": 4,
+        "minutes": 460,
+        "day_offset_minutes": 40
+      },
+      {
+        "date": "2028-08-05",
+        "stage": "M19",
+        "task_index": 4,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-08-07",
+        "stage": "M19",
+        "task_index": 4,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-08-08",
+        "stage": "M19",
+        "task_index": 4,
+        "minutes": 40,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-08-08",
+        "stage": "M19",
+        "task_index": 5,
+        "minutes": 460,
+        "day_offset_minutes": 40
+      },
+      {
+        "date": "2028-08-09",
+        "stage": "M19",
+        "task_index": 5,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-08-10",
+        "stage": "M19",
+        "task_index": 5,
+        "minutes": 300,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-08-10",
+        "stage": "M19",
+        "task_index": 6,
+        "minutes": 200,
+        "day_offset_minutes": 300
+      },
+      {
+        "date": "2028-08-11",
+        "stage": "M19",
+        "task_index": 6,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-08-12",
+        "stage": "M19",
+        "task_index": 6,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-08-14",
+        "stage": "M19",
+        "task_index": 6,
+        "minutes": 180,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-08-14",
+        "stage": "M22",
+        "task_index": 0,
+        "minutes": 320,
+        "day_offset_minutes": 180
+      },
+      {
+        "date": "2028-08-15",
+        "stage": "M22",
+        "task_index": 0,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-08-16",
+        "stage": "M22",
+        "task_index": 0,
+        "minutes": 320,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-08-16",
+        "stage": "M22",
+        "task_index": 1,
+        "minutes": 180,
+        "day_offset_minutes": 320
+      },
+      {
+        "date": "2028-08-17",
+        "stage": "M22",
+        "task_index": 1,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-08-18",
+        "stage": "M22",
+        "task_index": 1,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-08-19",
+        "stage": "M22",
+        "task_index": 1,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-08-21",
+        "stage": "M22",
+        "task_index": 1,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-08-22",
+        "stage": "M22",
+        "task_index": 1,
+        "minutes": 460,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-08-22",
+        "stage": "M22",
+        "task_index": 2,
+        "minutes": 40,
+        "day_offset_minutes": 460
+      },
+      {
+        "date": "2028-08-23",
+        "stage": "M22",
+        "task_index": 2,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-08-24",
+        "stage": "M22",
+        "task_index": 2,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-08-25",
+        "stage": "M22",
+        "task_index": 2,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-08-26",
+        "stage": "M22",
+        "task_index": 2,
+        "minutes": 200,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-08-26",
+        "stage": "M22",
+        "task_index": 3,
+        "minutes": 300,
+        "day_offset_minutes": 200
+      },
+      {
+        "date": "2028-08-28",
+        "stage": "M22",
+        "task_index": 3,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-08-29",
+        "stage": "M22",
+        "task_index": 3,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-08-30",
+        "stage": "M22",
+        "task_index": 3,
+        "minutes": 440,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-08-30",
+        "stage": "M22",
+        "task_index": 4,
+        "minutes": 60,
+        "day_offset_minutes": 440
+      },
+      {
+        "date": "2028-08-31",
+        "stage": "M22",
+        "task_index": 4,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-09-01",
+        "stage": "M22",
+        "task_index": 4,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-09-02",
+        "stage": "M22",
+        "task_index": 4,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-09-04",
+        "stage": "M22",
+        "task_index": 4,
+        "minutes": 240,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-09-04",
+        "stage": "G2",
+        "task_index": 0,
+        "minutes": 260,
+        "day_offset_minutes": 240
+      },
+      {
+        "date": "2028-09-05",
+        "stage": "G2",
+        "task_index": 0,
+        "minutes": 340,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-09-05",
+        "stage": "T2",
+        "task_index": 0,
+        "minutes": 160,
+        "day_offset_minutes": 340
+      },
+      {
+        "date": "2028-09-06",
+        "stage": "T2",
+        "task_index": 0,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-09-07",
+        "stage": "T2",
+        "task_index": 0,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-09-08",
+        "stage": "T2",
+        "task_index": 0,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-09-09",
+        "stage": "T2",
+        "task_index": 0,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-09-11",
+        "stage": "T2",
+        "task_index": 0,
+        "minutes": 480,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-09-11",
+        "stage": "T2",
+        "task_index": 1,
+        "minutes": 20,
+        "day_offset_minutes": 480
+      },
+      {
+        "date": "2028-09-12",
+        "stage": "T2",
+        "task_index": 1,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-09-13",
+        "stage": "T2",
+        "task_index": 1,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-09-14",
+        "stage": "T2",
+        "task_index": 1,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-09-15",
+        "stage": "T2",
+        "task_index": 1,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-09-16",
+        "stage": "T2",
+        "task_index": 1,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-09-18",
+        "stage": "T2",
+        "task_index": 1,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-09-19",
+        "stage": "T2",
+        "task_index": 1,
+        "minutes": 220,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-09-19",
+        "stage": "T2",
+        "task_index": 2,
+        "minutes": 280,
+        "day_offset_minutes": 220
+      },
+      {
+        "date": "2028-09-20",
+        "stage": "T2",
+        "task_index": 2,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-09-21",
+        "stage": "T2",
+        "task_index": 2,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-09-22",
+        "stage": "T2",
+        "task_index": 2,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-09-23",
+        "stage": "T2",
+        "task_index": 2,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-09-25",
+        "stage": "T2",
+        "task_index": 2,
+        "minutes": 360,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-09-25",
+        "stage": "M23",
+        "task_index": 0,
+        "minutes": 140,
+        "day_offset_minutes": 360
+      },
+      {
+        "date": "2028-09-26",
+        "stage": "M23",
+        "task_index": 0,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-09-27",
+        "stage": "M23",
+        "task_index": 0,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-09-28",
+        "stage": "M23",
+        "task_index": 0,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-09-29",
+        "stage": "M23",
+        "task_index": 0,
+        "minutes": 400,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-09-29",
+        "stage": "M23",
+        "task_index": 1,
+        "minutes": 100,
+        "day_offset_minutes": 400
+      },
+      {
+        "date": "2028-09-30",
+        "stage": "M23",
+        "task_index": 1,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-10-02",
+        "stage": "M23",
+        "task_index": 1,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-10-03",
+        "stage": "M23",
+        "task_index": 1,
+        "minutes": 100,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-10-03",
+        "stage": "M23",
+        "task_index": 2,
+        "minutes": 400,
+        "day_offset_minutes": 100
+      },
+      {
+        "date": "2028-10-04",
+        "stage": "M23",
+        "task_index": 2,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-10-05",
+        "stage": "M23",
+        "task_index": 2,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-10-06",
+        "stage": "M23",
+        "task_index": 2,
+        "minutes": 460,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-10-06",
+        "stage": "M23",
+        "task_index": 3,
+        "minutes": 40,
+        "day_offset_minutes": 460
+      },
+      {
+        "date": "2028-10-07",
+        "stage": "M23",
+        "task_index": 3,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-10-09",
+        "stage": "M23",
+        "task_index": 3,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-10-10",
+        "stage": "M23",
+        "task_index": 3,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-10-11",
+        "stage": "M23",
+        "task_index": 3,
+        "minutes": 320,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-10-11",
+        "stage": "M23",
+        "task_index": 4,
+        "minutes": 180,
+        "day_offset_minutes": 320
+      },
+      {
+        "date": "2028-10-12",
+        "stage": "M23",
+        "task_index": 4,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-10-13",
+        "stage": "M23",
+        "task_index": 4,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-10-14",
+        "stage": "M23",
+        "task_index": 4,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-10-16",
+        "stage": "M23",
+        "task_index": 4,
+        "minutes": 360,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-10-16",
+        "stage": "M16",
+        "task_index": 0,
+        "minutes": 140,
+        "day_offset_minutes": 360
+      },
+      {
+        "date": "2028-10-17",
+        "stage": "M16",
+        "task_index": 0,
+        "minutes": 400,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-10-17",
+        "stage": "M16",
+        "task_index": 1,
+        "minutes": 100,
+        "day_offset_minutes": 400
+      },
+      {
+        "date": "2028-10-18",
+        "stage": "M16",
+        "task_index": 1,
+        "minutes": 440,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-10-18",
+        "stage": "M16",
+        "task_index": 2,
+        "minutes": 60,
+        "day_offset_minutes": 440
+      },
+      {
+        "date": "2028-10-19",
+        "stage": "M16",
+        "task_index": 2,
+        "minutes": 480,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-10-19",
+        "stage": "M16",
         "task_index": 3,
         "minutes": 20,
         "day_offset_minutes": 480
       },
       {
-        "date": "2026-12-16",
-        "stage": "M02",
+        "date": "2028-10-20",
+        "stage": "M16",
         "task_index": 3,
         "minutes": 500,
         "day_offset_minutes": 0
       },
       {
-        "date": "2026-12-17",
-        "stage": "M02",
+        "date": "2028-10-21",
+        "stage": "M16",
         "task_index": 3,
-        "minutes": 320,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2026-12-17",
-        "stage": "M02",
-        "task_index": 4,
-        "minutes": 180,
-        "day_offset_minutes": 320
-      },
-      {
-        "date": "2026-12-18",
-        "stage": "M02",
-        "task_index": 4,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2026-12-19",
-        "stage": "M02",
-        "task_index": 4,
-        "minutes": 160,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2026-12-19",
-        "stage": "M02",
-        "task_index": 5,
-        "minutes": 340,
-        "day_offset_minutes": 160
-      },
-      {
-        "date": "2026-12-21",
-        "stage": "M02",
-        "task_index": 5,
         "minutes": 20,
         "day_offset_minutes": 0
       },
       {
-        "date": "2026-12-21",
-        "stage": "M04",
+        "date": "2028-10-21",
+        "stage": "A2",
         "task_index": 0,
         "minutes": 480,
         "day_offset_minutes": 20
       },
       {
-        "date": "2026-12-22",
-        "stage": "M04",
+        "date": "2028-10-23",
+        "stage": "A2",
         "task_index": 0,
         "minutes": 500,
         "day_offset_minutes": 0
       },
       {
-        "date": "2026-12-23",
-        "stage": "M04",
+        "date": "2028-10-24",
+        "stage": "A2",
         "task_index": 0,
         "minutes": 500,
         "day_offset_minutes": 0
       },
       {
-        "date": "2026-12-24",
-        "stage": "M04",
+        "date": "2028-10-25",
+        "stage": "A2",
         "task_index": 0,
         "minutes": 500,
         "day_offset_minutes": 0
       },
       {
-        "date": "2026-12-25",
-        "stage": "M04",
-        "task_index": 0,
-        "minutes": 180,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2026-12-25",
-        "stage": "M04",
-        "task_index": 1,
-        "minutes": 320,
-        "day_offset_minutes": 180
-      },
-      {
-        "date": "2026-12-26",
-        "stage": "M04",
-        "task_index": 1,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2026-12-28",
-        "stage": "M04",
-        "task_index": 1,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2026-12-29",
-        "stage": "M04",
-        "task_index": 1,
-        "minutes": 240,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2026-12-29",
-        "stage": "M04",
-        "task_index": 2,
-        "minutes": 260,
-        "day_offset_minutes": 240
-      },
-      {
-        "date": "2026-12-30",
-        "stage": "M04",
-        "task_index": 2,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-01-02",
-        "stage": "M04",
-        "task_index": 2,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-01-04",
-        "stage": "M04",
-        "task_index": 2,
-        "minutes": 180,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-01-04",
-        "stage": "M04",
-        "task_index": 3,
-        "minutes": 320,
-        "day_offset_minutes": 180
-      },
-      {
-        "date": "2027-01-05",
-        "stage": "M04",
-        "task_index": 3,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-01-06",
-        "stage": "M04",
-        "task_index": 3,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-01-07",
-        "stage": "M04",
-        "task_index": 3,
-        "minutes": 120,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-01-07",
-        "stage": "M05",
-        "task_index": 0,
-        "minutes": 380,
-        "day_offset_minutes": 120
-      },
-      {
-        "date": "2027-01-08",
-        "stage": "M05",
+        "date": "2028-10-26",
+        "stage": "A2",
         "task_index": 0,
         "minutes": 500,
         "day_offset_minutes": 0
       },
       {
-        "date": "2027-01-09",
-        "stage": "M05",
+        "date": "2028-10-27",
+        "stage": "A2",
         "task_index": 0,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-01-11",
-        "stage": "M05",
-        "task_index": 0,
-        "minutes": 420,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-01-11",
-        "stage": "M05",
-        "task_index": 1,
-        "minutes": 80,
-        "day_offset_minutes": 420
-      },
-      {
-        "date": "2027-01-12",
-        "stage": "M05",
-        "task_index": 1,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-01-13",
-        "stage": "M05",
-        "task_index": 1,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-01-14",
-        "stage": "M05",
-        "task_index": 1,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-01-15",
-        "stage": "M05",
-        "task_index": 1,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-01-16",
-        "stage": "M05",
-        "task_index": 1,
-        "minutes": 320,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-01-16",
-        "stage": "M05",
-        "task_index": 2,
-        "minutes": 180,
-        "day_offset_minutes": 320
-      },
-      {
-        "date": "2027-01-18",
-        "stage": "M05",
-        "task_index": 2,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-01-19",
-        "stage": "M05",
-        "task_index": 2,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-01-20",
-        "stage": "M05",
-        "task_index": 2,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-01-21",
-        "stage": "M05",
-        "task_index": 2,
-        "minutes": 120,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-01-21",
-        "stage": "M05",
-        "task_index": 3,
-        "minutes": 380,
-        "day_offset_minutes": 120
-      },
-      {
-        "date": "2027-01-22",
-        "stage": "M05",
-        "task_index": 3,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-01-23",
-        "stage": "M05",
-        "task_index": 3,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-01-25",
-        "stage": "M05",
-        "task_index": 3,
-        "minutes": 420,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-01-25",
-        "stage": "M05",
-        "task_index": 4,
-        "minutes": 80,
-        "day_offset_minutes": 420
-      },
-      {
-        "date": "2027-01-26",
-        "stage": "M05",
-        "task_index": 4,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-01-27",
-        "stage": "M05",
-        "task_index": 4,
-        "minutes": 320,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-01-27",
-        "stage": "M06",
-        "task_index": 0,
-        "minutes": 180,
-        "day_offset_minutes": 320
-      },
-      {
-        "date": "2027-01-28",
-        "stage": "M06",
-        "task_index": 0,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-01-29",
-        "stage": "M06",
-        "task_index": 0,
-        "minutes": 400,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-01-29",
-        "stage": "M06",
-        "task_index": 1,
-        "minutes": 100,
-        "day_offset_minutes": 400
-      },
-      {
-        "date": "2027-01-30",
-        "stage": "M06",
-        "task_index": 1,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-02-01",
-        "stage": "M06",
-        "task_index": 1,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-02-02",
-        "stage": "M06",
-        "task_index": 1,
         "minutes": 460,
         "day_offset_minutes": 0
       },
       {
-        "date": "2027-02-02",
-        "stage": "M06",
-        "task_index": 2,
+        "date": "2028-10-27",
+        "stage": "A2",
+        "task_index": 1,
         "minutes": 40,
         "day_offset_minutes": 460
       },
       {
-        "date": "2027-02-03",
-        "stage": "M06",
-        "task_index": 2,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-02-04",
-        "stage": "M06",
-        "task_index": 2,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-02-05",
-        "stage": "M06",
-        "task_index": 2,
-        "minutes": 40,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-02-05",
-        "stage": "M06",
-        "task_index": 3,
-        "minutes": 460,
-        "day_offset_minutes": 40
-      },
-      {
-        "date": "2027-02-06",
-        "stage": "M06",
-        "task_index": 3,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-02-08",
-        "stage": "M06",
-        "task_index": 3,
-        "minutes": 360,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-02-08",
-        "stage": "M06",
-        "task_index": 4,
-        "minutes": 140,
-        "day_offset_minutes": 360
-      },
-      {
-        "date": "2027-02-09",
-        "stage": "M06",
-        "task_index": 4,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-02-10",
-        "stage": "M06",
-        "task_index": 4,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-02-11",
-        "stage": "M06",
-        "task_index": 4,
-        "minutes": 420,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-02-11",
-        "stage": "M07",
-        "task_index": 0,
-        "minutes": 80,
-        "day_offset_minutes": 420
-      },
-      {
-        "date": "2027-02-12",
-        "stage": "M07",
-        "task_index": 0,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-02-13",
-        "stage": "M07",
-        "task_index": 0,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-02-15",
-        "stage": "M07",
-        "task_index": 0,
-        "minutes": 420,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-02-15",
-        "stage": "M07",
-        "task_index": 1,
-        "minutes": 80,
-        "day_offset_minutes": 420
-      },
-      {
-        "date": "2027-02-16",
-        "stage": "M07",
-        "task_index": 1,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-02-17",
-        "stage": "M07",
-        "task_index": 1,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-02-18",
-        "stage": "M07",
-        "task_index": 1,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-02-19",
-        "stage": "M07",
-        "task_index": 1,
-        "minutes": 220,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-02-19",
-        "stage": "M07",
-        "task_index": 2,
-        "minutes": 280,
-        "day_offset_minutes": 220
-      },
-      {
-        "date": "2027-02-20",
-        "stage": "M07",
-        "task_index": 2,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-02-22",
-        "stage": "M07",
-        "task_index": 2,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-02-23",
-        "stage": "M07",
-        "task_index": 2,
-        "minutes": 220,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-02-23",
-        "stage": "M07",
-        "task_index": 3,
-        "minutes": 280,
-        "day_offset_minutes": 220
-      },
-      {
-        "date": "2027-02-24",
-        "stage": "M07",
-        "task_index": 3,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-02-25",
-        "stage": "M07",
-        "task_index": 3,
-        "minutes": 420,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-02-25",
-        "stage": "M08",
-        "task_index": 0,
-        "minutes": 80,
-        "day_offset_minutes": 420
-      },
-      {
-        "date": "2027-02-26",
-        "stage": "M08",
-        "task_index": 0,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-02-27",
-        "stage": "M08",
-        "task_index": 0,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-03-01",
-        "stage": "M08",
-        "task_index": 1,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-03-02",
-        "stage": "M08",
-        "task_index": 1,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-03-03",
-        "stage": "M08",
-        "task_index": 1,
-        "minutes": 200,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-03-03",
-        "stage": "M08",
-        "task_index": 2,
-        "minutes": 300,
-        "day_offset_minutes": 200
-      },
-      {
-        "date": "2027-03-04",
-        "stage": "M08",
-        "task_index": 2,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-03-05",
-        "stage": "M08",
-        "task_index": 2,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-03-06",
-        "stage": "M08",
-        "task_index": 2,
-        "minutes": 20,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-03-06",
-        "stage": "M08",
-        "task_index": 3,
-        "minutes": 480,
-        "day_offset_minutes": 20
-      },
-      {
-        "date": "2027-03-08",
-        "stage": "M08",
-        "task_index": 3,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-03-09",
-        "stage": "M08",
-        "task_index": 3,
-        "minutes": 220,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-03-09",
-        "stage": "M08",
-        "task_index": 4,
-        "minutes": 280,
-        "day_offset_minutes": 220
-      },
-      {
-        "date": "2027-03-10",
-        "stage": "M08",
-        "task_index": 4,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-03-11",
-        "stage": "M08",
-        "task_index": 4,
-        "minutes": 60,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-03-11",
-        "stage": "M08",
-        "task_index": 5,
-        "minutes": 440,
-        "day_offset_minutes": 60
-      },
-      {
-        "date": "2027-03-12",
-        "stage": "M08",
-        "task_index": 5,
-        "minutes": 400,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-03-12",
-        "stage": "D1",
-        "task_index": 0,
-        "minutes": 100,
-        "day_offset_minutes": 400
-      },
-      {
-        "date": "2027-03-13",
-        "stage": "D1",
-        "task_index": 0,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-03-15",
-        "stage": "D1",
-        "task_index": 0,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-03-16",
-        "stage": "D1",
-        "task_index": 0,
-        "minutes": 100,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-03-16",
-        "stage": "D1",
-        "task_index": 1,
-        "minutes": 400,
-        "day_offset_minutes": 100
-      },
-      {
-        "date": "2027-03-17",
-        "stage": "D1",
-        "task_index": 1,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-03-18",
-        "stage": "D1",
-        "task_index": 1,
-        "minutes": 300,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-03-18",
-        "stage": "L1",
-        "task_index": 0,
-        "minutes": 200,
-        "day_offset_minutes": 300
-      },
-      {
-        "date": "2027-03-19",
-        "stage": "L1",
-        "task_index": 0,
-        "minutes": 400,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-03-19",
-        "stage": "L1",
-        "task_index": 1,
-        "minutes": 100,
-        "day_offset_minutes": 400
-      },
-      {
-        "date": "2027-03-20",
-        "stage": "L1",
-        "task_index": 1,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-03-22",
-        "stage": "L1",
-        "task_index": 1,
-        "minutes": 120,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-03-22",
-        "stage": "L1",
-        "task_index": 2,
-        "minutes": 380,
-        "day_offset_minutes": 120
-      },
-      {
-        "date": "2027-03-23",
-        "stage": "L1",
-        "task_index": 2,
-        "minutes": 340,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-03-23",
-        "stage": "L1",
-        "task_index": 3,
-        "minutes": 160,
-        "day_offset_minutes": 340
-      },
-      {
-        "date": "2027-03-24",
-        "stage": "L1",
-        "task_index": 3,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-03-25",
-        "stage": "L1",
-        "task_index": 3,
-        "minutes": 180,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-03-25",
-        "stage": "L1",
-        "task_index": 4,
-        "minutes": 320,
-        "day_offset_minutes": 180
-      },
-      {
-        "date": "2027-03-26",
-        "stage": "L1",
-        "task_index": 4,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-03-27",
-        "stage": "L1",
-        "task_index": 4,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-03-29",
-        "stage": "G1",
-        "task_index": 0,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-03-30",
-        "stage": "G1",
-        "task_index": 0,
-        "minutes": 100,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-03-30",
-        "stage": "M03",
-        "task_index": 0,
-        "minutes": 400,
-        "day_offset_minutes": 100
-      },
-      {
-        "date": "2027-03-31",
-        "stage": "M03",
-        "task_index": 0,
-        "minutes": 320,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-03-31",
-        "stage": "M03",
-        "task_index": 1,
-        "minutes": 180,
-        "day_offset_minutes": 320
-      },
-      {
-        "date": "2027-04-01",
-        "stage": "M03",
-        "task_index": 1,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-04-02",
-        "stage": "M03",
-        "task_index": 1,
-        "minutes": 400,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-04-02",
-        "stage": "M03",
-        "task_index": 2,
-        "minutes": 100,
-        "day_offset_minutes": 400
-      },
-      {
-        "date": "2027-04-03",
-        "stage": "M03",
-        "task_index": 2,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-04-05",
-        "stage": "M03",
-        "task_index": 2,
-        "minutes": 240,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-04-05",
-        "stage": "M03",
-        "task_index": 3,
-        "minutes": 260,
-        "day_offset_minutes": 240
-      },
-      {
-        "date": "2027-04-06",
-        "stage": "M03",
-        "task_index": 3,
-        "minutes": 460,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-04-06",
-        "stage": "S2",
-        "task_index": 0,
-        "minutes": 40,
-        "day_offset_minutes": 460
-      },
-      {
-        "date": "2027-04-07",
-        "stage": "S2",
-        "task_index": 0,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-04-08",
-        "stage": "S2",
-        "task_index": 0,
-        "minutes": 300,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-04-08",
-        "stage": "S2",
-        "task_index": 1,
-        "minutes": 200,
-        "day_offset_minutes": 300
-      },
-      {
-        "date": "2027-04-09",
-        "stage": "S2",
-        "task_index": 1,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-04-10",
-        "stage": "S2",
-        "task_index": 1,
-        "minutes": 140,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-04-10",
-        "stage": "S2",
-        "task_index": 2,
-        "minutes": 360,
-        "day_offset_minutes": 140
-      },
-      {
-        "date": "2027-04-12",
-        "stage": "S2",
-        "task_index": 2,
-        "minutes": 360,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-04-12",
-        "stage": "D2",
-        "task_index": 0,
-        "minutes": 140,
-        "day_offset_minutes": 360
-      },
-      {
-        "date": "2027-04-13",
-        "stage": "D2",
-        "task_index": 0,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-04-14",
-        "stage": "D2",
-        "task_index": 0,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-04-15",
-        "stage": "D2",
-        "task_index": 0,
-        "minutes": 60,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-04-15",
-        "stage": "D2",
-        "task_index": 1,
-        "minutes": 440,
-        "day_offset_minutes": 60
-      },
-      {
-        "date": "2027-04-16",
-        "stage": "D2",
-        "task_index": 1,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-04-17",
-        "stage": "D2",
-        "task_index": 1,
-        "minutes": 20,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-04-17",
-        "stage": "D2",
-        "task_index": 2,
-        "minutes": 480,
-        "day_offset_minutes": 20
-      },
-      {
-        "date": "2027-04-19",
-        "stage": "D2",
-        "task_index": 2,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-04-20",
-        "stage": "D2",
-        "task_index": 2,
-        "minutes": 340,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-04-20",
-        "stage": "M11",
-        "task_index": 0,
-        "minutes": 160,
-        "day_offset_minutes": 340
-      },
-      {
-        "date": "2027-04-21",
-        "stage": "M11",
-        "task_index": 0,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-04-22",
-        "stage": "M11",
-        "task_index": 0,
-        "minutes": 60,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-04-22",
-        "stage": "M11",
-        "task_index": 1,
-        "minutes": 440,
-        "day_offset_minutes": 60
-      },
-      {
-        "date": "2027-04-23",
-        "stage": "M11",
-        "task_index": 1,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-04-24",
-        "stage": "M11",
-        "task_index": 1,
-        "minutes": 260,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-04-24",
-        "stage": "M11",
-        "task_index": 2,
-        "minutes": 240,
-        "day_offset_minutes": 260
-      },
-      {
-        "date": "2027-04-26",
-        "stage": "M11",
-        "task_index": 2,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-04-27",
-        "stage": "M11",
-        "task_index": 2,
-        "minutes": 340,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-04-27",
-        "stage": "M11",
-        "task_index": 3,
-        "minutes": 160,
-        "day_offset_minutes": 340
-      },
-      {
-        "date": "2027-04-28",
-        "stage": "M11",
-        "task_index": 3,
-        "minutes": 440,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-04-28",
-        "stage": "M10",
-        "task_index": 0,
-        "minutes": 60,
-        "day_offset_minutes": 440
-      },
-      {
-        "date": "2027-04-29",
-        "stage": "M10",
-        "task_index": 0,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-04-30",
-        "stage": "M10",
-        "task_index": 0,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-05-01",
-        "stage": "M10",
-        "task_index": 0,
-        "minutes": 140,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-05-01",
-        "stage": "M10",
-        "task_index": 1,
-        "minutes": 360,
-        "day_offset_minutes": 140
-      },
-      {
-        "date": "2027-05-03",
-        "stage": "M10",
-        "task_index": 1,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-05-04",
-        "stage": "M10",
-        "task_index": 1,
-        "minutes": 100,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-05-04",
-        "stage": "M10",
-        "task_index": 2,
-        "minutes": 400,
-        "day_offset_minutes": 100
-      },
-      {
-        "date": "2027-05-05",
-        "stage": "M10",
-        "task_index": 2,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-05-06",
-        "stage": "M10",
-        "task_index": 2,
-        "minutes": 180,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-05-06",
-        "stage": "M10",
-        "task_index": 3,
-        "minutes": 320,
-        "day_offset_minutes": 180
-      },
-      {
-        "date": "2027-05-07",
-        "stage": "M10",
-        "task_index": 3,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-05-08",
-        "stage": "M10",
-        "task_index": 3,
-        "minutes": 260,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-05-08",
-        "stage": "M10",
-        "task_index": 4,
-        "minutes": 240,
-        "day_offset_minutes": 260
-      },
-      {
-        "date": "2027-05-10",
-        "stage": "M10",
-        "task_index": 4,
-        "minutes": 240,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-05-10",
-        "stage": "M10",
-        "task_index": 5,
-        "minutes": 260,
-        "day_offset_minutes": 240
-      },
-      {
-        "date": "2027-05-11",
-        "stage": "M10",
-        "task_index": 5,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-05-12",
-        "stage": "M10",
-        "task_index": 5,
-        "minutes": 440,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-05-12",
-        "stage": "M13",
-        "task_index": 0,
-        "minutes": 60,
-        "day_offset_minutes": 440
-      },
-      {
-        "date": "2027-05-13",
-        "stage": "M13",
-        "task_index": 0,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-05-14",
-        "stage": "M13",
-        "task_index": 0,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-05-15",
-        "stage": "M13",
-        "task_index": 0,
-        "minutes": 140,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-05-15",
-        "stage": "M13",
-        "task_index": 1,
-        "minutes": 360,
-        "day_offset_minutes": 140
-      },
-      {
-        "date": "2027-05-17",
-        "stage": "M13",
-        "task_index": 1,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-05-18",
-        "stage": "M13",
-        "task_index": 1,
-        "minutes": 40,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-05-18",
-        "stage": "M13",
-        "task_index": 2,
-        "minutes": 460,
-        "day_offset_minutes": 40
-      },
-      {
-        "date": "2027-05-19",
-        "stage": "M13",
-        "task_index": 2,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-05-20",
-        "stage": "M13",
-        "task_index": 2,
-        "minutes": 240,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-05-20",
-        "stage": "M13",
-        "task_index": 3,
-        "minutes": 260,
-        "day_offset_minutes": 240
-      },
-      {
-        "date": "2027-05-21",
-        "stage": "M13",
-        "task_index": 3,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-05-22",
-        "stage": "M13",
-        "task_index": 3,
-        "minutes": 140,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-05-22",
-        "stage": "M13",
-        "task_index": 4,
-        "minutes": 360,
-        "day_offset_minutes": 140
-      },
-      {
-        "date": "2027-05-24",
-        "stage": "M13",
-        "task_index": 4,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-05-25",
-        "stage": "M13",
-        "task_index": 4,
-        "minutes": 100,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-05-25",
-        "stage": "A1",
-        "task_index": 0,
-        "minutes": 400,
-        "day_offset_minutes": 100
-      },
-      {
-        "date": "2027-05-26",
-        "stage": "A1",
-        "task_index": 0,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-05-27",
-        "stage": "A1",
-        "task_index": 0,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-05-28",
-        "stage": "A1",
-        "task_index": 0,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-05-29",
-        "stage": "A1",
-        "task_index": 0,
-        "minutes": 200,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-05-29",
-        "stage": "A1",
-        "task_index": 1,
-        "minutes": 300,
-        "day_offset_minutes": 200
-      },
-      {
-        "date": "2027-05-31",
-        "stage": "A1",
-        "task_index": 1,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-06-01",
-        "stage": "A1",
-        "task_index": 1,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-06-02",
-        "stage": "A1",
-        "task_index": 1,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-06-03",
-        "stage": "A1",
-        "task_index": 1,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-06-04",
-        "stage": "A1",
-        "task_index": 1,
-        "minutes": 400,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-06-04",
-        "stage": "A1",
-        "task_index": 2,
-        "minutes": 100,
-        "day_offset_minutes": 400
-      },
-      {
-        "date": "2027-06-05",
-        "stage": "A1",
-        "task_index": 2,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-06-07",
-        "stage": "A1",
-        "task_index": 2,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-06-08",
-        "stage": "A1",
-        "task_index": 2,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-06-09",
-        "stage": "A1",
-        "task_index": 2,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-06-10",
-        "stage": "A1",
-        "task_index": 2,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-06-11",
-        "stage": "A1",
-        "task_index": 2,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-06-12",
-        "stage": "A1",
-        "task_index": 2,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-06-14",
-        "stage": "A1",
-        "task_index": 2,
-        "minutes": 300,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-06-14",
-        "stage": "A1",
-        "task_index": 3,
-        "minutes": 200,
-        "day_offset_minutes": 300
-      },
-      {
-        "date": "2027-06-15",
-        "stage": "A1",
-        "task_index": 3,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-06-16",
-        "stage": "A1",
-        "task_index": 3,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-06-17",
-        "stage": "A1",
-        "task_index": 3,
-        "minutes": 300,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-06-17",
-        "stage": "T1",
-        "task_index": 0,
-        "minutes": 200,
-        "day_offset_minutes": 300
-      },
-      {
-        "date": "2027-06-18",
-        "stage": "T1",
-        "task_index": 0,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-06-19",
-        "stage": "T1",
-        "task_index": 0,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-06-21",
-        "stage": "T1",
-        "task_index": 0,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-06-22",
-        "stage": "T1",
-        "task_index": 0,
-        "minutes": 100,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-06-22",
-        "stage": "T1",
-        "task_index": 1,
-        "minutes": 400,
-        "day_offset_minutes": 100
-      },
-      {
-        "date": "2027-06-23",
-        "stage": "T1",
-        "task_index": 1,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-06-24",
-        "stage": "T1",
-        "task_index": 1,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-06-25",
-        "stage": "T1",
-        "task_index": 1,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-06-26",
-        "stage": "T1",
-        "task_index": 1,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-06-28",
-        "stage": "T1",
-        "task_index": 1,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-06-29",
-        "stage": "T1",
-        "task_index": 1,
-        "minutes": 100,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-06-29",
-        "stage": "T1",
-        "task_index": 2,
-        "minutes": 400,
-        "day_offset_minutes": 100
-      },
-      {
-        "date": "2027-06-30",
-        "stage": "T1",
-        "task_index": 2,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-07-01",
-        "stage": "T1",
-        "task_index": 2,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-07-02",
-        "stage": "T1",
-        "task_index": 2,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-07-03",
-        "stage": "T1",
-        "task_index": 2,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-07-05",
-        "stage": "T1",
-        "task_index": 2,
-        "minutes": 300,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-07-05",
-        "stage": "M19",
-        "task_index": 0,
-        "minutes": 200,
-        "day_offset_minutes": 300
-      },
-      {
-        "date": "2027-07-06",
-        "stage": "M19",
-        "task_index": 0,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-07-07",
-        "stage": "M19",
-        "task_index": 0,
-        "minutes": 260,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-07-07",
-        "stage": "M19",
-        "task_index": 1,
-        "minutes": 240,
-        "day_offset_minutes": 260
-      },
-      {
-        "date": "2027-07-08",
-        "stage": "M19",
-        "task_index": 1,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-07-09",
-        "stage": "M19",
-        "task_index": 1,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-07-10",
-        "stage": "M19",
-        "task_index": 1,
-        "minutes": 200,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-07-10",
-        "stage": "M19",
-        "task_index": 2,
-        "minutes": 300,
-        "day_offset_minutes": 200
-      },
-      {
-        "date": "2027-07-12",
-        "stage": "M19",
-        "task_index": 2,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-07-13",
-        "stage": "M19",
-        "task_index": 2,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-07-14",
-        "stage": "M19",
-        "task_index": 2,
-        "minutes": 260,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-07-14",
-        "stage": "M19",
-        "task_index": 3,
-        "minutes": 240,
-        "day_offset_minutes": 260
-      },
-      {
-        "date": "2027-07-15",
-        "stage": "M19",
-        "task_index": 3,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-07-16",
-        "stage": "M19",
-        "task_index": 3,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-07-17",
-        "stage": "M19",
-        "task_index": 3,
-        "minutes": 80,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-07-17",
-        "stage": "M19",
-        "task_index": 4,
-        "minutes": 420,
-        "day_offset_minutes": 80
-      },
-      {
-        "date": "2027-07-19",
-        "stage": "M19",
-        "task_index": 4,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-07-20",
-        "stage": "M19",
-        "task_index": 4,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-07-21",
-        "stage": "M19",
-        "task_index": 4,
-        "minutes": 140,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-07-21",
-        "stage": "M19",
-        "task_index": 5,
-        "minutes": 360,
-        "day_offset_minutes": 140
-      },
-      {
-        "date": "2027-07-22",
-        "stage": "M19",
-        "task_index": 5,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-07-23",
-        "stage": "M19",
-        "task_index": 5,
-        "minutes": 460,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-07-23",
-        "stage": "M19",
-        "task_index": 6,
-        "minutes": 40,
-        "day_offset_minutes": 460
-      },
-      {
-        "date": "2027-07-24",
-        "stage": "M19",
-        "task_index": 6,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-07-26",
-        "stage": "M19",
-        "task_index": 6,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-07-27",
-        "stage": "M19",
-        "task_index": 6,
-        "minutes": 400,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-07-27",
-        "stage": "M22",
-        "task_index": 0,
-        "minutes": 100,
-        "day_offset_minutes": 400
-      },
-      {
-        "date": "2027-07-28",
-        "stage": "M22",
-        "task_index": 0,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-07-29",
-        "stage": "M22",
-        "task_index": 0,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-07-30",
-        "stage": "M22",
-        "task_index": 0,
-        "minutes": 100,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-07-30",
-        "stage": "M22",
-        "task_index": 1,
-        "minutes": 400,
-        "day_offset_minutes": 100
-      },
-      {
-        "date": "2027-07-31",
-        "stage": "M22",
-        "task_index": 1,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-08-02",
-        "stage": "M22",
-        "task_index": 1,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-08-03",
-        "stage": "M22",
-        "task_index": 1,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-08-04",
-        "stage": "M22",
-        "task_index": 1,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-08-05",
-        "stage": "M22",
-        "task_index": 1,
-        "minutes": 300,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-08-05",
-        "stage": "M22",
-        "task_index": 2,
-        "minutes": 200,
-        "day_offset_minutes": 300
-      },
-      {
-        "date": "2027-08-06",
-        "stage": "M22",
-        "task_index": 2,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-08-07",
-        "stage": "M22",
-        "task_index": 2,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-08-09",
-        "stage": "M22",
-        "task_index": 2,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-08-10",
-        "stage": "M22",
-        "task_index": 2,
-        "minutes": 100,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-08-10",
-        "stage": "M22",
-        "task_index": 3,
-        "minutes": 400,
-        "day_offset_minutes": 100
-      },
-      {
-        "date": "2027-08-11",
-        "stage": "M22",
-        "task_index": 3,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-08-12",
-        "stage": "M22",
-        "task_index": 3,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-08-13",
-        "stage": "M22",
-        "task_index": 3,
-        "minutes": 400,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-08-13",
-        "stage": "M22",
-        "task_index": 4,
-        "minutes": 100,
-        "day_offset_minutes": 400
-      },
-      {
-        "date": "2027-08-14",
-        "stage": "M22",
-        "task_index": 4,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-08-16",
-        "stage": "M22",
-        "task_index": 4,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-08-17",
-        "stage": "M22",
-        "task_index": 4,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-08-18",
-        "stage": "M22",
-        "task_index": 4,
-        "minutes": 200,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-08-18",
-        "stage": "G2",
-        "task_index": 0,
-        "minutes": 300,
-        "day_offset_minutes": 200
-      },
-      {
-        "date": "2027-08-19",
-        "stage": "G2",
-        "task_index": 0,
-        "minutes": 300,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-08-19",
-        "stage": "T2",
-        "task_index": 0,
-        "minutes": 200,
-        "day_offset_minutes": 300
-      },
-      {
-        "date": "2027-08-20",
-        "stage": "T2",
-        "task_index": 0,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-08-21",
-        "stage": "T2",
-        "task_index": 0,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-08-23",
-        "stage": "T2",
-        "task_index": 0,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-08-24",
-        "stage": "T2",
-        "task_index": 0,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-08-25",
-        "stage": "T2",
-        "task_index": 0,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-08-26",
-        "stage": "T2",
-        "task_index": 1,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-08-27",
-        "stage": "T2",
-        "task_index": 1,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-08-28",
-        "stage": "T2",
-        "task_index": 1,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-08-30",
-        "stage": "T2",
-        "task_index": 1,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-08-31",
-        "stage": "T2",
-        "task_index": 1,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-09-01",
-        "stage": "T2",
-        "task_index": 1,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-09-02",
-        "stage": "T2",
-        "task_index": 1,
-        "minutes": 300,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-09-02",
-        "stage": "T2",
-        "task_index": 2,
-        "minutes": 200,
-        "day_offset_minutes": 300
-      },
-      {
-        "date": "2027-09-03",
-        "stage": "T2",
-        "task_index": 2,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-09-04",
-        "stage": "T2",
-        "task_index": 2,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-09-06",
-        "stage": "T2",
-        "task_index": 2,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-09-07",
-        "stage": "T2",
-        "task_index": 2,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-09-08",
-        "stage": "T2",
-        "task_index": 2,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-09-09",
-        "stage": "M23",
-        "task_index": 0,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-09-10",
-        "stage": "M23",
-        "task_index": 0,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-09-11",
-        "stage": "M23",
-        "task_index": 0,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-09-13",
-        "stage": "M23",
-        "task_index": 0,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-09-14",
-        "stage": "M23",
-        "task_index": 0,
-        "minutes": 100,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-09-14",
-        "stage": "M23",
-        "task_index": 1,
-        "minutes": 400,
-        "day_offset_minutes": 100
-      },
-      {
-        "date": "2027-09-15",
-        "stage": "M23",
-        "task_index": 1,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-09-16",
-        "stage": "M23",
-        "task_index": 1,
-        "minutes": 300,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-09-16",
-        "stage": "M23",
-        "task_index": 2,
-        "minutes": 200,
-        "day_offset_minutes": 300
-      },
-      {
-        "date": "2027-09-17",
-        "stage": "M23",
-        "task_index": 2,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-09-18",
-        "stage": "M23",
-        "task_index": 2,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-09-20",
-        "stage": "M23",
-        "task_index": 2,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-09-21",
-        "stage": "M23",
-        "task_index": 2,
-        "minutes": 220,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-09-21",
-        "stage": "M23",
-        "task_index": 3,
-        "minutes": 280,
-        "day_offset_minutes": 220
-      },
-      {
-        "date": "2027-09-22",
-        "stage": "M23",
-        "task_index": 3,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-09-23",
-        "stage": "M23",
-        "task_index": 3,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-09-24",
-        "stage": "M23",
-        "task_index": 3,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-09-25",
-        "stage": "M23",
-        "task_index": 3,
-        "minutes": 200,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-09-25",
-        "stage": "M23",
-        "task_index": 4,
-        "minutes": 300,
-        "day_offset_minutes": 200
-      },
-      {
-        "date": "2027-09-27",
-        "stage": "M23",
-        "task_index": 4,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-09-28",
-        "stage": "M23",
-        "task_index": 4,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-09-29",
-        "stage": "M23",
-        "task_index": 4,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-09-30",
-        "stage": "M23",
-        "task_index": 4,
-        "minutes": 300,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-09-30",
-        "stage": "M16",
-        "task_index": 0,
-        "minutes": 200,
-        "day_offset_minutes": 300
-      },
-      {
-        "date": "2027-10-01",
-        "stage": "M16",
-        "task_index": 0,
-        "minutes": 400,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-10-01",
-        "stage": "M16",
-        "task_index": 1,
-        "minutes": 100,
-        "day_offset_minutes": 400
-      },
-      {
-        "date": "2027-10-02",
-        "stage": "M16",
-        "task_index": 1,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-10-04",
-        "stage": "M16",
-        "task_index": 2,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-10-05",
-        "stage": "M16",
-        "task_index": 2,
-        "minutes": 100,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-10-05",
-        "stage": "M16",
-        "task_index": 3,
-        "minutes": 400,
-        "day_offset_minutes": 100
-      },
-      {
-        "date": "2027-10-06",
-        "stage": "M16",
-        "task_index": 3,
-        "minutes": 200,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-10-06",
-        "stage": "A2",
-        "task_index": 0,
-        "minutes": 300,
-        "day_offset_minutes": 200
-      },
-      {
-        "date": "2027-10-07",
-        "stage": "A2",
-        "task_index": 0,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-10-08",
-        "stage": "A2",
-        "task_index": 0,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-10-09",
-        "stage": "A2",
-        "task_index": 0,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-10-11",
-        "stage": "A2",
-        "task_index": 0,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-10-12",
-        "stage": "A2",
-        "task_index": 0,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-10-13",
-        "stage": "A2",
-        "task_index": 0,
-        "minutes": 200,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-10-13",
-        "stage": "A2",
-        "task_index": 1,
-        "minutes": 300,
-        "day_offset_minutes": 200
-      },
-      {
-        "date": "2027-10-14",
+        "date": "2028-10-28",
         "stage": "A2",
         "task_index": 1,
         "minutes": 500,
         "day_offset_minutes": 0
       },
       {
-        "date": "2027-10-15",
+        "date": "2028-10-30",
         "stage": "A2",
         "task_index": 1,
         "minutes": 500,
         "day_offset_minutes": 0
       },
       {
-        "date": "2027-10-16",
+        "date": "2028-10-31",
         "stage": "A2",
         "task_index": 1,
         "minutes": 500,
         "day_offset_minutes": 0
       },
       {
-        "date": "2027-10-18",
+        "date": "2028-11-01",
         "stage": "A2",
         "task_index": 1,
-        "minutes": 300,
+        "minutes": 500,
         "day_offset_minutes": 0
       },
       {
-        "date": "2027-10-18",
-        "stage": "A2",
-        "task_index": 2,
-        "minutes": 200,
-        "day_offset_minutes": 300
-      },
-      {
-        "date": "2027-10-19",
+        "date": "2028-11-02",
         "stage": "A2",
         "task_index": 2,
         "minutes": 500,
         "day_offset_minutes": 0
       },
       {
-        "date": "2027-10-20",
+        "date": "2028-11-03",
         "stage": "A2",
         "task_index": 2,
         "minutes": 500,
         "day_offset_minutes": 0
       },
       {
-        "date": "2027-10-21",
+        "date": "2028-11-04",
         "stage": "A2",
         "task_index": 2,
         "minutes": 500,
         "day_offset_minutes": 0
       },
       {
-        "date": "2027-10-22",
+        "date": "2028-11-06",
         "stage": "A2",
         "task_index": 2,
         "minutes": 500,
         "day_offset_minutes": 0
       },
       {
-        "date": "2027-10-23",
+        "date": "2028-11-07",
         "stage": "A2",
         "task_index": 2,
         "minutes": 500,
         "day_offset_minutes": 0
       },
       {
-        "date": "2027-10-25",
+        "date": "2028-11-08",
         "stage": "A2",
         "task_index": 2,
-        "minutes": 300,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-10-25",
-        "stage": "M17",
-        "task_index": 0,
-        "minutes": 200,
-        "day_offset_minutes": 300
-      },
-      {
-        "date": "2027-10-26",
-        "stage": "M17",
-        "task_index": 0,
-        "minutes": 400,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-10-26",
-        "stage": "M17",
-        "task_index": 1,
-        "minutes": 100,
-        "day_offset_minutes": 400
-      },
-      {
-        "date": "2027-10-27",
-        "stage": "M17",
-        "task_index": 1,
         "minutes": 380,
         "day_offset_minutes": 0
       },
       {
-        "date": "2027-10-27",
+        "date": "2028-11-08",
         "stage": "M17",
-        "task_index": 2,
+        "task_index": 0,
         "minutes": 120,
         "day_offset_minutes": 380
       },
       {
-        "date": "2027-10-28",
+        "date": "2028-11-09",
+        "stage": "M17",
+        "task_index": 0,
+        "minutes": 480,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-11-09",
+        "stage": "M17",
+        "task_index": 1,
+        "minutes": 20,
+        "day_offset_minutes": 480
+      },
+      {
+        "date": "2028-11-10",
+        "stage": "M17",
+        "task_index": 1,
+        "minutes": 460,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-11-10",
         "stage": "M17",
         "task_index": 2,
-        "minutes": 300,
+        "minutes": 40,
+        "day_offset_minutes": 460
+      },
+      {
+        "date": "2028-11-11",
+        "stage": "M17",
+        "task_index": 2,
+        "minutes": 380,
         "day_offset_minutes": 0
       },
       {
-        "date": "2027-10-28",
-        "stage": "M14",
-        "task_index": 0,
-        "minutes": 200,
-        "day_offset_minutes": 300
-      },
-      {
-        "date": "2027-10-29",
-        "stage": "M14",
-        "task_index": 0,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-10-30",
-        "stage": "M14",
-        "task_index": 0,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-11-01",
+        "date": "2028-11-11",
         "stage": "M14",
         "task_index": 0,
         "minutes": 120,
+        "day_offset_minutes": 380
+      },
+      {
+        "date": "2028-11-13",
+        "stage": "M14",
+        "task_index": 0,
+        "minutes": 500,
         "day_offset_minutes": 0
       },
       {
-        "date": "2027-11-01",
+        "date": "2028-11-14",
+        "stage": "M14",
+        "task_index": 0,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-11-15",
+        "stage": "M14",
+        "task_index": 0,
+        "minutes": 80,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-11-15",
         "stage": "M14",
         "task_index": 1,
-        "minutes": 380,
-        "day_offset_minutes": 120
+        "minutes": 420,
+        "day_offset_minutes": 80
       },
       {
-        "date": "2027-11-02",
+        "date": "2028-11-16",
         "stage": "M14",
         "task_index": 1,
-        "minutes": 340,
+        "minutes": 240,
         "day_offset_minutes": 0
       },
       {
-        "date": "2027-11-02",
+        "date": "2028-11-16",
         "stage": "M14",
         "task_index": 2,
-        "minutes": 160,
-        "day_offset_minutes": 340
+        "minutes": 260,
+        "day_offset_minutes": 240
       },
       {
-        "date": "2027-11-03",
+        "date": "2028-11-17",
         "stage": "M14",
         "task_index": 2,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-11-04",
-        "stage": "M14",
-        "task_index": 2,
-        "minutes": 60,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-11-04",
-        "stage": "M14",
-        "task_index": 3,
-        "minutes": 440,
-        "day_offset_minutes": 60
-      },
-      {
-        "date": "2027-11-05",
-        "stage": "M14",
-        "task_index": 3,
-        "minutes": 100,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-11-05",
-        "stage": "M18",
-        "task_index": 0,
-        "minutes": 400,
-        "day_offset_minutes": 100
-      },
-      {
-        "date": "2027-11-06",
-        "stage": "M18",
-        "task_index": 0,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-11-08",
-        "stage": "M18",
-        "task_index": 0,
-        "minutes": 300,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-11-08",
-        "stage": "M18",
-        "task_index": 1,
-        "minutes": 200,
-        "day_offset_minutes": 300
-      },
-      {
-        "date": "2027-11-09",
-        "stage": "M18",
-        "task_index": 1,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-11-10",
-        "stage": "M18",
-        "task_index": 1,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-11-11",
-        "stage": "M18",
-        "task_index": 2,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-11-12",
-        "stage": "M18",
-        "task_index": 2,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-11-13",
-        "stage": "M18",
-        "task_index": 2,
-        "minutes": 200,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-11-13",
-        "stage": "M18",
-        "task_index": 3,
-        "minutes": 300,
-        "day_offset_minutes": 200
-      },
-      {
-        "date": "2027-11-15",
-        "stage": "M18",
-        "task_index": 3,
-        "minutes": 300,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-11-15",
-        "stage": "A3",
-        "task_index": 0,
-        "minutes": 200,
-        "day_offset_minutes": 300
-      },
-      {
-        "date": "2027-11-16",
-        "stage": "A3",
-        "task_index": 0,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-11-17",
-        "stage": "A3",
-        "task_index": 0,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-11-18",
-        "stage": "A3",
-        "task_index": 0,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-11-19",
-        "stage": "A3",
-        "task_index": 0,
         "minutes": 400,
         "day_offset_minutes": 0
       },
       {
-        "date": "2027-11-19",
-        "stage": "A3",
-        "task_index": 1,
+        "date": "2028-11-17",
+        "stage": "M14",
+        "task_index": 3,
         "minutes": 100,
         "day_offset_minutes": 400
       },
       {
-        "date": "2027-11-20",
-        "stage": "A3",
-        "task_index": 1,
-        "minutes": 500,
+        "date": "2028-11-18",
+        "stage": "M14",
+        "task_index": 3,
+        "minutes": 440,
         "day_offset_minutes": 0
       },
       {
-        "date": "2027-11-22",
-        "stage": "A3",
-        "task_index": 1,
-        "minutes": 500,
-        "day_offset_minutes": 0
+        "date": "2028-11-18",
+        "stage": "M18",
+        "task_index": 0,
+        "minutes": 60,
+        "day_offset_minutes": 440
       },
       {
-        "date": "2027-11-23",
-        "stage": "A3",
-        "task_index": 1,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-11-24",
-        "stage": "A3",
-        "task_index": 1,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-11-25",
-        "stage": "A3",
-        "task_index": 1,
-        "minutes": 300,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-11-25",
-        "stage": "A3",
-        "task_index": 2,
-        "minutes": 200,
-        "day_offset_minutes": 300
-      },
-      {
-        "date": "2027-11-26",
-        "stage": "A3",
-        "task_index": 2,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-11-27",
-        "stage": "A3",
-        "task_index": 2,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-11-29",
-        "stage": "A3",
-        "task_index": 2,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-11-30",
-        "stage": "A3",
-        "task_index": 2,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-12-01",
-        "stage": "A3",
-        "task_index": 2,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-12-02",
-        "stage": "G3",
+        "date": "2028-11-20",
+        "stage": "M18",
         "task_index": 0,
         "minutes": 500,
         "day_offset_minutes": 0
       },
       {
-        "date": "2027-12-03",
-        "stage": "G3",
-        "task_index": 0,
-        "minutes": 100,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-12-03",
-        "stage": "T3",
-        "task_index": 0,
-        "minutes": 400,
-        "day_offset_minutes": 100
-      },
-      {
-        "date": "2027-12-04",
-        "stage": "T3",
+        "date": "2028-11-21",
+        "stage": "M18",
         "task_index": 0,
         "minutes": 500,
         "day_offset_minutes": 0
       },
       {
-        "date": "2027-12-06",
-        "stage": "T3",
+        "date": "2028-11-22",
+        "stage": "M18",
         "task_index": 0,
-        "minutes": 500,
+        "minutes": 80,
         "day_offset_minutes": 0
       },
       {
-        "date": "2027-12-07",
-        "stage": "T3",
-        "task_index": 0,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-12-08",
-        "stage": "T3",
-        "task_index": 0,
-        "minutes": 200,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-12-08",
-        "stage": "T3",
+        "date": "2028-11-22",
+        "stage": "M18",
         "task_index": 1,
-        "minutes": 300,
-        "day_offset_minutes": 200
+        "minutes": 420,
+        "day_offset_minutes": 80
       },
       {
-        "date": "2027-12-09",
-        "stage": "T3",
+        "date": "2028-11-23",
+        "stage": "M18",
         "task_index": 1,
         "minutes": 500,
         "day_offset_minutes": 0
       },
       {
-        "date": "2027-12-10",
-        "stage": "T3",
+        "date": "2028-11-24",
+        "stage": "M18",
         "task_index": 1,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-12-11",
-        "stage": "T3",
-        "task_index": 1,
-        "minutes": 500,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-12-13",
-        "stage": "T3",
-        "task_index": 1,
-        "minutes": 300,
-        "day_offset_minutes": 0
-      },
-      {
-        "date": "2027-12-13",
-        "stage": "M24",
-        "task_index": 0,
-        "minutes": 200,
-        "day_offset_minutes": 300
-      },
-      {
-        "date": "2027-12-14",
-        "stage": "M24",
-        "task_index": 0,
         "minutes": 160,
         "day_offset_minutes": 0
       },
       {
-        "date": "2027-12-14",
-        "stage": "M24",
-        "task_index": 1,
+        "date": "2028-11-24",
+        "stage": "M18",
+        "task_index": 2,
         "minutes": 340,
         "day_offset_minutes": 160
       },
       {
-        "date": "2027-12-15",
-        "stage": "M24",
+        "date": "2028-11-25",
+        "stage": "M18",
+        "task_index": 2,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-11-27",
+        "stage": "M18",
+        "task_index": 2,
+        "minutes": 300,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-11-27",
+        "stage": "M18",
+        "task_index": 3,
+        "minutes": 200,
+        "day_offset_minutes": 300
+      },
+      {
+        "date": "2028-11-28",
+        "stage": "M18",
+        "task_index": 3,
+        "minutes": 400,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-11-28",
+        "stage": "A3",
+        "task_index": 0,
+        "minutes": 100,
+        "day_offset_minutes": 400
+      },
+      {
+        "date": "2028-11-29",
+        "stage": "A3",
+        "task_index": 0,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-11-30",
+        "stage": "A3",
+        "task_index": 0,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-12-01",
+        "stage": "A3",
+        "task_index": 0,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-12-02",
+        "stage": "A3",
+        "task_index": 0,
+        "minutes": 440,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-12-02",
+        "stage": "A3",
         "task_index": 1,
-        "minutes": 140,
+        "minutes": 60,
+        "day_offset_minutes": 440
+      },
+      {
+        "date": "2028-12-04",
+        "stage": "A3",
+        "task_index": 1,
+        "minutes": 500,
         "day_offset_minutes": 0
       },
       {
-        "date": "2027-12-15",
-        "stage": "M24",
-        "task_index": 2,
-        "minutes": 360,
-        "day_offset_minutes": 140
-      },
-      {
-        "date": "2027-12-16",
-        "stage": "M24",
-        "task_index": 2,
-        "minutes": 120,
+        "date": "2028-12-05",
+        "stage": "A3",
+        "task_index": 1,
+        "minutes": 500,
         "day_offset_minutes": 0
       },
       {
-        "date": "2027-12-16",
-        "stage": "M24",
-        "task_index": 3,
-        "minutes": 380,
-        "day_offset_minutes": 120
+        "date": "2028-12-06",
+        "stage": "A3",
+        "task_index": 1,
+        "minutes": 500,
+        "day_offset_minutes": 0
       },
       {
-        "date": "2027-12-17",
-        "stage": "M24",
-        "task_index": 3,
+        "date": "2028-12-07",
+        "stage": "A3",
+        "task_index": 1,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-12-08",
+        "stage": "A3",
+        "task_index": 1,
+        "minutes": 280,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-12-08",
+        "stage": "A3",
+        "task_index": 2,
+        "minutes": 220,
+        "day_offset_minutes": 280
+      },
+      {
+        "date": "2028-12-09",
+        "stage": "A3",
+        "task_index": 2,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-12-11",
+        "stage": "A3",
+        "task_index": 2,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-12-12",
+        "stage": "A3",
+        "task_index": 2,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-12-13",
+        "stage": "A3",
+        "task_index": 2,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-12-14",
+        "stage": "A3",
+        "task_index": 2,
+        "minutes": 420,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-12-14",
+        "stage": "G3",
+        "task_index": 0,
+        "minutes": 80,
+        "day_offset_minutes": 420
+      },
+      {
+        "date": "2028-12-15",
+        "stage": "G3",
+        "task_index": 0,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-12-16",
+        "stage": "G3",
+        "task_index": 0,
+        "minutes": 20,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-12-16",
+        "stage": "T3",
+        "task_index": 0,
+        "minutes": 480,
+        "day_offset_minutes": 20
+      },
+      {
+        "date": "2028-12-18",
+        "stage": "T3",
+        "task_index": 0,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-12-19",
+        "stage": "T3",
+        "task_index": 0,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-12-20",
+        "stage": "T3",
+        "task_index": 0,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-12-21",
+        "stage": "T3",
+        "task_index": 0,
+        "minutes": 60,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-12-21",
+        "stage": "T3",
+        "task_index": 1,
+        "minutes": 440,
+        "day_offset_minutes": 60
+      },
+      {
+        "date": "2028-12-22",
+        "stage": "T3",
+        "task_index": 1,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-12-23",
+        "stage": "T3",
+        "task_index": 1,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-12-25",
+        "stage": "T3",
+        "task_index": 1,
+        "minutes": 500,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-12-26",
+        "stage": "T3",
+        "task_index": 1,
         "minutes": 100,
         "day_offset_minutes": 0
       },
       {
-        "date": "2027-12-17",
-        "stage": "G4",
+        "date": "2028-12-26",
+        "stage": "M24",
         "task_index": 0,
-        "minutes": 400,
+        "minutes": 360,
         "day_offset_minutes": 100
       },
       {
-        "date": "2027-12-18",
+        "date": "2028-12-26",
+        "stage": "M24",
+        "task_index": 1,
+        "minutes": 40,
+        "day_offset_minutes": 460
+      },
+      {
+        "date": "2028-12-27",
+        "stage": "M24",
+        "task_index": 1,
+        "minutes": 440,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-12-27",
+        "stage": "M24",
+        "task_index": 2,
+        "minutes": 60,
+        "day_offset_minutes": 440
+      },
+      {
+        "date": "2028-12-28",
+        "stage": "M24",
+        "task_index": 2,
+        "minutes": 420,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-12-28",
+        "stage": "M24",
+        "task_index": 3,
+        "minutes": 80,
+        "day_offset_minutes": 420
+      },
+      {
+        "date": "2028-12-29",
+        "stage": "M24",
+        "task_index": 3,
+        "minutes": 400,
+        "day_offset_minutes": 0
+      },
+      {
+        "date": "2028-12-29",
         "stage": "G4",
         "task_index": 0,
-        "minutes": 200,
+        "minutes": 100,
+        "day_offset_minutes": 400
+      },
+      {
+        "date": "2028-12-30",
+        "stage": "G4",
+        "task_index": 0,
+        "minutes": 500,
         "day_offset_minutes": 0
       }
     ]
