@@ -1,5 +1,5 @@
 {
-  "version": "4.5",
+  "version": "4.6",
   "start": "2028-01-02",
   "deadline": "2028-12-31",
   "items": {
@@ -17,9 +17,9 @@
             "en": "Diagnostic and targeted refresh"
           },
           "learn": 2,
-          "build": 3,
+          "build": 2,
           "verify": 1,
-          "hours": 6,
+          "hours": 5,
           "source_refs": [
             "M02 pp1–2,9"
           ],
@@ -37,10 +37,10 @@
             "ru": "Векторы, базисы и силы на геометрии будущей ноги",
             "en": "Vectors, frames and forces on the future leg geometry"
           },
-          "learn": 4,
-          "build": 7,
-          "verify": 2,
-          "hours": 13,
+          "learn": 5,
+          "build": 4,
+          "verify": 1,
+          "hours": 10,
           "source_refs": [
             "M02 pp3,9,15",
             "M08 pp3–4"
@@ -60,10 +60,10 @@
             "ru": "Линейная калибровка и обусловленность",
             "en": "Linear calibration and conditioning"
           },
-          "learn": 5,
-          "build": 8,
-          "verify": 4,
-          "hours": 17,
+          "learn": 6,
+          "build": 5,
+          "verify": 2,
+          "hours": 13,
           "source_refs": [
             "M02 pp4–5,9"
           ],
@@ -81,10 +81,10 @@
             "ru": "Производная и Якобиан через движение звена",
             "en": "Derivatives and Jacobians through link motion"
           },
-          "learn": 4,
-          "build": 7,
-          "verify": 2,
-          "hours": 13,
+          "learn": 5,
+          "build": 4,
+          "verify": 1,
+          "hours": 10,
           "source_refs": [
             "M02 pp6,10,15"
           ],
@@ -102,10 +102,10 @@
             "ru": "Один динамический пример и шаг интегрирования",
             "en": "One dynamic example and integration timestep"
           },
-          "learn": 4,
-          "build": 7,
+          "learn": 5,
+          "build": 4,
           "verify": 2,
-          "hours": 13,
+          "hours": 11,
           "source_refs": [
             "M02 pp7,10",
             "M09 pp3–4"
@@ -126,9 +126,9 @@
             "en": "Shared maths functions and concise verification"
           },
           "learn": 0,
-          "build": 2,
+          "build": 3,
           "verify": 4,
-          "hours": 6,
+          "hours": 7,
           "source_refs": [
             "M02 pp8,11–14"
           ],
@@ -144,7 +144,7 @@
       "prerequisites": [
         "M01"
       ],
-      "hours": 68,
+      "hours": 56,
       "kept": {
         "ru": "Прикладные матрицы, тригонометрия, производные, единицы и базовая численная устойчивость остаются обязательными.",
         "en": "Applied matrices, trigonometry, derivatives, units and basic numerical stability remain compulsory."
@@ -156,8 +156,8 @@
         }
       ],
       "rationale": {
-        "ru": "72 ч включают восстановление высшей математики и новое применение к роботу. Программирование и оформление используют имеющийся опыт. Часы не означают, что уже решённую диагностическую задачу надо повторять до исчерпания бюджета.",
-        "en": "72 hours cover university-maths refresh and new robotics application. Coding/presentation use existing experience; a passed diagnostic does not require repetition merely to consume budget."
+        "ru": "56 ч: изучение 23, реализация 22, проверка 11. Индивидуальная средняя рабочая оценка для указанного опыта; новые темы изучаются полностью в границах задания. Готовые код, стенды, журналы и методики используются повторно. Обычная отладка входит в реализацию; отдельный процент на непредсказуемые переделки не добавлен.",
+        "en": "56 h: learning 23, implementation 22, verification 11. Individually reviewed nominal effort for the stated experience; new topics retain their defined learning scope. Reuse code, rigs, logs and protocols. Implementation includes routine debugging; no blanket rework percentage is added."
       },
       "gate": {
         "ru": "Самостоятельно преобразовать точку, вычислить момент и производную, выполнить калибровку и распознать вырожденность/неустойчивый шаг.",
@@ -167,8 +167,15 @@
         "ru": "Исходный M02, pp3–7: векторы/базисы/момент, линейная калибровка и обусловленность, производная/Якобиан, один ОДУ-пример. Из pp9–10 выбрать задачи, проверяющие диагностические пробелы; p15 — связь ṗ=Jq̇. Полный старый список книг не является обязательным чтением.",
         "en": "Original M02 pp3–7: vectors/frames/moment, linear calibration/conditioning, derivative/Jacobian and one ODE example. Select pp9–10 exercises for diagnostic gaps; p15 supplies ṗ=Jq̇. The full former book list is not assigned reading."
       },
-      "base": 68,
-      "track": "core"
+      "base": 56,
+      "track": "core",
+      "learn": 23,
+      "build": 22,
+      "verify": 11,
+      "hour_review": {
+        "reviewed_on": "2026-11-11",
+        "report": "task-hour-review.json"
+      }
     },
     "M03": {
       "id": "M03",
@@ -183,8 +190,8 @@
             "ru": "Шум и неопределённость реального датчика",
             "en": "Noise and uncertainty of a real sensor"
           },
-          "learn": 4,
-          "build": 5,
+          "learn": 5,
+          "build": 4,
           "verify": 2,
           "hours": 11,
           "source_refs": [
@@ -204,10 +211,10 @@
             "ru": "Один протокол повторяемой физической калибровки",
             "en": "One repeatable physical calibration protocol"
           },
-          "learn": 4,
-          "build": 9,
-          "verify": 4,
-          "hours": 17,
+          "learn": 5,
+          "build": 7,
+          "verify": 3,
+          "hours": 15,
           "source_refs": [
             "M03 pp5,9,14",
             "M02 calibration"
@@ -227,10 +234,10 @@
             "ru": "Ошибка результата и границы доверия",
             "en": "Result error and inference limits"
           },
-          "learn": 3,
-          "build": 6,
-          "verify": 4,
-          "hours": 13,
+          "learn": 4,
+          "build": 4,
+          "verify": 3,
+          "hours": 11,
           "source_refs": [
             "M03 pp7–8,10,15"
           ],
@@ -248,8 +255,8 @@
             "ru": "Ограниченная подгонка и выбросы",
             "en": "Bounded fitting and outliers"
           },
-          "learn": 3,
-          "build": 6,
+          "learn": 4,
+          "build": 5,
           "verify": 2,
           "hours": 11,
           "source_refs": [
@@ -268,7 +275,7 @@
         "M02",
         "M06"
       ],
-      "hours": 52,
+      "hours": 48,
       "kept": {
         "ru": "Физические повторы, независимая проверка, смещение и ковариация, ограничения, обусловленность и корректная единица эксперимента.",
         "en": "Physical repeats, independent validation, bias/covariance, bounds, conditioning and an honest experimental unit."
@@ -280,8 +287,8 @@
         }
       ],
       "rationale": {
-        "ru": "56 ч — одна качественная измерительная работа вместо обязательной серии самостоятельных статистических лабораторных. Количество повторов выбирается под калибровку до сбора данных; исходное упражнение с 30 установками сохранено как готовый расширенный протокол.",
-        "en": "56 hours cover one sound measurement study rather than a compulsory sequence of standalone statistics labs. Repetition count is chosen before collection; the original thirty-placement exercise remains an extended protocol."
+        "ru": "48 ч: изучение 18, реализация 20, проверка 10. Индивидуальная средняя рабочая оценка для указанного опыта; новые темы изучаются полностью в границах задания. Готовые код, стенды, журналы и методики используются повторно. Обычная отладка входит в реализацию; отдельный процент на непредсказуемые переделки не добавлен.",
+        "en": "48 h: learning 18, implementation 20, verification 10. Individually reviewed nominal effort for the stated experience; new topics retain their defined learning scope. Reuse code, rigs, logs and protocols. Implementation includes routine debugging; no blanket rework percentage is added."
       },
       "gate": {
         "ru": "Проверочная физическая серия не использована для подгонки; неопределённость не скрывает систематическое смещение, контактные/температурные условия и число независимых повторов.",
@@ -291,8 +298,15 @@
         "ru": "Исходный M03, pp3–8: систематическое смещение/шум/ковариация, независимые повторы и проверочная выборка, калибровка с ограничениями, обусловленность и один метод неопределённости; pp11–14 — ошибки достоверности по своей работе. Остальные сравнения методов — справочно.",
         "en": "Original M03 pp3–8: bias/noise/covariance, independent repeats/held-out runs, bounded calibration, conditioning and one uncertainty method; pp11–14 supply validity faults relevant to the project. Other method comparisons are reference material."
       },
-      "base": 52,
-      "track": "core"
+      "base": 48,
+      "track": "core",
+      "learn": 18,
+      "build": 20,
+      "verify": 10,
+      "hour_review": {
+        "reviewed_on": "2026-11-11",
+        "report": "task-hour-review.json"
+      }
     },
     "M08": {
       "id": "M08",
@@ -307,10 +321,10 @@
             "ru": "Системы координат и реальные оси CAD",
             "en": "Coordinate frames and actual CAD axes"
           },
-          "learn": 5,
-          "build": 9,
-          "verify": 3,
-          "hours": 17,
+          "learn": 6,
+          "build": 8,
+          "verify": 2,
+          "hours": 16,
           "source_refs": [
             "M08 pp3–4,9"
           ],
@@ -328,10 +342,10 @@
             "ru": "FK трёхосной ноги",
             "en": "Three-axis leg FK"
           },
-          "learn": 4,
-          "build": 11,
-          "verify": 4,
-          "hours": 19,
+          "learn": 5,
+          "build": 10,
+          "verify": 3,
+          "hours": 18,
           "source_refs": [
             "M08 pp4–5,9,15"
           ],
@@ -349,8 +363,8 @@
             "ru": "IK и достижимость всей траектории",
             "en": "IK and whole-path reachability"
           },
-          "learn": 6,
-          "build": 11,
+          "learn": 7,
+          "build": 10,
           "verify": 4,
           "hours": 21,
           "source_refs": [
@@ -370,8 +384,8 @@
             "ru": "Якобиан, скорость и нагрузка",
             "en": "Jacobian, velocity and loading"
           },
-          "learn": 6,
-          "build": 9,
+          "learn": 7,
+          "build": 8,
           "verify": 4,
           "hours": 19,
           "source_refs": [
@@ -391,8 +405,8 @@
             "ru": "Одна численное решение IK на простом примере манипулятора",
             "en": "One numerical IK on a simple arm example"
           },
-          "learn": 4,
-          "build": 7,
+          "learn": 5,
+          "build": 6,
           "verify": 2,
           "hours": 13,
           "source_refs": [
@@ -412,10 +426,10 @@
             "ru": "Неподвижная опора и общий контракт",
             "en": "Fixed stance point and shared contract"
           },
-          "learn": 2,
-          "build": 7,
+          "learn": 3,
+          "build": 5,
           "verify": 4,
-          "hours": 13,
+          "hours": 12,
           "source_refs": [
             "M08 pp8,11–14"
           ],
@@ -432,7 +446,7 @@
         "M02",
         "M05"
       ],
-      "hours": 102,
+      "hours": 99,
       "kept": {
         "ru": "FK/IK/Якобиан, реальные CAD-оси, сингулярности, пределы, зеркальность и перенос из системы корпуса в системы координат ног.",
         "en": "FK/IK/Jacobian, actual CAD axes, singularities, limits, mirroring and body-to-leg transforms."
@@ -444,8 +458,8 @@
         }
       ],
       "rationale": {
-        "ru": "108 ч оставлены почти целиком: кинематика для пользователя новая и непосредственно нужна всем проектам. Убрано главным образом оформление и дублирующие учебные цепи, а не проверка геометрии.",
-        "en": "108 hours are largely retained: kinematics is new and directly useful across the projects. Cuts mainly remove presentation and duplicate teaching chains, not geometric verification."
+        "ru": "99 ч: изучение 33, реализация 47, проверка 19. Индивидуальная средняя рабочая оценка для указанного опыта; новые темы изучаются полностью в границах задания. Готовые код, стенды, журналы и методики используются повторно. Обычная отладка входит в реализацию; отдельный процент на непредсказуемые переделки не добавлен.",
+        "en": "99 h: learning 33, implementation 47, verification 19. Individually reviewed nominal effort for the stated experience; new topics retain their defined learning scope. Reuse code, rigs, logs and protocols. Implementation includes routine debugging; no blanket rework percentage is added."
       },
       "gate": {
         "ru": "Нога достигает допустимых точек и отклоняет невозможные; независимая проверка FK/J и фиксированной точки в мировой системе координат проходит. Это не сертификат точности ещё не собранного манипулятора.",
@@ -455,8 +469,15 @@
         "ru": "Исходный M08, с. 3–8: системы координат и вращения, FK реальных осей, ветви решения IK, численное решение IK с демпфированием, Якобиан и виртуальная работа; с. 11–14 — ошибки, относящиеся к ноге. DH/PoE читать для понимания различий; вторая обязательная реализация не требуется.",
         "en": "Original M08 pp3–8: frames/rotations, actual-axis FK, IK branches, numerical damped IK and Jacobian/virtual work; pp11–14 supply leg-relevant faults. Read DH/PoE for awareness, without assigning a second implementation."
       },
-      "base": 102,
-      "track": "core"
+      "base": 99,
+      "track": "core",
+      "learn": 33,
+      "build": 47,
+      "verify": 19,
+      "hour_review": {
+        "reviewed_on": "2026-11-11",
+        "report": "task-hour-review.json"
+      }
     },
     "M09": {
       "id": "M09",
@@ -666,10 +687,10 @@
             "ru": "PID на имеющейся модели сустава",
             "en": "PID on the existing joint model"
           },
-          "learn": 6,
-          "build": 9,
-          "verify": 4,
-          "hours": 19,
+          "learn": 7,
+          "build": 8,
+          "verify": 3,
+          "hours": 18,
           "source_refs": [
             "M10 pp3–4,9"
           ],
@@ -687,8 +708,8 @@
             "ru": "Цифровой контур, задержки и свежесть данных",
             "en": "Digital loop, delays and data freshness"
           },
-          "learn": 4,
-          "build": 8,
+          "learn": 5,
+          "build": 7,
           "verify": 3,
           "hours": 15,
           "source_refs": [
@@ -708,8 +729,8 @@
             "ru": "Настройка по реальному стендовому отклику",
             "en": "Tune against actual bench response"
           },
-          "learn": 3,
-          "build": 10,
+          "learn": 4,
+          "build": 9,
           "verify": 4,
           "hours": 17,
           "source_refs": [
@@ -731,10 +752,10 @@
             "ru": "Внешний контур крена и тангажа через заданную позу и IK",
             "en": "Outer roll/pitch control through pose and IK"
           },
-          "learn": 5,
+          "learn": 6,
           "build": 8,
           "verify": 4,
-          "hours": 17,
+          "hours": 18,
           "source_refs": [
             "M10 pp6–7,10–11",
             "M08 fixed stance point",
@@ -757,9 +778,9 @@
             "en": "Shared metrics and fault replay"
           },
           "learn": 0,
-          "build": 3,
-          "verify": 5,
-          "hours": 8,
+          "build": 2,
+          "verify": 4,
+          "hours": 6,
           "source_refs": [
             "M10 pp8,11–14"
           ],
@@ -777,10 +798,10 @@
             "ru": "Robust Control: вводный практикум на одном суставе",
             "en": "Robust Control: introductory single-joint lab"
           },
-          "learn": 5,
+          "learn": 6,
           "build": 7,
           "verify": 7,
-          "hours": 19,
+          "hours": 20,
           "result": {
             "ru": "На модели M09 задать обоснованные интервалы инерции и демпфирования и границу задержки. Для линейной модели сравнить номинальную и консервативную настройку PD/PID по полюсам, запасам устойчивости и ошибке слежения; отдельно проверить насыщение, возмущение и крайние параметры в симуляции. Представить условия применимости анализа и контрпример за их пределами. Сетка испытаний не считается доказательством устойчивости всего диапазона. H∞, μ-синтез и robust MPC остаются дальнейшим развитием.",
             "en": "On the M09 model, specify justified inertia/damping intervals and a delay bound. Compare nominal and conservative PD/PID tuning using linear-model poles, stability margins and tracking error; separately simulate saturation, disturbances and parameter extremes. Report analysis assumptions and a counterexample outside them. A test grid is not a proof of stability over the whole range. H-infinity, mu-synthesis and robust MPC remain further development."
@@ -801,7 +822,7 @@
         "M09",
         "M11"
       ],
-      "hours": 95,
+      "hours": 94,
       "kept": {
         "ru": "Практический PID, цифровые задержки, ограничения, стендовая проверка и внешний позиционный контур обязательны.",
         "en": "Practical PID, digital delay, limits, bench validation and outer position control remain compulsory."
@@ -813,8 +834,8 @@
         }
       ],
       "rationale": {
-        "ru": "100 ч используют готовые стенд M07 и модель M09. Встроенный PID сервопривода с закрытой реализацией не считается собственным контуром управления моментом; физическая проверка крена и тангажа здесь повторно не учитывается. Добавлен отдельный вводный практикум: 20 ч; оценка предполагает готовую инфраструктуру предыдущих заданий.",
-        "en": "100 hours reuse the M07/M09 rig and model. A proprietary servo PID is not presented as a custom torque loop, and physical roll/pitch testing is not counted twice. A separate introductory lab adds 20 h, assuming the preceding tasks provide working infrastructure."
+        "ru": "94 ч: изучение 28, реализация 41, проверка 25. Индивидуальная средняя рабочая оценка для указанного опыта; новые темы изучаются полностью в границах задания. Готовые код, стенды, журналы и методики используются повторно. Обычная отладка входит в реализацию; отдельный процент на непредсказуемые переделки не добавлен.",
+        "en": "94 h: learning 28, implementation 41, verification 25. Individually reviewed nominal effort for the stated experience; new topics retain their defined learning scope. Reuse code, rigs, logs and protocols. Implementation includes routine debugging; no blanket rework percentage is added."
       },
       "gate": {
         "ru": "Измеренный контур выполняет заранее выбранные требования и предсказуемо обрабатывает устаревшие данные/пределы; оценка до физических испытаний корпуса остаётся модельной.",
@@ -824,8 +845,15 @@
         "ru": "Исходный M10, pp3–7: PID/упреждающее воздействие, насыщение/защита от интегрального насыщения, Ts/задержки и внешний контур крена и тангажа; pp11–14 — устаревшие данные, насыщение и восстановление. Частотную терминологию понять; полный эксперимент по диаграммам Боде и запасам устойчивости читать при выборе D_FREQ.",
         "en": "Original M10 pp3–7: PID/feedforward, saturation/anti-windup, Ts/delay and outer roll/pitch control; pp11–14 cover stale data, saturation and recovery. Understand frequency terminology; assign the full Bode/margins experiment only with D_FREQ."
       },
-      "base": 95,
-      "track": "core"
+      "base": 94,
+      "track": "core",
+      "learn": 28,
+      "build": 41,
+      "verify": 25,
+      "hour_review": {
+        "reviewed_on": "2026-11-11",
+        "report": "task-hour-review.json"
+      }
     },
     "M11": {
       "id": "M11",
@@ -840,10 +868,10 @@
             "ru": "Оси IMU, время и измеряемые величины",
             "en": "IMU axes, time and measured quantities"
           },
-          "learn": 3,
-          "build": 5,
-          "verify": 3,
-          "hours": 11,
+          "learn": 4,
+          "build": 4,
+          "verify": 2,
+          "hours": 10,
           "source_refs": [
             "M11 pp3–5",
             "M03 calibration"
@@ -863,10 +891,10 @@
             "ru": "Один пригодный фильтр крена и тангажа",
             "en": "One suitable roll/pitch filter"
           },
-          "learn": 6,
-          "build": 9,
+          "learn": 8,
+          "build": 10,
           "verify": 4,
-          "hours": 19,
+          "hours": 22,
           "source_refs": [
             "M11 p5,task4",
             "M19 pp3–4"
@@ -886,10 +914,10 @@
             "ru": "Проверка ориентации, выбросов и отказов",
             "en": "Orientation, outlier and failure validation"
           },
-          "learn": 5,
+          "learn": 7,
           "build": 8,
           "verify": 4,
-          "hours": 17,
+          "hours": 19,
           "source_refs": [
             "M11 pp5,11–13",
             "M19 pp3–4,7"
@@ -910,9 +938,9 @@
             "en": "Filter contract and observability limits"
           },
           "learn": 2,
-          "build": 4,
+          "build": 3,
           "verify": 4,
-          "hours": 10,
+          "hours": 9,
           "source_refs": [
             "M11 pp3–4,8,14",
             "M19 pp7,11"
@@ -933,7 +961,7 @@
         "M06",
         "M08"
       ],
-      "hours": 57,
+      "hours": 60,
       "kept": {
         "ru": "Практическая оценка ориентации, смещение, временное согласование, качество данных, отказы и наблюдаемость сохранены.",
         "en": "Practical orientation, bias, time alignment, quality, failure and observability are retained."
@@ -949,8 +977,8 @@
         }
       ],
       "rationale": {
-        "ru": "60 ч на проверенную оценку ориентации по IMU, достаточную для медленного робота. Отличие от прежних 150 ч связано с выбором одного метода и отказом от обязательного академического сравнения. Основы причинной фильтрации из M04 используются повторно; здесь проверяются реальный IMU и объединение данных его датчиков.",
-        "en": "60 hours provide validated IMU estimates needed by a slow robot. The reduction from 150 hours comes from method selection and removing compulsory academic comparisons, not another blanket maths cut. Reuse M04 introductory causal-filter concepts; this block evaluates the actual IMU and operational fusion of its channels."
+        "ru": "60 ч: изучение 21, реализация 25, проверка 14. Индивидуальная средняя рабочая оценка для указанного опыта; новые темы изучаются полностью в границах задания. Готовые код, стенды, журналы и методики используются повторно. Обычная отладка входит в реализацию; отдельный процент на непредсказуемые переделки не добавлен.",
+        "en": "60 h: learning 21, implementation 25, verification 14. Individually reviewed nominal effort for the stated experience; new topics retain their defined learning scope. Reuse code, rigs, logs and protocols. Implementation includes routine debugging; no blanket rework percentage is added."
       },
       "gate": {
         "ru": "Фильтр проходит заранее заданный физический тест крена и тангажа, корректно сообщает о недостоверных данных и не использует скрытые эталонные данные.",
@@ -960,8 +988,15 @@
         "ru": "Исходный M11, с. 3–5: состояние и измерение, наблюдаемость, шум, смещение и ограничения оценки наклона; с. 11–13 — проверки ускорения, выбросов и пропусков. Использовать эти требования для выбранного AHRS или комплементарного фильтра; выводы KF/EKF, уравнения Риккати и QP не включать в обязательную программу.",
         "en": "Original M11 pp3–5: state/measurement, observability, noise/bias and tilt-estimation limits; pp11–13 cover acceleration/outlier/gap checks. Apply these requirements to the chosen AHRS/complementary filter; KF/EKF/Riccati/QP derivations are not core reading."
       },
-      "base": 57,
-      "track": "core"
+      "base": 60,
+      "track": "core",
+      "learn": 21,
+      "build": 25,
+      "verify": 14,
+      "hour_review": {
+        "reviewed_on": "2026-11-11",
+        "report": "task-hour-review.json"
+      }
     },
     "M19": {
       "id": "M19",
@@ -976,10 +1011,10 @@
             "ru": "Расширить одну модель ноги до четырёх и шести",
             "en": "Extend the one-leg model to four and six legs"
           },
-          "learn": 3,
-          "build": 8,
-          "verify": 4,
-          "hours": 15,
+          "learn": 4,
+          "build": 6,
+          "verify": 3,
+          "hours": 13,
           "source_refs": [
             "M13 geometry extension",
             "M19 pp1–3",
@@ -1001,10 +1036,10 @@
             "ru": "Доверие к контакту и согласованное состояние",
             "en": "Contact confidence and consistent state"
           },
-          "learn": 5,
-          "build": 12,
-          "verify": 6,
-          "hours": 23,
+          "learn": 6,
+          "build": 10,
+          "verify": 4,
+          "hours": 20,
           "source_refs": [
             "M19 pp3–4,7,9"
           ],
@@ -1022,10 +1057,10 @@
             "ru": "Автомат состояний медленной походки crawl и перенос веса",
             "en": "Crawl FSM and weight transfer"
           },
-          "learn": 6,
-          "build": 14,
-          "verify": 5,
-          "hours": 25,
+          "learn": 7,
+          "build": 13,
+          "verify": 4,
+          "hours": 24,
           "source_refs": [
             "M19 pp5,9–10,15"
           ],
@@ -1043,10 +1078,10 @@
             "ru": "Перенос ноги и пригодность точки опоры",
             "en": "Swing and feasible footholds"
           },
-          "learn": 5,
-          "build": 11,
-          "verify": 5,
-          "hours": 21,
+          "learn": 6,
+          "build": 9,
+          "verify": 4,
+          "hours": 19,
           "source_refs": [
             "M19 pp5–6,10"
           ],
@@ -1064,10 +1099,10 @@
             "ru": "Свободное стояние и выравнивание корпуса",
             "en": "Free standing and body levelling"
           },
-          "learn": 6,
-          "build": 14,
-          "verify": 5,
-          "hours": 25,
+          "learn": 7,
+          "build": 12,
+          "verify": 4,
+          "hours": 23,
           "source_refs": [
             "M19 pp6–8,10–11",
             "M10 outer pose controller"
@@ -1087,10 +1122,10 @@
             "ru": "Регрессия походки и передача в физические проекты",
             "en": "Gait regression and handoff to hardware projects"
           },
-          "learn": 3,
-          "build": 11,
-          "verify": 7,
-          "hours": 21,
+          "learn": 4,
+          "build": 8,
+          "verify": 5,
+          "hours": 17,
           "source_refs": [
             "M19 pp7–8,11–14",
             "M22/M23 acceptance"
@@ -1110,10 +1145,10 @@
             "ru": "Force Distribution Optimization: плоская задача двух опор",
             "en": "Force Distribution Optimization: planar two-support problem"
           },
-          "learn": 6,
-          "build": 10,
-          "verify": 7,
-          "hours": 23,
+          "learn": 7,
+          "build": 8,
+          "verify": 5,
+          "hours": 20,
           "result": {
             "ru": "В отдельном Python-блокноте сформулировать выпуклую QP для двух известных опор: баланс сил/момента, неотрицательные нормальные силы, |Ft| ≤ μFn и верхние границы нагрузки. Минимизировать квадратичное отклонение от выбранного распределения; решить готовым решателем. Сравнить с ручной симметричной задачей, затем сместить COM и приложить горизонтальную нагрузку. Независимо проверить невязки и ограничения, показать недопустимый случай и обработать статус отказа решателя. Это учебный расчёт вне контура управления; трёхмерный QP, переключение контактов, реальное время и передача сил приводам относятся к D_FORCE.",
             "en": "In a standalone Python notebook, formulate a convex QP for two known planar supports: force/moment balance, nonnegative normal forces, |Ft| <= mu*Fn and load bounds. Minimize squared deviation from a chosen allocation using an existing solver. Compare with a hand-solved symmetric case, then shift COM and apply a horizontal load. Independently check residuals/constraints, demonstrate infeasibility and handle solver failure status. This is an offline teaching example; 3D QP, contact switching, real-time integration and actuator force commands belong to D_FORCE."
@@ -1136,7 +1171,7 @@
         "M13",
         "L1"
       ],
-      "hours": 153,
+      "hours": 136,
       "kept": {
         "ru": "Свободный корпус, реальные контакты, геометрия опор и нагрузки, crawl, зазор при переносе ноги, остановка и позиционное выравнивание сохранены.",
         "en": "Floating body, actual contact, support geometry/loads, crawl, swing clearance, stopping and position-based levelling are retained."
@@ -1148,8 +1183,8 @@
         }
       ],
       "rationale": {
-        "ru": "160 ч = 120 ч на интеграцию походки, контактов и управления + 16 ч на расширение модели + 24 ч на вводный плоский QP. Физические испытания принимаются отдельно в M22/M23.",
-        "en": "160 h = 120 h for gait/contact/control integration + 16 h for model expansion + 24 h for introductory planar QP. Physical tests are accepted separately in M22/M23."
+        "ru": "136 ч: изучение 41, реализация 66, проверка 29. Индивидуальная средняя рабочая оценка для указанного опыта; новые темы изучаются полностью в границах задания. Готовые код, стенды, журналы и методики используются повторно. Обычная отладка входит в реализацию; отдельный процент на непредсказуемые переделки не добавлен.",
+        "en": "136 h: learning 41, implementation 66, verification 29. Individually reviewed nominal effort for the stated experience; new topics retain their defined learning scope. Reuse code, rigs, logs and protocols. Implementation includes routine debugging; no blanket rework percentage is added."
       },
       "gate": {
         "ru": "Модель без скрытой фиксации проходит штатные и отказные сценарии. Контроллер использует только доступные датчики, а точное состояние симулятора применяется лишь для независимой оценки. Это допуск к физическим испытаниям, а не их замена.",
@@ -1159,8 +1194,15 @@
         "ru": "Исходный M19, с. 3–8: качество контакта и временное согласование, автомат походки crawl и перенос веса, перенос ноги и зазор над поверхностью, свободное стояние и ограничения; с. 15 — проверка опор и реакций. M22/M23 определяют интерфейс передачи в физический проект; сами проекты отвечают за полноту физических испытаний.",
         "en": "Original M19 pp3–8: contact quality/time alignment, crawl FSM/weight transfer, swing/clearance, free standing and bounds; p15 covers support/reaction checks. Read M22/M23 here for hardware handoff interfaces; those projects own physical acceptance."
       },
-      "base": 153,
-      "track": "hexapod"
+      "base": 136,
+      "track": "hexapod",
+      "learn": 41,
+      "build": 66,
+      "verify": 29,
+      "hour_review": {
+        "reviewed_on": "2026-11-11",
+        "report": "task-hour-review.json"
+      }
     },
     "M01": {
       "id": "M01",
@@ -1176,17 +1218,17 @@
             "en": "Diagnostic, environment and early ROS/Gazebo preflight"
           },
           "learn": 1,
-          "build": 9,
-          "verify": 4,
-          "hours": 14,
+          "build": 3,
+          "verify": 2,
+          "hours": 6,
           "source_refs": [
             "M01 L1–L4",
             "M12 p14 installation",
             "M13 p14 installation"
           ],
           "result": {
-            "ru": "Зафиксированы Ubuntu 24.04 ARM64, компилятор, RMW и версии Jazzy/Harmonic; готовые talker/listener, RViz, сцена тележки и сцена датчика имеют результат PASS/HOLD. Эти 14 ч включают прежние 8 ч на среду и перенесённые 6 ч предварительной проверки.",
-            "en": "Record Ubuntu 24.04 ARM64, compiler, RMW and Jazzy/Harmonic versions; supplied talker/listener, RViz, cart and sensor scenes have PASS/HOLD. These 14 h contain the former 8 h environment task and transferred 6 h preflight."
+            "ru": "Зафиксированы Ubuntu 24.04 ARM64, компилятор, RMW и версии Jazzy/Harmonic; готовые talker/listener, RViz, сцена тележки и сцена датчика имеют результат PASS/HOLD. Шесть часов — применение знакомых Linux/Git и готовых команд установки, без повторного вводного курса.",
+            "en": "Record Ubuntu 24.04 ARM64, compiler, RMW and Jazzy/Harmonic versions; supplied talker/listener, RViz, cart and sensor scenes have PASS/HOLD results. Six hours apply existing Linux/Git skills and supplied installation commands without repeating an introductory course."
           },
           "refs": [
             "M01 L1–L4",
@@ -1200,10 +1242,10 @@
             "ru": "C++ в рабочем репозитории: владение, CMake и диагностика",
             "en": "C++ in the actual repository: ownership, CMake and diagnostics"
           },
-          "learn": 5,
-          "build": 6,
+          "learn": 6,
+          "build": 4,
           "verify": 2,
-          "hours": 13,
+          "hours": 12,
           "source_refs": [
             "M01 C1–C4",
             "M01 D1–D2"
@@ -1223,10 +1265,10 @@
             "ru": "Единицы, каналы и Python-анализ одного сустава",
             "en": "Units, channels and Python analysis for one joint"
           },
-          "learn": 2,
+          "learn": 1,
           "build": 1,
-          "verify": 2,
-          "hours": 5,
+          "verify": 1,
+          "hours": 3,
           "source_refs": [
             "M01 P1–P5",
             "M01 p13 motion definitions"
@@ -1246,10 +1288,10 @@
             "ru": "Минимальное воспроизведение записей и контракт потока",
             "en": "Minimal replay and stream contract"
           },
-          "learn": 2,
-          "build": 2,
-          "verify": 2,
-          "hours": 6,
+          "learn": 1,
+          "build": 1,
+          "verify": 1,
+          "hours": 3,
           "source_refs": [
             "M01 Q1–Q3",
             "M01 E1–E3",
@@ -1268,7 +1310,7 @@
           ]
         }
       ],
-      "hours": 38,
+      "hours": 24,
       "prerequisites": [],
       "kept": {
         "ru": "Одна кодовая база C++, один Python-анализ, обязательная ранняя проверка фактической среды.",
@@ -1281,8 +1323,8 @@
         }
       ],
       "rationale": {
-        "ru": "40 ч получены отбором работ: знакомый Python применяется сразу, а владение ресурсами в C++, физические единицы и настройка среды изучаются отдельно. Обработка потоков данных продолжается в рабочей прошивке. Вводная задача на 14 ч не означает освоения C++: практика продолжается в коде микроконтроллера, адаптере S2 и общем HIL-коде. При выявлении пробелов нужно использовать резерв и пересчитать прогноз.",
-        "en": "The 40 h follow selected work: familiar Python is used directly; new C++ boundaries, physical units and environment work remain. Streaming mechanisms continue in real firmware instead of forming a second teaching product. The 14 h introductory C++ task does not establish language proficiency: practice continues in the MCU, S2 adapter and shared HIL code; use contingency and reforecast if gaps appear."
+        "ru": "24 ч: изучение 9, реализация 9, проверка 6. Индивидуальная средняя рабочая оценка для указанного опыта; новые темы изучаются полностью в границах задания. Готовые код, стенды, журналы и методики используются повторно. Обычная отладка входит в реализацию; отдельный процент на непредсказуемые переделки не добавлен.",
+        "en": "24 h: learning 9, implementation 9, verification 6. Individually reviewed nominal effort for the stated experience; new topics retain their defined learning scope. Reuse code, rigs, logs and protocols. Implementation includes routine debugging; no blanket rework percentage is added."
       },
       "core_reading": {
         "ru": "M01: C++/владение/CMake, формат измерений и сценарии ошибок; M12 p14 и M13 p14 — только установка и готовые проверки работоспособности. Чтение включено в часы.",
@@ -1298,8 +1340,15 @@
           "en": "Do not repeat Python/Git study when the diagnostic demonstrates the skill. Retain versions and reproduction commands."
         }
       ],
-      "base": 38,
-      "track": "core"
+      "base": 24,
+      "track": "core",
+      "learn": 9,
+      "build": 9,
+      "verify": 6,
+      "hour_review": {
+        "reviewed_on": "2026-11-11",
+        "report": "task-hour-review.json"
+      }
     },
     "M12A": {
       "id": "M12A",
@@ -1537,10 +1586,10 @@
             "ru": "Модель одной ноги на уже установленном стеке",
             "en": "One-leg model on the installed stack"
           },
-          "learn": 5,
-          "build": 8,
-          "verify": 6,
-          "hours": 19,
+          "learn": 6,
+          "build": 7,
+          "verify": 5,
+          "hours": 18,
           "source_refs": [
             "M13 Tasks1–3",
             "M13 p7"
@@ -1560,9 +1609,9 @@
             "ru": "Контакт, один сенсор и отсутствие фиктивного удержания",
             "en": "Contact, one sensor and no artificial holding"
           },
-          "learn": 4,
+          "learn": 5,
           "build": 5,
-          "verify": 5,
+          "verify": 4,
           "hours": 14,
           "source_refs": [
             "M13 Tasks2,4",
@@ -1583,10 +1632,10 @@
             "ru": "Общее ядро C++, проверка на целевом устройстве и замкнутый HIL",
             "en": "Shared C++ core, target check and closed-loop HIL"
           },
-          "learn": 5,
-          "build": 7,
-          "verify": 7,
-          "hours": 19,
+          "learn": 8,
+          "build": 8,
+          "verify": 6,
+          "hours": 22,
           "source_refs": [
             "M13 Tasks5–7",
             "M13 F4–F6"
@@ -1606,9 +1655,9 @@
             "ru": "Сопоставление с реальной ногой и подтверждённые ограничения",
             "en": "Comparison with the real leg and demonstrated limits"
           },
-          "learn": 3,
+          "learn": 4,
           "build": 5,
-          "verify": 6,
+          "verify": 5,
           "hours": 14,
           "source_refs": [
             "M13 Task8",
@@ -1629,10 +1678,10 @@
             "ru": "Contact Dynamics: контакт, трение и шаг интегрирования",
             "en": "Contact Dynamics: contact, friction and integration step"
           },
-          "learn": 3,
+          "learn": 4,
           "build": 7,
           "verify": 5,
-          "hours": 15,
+          "hours": 16,
           "result": {
             "ru": "В существующем симуляторе исследовать одну стопу: касание, удержание, начало скольжения и отрыв. Записать нормальную/касательную реакции, проникновение и импульс; сравнить dt и dt/2, два коэффициента трения и две жёсткости контакта, если параметр доступен. Проверить простой эталон mg и порог скольжения μN; объяснить отличия силы от импульса и жёсткого контакта от податливого. Результат — воспроизводимый сценарий и границы достоверности. Новый физический движок и собственный решатель ударов не входят.",
             "en": "In the existing simulator, study one foot touching down, sticking, beginning to slide and lifting off. Log normal/tangential reactions, penetration and impulse; compare dt with dt/2, two friction coefficients and two contact stiffnesses where configurable. Check simple mg and mu*N references; distinguish force from impulse and rigid from compliant contact. Deliver a reproducible scenario and validity limits. No second physics engine or custom impact solver."
@@ -1647,7 +1696,7 @@
           ]
         }
       ],
-      "hours": 81,
+      "hours": 84,
       "prerequisites": [
         "M12B",
         "L1",
@@ -1668,8 +1717,8 @@
         }
       ],
       "rationale": {
-        "ru": "86 ч сохраняют реальную аппаратную границу и проверку физики. Установка уже выполнена в M01; вся нога и её драйвер уже созданы в L1; сборка четырёхногой модели и генератор походки здесь повторно не оплачиваются. Добавлен отдельный вводный практикум: 16 ч; оценка предполагает готовую инфраструктуру предыдущих заданий.",
-        "en": "The 86 h retain the real hardware boundary and physics checks. M01 owns installation; L1 owns the leg and driver; the four-leg model and gait generator are not counted again here. A separate introductory lab adds 16 h, assuming the preceding tasks provide working infrastructure."
+        "ru": "84 ч: изучение 27, реализация 32, проверка 25. Индивидуальная средняя рабочая оценка для указанного опыта; новые темы изучаются полностью в границах задания. Готовые код, стенды, журналы и методики используются повторно. Обычная отладка входит в реализацию; отдельный процент на непредсказуемые переделки не добавлен.",
+        "en": "84 h: learning 27, implementation 32, verification 25. Individually reviewed nominal effort for the stated experience; new topics retain their defined learning scope. Reuse code, rigs, logs and protocols. Implementation includes routine debugging; no blanket rework percentage is added."
       },
       "core_reading": {
         "ru": "Исходный M13, с. 3–8, 14–15: эталонные физические задачи, контакт, различия SIL/PIL/HIL, ограничения часов и задача 8. Использовать одну обязательную эталонную сцену вместо набора миров.",
@@ -1685,8 +1734,15 @@
           "en": "Validate power-off stopping on the real supported mechanism; successful animation does not close this criterion."
         }
       ],
-      "base": 81,
-      "track": "core"
+      "base": 84,
+      "track": "core",
+      "learn": 27,
+      "build": 32,
+      "verify": 25,
+      "hour_review": {
+        "reviewed_on": "2026-11-11",
+        "report": "task-hour-review.json"
+      }
     },
     "M14": {
       "id": "M14",
@@ -1701,10 +1757,10 @@
             "ru": "Одна камера и калибровка рабочей области",
             "en": "One camera and workspace calibration"
           },
-          "learn": 6,
+          "learn": 8,
           "build": 8,
-          "verify": 6,
-          "hours": 20,
+          "verify": 5,
+          "hours": 21,
           "source_refs": [
             "M14 Tasks1–2"
           ],
@@ -1722,9 +1778,9 @@
             "ru": "Один классический базовый метод: определить целевой объект или отклонить результат",
             "en": "One classical target/reject baseline"
           },
-          "learn": 2,
+          "learn": 3,
           "build": 5,
-          "verify": 4,
+          "verify": 3,
           "hours": 11,
           "source_refs": [
             "M14 classical masks/features/RANSAC task"
@@ -1743,10 +1799,10 @@
             "ru": "Согласование с манипулятором и независимые границы",
             "en": "Arm alignment and independent bounds"
           },
-          "learn": 2,
-          "build": 5,
-          "verify": 4,
-          "hours": 11,
+          "learn": 3,
+          "build": 4,
+          "verify": 3,
+          "hours": 10,
           "source_refs": [
             "M14 3D/frame task",
             "M14 ROS adapter"
@@ -1768,8 +1824,8 @@
           },
           "learn": 2,
           "build": 3,
-          "verify": 4,
-          "hours": 9,
+          "verify": 3,
+          "hours": 8,
           "source_refs": [
             "M14 fault/replay task"
           ],
@@ -1782,7 +1838,7 @@
           ]
         }
       ],
-      "hours": 51,
+      "hours": 50,
       "prerequisites": [
         "M02",
         "M08",
@@ -1800,8 +1856,8 @@
         }
       ],
       "rationale": {
-        "ru": "55 ч создают одну работающую задачу зрения для манипулятора. Не обещаются произвольные предметы, неизвестная высота стола или автономная работа в незнакомой среде. Классика и последующий ML сравниваются на одной задаче.",
-        "en": "The 55 h produce one working arm-vision task. Do not promise arbitrary objects, unknown table height or autonomy in unfamiliar scenes. Classical and later ML methods are compared on the same task."
+        "ru": "50 ч: изучение 16, реализация 20, проверка 14. Индивидуальная средняя рабочая оценка для указанного опыта; новые темы изучаются полностью в границах задания. Готовые код, стенды, журналы и методики используются повторно. Обычная отладка входит в реализацию; отдельный процент на непредсказуемые переделки не добавлен.",
+        "en": "50 h: learning 16, implementation 20, verification 14. Individually reviewed nominal effort for the stated experience; new topics retain their defined learning scope. Reuse code, rigs, logs and protocols. Implementation includes routine debugging; no blanket rework percentage is added."
       },
       "core_reading": {
         "ru": "M14: геометрия и калибровка камеры, простая сегментация, системы координат, время и отказы. ICP/CNN сохранены для дальнейшего изучения; главы книг выбираются под конкретную задачу.",
@@ -1817,8 +1873,15 @@
           "en": "Initial physical attempts use already-budgeted A3 trials: bounded speed, known geometry and operator authorization. No extra series outside A3 is added."
         }
       ],
-      "base": 51,
-      "track": "core"
+      "base": 50,
+      "track": "core",
+      "learn": 16,
+      "build": 20,
+      "verify": 14,
+      "hour_review": {
+        "reviewed_on": "2026-11-11",
+        "report": "task-hour-review.json"
+      }
     },
     "M16": {
       "id": "M16",
@@ -1833,10 +1896,10 @@
             "ru": "Подключить готовую модель манипулятора к MoveIt",
             "en": "Connect the existing arm model to MoveIt"
           },
-          "learn": 2,
+          "learn": 3,
           "build": 4,
           "verify": 3,
-          "hours": 9,
+          "hours": 10,
           "source_refs": [
             "M16 C-space/MoveIt task"
           ],
@@ -1854,10 +1917,10 @@
             "ru": "Планировать проверяемый путь в одной сцене",
             "en": "Plan a verifiable path in one scene"
           },
-          "learn": 2,
+          "learn": 3,
           "build": 4,
           "verify": 3,
-          "hours": 9,
+          "hours": 10,
           "source_refs": [
             "M16 sampling/planning task"
           ],
@@ -1875,10 +1938,10 @@
             "ru": "Время, скорость, ускорение и проверка всего пути",
             "en": "Timing, velocity, acceleration and whole-path checking"
           },
-          "learn": 2,
+          "learn": 3,
           "build": 4,
           "verify": 3,
-          "hours": 9,
+          "hours": 10,
           "source_refs": [
             "M16 trajectory profiles task"
           ],
@@ -1896,10 +1959,10 @@
             "ru": "Отказ, устаревшая сцена и отмена",
             "en": "Failure, stale scene and cancellation"
           },
-          "learn": 2,
+          "learn": 3,
           "build": 4,
           "verify": 3,
-          "hours": 9,
+          "hours": 10,
           "source_refs": [
             "M16 FSM/BT/recovery task"
           ],
@@ -1912,7 +1975,7 @@
           ]
         }
       ],
-      "hours": 36,
+      "hours": 40,
       "prerequisites": [
         "M08",
         "M10",
@@ -1930,8 +1993,8 @@
         }
       ],
       "rationale": {
-        "ru": "40 ч на интеграцию и понимание одной цепочки планирования движений после изучения кинематики. Повторная реализация IK, URDF и собственного планировщика не требуется.",
-        "en": "The 40 h integrate and explain one planning chain after kinematics. Do not rewrite IK, URDF or a motion planner."
+        "ru": "40 ч: изучение 12, реализация 16, проверка 12. Индивидуальная средняя рабочая оценка для указанного опыта; новые темы изучаются полностью в границах задания. Готовые код, стенды, журналы и методики используются повторно. Обычная отладка входит в реализацию; отдельный процент на непредсказуемые переделки не добавлен.",
+        "en": "40 h: learning 12, implementation 16, verification 12. Individually reviewed nominal effort for the stated experience; new topics retain their defined learning scope. Reuse code, rigs, logs and protocols. Implementation includes routine debugging; no blanket rework percentage is added."
       },
       "core_reading": {
         "ru": "M16: конфигурационное пространство и области столкновений, интеграция MoveIt/OMPL, ограничения траектории, обработка отказа и отмены. Главы о мобильной навигации оставлены для дальнейшего изучения.",
@@ -1943,8 +2006,15 @@
           "en": "A successful plan is not authorization for physical execution; check hardware readiness immediately before launch."
         }
       ],
-      "base": 36,
-      "track": "core"
+      "base": 40,
+      "track": "core",
+      "learn": 12,
+      "build": 16,
+      "verify": 12,
+      "hour_review": {
+        "reviewed_on": "2026-11-11",
+        "report": "task-hour-review.json"
+      }
     },
     "M17": {
       "id": "M17",
@@ -1960,9 +2030,9 @@
             "en": "One pick/transfer state machine"
           },
           "learn": 2,
-          "build": 4,
-          "verify": 4,
-          "hours": 10,
+          "build": 3,
+          "verify": 2,
+          "hours": 7,
           "source_refs": [
             "M17 grasp/transfer task"
           ],
@@ -1981,9 +2051,9 @@
             "en": "Execution contract for A3"
           },
           "learn": 2,
-          "build": 3,
-          "verify": 3,
-          "hours": 8,
+          "build": 2,
+          "verify": 2,
+          "hours": 6,
           "source_refs": [
             "M17 manipulation interfaces",
             "M12 action/cancel reused"
@@ -2004,9 +2074,9 @@
             "en": "Preview, authorization and clear failure"
           },
           "learn": 1,
-          "build": 2,
-          "verify": 4,
-          "hours": 7,
+          "build": 1,
+          "verify": 1,
+          "hours": 3,
           "source_refs": [
             "M17 operator modes/HRI task"
           ],
@@ -2019,7 +2089,7 @@
           ]
         }
       ],
-      "hours": 25,
+      "hours": 16,
       "prerequisites": [
         "M16",
         "M12B",
@@ -2036,8 +2106,8 @@
         }
       ],
       "rationale": {
-        "ru": "25 ч отведены на новые правила выполнения манипуляций. Драйвер, физические калибровки, удержание, 30 успешных переносов и проверки отказов уже учтены в A2/A3 в составе 425 ч проекта манипулятора.",
-        "en": "The 25 h cover new manipulation semantics. Physical driver, calibration, retention, 30 positive transfers and faults are already budgeted in A2/A3 within the 425 h arm project."
+        "ru": "16 ч: изучение 5, реализация 6, проверка 5. Индивидуальная средняя рабочая оценка для указанного опыта; новые темы изучаются полностью в границах задания. Готовые код, стенды, журналы и методики используются повторно. Обычная отладка входит в реализацию; отдельный процент на непредсказуемые переделки не добавлен.",
+        "en": "16 h: learning 5, implementation 6, verification 5. Individually reviewed nominal effort for the stated experience; new topics retain their defined learning scope. Reuse code, rigs, logs and protocols. Implementation includes routine debugging; no blanket rework percentage is added."
       },
       "core_reading": {
         "ru": "M17: позы, подход, контакт, хват/перенос, режимы оператора и отмена. Аппаратный результат проверяется по спецификации манипулятора.",
@@ -2049,8 +2119,15 @@
           "en": "Simulation attachment does not validate physical grip. Physical tests belong to A3; do not charge a second series here."
         }
       ],
-      "base": 25,
-      "track": "core"
+      "base": 16,
+      "track": "core",
+      "learn": 5,
+      "build": 6,
+      "verify": 5,
+      "hour_review": {
+        "reviewed_on": "2026-11-11",
+        "report": "task-hour-review.json"
+      }
     },
     "M18": {
       "id": "M18",
@@ -2065,10 +2142,10 @@
             "ru": "Данные, задача и независимые разбиения",
             "en": "Data, task and independent splits"
           },
-          "learn": 5,
-          "build": 8,
-          "verify": 6,
-          "hours": 19,
+          "learn": 6,
+          "build": 7,
+          "verify": 5,
+          "hours": 18,
           "source_refs": [
             "M18 data/episode split task",
             "M14 annotation task"
@@ -2088,9 +2165,9 @@
             "ru": "Одна модель и понятный цикл обучения PyTorch",
             "en": "One model and an explainable PyTorch training loop"
           },
-          "learn": 6,
-          "build": 8,
-          "verify": 4,
+          "learn": 8,
+          "build": 7,
+          "verify": 3,
           "hours": 18,
           "source_refs": [
             "M18 autograd/logistic/MLP task"
@@ -2109,10 +2186,10 @@
             "ru": "Независимая тестовая выборка, классический базовый метод и отказ от решения",
             "en": "Holdout, classical baseline and abstention"
           },
-          "learn": 5,
-          "build": 6,
-          "verify": 8,
-          "hours": 19,
+          "learn": 6,
+          "build": 5,
+          "verify": 7,
+          "hours": 18,
           "source_refs": [
             "M18 metrics/calibration/OOD task"
           ],
@@ -2148,7 +2225,7 @@
           ]
         }
       ],
-      "hours": 66,
+      "hours": 64,
       "prerequisites": [
         "M14",
         "M03",
@@ -2166,8 +2243,8 @@
         }
       ],
       "rationale": {
-        "ru": "70 ч используют готовую камеру, область интереса, ROS и измерения M14. Новые задачи — постановка задачи машинного обучения, подготовка данных, обучение и оценка. Отсутствие улучшения относительно классического метода — допустимый научно корректный результат; слабую модель нельзя считать готовой системой управления.",
-        "en": "The 70 h reuse M14 camera, ROIs, ROS and measurements. New work is ML formulation, dataset discipline, training and evaluation. Failure to beat the classical method is a valid result, not a reason to present a weak model as a qualified controller."
+        "ru": "64 ч: изучение 22, реализация 23, проверка 19. Индивидуальная средняя рабочая оценка для указанного опыта; новые темы изучаются полностью в границах задания. Готовые код, стенды, журналы и методики используются повторно. Обычная отладка входит в реализацию; отдельный процент на непредсказуемые переделки не добавлен.",
+        "en": "64 h: learning 22, implementation 23, verification 19. Individually reviewed nominal effort for the stated experience; new topics retain their defined learning scope. Reuse code, rigs, logs and protocols. Implementation includes routine debugging; no blanket rework percentage is added."
       },
       "core_reading": {
         "ru": "M18: данные и утечки, логистическая регрессия, MLP, autograd, валидация, матрица ошибок, точность и полнота, калибровка вероятностей, отказ от решения и запуск на CPU. M14 предоставляет единую задачу зрения.",
@@ -2187,8 +2264,15 @@
           "en": "Retain all 30 positive physical A3 transfers. Test reject/unknown separately within already-budgeted A3 fault scenarios; record their N and results separately from transfers. Some positive trials use vision/ML, without a second transfer/endurance budget."
         }
       ],
-      "base": 66,
-      "track": "core"
+      "base": 64,
+      "track": "core",
+      "learn": 22,
+      "build": 23,
+      "verify": 19,
+      "hour_review": {
+        "reviewed_on": "2026-11-11",
+        "report": "task-hour-review.json"
+      }
     },
     "M24": {
       "id": "M24",
@@ -2204,9 +2288,9 @@
             "en": "Reconcile requirements with existing evidence"
           },
           "learn": 0,
-          "build": 2,
-          "verify": 4,
-          "hours": 6,
+          "build": 1,
+          "verify": 2,
+          "hours": 3,
           "source_refs": [
             "M24 traceability task"
           ],
@@ -2225,9 +2309,9 @@
             "en": "Versions, build and one reproducible package"
           },
           "learn": 1,
-          "build": 4,
-          "verify": 3,
-          "hours": 8,
+          "build": 2,
+          "verify": 2,
+          "hours": 5,
           "source_refs": [
             "M24 manifest/archive task"
           ],
@@ -2246,9 +2330,9 @@
             "en": "Targeted cross-project reproducibility check"
           },
           "learn": 0,
-          "build": 2,
-          "verify": 6,
-          "hours": 8,
+          "build": 1,
+          "verify": 3,
+          "hours": 4,
           "source_refs": [
             "M24 targeted evidence/stop task"
           ],
@@ -2267,9 +2351,9 @@
             "en": "Portfolio, limitations and a concise design defence"
           },
           "learn": 1,
-          "build": 3,
-          "verify": 4,
-          "hours": 8,
+          "build": 1,
+          "verify": 2,
+          "hours": 4,
           "source_refs": [
             "M24 report/portfolio task"
           ],
@@ -2282,7 +2366,7 @@
           ]
         }
       ],
-      "hours": 30,
+      "hours": 16,
       "prerequisites": [
         "M18",
         "A3",
@@ -2300,8 +2384,8 @@
         }
       ],
       "rationale": {
-        "ru": "30 ч на объединение готовых результатов проектов. Физическая безопасность, ресурс и повторные испытания проверяются внутри проектов; независимая проверка G4 оценивает готовность, не создавая ещё один процесс подготовки выпуска.",
-        "en": "The 30 h integrate completed releases. Physical safety, endurance and repeated trials belong to projects; independent G4 checks readiness rather than creating another release pipeline."
+        "ru": "16 ч: изучение 2, реализация 5, проверка 9. Индивидуальная средняя рабочая оценка для указанного опыта; новые темы изучаются полностью в границах задания. Готовые код, стенды, журналы и методики используются повторно. Обычная отладка входит в реализацию; отдельный процент на непредсказуемые переделки не добавлен.",
+        "en": "16 h: learning 2, implementation 5, verification 9. Individually reviewed nominal effort for the stated experience; new topics retain their defined learning scope. Reuse code, rigs, logs and protocols. Implementation includes routine debugging; no blanket rework percentage is added."
       },
       "core_reading": {
         "ru": "M24: прослеживаемость требований, конфигурации, воспроизводимость, ограничения и техническая защита. Протоколы физических испытаний берутся из уже закрытых проектов.",
@@ -2313,8 +2397,15 @@
           "en": "An unmet criterion remains open. An archive or video does not replace physical PASS; a budget does not guarantee successful mechanics by a date."
         }
       ],
-      "base": 30,
-      "track": "core"
+      "base": 16,
+      "track": "core",
+      "learn": 2,
+      "build": 5,
+      "verify": 9,
+      "hour_review": {
+        "reviewed_on": "2026-11-11",
+        "report": "task-hour-review.json"
+      }
     },
     "M04": {
       "id": "M04",
@@ -2322,10 +2413,10 @@
         "ru": "Электроника, измерения и сигналы",
         "en": "Electronics, measurement and signals"
       },
-      "learn": 51,
-      "build": 41,
-      "verify": 18,
-      "hours": 102,
+      "learn": 56,
+      "build": 45,
+      "verify": 19,
+      "hours": 120,
       "tasks": [
         {
           "id": "E1",
@@ -2333,10 +2424,10 @@
             "ru": "DC, схемы, документация и простые расчёты",
             "en": "DC, schematics, documentation and calculations"
           },
-          "learn": 20,
-          "build": 8,
-          "verify": 4,
-          "hours": 32,
+          "learn": 26,
+          "build": 9,
+          "verify": 5,
+          "hours": 40,
           "source_refs": [
             "M04.E1"
           ],
@@ -2358,10 +2449,10 @@
             "ru": "Мультиметр, пайка, обжим и проводка",
             "en": "Multimeter, soldering, crimping and wiring"
           },
-          "learn": 7,
-          "build": 12,
-          "verify": 6,
-          "hours": 25,
+          "learn": 10,
+          "build": 13,
+          "verify": 5,
+          "hours": 28,
           "source_refs": [
             "M04.E2"
           ],
@@ -2383,10 +2474,10 @@
             "ru": "RC, логические уровни и индуктивная нагрузка",
             "en": "RC, logic levels and an inductive load"
           },
-          "learn": 6,
-          "build": 12,
+          "learn": 8,
+          "build": 13,
           "verify": 5,
-          "hours": 23,
+          "hours": 26,
           "source_refs": [
             "M04.E3"
           ],
@@ -2408,10 +2499,10 @@
             "ru": "Дискретизация, причинные фильтры и спектр",
             "en": "Sampling, causal filters and spectrum"
           },
-          "learn": 10,
-          "build": 9,
-          "verify": 3,
-          "hours": 22,
+          "learn": 12,
+          "build": 10,
+          "verify": 4,
+          "hours": 26,
           "source_refs": [
             "M04.E4"
           ],
@@ -2439,8 +2530,8 @@
         }
       ],
       "rationale": {
-        "ru": "Опыт Python позволяет быстро строить графики, но электроника остаётся новой. Убирается одна расширенная DSP-лабораторная; расчёт схем, приборы, соединения, наложение спектров, причинность и защитные измерения сохранены.",
-        "en": "Python experience accelerates plotting, but electronics is new. Defer one extended DSP laboratory; retain circuit calculations, instruments, connections, aliasing, causality and protective measurements."
+        "ru": "120 ч: изучение 56, реализация 45, проверка 19. Индивидуальная средняя рабочая оценка для указанного опыта; новые темы изучаются полностью в границах задания. Готовые код, стенды, журналы и методики используются повторно. Обычная отладка входит в реализацию; отдельный процент на непредсказуемые переделки не добавлен.",
+        "en": "120 h: learning 56, implementation 45, verification 19. Individually reviewed nominal effort for the stated experience; new topics retain their defined learning scope. Reuse code, rigs, logs and protocols. Implementation includes routine debugging; no blanket rework percentage is added."
       },
       "prerequisites": [
         "P_UNITS",
@@ -2457,11 +2548,15 @@
         }
       ],
       "core_reading": {
-        "ru": "Исходный M04, страницы 3–7; на странице 8 — временная цепочка и короткая проверка усиления/задержки. Паспорт выбранных низковольтных компонентов. Углублённые PSD/Welch/режекторный фильтр отложены. Чтение входит в 51 учебный час.",
-        "en": "Original M04, pages 3–7; page 8 timing chain and a short gain/lag check. Datasheets for selected low-voltage components. Extended PSD/Welch/notch is deferred. Reading is inside 51 learning hours."
+        "ru": "Исходный M04, страницы 3–7; на странице 8 — временная цепочка и короткая проверка усиления/задержки. Паспорт выбранных низковольтных компонентов. Углублённые PSD/Welch/режекторный фильтр отложены. Чтение входит в 56 ч изучения.",
+        "en": "Original M04, pages 3–7; page 8 timing chain and a short gain/lag check. Datasheets for selected low-voltage components. Extended PSD/Welch/notch is deferred. Reading is inside 56 learning hours."
       },
-      "base": 102,
-      "track": "core"
+      "base": 120,
+      "track": "core",
+      "hour_review": {
+        "reviewed_on": "2026-11-11",
+        "report": "task-hour-review.json"
+      }
     },
     "M05": {
       "id": "M05",
@@ -2469,10 +2564,10 @@
         "ru": "CAD, конструкции, FDM и пассивная нога",
         "en": "CAD, structures, FDM and a passive leg"
       },
-      "learn": 59,
-      "build": 63,
-      "verify": 23,
-      "hours": 135,
+      "learn": 64,
+      "build": 71,
+      "verify": 25,
+      "hours": 160,
       "tasks": [
         {
           "id": "C1",
@@ -2480,10 +2575,10 @@
             "ru": "Эскизы, ограничения и первые детали",
             "en": "Sketches, constraints and first parts"
           },
-          "learn": 12,
-          "build": 13,
-          "verify": 2,
-          "hours": 27,
+          "learn": 16,
+          "build": 15,
+          "verify": 3,
+          "hours": 34,
           "source_refs": [
             "M05.C1"
           ],
@@ -2506,10 +2601,10 @@
             "ru": "Параметрическая трёхкоординатная сборка и доступ к крепежу",
             "en": "Parametric 3-DOF assembly and fastener access"
           },
-          "learn": 10,
-          "build": 23,
+          "learn": 13,
+          "build": 25,
           "verify": 5,
-          "hours": 38,
+          "hours": 43,
           "source_refs": [
             "M05.C2"
           ],
@@ -2532,10 +2627,10 @@
             "ru": "Машинные элементы, посадки, чертёж и допуски",
             "en": "Machine elements, fits, drawing and tolerances"
           },
-          "learn": 10,
-          "build": 12,
+          "learn": 13,
+          "build": 14,
           "verify": 6,
-          "hours": 28,
+          "hours": 33,
           "source_refs": [
             "M05.C3"
           ],
@@ -2558,10 +2653,10 @@
             "ru": "Статика, материалы и прочность",
             "en": "Statics, materials and strength"
           },
-          "learn": 15,
-          "build": 8,
+          "learn": 20,
+          "build": 9,
           "verify": 4,
-          "hours": 27,
+          "hours": 33,
           "source_refs": [
             "M05.C4"
           ],
@@ -2585,9 +2680,9 @@
             "en": "FDM coupons and static validation"
           },
           "learn": 2,
-          "build": 7,
-          "verify": 6,
-          "hours": 15,
+          "build": 8,
+          "verify": 7,
+          "hours": 17,
           "source_refs": [
             "M05.C5"
           ],
@@ -2616,8 +2711,8 @@
         }
       ],
       "rationale": {
-        "ru": "FEA полезна для развития, но не обязательна для первых малых роботов при сохранённых ручных расчётах, консервативных пределах и физических образцах. Новые навыки CAD/посадок/материалов не сокращаются до просмотра уроков.",
-        "en": "FEA is useful development work but is not essential for the first small robots when hand calculations, conservative bounds and physical coupons remain. New CAD/fit/material skills are not reduced to watching tutorials."
+        "ru": "160 ч: изучение 64, реализация 71, проверка 25. Индивидуальная средняя рабочая оценка для указанного опыта; новые темы изучаются полностью в границах задания. Готовые код, стенды, журналы и методики используются повторно. Обычная отладка входит в реализацию; отдельный процент на непредсказуемые переделки не добавлен.",
+        "en": "160 h: learning 64, implementation 71, verification 25. Individually reviewed nominal effort for the stated experience; new topics retain their defined learning scope. Reuse code, rigs, logs and protocols. Implementation includes routine debugging; no blanket rework percentage is added."
       },
       "prerequisites": [
         "P_STATICS",
@@ -2635,11 +2730,15 @@
         }
       ],
       "core_reading": {
-        "ru": "Исходный M05: CAD, сборки, посадки, ручная статика/прочность и физические образцы. Раздел самостоятельной FEA с тремя сетками отложен целиком. Документация одного CAD и реального материала читается по задаче; входит в 59 учебных часов.",
-        "en": "Original M05: CAD, assemblies, fits, hand statics/strength and physical coupons. Standalone three-mesh FEA is deferred completely. Read one CAD tool and actual material documentation as needed; inside 59 learning hours."
+        "ru": "Исходный M05: CAD, сборки, посадки, ручная статика/прочность и физические образцы. Раздел самостоятельной FEA с тремя сетками отложен целиком. Документация одного CAD и реального материала читается по задаче; входит в 64 ч изучения.",
+        "en": "Original M05: CAD, assemblies, fits, hand statics/strength and physical coupons. Standalone three-mesh FEA is deferred completely. Read one CAD tool and actual material documentation as needed; inside 64 learning hours."
       },
-      "base": 135,
-      "track": "core"
+      "base": 160,
+      "track": "core",
+      "hour_review": {
+        "reviewed_on": "2026-11-11",
+        "report": "task-hour-review.json"
+      }
     },
     "M06": {
       "id": "M06",
@@ -2647,10 +2746,10 @@
         "ru": "Встраиваемый контроллер и реальные интерфейсы",
         "en": "Embedded controller and physical interfaces"
       },
-      "learn": 33,
-      "build": 52,
-      "verify": 25,
-      "hours": 104,
+      "learn": 38,
+      "build": 55,
+      "verify": 27,
+      "hours": 120,
       "tasks": [
         {
           "id": "U1",
@@ -2658,10 +2757,10 @@
             "ru": "MCU/инструменты и электрические ограничения",
             "en": "MCU/toolchain and electrical limits"
           },
-          "learn": 7,
+          "learn": 9,
           "build": 8,
           "verify": 2,
-          "hours": 17,
+          "hours": 19,
           "source_refs": [
             "M06.U1"
           ],
@@ -2682,10 +2781,10 @@
             "ru": "GPIO/PWM/ADC, датчики и одна физическая шина",
             "en": "GPIO/PWM/ADC, sensors and one physical bus"
           },
-          "learn": 8,
-          "build": 11,
+          "learn": 12,
+          "build": 13,
           "verify": 5,
-          "hours": 24,
+          "hours": 30,
           "source_refs": [
             "M06.U2"
           ],
@@ -2706,8 +2805,8 @@
             "ru": "Телеметрия, владение данными и границы кадров",
             "en": "Telemetry, data ownership and framing"
           },
-          "learn": 2,
-          "build": 11,
+          "learn": 3,
+          "build": 10,
           "verify": 4,
           "hours": 17,
           "source_refs": [
@@ -2730,10 +2829,10 @@
             "ru": "RTOS, временные характеристики и сторожевой таймер",
             "en": "RTOS, timing and watchdog"
           },
-          "learn": 7,
-          "build": 9,
-          "verify": 5,
-          "hours": 21,
+          "learn": 9,
+          "build": 10,
+          "verify": 6,
+          "hours": 25,
           "source_refs": [
             "M06.U4"
           ],
@@ -2754,10 +2853,10 @@
             "ru": "Состояния, независимая остановка и проверки для G1",
             "en": "States, independent stop and evidence for G1"
           },
-          "learn": 3,
-          "build": 13,
-          "verify": 9,
-          "hours": 25,
+          "learn": 5,
+          "build": 14,
+          "verify": 10,
+          "hours": 29,
           "source_refs": [
             "M06.U5"
           ],
@@ -2779,8 +2878,8 @@
       },
       "deferred": [],
       "rationale": {
-        "ru": "Сокращение не обосновано: исходник уже реализует только один основной транспорт и один сенсорный интерфейс. Минимальные RTOS/ISR, очередь, временные характеристики, сторожевой таймер и независимая остановка нужны всем трём устройствам; 110 ч сохранены.",
-        "en": "No reduction is justified: the source already implements only one primary transport and one sensor interface. Minimal RTOS/ISR, queues, timing, watchdog and independent stopping serve all three devices; retain 110 h."
+        "ru": "120 ч: изучение 38, реализация 55, проверка 27. Индивидуальная средняя рабочая оценка для указанного опыта; новые темы изучаются полностью в границах задания. Готовые код, стенды, журналы и методики используются повторно. Обычная отладка входит в реализацию; отдельный процент на непредсказуемые переделки не добавлен.",
+        "en": "120 h: learning 38, implementation 55, verification 27. Individually reviewed nominal effort for the stated experience; new topics retain their defined learning scope. Reuse code, rigs, logs and protocols. Implementation includes routine debugging; no blanket rework percentage is added."
       },
       "prerequisites": [
         "M04"
@@ -2796,11 +2895,15 @@
         }
       ],
       "core_reading": {
-        "ru": "Исходный M06: все 12 задач и F1–F10. Только выбранные GPIO/PWM/ADC, API транспорта и датчика, основы прерываний, FreeRTOS и сторожевого таймера, параметры реального IMU. Не изучать пять шин как пять проектов. Чтение входит в 33 учебных часа.",
-        "en": "Original M06, all 12 tasks and F1–F10. Selected GPIO/PWM/ADC, transport/sensor APIs, basic ISR/FreeRTOS/watchdog and the actual IMU settings. Do not treat five buses as five projects. Reading is inside 33 learning hours."
+        "ru": "Исходный M06: все 12 задач и F1–F10. Только выбранные GPIO/PWM/ADC, API транспорта и датчика, основы прерываний, FreeRTOS и сторожевого таймера, параметры реального IMU. Не изучать пять шин как пять проектов. Чтение входит в 38 ч изучения.",
+        "en": "Original M06, all 12 tasks and F1–F10. Selected GPIO/PWM/ADC, transport/sensor APIs, basic ISR/FreeRTOS/watchdog and the actual IMU settings. Do not treat five buses as five projects. Reading is inside 38 learning hours."
       },
-      "base": 104,
-      "track": "core"
+      "base": 120,
+      "track": "core",
+      "hour_review": {
+        "reviewed_on": "2026-11-11",
+        "report": "task-hour-review.json"
+      }
     },
     "M07": {
       "id": "M07",
@@ -2808,10 +2911,10 @@
         "ru": "Один привод: стенд, управление и идентификация",
         "en": "One actuator: rig, control and identification"
       },
-      "learn": 32,
-      "build": 41,
-      "verify": 27,
-      "hours": 94,
+      "learn": 34,
+      "build": 42,
+      "verify": 28,
+      "hours": 104,
       "tasks": [
         {
           "id": "A1",
@@ -2819,10 +2922,10 @@
             "ru": "Требования к приводу, шестерёнки и механическая модель",
             "en": "Actuator requirements, gears and mechanical model"
           },
-          "learn": 9,
+          "learn": 12,
           "build": 10,
           "verify": 4,
-          "hours": 23,
+          "hours": 26,
           "source_refs": [
             "M07.A1"
           ],
@@ -2855,10 +2958,10 @@
             "ru": "Крепление, питание и калибровки",
             "en": "Fixture, power and calibrations"
           },
-          "learn": 7,
+          "learn": 10,
           "build": 13,
           "verify": 8,
-          "hours": 28,
+          "hours": 31,
           "source_refs": [
             "M07.A2"
           ],
@@ -2882,10 +2985,10 @@
             "ru": "Позиционный контур и ограниченные профили",
             "en": "Position loop and bounded profiles"
           },
-          "learn": 7,
+          "learn": 8,
           "build": 12,
           "verify": 5,
-          "hours": 24,
+          "hours": 25,
           "source_refs": [
             "M07.A3"
           ],
@@ -2909,10 +3012,10 @@
             "ru": "Трение, задержка, нагрев и независимая валидация",
             "en": "Friction, delay, heating and independent validation"
           },
-          "learn": 3,
-          "build": 6,
-          "verify": 10,
-          "hours": 19,
+          "learn": 4,
+          "build": 7,
+          "verify": 11,
+          "hours": 22,
           "source_refs": [
             "M07.A4"
           ],
@@ -2942,8 +3045,8 @@
         }
       ],
       "rationale": {
-        "ru": "Настольный привод нужен как первый замкнутый контур и основа DC-приводов хвоста. Для основной программы достаточно измеренного поведения и ограниченного рабочего диапазона; исследовательское восстановление всей модели переносится. Проверка пригодности L1 остаётся отдельной: другой привод и нагруженная нога с тремя степенями свободы.",
-        "en": "The tabletop drive is the first closed loop and foundation for tail DC drives. Core needs measured behavior and a bounded envelope; research-style model recovery is deferred. L1 qualification remains separate: a different actuator and a loaded 3 DOF leg."
+        "ru": "104 ч: изучение 34, реализация 42, проверка 28. Индивидуальная средняя рабочая оценка для указанного опыта; новые темы изучаются полностью в границах задания. Готовые код, стенды, журналы и методики используются повторно. Обычная отладка входит в реализацию; отдельный процент на непредсказуемые переделки не добавлен.",
+        "en": "104 h: learning 34, implementation 42, verification 28. Individually reviewed nominal effort for the stated experience; new topics retain their defined learning scope. Reuse code, rigs, logs and protocols. Implementation includes routine debugging; no blanket rework percentage is added."
       },
       "prerequisites": [
         "P_STATICS",
@@ -2962,11 +3065,15 @@
         }
       ],
       "core_reading": {
-        "ru": "Исходный M07: требования и сравнение, оснастка и калибровки, ограниченное управление, люфт и тепловой опыт; паспорта реальных привода, драйвера и питания. Частотная развёртка, полная подгонка модели и модельные F9/F10 отложены. Чтение входит в 32 учебных часа. В начале A1 — вводный блок «Шестерёнки и редукторы»: Modern Robotics §8.9, схемы KHK и анимация Harmonic Drive; 3 ч изучения уже внутри 11 ч A1.",
-        "en": "Original M07: requirements/comparison, fixture/calibration, bounded control, backlash and thermal trial; actual drive/driver/supply datasheets. Chirp, full fitting and model F9/F10 are deferred. Reading is inside 32 learning hours. Begin A1 with the Gears and gearboxes introduction: Modern Robotics §8.9, KHK diagrams and Harmonic Drive animation; 3 h learning already within A1’s 11 h."
+        "ru": "Исходный M07: требования и сравнение, оснастка и калибровки, ограниченное управление, люфт и тепловой опыт; паспорта реальных привода, драйвера и питания. Частотная развёртка, полная подгонка модели и модельные F9/F10 отложены. Чтение входит в 34 ч изучения. В начале A1 — вводный блок «Шестерёнки и редукторы»: Modern Robotics §8.9, схемы KHK и анимация Harmonic Drive; 3 ч изучения уже внутри 11 ч A1.",
+        "en": "Original M07: requirements/comparison, fixture/calibration, bounded control, backlash and thermal trial; actual drive/driver/supply datasheets. Chirp, full fitting and model F9/F10 are deferred. Reading is inside 34 learning hours. Begin A1 with the Gears and gearboxes introduction: Modern Robotics §8.9, KHK diagrams and Harmonic Drive animation; 3 h learning already within A1’s 11 h."
       },
-      "base": 94,
-      "track": "core"
+      "base": 104,
+      "track": "core",
+      "hour_review": {
+        "reviewed_on": "2026-11-11",
+        "report": "task-hour-review.json"
+      }
     },
     "M12": {
       "id": "M12",
@@ -3147,10 +3254,10 @@
             "ru": "Проверка пригодности выбранного интеллектуального сервопривода",
             "en": "Qualify the selected smart actuator"
           },
-          "learn": 2,
+          "learn": 3,
           "build": 4,
           "verify": 4,
-          "hours": 10,
+          "hours": 11,
           "refs": [
             "L1a"
           ],
@@ -3164,10 +3271,10 @@
             "ru": "Адаптация CAD под реальные крепления",
             "en": "Adapt CAD to actual mounting"
           },
-          "learn": 1,
-          "build": 9,
+          "learn": 2,
+          "build": 10,
           "verify": 2,
-          "hours": 12,
+          "hours": 14,
           "refs": [
             "L1b"
           ],
@@ -3181,10 +3288,10 @@
             "ru": "Сборка трёх приводов, проводка и остановка",
             "en": "Assemble three drives, wiring and stop"
           },
-          "learn": 1,
+          "learn": 2,
           "build": 8,
           "verify": 3,
-          "hours": 12,
+          "hours": 13,
           "refs": [
             "L1c"
           ],
@@ -3193,8 +3300,8 @@
             "en": "Three drives, harness and stop operate on a protected fixture; energy and commands have separately verified paths."
           },
           "material_ready_condition": {
-            "ru": "Поставка: образец привода нужен к началу L1 11.04.2028. Ещё два совместимых привода заказываются после проверки образца, намеченной на 12.04; сборка трёх приводов с 13.04 возможна только после их получения. Время доставки не подтверждено. Пока детали в пути, выполнять независимые CAD/подготовительные работы и пересчитать даты зависимой сборки и испытаний.",
-            "en": "Materials: the actuator sample is needed before L1 on 11 April 2028. Order two more compatible drives after the sample check targeted for 12 April; the three-drive assembly slot from 13 April is conditional on receipt. Delivery time is unconfirmed. Use independent CAD/preparation work during the wait and reforecast dependent assembly and trials."
+            "ru": "Поставка: образец привода нужен к началу L1 18.04.2028. Ещё два совместимых привода заказываются после проверки образца, намеченной на 19.04; сборка трёх приводов с 21.04 возможна только после их получения. Время доставки не подтверждено. Пока детали в пути, выполнять независимые CAD/подготовительные работы и пересчитать даты зависимой сборки и испытаний.",
+            "en": "Materials: the actuator sample is needed before L1 on 18 April 2028. Order two more compatible drives after the sample check targeted for 19 April; the three-drive assembly slot from 21 April is conditional on receipt. Delivery time is unconfirmed. Use independent CAD/preparation work during the wait and reforecast dependent assembly and trials."
           }
         },
         {
@@ -3202,10 +3309,10 @@
             "ru": "Драйвер, оси, нули и единицы",
             "en": "Driver, axes, zeros and units"
           },
-          "learn": 1,
+          "learn": 2,
           "build": 8,
           "verify": 5,
-          "hours": 14,
+          "hours": 15,
           "refs": [
             "L1d"
           ],
@@ -3219,10 +3326,10 @@
             "ru": "Измеренная FK/IK и нагруженная проверка",
             "en": "Measured FK/IK and loaded leg validation"
           },
-          "learn": 2,
+          "learn": 3,
           "build": 7,
           "verify": 13,
-          "hours": 22,
+          "hours": 23,
           "refs": [
             "L1e"
           ],
@@ -3235,8 +3342,8 @@
       "low": 55,
       "high": 110,
       "rationale": {
-        "ru": "70 ч физической постройки первой ноги учтены один раз в L1. M08 содержит кинематику, M13 повторно использует готовую ногу для сравнения с моделью, а M22 исключает повторную постройку первой ноги.",
-        "en": "The 70 h of first-leg fabrication are budgeted once in L1. M08 covers kinematics, M13 reuses the completed leg for model comparison, and M22 excludes building the first leg again."
+        "ru": "76 ч: изучение 12, реализация 37, проверка 27. Индивидуальная средняя рабочая оценка для указанного опыта; новые темы изучаются полностью в границах задания. Готовые код, стенды, журналы и методики используются повторно. Обычная отладка входит в реализацию; отдельный процент на непредсказуемые переделки не добавлен.",
+        "en": "76 h: learning 12, implementation 37, verification 27. Individually reviewed nominal effort for the stated experience; new topics retain their defined learning scope. Reuse code, rigs, logs and protocols. Implementation includes routine debugging; no blanket rework percentage is added."
       },
       "scope": null,
       "assumptions": {
@@ -3266,12 +3373,19 @@
         }
       ],
       "track": "hexapod",
-      "base": 70,
+      "base": 76,
       "learning": 7,
       "building": 36,
       "verification": 27,
-      "hours": 70,
-      "retained_physical_scope": true
+      "hours": 76,
+      "retained_physical_scope": true,
+      "learn": 12,
+      "build": 37,
+      "verify": 27,
+      "hour_review": {
+        "reviewed_on": "2026-11-11",
+        "report": "task-hour-review.json"
+      }
     },
     "M22": {
       "id": "M22",
@@ -3285,10 +3399,10 @@
             "ru": "Интерфейсы, масса и бюджет питания",
             "en": "Interfaces, mass and power budget"
           },
-          "learn": 5,
-          "build": 9,
-          "verify": 5,
-          "hours": 19,
+          "learn": 6,
+          "build": 8,
+          "verify": 4,
+          "hours": 18,
           "refs": [
             "Q1"
           ],
@@ -3302,10 +3416,10 @@
             "ru": "Ещё три ноги, корпус и монтаж",
             "en": "Three additional legs, body and assembly"
           },
-          "learn": 4,
+          "learn": 5,
           "build": 32,
           "verify": 8,
-          "hours": 44,
+          "hours": 45,
           "refs": [
             "Q2"
           ],
@@ -3319,8 +3433,8 @@
             "ru": "Жгуты, питание, остановка и последовательный запуск",
             "en": "Harnesses, power, stop and staged startup"
           },
-          "learn": 3,
-          "build": 18,
+          "learn": 4,
+          "build": 17,
           "verify": 8,
           "hours": 29,
           "refs": [
@@ -3336,10 +3450,10 @@
             "ru": "12 калибровок, шина и измерения",
             "en": "Twelve calibrations, bus and measurement"
           },
-          "learn": 3,
-          "build": 14,
-          "verify": 12,
-          "hours": 29,
+          "learn": 4,
+          "build": 13,
+          "verify": 10,
+          "hours": 27,
           "refs": [
             "Q4"
           ],
@@ -3354,9 +3468,9 @@
             "en": "HIL, standing, slow gait and trial series"
           },
           "learn": 1,
-          "build": 9,
-          "verify": 20,
-          "hours": 30,
+          "build": 8,
+          "verify": 17,
+          "hours": 26,
           "refs": [
             "Q5"
           ],
@@ -3369,8 +3483,8 @@
       "low": 120,
       "high": 210,
       "rationale": {
-        "ru": "На входе есть реально работающая трёхкоординатная нога и контроллер. Увеличение до 155 ч включает повторение механики/проводки, 12 калибровок и физическую интеграцию. Теория ROS, IK и управления здесь заново не изучается.",
-        "en": "Entry requires a physically functioning 3-DOF leg and controller. The 155 hours pay for replicated mechanics/wiring, twelve calibrations and physical integration. ROS, IK and control theory are not relearned."
+        "ru": "145 ч: изучение 20, реализация 78, проверка 47. Индивидуальная средняя рабочая оценка для указанного опыта; новые темы изучаются полностью в границах задания. Готовые код, стенды, журналы и методики используются повторно. Обычная отладка входит в реализацию; отдельный процент на непредсказуемые переделки не добавлен.",
+        "en": "145 h: learning 20, implementation 78, verification 47. Individually reviewed nominal effort for the stated experience; new topics retain their defined learning scope. Reuse code, rigs, logs and protocols. Implementation includes routine debugging; no blanket rework percentage is added."
       },
       "scope": {
         "ru": "Физический четырёхногий этап сохраняется: ≥60 с самостоятельного стояния, медленная походка, остановка, HIL/IMU/контакт и повторные испытания. Используется корпус, заранее рассчитанный на расширение до шести ног; это не отдельный второй робот.",
@@ -3401,12 +3515,19 @@
         }
       ],
       "track": "hexapod",
-      "base": 151,
+      "base": 145,
       "learning": 20,
       "building": 82,
       "verification": 53,
-      "hours": 151,
-      "retained_physical_scope": true
+      "hours": 145,
+      "retained_physical_scope": true,
+      "learn": 20,
+      "build": 78,
+      "verify": 47,
+      "hour_review": {
+        "reviewed_on": "2026-11-11",
+        "report": "task-hour-review.json"
+      }
     },
     "M23": {
       "id": "M23",
@@ -3420,10 +3541,10 @@
             "ru": "Две ноги и расширение корпуса",
             "en": "Two legs and frame expansion"
           },
-          "learn": 4,
-          "build": 24,
-          "verify": 6,
-          "hours": 34,
+          "learn": 5,
+          "build": 22,
+          "verify": 5,
+          "hours": 32,
           "refs": [
             "X1"
           ],
@@ -3438,9 +3559,9 @@
             "en": "Eighteen channels: power, bus and recalibration"
           },
           "learn": 2,
-          "build": 10,
-          "verify": 8,
-          "hours": 20,
+          "build": 8,
+          "verify": 7,
+          "hours": 17,
           "refs": [
             "X2"
           ],
@@ -3454,10 +3575,10 @@
             "ru": "Wave/ripple, переходы и контакты",
             "en": "Wave/ripple, transitions and contacts"
           },
-          "learn": 6,
-          "build": 17,
-          "verify": 8,
-          "hours": 31,
+          "learn": 7,
+          "build": 15,
+          "verify": 7,
+          "hours": 29,
           "refs": [
             "X3"
           ],
@@ -3471,10 +3592,10 @@
             "ru": "Плоскость опоры, выравнивание и допустимые уклоны",
             "en": "Support plane, levelling and admissible slopes"
           },
-          "learn": 6,
-          "build": 13,
-          "verify": 12,
-          "hours": 31,
+          "learn": 8,
+          "build": 12,
+          "verify": 10,
+          "hours": 30,
           "refs": [
             "X4"
           ],
@@ -3488,10 +3609,10 @@
             "ru": "Серия попыток, энергия, отказы, сервис и выпуск",
             "en": "Trial series, energy, faults, service and release"
           },
-          "learn": 2,
-          "build": 10,
-          "verify": 22,
-          "hours": 34,
+          "learn": 3,
+          "build": 9,
+          "verify": 20,
+          "hours": 32,
           "refs": [
             "X5"
           ],
@@ -3504,8 +3625,8 @@
       "low": 120,
       "high": 210,
       "rationale": {
-        "ru": "155 ч — дальнейшая работа с той же проверенной машиной: две дополнительные ноги, новый режим контактов и испытания. Не повторяется создание драйвера, всего CAD и телеметрии.",
-        "en": "The 155 hours continue work on the same validated machine: two added legs, new contact modes and testing. Driver creation, all CAD and telemetry are not repeated."
+        "ru": "140 ч: изучение 25, реализация 66, проверка 49. Индивидуальная средняя рабочая оценка для указанного опыта; новые темы изучаются полностью в границах задания. Готовые код, стенды, журналы и методики используются повторно. Обычная отладка входит в реализацию; отдельный процент на непредсказуемые переделки не добавлен.",
+        "en": "140 h: learning 25, implementation 66, verification 49. Individually reviewed nominal effort for the stated experience; new topics retain their defined learning scope. Reuse code, rigs, logs and protocols. Implementation includes routine debugging; no blanket rework percentage is added."
       },
       "scope": {
         "ru": "18 степеней свободы, ≥120 с стояния, wave/ripple, повороты и боковое движение в измеренном диапазоне, выравнивание на заранее проверенных поверхностях, отказы, энергия и обслуживание. Камера не требуется. карта глубины, выбор опор по зрению, походка с переносом трёх ног и движение на пяти ногах — развитие. ±10–15° — цель проверки, а не гарантированный результат.",
@@ -3532,12 +3653,19 @@
         }
       ],
       "track": "hexapod",
-      "base": 150,
+      "base": 140,
       "learning": 25,
       "building": 74,
       "verification": 56,
-      "hours": 150,
-      "retained_physical_scope": true
+      "hours": 140,
+      "retained_physical_scope": true,
+      "learn": 25,
+      "build": 66,
+      "verify": 49,
+      "hour_review": {
+        "reviewed_on": "2026-11-11",
+        "report": "task-hour-review.json"
+      }
     },
     "ARM": {
       "id": "ARM",
@@ -3580,8 +3708,8 @@
             "en": "Most loaded joint passes holding/motion/thermal tests under equivalent load before the full order."
           },
           "material_ready_condition": {
-            "ru": "Поставка: выбор плечевого привода завершается по плану 17.06.2028; PR5 разрешает заказ только после этого. 17.06 — начало планового слота A02, а не обещание получения привода в тот же день. Работы с приводом и нагрузочная проверка ждут фактической поставки; независимую подготовку оснастки можно продолжать. Если ожидание не помещается в перестановку работ, пересчитать окончание A02 и последующие даты.",
-            "en": "Materials: shoulder-actuator selection is targeted for 17 June 2028; PR5 permits ordering only afterward. 17 June is the nominal A02 work slot, not a promise of same-day receipt. Motor-dependent work and loaded qualification wait for actual delivery; independent fixture preparation may continue. If resequencing cannot absorb the wait, reforecast A02 completion and dependent dates."
+            "ru": "Поставка: выбор плечевого привода завершается по плану 28.06.2028; PR5 разрешает заказ только после этого. 28.06 — начало планового слота A02, а не обещание получения привода в тот же день. Работы с приводом и нагрузочная проверка ждут фактической поставки; независимую подготовку оснастки можно продолжать. Если ожидание не помещается в перестановку работ, пересчитать окончание A02 и последующие даты.",
+            "en": "Materials: shoulder-actuator selection is targeted for 28 June 2028; PR5 permits ordering only afterward. 28 June is the nominal A02 work slot, not a promise of same-day receipt. Motor-dependent work and loaded qualification wait for actual delivery; independent fixture preparation may continue. If resequencing cannot absorb the wait, reforecast A02 completion and dependent dates."
           }
         },
         {
@@ -3597,8 +3725,8 @@
             "A03"
           ],
           "result": {
-            "ru": "Собственные звенья, опоры и CAD — 45 ч; URDF/SRDF, столкновения, массы и ограничения — 12 ч; настройка готового численного IK для шести степеней свободы, достижимость и сингулярности — 8 ч.",
-            "en": "Custom links/supports/CAD45 h; URDF/SRDF/collision/mass/limits 12 h; existing numerical 6 DOF IK setup and reachability/singularity checks 8 h."
+            "ru": "Собственные звенья, опоры и CAD — 46 ч; URDF/SRDF, столкновения, массы и ограничения — 16 ч; настройка готового численного IK для шести степеней свободы, достижимость и сингулярности — 9 ч. Итого 71 ч; изучение, реализация и проверка входят в эти подработы.",
+            "en": "Custom links/supports/CAD: 46 h; URDF/SRDF, collisions, masses and limits: 16 h; configuring existing numerical six-DOF IK, reachability and singularities: 9 h. Total 71 h, including learning, implementation and verification."
           }
         },
         {
@@ -3852,8 +3980,8 @@
             "en": "Three sections/six drives assembled; distal tendon routing and inter-section coupling verified."
           },
           "material_ready_condition": {
-            "ru": "Поставка: ещё четыре привода заказываются только после PASS первой активной секции T04, намеченного на 11.09.2028. Слот T05 с 11.09 не предполагает поставку в тот же день. Монтаж этих приводов, полная калибровка и завершение T05 зависят от получения деталей; на время доставки перенести независимые работы и при необходимости пересчитать даты. 0 ч свободной ёмкости не гарантируют покрытие календарного срока доставки.",
-            "en": "Materials: order the other four drives only after first-active-section T04 PASS, targeted for 11 September 2028. The T05 slot from 11 September does not assume same-day delivery. Installing these drives, full calibration and T05 completion depend on receipt; bring independent work forward during shipping and reforecast dates when needed. The 0 h of unallocated capacity do not guarantee coverage of elapsed delivery time."
+            "ru": "Поставка: ещё четыре привода заказываются только после PASS первой активной секции T04, намеченного на 22.09.2028. Слот T05 с 22.09 не предполагает поставку в тот же день. Монтаж этих приводов, полная калибровка и завершение T05 зависят от получения деталей; на время доставки перенести независимые работы и при необходимости пересчитать даты. 0 ч свободной ёмкости не гарантируют покрытие календарного срока доставки.",
+            "en": "Materials: order the other four drives only after first-active-section T04 PASS, targeted for 22 September 2028. The T05 slot from 22 September does not assume same-day delivery. Installing these drives, full calibration and T05 completion depend on receipt; bring independent work forward during shipping and reforecast dates when needed. The 0 h of unallocated capacity do not guarantee coverage of elapsed delivery time."
           }
         },
         {
@@ -4103,10 +4231,10 @@
             "ru": "Требования, вылет и полезная нагрузка и выбор приводов",
             "en": "Requirements, reach/payload and actuator selection"
           },
-          "learn": 11,
+          "learn": 15,
           "build": 16,
           "verify": 6,
-          "hours": 33,
+          "hours": 37,
           "refs": [
             "A01"
           ],
@@ -4120,10 +4248,10 @@
             "ru": "Прототип самого нагруженного сустава",
             "en": "Prototype the most heavily loaded joint"
           },
-          "learn": 6,
-          "build": 25,
-          "verify": 13,
-          "hours": 44,
+          "learn": 8,
+          "build": 26,
+          "verify": 14,
+          "hours": 48,
           "refs": [
             "A02"
           ],
@@ -4132,8 +4260,8 @@
             "en": "Most loaded joint passes holding/motion/thermal tests under equivalent load before the full order."
           },
           "material_ready_condition": {
-            "ru": "Поставка: выбор плечевого привода завершается по плану 17.06.2028; PR5 разрешает заказ только после этого. 17.06 — начало планового слота A02, а не обещание получения привода в тот же день. Работы с приводом и нагрузочная проверка ждут фактической поставки; независимую подготовку оснастки можно продолжать. Если ожидание не помещается в перестановку работ, пересчитать окончание A02 и последующие даты.",
-            "en": "Materials: shoulder-actuator selection is targeted for 17 June 2028; PR5 permits ordering only afterward. 17 June is the nominal A02 work slot, not a promise of same-day receipt. Motor-dependent work and loaded qualification wait for actual delivery; independent fixture preparation may continue. If resequencing cannot absorb the wait, reforecast A02 completion and dependent dates."
+            "ru": "Поставка: выбор плечевого привода завершается по плану 28.06.2028; PR5 разрешает заказ только после этого. 28.06 — начало планового слота A02, а не обещание получения привода в тот же день. Работы с приводом и нагрузочная проверка ждут фактической поставки; независимую подготовку оснастки можно продолжать. Если ожидание не помещается в перестановку работ, пересчитать окончание A02 и последующие даты.",
+            "en": "Materials: shoulder-actuator selection is targeted for 28 June 2028; PR5 permits ordering only afterward. 28 June is the nominal A02 work slot, not a promise of same-day receipt. Motor-dependent work and loaded qualification wait for actual delivery; independent fixture preparation may continue. If resequencing cannot absorb the wait, reforecast A02 completion and dependent dates."
           }
         },
         {
@@ -4141,16 +4269,16 @@
             "ru": "Собственная CAD-механика всех звеньев",
             "en": "Custom CAD mechanics for all links"
           },
-          "learn": 10,
-          "build": 43,
+          "learn": 13,
+          "build": 48,
           "verify": 10,
-          "hours": 63,
+          "hours": 71,
           "refs": [
             "A03"
           ],
           "result": {
-            "ru": "Собственные звенья, опоры и CAD — 45 ч; URDF/SRDF, столкновения, массы и ограничения — 12 ч; настройка готового численного IK для шести степеней свободы, достижимость и сингулярности — 8 ч.",
-            "en": "Custom links/supports/CAD45 h; URDF/SRDF/collision/mass/limits 12 h; existing numerical 6 DOF IK setup and reachability/singularity checks 8 h."
+            "ru": "Собственные звенья, опоры и CAD — 46 ч; URDF/SRDF, столкновения, массы и ограничения — 16 ч; настройка готового численного IK для шести степеней свободы, достижимость и сингулярности — 9 ч. Итого 71 ч; изучение, реализация и проверка входят в эти подработы.",
+            "en": "Custom links/supports/CAD: 46 h; URDF/SRDF, collisions, masses and limits: 16 h; configuring existing numerical six-DOF IK, reachability and singularities: 9 h. Total 71 h, including learning, implementation and verification."
           }
         },
         {
@@ -4158,8 +4286,8 @@
             "ru": "Простой параллельный захват",
             "en": "Simple parallel gripper"
           },
-          "learn": 2,
-          "build": 17,
+          "learn": 4,
+          "build": 15,
           "verify": 5,
           "hours": 24,
           "refs": [
@@ -4173,9 +4301,20 @@
       ],
       "track": "arm",
       "parent": "ARM",
-      "base": 164,
-      "hours": 164,
-      "retained_physical_scope": true
+      "base": 180,
+      "hours": 180,
+      "retained_physical_scope": true,
+      "learn": 40,
+      "build": 105,
+      "verify": 35,
+      "rationale": {
+        "ru": "180 ч: изучение 40, реализация 105, проверка 35. Индивидуальная средняя рабочая оценка для указанного опыта; новые темы изучаются полностью в границах задания. Готовые код, стенды, журналы и методики используются повторно. Обычная отладка входит в реализацию; отдельный процент на непредсказуемые переделки не добавлен.",
+        "en": "180 h: learning 40, implementation 105, verification 35. Individually reviewed nominal effort for the stated experience; new topics retain their defined learning scope. Reuse code, rigs, logs and protocols. Implementation includes routine debugging; no blanket rework percentage is added."
+      },
+      "hour_review": {
+        "reviewed_on": "2026-11-11",
+        "report": "task-hour-review.json"
+      }
     },
     "A2": {
       "id": "A2",
@@ -4189,9 +4328,9 @@
             "ru": "Изготовление, обработка и сборка",
             "en": "Manufacture, finishing and assembly"
           },
-          "learn": 2,
+          "learn": 3,
           "build": 37,
-          "verify": 10,
+          "verify": 9,
           "hours": 49,
           "refs": [
             "A05"
@@ -4206,9 +4345,9 @@
             "ru": "Питание, жгуты, остановка и границы движения",
             "en": "Power, harnesses, stop and motion boundaries"
           },
-          "learn": 2,
+          "learn": 3,
           "build": 22,
-          "verify": 10,
+          "verify": 9,
           "hours": 34,
           "refs": [
             "A06"
@@ -4223,10 +4362,10 @@
             "ru": "Калибровки, жёсткость и модель реального манипулятора",
             "en": "Calibration, stiffness and physical-arm model"
           },
-          "learn": 6,
-          "build": 22,
-          "verify": 20,
-          "hours": 48,
+          "learn": 8,
+          "build": 21,
+          "verify": 18,
+          "hours": 47,
           "refs": [
             "A07"
           ],
@@ -4238,9 +4377,20 @@
       ],
       "track": "arm",
       "parent": "ARM",
-      "base": 131,
-      "hours": 131,
-      "retained_physical_scope": true
+      "base": 130,
+      "hours": 130,
+      "retained_physical_scope": true,
+      "learn": 14,
+      "build": 80,
+      "verify": 36,
+      "rationale": {
+        "ru": "130 ч: изучение 14, реализация 80, проверка 36. Индивидуальная средняя рабочая оценка для указанного опыта; новые темы изучаются полностью в границах задания. Готовые код, стенды, журналы и методики используются повторно. Обычная отладка входит в реализацию; отдельный процент на непредсказуемые переделки не добавлен.",
+        "en": "130 h: learning 14, implementation 80, verification 36. Individually reviewed nominal effort for the stated experience; new topics retain their defined learning scope. Reuse code, rigs, logs and protocols. Implementation includes routine debugging; no blanket rework percentage is added."
+      },
+      "hour_review": {
+        "reviewed_on": "2026-11-11",
+        "report": "task-hour-review.json"
+      }
     },
     "A3": {
       "id": "A3",
@@ -4254,10 +4404,10 @@
             "ru": "Реальное исполнение MoveIt/ros2_control",
             "en": "Physical execution with MoveIt/ros2_control"
           },
-          "learn": 2,
-          "build": 22,
-          "verify": 10,
-          "hours": 34,
+          "learn": 3,
+          "build": 19,
+          "verify": 8,
+          "hours": 30,
           "refs": [
             "A08"
           ],
@@ -4271,10 +4421,10 @@
             "ru": "Повторяемый перенос объектов",
             "en": "Repeatable object transfer"
           },
-          "learn": 3,
-          "build": 18,
-          "verify": 18,
-          "hours": 39,
+          "learn": 4,
+          "build": 16,
+          "verify": 12,
+          "hours": 32,
           "refs": [
             "A09"
           ],
@@ -4288,10 +4438,10 @@
             "ru": "Циклы, отказы, обслуживание и выпуск",
             "en": "Cycles, faults, maintenance and release"
           },
-          "learn": 3,
-          "build": 20,
-          "verify": 21,
-          "hours": 44,
+          "learn": 4,
+          "build": 17,
+          "verify": 13,
+          "hours": 34,
           "refs": [
             "A10"
           ],
@@ -4303,9 +4453,20 @@
       ],
       "track": "arm",
       "parent": "ARM",
-      "base": 117,
-      "hours": 117,
-      "retained_physical_scope": true
+      "base": 96,
+      "hours": 96,
+      "retained_physical_scope": true,
+      "learn": 11,
+      "build": 52,
+      "verify": 33,
+      "rationale": {
+        "ru": "96 ч: изучение 11, реализация 52, проверка 33. Индивидуальная средняя рабочая оценка для указанного опыта; новые темы изучаются полностью в границах задания. Готовые код, стенды, журналы и методики используются повторно. Обычная отладка входит в реализацию; отдельный процент на непредсказуемые переделки не добавлен.",
+        "en": "96 h: learning 11, implementation 52, verification 33. Individually reviewed nominal effort for the stated experience; new topics retain their defined learning scope. Reuse code, rigs, logs and protocols. Implementation includes routine debugging; no blanket rework percentage is added."
+      },
+      "hour_review": {
+        "reviewed_on": "2026-11-11",
+        "report": "task-hour-review.json"
+      }
     },
     "T1": {
       "id": "T1",
@@ -4319,10 +4480,10 @@
             "ru": "Требования, постоянная кривизна и нагрузки",
             "en": "Requirements, constant-curvature and loads"
           },
-          "learn": 8,
+          "learn": 14,
           "build": 14,
           "verify": 6,
-          "hours": 28,
+          "hours": 34,
           "refs": [
             "T01"
           ],
@@ -4336,10 +4497,10 @@
             "ru": "Позвонки, три варианта хребта и пассивная секция",
             "en": "Vertebrae, three backbone variants and passive section"
           },
-          "learn": 8,
-          "build": 28,
+          "learn": 13,
+          "build": 31,
           "verify": 12,
-          "hours": 48,
+          "hours": 56,
           "refs": [
             "T02"
           ],
@@ -4353,10 +4514,10 @@
             "ru": "Шкивы, две замкнутые петли и натяжение",
             "en": "Spools, two closed loops and pretension"
           },
-          "learn": 6,
-          "build": 27,
+          "learn": 10,
+          "build": 29,
           "verify": 11,
-          "hours": 44,
+          "hours": 50,
           "refs": [
             "T03"
           ],
@@ -4368,9 +4529,20 @@
       ],
       "track": "tail",
       "parent": "TAIL",
-      "base": 120,
-      "hours": 120,
-      "retained_physical_scope": true
+      "base": 140,
+      "hours": 140,
+      "retained_physical_scope": true,
+      "learn": 37,
+      "build": 74,
+      "verify": 29,
+      "rationale": {
+        "ru": "140 ч: изучение 37, реализация 74, проверка 29. Индивидуальная средняя рабочая оценка для указанного опыта; новые темы изучаются полностью в границах задания. Готовые код, стенды, журналы и методики используются повторно. Обычная отладка входит в реализацию; отдельный процент на непредсказуемые переделки не добавлен.",
+        "en": "140 h: learning 37, implementation 74, verification 29. Individually reviewed nominal effort for the stated experience; new topics retain their defined learning scope. Reuse code, rigs, logs and protocols. Implementation includes routine debugging; no blanket rework percentage is added."
+      },
+      "hour_review": {
+        "reviewed_on": "2026-11-11",
+        "report": "task-hour-review.json"
+      }
     },
     "T2": {
       "id": "T2",
@@ -4384,10 +4556,10 @@
             "ru": "Два привода и одна активная секция",
             "en": "Two actuators and one active section"
           },
-          "learn": 5,
+          "learn": 8,
           "build": 27,
           "verify": 12,
-          "hours": 44,
+          "hours": 47,
           "refs": [
             "T04"
           ],
@@ -4401,10 +4573,10 @@
             "ru": "Полные три секции и шесть приводов",
             "en": "Complete three sections and six actuators"
           },
-          "learn": 4,
+          "learn": 7,
           "build": 38,
           "verify": 12,
-          "hours": 54,
+          "hours": 57,
           "refs": [
             "T05"
           ],
@@ -4413,8 +4585,8 @@
             "en": "Three sections/six drives assembled; distal tendon routing and inter-section coupling verified."
           },
           "material_ready_condition": {
-            "ru": "Поставка: ещё четыре привода заказываются только после PASS первой активной секции T04, намеченного на 11.09.2028. Слот T05 с 11.09 не предполагает поставку в тот же день. Монтаж этих приводов, полная калибровка и завершение T05 зависят от получения деталей; на время доставки перенести независимые работы и при необходимости пересчитать даты. 0 ч свободной ёмкости не гарантируют покрытие календарного срока доставки.",
-            "en": "Materials: order the other four drives only after first-active-section T04 PASS, targeted for 11 September 2028. The T05 slot from 11 September does not assume same-day delivery. Installing these drives, full calibration and T05 completion depend on receipt; bring independent work forward during shipping and reforecast dates when needed. The 0 h of unallocated capacity do not guarantee coverage of elapsed delivery time."
+            "ru": "Поставка: ещё четыре привода заказываются только после PASS первой активной секции T04, намеченного на 22.09.2028. Слот T05 с 22.09 не предполагает поставку в тот же день. Монтаж этих приводов, полная калибровка и завершение T05 зависят от получения деталей; на время доставки перенести независимые работы и при необходимости пересчитать даты. 0 ч свободной ёмкости не гарантируют покрытие календарного срока доставки.",
+            "en": "Materials: order the other four drives only after first-active-section T04 PASS, targeted for 22 September 2028. The T05 slot from 22 September does not assume same-day delivery. Installing these drives, full calibration and T05 completion depend on receipt; bring independent work forward during shipping and reforecast dates when needed. The 0 h of unallocated capacity do not guarantee coverage of elapsed delivery time."
           }
         },
         {
@@ -4422,10 +4594,10 @@
             "ru": "Калибровка, гистерезис и удержание формы",
             "en": "Calibration, hysteresis and shape retention"
           },
-          "learn": 5,
+          "learn": 7,
           "build": 22,
           "verify": 17,
-          "hours": 44,
+          "hours": 46,
           "refs": [
             "T06"
           ],
@@ -4437,9 +4609,20 @@
       ],
       "track": "tail",
       "parent": "TAIL",
-      "base": 142,
-      "hours": 142,
-      "retained_physical_scope": true
+      "base": 150,
+      "hours": 150,
+      "retained_physical_scope": true,
+      "learn": 22,
+      "build": 87,
+      "verify": 41,
+      "rationale": {
+        "ru": "150 ч: изучение 22, реализация 87, проверка 41. Индивидуальная средняя рабочая оценка для указанного опыта; новые темы изучаются полностью в границах задания. Готовые код, стенды, журналы и методики используются повторно. Обычная отладка входит в реализацию; отдельный процент на непредсказуемые переделки не добавлен.",
+        "en": "150 h: learning 22, implementation 87, verification 41. Individually reviewed nominal effort for the stated experience; new topics retain their defined learning scope. Reuse code, rigs, logs and protocols. Implementation includes routine debugging; no blanket rework percentage is added."
+      },
+      "hour_review": {
+        "reviewed_on": "2026-11-11",
+        "report": "task-hour-review.json"
+      }
     },
     "T3": {
       "id": "T3",
@@ -4453,10 +4636,10 @@
             "ru": "Траектории, редактор и ROS",
             "en": "Trajectories, editor and ROS"
           },
-          "learn": 2,
-          "build": 22,
-          "verify": 10,
-          "hours": 34,
+          "learn": 3,
+          "build": 18,
+          "verify": 6,
+          "hours": 27,
           "refs": [
             "T07"
           ],
@@ -4470,10 +4653,10 @@
             "ru": "Циклы, отказы, крепление, примерка и выпуск",
             "en": "Cycles, faults, mount, wearable trial and release"
           },
-          "learn": 2,
-          "build": 15,
-          "verify": 17,
-          "hours": 34,
+          "learn": 3,
+          "build": 11,
+          "verify": 9,
+          "hours": 23,
           "refs": [
             "T08"
           ],
@@ -4485,9 +4668,20 @@
       ],
       "track": "tail",
       "parent": "TAIL",
-      "base": 68,
-      "hours": 68,
-      "retained_physical_scope": true
+      "base": 50,
+      "hours": 50,
+      "retained_physical_scope": true,
+      "learn": 6,
+      "build": 29,
+      "verify": 15,
+      "rationale": {
+        "ru": "50 ч: изучение 6, реализация 29, проверка 15. Индивидуальная средняя рабочая оценка для указанного опыта; новые темы изучаются полностью в границах задания. Готовые код, стенды, журналы и методики используются повторно. Обычная отладка входит в реализацию; отдельный процент на непредсказуемые переделки не добавлен.",
+        "en": "50 h: learning 6, implementation 29, verification 15. Individually reviewed nominal effort for the stated experience; new topics retain their defined learning scope. Reuse code, rigs, logs and protocols. Implementation includes routine debugging; no blanket rework percentage is added."
+      },
+      "hour_review": {
+        "reviewed_on": "2026-11-11",
+        "report": "task-hour-review.json"
+      }
     },
     "D1": {
       "id": "D1",
@@ -4502,10 +4696,10 @@
             "ru": "Масса, COM, инерция и расчёт приводов",
             "en": "Mass, COM, inertia and actuator loads"
           },
-          "learn": 5,
+          "learn": 7,
           "build": 10,
           "verify": 4,
-          "hours": 19,
+          "hours": 21,
           "source_refs": [
             "M09 pp3,9",
             "M05 load cases"
@@ -4526,10 +4720,10 @@
             "ru": "Опоры, сцепление и границы устойчивости",
             "en": "Support, traction and stability limits"
           },
-          "learn": 5,
+          "learn": 7,
           "build": 9,
           "verify": 5,
-          "hours": 19,
+          "hours": 21,
           "source_refs": [
             "M09 pp6–7,10",
             "M19 p15",
@@ -4547,14 +4741,25 @@
           ]
         }
       ],
-      "base": 38,
+      "base": 42,
       "track": "core",
       "parent": "M09",
       "gate": {
         "ru": "До L1 зафиксированы масса, позы, опорная нагрузка и расчётные моменты; проверены геометрия опор, трение и запас. Физическая нагрузочная проверка выполняется далее в L1, динамические невязки — в D2.",
         "en": "Before L1, record mass, poses, support loading and calculated torques; check support geometry, friction and margin. Physical load qualification follows in L1; dynamic residuals are checked in D2."
       },
-      "hours": 38
+      "hours": 42,
+      "learn": 14,
+      "build": 19,
+      "verify": 9,
+      "rationale": {
+        "ru": "42 ч: изучение 14, реализация 19, проверка 9. Индивидуальная средняя рабочая оценка для указанного опыта; новые темы изучаются полностью в границах задания. Готовые код, стенды, журналы и методики используются повторно. Обычная отладка входит в реализацию; отдельный процент на непредсказуемые переделки не добавлен.",
+        "en": "42 h: learning 14, implementation 19, verification 9. Individually reviewed nominal effort for the stated experience; new topics retain their defined learning scope. Reuse code, rigs, logs and protocols. Implementation includes routine debugging; no blanket rework percentage is added."
+      },
+      "hour_review": {
+        "reviewed_on": "2026-11-11",
+        "report": "task-hour-review.json"
+      }
     },
     "D2": {
       "id": "D2",
@@ -4569,10 +4774,10 @@
             "ru": "Одна ось: модель, энергия и трение",
             "en": "One axis: model, energy and friction"
           },
-          "learn": 6,
-          "build": 9,
-          "verify": 4,
-          "hours": 19,
+          "learn": 7,
+          "build": 8,
+          "verify": 3,
+          "hours": 18,
           "source_refs": [
             "M09 pp3–4,9",
             "M02 dynamic model"
@@ -4593,10 +4798,10 @@
             "ru": "Связанные звенья: квазистатика против динамики",
             "en": "Coupled links: quasi-static versus dynamic loads"
           },
-          "learn": 5,
-          "build": 7,
-          "verify": 3,
-          "hours": 15,
+          "learn": 6,
+          "build": 5,
+          "verify": 2,
+          "hours": 13,
           "source_refs": [
             "M09 pp5–6,10"
           ],
@@ -4615,10 +4820,10 @@
             "ru": "Проверка модели измеренным откликом",
             "en": "Validate the model against measured response"
           },
-          "learn": 5,
+          "learn": 6,
           "build": 11,
-          "verify": 5,
-          "hours": 21,
+          "verify": 6,
+          "hours": 23,
           "source_refs": [
             "M09 pp7–8,11–14",
             "M07 actuator rig"
@@ -4634,14 +4839,25 @@
           ]
         }
       ],
-      "base": 55,
+      "base": 54,
       "track": "core",
       "parent": "M09",
       "gate": {
         "ru": "Проверенная на отдельных измерениях динамическая модель объясняет нагрузку и допустимое ускорение; невязка, ограничения и область применимости записаны.",
         "en": "A dynamics model validated on separate measurements explains loading and permissible acceleration; record residuals, limits and applicability."
       },
-      "hours": 55
+      "hours": 54,
+      "learn": 19,
+      "build": 24,
+      "verify": 11,
+      "rationale": {
+        "ru": "54 ч: изучение 19, реализация 24, проверка 11. Индивидуальная средняя рабочая оценка для указанного опыта; новые темы изучаются полностью в границах задания. Готовые код, стенды, журналы и методики используются повторно. Обычная отладка входит в реализацию; отдельный процент на непредсказуемые переделки не добавлен.",
+        "en": "54 h: learning 19, implementation 24, verification 11. Individually reviewed nominal effort for the stated experience; new topics retain their defined learning scope. Reuse code, rigs, logs and protocols. Implementation includes routine debugging; no blanket rework percentage is added."
+      },
+      "hour_review": {
+        "reviewed_on": "2026-11-11",
+        "report": "task-hour-review.json"
+      }
     },
     "S1": {
       "id": "S1",
@@ -4656,10 +4872,10 @@
             "ru": "Минимальный граф и стандартные сообщения",
             "en": "Minimal graph and standard messages"
           },
-          "learn": 3,
+          "learn": 6,
           "build": 4,
           "verify": 2,
-          "hours": 9,
+          "hours": 12,
           "source_refs": [
             "M12 Task1"
           ],
@@ -4677,10 +4893,10 @@
             "ru": "Один launch, параметры и изоляция режимов",
             "en": "One launch, parameters and mode isolation"
           },
-          "learn": 1,
+          "learn": 2,
           "build": 2,
           "verify": 1,
-          "hours": 4,
+          "hours": 5,
           "source_refs": [
             "M12 Task2"
           ],
@@ -4698,10 +4914,10 @@
             "ru": "QoS, rosbag и первый журнал событий с временными связями",
             "en": "QoS, bag and the first causal log"
           },
-          "learn": 4,
-          "build": 6,
-          "verify": 5,
-          "hours": 15,
+          "learn": 6,
+          "build": 7,
+          "verify": 6,
+          "hours": 19,
           "source_refs": [
             "M12 Task3",
             "M12 Task7",
@@ -4718,7 +4934,7 @@
           ]
         }
       ],
-      "base": 28,
+      "base": 36,
       "track": "core",
       "parent": "M12",
       "gates": [
@@ -4742,7 +4958,18 @@
       "prerequisites": [
         "M01"
       ],
-      "hours": 28
+      "hours": 36,
+      "learn": 14,
+      "build": 13,
+      "verify": 9,
+      "rationale": {
+        "ru": "36 ч: изучение 14, реализация 13, проверка 9. Индивидуальная средняя рабочая оценка для указанного опыта; новые темы изучаются полностью в границах задания. Готовые код, стенды, журналы и методики используются повторно. Обычная отладка входит в реализацию; отдельный процент на непредсказуемые переделки не добавлен.",
+        "en": "36 h: learning 14, implementation 13, verification 9. Individually reviewed nominal effort for the stated experience; new topics retain their defined learning scope. Reuse code, rigs, logs and protocols. Implementation includes routine debugging; no blanket rework percentage is added."
+      },
+      "hour_review": {
+        "reviewed_on": "2026-11-11",
+        "report": "task-hour-review.json"
+      }
     },
     "S2": {
       "id": "S2",
@@ -4757,10 +4984,10 @@
             "ru": "Одна URDF/Xacro и TF во времени",
             "en": "One URDF/Xacro and time-aware TF"
           },
-          "learn": 3,
-          "build": 6,
+          "learn": 6,
+          "build": 7,
           "verify": 4,
-          "hours": 13,
+          "hours": 17,
           "source_refs": [
             "M12 Task5",
             "M12 p15 URDF inertia"
@@ -4780,10 +5007,10 @@
             "ru": "Адаптер существующей шины микроконтроллера и жизненный цикл ros2_control",
             "en": "Existing MCU-bus adapter and ros2_control lifecycle"
           },
-          "learn": 3,
-          "build": 6,
-          "verify": 4,
-          "hours": 13,
+          "learn": 7,
+          "build": 11,
+          "verify": 5,
+          "hours": 23,
           "source_refs": [
             "M12 Task6"
           ],
@@ -4801,10 +5028,10 @@
             "ru": "Отмена, устаревшие данные и автоматическое воспроизведение сценария отказа",
             "en": "Cancellation, stale data and automated fault replay"
           },
-          "learn": 2,
+          "learn": 5,
           "build": 4,
           "verify": 5,
-          "hours": 11,
+          "hours": 14,
           "source_refs": [
             "M12 Tasks2,4,7,8",
             "M12 F1–F6"
@@ -4819,7 +5046,7 @@
           ]
         }
       ],
-      "base": 37,
+      "base": 54,
       "track": "core",
       "parent": "M12",
       "gates": [
@@ -4846,7 +5073,18 @@
         "M08",
         "L1"
       ],
-      "hours": 37
+      "hours": 54,
+      "learn": 18,
+      "build": 22,
+      "verify": 14,
+      "rationale": {
+        "ru": "54 ч: изучение 18, реализация 22, проверка 14. Индивидуальная средняя рабочая оценка для указанного опыта; новые темы изучаются полностью в границах задания. Готовые код, стенды, журналы и методики используются повторно. Обычная отладка входит в реализацию; отдельный процент на непредсказуемые переделки не добавлен.",
+        "en": "54 h: learning 18, implementation 22, verification 14. Individually reviewed nominal effort for the stated experience; new topics retain their defined learning scope. Reuse code, rigs, logs and protocols. Implementation includes routine debugging; no blanket rework percentage is added."
+      },
+      "hour_review": {
+        "reviewed_on": "2026-11-11",
+        "report": "task-hour-review.json"
+      }
     },
     "G1": {
       "id": "G1",
@@ -4855,7 +5093,7 @@
         "en": "First leg: PASS/HOLD decision"
       },
       "track": "gate",
-      "base": 10,
+      "base": 4,
       "tasks": [
         {
           "title": {
@@ -4863,13 +5101,24 @@
             "en": "Review load specification, measured FK/IK, limits and stopping; select one independent check. Main trials are already in L1."
           },
           "learn": 0,
-          "build": 2,
-          "verify": 8,
-          "hours": 10,
+          "build": 1,
+          "verify": 3,
+          "hours": 4,
           "refs": []
         }
       ],
-      "hours": 10
+      "hours": 4,
+      "learn": 0,
+      "build": 1,
+      "verify": 3,
+      "rationale": {
+        "ru": "4 ч: изучение 0, реализация 1, проверка 3. Индивидуальная средняя рабочая оценка для указанного опыта; новые темы изучаются полностью в границах задания. Готовые код, стенды, журналы и методики используются повторно. Обычная отладка входит в реализацию; отдельный процент на непредсказуемые переделки не добавлен.",
+        "en": "4 h: learning 0, implementation 1, verification 3. Individually reviewed nominal effort for the stated experience; new topics retain their defined learning scope. Reuse code, rigs, logs and protocols. Implementation includes routine debugging; no blanket rework percentage is added."
+      },
+      "hour_review": {
+        "reviewed_on": "2026-11-11",
+        "report": "task-hour-review.json"
+      }
     },
     "G2": {
       "id": "G2",
@@ -4878,7 +5127,7 @@
         "en": "Four legs: clearance to expand"
       },
       "track": "gate",
-      "base": 10,
+      "base": 4,
       "tasks": [
         {
           "title": {
@@ -4886,13 +5135,24 @@
             "en": "Review standing/crawl evidence and power/bus readiness. After PASS plan the remaining two legs. Trials are in M22."
           },
           "learn": 0,
-          "build": 2,
-          "verify": 8,
-          "hours": 10,
+          "build": 1,
+          "verify": 3,
+          "hours": 4,
           "refs": []
         }
       ],
-      "hours": 10
+      "hours": 4,
+      "learn": 0,
+      "build": 1,
+      "verify": 3,
+      "rationale": {
+        "ru": "4 ч: изучение 0, реализация 1, проверка 3. Индивидуальная средняя рабочая оценка для указанного опыта; новые темы изучаются полностью в границах задания. Готовые код, стенды, журналы и методики используются повторно. Обычная отладка входит в реализацию; отдельный процент на непредсказуемые переделки не добавлен.",
+        "en": "4 h: learning 0, implementation 1, verification 3. Individually reviewed nominal effort for the stated experience; new topics retain their defined learning scope. Reuse code, rigs, logs and protocols. Implementation includes routine debugging; no blanket rework percentage is added."
+      },
+      "hour_review": {
+        "reviewed_on": "2026-11-11",
+        "report": "task-hour-review.json"
+      }
     },
     "G3": {
       "id": "G3",
@@ -4901,7 +5161,7 @@
         "en": "Arm and AI: physical acceptance"
       },
       "track": "gate",
-      "base": 10,
+      "base": 4,
       "tasks": [
         {
           "title": {
@@ -4909,13 +5169,24 @@
             "en": "Review manual/automated transfers, reject/unknown, loaded measurements and ML limitations. Reuse the A3 series rather than repeating it."
           },
           "learn": 0,
-          "build": 2,
-          "verify": 8,
-          "hours": 10,
+          "build": 1,
+          "verify": 3,
+          "hours": 4,
           "refs": []
         }
       ],
-      "hours": 10
+      "hours": 4,
+      "learn": 0,
+      "build": 1,
+      "verify": 3,
+      "rationale": {
+        "ru": "4 ч: изучение 0, реализация 1, проверка 3. Индивидуальная средняя рабочая оценка для указанного опыта; новые темы изучаются полностью в границах задания. Готовые код, стенды, журналы и методики используются повторно. Обычная отладка входит в реализацию; отдельный процент на непредсказуемые переделки не добавлен.",
+        "en": "4 h: learning 0, implementation 1, verification 3. Individually reviewed nominal effort for the stated experience; new topics retain their defined learning scope. Reuse code, rigs, logs and protocols. Implementation includes routine debugging; no blanket rework percentage is added."
+      },
+      "hour_review": {
+        "reviewed_on": "2026-11-11",
+        "report": "task-hour-review.json"
+      }
     },
     "G4": {
       "id": "G4",
@@ -4924,7 +5195,7 @@
         "en": "Three projects: final acceptance"
       },
       "track": "gate",
-      "base": 10,
+      "base": 4,
       "tasks": [
         {
           "title": {
@@ -4932,13 +5203,24 @@
             "en": "Review core requirements, reproducibility and completeness of all three devices. An unmet criterion means HOLD and reforecast; further-development topics are not blockers."
           },
           "learn": 0,
-          "build": 2,
-          "verify": 8,
-          "hours": 10,
+          "build": 1,
+          "verify": 3,
+          "hours": 4,
           "refs": []
         }
       ],
-      "hours": 10
+      "hours": 4,
+      "learn": 0,
+      "build": 1,
+      "verify": 3,
+      "rationale": {
+        "ru": "4 ч: изучение 0, реализация 1, проверка 3. Индивидуальная средняя рабочая оценка для указанного опыта; новые темы изучаются полностью в границах задания. Готовые код, стенды, журналы и методики используются повторно. Обычная отладка входит в реализацию; отдельный процент на непредсказуемые переделки не добавлен.",
+        "en": "4 h: learning 0, implementation 1, verification 3. Individually reviewed nominal effort for the stated experience; new topics retain their defined learning scope. Reuse code, rigs, logs and protocols. Implementation includes routine debugging; no blanket rework percentage is added."
+      },
+      "hour_review": {
+        "reviewed_on": "2026-11-11",
+        "report": "task-hour-review.json"
+      }
     },
     "R1": {
       "id": "R1",
@@ -5044,7 +5326,7 @@
   "weeks": 53,
   "full_weeks": 52,
   "final_partial_week_hours": 0,
-  "source_model": "task-based selected core; engineering estimate, not a statistical learning norm",
+  "source_model": "Individually reviewed nominal task effort for experienced Python/TS developer; new hardware/robotics learning preserved.",
   "reports": {
     "math": {
       "version": 4,
@@ -5190,8 +5472,8 @@
             }
           ],
           "rationale": {
-            "ru": "72 ч включают восстановление высшей математики и новое применение к роботу. Программирование и оформление используют имеющийся опыт. Часы не означают, что уже решённую диагностическую задачу надо повторять до исчерпания бюджета.",
-            "en": "72 hours cover university-maths refresh and new robotics application. Coding/presentation use existing experience; a passed diagnostic does not require repetition merely to consume budget."
+            "ru": "56 ч: изучение 23, реализация 22, проверка 11. Индивидуальная средняя рабочая оценка для указанного опыта; новые темы изучаются полностью в границах задания. Готовые код, стенды, журналы и методики используются повторно. Обычная отладка входит в реализацию; отдельный процент на непредсказуемые переделки не добавлен.",
+            "en": "56 h: learning 23, implementation 22, verification 11. Individually reviewed nominal effort for the stated experience; new topics retain their defined learning scope. Reuse code, rigs, logs and protocols. Implementation includes routine debugging; no blanket rework percentage is added."
           },
           "gate": {
             "ru": "Самостоятельно преобразовать точку, вычислить момент и производную, выполнить калибровку и распознать вырожденность/неустойчивый шаг.",
@@ -5299,8 +5581,8 @@
             }
           ],
           "rationale": {
-            "ru": "56 ч — одна качественная измерительная работа вместо обязательной серии самостоятельных статистических лабораторных. Количество повторов выбирается под калибровку до сбора данных; исходное упражнение с 30 установками сохранено как готовый расширенный протокол.",
-            "en": "56 hours cover one sound measurement study rather than a compulsory sequence of standalone statistics labs. Repetition count is chosen before collection; the original thirty-placement exercise remains an extended protocol."
+            "ru": "48 ч: изучение 18, реализация 20, проверка 10. Индивидуальная средняя рабочая оценка для указанного опыта; новые темы изучаются полностью в границах задания. Готовые код, стенды, журналы и методики используются повторно. Обычная отладка входит в реализацию; отдельный процент на непредсказуемые переделки не добавлен.",
+            "en": "48 h: learning 18, implementation 20, verification 10. Individually reviewed nominal effort for the stated experience; new topics retain their defined learning scope. Reuse code, rigs, logs and protocols. Implementation includes routine debugging; no blanket rework percentage is added."
           },
           "gate": {
             "ru": "Проверочная физическая серия не использована для подгонки; неопределённость не скрывает систематическое смещение, контактные/температурные условия и число независимых повторов.",
@@ -5443,8 +5725,8 @@
             }
           ],
           "rationale": {
-            "ru": "108 ч оставлены почти целиком: кинематика для пользователя новая и непосредственно нужна всем проектам. Убрано главным образом оформление и дублирующие учебные цепи, а не проверка геометрии.",
-            "en": "108 hours are largely retained: kinematics is new and directly useful across the projects. Cuts mainly remove presentation and duplicate teaching chains, not geometric verification."
+            "ru": "99 ч: изучение 33, реализация 47, проверка 19. Индивидуальная средняя рабочая оценка для указанного опыта; новые темы изучаются полностью в границах задания. Готовые код, стенды, журналы и методики используются повторно. Обычная отладка входит в реализацию; отдельный процент на непредсказуемые переделки не добавлен.",
+            "en": "99 h: learning 33, implementation 47, verification 19. Individually reviewed nominal effort for the stated experience; new topics retain their defined learning scope. Reuse code, rigs, logs and protocols. Implementation includes routine debugging; no blanket rework percentage is added."
           },
           "gate": {
             "ru": "Нога достигает допустимых точек и отклоняет невозможные; независимая проверка FK/J и фиксированной точки в мировой системе координат проходит. Это не сертификат точности ещё не собранного манипулятора.",
@@ -5788,8 +6070,8 @@
             }
           ],
           "rationale": {
-            "ru": "100 ч используют готовые стенд M07 и модель M09. Встроенный PID сервопривода с закрытой реализацией не считается собственным контуром управления моментом; физическая проверка крена и тангажа здесь повторно не учитывается. Добавлен отдельный вводный практикум: 20 ч; оценка предполагает готовую инфраструктуру предыдущих заданий.",
-            "en": "100 hours reuse the M07/M09 rig and model. A proprietary servo PID is not presented as a custom torque loop, and physical roll/pitch testing is not counted twice. A separate introductory lab adds 20 h, assuming the preceding tasks provide working infrastructure."
+            "ru": "94 ч: изучение 28, реализация 41, проверка 25. Индивидуальная средняя рабочая оценка для указанного опыта; новые темы изучаются полностью в границах задания. Готовые код, стенды, журналы и методики используются повторно. Обычная отладка входит в реализацию; отдельный процент на непредсказуемые переделки не добавлен.",
+            "en": "94 h: learning 28, implementation 41, verification 25. Individually reviewed nominal effort for the stated experience; new topics retain their defined learning scope. Reuse code, rigs, logs and protocols. Implementation includes routine debugging; no blanket rework percentage is added."
           },
           "gate": {
             "ru": "Измеренный контур выполняет заранее выбранные требования и предсказуемо обрабатывает устаревшие данные/пределы; оценка до физических испытаний корпуса остаётся модельной.",
@@ -5906,8 +6188,8 @@
             }
           ],
           "rationale": {
-            "ru": "60 ч на проверенную оценку ориентации по IMU, достаточную для медленного робота. Отличие от прежних 150 ч связано с выбором одного метода и отказом от обязательного академического сравнения. Основы причинной фильтрации из M04 используются повторно; здесь проверяются реальный IMU и объединение данных его датчиков.",
-            "en": "60 hours provide validated IMU estimates needed by a slow robot. The reduction from 150 hours comes from method selection and removing compulsory academic comparisons, not another blanket maths cut. Reuse M04 introductory causal-filter concepts; this block evaluates the actual IMU and operational fusion of its channels."
+            "ru": "60 ч: изучение 21, реализация 25, проверка 14. Индивидуальная средняя рабочая оценка для указанного опыта; новые темы изучаются полностью в границах задания. Готовые код, стенды, журналы и методики используются повторно. Обычная отладка входит в реализацию; отдельный процент на непредсказуемые переделки не добавлен.",
+            "en": "60 h: learning 21, implementation 25, verification 14. Individually reviewed nominal effort for the stated experience; new topics retain their defined learning scope. Reuse code, rigs, logs and protocols. Implementation includes routine debugging; no blanket rework percentage is added."
           },
           "gate": {
             "ru": "Фильтр проходит заранее заданный физический тест крена и тангажа, корректно сообщает о недостоверных данных и не использует скрытые эталонные данные.",
@@ -6103,8 +6385,8 @@
             }
           ],
           "rationale": {
-            "ru": "160 ч = 120 ч на интеграцию походки, контактов и управления + 16 ч на расширение модели + 24 ч на вводный плоский QP. Физические испытания принимаются отдельно в M22/M23.",
-            "en": "160 h = 120 h for gait/contact/control integration + 16 h for model expansion + 24 h for introductory planar QP. Physical tests are accepted separately in M22/M23."
+            "ru": "136 ч: изучение 41, реализация 66, проверка 29. Индивидуальная средняя рабочая оценка для указанного опыта; новые темы изучаются полностью в границах задания. Готовые код, стенды, журналы и методики используются повторно. Обычная отладка входит в реализацию; отдельный процент на непредсказуемые переделки не добавлен.",
+            "en": "136 h: learning 41, implementation 66, verification 29. Individually reviewed nominal effort for the stated experience; new topics retain their defined learning scope. Reuse code, rigs, logs and protocols. Implementation includes routine debugging; no blanket rework percentage is added."
           },
           "gate": {
             "ru": "Модель без скрытой фиксации проходит штатные и отказные сценарии. Контроллер использует только доступные датчики, а точное состояние симулятора применяется лишь для независимой оценки. Это допуск к физическим испытаниям, а не их замена.",
@@ -7869,8 +8151,8 @@
                 "M13 p14 installation"
               ],
               "result": {
-                "ru": "Зафиксированы Ubuntu 24.04 ARM64, компилятор, RMW и версии Jazzy/Harmonic; готовые talker/listener, RViz, сцена тележки и сцена датчика имеют результат PASS/HOLD. Эти 14 ч включают прежние 8 ч на среду и перенесённые 6 ч предварительной проверки.",
-                "en": "Record Ubuntu 24.04 ARM64, compiler, RMW and Jazzy/Harmonic versions; supplied talker/listener, RViz, cart and sensor scenes have PASS/HOLD. These 14 h contain the former 8 h environment task and transferred 6 h preflight."
+                "ru": "Зафиксированы Ubuntu 24.04 ARM64, компилятор, RMW и версии Jazzy/Harmonic; готовые talker/listener, RViz, сцена тележки и сцена датчика имеют результат PASS/HOLD. Шесть часов — применение знакомых Linux/Git и готовых команд установки, без повторного вводного курса.",
+                "en": "Record Ubuntu 24.04 ARM64, compiler, RMW and Jazzy/Harmonic versions; supplied talker/listener, RViz, cart and sensor scenes have PASS/HOLD results. Six hours apply existing Linux/Git skills and supplied installation commands without repeating an introductory course."
               }
             },
             {
@@ -7946,8 +8228,8 @@
             }
           ],
           "rationale": {
-            "ru": "40 ч получены отбором работ: знакомый Python применяется сразу, а владение ресурсами в C++, физические единицы и настройка среды изучаются отдельно. Обработка потоков данных продолжается в рабочей прошивке. Вводная задача на 14 ч не означает освоения C++: практика продолжается в коде микроконтроллера, адаптере S2 и общем HIL-коде. При выявлении пробелов нужно использовать резерв и пересчитать прогноз.",
-            "en": "The 40 h follow selected work: familiar Python is used directly; new C++ boundaries, physical units and environment work remain. Streaming mechanisms continue in real firmware instead of forming a second teaching product. The 14 h introductory C++ task does not establish language proficiency: practice continues in the MCU, S2 adapter and shared HIL code; use contingency and reforecast if gaps appear."
+            "ru": "24 ч: изучение 9, реализация 9, проверка 6. Индивидуальная средняя рабочая оценка для указанного опыта; новые темы изучаются полностью в границах задания. Готовые код, стенды, журналы и методики используются повторно. Обычная отладка входит в реализацию; отдельный процент на непредсказуемые переделки не добавлен.",
+            "en": "24 h: learning 9, implementation 9, verification 6. Individually reviewed nominal effort for the stated experience; new topics retain their defined learning scope. Reuse code, rigs, logs and protocols. Implementation includes routine debugging; no blanket rework percentage is added."
           },
           "core_reading": {
             "ru": "M01: C++/владение/CMake, формат измерений и сценарии ошибок; M12 p14 и M13 p14 — только установка и готовые проверки работоспособности. Чтение включено в часы.",
@@ -8305,8 +8587,8 @@
             }
           ],
           "rationale": {
-            "ru": "86 ч сохраняют реальную аппаратную границу и проверку физики. Установка уже выполнена в M01; вся нога и её драйвер уже созданы в L1; сборка четырёхногой модели и генератор походки здесь повторно не оплачиваются. Добавлен отдельный вводный практикум: 16 ч; оценка предполагает готовую инфраструктуру предыдущих заданий.",
-            "en": "The 86 h retain the real hardware boundary and physics checks. M01 owns installation; L1 owns the leg and driver; the four-leg model and gait generator are not counted again here. A separate introductory lab adds 16 h, assuming the preceding tasks provide working infrastructure."
+            "ru": "84 ч: изучение 27, реализация 32, проверка 25. Индивидуальная средняя рабочая оценка для указанного опыта; новые темы изучаются полностью в границах задания. Готовые код, стенды, журналы и методики используются повторно. Обычная отладка входит в реализацию; отдельный процент на непредсказуемые переделки не добавлен.",
+            "en": "84 h: learning 27, implementation 32, verification 25. Individually reviewed nominal effort for the stated experience; new topics retain their defined learning scope. Reuse code, rigs, logs and protocols. Implementation includes routine debugging; no blanket rework percentage is added."
           },
           "core_reading": {
             "ru": "Исходный M13, с. 3–8, 14–15: эталонные физические задачи, контакт, различия SIL/PIL/HIL, ограничения часов и задача 8. Использовать одну обязательную эталонную сцену вместо набора миров.",
@@ -8422,8 +8704,8 @@
             }
           ],
           "rationale": {
-            "ru": "55 ч создают одну работающую задачу зрения для манипулятора. Не обещаются произвольные предметы, неизвестная высота стола или автономная работа в незнакомой среде. Классика и последующий ML сравниваются на одной задаче.",
-            "en": "The 55 h produce one working arm-vision task. Do not promise arbitrary objects, unknown table height or autonomy in unfamiliar scenes. Classical and later ML methods are compared on the same task."
+            "ru": "50 ч: изучение 16, реализация 20, проверка 14. Индивидуальная средняя рабочая оценка для указанного опыта; новые темы изучаются полностью в границах задания. Готовые код, стенды, журналы и методики используются повторно. Обычная отладка входит в реализацию; отдельный процент на непредсказуемые переделки не добавлен.",
+            "en": "50 h: learning 16, implementation 20, verification 14. Individually reviewed nominal effort for the stated experience; new topics retain their defined learning scope. Reuse code, rigs, logs and protocols. Implementation includes routine debugging; no blanket rework percentage is added."
           },
           "core_reading": {
             "ru": "M14: геометрия и калибровка камеры, простая сегментация, системы координат, время и отказы. ICP/CNN сохранены для дальнейшего изучения; главы книг выбираются под конкретную задачу.",
@@ -8538,8 +8820,8 @@
             }
           ],
           "rationale": {
-            "ru": "40 ч на интеграцию и понимание одной цепочки планирования движений после изучения кинематики. Повторная реализация IK, URDF и собственного планировщика не требуется.",
-            "en": "The 40 h integrate and explain one planning chain after kinematics. Do not rewrite IK, URDF or a motion planner."
+            "ru": "40 ч: изучение 12, реализация 16, проверка 12. Индивидуальная средняя рабочая оценка для указанного опыта; новые темы изучаются полностью в границах задания. Готовые код, стенды, журналы и методики используются повторно. Обычная отладка входит в реализацию; отдельный процент на непредсказуемые переделки не добавлен.",
+            "en": "40 h: learning 12, implementation 16, verification 12. Individually reviewed nominal effort for the stated experience; new topics retain their defined learning scope. Reuse code, rigs, logs and protocols. Implementation includes routine debugging; no blanket rework percentage is added."
           },
           "core_reading": {
             "ru": "M16: конфигурационное пространство и области столкновений, интеграция MoveIt/OMPL, ограничения траектории, обработка отказа и отмены. Главы о мобильной навигации оставлены для дальнейшего изучения.",
@@ -8632,8 +8914,8 @@
             }
           ],
           "rationale": {
-            "ru": "25 ч отведены на новые правила выполнения манипуляций. Драйвер, физические калибровки, удержание, 30 успешных переносов и проверки отказов уже учтены в A2/A3 в составе 425 ч проекта манипулятора.",
-            "en": "The 25 h cover new manipulation semantics. Physical driver, calibration, retention, 30 positive transfers and faults are already budgeted in A2/A3 within the 425 h arm project."
+            "ru": "16 ч: изучение 5, реализация 6, проверка 5. Индивидуальная средняя рабочая оценка для указанного опыта; новые темы изучаются полностью в границах задания. Готовые код, стенды, журналы и методики используются повторно. Обычная отладка входит в реализацию; отдельный процент на непредсказуемые переделки не добавлен.",
+            "en": "16 h: learning 5, implementation 6, verification 5. Individually reviewed nominal effort for the stated experience; new topics retain their defined learning scope. Reuse code, rigs, logs and protocols. Implementation includes routine debugging; no blanket rework percentage is added."
           },
           "core_reading": {
             "ru": "M17: позы, подход, контакт, хват/перенос, режимы оператора и отмена. Аппаратный результат проверяется по спецификации манипулятора.",
@@ -8746,8 +9028,8 @@
             }
           ],
           "rationale": {
-            "ru": "70 ч используют готовую камеру, область интереса, ROS и измерения M14. Новые задачи — постановка задачи машинного обучения, подготовка данных, обучение и оценка. Отсутствие улучшения относительно классического метода — допустимый научно корректный результат; слабую модель нельзя считать готовой системой управления.",
-            "en": "The 70 h reuse M14 camera, ROIs, ROS and measurements. New work is ML formulation, dataset discipline, training and evaluation. Failure to beat the classical method is a valid result, not a reason to present a weak model as a qualified controller."
+            "ru": "64 ч: изучение 22, реализация 23, проверка 19. Индивидуальная средняя рабочая оценка для указанного опыта; новые темы изучаются полностью в границах задания. Готовые код, стенды, журналы и методики используются повторно. Обычная отладка входит в реализацию; отдельный процент на непредсказуемые переделки не добавлен.",
+            "en": "64 h: learning 22, implementation 23, verification 19. Individually reviewed nominal effort for the stated experience; new topics retain their defined learning scope. Reuse code, rigs, logs and protocols. Implementation includes routine debugging; no blanket rework percentage is added."
           },
           "core_reading": {
             "ru": "M18: данные и утечки, логистическая регрессия, MLP, autograd, валидация, матрица ошибок, точность и полнота, калибровка вероятностей, отказ от решения и запуск на CPU. M14 предоставляет единую задачу зрения.",
@@ -8866,8 +9148,8 @@
             }
           ],
           "rationale": {
-            "ru": "30 ч на объединение готовых результатов проектов. Физическая безопасность, ресурс и повторные испытания проверяются внутри проектов; независимая проверка G4 оценивает готовность, не создавая ещё один процесс подготовки выпуска.",
-            "en": "The 30 h integrate completed releases. Physical safety, endurance and repeated trials belong to projects; independent G4 checks readiness rather than creating another release pipeline."
+            "ru": "16 ч: изучение 2, реализация 5, проверка 9. Индивидуальная средняя рабочая оценка для указанного опыта; новые темы изучаются полностью в границах задания. Готовые код, стенды, журналы и методики используются повторно. Обычная отладка входит в реализацию; отдельный процент на непредсказуемые переделки не добавлен.",
+            "en": "16 h: learning 2, implementation 5, verification 9. Individually reviewed nominal effort for the stated experience; new topics retain their defined learning scope. Reuse code, rigs, logs and protocols. Implementation includes routine debugging; no blanket rework percentage is added."
           },
           "core_reading": {
             "ru": "M24: прослеживаемость требований, конфигурации, воспроизводимость, ограничения и техническая защита. Протоколы физических испытаний берутся из уже закрытых проектов.",
@@ -10728,8 +11010,8 @@
             }
           ],
           "rationale": {
-            "ru": "Опыт Python позволяет быстро строить графики, но электроника остаётся новой. Убирается одна расширенная DSP-лабораторная; расчёт схем, приборы, соединения, наложение спектров, причинность и защитные измерения сохранены.",
-            "en": "Python experience accelerates plotting, but electronics is new. Defer one extended DSP laboratory; retain circuit calculations, instruments, connections, aliasing, causality and protective measurements."
+            "ru": "120 ч: изучение 56, реализация 45, проверка 19. Индивидуальная средняя рабочая оценка для указанного опыта; новые темы изучаются полностью в границах задания. Готовые код, стенды, журналы и методики используются повторно. Обычная отладка входит в реализацию; отдельный процент на непредсказуемые переделки не добавлен.",
+            "en": "120 h: learning 56, implementation 45, verification 19. Individually reviewed nominal effort for the stated experience; new topics retain their defined learning scope. Reuse code, rigs, logs and protocols. Implementation includes routine debugging; no blanket rework percentage is added."
           },
           "prerequisites": [
             "P_UNITS",
@@ -10888,8 +11170,8 @@
             }
           ],
           "rationale": {
-            "ru": "FEA полезна для развития, но не обязательна для первых малых роботов при сохранённых ручных расчётах, консервативных пределах и физических образцах. Новые навыки CAD/посадок/материалов не сокращаются до просмотра уроков.",
-            "en": "FEA is useful development work but is not essential for the first small robots when hand calculations, conservative bounds and physical coupons remain. New CAD/fit/material skills are not reduced to watching tutorials."
+            "ru": "160 ч: изучение 64, реализация 71, проверка 25. Индивидуальная средняя рабочая оценка для указанного опыта; новые темы изучаются полностью в границах задания. Готовые код, стенды, журналы и методики используются повторно. Обычная отладка входит в реализацию; отдельный процент на непредсказуемые переделки не добавлен.",
+            "en": "160 h: learning 64, implementation 71, verification 25. Individually reviewed nominal effort for the stated experience; new topics retain their defined learning scope. Reuse code, rigs, logs and protocols. Implementation includes routine debugging; no blanket rework percentage is added."
           },
           "prerequisites": [
             "P_STATICS",
@@ -11034,8 +11316,8 @@
           },
           "deferred": [],
           "rationale": {
-            "ru": "Сокращение не обосновано: исходник уже реализует только один основной транспорт и один сенсорный интерфейс. Минимальные RTOS/ISR, очередь, временные характеристики, сторожевой таймер и независимая остановка нужны всем трём устройствам; 110 ч сохранены.",
-            "en": "No reduction is justified: the source already implements only one primary transport and one sensor interface. Minimal RTOS/ISR, queues, timing, watchdog and independent stopping serve all three devices; retain 110 h."
+            "ru": "120 ч: изучение 38, реализация 55, проверка 27. Индивидуальная средняя рабочая оценка для указанного опыта; новые темы изучаются полностью в границах задания. Готовые код, стенды, журналы и методики используются повторно. Обычная отладка входит в реализацию; отдельный процент на непредсказуемые переделки не добавлен.",
+            "en": "120 h: learning 38, implementation 55, verification 27. Individually reviewed nominal effort for the stated experience; new topics retain their defined learning scope. Reuse code, rigs, logs and protocols. Implementation includes routine debugging; no blanket rework percentage is added."
           },
           "prerequisites": [
             "M04"
@@ -11183,8 +11465,8 @@
             }
           ],
           "rationale": {
-            "ru": "Настольный привод нужен как первый замкнутый контур и основа DC-приводов хвоста. Для основной программы достаточно измеренного поведения и ограниченного рабочего диапазона; исследовательское восстановление всей модели переносится. Проверка пригодности L1 остаётся отдельной: другой привод и нагруженная нога с тремя степенями свободы.",
-            "en": "The tabletop drive is the first closed loop and foundation for tail DC drives. Core needs measured behavior and a bounded envelope; research-style model recovery is deferred. L1 qualification remains separate: a different actuator and a loaded 3 DOF leg."
+            "ru": "104 ч: изучение 34, реализация 42, проверка 28. Индивидуальная средняя рабочая оценка для указанного опыта; новые темы изучаются полностью в границах задания. Готовые код, стенды, журналы и методики используются повторно. Обычная отладка входит в реализацию; отдельный процент на непредсказуемые переделки не добавлен.",
+            "en": "104 h: learning 34, implementation 42, verification 28. Individually reviewed nominal effort for the stated experience; new topics retain their defined learning scope. Reuse code, rigs, logs and protocols. Implementation includes routine debugging; no blanket rework percentage is added."
           },
           "prerequisites": [
             "P_STATICS",
@@ -11288,8 +11570,8 @@
                 "M06"
               ],
               "material_ready_condition": {
-                "ru": "Поставка: образец привода нужен к началу L1 11.04.2028. Ещё два совместимых привода заказываются после проверки образца, намеченной на 12.04; сборка трёх приводов с 13.04 возможна только после их получения. Время доставки не подтверждено. Пока детали в пути, выполнять независимые CAD/подготовительные работы и пересчитать даты зависимой сборки и испытаний.",
-                "en": "Materials: the actuator sample is needed before L1 on 11 April 2028. Order two more compatible drives after the sample check targeted for 12 April; the three-drive assembly slot from 13 April is conditional on receipt. Delivery time is unconfirmed. Use independent CAD/preparation work during the wait and reforecast dependent assembly and trials."
+                "ru": "Поставка: образец привода нужен к началу L1 18.04.2028. Ещё два совместимых привода заказываются после проверки образца, намеченной на 19.04; сборка трёх приводов с 21.04 возможна только после их получения. Время доставки не подтверждено. Пока детали в пути, выполнять независимые CAD/подготовительные работы и пересчитать даты зависимой сборки и испытаний.",
+                "en": "Materials: the actuator sample is needed before L1 on 18 April 2028. Order two more compatible drives after the sample check targeted for 19 April; the three-drive assembly slot from 21 April is conditional on receipt. Delivery time is unconfirmed. Use independent CAD/preparation work during the wait and reforecast dependent assembly and trials."
               }
             },
             {
@@ -11723,8 +12005,8 @@
                 "M07"
               ],
               "material_ready_condition": {
-                "ru": "Поставка: выбор плечевого привода завершается по плану 17.06.2028; PR5 разрешает заказ только после этого. 17.06 — начало планового слота A02, а не обещание получения привода в тот же день. Работы с приводом и нагрузочная проверка ждут фактической поставки; независимую подготовку оснастки можно продолжать. Если ожидание не помещается в перестановку работ, пересчитать окончание A02 и последующие даты.",
-                "en": "Materials: shoulder-actuator selection is targeted for 17 June 2028; PR5 permits ordering only afterward. 17 June is the nominal A02 work slot, not a promise of same-day receipt. Motor-dependent work and loaded qualification wait for actual delivery; independent fixture preparation may continue. If resequencing cannot absorb the wait, reforecast A02 completion and dependent dates."
+                "ru": "Поставка: выбор плечевого привода завершается по плану 28.06.2028; PR5 разрешает заказ только после этого. 28.06 — начало планового слота A02, а не обещание получения привода в тот же день. Работы с приводом и нагрузочная проверка ждут фактической поставки; независимую подготовку оснастки можно продолжать. Если ожидание не помещается в перестановку работ, пересчитать окончание A02 и последующие даты.",
+                "en": "Materials: shoulder-actuator selection is targeted for 28 June 2028; PR5 permits ordering only afterward. 28 June is the nominal A02 work slot, not a promise of same-day receipt. Motor-dependent work and loaded qualification wait for actual delivery; independent fixture preparation may continue. If resequencing cannot absorb the wait, reforecast A02 completion and dependent dates."
               }
             },
             {
@@ -11741,8 +12023,8 @@
                 "ARM.A03"
               ],
               "result": {
-                "ru": "Собственные звенья, опоры и CAD — 45 ч; URDF/SRDF, столкновения, массы и ограничения — 12 ч; настройка готового численного IK для шести степеней свободы, достижимость и сингулярности — 8 ч.",
-                "en": "Custom links/supports/CAD45 h; URDF/SRDF/collision/mass/limits 12 h; existing numerical 6 DOF IK setup and reachability/singularity checks 8 h."
+                "ru": "Собственные звенья, опоры и CAD — 46 ч; URDF/SRDF, столкновения, массы и ограничения — 16 ч; настройка готового численного IK для шести степеней свободы, достижимость и сингулярности — 9 ч. Итого 71 ч; изучение, реализация и проверка входят в эти подработы.",
+                "en": "Custom links/supports/CAD: 46 h; URDF/SRDF, collisions, masses and limits: 16 h; configuring existing numerical six-DOF IK, reachability and singularities: 9 h. Total 71 h, including learning, implementation and verification."
               },
               "required_prerequisites": [
                 "ARM.A02",
@@ -12174,8 +12456,8 @@
                 "TAIL_T04_PASS"
               ],
               "material_ready_condition": {
-                "ru": "Поставка: ещё четыре привода заказываются только после PASS первой активной секции T04, намеченного на 11.09.2028. Слот T05 с 11.09 не предполагает поставку в тот же день. Монтаж этих приводов, полная калибровка и завершение T05 зависят от получения деталей; на время доставки перенести независимые работы и при необходимости пересчитать даты. 0 ч свободной ёмкости не гарантируют покрытие календарного срока доставки.",
-                "en": "Materials: order the other four drives only after first-active-section T04 PASS, targeted for 11 September 2028. The T05 slot from 11 September does not assume same-day delivery. Installing these drives, full calibration and T05 completion depend on receipt; bring independent work forward during shipping and reforecast dates when needed. The 0 h of unallocated capacity do not guarantee coverage of elapsed delivery time."
+                "ru": "Поставка: ещё четыре привода заказываются только после PASS первой активной секции T04, намеченного на 22.09.2028. Слот T05 с 22.09 не предполагает поставку в тот же день. Монтаж этих приводов, полная калибровка и завершение T05 зависят от получения деталей; на время доставки перенести независимые работы и при необходимости пересчитать даты. 0 ч свободной ёмкости не гарантируют покрытие календарного срока доставки.",
+                "en": "Materials: order the other four drives only after first-active-section T04 PASS, targeted for 22 September 2028. The T05 slot from 22 September does not assume same-day delivery. Installing these drives, full calibration and T05 completion depend on receipt; bring independent work forward during shipping and reforecast dates when needed. The 0 h of unallocated capacity do not guarantee coverage of elapsed delivery time."
               }
             },
             {
@@ -12423,8 +12705,8 @@
           ],
           "status": "split_core_development",
           "rationale": {
-            "ru": "Опыт Python позволяет быстро строить графики, но электроника остаётся новой. Убирается одна расширенная DSP-лабораторная; расчёт схем, приборы, соединения, наложение спектров, причинность и защитные измерения сохранены.",
-            "en": "Python experience accelerates plotting, but electronics is new. Defer one extended DSP laboratory; retain circuit calculations, instruments, connections, aliasing, causality and protective measurements."
+            "ru": "120 ч: изучение 56, реализация 45, проверка 19. Индивидуальная средняя рабочая оценка для указанного опыта; новые темы изучаются полностью в границах задания. Готовые код, стенды, журналы и методики используются повторно. Обычная отладка входит в реализацию; отдельный процент на непредсказуемые переделки не добавлен.",
+            "en": "120 h: learning 56, implementation 45, verification 19. Individually reviewed nominal effort for the stated experience; new topics retain their defined learning scope. Reuse code, rigs, logs and protocols. Implementation includes routine debugging; no blanket rework percentage is added."
           }
         },
         {
@@ -12526,8 +12808,8 @@
           ],
           "status": "split_core_development",
           "rationale": {
-            "ru": "FEA полезна для развития, но не обязательна для первых малых роботов при сохранённых ручных расчётах, консервативных пределах и физических образцах. Новые навыки CAD/посадок/материалов не сокращаются до просмотра уроков.",
-            "en": "FEA is useful development work but is not essential for the first small robots when hand calculations, conservative bounds and physical coupons remain. New CAD/fit/material skills are not reduced to watching tutorials."
+            "ru": "160 ч: изучение 64, реализация 71, проверка 25. Индивидуальная средняя рабочая оценка для указанного опыта; новые темы изучаются полностью в границах задания. Готовые код, стенды, журналы и методики используются повторно. Обычная отладка входит в реализацию; отдельный процент на непредсказуемые переделки не добавлен.",
+            "en": "160 h: learning 64, implementation 71, verification 25. Individually reviewed nominal effort for the stated experience; new topics retain their defined learning scope. Reuse code, rigs, logs and protocols. Implementation includes routine debugging; no blanket rework percentage is added."
           }
         },
         {
@@ -12705,8 +12987,8 @@
           ],
           "status": "split_core_development",
           "rationale": {
-            "ru": "Настольный привод нужен как первый замкнутый контур и основа DC-приводов хвоста. Для основной программы достаточно измеренного поведения и ограниченного рабочего диапазона; исследовательское восстановление всей модели переносится. Проверка пригодности L1 остаётся отдельной: другой привод и нагруженная нога с тремя степенями свободы.",
-            "en": "The tabletop drive is the first closed loop and foundation for tail DC drives. Core needs measured behavior and a bounded envelope; research-style model recovery is deferred. L1 qualification remains separate: a different actuator and a loaded 3 DOF leg."
+            "ru": "104 ч: изучение 34, реализация 42, проверка 28. Индивидуальная средняя рабочая оценка для указанного опыта; новые темы изучаются полностью в границах задания. Готовые код, стенды, журналы и методики используются повторно. Обычная отладка входит в реализацию; отдельный процент на непредсказуемые переделки не добавлен.",
+            "en": "104 h: learning 34, implementation 42, verification 28. Individually reviewed nominal effort for the stated experience; new topics retain their defined learning scope. Reuse code, rigs, logs and protocols. Implementation includes routine debugging; no blanket rework percentage is added."
           }
         },
         {
@@ -14891,8 +15173,8 @@
     "supplier_lead_times_validated": false,
     "elapsed_waits_reserved": false,
     "explanation": {
-      "ru": "50 ч в неделю: Пн–Сб по 8 ч 20 мин, Вс свободно. 31.12.2028 — выходной; прочие праздники и отпуск не вычтены. Обязательная работа заканчивается 30.12.2028, запас отсутствует. 120 ч чтения и целевого изучения сняты диагностикой; практика и проверка сохранены. Даты зависят от приёмок и получения деталей. Поставка, автономная печать и охлаждение требуют календарного времени; их отдельные длительности не зарезервированы.",
-      "en": "50 h/week: Mon–Sat 8 h 20 min/day, Sunday off. 31 December 2028 is a day off; other holidays and vacation are not deducted. Required work finishes on 30 December 2028 with no remaining buffer. 120 h of reading and targeted study are removed through diagnostics; practical and verification work is retained. Dates depend on gates and material receipt. Shipping, unattended printing and cooling require elapsed time with no separate durations reserved."
+      "ru": "50 ч в неделю: Пн–Сб по 8 ч 20 мин, Вс свободно. 31.12.2028 — выходной; прочие праздники и отпуск не вычтены. Обязательная работа заканчивается 30.12.2028, запас отсутствует. Все 127 заданий оценены отдельно: 701 ч изучения, 1 235 ч реализации, 664 ч проверки. Новые темы не сокращаются пропорционально сроку. Обычная отладка включена; отдельный процент на непредсказуемые переделки не добавлен. Даты зависят от приёмок и получения деталей. Поставка, автономная печать и охлаждение требуют календарного времени; их отдельные длительности не зарезервированы.",
+      "en": "50 h/week: Mon–Sat 8 h 20 min/day, Sunday off. 31 December 2028 is a day off; other holidays and vacation are not deducted. Required work finishes on 30 December 2028 with no remaining buffer. All 127 tasks are individually estimated: 701 h learning, 1,235 h implementation, 664 h verification. New learning is never proportionally scaled to a date. Routine debugging is included; no blanket rework percentage is added. Dates depend on gates and material receipt. Shipping, unattended printing and cooling require elapsed time with no separate durations reserved."
     },
     "material_ready_conditions": [
       {
@@ -14900,12 +15182,12 @@
         "stage": "L1",
         "task_index": 2,
         "source_task": "L1.L1c",
-        "nominal_slot_start": "2028-04-13",
+        "nominal_slot_start": "2028-04-21",
         "order_gate": "L1.L1a",
-        "nominal_gate_finish": "2028-04-12",
+        "nominal_gate_finish": "2028-04-19",
         "condition": {
-          "ru": "Поставка: образец привода нужен к началу L1 11.04.2028. Ещё два совместимых привода заказываются после проверки образца, намеченной на 12.04; сборка трёх приводов с 13.04 возможна только после их получения. Время доставки не подтверждено. Пока детали в пути, выполнять независимые CAD/подготовительные работы и пересчитать даты зависимой сборки и испытаний.",
-          "en": "Materials: the actuator sample is needed before L1 on 11 April 2028. Order two more compatible drives after the sample check targeted for 12 April; the three-drive assembly slot from 13 April is conditional on receipt. Delivery time is unconfirmed. Use independent CAD/preparation work during the wait and reforecast dependent assembly and trials."
+          "ru": "Поставка: образец привода нужен к началу L1 18.04.2028. Ещё два совместимых привода заказываются после проверки образца, намеченной на 19.04; сборка трёх приводов с 21.04 возможна только после их получения. Время доставки не подтверждено. Пока детали в пути, выполнять независимые CAD/подготовительные работы и пересчитать даты зависимой сборки и испытаний.",
+          "en": "Materials: the actuator sample is needed before L1 on 18 April 2028. Order two more compatible drives after the sample check targeted for 19 April; the three-drive assembly slot from 21 April is conditional on receipt. Delivery time is unconfirmed. Use independent CAD/preparation work during the wait and reforecast dependent assembly and trials."
         }
       },
       {
@@ -14913,12 +15195,12 @@
         "stage": "A1",
         "task_index": 1,
         "source_task": "ARM.A02",
-        "nominal_slot_start": "2028-06-17",
+        "nominal_slot_start": "2028-06-28",
         "order_gate": "ARM.A01",
-        "nominal_gate_finish": "2028-06-17",
+        "nominal_gate_finish": "2028-06-28",
         "condition": {
-          "ru": "Поставка: выбор плечевого привода завершается по плану 17.06.2028; PR5 разрешает заказ только после этого. 17.06 — начало планового слота A02, а не обещание получения привода в тот же день. Работы с приводом и нагрузочная проверка ждут фактической поставки; независимую подготовку оснастки можно продолжать. Если ожидание не помещается в перестановку работ, пересчитать окончание A02 и последующие даты.",
-          "en": "Materials: shoulder-actuator selection is targeted for 17 June 2028; PR5 permits ordering only afterward. 17 June is the nominal A02 work slot, not a promise of same-day receipt. Motor-dependent work and loaded qualification wait for actual delivery; independent fixture preparation may continue. If resequencing cannot absorb the wait, reforecast A02 completion and dependent dates."
+          "ru": "Поставка: выбор плечевого привода завершается по плану 28.06.2028; PR5 разрешает заказ только после этого. 28.06 — начало планового слота A02, а не обещание получения привода в тот же день. Работы с приводом и нагрузочная проверка ждут фактической поставки; независимую подготовку оснастки можно продолжать. Если ожидание не помещается в перестановку работ, пересчитать окончание A02 и последующие даты.",
+          "en": "Materials: shoulder-actuator selection is targeted for 28 June 2028; PR5 permits ordering only afterward. 28 June is the nominal A02 work slot, not a promise of same-day receipt. Motor-dependent work and loaded qualification wait for actual delivery; independent fixture preparation may continue. If resequencing cannot absorb the wait, reforecast A02 completion and dependent dates."
         }
       },
       {
@@ -14926,12 +15208,12 @@
         "stage": "T2",
         "task_index": 1,
         "source_task": "TAIL.T05",
-        "nominal_slot_start": "2028-09-11",
+        "nominal_slot_start": "2028-09-22",
         "order_gate": "TAIL_T04_PASS",
-        "nominal_gate_finish": "2028-09-11",
+        "nominal_gate_finish": "2028-09-22",
         "condition": {
-          "ru": "Поставка: ещё четыре привода заказываются только после PASS первой активной секции T04, намеченного на 11.09.2028. Слот T05 с 11.09 не предполагает поставку в тот же день. Монтаж этих приводов, полная калибровка и завершение T05 зависят от получения деталей; на время доставки перенести независимые работы и при необходимости пересчитать даты. 0 ч свободной ёмкости не гарантируют покрытие календарного срока доставки.",
-          "en": "Materials: order the other four drives only after first-active-section T04 PASS, targeted for 11 September 2028. The T05 slot from 11 September does not assume same-day delivery. Installing these drives, full calibration and T05 completion depend on receipt; bring independent work forward during shipping and reforecast dates when needed. The 0 h of unallocated capacity do not guarantee coverage of elapsed delivery time."
+          "ru": "Поставка: ещё четыре привода заказываются только после PASS первой активной секции T04, намеченного на 22.09.2028. Слот T05 с 22.09 не предполагает поставку в тот же день. Монтаж этих приводов, полная калибровка и завершение T05 зависят от получения деталей; на время доставки перенести независимые работы и при необходимости пересчитать даты. 0 ч свободной ёмкости не гарантируют покрытие календарного срока доставки.",
+          "en": "Materials: order the other four drives only after first-active-section T04 PASS, targeted for 22 September 2028. The T05 slot from 22 September does not assume same-day delivery. Installing these drives, full calibration and T05 completion depend on receipt; bring independent work forward during shipping and reforecast dates when needed. The 0 h of unallocated capacity do not guarantee coverage of elapsed delivery time."
         }
       }
     ]
@@ -14960,9 +15242,13 @@
       "M19-G"
     ]
   },
-  "timeline_compression": {
-    "hours_removed": 120,
-    "category": "learn",
-    "method": "diagnostics and credit for demonstrated skills; build and verification hours unchanged"
-  }
+  "hour_review": {
+    "reviewed_on": "2026-11-11",
+    "tasks_reviewed": 127,
+    "report": "task-hour-review.json",
+    "method": "individual nominal effort, no proportional compression",
+    "new_learning_floor_source": "156da32:estimate.json",
+    "unpredictable_rework_percentage": 0
+  },
+  "reports_scope": "Math/software/hardware reports preserve earlier scope mappings and dependency provenance. Active hours are estimate.items task sums, reviewed in task-hour-review.json."
 }

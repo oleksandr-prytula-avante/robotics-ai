@@ -196,6 +196,52 @@ class ContentTests(unittest.TestCase):
         self.assertFalse(any(item['track'] == 'reserve' for item in schedule['items']))
         self.assertFalse(any(part['item'] == 'CAP' for part in schedule['segments']))
 
+    def test_individual_review_covers_every_task_and_preserves_new_learning(self):
+        report = read_json('task-hour-review.json')
+        rows = {row['key']: row for row in report['tasks']}
+        expected = {f'{stage}.{index}': task
+                    for stage, item in self.items.items()
+                    if item['track'] not in {'reserve', 'capacity'}
+                    for index, task in enumerate(item['tasks'], 1)}
+        self.assertEqual(set(rows), set(expected))
+        self.assertEqual(len(rows), len(report['tasks']))
+        for key, task in expected.items():
+            row = rows[key]
+            with self.subTest(task=key):
+                self.assertEqual(row['after'], {c: task[c] for c in CATEGORIES})
+                self.assertTrue(row['reason'].strip())
+                if row['stage'] != 'M01':
+                    self.assertGreaterEqual(task['learn'], row['pre_compression_learn'])
+        self.assertNotIn('timeline_compression', self.estimate)
+        self.assertEqual(report['base_hours'], self.schedule['base_hours'])
+        self.assertEqual(report['category_hours'], {
+            c: sum(task[c] for task in expected.values()) for c in CATEGORIES})
+        for stage, item in self.items.items():
+            for category in CATEGORIES:
+                self.assertEqual(self.estimate['items'][stage][category],
+                                 sum(t[category] for t in item['tasks']))
+
+    def test_trial_counts_and_physical_acceptance_remain_in_the_plan(self):
+        arm = self.items['A3']['tasks']
+        self.assertIn('30 детерминированных', arm[1]['result']['ru'])
+        self.assertIn('500 г', arm[1]['result']['ru'])
+        self.assertIn('100 циклов', arm[2]['result']['ru'])
+        self.assertIn('каждые 25', arm[2]['result']['ru'])
+        self.assertIn('100 циклов', self.items['T3']['tasks'][1]['result']['ru'])
+        self.assertIn('40 попыток', self.items['M23']['tasks'][4]['result']['ru'])
+        self.assertIn('30–50+', self.items['M22']['tasks'][4]['result']['ru'])
+        self.assertIn('F1–F10', self.items['M06']['tasks'][4]['result']['ru'])
+
+    def test_current_stage_headings_use_active_hours(self):
+        source = (ROOT / 'curriculum.html').read_text()
+        for stage, item in self.items.items():
+            block = re.search(r'<section\b[^>]*id="'+re.escape(stage)+r'".*?</section>', source, re.S)
+            self.assertIsNotNone(block, stage)
+            self.assertIn(f'{item["hours"]} h · {date.fromisoformat(item["start"]):%d.%m.%Y}', block[0])
+        for path in [ROOT / 'method.html', ROOT / 'index.html', *ROOT.glob('months/2028-*.html')]:
+            text = path.read_text()
+            self.assertNotIn('120 ч чтения и целевого изучения сняты', text, path.name)
+
     def test_material_dates_match_their_scheduled_tasks(self):
         for condition in self.schedule['calendar_assumptions']['material_ready_conditions']:
             item = self.items[condition['stage']]

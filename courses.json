@@ -1,4 +1,3 @@
-
 {
   "checked_on": "2026-10-15",
   "currency": "USD",
@@ -578,8 +577,8 @@
       ],
       "status": "partial",
       "note": {
-        "ru": "CAD — основной; machine — дополнение по соединениям. Обязательны собственные FDM-образцы, допуски и нагрузочный тест.",
-        "en": "CAD is primary; machine design supplements joints. Make FDM coupons, measure tolerances and perform a load test."
+        "ru": "Основной CAD в маршруте литературы — FreeCAD. Уроки Fusion — необязательная альтернатива для тех же понятий; две CAD-системы проходить не нужно. В пределах 160 ч обязательны собственная сборка, FDM-образцы, посадки и нагрузочный тест.",
+        "en": "The reading route uses FreeCAD. Fusion lessons are an optional alternative for the same concepts; do not study two CAD systems. The 160 h include a custom assembly, FDM coupons, fits and a load test."
       },
       "title": {
         "ru": "CAD, конструкции, FDM и пассивная нога",

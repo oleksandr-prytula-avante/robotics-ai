@@ -130,53 +130,20 @@ BUFFER = bi('До 31.12.2028 — свободного запаса нет.',
             'Through 31 December 2028 — no unallocated buffer remains.')
 POLICY = bi('Старт 02.01.2028; первый рабочий день — 03.01.2028. Понедельник–суббота по 8 ч 20 мин, воскресенье свободно: 50 ч в неделю. '
             '31.12.2028 — выходной; прочие праздники и отпуск не вычтены. 2 600 ч обязательной работы завершаются 30.12.2028; календарь заполнен полностью. '
-            'Чтобы сохранить все практические и проверочные результаты в 2028 году, 120 ч чтения и целевого изучения сняты диагностикой и зачётом уже подтверждённых навыков. '
+            'Все 127 заданий оценены отдельно: 701 ч изучения, 1 235 ч реализации и 664 ч проверки. Новые темы не сокращаются пропорционально сроку; '
+            'экономия основана на знакомой разработке, общих инструментах и использовании уже собранных доказательств. Обычная отладка включена; отдельный процент на непредсказуемые переделки не добавлен. '
             'Даты зависят от прохождения приёмок и наличия деталей; сроки поставок не подтверждены.',
             'Start 2 January 2028; the first workday is 3 January 2028. Monday–Saturday: 8 h 20 min per day; Sunday off, 50 h per week. '
             '31 December 2028 is a day off; other holidays and vacation are not deducted. The 2,600 h of required work finish on 30 December 2028; the calendar is fully allocated. '
-            'To retain every practical and verification deliverable in 2028, 120 h of reading and targeted study are removed through diagnostics and credit for demonstrated skills. '
+            'All 127 tasks are individually estimated: 701 h learning, 1,235 h implementation and 664 h verification. New learning is never scaled to fit a date; '
+            'savings use familiar coding, shared tools and existing evidence. Routine debugging is included; no blanket rework percentage is added. '
             'Dates depend on passed gates and available materials; supplier lead times are unconfirmed.')
-
-
-def compress_learning(estimate, hours_to_remove=120):
-    """Shorten only targeted learning time, preserving build and verification hours."""
-    marker = estimate.get('timeline_compression', {})
-    if marker.get('hours_removed') == hours_to_remove:
-        return
-    rows = []
-    for key in estimate['order']:
-        item = estimate['items'][key]
-        if item.get('track') in {'reserve', 'capacity'}:
-            continue
-        for index, task in enumerate(item['tasks']):
-            if task.get('learn', 0):
-                rows.append((key, index, task['learn']))
-    total = sum(learn for _, _, learn in rows)
-    target = total - hours_to_remove
-    exact = [learn * target / total for _, _, learn in rows]
-    reduced = [int(value) for value in exact]
-    for index in sorted(range(len(rows)), key=lambda i: exact[i] - reduced[i], reverse=True)[:target - sum(reduced)]:
-        reduced[index] += 1
-    for (key, task_index, _), learn in zip(rows, reduced):
-        task = estimate['items'][key]['tasks'][task_index]
-        task['learn'] = learn
-        task['hours'] = learn + task['build'] + task['verify']
-    for key in estimate['order']:
-        item = estimate['items'][key]
-        if item.get('track') not in {'reserve', 'capacity'}:
-            item['base'] = sum(task['hours'] for task in item['tasks'])
-            item['hours'] = item['base']
-    estimate['timeline_compression'] = {
-        'hours_removed': hours_to_remove,
-        'category': 'learn',
-        'method': 'diagnostics and credit for demonstrated skills; build and verification hours unchanged',
-    }
 
 
 def main():
     estimate = json.loads((ROOT / 'estimate.json').read_text())
-    compress_learning(estimate)
-    estimate['version'] = '4.5'
+    assert 'timeline_compression' not in estimate, 'Apply the individual task review first'
+    estimate['version'] = '4.6'
     previous = json.loads((ROOT / 'schedule.json').read_text())
     old_items = {x['id']: x for x in previous['items']}
     sources = {key: copy.deepcopy(estimate['items'][key]) for key in estimate['order']
@@ -229,6 +196,23 @@ def main():
     by_id = {x['id']: x for x in items}
     assert by_id['G4']['end'] == '2028-12-30'
     mapping = {dates(old_items[key]): dates(value) for key, value in by_id.items() if key in old_items}
+    review = json.loads((ROOT / 'task-hour-review.json').read_text())
+    # Update complete source prose, including copies in existing month guides.
+    for key, item in by_id.items():
+        if key not in old_items:
+            continue
+        for before, after in zip(old_items[key]['tasks'], item['tasks']):
+            for field in ('title', 'result'):
+                for language, value in before.get(field, {}).items():
+                    target = after.get(field, {}).get(language)
+                    if target and target != value:
+                        mapping[value] = target
+                        mapping[html.escape(value)] = html.escape(target)
+        old_rationale = next((r.get('previous_stage_rationale') for r in review['tasks'] if r['stage'] == key), None)
+        if old_rationale:
+            for language, value in old_rationale.items():
+                mapping[value] = item['rationale'][language]
+                mapping[html.escape(value)] = html.escape(item['rationale'][language])
 
     old_policy = {
         '173 ч 20 мин': '88 ч 20 мин', '173 h 20 min': '88 h 20 min',
@@ -265,7 +249,7 @@ def main():
                     'ОСНОВНОЙ МАРШРУТ · 2026—2027': 'ОСНОВНОЙ МАРШРУТ · 2028',
                     'CORE PATH · 2026–2027': 'CORE PATH · 2028', 'Маршрут · 2026—2027': 'Маршрут · 2028',
                     'The route · 2026–2027': 'The route · 2028',
-                    'Редакция 4.3': 'Редакция 4.5', 'Revision 4.3': 'Revision 4.5',
+                    'Редакция 4.3': 'Редакция 4.6', 'Revision 4.3': 'Revision 4.6',
                     'Старт 1 декабря 2026; завершение программы — 18 декабря 2027. Запас до 31 декабря — 0 ч.': 'Старт 2 января 2028; завершение программы — 30 декабря 2028. Запаса нет.',
                     'Start 1 December 2026; programme completion 18 December 2027. Buffer through 31 December: 0 h.': 'Start 2 January 2028; programme completion 30 December 2028. No buffer remains.',
                     '88 ч 20 мин': '0 ч', '88 h 20 min': '0 h',
@@ -301,12 +285,14 @@ def main():
             mapping[html.escape(old_text[language])] = html.escape(condition['condition'][language])
     assumptions['explanation'] = {
         'ru': '50 ч в неделю: Пн–Сб по 8 ч 20 мин, Вс свободно. 31.12.2028 — выходной; прочие праздники и отпуск не вычтены. '
-              'Обязательная работа заканчивается 30.12.2028, запас отсутствует. 120 ч чтения и целевого изучения сняты диагностикой; '
-              'практика и проверка сохранены. Даты зависят от приёмок и получения деталей. Поставка, автономная печать и охлаждение '
+              'Обязательная работа заканчивается 30.12.2028, запас отсутствует. Все 127 заданий оценены отдельно: '
+              '701 ч изучения, 1 235 ч реализации, 664 ч проверки. Новые темы не сокращаются пропорционально сроку. '
+              'Обычная отладка включена; отдельный процент на непредсказуемые переделки не добавлен. Даты зависят от приёмок и получения деталей. Поставка, автономная печать и охлаждение '
               'требуют календарного времени; их отдельные длительности не зарезервированы.',
         'en': '50 h/week: Mon–Sat 8 h 20 min/day, Sunday off. 31 December 2028 is a day off; other holidays and vacation are not deducted. '
-              'Required work finishes on 30 December 2028 with no remaining buffer. 120 h of reading and targeted study are removed through diagnostics; '
-              'practical and verification work is retained. Dates depend on gates and material receipt. Shipping, unattended printing and cooling require elapsed time '
+              'Required work finishes on 30 December 2028 with no remaining buffer. All 127 tasks are individually estimated: '
+              '701 h learning, 1,235 h implementation, 664 h verification. New learning is never proportionally scaled to a date. '
+              'Routine debugging is included; no blanket rework percentage is added. Dates depend on gates and material receipt. Shipping, unattended printing and cooling require elapsed time '
               'with no separate durations reserved.'}
     items = substitute(items, mapping)
     sources = substitute(sources, mapping)
@@ -340,7 +326,7 @@ def main():
                        'capacity_minutes': capacity, 'buffer_minutes': capacity-allocated,
                        'page': f'months/{key}.html'})
     workday_count = sum(1 for i in range((DEADLINE-START).days+1) if is_workday(START+timedelta(days=i)))
-    calendar_fields = {'version': '4.5', 'start': str(START), 'deadline': str(DEADLINE),
+    calendar_fields = {'version': '4.6', 'start': str(START), 'deadline': str(DEADLINE),
                        'work_finish': by_id['G4']['end'], 'calendar_finish': items[-1]['end'],
                        'base_hours': core_minutes//60, 'allocated_hours': core_minutes//60,
                        'calendar_capacity_minutes': capacity_minutes, 'allocated_minutes': core_minutes,
@@ -438,12 +424,12 @@ def main():
         if path.name in {'index.html','method.html','changes.html'}:
             text = re.sub(r'<!-- timeline-summary -->.*?<!-- /timeline-summary -->', '', text, flags=re.S)
             text = text.replace('<main class="main">', '<main class="main"><!-- timeline-summary --><section class="note" id="timeline-summary"><p><strong>'+SUMMARY+'</strong></p><p>'+BUFFER+'</p><p>'+POLICY+'</p></section><!-- /timeline-summary -->', 1)
-        text = text.replace('Основная программа · 4.3', 'Основная программа · 4.5').replace('Core programme · 4.3', 'Core programme · 4.5').replace('Основная программа · 4.4', 'Основная программа · 4.5').replace('Core programme · 4.4', 'Core programme · 4.5')
+        text = re.sub(r'(Основная программа · |Core programme · |Редакция |Revision )4\.[345]', r'\g<1>4.6', text)
         text = re.sub(r'(?:months/\d{4}-\d{2}\.html)#guide-([A-Za-z0-9]+)',
                       lambda m: f'months/{by_id[m[1]]["start"][:7]}.html#guide-{m[1]}' if m[1] in by_id else f'curriculum.html#{m[1]}', text)
         # These notices use list items or a warning div rather than paragraphs.
         text = replace_elements(text, lambda t, a: t == 'div' and 'warning' in a.get('class', '').split(),
-                                lambda b, a: '<div class="warning">'+POLICY+'</div>' if re.search(r'85 h|85 ч|31\.12\.2026|31 December 2026|18\.12\.2027|18 December 2027', b) else b)
+                                lambda b, a: '<div class="warning">'+POLICY+'</div>' if re.search(r'85 h|85 ч|120 ч чтения|120 h of reading|31\.12\.2026|31 December 2026|18\.12\.2027|18 December 2027', b) else b)
         text = text.replace('300 ч резерва не превращаются', '88 ч 20 мин запаса не превращаются')
         text = text.replace('The 300 h allowance is not an extra book list.', 'The 88 h 20 min buffer is not an extra book list.')
         if path.name == 'growth.html':
@@ -454,7 +440,10 @@ def main():
         if path.name == 'index.html':
             text = update_homepage(text, schedule, bi, duration, POLICY)
         if path.name == 'library.html':
-            text = text.replace('<strong>645</strong>', '<strong>525</strong>').replace('645 ч изучения', '525 ч изучения').replace('645 learning hours', '525 learning hours')
+            learning = literature['learning_hours_total']
+            text = re.sub(r'<strong>(?:525|645|701)</strong>', f'<strong>{learning}</strong>', text)
+            text = re.sub(r'(?:525|645|701) ч изучения', f'{learning} ч изучения', text)
+            text = re.sub(r'(?:525|645|701) learning hours', f'{learning} learning hours', text)
             for key in estimate['order']:
                 if key not in literature.get('routes', {}):
                     continue
@@ -463,6 +452,82 @@ def main():
                 row_pattern = r'<tr><td><a href="curriculum.html#' + re.escape(key) + r'">.*?</td><td>.*?</td>'
                 replacement = f'<tr><td><a href="curriculum.html#{key}">{key}</a> · {hours_value} {bi("ч", "h")}</td><td><a href="months/{item["start"][:7]}.html#guide-{key}">{fmt(item["start"])}</a></td>'
                 text, _ = re.subn(row_pattern, replacement, text, count=1, flags=re.S)
+        # Refresh current claims by scope, never replace bare numbers in prices
+        # or in the archived extended syllabus.
+        def reviewed_paragraph(block, attrs):
+            plain = html.unescape(re.sub('<[^>]+>', '', block))
+            if ('120 ч' in plain and ('диагностик' in plain or 'зачёт' in plain)) or '120 h of reading' in plain:
+                return '<p>'+POLICY+'</p>'
+            if path.name == 'method.html' and any(s in plain for s in ['Аппаратная часть сокращена лишь', 'hardware scope is reduced by only']):
+                return '<p>'+bi('Новые темы получили не меньше времени изучения, чем до прежнего сокращения. Электроника — 120 ч, CAD — 160 ч, MCU — 120 ч, приводной стенд — 104 ч. Время сокращено в знакомой программной работе, повторной обработке данных и оформлении уже выполненных проверок.', 'New topics retain at least their pre-compression learning time. Electronics: 120 h; CAD: 160 h; MCU: 120 h; actuator rig: 104 h. Savings come from familiar coding, shared analysis and reviewing existing evidence.')+'</p>'
+            if 'optional tail PCB' in plain.lower() or 'Опциональная плата хвоста не входит' in plain:
+                return '<p>'+bi('Опциональная плата хвоста не входит в 340 ч хвоста и 2 600 ч основной программы. Её 40–60 ч требуют отдельного пересчёта. Свободных часов до конца года нет.', 'The optional tail PCB is outside the tail’s 340 h and the 2,600 h core. Its 40–60 h require a separate reforecast. No unallocated hours remain before year-end.')+'</p>'
+            if path.name == 'changes.html' and ('Сохранены все часы проектов' in plain or 'All arm425' in plain):
+                return '<p>'+bi('Редакция 4.6: все 127 заданий пересмотрены под опыт учащегося. Новые темы получили 701 ч изучения вместо 525. Реализация — 1 235 ч, проверка — 664 ч. Три физических проекта и критерии приёмки сохранены; повторные отчёты и общая программная инфраструктура учтены один раз.', 'Revision 4.6: all 127 tasks were reviewed for the learner’s experience. Learning increases from 525 to 701 h; implementation is 1,235 h and verification 664 h. All three physical projects and acceptance criteria remain; shared software and repeated evidence reviews are counted once.')+'</p><p><a href="method.html#hour-review">'+bi('Проверка каждого задания →','Review every task →')+'</a></p>'
+            if path.name in {'projects.html', 'method.html', 'growth.html', 'curriculum.html'}:
+                block = re.sub(r'425(?= (?:ч|h|hours)\b)', '406', block)
+                block = block.replace('arm’s 425 h', 'arm’s 406 h')
+            return block
+        text = replace_elements(text, lambda t, a: t == 'p', reviewed_paragraph)
+        if path.name == 'projects.html':
+            text = re.sub(r'425(?= (?:ч|h|hours)\b)', '406', text)
+        # Stage headings used to retain historic hours even after task updates.
+        if path.name == 'curriculum.html':
+            def stage_section(block, attrs):
+                item = by_id[attrs['id']]
+                header = '<p class="small">'+bi(f'{item["hours"]} ч · {dates(item)}', f'{item["hours"]} h · {dates(item)}')+'</p>'
+                return re.sub(r'<p class="small"><span lang="ru">\d+ ч · .*?</p>', lambda m: header, block, count=1, flags=re.S)
+            text = replace_elements(text, lambda t, a: t == 'section' and a.get('id') in by_id, stage_section)
+        if path.name == 'index.html':
+            text = text.replace('<strong>13</strong>', '<strong>12</strong>')
+            def stage_summary_row(block, attrs):
+                if 'data-task=' in block:
+                    return block
+                cells = re.findall(r'<td>(.*?)</td>', block, flags=re.S)
+                if len(cells) == 3:
+                    match = re.fullmatch(r'<a href="curriculum.html#([A-Za-z0-9]+)">.*?</a>', cells[0], flags=re.S)
+                    if match and match[1] in by_id:
+                        item = by_id[match[1]]
+                        return '<tr><td>'+cells[0]+f'</td><td>{item["hours"]}</td><td>{dates(item)}</td></tr>'
+                return block
+            text = replace_elements(text, lambda t, a: t == 'tr', stage_summary_row)
+        if path.name == 'method.html':
+            groups = [
+                ('Математика, кинематика, управление и походка', 'Maths, kinematics, control and gait', ['M02','M03','M08','D1','D2','M11','M10','M19']),
+                ('ПО, ROS, симуляция, зрение и ML', 'Software, ROS, simulation, vision and ML', ['M01','S1','S2','M13','M16','M17','M14','M18','M24']),
+                ('Электроника, CAD, MCU и привод', 'Electronics, CAD, MCU and actuator', ['M04','M05','M06','M07']),
+                ('Первая физическая нога', 'First physical leg', ['L1']),
+                ('Четыре → шесть ног', 'Four → six legs', ['M22','M23']),
+                ('Манипулятор', 'Robotic arm', ['A1','A2','A3']),
+                ('Хвост', 'Tail', ['T1','T2','T3']),
+                ('Приёмка по готовым доказательствам', 'Acceptance using existing evidence', ['G1','G2','G3','G4']),
+            ]
+            def method_summary(block, attrs):
+                if not ('Math' in block and 'kinematics' in block):
+                    return block
+                rows = []
+                for ru, en, ids in groups:
+                    value = sum(by_id[k]['hours'] for k in ids)
+                    refs = ', '.join(f'<a href="curriculum.html#{k}">{k}</a>' for k in ids)
+                    rows.append('<tr><td>'+bi(ru,en)+f'</td><td>{value}</td><td>{refs}</td></tr>')
+                rows += ['<tr><td>'+bi('Обязательная программа','Required programme')+'</td><td>2 600</td><td>30.12.2028</td></tr>',
+                         '<tr><td>'+bi('Свободная ёмкость','Unallocated capacity')+'</td><td>0</td><td>'+bi('Средняя рабочая оценка без отдельного процента на переделки','Nominal effort without a blanket rework percentage')+'</td></tr>',
+                         '<tr><td>'+bi('Доступное время','Available capacity')+'</td><td>2 600</td><td>'+bi('312 рабочих дней по 8 ч 20 мин','312 workdays at 8 h 20 min')+'</td></tr>']
+                return '<table><thead><tr><th>'+bi('Часть','Part')+'</th><th>'+bi('Часы','Hours')+'</th><th>'+bi('Этапы','Stages')+'</th></tr></thead><tbody>'+''.join(rows)+'</tbody></table>'
+            text = replace_elements(text, lambda t, a: t == 'table', method_summary)
+            text = re.sub(r'<!-- task-hour-review -->.*?<!-- /task-hour-review -->', '', text, flags=re.S)
+            audit = ['<!-- task-hour-review --><section id="hour-review"><h2>'+bi('Все 127 заданий: индивидуальная оценка','All 127 tasks: individual estimates')+'</h2><p>'+bi('Изучение 701 ч · реализация 1 235 ч · проверка 664 ч. Число физических опытов и критерии результата сохранены. Новые темы не сокращаются из-за опыта Python.', 'Learning 701 h · implementation 1,235 h · verification 664 h. Physical trial counts and acceptance criteria are retained. Python experience does not shorten new learning.')+'</p>']
+            for stage, item in by_id.items():
+                rows = [r for r in review['tasks'] if r['stage'] == stage]
+                if not rows:
+                    continue
+                audit.append('<details><summary>'+stage+' · '+bi(item['title'])+f' · {item["hours"]} '+bi('ч','h')+'</summary><div><p>'+bi(item['rationale'])+'</p><table><thead><tr><th>'+bi('Задание','Task')+'</th><th>'+bi('Изучение / реализация / проверка','Learn / build / verify')+'</th><th>'+bi('Всего','Total')+'</th></tr></thead><tbody>')
+                for row in rows:
+                    h = row['after']
+                    audit.append('<tr><td>'+bi(row['title'])+f'<p class="small" lang="ru">{html.escape(row["reason"])}</p></td><td>{h["learn"]} / {h["build"]} / {h["verify"]}</td><td>{row["hours"]}</td></tr>')
+                audit.append('</tbody></table></div></details>')
+            audit.append('<p><a href="task-hour-review.md">'+bi('Полный отчёт с причинами изменений','Full review with change reasons')+'</a> · <a href="task-hour-review.json">JSON</a></p></section><!-- /task-hour-review -->')
+            text = text.replace('<footer>', ''.join(audit)+'<footer>', 1)
         pages[path] = text
 
     # Reuse the existing stage reading/gate guides, then rebuild monthly task
@@ -525,7 +590,7 @@ def main():
             if 0 <= neighbor < len(months):
                 target = months[neighbor]['page'][7:]
                 parts.append(f'<a href="{target}">{label(target[:7])}</a>')
-        parts.append('</div><footer>'+bi('Календарь 4.5 · 08.11.2026 · 50 ч/неделю.','Calendar 4.5 · 8 November 2026 · 50 h/week.')+'</footer></main></div></body></html>')
+        parts.append('</div><footer>'+bi('Календарь 4.6 · 11.11.2026 · 50 ч/неделю.','Calendar 4.6 · 11 November 2026 · 50 h/week.')+'</footer></main></div></body></html>')
         pages[ROOT/month['page']] = '\n'.join(parts)
     # Keep old month URLs usable, but remove obsolete monthly assignments.
     active_month_paths = {ROOT / month['page'] for month in months}
@@ -535,7 +600,7 @@ def main():
     for path, text in pages.items():
         path.write_text(text)
     procurement['baseline_hours_unchanged'] = core_minutes//60
-    procurement['calendar_updated_on'] = '2026-11-08'
+    procurement['calendar_updated_on'] = '2026-11-11'
     write_json('procurement.json', procurement)
     print(f'Rendered {len(months)} months, {len(items)} stages; {by_id["G4"]["end"]} + {buffer_minutes} buffer minutes.')
 
