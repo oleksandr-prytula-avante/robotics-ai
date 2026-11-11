@@ -732,8 +732,8 @@
       ],
       "status": "partial",
       "note": {
-        "ru": "Начать с фильтрации и простого оценивания. Kalman — только при готовой математике; bias, timestamp и наблюдаемость IMU проверить отдельно.",
-        "en": "Begin with filtering and simple estimation. Use Kalman only with the prerequisites; separately test IMU bias, timing and observability."
+        "ru": "Основной фильтр — Fusion без магнитометра; Kalman — один ручной шаг для понимания, не вторая реализация. Источники, единицы и проверка — рядом с заданием.",
+        "en": "Use no-magnetometer Fusion; one hand-worked Kalman step explains estimation without a second implementation. Task-linked sources, units and checks are provided."
       },
       "title": {
         "ru": "Практическая IMU-фильтрация и наблюдаемость",
@@ -747,8 +747,8 @@
       ],
       "status": "partial",
       "note": {
-        "ru": "PID применить к приводу, кинематику — к позе корпуса. Координацию нескольких ног и ограничения проверять своим экспериментом.",
-        "en": "Apply PID to the actuator and kinematics to body pose. Test multi-leg coordination and constraints in your experiment."
+        "ru": "Курс — вводный PID. Теория состояния/устойчивости и робастный практикум закрываются выбранными разделами FBS и собственной моделью D2.",
+        "en": "The course introduces PID. Selected FBS sections and the D2 model cover state/stability theory and the robustness lab."
       },
       "title": {
         "ru": "Управление приводом и позой корпуса",
@@ -763,8 +763,8 @@
       ],
       "status": "partial",
       "note": {
-        "ru": "Переиспользовать три курса для цепочки модель → ROS → MCU. HIL, сбои связи и сравнение телеметрии — собственные работы.",
-        "en": "Reuse these courses for model → ROS → MCU integration. HIL, communication faults and telemetry comparison are your own work."
+        "ru": "Курсы дают интеграцию; физика контакта закреплена в Tedrake Multi-Body Dynamics и собственной лабораторной dt/dt2.",
+        "en": "Courses cover integration; Tedrake Multi-Body Dynamics and the existing dt/dt2 lab cover contact physics."
       },
       "title": {
         "ru": "Одна нога: модель, MCU HIL и реальные измерения",
@@ -794,8 +794,8 @@
       ],
       "status": "gap",
       "note": {
-        "ru": "Только механические основы. Прямого проверенного курса по вашему многосекционному тросовому хвосту не найдено.",
-        "en": "Mechanical foundations only. No vetted direct course for your multi-section tendon-driven tail was found."
+        "ru": "Курсы дают элементы машин. Основные источники хвоста: Slocum о тросовой передаче, OpenContinuum о геометрии, статья Liu/Alambeigi о трении и собственная пассивная секция.",
+        "en": "Courses cover machine elements. Tail sources: Slocum cable transmission, OpenContinuum geometry, Liu/Alambeigi friction and the custom passive section."
       },
       "title": {
         "ru": "Хвост: пассивная механика и передача",
@@ -809,8 +809,8 @@
       ],
       "status": "gap",
       "note": {
-        "ru": "Материалы лишь для симуляции и кинематики. Контакты, опорный многоугольник и медленную походку изучать по литературе M19.",
-        "en": "Material supports simulation and kinematics only. Use M19 reading for contacts, support polygons and slow gait."
+        "ru": "Походки — статья OpenSHC и собственные фазовые диаграммы; контакт — Tedrake; плоская QP — Boyd/CVXPY. ROS-курс используется для инструментов.",
+        "en": "Use OpenSHC/custom phase diagrams for gait, Tedrake for contact and Boyd/CVXPY for planar QP; ROS courses supply tooling."
       },
       "title": {
         "ru": "Медленная походка, контакты и устойчивость в симуляции",
@@ -863,8 +863,8 @@
       ],
       "status": "gap",
       "note": {
-        "ru": "Повторить RTOS и управление. Калибровка трёх секций, преднатяг и гистерезис хвоста остаются собственной работой.",
-        "en": "Revisit RTOS and control. Three-section calibration, pretension and tail hysteresis remain your own work."
+        "ru": "Преднатяг, обратный ход, нагрузка и связь секций изучаются по литературе и протоколу хвоста; IoT-курс не считается источником этой механики.",
+        "en": "Study pretension, reversal, loading and segment coupling through reading and the tail protocol; the IoT course does not cover this mechanics."
       },
       "title": {
         "ru": "Хвост: три активные секции и калибровка",
@@ -936,8 +936,8 @@
       ],
       "status": "partial",
       "note": {
-        "ru": "Классический OpenCV baseline. Калибровку intrinsics/extrinsics, hand–eye и метрическую погрешность дополнить материалами секции.",
-        "en": "Build the classical OpenCV baseline. Add intrinsics/extrinsics, hand–eye and metric-error validation from section resources."
+        "ru": "OpenCV — обработка; метрический путь закреплён в литературе: калибровка → solvePnP → луч и известная плоскость → основание. Hand–eye для подвижной камеры не добавляется автоматически.",
+        "en": "OpenCV covers processing; reading fixes the metric path: calibration → solvePnP → ray/known plane → base. Moving-camera hand–eye is not automatically added."
       },
       "title": {
         "ru": "Зрение для манипулятора: измеримая геометрия и классическая база",
@@ -1445,5 +1445,7 @@
     "electronics",
     "cad",
     "esp32"
-  ]
+  ],
+  "learning_path": "learning-path.json",
+  "materials_updated_on": "2026-11-11"
 }

@@ -31,3 +31,5 @@
 Материалы полной расширенной программы и будущих направлений остаются справочными; их часы не прибавляются к обязательному ядру. Отдельный проект автономной инспекции из inspection-plan.json в эти 2 600 ч не включён.
 
 Все задания с разбивкой и индивидуальным обоснованием: [task-hour-review.md](task-hour-review.md). Данные: [task-hour-review.json](task-hour-review.json). Веб-версия: [method.html#hour-review](method.html#hour-review). Календарь: [timeline-review.md](timeline-review.md).
+
+Материалы уточнены в редакции 4.7 без изменения часов: [исправления покрытия](materials-resolution.md), [связная база](learning-path.json), [пояснения к лабораторным](learning-guides.md).

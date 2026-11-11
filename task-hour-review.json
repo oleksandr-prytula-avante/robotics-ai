@@ -1,6 +1,6 @@
 {
   "reviewed_on": "2026-11-11",
-  "version": "4.6",
+  "version": "4.7",
   "profile": {
     "ru": "10 лет Python/TS, основы C++/Rust, ранее изученная высшая математика; механика, CAD и электроника новые.",
     "en": "Ten years Python/TS, basic C++/Rust, prior university mathematics; mechanics, CAD and electronics are new."
@@ -1314,8 +1314,8 @@
       "key": "D2.2",
       "stage": "D2",
       "title": {
-        "ru": "Связанные звенья: квазистатика против динамики",
-        "en": "Coupled links: quasi-static versus dynamic loads"
+        "ru": "Своя двухзвенная модель: энергия, состояние и библиотечный эталон",
+        "en": "Own two-link model: energy, state and library reference"
       },
       "before": {
         "learn": 5,
@@ -1329,7 +1329,7 @@
         "verify": 2
       },
       "hours": 13,
-      "reason": "Готовая библиотека короткой цепи вместо повторной реализации динамики.",
+      "reason": "Самостоятельный вывод одной плоской 2R-модели и независимый библиотечный эталон; полный вывод 6-DOF не добавляется.",
       "previous_stage_rationale": null
     },
     {
@@ -1383,8 +1383,8 @@
       "key": "M11.2",
       "stage": "M11",
       "title": {
-        "ru": "Один пригодный фильтр крена и тангажа",
-        "en": "One suitable roll/pitch filter"
+        "ru": "Fusion без магнитометра: оценка крена и тангажа",
+        "en": "No-magnetometer Fusion: roll and pitch estimation"
       },
       "before": {
         "learn": 6,
@@ -2641,8 +2641,8 @@
       "key": "M14.1",
       "stage": "M14",
       "title": {
-        "ru": "Одна камера и калибровка рабочей области",
-        "en": "One camera and workspace calibration"
+        "ru": "Камера: калибровка, поза и пересечение луча с плоскостью",
+        "en": "Camera: calibration, pose and ray–plane intersection"
       },
       "before": {
         "learn": 6,
@@ -3091,5 +3091,6 @@
       "reason": "Итоговое решение по собранным доказательствам всех проектов, без второго выпуска.",
       "previous_stage_rationale": null
     }
-  ]
+  ],
+  "materials_revision": "4.7"
 }

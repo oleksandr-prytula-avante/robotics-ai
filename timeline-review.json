@@ -3,7 +3,7 @@
   "reviewed_on": "2026-11-11",
   "source": "estimate.json",
   "verified_calendar": "schedule.json",
-  "source_version": "4.6",
+  "source_version": "4.7",
   "start": "2028-01-02",
   "deadline": "2028-12-31",
   "weekly_hours": 50,

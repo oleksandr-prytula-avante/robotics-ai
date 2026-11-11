@@ -319,6 +319,61 @@ class ContentTests(unittest.TestCase):
                     match = re.search(r'Learning for the complete stage: (\d+) h', block['text'])
                     self.assertIsNotNone(match)
                     self.assertEqual(int(match[1]), hours)
+                    for reading in route['readings']:
+                        for text in reading['selection'].values():
+                            self.assertIn(text,block['text'])
+                    for unit in route.get('study_units',[]):
+                        for field in ('focus','mastery_check'):
+                            for text in unit[field].values():
+                                self.assertIn(text,block['text'])
+
+    def test_every_learning_hour_has_a_task_source_and_understanding_check(self):
+        references = {r['id']:r for r in self.literature['references']}
+        self.assertEqual(len(references),len(self.literature['references']))
+        units = {}
+        for stage,route in self.literature['routes'].items():
+            self.assertEqual(sum(u['hours'] for u in route['study_units']),route['learn_hours'])
+            assigned = {r['ref'] for r in route['readings']}
+            self.assertTrue(assigned <= set(references))
+            for unit in route['study_units']:
+                key = unit['task']
+                with self.subTest(task=key):
+                    self.assertNotIn(key,units)
+                    units[key] = unit
+                    owner,index = key.rsplit('.',1)
+                    self.assertEqual(owner,stage)
+                    task = self.items[stage]['tasks'][int(index)-1]
+                    self.assertEqual(unit['hours'],task['learn'])
+                    self.assertEqual(unit['mastery_check'],task.get('result') or task['title'])
+                    self.assertTrue(set(unit['sources']) <= assigned)
+                    self.assertTrue(unit['sources'])
+                    for language in ('ru','en'):
+                        self.assertTrue(unit['focus'][language].strip())
+        expected = {f'{stage}.{index}' for stage,item in self.items.items()
+                    for index,t in enumerate(item['tasks'],1) if t['learn']}
+        self.assertEqual(set(units),expected)
+        self.assertEqual(sum(u['hours'] for u in units.values()),701)
+        required = {
+            'M11.2': {'SW13'}, 'M14.1': {'SW05','SW14'},
+            'M10.6': {'math-feedback'}, 'M13.5': {'math-contact'},
+            'M19.7': {'math-qp','math-convex'}, 'M19.3': {'H-GAIT'},
+            'T1.3': {'H-SLOCUM','H-TENDON-FRICTION'},
+            'T2.3': {'H-TENDON-FRICTION'}, 'D2.2': {'math-contact'},
+        }
+        for key,sources in required.items():
+            self.assertTrue(sources <= set(units[key]['sources']),key)
+
+    def test_foundation_path_connects_real_stages_and_sources(self):
+        path = read_json('learning-path.json')
+        refs = {r['id'] for r in self.literature['references']}
+        self.assertEqual(len({step['id'] for step in path['steps']}),len(path['steps']))
+        self.assertEqual(len(path['steps']),9)
+        for step in path['steps']:
+            self.assertTrue(set(step['stages']) <= set(self.items))
+            self.assertTrue(set(step['sources']) <= refs)
+            self.assertTrue(all(step['mastery_check'].values()))
+        self.assertIn('id="foundation-path"',(ROOT / 'library.html').read_text())
+        self.assertTrue((ROOT / 'learning-guides.md').is_file())
 
     def test_internal_prerequisites_finish_before_dependent_work(self):
         hardware = self.estimate['reports']['hardware']

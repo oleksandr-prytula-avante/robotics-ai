@@ -12,6 +12,7 @@ from datetime import date, timedelta
 from html.parser import HTMLParser
 from pathlib import Path
 from render_timeline_infographic import update_homepage
+from render_learning import reading_route, foundation_path, reference_additions, library_stage_row, reference_card
 
 ROOT = Path(__file__).resolve().parents[1]
 START, DEADLINE = date(2028, 1, 2), date(2028, 12, 31)
@@ -64,11 +65,13 @@ def stage_learning_hours(item):
     return sum(task.get('learn', 0) for task in item.get('tasks', []))
 
 
-def update_reading_block(block, stage, by_id):
-    hours_value = stage_learning_hours(by_id[stage])
-    block = re.sub(r'Изучение на весь этап: \d+ ч', f'Изучение на весь этап: {hours_value} ч', block)
-    block = re.sub(r'Learning for the complete stage: \d+ h', f'Learning for the complete stage: {hours_value} h', block)
-    return block
+def update_reading_block(block, stage, by_id, literature, prefix=''):
+    if stage not in literature['routes']:
+        return block
+    if block.startswith('<div') and 'data-reading-stage=' in block.split('>',1)[0]:
+        return reading_route(stage,by_id[stage],literature,prefix)
+    return replace_elements(block, lambda t,a: t == 'div' and a.get('data-reading-stage') == stage,
+                            lambda _b,_a: reading_route(stage,by_id[stage],literature,prefix))
 
 
 class Elements(HTMLParser):
@@ -143,7 +146,7 @@ POLICY = bi('Старт 02.01.2028; первый рабочий день — 03.
 def main():
     estimate = json.loads((ROOT / 'estimate.json').read_text())
     assert 'timeline_compression' not in estimate, 'Apply the individual task review first'
-    estimate['version'] = '4.6'
+    estimate['version'] = '4.7'
     previous = json.loads((ROOT / 'schedule.json').read_text())
     old_items = {x['id']: x for x in previous['items']}
     sources = {key: copy.deepcopy(estimate['items'][key]) for key in estimate['order']
@@ -196,6 +199,7 @@ def main():
     by_id = {x['id']: x for x in items}
     assert by_id['G4']['end'] == '2028-12-30'
     mapping = {dates(old_items[key]): dates(value) for key, value in by_id.items() if key in old_items}
+    prose_mapping = {}
     review = json.loads((ROOT / 'task-hour-review.json').read_text())
     # Update complete source prose, including copies in existing month guides.
     for key, item in by_id.items():
@@ -206,13 +210,13 @@ def main():
                 for language, value in before.get(field, {}).items():
                     target = after.get(field, {}).get(language)
                     if target and target != value:
-                        mapping[value] = target
-                        mapping[html.escape(value)] = html.escape(target)
+                        prose_mapping[value] = target
+                        prose_mapping[html.escape(value)] = html.escape(target)
         old_rationale = next((r.get('previous_stage_rationale') for r in review['tasks'] if r['stage'] == key), None)
         if old_rationale:
             for language, value in old_rationale.items():
-                mapping[value] = item['rationale'][language]
-                mapping[html.escape(value)] = html.escape(item['rationale'][language])
+                prose_mapping[value] = item['rationale'][language]
+                prose_mapping[html.escape(value)] = html.escape(item['rationale'][language])
 
     old_policy = {
         '173 ч 20 мин': '88 ч 20 мин', '173 h 20 min': '88 h 20 min',
@@ -326,7 +330,7 @@ def main():
                        'capacity_minutes': capacity, 'buffer_minutes': capacity-allocated,
                        'page': f'months/{key}.html'})
     workday_count = sum(1 for i in range((DEADLINE-START).days+1) if is_workday(START+timedelta(days=i)))
-    calendar_fields = {'version': '4.6', 'start': str(START), 'deadline': str(DEADLINE),
+    calendar_fields = {'version': '4.7', 'start': str(START), 'deadline': str(DEADLINE),
                        'work_finish': by_id['G4']['end'], 'calendar_finish': items[-1]['end'],
                        'base_hours': core_minutes//60, 'allocated_hours': core_minutes//60,
                        'calendar_capacity_minutes': capacity_minutes, 'allocated_minutes': core_minutes,
@@ -345,7 +349,8 @@ def main():
     write_json('estimate.json', estimate)
     write_json('schedule.json', schedule)
 
-    pages = {p: substitute(p.read_text(), mapping) for p in list(ROOT.glob('*.html')) + list((ROOT/'months').glob('*.html'))}
+    pages = {p: substitute(p.read_text(), {**mapping, **prose_mapping})
+             for p in list(ROOT.glob('*.html')) + list((ROOT/'months').glob('*.html'))}
     guides = {}
     for path, text in pages.items():
         if path.parent.name == 'months':
@@ -378,7 +383,7 @@ def main():
             text = replace_elements(text, lambda t, a: t == 'tr' and 'data-task' in a,
                                     curriculum_task_row)
             text = replace_elements(text, lambda t, a: t == 'div' and 'data-reading-stage' in a,
-                                    lambda block, attrs: update_reading_block(block, attrs['data-reading-stage'], by_id))
+                                    lambda block, attrs: update_reading_block(block, attrs['data-reading-stage'], by_id, literature))
         if path.name == 'index.html':
             text = text.replace('<strong>2 960</strong>', '<strong>2 720</strong>').replace('<strong>14</strong>', '<strong>13</strong>')
             text = text.replace('часов: работа + резерв', 'часов обязательной работы').replace('hours: work + allowance', 'hours of required work')
@@ -424,7 +429,7 @@ def main():
         if path.name in {'index.html','method.html','changes.html'}:
             text = re.sub(r'<!-- timeline-summary -->.*?<!-- /timeline-summary -->', '', text, flags=re.S)
             text = text.replace('<main class="main">', '<main class="main"><!-- timeline-summary --><section class="note" id="timeline-summary"><p><strong>'+SUMMARY+'</strong></p><p>'+BUFFER+'</p><p>'+POLICY+'</p></section><!-- /timeline-summary -->', 1)
-        text = re.sub(r'(Основная программа · |Core programme · |Редакция |Revision )4\.[345]', r'\g<1>4.6', text)
+        text = re.sub(r'(Основная программа · |Core programme · |Редакция |Revision )4\.[3456]', r'\g<1>4.7', text)
         text = re.sub(r'(?:months/\d{4}-\d{2}\.html)#guide-([A-Za-z0-9]+)',
                       lambda m: f'months/{by_id[m[1]]["start"][:7]}.html#guide-{m[1]}' if m[1] in by_id else f'curriculum.html#{m[1]}', text)
         # These notices use list items or a warning div rather than paragraphs.
@@ -452,6 +457,24 @@ def main():
                 row_pattern = r'<tr><td><a href="curriculum.html#' + re.escape(key) + r'">.*?</td><td>.*?</td>'
                 replacement = f'<tr><td><a href="curriculum.html#{key}">{key}</a> · {hours_value} {bi("ч", "h")}</td><td><a href="months/{item["start"][:7]}.html#guide-{key}">{fmt(item["start"])}</a></td>'
                 text, _ = re.subn(row_pattern, replacement, text, count=1, flags=re.S)
+            def library_row(block, attrs):
+                match = re.match(r'<tr><td><a href="curriculum.html#([A-Za-z0-9]+)">',block)
+                if match and match[1] in literature['routes'] and '#ref-' in block:
+                    return library_stage_row(match[1],by_id[match[1]],literature['routes'][match[1]],literature)
+                return block
+            text = replace_elements(text,lambda t,a: t == 'tr',library_row)
+            text = re.sub(r'<!-- foundation-path -->.*?<!-- /foundation-path -->','',text,flags=re.S)
+            text = re.sub(r'<!-- reference-additions -->.*?<!-- /reference-additions -->','',text,flags=re.S)
+            learning_path = json.loads((ROOT / 'learning-path.json').read_text())
+            text = text.replace('<section id="reading-policy">',foundation_path(learning_path,literature)+'<section id="reading-policy">',1)
+            text = text.replace('<footer>',reference_additions(literature)+'<footer>',1)
+            # Only the bibliographic count statistic, not original-source counts.
+            text = re.sub(r'<strong>\d+</strong><span lang="ru">(?:проверенная запись каталога|записей каталога)</span><span lang="en">(?:reviewed catalog entries|catalog entries)</span>',
+                          f'<strong>{len(literature["references"])}</strong>'+bi('записей каталога','catalog entries'),text)
+            updated_refs = {f'ref-{r["id"]}':r for r in literature['references']
+                            if r['id'] in {'math-feedback','math-modern-robotics','H-SLOCUM'}}
+            text = replace_elements(text, lambda t,a: t == 'details' and a.get('id') in updated_refs,
+                                    lambda _b,a: reference_card(updated_refs[a['id']]))
         # Refresh current claims by scope, never replace bare numbers in prices
         # or in the archived extended syllabus.
         def reviewed_paragraph(block, attrs):
@@ -584,13 +607,13 @@ def main():
                 parts.append('<details id="guide-CAP"><summary>'+bi('Запас на задержки и переделки','Buffer for delays and rework')+'</summary><div><p>'+BUFFER+'</p></div></details>')
             else:
                 assert stage in guides, stage
-                parts.append(update_reading_block(guides[stage], stage, by_id))
+                parts.append(update_reading_block(guides[stage], stage, by_id, literature, '../'))
         parts.append('<div class="panel"><h3>'+bi('Закрытие месяца','Month-end check')+'</h3><p>'+bi('Записать фактические часы, результаты и PASS/HOLD. Если работа задерживается, пересчитать прогноз; непройденные проверки не засчитывать.', 'Record actual hours, outcomes and PASS/HOLD. If work is delayed, reforecast completion; do not mark unmet gates as passed.')+'</p></div><div class="month-nav">')
         for neighbor in [month_index-1,month_index+1]:
             if 0 <= neighbor < len(months):
                 target = months[neighbor]['page'][7:]
                 parts.append(f'<a href="{target}">{label(target[:7])}</a>')
-        parts.append('</div><footer>'+bi('Календарь 4.6 · 11.11.2026 · 50 ч/неделю.','Calendar 4.6 · 11 November 2026 · 50 h/week.')+'</footer></main></div></body></html>')
+        parts.append('</div><footer>'+bi('Календарь 4.7 · 11.11.2026 · 50 ч/неделю.','Calendar 4.7 · 11 November 2026 · 50 h/week.')+'</footer></main></div></body></html>')
         pages[ROOT/month['page']] = '\n'.join(parts)
     # Keep old month URLs usable, but remove obsolete monthly assignments.
     active_month_paths = {ROOT / month['page'] for month in months}

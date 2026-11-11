@@ -1,0 +1,196 @@
+{
+  "version": "4.7",
+  "updated_on": "2026-11-11",
+  "scope": {
+    "ru": "Связная прикладная база обязательных проектов с самостоятельными проверками переноса знаний.",
+    "en": "Connected applied foundations for the required projects, with independent knowledge-transfer checks."
+  },
+  "hours_policy": {
+    "ru": "701 ч изучения входят в 2 600 ч; линии ниже связывают существующие темы, не добавляя часы. Они пересекаются по времени; фактический порядок работ задаётся календарём.",
+    "en": "701 learning hours are inside 2,600 h; the strands below connect existing topics without adding hours. They overlap in time; follow the calendar for actual work order."
+  },
+  "limits": {
+    "ru": "Полные курсы EKF/LQR, SLAM, динамической ходьбы, MPC/RL и нелинейной континуальной механики остаются отдельным развитием. Прохождение маршрута не объявляется освоением всей робототехники.",
+    "en": "Full EKF/LQR, SLAM, dynamic walking, MPC/RL and nonlinear continuum mechanics remain further development. Completion is not described as mastery of all robotics."
+  },
+  "steps": [
+    {
+      "id": "geometry",
+      "stages": [
+        "M02",
+        "M08"
+      ],
+      "sources": [
+        "math-modern-robotics"
+      ],
+      "title": {
+        "ru": "Геометрия → кинематика → статика",
+        "en": "Geometry → kinematics → statics"
+      },
+      "mastery_check": {
+        "ru": "Самостоятельно пересчитать FK/IK/J после изменения длины звена; объяснить сингулярность.",
+        "en": "Recompute FK/IK/J after changing a link length and explain singularity."
+      }
+    },
+    {
+      "id": "design",
+      "stages": [
+        "M05",
+        "D1",
+        "L1",
+        "A1"
+      ],
+      "sources": [
+        "H-ROY",
+        "H-SLOCUM"
+      ],
+      "title": {
+        "ru": "Нагрузки → конструкция → измерение",
+        "en": "Loads → design → measurement"
+      },
+      "mastery_check": {
+        "ru": "Момент и прогиб из массы/вылета сопоставлены с нагрузочным опытом.",
+        "en": "Compare moment/sag from mass/reach with a load test."
+      }
+    },
+    {
+      "id": "dynamics",
+      "stages": [
+        "M07",
+        "D2"
+      ],
+      "sources": [
+        "math-modern-robotics",
+        "math-contact",
+        "math-feedback"
+      ],
+      "title": {
+        "ru": "Модель → энергия → состояние",
+        "en": "Model → energy → state"
+      },
+      "mastery_check": {
+        "ru": "Своя 2R-модель, равновесие и линеаризация; объяснить M/C/g.",
+        "en": "Own 2R model, equilibrium and linearization; explain M/C/g."
+      }
+    },
+    {
+      "id": "estimation",
+      "stages": [
+        "M03",
+        "M11"
+      ],
+      "sources": [
+        "SW13",
+        "math-feedback",
+        "math-labbe"
+      ],
+      "title": {
+        "ru": "Измерение → неопределённость → оценивание",
+        "en": "Measurement → uncertainty → estimation"
+      },
+      "mastery_check": {
+        "ru": "Калибровка и независимая ошибка; объяснить дрейф/наблюдаемость и один шаг KF.",
+        "en": "Calibration/held-out error; explain drift/observability and one KF step."
+      }
+    },
+    {
+      "id": "control",
+      "stages": [
+        "M10"
+      ],
+      "sources": [
+        "math-feedback"
+      ],
+      "title": {
+        "ru": "Обратная связь → устойчивость → робастность",
+        "en": "Feedback → stability → robustness"
+      },
+      "mastery_check": {
+        "ru": "Объяснить полюса, задержку, насыщение и условия вывода для интервалов параметров.",
+        "en": "Explain poles, delay, saturation and inference conditions for parameter intervals."
+      }
+    },
+    {
+      "id": "contact",
+      "stages": [
+        "M13",
+        "M19"
+      ],
+      "sources": [
+        "math-contact",
+        "math-qp",
+        "H-GAIT"
+      ],
+      "title": {
+        "ru": "Контакт → допустимые реакции → походка",
+        "en": "Contact → feasible forces → gait"
+      },
+      "mastery_check": {
+        "ru": "Сила/импульс, плоская QP и отказ LIFT до потери допустимой опоры.",
+        "en": "Force/impulse, planar QP and rejecting LIFT before support becomes infeasible."
+      }
+    },
+    {
+      "id": "planning",
+      "stages": [
+        "M16",
+        "M17"
+      ],
+      "sources": [
+        "math-modern-robotics",
+        "SW07",
+        "SW04"
+      ],
+      "title": {
+        "ru": "Путь → траектория → исполнение",
+        "en": "Path → trajectory → execution"
+      },
+      "mastery_check": {
+        "ru": "Объяснить один планировщик, временной профиль и отказ при коллизии/пределе.",
+        "en": "Explain one planner, time profile and collision/limit rejection."
+      }
+    },
+    {
+      "id": "perception",
+      "stages": [
+        "M14",
+        "M18"
+      ],
+      "sources": [
+        "SW05",
+        "SW14",
+        "SW09",
+        "SW10"
+      ],
+      "title": {
+        "ru": "Пиксель → метрическая цель → проверяемое решение",
+        "en": "Pixel → metric target → validated decision"
+      },
+      "mastery_check": {
+        "ru": "Получить миллиметры в основании и независимую ошибку; исключить утечку данных ML.",
+        "en": "Obtain base-frame millimetres/held-out error and exclude ML leakage."
+      }
+    },
+    {
+      "id": "tendons",
+      "stages": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "sources": [
+        "H-OCR",
+        "H-SLOCUM",
+        "H-TENDON-FRICTION"
+      ],
+      "title": {
+        "ru": "Форма → вес/трение → повторяемое движение",
+        "en": "Shape → gravity/friction → repeatable motion"
+      },
+      "mastery_check": {
+        "ru": "Различить идеальную кинематику и измеренный обратный ход/нагрузку/связь секций.",
+        "en": "Distinguish ideal kinematics from measured reversal/loading/section coupling."
+      }
+    }
+  ]
+}

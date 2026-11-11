@@ -92,7 +92,7 @@ REVIEW = {
     ],
     'D2': [
         ('7/8/3', 'Вывод одной физической модели; интегратор и измерительный стенд уже готовы.'),
-        ('6/5/2', 'Готовая библиотека короткой цепи вместо повторной реализации динамики.'),
+        ('6/5/2', 'Самостоятельный вывод одной плоской 2R-модели и независимый библиотечный эталон; полный вывод 6-DOF не добавляется.'),
         ('6/11/6', 'Реальная независимая серия и объяснение расхождений сохранены.'),
     ],
     'M11': [
@@ -259,14 +259,14 @@ def main():
     estimate.pop('timeline_compression', None)
     total = sum(row['hours'] for row in reviewed)
     assert total <= 2600, f'Nominal estimate exceeds the annual capacity: {total}'
-    estimate['version'] = '4.6'
+    estimate['version'] = '4.7'
     estimate['hour_review'] = {'reviewed_on': REVIEWED_ON, 'tasks_reviewed': len(reviewed),
         'report': 'task-hour-review.json', 'method': 'individual nominal effort, no proportional compression',
         'new_learning_floor_source': '156da32:estimate.json',
         'unpredictable_rework_percentage': 0}
     estimate['source_model'] = 'Individually reviewed nominal task effort for experienced Python/TS developer; new hardware/robotics learning preserved.'
     estimate['reports_scope'] = 'Math/software/hardware reports preserve earlier scope mappings and dependency provenance. Active hours are estimate.items task sums, reviewed in task-hour-review.json.'
-    report = {'reviewed_on': REVIEWED_ON, 'version': '4.6',
+    report = {'reviewed_on': REVIEWED_ON, 'version': '4.7',
         'profile': estimate['reports']['math']['profile'],
         'basis': 'Nominal planning judgments, not measured population means or a guarantee of mastery. Routine debugging included; no blanket rework allowance.',
         'pre_compression_reference': '156da32:estimate.json',
@@ -280,7 +280,7 @@ def main():
     (ROOT / 'estimate.json').write_text(json.dumps(estimate, ensure_ascii=False, indent=2) + '\n')
     review_path.write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n')
     lines = ['# Индивидуальная проверка часов программы', '',
-        '11.11.2026 · редакция 4.6 · средняя рабочая оценка для профиля из плана.', '',
+        '11.11.2026 · редакция 4.7 · средняя рабочая оценка для профиля из плана.', '',
         'Профиль: 10 лет Python/TS, основы C++/Rust, ранее изученная высшая математика; механика, CAD и электроника новые.', '',
         f"Проверены все {len(reviewed)} заданий. Всего **{total} ч**: изучение **{report['category_hours']['learn']}**, реализация **{report['category_hours']['build']}**, проверка **{report['category_hours']['verify']}**. Доступно 2 600 ч за 2028 год.", '',
         'Новые темы не сокращаются пропорционально дедлайну: в каждом задании вне M01 часы изучения не ниже редакции до механического сокращения 120 ч. В M01 сокращены знакомые Python/Linux и обработка записей; шесть часов нового C++ сохранены. Часы — инженерная оценка ограниченного прикладного результата, а не измеренная норма полного освоения дисциплины.', '',

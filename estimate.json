@@ -1,5 +1,5 @@
 {
-  "version": "4.6",
+  "version": "4.7",
   "start": "2028-01-02",
   "deadline": "2028-12-31",
   "items": {
@@ -164,8 +164,8 @@
         "en": "Independently transform a point, compute a moment/derivative, calibrate and recognise degeneracy or an unstable timestep."
       },
       "core_reading": {
-        "ru": "Исходный M02, pp3–7: векторы/базисы/момент, линейная калибровка и обусловленность, производная/Якобиан, один ОДУ-пример. Из pp9–10 выбрать задачи, проверяющие диагностические пробелы; p15 — связь ṗ=Jq̇. Полный старый список книг не является обязательным чтением.",
-        "en": "Original M02 pp3–7: vectors/frames/moment, linear calibration/conditioning, derivative/Jacobian and one ODE example. Select pp9–10 exercises for diagnostic gaps; p15 supplies ṗ=Jq̇. The full former book list is not assigned reading."
+        "ru": "Сначала источники и блоки «Что читать сейчас» с привязкой к заданиям. Все часы изучения распределены там; повторное чтение и полные книги отдельно не прибавляются.",
+        "en": "Follow the task-linked sources and units in What to read now. All learning hours are allocated there; do not add repeated reading or full books."
       },
       "base": 56,
       "track": "core",
@@ -295,8 +295,8 @@
         "en": "The physical validation series is excluded from fitting; uncertainty reporting retains bias, contact/temperature conditions and the independent repetition count."
       },
       "core_reading": {
-        "ru": "Исходный M03, pp3–8: систематическое смещение/шум/ковариация, независимые повторы и проверочная выборка, калибровка с ограничениями, обусловленность и один метод неопределённости; pp11–14 — ошибки достоверности по своей работе. Остальные сравнения методов — справочно.",
-        "en": "Original M03 pp3–8: bias/noise/covariance, independent repeats/held-out runs, bounded calibration, conditioning and one uncertainty method; pp11–14 supply validity faults relevant to the project. Other method comparisons are reference material."
+        "ru": "Сначала источники и блоки «Что читать сейчас» с привязкой к заданиям. Все часы изучения распределены там; повторное чтение и полные книги отдельно не прибавляются.",
+        "en": "Follow the task-linked sources and units in What to read now. All learning hours are allocated there; do not add repeated reading or full books."
       },
       "base": 48,
       "track": "core",
@@ -466,8 +466,8 @@
         "en": "The leg reaches valid points and rejects impossible ones; independent FK/J and fixed-world-point checks pass. This does not certify the accuracy of an arm not yet assembled."
       },
       "core_reading": {
-        "ru": "Исходный M08, с. 3–8: системы координат и вращения, FK реальных осей, ветви решения IK, численное решение IK с демпфированием, Якобиан и виртуальная работа; с. 11–14 — ошибки, относящиеся к ноге. DH/PoE читать для понимания различий; вторая обязательная реализация не требуется.",
-        "en": "Original M08 pp3–8: frames/rotations, actual-axis FK, IK branches, numerical damped IK and Jacobian/virtual work; pp11–14 supply leg-relevant faults. Read DH/PoE for awareness, without assigning a second implementation."
+        "ru": "Сначала источники и блоки «Что читать сейчас» с привязкой к заданиям. Все часы изучения распределены там; повторное чтение и полные книги отдельно не прибавляются.",
+        "en": "Follow the task-linked sources and units in What to read now. All learning hours are allocated there; do not add repeated reading or full books."
       },
       "base": 99,
       "track": "core",
@@ -537,8 +537,8 @@
         {
           "id": "M09-C",
           "title": {
-            "ru": "Связанные звенья: квазистатика против динамики",
-            "en": "Coupled links: quasi-static versus dynamic loads"
+            "ru": "Своя двухзвенная модель: энергия, состояние и библиотечный эталон",
+            "en": "Own two-link model: energy, state and library reference"
           },
           "learn": 6,
           "build": 7,
@@ -548,8 +548,8 @@
             "M09 pp5–6,10"
           ],
           "result": {
-            "ru": "Готовая независимая библиотека динамики короткой цепи позволяет сравнить статический режим и траекторию с ускорением; показано, когда квазистатическое приближение перестаёт быть применимым.",
-            "en": "An existing independent dynamics library compares static and accelerated short-chain trajectories, showing where the slow-motion approximation fails."
+            "ru": "Для одной плоской 2R-цепи самостоятельно получены T и U, уравнения и M/C/g; заданы состояние, равновесие и локальная линеаризация. Энергия, знаки и единицы проверены; готовая библиотека служит независимым эталоном. Квазистатика сопоставлена с движением при ускорении.",
+            "en": "Independently derive T/U, equations and M/C/g for one planar 2R chain; define state, equilibrium and local linearization. Check energy, signs and units against an independent library; compare quasistatics with accelerated motion."
           },
           "phase": "dynamics_after_leg",
           "refs": [
@@ -695,8 +695,8 @@
             "M10 pp3–4,9"
           ],
           "result": {
-            "ru": "Базовый PID/PD, при необходимости с упреждающим воздействием; насыщение, защита от интегрального насыщения и измеримые критерии качества. Для интеллектуального сервопривода собственная низкоуровневая прошивка двигателя не обязательна.",
-            "en": "A baseline PID/PD uses feedforward if justified, saturation, anti-windup and measurable quality criteria; a smart servo does not require custom motor firmware."
+            "ru": "Базовый PID/PD, при необходимости с упреждающим воздействием; насыщение, защита от интегрального насыщения и измеримые критерии качества. Для интеллектуального сервопривода собственная низкоуровневая прошивка двигателя не обязательна. По модели D2 объяснены состояние, полюса и границы локального вывода устойчивости.",
+            "en": "A baseline PID/PD uses feedforward if justified, saturation, anti-windup and measurable quality criteria; a smart servo does not require custom motor firmware. Explain state, poles and the limits of local stability conclusions using the D2 model."
           },
           "refs": [
             "M10 pp3–4,9"
@@ -842,8 +842,8 @@
         "en": "The measured loop meets predefined criteria and handles stale data/limits predictably; evidence before physical body testing remains model-based."
       },
       "core_reading": {
-        "ru": "Исходный M10, pp3–7: PID/упреждающее воздействие, насыщение/защита от интегрального насыщения, Ts/задержки и внешний контур крена и тангажа; pp11–14 — устаревшие данные, насыщение и восстановление. Частотную терминологию понять; полный эксперимент по диаграммам Боде и запасам устойчивости читать при выборе D_FREQ.",
-        "en": "Original M10 pp3–7: PID/feedforward, saturation/anti-windup, Ts/delay and outer roll/pitch control; pp11–14 cover stale data, saturation and recovery. Understand frequency terminology; assign the full Bode/margins experiment only with D_FREQ."
+        "ru": "Сначала источники и блоки «Что читать сейчас» с привязкой к заданиям. Все часы изучения распределены там; повторное чтение и полные книги отдельно не прибавляются.",
+        "en": "Follow the task-linked sources and units in What to read now. All learning hours are allocated there; do not add repeated reading or full books."
       },
       "base": 94,
       "track": "core",
@@ -888,8 +888,8 @@
         {
           "id": "M11-B",
           "title": {
-            "ru": "Один пригодный фильтр крена и тангажа",
-            "en": "One suitable roll/pitch filter"
+            "ru": "Fusion без магнитометра: оценка крена и тангажа",
+            "en": "No-magnetometer Fusion: roll and pitch estimation"
           },
           "learn": 8,
           "build": 10,
@@ -900,8 +900,8 @@
             "M19 pp3–4"
           ],
           "result": {
-            "ru": "Готовый комплементарный фильтр или AHRS объединяет показания гироскопа и акселерометра. Понятны смещение, дрейф, коэффициент усиления и ограничения при линейном ускорении. Собственный EKF не обязателен.",
-            "en": "A complementary/AHRS solution using an existing implementation fuses gyro/accelerometer; bias, drift, gain and linear-acceleration limits are understood. A custom EKF is not required."
+            "ru": "Один выбранный Fusion AHRS обрабатывает калиброванные IMU-данные; проверенная версия записана. Явный адаптер преобразует SI в град/с и g на входе библиотеки. Объяснены quaternion, интегрирование, коррекция наклона, gain, смещение и ограничения при ускорении; абсолютный курс не заявляется наблюдаемым.",
+            "en": "One selected Fusion AHRS processes calibrated IMU data with the tested version recorded. An explicit adapter converts SI to degrees/s and g at the library boundary. Explain quaternion, integration, tilt correction, gain, bias and acceleration limits; do not claim observable absolute heading."
           },
           "refs": [
             "M11 p5,task4",
@@ -946,8 +946,8 @@
             "M19 pp7,11"
           ],
           "result": {
-            "ru": "Общий интерфейс «оценка + временная метка + качество» передаёт данные в M10/M19. IMU, суставы и контакты не гарантируют наблюдаемость абсолютного положения и курса; эталонные данные отделены от входа алгоритма оценивания.",
-            "en": "One estimate+timestamp+quality interface feeds M10/M19. IMU+joints/contacts do not promise absolute position/yaw; references remain separate from estimator inputs."
+            "ru": "Общий интерфейс «оценка + временная метка + качество» передаёт данные в M10/M19. IMU, суставы и контакты не гарантируют наблюдаемость абсолютного положения и курса; эталонные данные отделены от входа алгоритма оценивания. Самостоятельно выполнен один скалярный шаг прогноза/коррекции KF с объяснением ковариации и невязки; это не второй AHRS.",
+            "en": "One estimate+timestamp+quality interface feeds M10/M19. IMU+joints/contacts do not promise absolute position/yaw; references remain separate from estimator inputs. Independently perform one scalar KF predict/update and explain covariance/innovation; this is not a second AHRS."
           },
           "refs": [
             "M11 pp3–4,8,14",
@@ -985,8 +985,8 @@
         "en": "The filter passes a predefined physical roll/pitch test, flags invalidity correctly and does not consume hidden ground truth."
       },
       "core_reading": {
-        "ru": "Исходный M11, с. 3–5: состояние и измерение, наблюдаемость, шум, смещение и ограничения оценки наклона; с. 11–13 — проверки ускорения, выбросов и пропусков. Использовать эти требования для выбранного AHRS или комплементарного фильтра; выводы KF/EKF, уравнения Риккати и QP не включать в обязательную программу.",
-        "en": "Original M11 pp3–5: state/measurement, observability, noise/bias and tilt-estimation limits; pp11–13 cover acceleration/outlier/gap checks. Apply these requirements to the chosen AHRS/complementary filter; KF/EKF/Riccati/QP derivations are not core reading."
+        "ru": "Сначала источники и блоки «Что читать сейчас» с привязкой к заданиям. Все часы изучения распределены там; повторное чтение и полные книги отдельно не прибавляются.",
+        "en": "Follow the task-linked sources and units in What to read now. All learning hours are allocated there; do not add repeated reading or full books."
       },
       "base": 60,
       "track": "core",
@@ -1191,8 +1191,8 @@
         "en": "The unconstrained-body model passes nominal/failure cases using only available controller sensors; ground truth is independent evaluation only. This permits hardware testing but does not replace it."
       },
       "core_reading": {
-        "ru": "Исходный M19, с. 3–8: качество контакта и временное согласование, автомат походки crawl и перенос веса, перенос ноги и зазор над поверхностью, свободное стояние и ограничения; с. 15 — проверка опор и реакций. M22/M23 определяют интерфейс передачи в физический проект; сами проекты отвечают за полноту физических испытаний.",
-        "en": "Original M19 pp3–8: contact quality/time alignment, crawl FSM/weight transfer, swing/clearance, free standing and bounds; p15 covers support/reaction checks. Read M22/M23 here for hardware handoff interfaces; those projects own physical acceptance."
+        "ru": "Сначала источники и блоки «Что читать сейчас» с привязкой к заданиям. Все часы изучения распределены там; повторное чтение и полные книги отдельно не прибавляются.",
+        "en": "Follow the task-linked sources and units in What to read now. All learning hours are allocated there; do not add repeated reading or full books."
       },
       "base": 136,
       "track": "hexapod",
@@ -1327,8 +1327,8 @@
         "en": "24 h: learning 9, implementation 9, verification 6. Individually reviewed nominal effort for the stated experience; new topics retain their defined learning scope. Reuse code, rigs, logs and protocols. Implementation includes routine debugging; no blanket rework percentage is added."
       },
       "core_reading": {
-        "ru": "M01: C++/владение/CMake, формат измерений и сценарии ошибок; M12 p14 и M13 p14 — только установка и готовые проверки работоспособности. Чтение включено в часы.",
-        "en": "M01: C++/ownership/CMake, measurement format and failure scenarios; M12 p14 and M13 p14 only for setup and supplied smoke tests. Reading is included."
+        "ru": "Сначала источники и блоки «Что читать сейчас» с привязкой к заданиям. Все часы изучения распределены там; повторное чтение и полные книги отдельно не прибавляются.",
+        "en": "Follow the task-linked sources and units in What to read now. All learning hours are allocated there; do not add repeated reading or full books."
       },
       "gates": [
         {
@@ -1721,8 +1721,8 @@
         "en": "84 h: learning 27, implementation 32, verification 25. Individually reviewed nominal effort for the stated experience; new topics retain their defined learning scope. Reuse code, rigs, logs and protocols. Implementation includes routine debugging; no blanket rework percentage is added."
       },
       "core_reading": {
-        "ru": "Исходный M13, с. 3–8, 14–15: эталонные физические задачи, контакт, различия SIL/PIL/HIL, ограничения часов и задача 8. Использовать одну обязательную эталонную сцену вместо набора миров.",
-        "en": "M13 pp3–8,14–15: reference physics, contact, SIL/PIL/HIL distinctions, clock limits and Task8. Use one required reference scene instead of a world collection."
+        "ru": "Сначала источники и блоки «Что читать сейчас» с привязкой к заданиям. Все часы изучения распределены там; повторное чтение и полные книги отдельно не прибавляются.",
+        "en": "Follow the task-linked sources and units in What to read now. All learning hours are allocated there; do not add repeated reading or full books."
       },
       "gates": [
         {
@@ -1754,8 +1754,8 @@
         {
           "id": "M14.1",
           "title": {
-            "ru": "Одна камера и калибровка рабочей области",
-            "en": "One camera and workspace calibration"
+            "ru": "Камера: калибровка, поза и пересечение луча с плоскостью",
+            "en": "Camera: calibration, pose and ray–plane intersection"
           },
           "learn": 8,
           "build": 8,
@@ -1765,8 +1765,8 @@
             "M14 Tasks1–2"
           ],
           "result": {
-            "ru": "Камера откалибрована, плоскость стола известна, преобразование к основанию манипулятора задано. Пиксельная и пространственная ошибки проверены на независимых позах. RGB-D используется только после проверки датчика; для известной плоскости достаточно RGB.",
-            "en": "A calibrated camera, known table plane and transform to the arm base; verify pixel and spatial error on held-out placements. Use RGB-D only with a qualified sensor; RGB suffices for a known plane."
+            "ru": "Камера закреплена; intrinsics/дисторсия определены, solvePnP по известной мишени задаёт позу относительно основания. Нормализованный луч пересекается с известной плоскостью высоты целевой точки. Ошибка проверена на независимых физических точках в миллиметрах; неизвестная высота и почти параллельный луч отклоняются.",
+            "en": "Fix the camera; calibrate intrinsics/distortion and obtain its base-relative pose with solvePnP and a known target. Intersect a normalized ray with the known target-height plane. Validate independent physical points in millimetres; reject unknown height and nearly parallel rays."
           },
           "refs": [
             "M14 Tasks1–2"
@@ -1860,8 +1860,8 @@
         "en": "50 h: learning 16, implementation 20, verification 14. Individually reviewed nominal effort for the stated experience; new topics retain their defined learning scope. Reuse code, rigs, logs and protocols. Implementation includes routine debugging; no blanket rework percentage is added."
       },
       "core_reading": {
-        "ru": "M14: геометрия и калибровка камеры, простая сегментация, системы координат, время и отказы. ICP/CNN сохранены для дальнейшего изучения; главы книг выбираются под конкретную задачу.",
-        "en": "M14: camera geometry/calibration, simple segmentation, frame/time and faults. ICP/CNN sections remain for development; read book sections relevant to the selected task."
+        "ru": "Сначала источники и блоки «Что читать сейчас» с привязкой к заданиям. Все часы изучения распределены там; повторное чтение и полные книги отдельно не прибавляются.",
+        "en": "Follow the task-linked sources and units in What to read now. All learning hours are allocated there; do not add repeated reading or full books."
       },
       "gates": [
         {
@@ -1925,8 +1925,8 @@
             "M16 sampling/planning task"
           ],
           "result": {
-            "ru": "Готовый планировщик решает ограниченную сцену; коллизии, недостижимые цели и неудачный план завершаются отказом. Один выбранный планировщик, не каталог сравнений.",
-            "en": "A ready-made planner solves a bounded scene; collisions, unreachable goals and failed plans return failure. Use one selected planner rather than a comparison catalogue."
+            "ru": "Готовый планировщик решает ограниченную сцену; коллизии, недостижимые цели и неудачный план завершаются отказом. Один выбранный планировщик, не каталог сравнений. Объяснены конфигурационное пространство и принцип одного выбранного RRT/PRM, включая пример отказа пути.",
+            "en": "A ready-made planner solves a bounded scene; collisions, unreachable goals and failed plans return failure. Use one selected planner rather than a comparison catalogue. Explain C-space and the principle of one chosen RRT/PRM, including a path-failure example."
           },
           "refs": [
             "M16 sampling/planning task"
@@ -1946,8 +1946,8 @@
             "M16 trajectory profiles task"
           ],
           "result": {
-            "ru": "Готовая временная параметризация проверяется по всем суставам и промежуточным состояниям; пределы взяты из проекта, не из красивой анимации.",
-            "en": "Check supplied time parameterization across all joints and intermediate states; use project limits rather than visually smooth animation."
+            "ru": "Готовая временная параметризация проверяется по всем суставам и промежуточным состояниям; пределы взяты из проекта, не из красивой анимации. Путь отличён от траектории; один профиль временного масштабирования проверен ручным расчётом.",
+            "en": "Check supplied time parameterization across all joints and intermediate states; use project limits rather than visually smooth animation. Distinguish path from trajectory and check one time-scaling profile by hand."
           },
           "refs": [
             "M16 trajectory profiles task"
@@ -1997,8 +1997,8 @@
         "en": "40 h: learning 12, implementation 16, verification 12. Individually reviewed nominal effort for the stated experience; new topics retain their defined learning scope. Reuse code, rigs, logs and protocols. Implementation includes routine debugging; no blanket rework percentage is added."
       },
       "core_reading": {
-        "ru": "M16: конфигурационное пространство и области столкновений, интеграция MoveIt/OMPL, ограничения траектории, обработка отказа и отмены. Главы о мобильной навигации оставлены для дальнейшего изучения.",
-        "en": "M16: configuration/collision space, MoveIt/OMPL integration, trajectory limits and failure/cancel semantics. Mobile-navigation chapters are development material."
+        "ru": "Сначала источники и блоки «Что читать сейчас» с привязкой к заданиям. Все часы изучения распределены там; повторное чтение и полные книги отдельно не прибавляются.",
+        "en": "Follow the task-linked sources and units in What to read now. All learning hours are allocated there; do not add repeated reading or full books."
       },
       "gates": [
         {
@@ -2110,8 +2110,8 @@
         "en": "16 h: learning 5, implementation 6, verification 5. Individually reviewed nominal effort for the stated experience; new topics retain their defined learning scope. Reuse code, rigs, logs and protocols. Implementation includes routine debugging; no blanket rework percentage is added."
       },
       "core_reading": {
-        "ru": "M17: позы, подход, контакт, хват/перенос, режимы оператора и отмена. Аппаратный результат проверяется по спецификации манипулятора.",
-        "en": "M17: poses, approach, contact, grasp/transfer, operator modes and cancellation. Physical outcomes are checked against the arm specification."
+        "ru": "Сначала источники и блоки «Что читать сейчас» с привязкой к заданиям. Все часы изучения распределены там; повторное чтение и полные книги отдельно не прибавляются.",
+        "en": "Follow the task-linked sources and units in What to read now. All learning hours are allocated there; do not add repeated reading or full books."
       },
       "gates": [
         {
@@ -2247,8 +2247,8 @@
         "en": "64 h: learning 22, implementation 23, verification 19. Individually reviewed nominal effort for the stated experience; new topics retain their defined learning scope. Reuse code, rigs, logs and protocols. Implementation includes routine debugging; no blanket rework percentage is added."
       },
       "core_reading": {
-        "ru": "M18: данные и утечки, логистическая регрессия, MLP, autograd, валидация, матрица ошибок, точность и полнота, калибровка вероятностей, отказ от решения и запуск на CPU. M14 предоставляет единую задачу зрения.",
-        "en": "M18: data/leakage, logistic/MLP/autograd, validation, confusion/precision/recall, calibration/abstention and CPU deployment. M14 supplies the single shared vision task."
+        "ru": "Сначала источники и блоки «Что читать сейчас» с привязкой к заданиям. Все часы изучения распределены там; повторное чтение и полные книги отдельно не прибавляются.",
+        "en": "Follow the task-linked sources and units in What to read now. All learning hours are allocated there; do not add repeated reading or full books."
       },
       "gates": [
         {
@@ -2388,8 +2388,8 @@
         "en": "16 h: learning 2, implementation 5, verification 9. Individually reviewed nominal effort for the stated experience; new topics retain their defined learning scope. Reuse code, rigs, logs and protocols. Implementation includes routine debugging; no blanket rework percentage is added."
       },
       "core_reading": {
-        "ru": "M24: прослеживаемость требований, конфигурации, воспроизводимость, ограничения и техническая защита. Протоколы физических испытаний берутся из уже закрытых проектов.",
-        "en": "M24: traceability, configuration, reproducibility, limitations and design defence. Use physical-test protocols from already-accepted projects."
+        "ru": "Сначала источники и блоки «Что читать сейчас» с привязкой к заданиям. Все часы изучения распределены там; повторное чтение и полные книги отдельно не прибавляются.",
+        "en": "Follow the task-linked sources and units in What to read now. All learning hours are allocated there; do not add repeated reading or full books."
       },
       "gates": [
         {
@@ -2548,8 +2548,8 @@
         }
       ],
       "core_reading": {
-        "ru": "Исходный M04, страницы 3–7; на странице 8 — временная цепочка и короткая проверка усиления/задержки. Паспорт выбранных низковольтных компонентов. Углублённые PSD/Welch/режекторный фильтр отложены. Чтение входит в 56 ч изучения.",
-        "en": "Original M04, pages 3–7; page 8 timing chain and a short gain/lag check. Datasheets for selected low-voltage components. Extended PSD/Welch/notch is deferred. Reading is inside 56 learning hours."
+        "ru": "Сначала источники и блоки «Что читать сейчас» с привязкой к заданиям. Все часы изучения распределены там; повторное чтение и полные книги отдельно не прибавляются.",
+        "en": "Follow the task-linked sources and units in What to read now. All learning hours are allocated there; do not add repeated reading or full books."
       },
       "base": 120,
       "track": "core",
@@ -2730,8 +2730,8 @@
         }
       ],
       "core_reading": {
-        "ru": "Исходный M05: CAD, сборки, посадки, ручная статика/прочность и физические образцы. Раздел самостоятельной FEA с тремя сетками отложен целиком. Документация одного CAD и реального материала читается по задаче; входит в 64 ч изучения.",
-        "en": "Original M05: CAD, assemblies, fits, hand statics/strength and physical coupons. Standalone three-mesh FEA is deferred completely. Read one CAD tool and actual material documentation as needed; inside 64 learning hours."
+        "ru": "Сначала источники и блоки «Что читать сейчас» с привязкой к заданиям. Все часы изучения распределены там; повторное чтение и полные книги отдельно не прибавляются.",
+        "en": "Follow the task-linked sources and units in What to read now. All learning hours are allocated there; do not add repeated reading or full books."
       },
       "base": 160,
       "track": "core",
@@ -2895,8 +2895,8 @@
         }
       ],
       "core_reading": {
-        "ru": "Исходный M06: все 12 задач и F1–F10. Только выбранные GPIO/PWM/ADC, API транспорта и датчика, основы прерываний, FreeRTOS и сторожевого таймера, параметры реального IMU. Не изучать пять шин как пять проектов. Чтение входит в 38 ч изучения.",
-        "en": "Original M06, all 12 tasks and F1–F10. Selected GPIO/PWM/ADC, transport/sensor APIs, basic ISR/FreeRTOS/watchdog and the actual IMU settings. Do not treat five buses as five projects. Reading is inside 38 learning hours."
+        "ru": "Сначала источники и блоки «Что читать сейчас» с привязкой к заданиям. Все часы изучения распределены там; повторное чтение и полные книги отдельно не прибавляются.",
+        "en": "Follow the task-linked sources and units in What to read now. All learning hours are allocated there; do not add repeated reading or full books."
       },
       "base": 120,
       "track": "core",
@@ -3065,8 +3065,8 @@
         }
       ],
       "core_reading": {
-        "ru": "Исходный M07: требования и сравнение, оснастка и калибровки, ограниченное управление, люфт и тепловой опыт; паспорта реальных привода, драйвера и питания. Частотная развёртка, полная подгонка модели и модельные F9/F10 отложены. Чтение входит в 34 ч изучения. В начале A1 — вводный блок «Шестерёнки и редукторы»: Modern Robotics §8.9, схемы KHK и анимация Harmonic Drive; 3 ч изучения уже внутри 11 ч A1.",
-        "en": "Original M07: requirements/comparison, fixture/calibration, bounded control, backlash and thermal trial; actual drive/driver/supply datasheets. Chirp, full fitting and model F9/F10 are deferred. Reading is inside 34 learning hours. Begin A1 with the Gears and gearboxes introduction: Modern Robotics §8.9, KHK diagrams and Harmonic Drive animation; 3 h learning already within A1’s 11 h."
+        "ru": "Сначала источники и блоки «Что читать сейчас» с привязкой к заданиям. Все часы изучения распределены там; повторное чтение и полные книги отдельно не прибавляются.",
+        "en": "Follow the task-linked sources and units in What to read now. All learning hours are allocated there; do not add repeated reading or full books."
       },
       "base": 104,
       "track": "core",
@@ -3385,6 +3385,10 @@
       "hour_review": {
         "reviewed_on": "2026-11-11",
         "report": "task-hour-review.json"
+      },
+      "core_reading": {
+        "ru": "Сначала источники и блоки «Что читать сейчас» с привязкой к заданиям. Все часы изучения распределены там; повторное чтение и полные книги отдельно не прибавляются.",
+        "en": "Follow the task-linked sources and units in What to read now. All learning hours are allocated there; do not add repeated reading or full books."
       }
     },
     "M22": {
@@ -3527,6 +3531,10 @@
       "hour_review": {
         "reviewed_on": "2026-11-11",
         "report": "task-hour-review.json"
+      },
+      "core_reading": {
+        "ru": "Сначала источники и блоки «Что читать сейчас» с привязкой к заданиям. Все часы изучения распределены там; повторное чтение и полные книги отдельно не прибавляются.",
+        "en": "Follow the task-linked sources and units in What to read now. All learning hours are allocated there; do not add repeated reading or full books."
       }
     },
     "M23": {
@@ -3665,6 +3673,10 @@
       "hour_review": {
         "reviewed_on": "2026-11-11",
         "report": "task-hour-review.json"
+      },
+      "core_reading": {
+        "ru": "Сначала источники и блоки «Что читать сейчас» с привязкой к заданиям. Все часы изучения распределены там; повторное чтение и полные книги отдельно не прибавляются.",
+        "en": "Follow the task-linked sources and units in What to read now. All learning hours are allocated there; do not add repeated reading or full books."
       }
     },
     "ARM": {
@@ -3997,8 +4009,8 @@
             "T06"
           ],
           "result": {
-            "ru": "Геометрическая калибровка, гистерезис/взаимовлияние и 30 с удержания формы проверены внешним измерением.",
-            "en": "Geometric calibration, hysteresis/coupling and 30 s shape holding verified externally."
+            "ru": "Геометрическая калибровка, гистерезис/взаимовлияние и 30 с удержания формы проверены внешним измерением. Сохранены раздельные кривые тяги/отпускания, нагрузка и предыстория; простая модель проверена независимой серией по протоколу learning-guides.md.",
+            "en": "Geometric calibration, hysteresis/coupling and 30 s shape holding verified externally. Retain separate pull/release curves, loading and history; validate a simple model with a held-out run using the learning-guides.md protocol."
           }
         },
         {
@@ -4314,6 +4326,10 @@
       "hour_review": {
         "reviewed_on": "2026-11-11",
         "report": "task-hour-review.json"
+      },
+      "core_reading": {
+        "ru": "Сначала источники и блоки «Что читать сейчас» с привязкой к заданиям. Все часы изучения распределены там; повторное чтение и полные книги отдельно не прибавляются.",
+        "en": "Follow the task-linked sources and units in What to read now. All learning hours are allocated there; do not add repeated reading or full books."
       }
     },
     "A2": {
@@ -4390,6 +4406,10 @@
       "hour_review": {
         "reviewed_on": "2026-11-11",
         "report": "task-hour-review.json"
+      },
+      "core_reading": {
+        "ru": "Сначала источники и блоки «Что читать сейчас» с привязкой к заданиям. Все часы изучения распределены там; повторное чтение и полные книги отдельно не прибавляются.",
+        "en": "Follow the task-linked sources and units in What to read now. All learning hours are allocated there; do not add repeated reading or full books."
       }
     },
     "A3": {
@@ -4466,6 +4486,10 @@
       "hour_review": {
         "reviewed_on": "2026-11-11",
         "report": "task-hour-review.json"
+      },
+      "core_reading": {
+        "ru": "Сначала источники и блоки «Что читать сейчас» с привязкой к заданиям. Все часы изучения распределены там; повторное чтение и полные книги отдельно не прибавляются.",
+        "en": "Follow the task-linked sources and units in What to read now. All learning hours are allocated there; do not add repeated reading or full books."
       }
     },
     "T1": {
@@ -4542,6 +4566,10 @@
       "hour_review": {
         "reviewed_on": "2026-11-11",
         "report": "task-hour-review.json"
+      },
+      "core_reading": {
+        "ru": "Сначала источники и блоки «Что читать сейчас» с привязкой к заданиям. Все часы изучения распределены там; повторное чтение и полные книги отдельно не прибавляются.",
+        "en": "Follow the task-linked sources and units in What to read now. All learning hours are allocated there; do not add repeated reading or full books."
       }
     },
     "T2": {
@@ -4602,8 +4630,8 @@
             "T06"
           ],
           "result": {
-            "ru": "Геометрическая калибровка, гистерезис/взаимовлияние и 30 с удержания формы проверены внешним измерением.",
-            "en": "Geometric calibration, hysteresis/coupling and 30 s shape holding verified externally."
+            "ru": "Геометрическая калибровка, гистерезис/взаимовлияние и 30 с удержания формы проверены внешним измерением. Сохранены раздельные кривые тяги/отпускания, нагрузка и предыстория; простая модель проверена независимой серией по протоколу learning-guides.md.",
+            "en": "Geometric calibration, hysteresis/coupling and 30 s shape holding verified externally. Retain separate pull/release curves, loading and history; validate a simple model with a held-out run using the learning-guides.md protocol."
           }
         }
       ],
@@ -4622,6 +4650,10 @@
       "hour_review": {
         "reviewed_on": "2026-11-11",
         "report": "task-hour-review.json"
+      },
+      "core_reading": {
+        "ru": "Сначала источники и блоки «Что читать сейчас» с привязкой к заданиям. Все часы изучения распределены там; повторное чтение и полные книги отдельно не прибавляются.",
+        "en": "Follow the task-linked sources and units in What to read now. All learning hours are allocated there; do not add repeated reading or full books."
       }
     },
     "T3": {
@@ -4681,6 +4713,10 @@
       "hour_review": {
         "reviewed_on": "2026-11-11",
         "report": "task-hour-review.json"
+      },
+      "core_reading": {
+        "ru": "Сначала источники и блоки «Что читать сейчас» с привязкой к заданиям. Все часы изучения распределены там; повторное чтение и полные книги отдельно не прибавляются.",
+        "en": "Follow the task-linked sources and units in What to read now. All learning hours are allocated there; do not add repeated reading or full books."
       }
     },
     "D1": {
@@ -4759,6 +4795,10 @@
       "hour_review": {
         "reviewed_on": "2026-11-11",
         "report": "task-hour-review.json"
+      },
+      "core_reading": {
+        "ru": "Сначала источники и блоки «Что читать сейчас» с привязкой к заданиям. Все часы изучения распределены там; повторное чтение и полные книги отдельно не прибавляются.",
+        "en": "Follow the task-linked sources and units in What to read now. All learning hours are allocated there; do not add repeated reading or full books."
       }
     },
     "D2": {
@@ -4795,8 +4835,8 @@
         {
           "id": "M09-C",
           "title": {
-            "ru": "Связанные звенья: квазистатика против динамики",
-            "en": "Coupled links: quasi-static versus dynamic loads"
+            "ru": "Своя двухзвенная модель: энергия, состояние и библиотечный эталон",
+            "en": "Own two-link model: energy, state and library reference"
           },
           "learn": 6,
           "build": 5,
@@ -4806,8 +4846,8 @@
             "M09 pp5–6,10"
           ],
           "result": {
-            "ru": "Готовая независимая библиотека динамики короткой цепи позволяет сравнить статический режим и траекторию с ускорением; показано, когда квазистатическое приближение перестаёт быть применимым.",
-            "en": "An existing independent dynamics library compares static and accelerated short-chain trajectories, showing where the slow-motion approximation fails."
+            "ru": "Для одной плоской 2R-цепи самостоятельно получены T и U, уравнения и M/C/g; заданы состояние, равновесие и локальная линеаризация. Энергия, знаки и единицы проверены; готовая библиотека служит независимым эталоном. Квазистатика сопоставлена с движением при ускорении.",
+            "en": "Independently derive T/U, equations and M/C/g for one planar 2R chain; define state, equilibrium and local linearization. Check energy, signs and units against an independent library; compare quasistatics with accelerated motion."
           },
           "phase": "dynamics_after_leg",
           "refs": [
@@ -4857,6 +4897,10 @@
       "hour_review": {
         "reviewed_on": "2026-11-11",
         "report": "task-hour-review.json"
+      },
+      "core_reading": {
+        "ru": "Сначала источники и блоки «Что читать сейчас» с привязкой к заданиям. Все часы изучения распределены там; повторное чтение и полные книги отдельно не прибавляются.",
+        "en": "Follow the task-linked sources and units in What to read now. All learning hours are allocated there; do not add repeated reading or full books."
       }
     },
     "S1": {
@@ -4948,8 +4992,8 @@
         }
       ],
       "core_reading": {
-        "ru": "M12 pp3–4, 6–7: граф, стандартные интерфейсы, QoS, rosbag, единицы и время. Полные лаборатории сравнения исполнителей ROS пока не нужны.",
-        "en": "M12 pp3–4,6–7: graph, standard interfaces, QoS, bag, units and time. Full executor-comparison labs are deferred."
+        "ru": "Сначала источники и блоки «Что читать сейчас» с привязкой к заданиям. Все часы изучения распределены там; повторное чтение и полные книги отдельно не прибавляются.",
+        "en": "Follow the task-linked sources and units in What to read now. All learning hours are allocated there; do not add repeated reading or full books."
       },
       "kept": {
         "ru": "ROS появляется до глубокой динамики, LQR/QP и сборки всей платформы.",
@@ -5060,8 +5104,8 @@
         }
       ],
       "core_reading": {
-        "ru": "M12 pp5–8: TF, URDF, реальные интерфейсы состояния и команд, жизненный цикл, время, диагностика и отрицательные сценарии.",
-        "en": "M12 pp5–8: TF, URDF, actual state/command interfaces, lifecycle, time, diagnostics and negative scenarios."
+        "ru": "Сначала источники и блоки «Что читать сейчас» с привязкой к заданиям. Все часы изучения распределены там; повторное чтение и полные книги отдельно не прибавляются.",
+        "en": "Follow the task-linked sources and units in What to read now. All learning hours are allocated there; do not add repeated reading or full books."
       },
       "kept": {
         "ru": "TF/URDF, реальная обратная связь и жизненный цикл аппаратного интерфейса, выполнение в заданных пределах и важные отказы.",
@@ -5787,8 +5831,8 @@
             {
               "id": "M09-C",
               "title": {
-                "ru": "Связанные звенья: квазистатика против динамики",
-                "en": "Coupled links: quasi-static versus dynamic loads"
+                "ru": "Своя двухзвенная модель: энергия, состояние и библиотечный эталон",
+                "en": "Own two-link model: energy, state and library reference"
               },
               "learn": 6,
               "build": 7,
@@ -5798,8 +5842,8 @@
                 "M09 pp5–6,10"
               ],
               "result": {
-                "ru": "Готовая независимая библиотека динамики короткой цепи позволяет сравнить статический режим и траекторию с ускорением; показано, когда квазистатическое приближение перестаёт быть применимым.",
-                "en": "An existing independent dynamics library compares static and accelerated short-chain trajectories, showing where the slow-motion approximation fails."
+                "ru": "Для одной плоской 2R-цепи самостоятельно получены T и U, уравнения и M/C/g; заданы состояние, равновесие и локальная линеаризация. Энергия, знаки и единицы проверены; готовая библиотека служит независимым эталоном. Квазистатика сопоставлена с движением при ускорении.",
+                "en": "Independently derive T/U, equations and M/C/g for one planar 2R chain; define state, equilibrium and local linearization. Check energy, signs and units against an independent library; compare quasistatics with accelerated motion."
               },
               "phase": "dynamics_after_leg"
             },
@@ -5931,8 +5975,8 @@
                 "M10 pp3–4,9"
               ],
               "result": {
-                "ru": "Базовый PID/PD, при необходимости с упреждающим воздействием; насыщение, защита от интегрального насыщения и измеримые критерии качества. Для интеллектуального сервопривода собственная низкоуровневая прошивка двигателя не обязательна.",
-                "en": "A baseline PID/PD uses feedforward if justified, saturation, anti-windup and measurable quality criteria; a smart servo does not require custom motor firmware."
+                "ru": "Базовый PID/PD, при необходимости с упреждающим воздействием; насыщение, защита от интегрального насыщения и измеримые критерии качества. Для интеллектуального сервопривода собственная низкоуровневая прошивка двигателя не обязательна. По модели D2 объяснены состояние, полюса и границы локального вывода устойчивости.",
+                "en": "A baseline PID/PD uses feedforward if justified, saturation, anti-windup and measurable quality criteria; a smart servo does not require custom motor firmware. Explain state, poles and the limits of local stability conclusions using the D2 model."
               },
               "refs": [
                 "M10 pp3–4,9"
@@ -6111,8 +6155,8 @@
             {
               "id": "M11-B",
               "title": {
-                "ru": "Один пригодный фильтр крена и тангажа",
-                "en": "One suitable roll/pitch filter"
+                "ru": "Fusion без магнитометра: оценка крена и тангажа",
+                "en": "No-magnetometer Fusion: roll and pitch estimation"
               },
               "learn": 7,
               "build": 9,
@@ -6123,8 +6167,8 @@
                 "M19 pp3–4"
               ],
               "result": {
-                "ru": "Готовый комплементарный фильтр или AHRS объединяет показания гироскопа и акселерометра. Понятны смещение, дрейф, коэффициент усиления и ограничения при линейном ускорении. Собственный EKF не обязателен.",
-                "en": "A complementary/AHRS solution using an existing implementation fuses gyro/accelerometer; bias, drift, gain and linear-acceleration limits are understood. A custom EKF is not required."
+                "ru": "Один выбранный Fusion AHRS обрабатывает калиброванные IMU-данные; проверенная версия записана. Явный адаптер преобразует SI в град/с и g на входе библиотеки. Объяснены quaternion, интегрирование, коррекция наклона, gain, смещение и ограничения при ускорении; абсолютный курс не заявляется наблюдаемым.",
+                "en": "One selected Fusion AHRS processes calibrated IMU data with the tested version recorded. An explicit adapter converts SI to degrees/s and g at the library boundary. Explain quaternion, integration, tilt correction, gain, bias and acceleration limits; do not claim observable absolute heading."
               }
             },
             {
@@ -6161,8 +6205,8 @@
                 "M19 pp7,11"
               ],
               "result": {
-                "ru": "Общий интерфейс «оценка + временная метка + качество» передаёт данные в M10/M19. IMU, суставы и контакты не гарантируют наблюдаемость абсолютного положения и курса; эталонные данные отделены от входа алгоритма оценивания.",
-                "en": "One estimate+timestamp+quality interface feeds M10/M19. IMU+joints/contacts do not promise absolute position/yaw; references remain separate from estimator inputs."
+                "ru": "Общий интерфейс «оценка + временная метка + качество» передаёт данные в M10/M19. IMU, суставы и контакты не гарантируют наблюдаемость абсолютного положения и курса; эталонные данные отделены от входа алгоритма оценивания. Самостоятельно выполнен один скалярный шаг прогноза/коррекции KF с объяснением ковариации и невязки; это не второй AHRS.",
+                "en": "One estimate+timestamp+quality interface feeds M10/M19. IMU+joints/contacts do not promise absolute position/yaw; references remain separate from estimator inputs. Independently perform one scalar KF predict/update and explain covariance/innovation; this is not a second AHRS."
               }
             }
           ],
@@ -8615,8 +8659,8 @@
             {
               "id": "M14.1",
               "title": {
-                "ru": "Одна камера и калибровка рабочей области",
-                "en": "One camera and workspace calibration"
+                "ru": "Камера: калибровка, поза и пересечение луча с плоскостью",
+                "en": "Camera: calibration, pose and ray–plane intersection"
               },
               "learn": 8,
               "build": 8,
@@ -8626,8 +8670,8 @@
                 "M14 Tasks1–2"
               ],
               "result": {
-                "ru": "Камера откалибрована, плоскость стола известна, преобразование к основанию манипулятора задано. Пиксельная и пространственная ошибки проверены на независимых позах. RGB-D используется только после проверки датчика; для известной плоскости достаточно RGB.",
-                "en": "A calibrated camera, known table plane and transform to the arm base; verify pixel and spatial error on held-out placements. Use RGB-D only with a qualified sensor; RGB suffices for a known plane."
+                "ru": "Камера закреплена; intrinsics/дисторсия определены, solvePnP по известной мишени задаёт позу относительно основания. Нормализованный луч пересекается с известной плоскостью высоты целевой точки. Ошибка проверена на независимых физических точках в миллиметрах; неизвестная высота и почти параллельный луч отклоняются.",
+                "en": "Fix the camera; calibrate intrinsics/distortion and obtain its base-relative pose with solvePnP and a known target. Intersect a normalized ray with the known target-height plane. Validate independent physical points in millimetres; reject unknown height and nearly parallel rays."
               }
             },
             {
@@ -8761,8 +8805,8 @@
                 "M16 sampling/planning task"
               ],
               "result": {
-                "ru": "Готовый планировщик решает ограниченную сцену; коллизии, недостижимые цели и неудачный план завершаются отказом. Один выбранный планировщик, не каталог сравнений.",
-                "en": "A ready-made planner solves a bounded scene; collisions, unreachable goals and failed plans return failure. Use one selected planner rather than a comparison catalogue."
+                "ru": "Готовый планировщик решает ограниченную сцену; коллизии, недостижимые цели и неудачный план завершаются отказом. Один выбранный планировщик, не каталог сравнений. Объяснены конфигурационное пространство и принцип одного выбранного RRT/PRM, включая пример отказа пути.",
+                "en": "A ready-made planner solves a bounded scene; collisions, unreachable goals and failed plans return failure. Use one selected planner rather than a comparison catalogue. Explain C-space and the principle of one chosen RRT/PRM, including a path-failure example."
               }
             },
             {
@@ -8779,8 +8823,8 @@
                 "M16 trajectory profiles task"
               ],
               "result": {
-                "ru": "Готовая временная параметризация проверяется по всем суставам и промежуточным состояниям; пределы взяты из проекта, не из красивой анимации.",
-                "en": "Check supplied time parameterization across all joints and intermediate states; use project limits rather than visually smooth animation."
+                "ru": "Готовая временная параметризация проверяется по всем суставам и промежуточным состояниям; пределы взяты из проекта, не из красивой анимации. Путь отличён от траектории; один профиль временного масштабирования проверен ручным расчётом.",
+                "en": "Check supplied time parameterization across all joints and intermediate states; use project limits rather than visually smooth animation. Distinguish path from trajectory and check one time-scaling profile by hand."
               }
             },
             {
@@ -12474,8 +12518,8 @@
                 "TAIL.T06"
               ],
               "result": {
-                "ru": "Геометрическая калибровка, гистерезис/взаимовлияние и 30 с удержания формы проверены внешним измерением.",
-                "en": "Geometric calibration, hysteresis/coupling and 30 s shape holding verified externally."
+                "ru": "Геометрическая калибровка, гистерезис/взаимовлияние и 30 с удержания формы проверены внешним измерением. Сохранены раздельные кривые тяги/отпускания, нагрузка и предыстория; простая модель проверена независимой серией по протоколу learning-guides.md.",
+                "en": "Geometric calibration, hysteresis/coupling and 30 s shape holding verified externally. Retain separate pull/release curves, loading and history; validate a simple model with a held-out run using the learning-guides.md protocol."
               },
               "required_prerequisites": [
                 "TAIL.T05"
@@ -15250,5 +15294,21 @@
     "new_learning_floor_source": "156da32:estimate.json",
     "unpredictable_rework_percentage": 0
   },
-  "reports_scope": "Math/software/hardware reports preserve earlier scope mappings and dependency provenance. Active hours are estimate.items task sums, reviewed in task-hour-review.json."
+  "reports_scope": "Math/software/hardware reports preserve earlier scope mappings and dependency provenance. Active hours are estimate.items task sums, reviewed in task-hour-review.json.",
+  "materials_revision": {
+    "updated_on": "2026-11-11",
+    "learning_path": "learning-path.json",
+    "notes": "learning-guides.md",
+    "hours_changed": false,
+    "closed_gaps": [
+      "imu",
+      "metric-vision",
+      "robustness",
+      "contact",
+      "qp",
+      "multilegged-gaits",
+      "tendon-friction",
+      "connected-foundations"
+    ]
+  }
 }
