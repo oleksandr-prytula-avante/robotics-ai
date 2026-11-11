@@ -1,5 +1,5 @@
 {
-  "version": "4.7",
+  "version": "4.8",
   "checked_on": "2026-09-19",
   "references": [
     {
@@ -2789,8 +2789,8 @@
             "en": "Diagnostic, environment and early ROS/Gazebo preflight"
           },
           "mastery_check": {
-            "ru": "Зафиксированы Ubuntu 24.04 ARM64, компилятор, RMW и версии Jazzy/Harmonic; готовые talker/listener, RViz, сцена тележки и сцена датчика имеют результат PASS/HOLD. Шесть часов — применение знакомых Linux/Git и готовых команд установки, без повторного вводного курса.",
-            "en": "Record Ubuntu 24.04 ARM64, compiler, RMW and Jazzy/Harmonic versions; supplied talker/listener, RViz, cart and sensor scenes have PASS/HOLD results. Six hours apply existing Linux/Git skills and supplied installation commands without repeating an introductory course."
+            "ru": "Зафиксированы Ubuntu 24.04 ARM64, компилятор, RMW и версии Jazzy/Harmonic; готовые talker/listener, RViz, сцена тележки и сцена датчика имеют результат PASS/HOLD. Четыре часа — применение знакомых Linux/Git и готовых команд установки, без повторного вводного курса; ознакомление с планом 2 января проводится отдельно.",
+            "en": "Record Ubuntu 24.04 ARM64, compiler, RMW and Jazzy/Harmonic versions; supplied talker/listener, RViz, cart and sensor scenes have PASS/HOLD results. Four hours apply existing Linux/Git skills and installation commands; 2 January orientation is separate."
           }
         },
         {

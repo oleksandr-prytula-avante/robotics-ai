@@ -19,7 +19,7 @@ def read_json(name):
 
 def daily_capacity(day):
     """Exact minutes: eight hours twenty minutes, Monday through Saturday."""
-    days_off = {date(2028, 12, 31)}
+    days_off = set()
     return 500 if day.weekday() < 6 and day not in days_off else 0
 
 
@@ -121,7 +121,7 @@ class ContentTests(unittest.TestCase):
         flattened = []
         for stage, item in self.items.items():
             with self.subTest(stage=stage):
-                self.assertEqual(item['hours'], sum(task['hours'] for task in item['tasks']))
+                self.assertEqual(round(item['hours']*60), sum(round(task['hours']*60) for task in item['tasks']))
                 self.assertEqual(item['segments'],
                                  [part for task in item['tasks'] for part in task['segments']])
                 for index, task in enumerate(item['tasks']):
@@ -133,7 +133,7 @@ class ContentTests(unittest.TestCase):
                         self.assertEqual((part['item'], part['task']), (stage, index))
                         self.assertGreater(part['hours'], 0)
                     if item['track'] not in {'reserve', 'capacity'}:
-                        self.assertEqual(task['hours'], sum(task[key] for key in CATEGORIES))
+                        self.assertEqual(round(task['hours']*60), sum(round(task[key]*60) for key in CATEGORIES))
                     else:
                         self.assertEqual(sum(task[key] for key in CATEGORIES), 0)
                 totals[item['track']] += item['hours']
@@ -141,10 +141,10 @@ class ContentTests(unittest.TestCase):
         schedule = self.schedule
         self.assertEqual(flattened, schedule['segments'])
         core = sum(value for key, value in totals.items() if key not in {'reserve', 'capacity'})
-        self.assertEqual(core, schedule['base_hours'])
+        self.assertEqual(round(core*60), round(schedule['base_hours']*60))
         self.assertEqual(totals['reserve'], schedule['contingency_hours'])
         self.assertEqual(totals['capacity'], schedule['unallocated_hours'])
-        self.assertEqual(core + totals['reserve'], schedule['allocated_hours'])
+        self.assertEqual(round((core + totals['reserve'])*60), schedule['allocated_minutes'])
         self.assertEqual(sum(round(value * 60) for value in totals.values()), schedule['calendar_capacity_minutes'])
 
     def test_calendar_has_no_gaps_overlaps_or_excess_daily_hours(self):
@@ -173,7 +173,7 @@ class ContentTests(unittest.TestCase):
             day += timedelta(days=1)
         self.assertEqual(sum(capacities.values()), schedule['calendar_capacity_minutes'])
         self.assertEqual(schedule['calendar_finish'], max(part['date'] for part in schedule['segments']))
-        self.assertEqual(schedule['excluded_dates'], ['2028-12-31'])
+        self.assertEqual(schedule['excluded_dates'], [])
         self.assertEqual(schedule['work_finish'], max(
             part['date'] for part in schedule['segments'] if part['item'] != 'CAP'))
         self.assertEqual(schedule['weeks'], (end - date.fromisoformat(schedule['week_start'])).days // 7 + 1)
@@ -188,13 +188,42 @@ class ContentTests(unittest.TestCase):
 
     def test_completion_and_buffer_are_separate(self):
         schedule = self.schedule
-        self.assertEqual(schedule['start'], '2028-01-02')
-        self.assertEqual(schedule['work_finish'], '2028-12-30')
-        self.assertEqual(schedule['deadline'], '2028-12-31')
+        self.assertEqual(schedule['start'], '2027-01-04')
+        self.assertEqual(schedule['work_finish'], '2027-12-31')
+        self.assertEqual(schedule['deadline'], '2027-12-31')
         self.assertEqual(schedule['buffer_minutes'], 0)
-        self.assertEqual(schedule['allocated_minutes'], 2600 * 60)
+        self.assertEqual(schedule['allocated_minutes'], 155500)
+        self.assertEqual(schedule['orientation']['date'],'2027-01-02')
+        self.assertFalse(schedule['orientation']['counts_toward_core_hours'])
+        self.assertEqual(date.fromisoformat(schedule['start']).weekday(),0)
+        self.assertEqual(schedule['weekly_hours'],50)
+        self.assertEqual(schedule['full_weeks'],51)
+        self.assertEqual(schedule['first_partial_week_minutes'],0)
+        self.assertEqual(schedule['final_partial_week_minutes'],2500)
+        self.assertTrue(all(p['date'] >= '2027-01-04' for p in schedule['segments']))
         self.assertFalse(any(item['track'] == 'reserve' for item in schedule['items']))
         self.assertFalse(any(part['item'] == 'CAP' for part in schedule['segments']))
+
+    def test_2027_adjustment_changes_only_familiar_work(self):
+        adjustment = read_json('calendar-adjustment.json')
+        config = read_json('calendar-config.json')
+        self.assertEqual(config['start'],self.schedule['start'])
+        self.assertEqual(config['deadline'],self.schedule['deadline'])
+        self.assertEqual(config['orientation'],self.schedule['orientation'])
+        self.assertEqual(adjustment['after_minutes'],self.schedule['allocated_minutes'])
+        self.assertEqual(adjustment['before_minutes']-adjustment['after_minutes'],500)
+        self.assertEqual(sum(row['removed_minutes'] for row in adjustment['changes']),500)
+        self.assertEqual(len(adjustment['changes']),7)
+        for row in adjustment['changes']:
+            stage,index = row['task'].rsplit('.',1)
+            self.assertIn(stage,{'M01','M24'})
+            task = self.items[stage]['tasks'][int(index)-1]
+            self.assertEqual(row['after_minutes'],{c:round(task[c]*60) for c in CATEGORIES})
+            self.assertEqual(row['before_minutes']['learn'],row['after_minutes']['learn'])
+        self.assertEqual(sum(round(t['learn']*60) for i in self.items.values() for t in i['tasks']),701*60)
+        january = (ROOT / 'months/2027-01.html').read_text()
+        self.assertIn('id="orientation"',january)
+        self.assertIn('2 января — ознакомление с планом',january)
 
     def test_individual_review_covers_every_task_and_preserves_new_learning(self):
         report = read_json('task-hour-review.json')
@@ -214,8 +243,8 @@ class ContentTests(unittest.TestCase):
                     self.assertGreaterEqual(task['learn'], row['pre_compression_learn'])
         self.assertNotIn('timeline_compression', self.estimate)
         self.assertEqual(report['base_hours'], self.schedule['base_hours'])
-        self.assertEqual(report['category_hours'], {
-            c: sum(task[c] for task in expected.values()) for c in CATEGORIES})
+        self.assertEqual({c:round(report['category_hours'][c]*60) for c in CATEGORIES}, {
+            c: sum(round(task[c]*60) for task in expected.values()) for c in CATEGORIES})
         for stage, item in self.items.items():
             for category in CATEGORIES:
                 self.assertEqual(self.estimate['items'][stage][category],
@@ -237,8 +266,10 @@ class ContentTests(unittest.TestCase):
         for stage, item in self.items.items():
             block = re.search(r'<section\b[^>]*id="'+re.escape(stage)+r'".*?</section>', source, re.S)
             self.assertIsNotNone(block, stage)
-            self.assertIn(f'{item["hours"]} h · {date.fromisoformat(item["start"]):%d.%m.%Y}', block[0])
-        for path in [ROOT / 'method.html', ROOT / 'index.html', *ROOT.glob('months/2028-*.html')]:
+            h,m = divmod(round(item['hours']*60),60)
+            value = str(h) if not m else f'{h}:{m:02}'
+            self.assertIn(f'{value} h · {date.fromisoformat(item["start"]):%d.%m.%Y}', block[0])
+        for path in [ROOT / 'method.html', ROOT / 'index.html', *ROOT.glob('months/2027-*.html')]:
             text = path.read_text()
             self.assertNotIn('120 ч чтения и целевого изучения сняты', text, path.name)
 

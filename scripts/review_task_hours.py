@@ -6,7 +6,9 @@ The pre-compression comparison is stored in task-hour-review.json on first use.
 import copy
 import json
 import re
+from fractions import Fraction
 from pathlib import Path
+from calendar_settings import VERSION, START, DEADLINE, capacity_minutes, as_hours
 
 ROOT = Path(__file__).resolve().parents[1]
 REVIEWED_ON = '2026-11-11'
@@ -15,10 +17,10 @@ REVIEWED_ON = '2026-11-11'
 # reused infrastructure and reviews of evidence already produced by experiments.
 REVIEW = {
     'M01': [
-        ('1/3/2', 'Готовые команды установки и smoke-тесты; Linux/Git и организация среды уже знакомы.'),
+        ('1/2/1', 'Готовые команды установки и smoke-тесты; знакомые Linux/Git и среда. В 2027 году подготовка и сверка сокращены на 2 ч, новый C++ не затронут.'),
         ('6/4/2', 'Шесть часов нового C++ сохранены; один небольшой компонент вместо учебного приложения.'),
-        ('1/1/1', 'Python/графики знакомы; изучаются только физические единицы и контракт данных.'),
-        ('1/1/1', 'Обработка записей знакома; физическая очередь и watchdog реализуются позже в M06.'),
+        ('1/0:30/0:30', 'Python/графики знакомы: готовый скрипт и один контроль. Час изучения единиц и контракта сохранён; снят 1 ч знакомой реализации/сверки.'),
+        ('1/0:30/0:30', 'Знакомое воспроизведение записей на готовом формате; снят 1 ч реализации/сверки. Изучение и физические очередь/watchdog M06 сохранены.'),
     ],
     'S1': [
         ('6/4/2', 'ROS новый: понятия графа, сообщений и времени изучаются на одном имитаторе.'),
@@ -195,13 +197,27 @@ REVIEW = {
         ('3/11/9', '100 циклов, отказы, манекен и примерка сохранены; шаблоны испытаний и выпуска общие.'),
     ],
     'M24': [
-        ('0/1/2', 'Сверить готовую матрицу доказательств; отчёты велись по ходу работы.'),
-        ('1/2/2', 'Собрать существующие CI/окружение/CAD в один выпуск, не разрабатывать инфраструктуру заново.'),
-        ('0/1/3', 'Воспроизвести по одному готовому сценарию трёх устройств, без повторной полной приёмки.'),
-        ('1/1/2', 'Краткое портфолио и объяснение решений из уже подготовленных материалов.'),
+        ('0/0:30/1:30', 'Сверить готовую матрицу доказательств, собранную по ходу работ; на новую вёрстку и повторный обзор снят 1 ч.'),
+        ('1/1:30/1:30', 'Упаковать существующие CI/окружение/CAD по единому шаблону; снят 1 ч повторной организации. Изучение сохранено.'),
+        ('0/0:30/2:30', 'Воспроизвести те же три готовых сценария общим запуском; снят 1 ч подготовки и оформления. Физическая приёмка не повторяется.'),
+        ('1/0:30/1:10', 'Портфолио из готовых материалов по короткому шаблону; сняты 1 ч 20 мин подготовки/редактирования. Час изучения и объяснение решений сохранены.'),
     ],
     'G4': [('0/1/3', 'Итоговое решение по собранным доказательствам всех проектов, без второго выпуска.')],
 }
+
+
+def parse_effort(value):
+    if ':' in value:
+        hours,minutes = map(int,value.split(':'))
+        return hours*60+minutes
+    minutes = Fraction(value)*60
+    assert minutes.denominator == 1
+    return int(minutes)
+
+
+def display_hours(value):
+    hours,minutes = divmod(round(value*60),60)
+    return str(hours) if not minutes else f'{hours}:{minutes:02}'
 
 
 def main():
@@ -221,23 +237,24 @@ def main():
         assert stage in REVIEW and len(REVIEW[stage]) == len(item['tasks']), stage
         for index, (task, (values, reason)) in enumerate(zip(item['tasks'], REVIEW[stage])):
             key = f'{stage}.{index + 1}'
-            hours = dict(zip(('learn', 'build', 'verify'), map(int, values.split('/'))))
+            minutes = dict(zip(('learn','build','verify'),map(parse_effort,values.split('/'))))
+            hours = {key:as_hours(value) for key,value in minutes.items()}
             previous = next((r for r in prior['tasks'] if r['key'] == key), None) if prior else None
             old = previous['before'] if previous else {c: task[c] for c in hours}
             floor = previous['pre_compression_learn'] if previous else baseline['items'][stage]['tasks'][index]['learn']
             assert stage == 'M01' or hours['learn'] >= floor, f'New learning cut: {key}'
-            task.update(hours, hours=sum(hours.values()))
+            task.update(hours, hours=as_hours(sum(minutes.values())))
             reviewed.append({'key': key, 'stage': stage, 'title': task['title'],
                              'before': old, 'pre_compression_learn': floor,
                              'after': hours, 'hours': task['hours'], 'reason': reason})
         item.update({c: sum(t[c] for t in item['tasks']) for c in ('learn', 'build', 'verify')})
-        item['base'] = item['hours'] = sum(t['hours'] for t in item['tasks'])
+        item['base'] = item['hours'] = as_hours(sum(round(t['hours']*60) for t in item['tasks']))
         old_rationale = copy.deepcopy(item.get('rationale'))
         item['rationale'] = {
-            'ru': f"{item['hours']} ч: изучение {item['learn']}, реализация {item['build']}, проверка {item['verify']}. "
+            'ru': f"{display_hours(item['hours'])} ч: изучение {display_hours(item['learn'])}, реализация {display_hours(item['build'])}, проверка {display_hours(item['verify'])}. "
                   'Индивидуальная средняя рабочая оценка для указанного опыта; новые темы изучаются полностью в границах задания. '
                   'Готовые код, стенды, журналы и методики используются повторно. Обычная отладка входит в реализацию; отдельный процент на непредсказуемые переделки не добавлен.',
-            'en': f"{item['hours']} h: learning {item['learn']}, implementation {item['build']}, verification {item['verify']}. "
+            'en': f"{display_hours(item['hours'])} h: learning {display_hours(item['learn'])}, implementation {display_hours(item['build'])}, verification {display_hours(item['verify'])}. "
                   'Individually reviewed nominal effort for the stated experience; new topics retain their defined learning scope. '
                   'Reuse code, rigs, logs and protocols. Implementation includes routine debugging; no blanket rework percentage is added.'}
         item['hour_review'] = {'reviewed_on': REVIEWED_ON, 'report': 'task-hour-review.json'}
@@ -254,24 +271,27 @@ def main():
         'ru': 'Собственные звенья, опоры и CAD — 46 ч; URDF/SRDF, столкновения, массы и ограничения — 16 ч; настройка готового численного IK для шести степеней свободы, достижимость и сингулярности — 9 ч. Итого 71 ч; изучение, реализация и проверка входят в эти подработы.',
         'en': 'Custom links/supports/CAD: 46 h; URDF/SRDF, collisions, masses and limits: 16 h; configuring existing numerical six-DOF IK, reachability and singularities: 9 h. Total 71 h, including learning, implementation and verification.'}
     estimate['items']['M01']['tasks'][0]['result'] = {
-        'ru': 'Зафиксированы Ubuntu 24.04 ARM64, компилятор, RMW и версии Jazzy/Harmonic; готовые talker/listener, RViz, сцена тележки и сцена датчика имеют результат PASS/HOLD. Шесть часов — применение знакомых Linux/Git и готовых команд установки, без повторного вводного курса.',
-        'en': 'Record Ubuntu 24.04 ARM64, compiler, RMW and Jazzy/Harmonic versions; supplied talker/listener, RViz, cart and sensor scenes have PASS/HOLD results. Six hours apply existing Linux/Git skills and supplied installation commands without repeating an introductory course.'}
+        'ru': 'Зафиксированы Ubuntu 24.04 ARM64, компилятор, RMW и версии Jazzy/Harmonic; готовые talker/listener, RViz, сцена тележки и сцена датчика имеют результат PASS/HOLD. Четыре часа — применение знакомых Linux/Git и готовых команд установки, без повторного вводного курса; ознакомление с планом 2 января проводится отдельно.',
+        'en': 'Record Ubuntu 24.04 ARM64, compiler, RMW and Jazzy/Harmonic versions; supplied talker/listener, RViz, cart and sensor scenes have PASS/HOLD results. Four hours apply existing Linux/Git skills and installation commands; 2 January orientation is separate.'}
     estimate.pop('timeline_compression', None)
-    total = sum(row['hours'] for row in reviewed)
-    assert total <= 2600, f'Nominal estimate exceeds the annual capacity: {total}'
-    estimate['version'] = '4.7'
+    total_minutes = sum(round(row['hours']*60) for row in reviewed)
+    total = as_hours(total_minutes)
+    capacity = capacity_minutes()
+    assert total_minutes <= capacity, f'Nominal estimate exceeds annual capacity: {total_minutes} > {capacity}'
+    estimate['version'] = VERSION
     estimate['hour_review'] = {'reviewed_on': REVIEWED_ON, 'tasks_reviewed': len(reviewed),
         'report': 'task-hour-review.json', 'method': 'individual nominal effort, no proportional compression',
         'new_learning_floor_source': '156da32:estimate.json',
         'unpredictable_rework_percentage': 0}
     estimate['source_model'] = 'Individually reviewed nominal task effort for experienced Python/TS developer; new hardware/robotics learning preserved.'
     estimate['reports_scope'] = 'Math/software/hardware reports preserve earlier scope mappings and dependency provenance. Active hours are estimate.items task sums, reviewed in task-hour-review.json.'
-    report = {'reviewed_on': REVIEWED_ON, 'version': '4.7',
+    report = {'reviewed_on': REVIEWED_ON, 'version': VERSION,
         'profile': estimate['reports']['math']['profile'],
         'basis': 'Nominal planning judgments, not measured population means or a guarantee of mastery. Routine debugging included; no blanket rework allowance.',
         'pre_compression_reference': '156da32:estimate.json',
-        'base_hours': total, 'capacity_hours': 2600,
-        'category_hours': {c: sum(r['after'][c] for r in reviewed) for c in ('learn', 'build', 'verify')},
+        'base_hours': total, 'base_minutes':total_minutes, 'capacity_hours':as_hours(capacity),
+        'calendar_adjustment':{'removed_minutes':500,'scope':'M01 familiar environment/Python/replay and M24 release organization; learning and physical trials retained'},
+        'category_hours': {c: as_hours(sum(round(r['after'][c]*60) for r in reviewed)) for c in ('learn', 'build', 'verify')},
         'tasks': reviewed}
     if prior:
         for row in reviewed:
@@ -280,9 +300,10 @@ def main():
     (ROOT / 'estimate.json').write_text(json.dumps(estimate, ensure_ascii=False, indent=2) + '\n')
     review_path.write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n')
     lines = ['# Индивидуальная проверка часов программы', '',
-        '11.11.2026 · редакция 4.7 · средняя рабочая оценка для профиля из плана.', '',
+        f'11.11.2026 · редакция {VERSION} · средняя рабочая оценка для профиля из плана.', '',
         'Профиль: 10 лет Python/TS, основы C++/Rust, ранее изученная высшая математика; механика, CAD и электроника новые.', '',
-        f"Проверены все {len(reviewed)} заданий. Всего **{total} ч**: изучение **{report['category_hours']['learn']}**, реализация **{report['category_hours']['build']}**, проверка **{report['category_hours']['verify']}**. Доступно 2 600 ч за 2028 год.", '',
+        f"Проверены все {len(reviewed)} заданий. Всего **{display_hours(total)} ч**: изучение **{display_hours(report['category_hours']['learn'])}**, реализация **{display_hours(report['category_hours']['build'])}**, проверка **{display_hours(report['category_hours']['verify'])}**. Доступно **{display_hours(as_hours(capacity))} ч** с {START:%d.%m.%Y} по {DEADLINE:%d.%m.%Y}. 2 января — ознакомление; учёба с понедельника, 4 января. Время в формате ч:мин.", '',
+        'Для сохранения 50 ч/неделю в 2027 году сняты 8 ч 20 мин со знакомой подготовки среды, Python/записей и оформления общего выпуска. Все 701 ч изучения и физические испытания сохранены.', '',
         'Новые темы не сокращаются пропорционально дедлайну: в каждом задании вне M01 часы изучения не ниже редакции до механического сокращения 120 ч. В M01 сокращены знакомые Python/Linux и обработка записей; шесть часов нового C++ сохранены. Часы — инженерная оценка ограниченного прикладного результата, а не измеренная норма полного освоения дисциплины.', '',
         'Обычная отладка входит в реализацию. Отдельный процент на непредсказуемые переделки не добавлен. Число физических опытов, циклов, нагрузок и критерии допуска сохранены. Экономия проверки означает использование общего анализа и уже полученных доказательств, а не пропуск физических испытаний.', '',
         'Чтение и выбранные уроки входят в изучение. Перерывы, автономная печать и доставка не считаются активными часами. 50 ч в неделю — продуктивная работа Пн–Сб. Календарь остаётся условным по наличию деталей; план не предполагает мгновенной доставки.', '',
@@ -291,9 +312,9 @@ def main():
         '|---|---|---:|---:|---:|---:|---:|---|']
     for row in reviewed:
         a = row['after']
-        lines.append(f"| {row['key']} | {row['title']['ru']} | {sum(row['before'].values())} | {a['learn']} | {a['build']} | {a['verify']} | {row['hours']} | {row['reason']} |")
+        lines.append(f"| {row['key']} | {row['title']['ru']} | {display_hours(sum(row['before'].values()))} | {display_hours(a['learn'])} | {display_hours(a['build'])} | {display_hours(a['verify'])} | {display_hours(row['hours'])} | {row['reason']} |")
     (ROOT / 'task-hour-review.md').write_text('\n'.join(lines) + '\n')
-    print(f"Reviewed {len(reviewed)} tasks: {total} h; {report['category_hours']}; remaining {2600-total} h.")
+    print(f"Reviewed {len(reviewed)} tasks: {display_hours(total)} h; remaining {capacity-total_minutes} minutes.")
 
 
 if __name__ == '__main__':

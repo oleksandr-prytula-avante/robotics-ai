@@ -5,6 +5,7 @@ This script changes content and evidence, never task hours or trial counts.
 """
 import json
 from pathlib import Path
+from calendar_settings import VERSION, duration_text
 
 ROOT = Path(__file__).resolve().parents[1]
 DATE = '2026-11-11'
@@ -226,8 +227,9 @@ def main():
         ('perception',['M14','M18'],['SW05','SW14','SW09','SW10'],'Пиксель → метрическая цель → проверяемое решение','Pixel → metric target → validated decision','Получить миллиметры в основании и независимую ошибку; исключить утечку данных ML.','Obtain base-frame millimetres/held-out error and exclude ML leakage.'),
         ('tendons',['T1','T2','T3'],['H-OCR','H-SLOCUM','H-TENDON-FRICTION'],'Форма → вес/трение → повторяемое движение','Shape → gravity/friction → repeatable motion','Различить идеальную кинематику и измеренный обратный ход/нагрузку/связь секций.','Distinguish ideal kinematics from measured reversal/loading/section coupling.'),
     ]
-    path = {'version':'4.7','updated_on':DATE,'scope':bi('Связная прикладная база обязательных проектов с самостоятельными проверками переноса знаний.', 'Connected applied foundations for the required projects, with independent knowledge-transfer checks.'),
-            'hours_policy':bi('701 ч изучения входят в 2 600 ч; линии ниже связывают существующие темы, не добавляя часы. Они пересекаются по времени; фактический порядок работ задаётся календарём.', '701 learning hours are inside 2,600 h; the strands below connect existing topics without adding hours. They overlap in time; follow the calendar for actual work order.'),
+    total_minutes = sum(round(t['hours']*60) for k in estimate['order'] for t in estimate['items'][k]['tasks'])
+    path = {'version':VERSION,'updated_on':DATE,'scope':bi('Связная прикладная база обязательных проектов с самостоятельными проверками переноса знаний.', 'Connected applied foundations for the required projects, with independent knowledge-transfer checks.'),
+            'hours_policy':bi(f'701 ч изучения входят в {duration_text(total_minutes)}; линии ниже связывают существующие темы, не добавляя часы. Они пересекаются по времени; фактический порядок работ задаётся календарём.', f'701 learning hours are inside {duration_text(total_minutes,"en")}; the strands below connect existing topics without adding hours. They overlap in time; follow the calendar for actual work order.'),
             'limits':bi('Полные курсы EKF/LQR, SLAM, динамической ходьбы, MPC/RL и нелинейной континуальной механики остаются отдельным развитием. Прохождение маршрута не объявляется освоением всей робототехники.', 'Full EKF/LQR, SLAM, dynamic walking, MPC/RL and nonlinear continuum mechanics remain further development. Completion is not described as mastery of all robotics.'),
             'steps':[{'id':k,'stages':st,'sources':sr,'title':bi(tr,te),'mastery_check':bi(cr,ce)} for k,st,sr,tr,te,cr,ce in steps]}
 
@@ -242,16 +244,19 @@ def main():
     }
     for stage,note in notes.items():
         courses['core_routes'][stage]['note'] = note
+    for stage,route in courses['core_routes'].items():
+        if stage in estimate['items']:
+            route['title'] = estimate['items'][stage]['title']
     courses['learning_path'] = 'learning-path.json'
     courses['materials_updated_on'] = DATE
-    literature.update(version='4.7', learning_hours_total=701, added_hours=0,
+    literature.update(version=VERSION, learning_hours_total=701, added_hours=0,
                       learning_path='learning-path.json', routes_updated_on=DATE)
     for stage,route in literature['routes'].items():
         for reading_entry in route['readings']:
             ref = refs[reading_entry['ref']]
             if stage not in ref['stages']:
                 ref['stages'].append(stage)
-    estimate['version'] = '4.7'
+    estimate['version'] = VERSION
     estimate['materials_revision'] = {'updated_on':DATE,'learning_path':'learning-path.json','notes':'learning-guides.md',
                                     'hours_changed':False,'closed_gaps':['imu','metric-vision','robustness','contact','qp','multilegged-gaits','tendon-friction','connected-foundations']}
     for stage, original in before_hours.items():
@@ -261,7 +266,7 @@ def main():
     for row in report['tasks']:
         stage, index = row['key'].rsplit('.',1)
         row['title'] = estimate['items'][stage]['tasks'][int(index)-1]['title']
-    report['materials_revision'] = '4.7'
+    report['materials_revision'] = VERSION
     for filename,data in [('estimate.json',estimate),('literature.json',literature),('courses.json',courses),
                           ('learning-path.json',path),('task-hour-review.json',report)]:
         (ROOT / filename).write_text(json.dumps(data,ensure_ascii=False,indent=2)+'\n')

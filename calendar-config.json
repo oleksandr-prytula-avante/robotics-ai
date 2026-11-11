@@ -1,0 +1,20 @@
+{
+  "version": "4.8",
+  "start": "2027-01-04",
+  "deadline": "2027-12-31",
+  "daily_minutes": 500,
+  "workdays": [0, 1, 2, 3, 4, 5],
+  "excluded_dates": [],
+  "orientation": {
+    "date": "2027-01-02",
+    "title": {
+      "ru": "Ознакомление с планом",
+      "en": "Programme orientation"
+    },
+    "counts_toward_core_hours": false
+  },
+  "notes": {
+    "ru": "2 января — только ознакомление; учёба с понедельника, 4 января. Пн–Сб по 8 ч 20 мин, воскресенье свободно. 31 декабря — рабочий день; другие праздники и отпуск отдельно не вычтены. Сохранены 50 ч в неделю; 8 ч 20 мин сняты со знакомой программной и организационной работы.",
+    "en": "2 January is orientation only; study starts Monday 4 January. Mon–Sat at 8 h 20 min, Sundays off. 31 December is a workday; other holidays and vacation are not separately deducted. Retain 50 h/week; remove 8 h 20 min from familiar coding and organizational work."
+  }
+}

@@ -1,13 +1,13 @@
 {
-  "version": "4.7",
+  "version": "4.8",
   "updated_on": "2026-11-11",
   "scope": {
     "ru": "Связная прикладная база обязательных проектов с самостоятельными проверками переноса знаний.",
     "en": "Connected applied foundations for the required projects, with independent knowledge-transfer checks."
   },
   "hours_policy": {
-    "ru": "701 ч изучения входят в 2 600 ч; линии ниже связывают существующие темы, не добавляя часы. Они пересекаются по времени; фактический порядок работ задаётся календарём.",
-    "en": "701 learning hours are inside 2,600 h; the strands below connect existing topics without adding hours. They overlap in time; follow the calendar for actual work order."
+    "ru": "701 ч изучения входят в 2 591 ч 40 мин; линии ниже связывают существующие темы, не добавляя часы. Они пересекаются по времени; фактический порядок работ задаётся календарём.",
+    "en": "701 learning hours are inside 2,591 h 40 min; the strands below connect existing topics without adding hours. They overlap in time; follow the calendar for actual work order."
   },
   "limits": {
     "ru": "Полные курсы EKF/LQR, SLAM, динамической ходьбы, MPC/RL и нелинейной континуальной механики остаются отдельным развитием. Прохождение маршрута не объявляется освоением всей робототехники.",

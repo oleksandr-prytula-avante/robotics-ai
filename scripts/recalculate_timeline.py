@@ -7,12 +7,9 @@ import json
 from collections import defaultdict
 from datetime import date, timedelta
 from pathlib import Path
+from calendar_settings import CONFIG, START, DEADLINE, DAILY_MINUTES, DAYS_OFF, as_hours
 
 ROOT = Path(__file__).resolve().parents[1]
-START = date(2028, 1, 2)
-DEADLINE = date(2028, 12, 31)
-DAILY_MINUTES = 500
-DAYS_OFF = {date(2028, 12, 31)}
 
 
 def duration(minutes):
@@ -101,16 +98,17 @@ def main():
         'workdays': ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
         'excluded_dates': sorted(map(str, DAYS_OFF)),
         'daily_minutes': DAILY_MINUTES, 'workday_count': sum(capacity.values()) // DAILY_MINUTES,
-        'capacity_minutes': sum(capacity.values()), 'base_hours': core['total_minutes'] // 60,
+        'orientation': CONFIG['orientation'],
+        'capacity_minutes': sum(capacity.values()), 'base_hours': as_hours(core['total_minutes']),
         'category_minutes': categories, 'work_finish': core['finish'],
         'buffer_minutes': buffer_minutes,
         'assumptions': [
-            'Equal 8 h 20 min workdays; Sunday off; 31 Dec 2028 off; other holidays and vacation not deducted.',
+            CONFIG['notes']['en'],
             'All 127 tasks have individual nominal estimates for the stated experience. New learning is not proportionally compressed; shared implementation and evidence reviews are reused.',
             'Routine debugging is included in implementation; no blanket allowance for unpredictable rework is added.',
             'Selected reading and course study are already included in learning hours.',
             'Dates assume materials are ready and acceptance gates pass; delivery and unattended printing are elapsed time, not active work.',
-            'No deadline buffer remains after fitting the compressed required programme to 2028.',
+            'Retain all 701 learning hours and physical trials; 8 h 20 min removed from familiar setup, Python/replay and release organization for the 2027 calendar. No deadline buffer remains.',
         ],
         'months': [{'month': month, 'capacity_minutes': minutes,
                     'allocated_minutes': allocated[month],
@@ -120,10 +118,11 @@ def main():
     }
     (ROOT / 'timeline-review.json').write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n')
     lines = [
-        '# Пересчёт программы от 2 января 2028', '',
+        f'# Пересчёт программы: учёба с {START:%d.%m.%Y}', '',
         'Расчёт проверен 11.11.2026. Отчёт соответствует текущему календарю schedule.json и индивидуальной проверке всех 127 заданий.', '',
+        '**2 января 2027 — ознакомление с планом, без учебных заданий. Учёба с понедельника, 4 января.**', '',
         '**50 часов в неделю:** понедельник–суббота по 8 часов 20 минут; воскресенье — выходной. '
-        '31.12.2028 — выходной; прочие праздники и отпуск не вычтены. До 31.12.2028 включительно — '
+        '31.12.2027 — рабочий день; прочие праздники и отпуск не вычтены. До 31.12.2027 включительно — '
         f'{report["workday_count"]} рабочих дней, {duration(report["capacity_minutes"])} доступного времени.', '',
         f'Обязательная программа: **{duration(core["total_minutes"])}** — изучение '
         f'{duration(categories["learn"])}, практика {duration(categories["build"])}, '
@@ -131,8 +130,9 @@ def main():
         'в эти часы. Новые темы не сокращаются пропорционально дедлайну. Оценка учитывает повторное использование знакомой программной работы, инструментов и готовых доказательств. '
         'Обычная отладка включена в реализацию; отдельный процент на непредсказуемые переделки не добавлен. Порядок заданий сохранён. '
         'Обоснование каждого задания: [task-hour-review.md](task-hour-review.md).', '',
+        'Для сохранения 50 ч/неделю сняты **8 ч 20 мин** со знакомой подготовки среды, Python/воспроизведения записей и оформления общего выпуска. Все 701 ч изучения и физические испытания сохранены.', '',
         f'**Плановое завершение — {date.fromisoformat(core["finish"]):%d.%m.%Y}.** '
-        f'До 31.12.2028 остаётся **{duration(buffer_minutes)}** общего запаса на задержки и переделки '
+        f'До {DEADLINE:%d.%m.%Y} остаётся **{duration(buffer_minutes)}** общего запаса на задержки и переделки '
         f'({buffer_minutes / core["total_minutes"]:.1%} обязательной работы). '
         'Запаса нет: любой пропуск или переделка отодвигает плановый финиш. '
         'R1–R4 обозначают направления риска без отдельных часов; их нельзя прибавлять к общему запасу.', '',
@@ -143,7 +143,7 @@ def main():
         '| Этап | Содержание | Часы | Начало | Окончание |', '|---|---|---:|---|---|',
     ]
     for stage in core['stages']:
-        lines.append(f'| {stage["id"]} | {stage["title"]["ru"]} | {stage["hours"]} | '
+        lines.append(f'| {stage["id"]} | {stage["title"]["ru"]} | {duration(round(stage["hours"]*60))} | '
                      f'{date.fromisoformat(stage["start"]):%d.%m.%Y} | {date.fromisoformat(stage["end"]):%d.%m.%Y} |')
     lines += ['', '## Помесячные часы', '',
               '| Месяц | Доступно | Обязательная работа | Запас |', '|---|---:|---:|---:|']

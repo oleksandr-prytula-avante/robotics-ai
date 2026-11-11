@@ -1,7 +1,7 @@
 {
-  "version": "4.7",
-  "start": "2028-01-02",
-  "deadline": "2028-12-31",
+  "version": "4.8",
+  "start": "2027-01-04",
+  "deadline": "2027-12-31",
   "items": {
     "M02": {
       "id": "M02",
@@ -1218,17 +1218,17 @@
             "en": "Diagnostic, environment and early ROS/Gazebo preflight"
           },
           "learn": 1,
-          "build": 3,
-          "verify": 2,
-          "hours": 6,
+          "build": 2,
+          "verify": 1,
+          "hours": 4,
           "source_refs": [
             "M01 L1–L4",
             "M12 p14 installation",
             "M13 p14 installation"
           ],
           "result": {
-            "ru": "Зафиксированы Ubuntu 24.04 ARM64, компилятор, RMW и версии Jazzy/Harmonic; готовые talker/listener, RViz, сцена тележки и сцена датчика имеют результат PASS/HOLD. Шесть часов — применение знакомых Linux/Git и готовых команд установки, без повторного вводного курса.",
-            "en": "Record Ubuntu 24.04 ARM64, compiler, RMW and Jazzy/Harmonic versions; supplied talker/listener, RViz, cart and sensor scenes have PASS/HOLD results. Six hours apply existing Linux/Git skills and supplied installation commands without repeating an introductory course."
+            "ru": "Зафиксированы Ubuntu 24.04 ARM64, компилятор, RMW и версии Jazzy/Harmonic; готовые talker/listener, RViz, сцена тележки и сцена датчика имеют результат PASS/HOLD. Четыре часа — применение знакомых Linux/Git и готовых команд установки, без повторного вводного курса; ознакомление с планом 2 января проводится отдельно.",
+            "en": "Record Ubuntu 24.04 ARM64, compiler, RMW and Jazzy/Harmonic versions; supplied talker/listener, RViz, cart and sensor scenes have PASS/HOLD results. Four hours apply existing Linux/Git skills and installation commands; 2 January orientation is separate."
           },
           "refs": [
             "M01 L1–L4",
@@ -1266,9 +1266,9 @@
             "en": "Units, channels and Python analysis for one joint"
           },
           "learn": 1,
-          "build": 1,
-          "verify": 1,
-          "hours": 3,
+          "build": 0.5,
+          "verify": 0.5,
+          "hours": 2,
           "source_refs": [
             "M01 P1–P5",
             "M01 p13 motion definitions"
@@ -1289,9 +1289,9 @@
             "en": "Minimal replay and stream contract"
           },
           "learn": 1,
-          "build": 1,
-          "verify": 1,
-          "hours": 3,
+          "build": 0.5,
+          "verify": 0.5,
+          "hours": 2,
           "source_refs": [
             "M01 Q1–Q3",
             "M01 E1–E3",
@@ -1310,7 +1310,7 @@
           ]
         }
       ],
-      "hours": 24,
+      "hours": 20,
       "prerequisites": [],
       "kept": {
         "ru": "Одна кодовая база C++, один Python-анализ, обязательная ранняя проверка фактической среды.",
@@ -1323,8 +1323,8 @@
         }
       ],
       "rationale": {
-        "ru": "24 ч: изучение 9, реализация 9, проверка 6. Индивидуальная средняя рабочая оценка для указанного опыта; новые темы изучаются полностью в границах задания. Готовые код, стенды, журналы и методики используются повторно. Обычная отладка входит в реализацию; отдельный процент на непредсказуемые переделки не добавлен.",
-        "en": "24 h: learning 9, implementation 9, verification 6. Individually reviewed nominal effort for the stated experience; new topics retain their defined learning scope. Reuse code, rigs, logs and protocols. Implementation includes routine debugging; no blanket rework percentage is added."
+        "ru": "20 ч: изучение 9, реализация 7, проверка 4. Индивидуальная средняя рабочая оценка для указанного опыта; новые темы изучаются полностью в границах задания. Готовые код, стенды, журналы и методики используются повторно. Обычная отладка входит в реализацию; отдельный процент на непредсказуемые переделки не добавлен.",
+        "en": "20 h: learning 9, implementation 7, verification 4. Individually reviewed nominal effort for the stated experience; new topics retain their defined learning scope. Reuse code, rigs, logs and protocols. Implementation includes routine debugging; no blanket rework percentage is added."
       },
       "core_reading": {
         "ru": "Сначала источники и блоки «Что читать сейчас» с привязкой к заданиям. Все часы изучения распределены там; повторное чтение и полные книги отдельно не прибавляются.",
@@ -1340,11 +1340,11 @@
           "en": "Do not repeat Python/Git study when the diagnostic demonstrates the skill. Retain versions and reproduction commands."
         }
       ],
-      "base": 24,
+      "base": 20,
       "track": "core",
       "learn": 9,
-      "build": 9,
-      "verify": 6,
+      "build": 7.0,
+      "verify": 4.0,
       "hour_review": {
         "reviewed_on": "2026-11-11",
         "report": "task-hour-review.json"
@@ -2288,9 +2288,9 @@
             "en": "Reconcile requirements with existing evidence"
           },
           "learn": 0,
-          "build": 1,
-          "verify": 2,
-          "hours": 3,
+          "build": 0.5,
+          "verify": 1.5,
+          "hours": 2,
           "source_refs": [
             "M24 traceability task"
           ],
@@ -2309,9 +2309,9 @@
             "en": "Versions, build and one reproducible package"
           },
           "learn": 1,
-          "build": 2,
-          "verify": 2,
-          "hours": 5,
+          "build": 1.5,
+          "verify": 1.5,
+          "hours": 4,
           "source_refs": [
             "M24 manifest/archive task"
           ],
@@ -2330,9 +2330,9 @@
             "en": "Targeted cross-project reproducibility check"
           },
           "learn": 0,
-          "build": 1,
-          "verify": 3,
-          "hours": 4,
+          "build": 0.5,
+          "verify": 2.5,
+          "hours": 3,
           "source_refs": [
             "M24 targeted evidence/stop task"
           ],
@@ -2351,9 +2351,9 @@
             "en": "Portfolio, limitations and a concise design defence"
           },
           "learn": 1,
-          "build": 1,
-          "verify": 2,
-          "hours": 4,
+          "build": 0.5,
+          "verify": 1.1666666666666667,
+          "hours": 2.6666666666666665,
           "source_refs": [
             "M24 report/portfolio task"
           ],
@@ -2366,7 +2366,7 @@
           ]
         }
       ],
-      "hours": 16,
+      "hours": 11.666666666666666,
       "prerequisites": [
         "M18",
         "A3",
@@ -2384,8 +2384,8 @@
         }
       ],
       "rationale": {
-        "ru": "16 ч: изучение 2, реализация 5, проверка 9. Индивидуальная средняя рабочая оценка для указанного опыта; новые темы изучаются полностью в границах задания. Готовые код, стенды, журналы и методики используются повторно. Обычная отладка входит в реализацию; отдельный процент на непредсказуемые переделки не добавлен.",
-        "en": "16 h: learning 2, implementation 5, verification 9. Individually reviewed nominal effort for the stated experience; new topics retain their defined learning scope. Reuse code, rigs, logs and protocols. Implementation includes routine debugging; no blanket rework percentage is added."
+        "ru": "11:40 ч: изучение 2, реализация 3, проверка 6:40. Индивидуальная средняя рабочая оценка для указанного опыта; новые темы изучаются полностью в границах задания. Готовые код, стенды, журналы и методики используются повторно. Обычная отладка входит в реализацию; отдельный процент на непредсказуемые переделки не добавлен.",
+        "en": "11:40 h: learning 2, implementation 3, verification 6:40. Individually reviewed nominal effort for the stated experience; new topics retain their defined learning scope. Reuse code, rigs, logs and protocols. Implementation includes routine debugging; no blanket rework percentage is added."
       },
       "core_reading": {
         "ru": "Сначала источники и блоки «Что читать сейчас» с привязкой к заданиям. Все часы изучения распределены там; повторное чтение и полные книги отдельно не прибавляются.",
@@ -2397,11 +2397,11 @@
           "en": "An unmet criterion remains open. An archive or video does not replace physical PASS; a budget does not guarantee successful mechanics by a date."
         }
       ],
-      "base": 16,
+      "base": 11.666666666666666,
       "track": "core",
       "learn": 2,
-      "build": 5,
-      "verify": 9,
+      "build": 3.0,
+      "verify": 6.666666666666667,
       "hour_review": {
         "reviewed_on": "2026-11-11",
         "report": "task-hour-review.json"
@@ -3300,8 +3300,8 @@
             "en": "Three drives, harness and stop operate on a protected fixture; energy and commands have separately verified paths."
           },
           "material_ready_condition": {
-            "ru": "Поставка: образец привода нужен к началу L1 18.04.2028. Ещё два совместимых привода заказываются после проверки образца, намеченной на 19.04; сборка трёх приводов с 21.04 возможна только после их получения. Время доставки не подтверждено. Пока детали в пути, выполнять независимые CAD/подготовительные работы и пересчитать даты зависимой сборки и испытаний.",
-            "en": "Materials: the actuator sample is needed before L1 on 18 April 2028. Order two more compatible drives after the sample check targeted for 19 April; the three-drive assembly slot from 21 April is conditional on receipt. Delivery time is unconfirmed. Use independent CAD/preparation work during the wait and reforecast dependent assembly and trials."
+            "ru": "Поставка: образец привода нужен к началу L1 19.04.2027. Ещё два совместимых привода заказываются после проверки образца, намеченной на 21.04; сборка трёх приводов с 22.04 возможна только после их получения. Время доставки не подтверждено. Пока детали в пути, выполнять независимые CAD/подготовительные работы и пересчитать даты зависимой сборки и испытаний.",
+            "en": "Materials: the actuator sample is needed before L1 on 19 April 2027. Order two more compatible drives after the sample check targeted for 21 April; the three-drive assembly slot from 22 April is conditional on receipt. Delivery time is unconfirmed. Use independent CAD/preparation work during the wait and reforecast dependent assembly and trials."
           }
         },
         {
@@ -3720,8 +3720,8 @@
             "en": "Most loaded joint passes holding/motion/thermal tests under equivalent load before the full order."
           },
           "material_ready_condition": {
-            "ru": "Поставка: выбор плечевого привода завершается по плану 28.06.2028; PR5 разрешает заказ только после этого. 28.06 — начало планового слота A02, а не обещание получения привода в тот же день. Работы с приводом и нагрузочная проверка ждут фактической поставки; независимую подготовку оснастки можно продолжать. Если ожидание не помещается в перестановку работ, пересчитать окончание A02 и последующие даты.",
-            "en": "Materials: shoulder-actuator selection is targeted for 28 June 2028; PR5 permits ordering only afterward. 28 June is the nominal A02 work slot, not a promise of same-day receipt. Motor-dependent work and loaded qualification wait for actual delivery; independent fixture preparation may continue. If resequencing cannot absorb the wait, reforecast A02 completion and dependent dates."
+            "ru": "Поставка: выбор плечевого привода завершается по плану 30.06.2027; PR5 разрешает заказ только после этого. 30.06 — начало планового слота A02, а не обещание получения привода в тот же день. Работы с приводом и нагрузочная проверка ждут фактической поставки; независимую подготовку оснастки можно продолжать. Если ожидание не помещается в перестановку работ, пересчитать окончание A02 и последующие даты.",
+            "en": "Materials: shoulder-actuator selection is targeted for 30 June 2027; PR5 permits ordering only afterward. 30 June is the nominal A02 work slot, not a promise of same-day receipt. Motor-dependent work and loaded qualification wait for actual delivery; independent fixture preparation may continue. If resequencing cannot absorb the wait, reforecast A02 completion and dependent dates."
           }
         },
         {
@@ -3992,8 +3992,8 @@
             "en": "Three sections/six drives assembled; distal tendon routing and inter-section coupling verified."
           },
           "material_ready_condition": {
-            "ru": "Поставка: ещё четыре привода заказываются только после PASS первой активной секции T04, намеченного на 22.09.2028. Слот T05 с 22.09 не предполагает поставку в тот же день. Монтаж этих приводов, полная калибровка и завершение T05 зависят от получения деталей; на время доставки перенести независимые работы и при необходимости пересчитать даты. 0 ч свободной ёмкости не гарантируют покрытие календарного срока доставки.",
-            "en": "Materials: order the other four drives only after first-active-section T04 PASS, targeted for 22 September 2028. The T05 slot from 22 September does not assume same-day delivery. Installing these drives, full calibration and T05 completion depend on receipt; bring independent work forward during shipping and reforecast dates when needed. The 0 h of unallocated capacity do not guarantee coverage of elapsed delivery time."
+            "ru": "Поставка: ещё четыре привода заказываются только после PASS первой активной секции T04, намеченного на 23.09.2027. Слот T05 с 23.09 не предполагает поставку в тот же день. Монтаж этих приводов, полная калибровка и завершение T05 зависят от получения деталей; на время доставки перенести независимые работы и при необходимости пересчитать даты. 0 ч свободной ёмкости не гарантируют покрытие календарного срока доставки.",
+            "en": "Materials: order the other four drives only after first-active-section T04 PASS, targeted for 23 September 2027. The T05 slot from 23 September does not assume same-day delivery. Installing these drives, full calibration and T05 completion depend on receipt; bring independent work forward during shipping and reforecast dates when needed. The 0 h of unallocated capacity do not guarantee coverage of elapsed delivery time."
           }
         },
         {
@@ -4272,8 +4272,8 @@
             "en": "Most loaded joint passes holding/motion/thermal tests under equivalent load before the full order."
           },
           "material_ready_condition": {
-            "ru": "Поставка: выбор плечевого привода завершается по плану 28.06.2028; PR5 разрешает заказ только после этого. 28.06 — начало планового слота A02, а не обещание получения привода в тот же день. Работы с приводом и нагрузочная проверка ждут фактической поставки; независимую подготовку оснастки можно продолжать. Если ожидание не помещается в перестановку работ, пересчитать окончание A02 и последующие даты.",
-            "en": "Materials: shoulder-actuator selection is targeted for 28 June 2028; PR5 permits ordering only afterward. 28 June is the nominal A02 work slot, not a promise of same-day receipt. Motor-dependent work and loaded qualification wait for actual delivery; independent fixture preparation may continue. If resequencing cannot absorb the wait, reforecast A02 completion and dependent dates."
+            "ru": "Поставка: выбор плечевого привода завершается по плану 30.06.2027; PR5 разрешает заказ только после этого. 30.06 — начало планового слота A02, а не обещание получения привода в тот же день. Работы с приводом и нагрузочная проверка ждут фактической поставки; независимую подготовку оснастки можно продолжать. Если ожидание не помещается в перестановку работ, пересчитать окончание A02 и последующие даты.",
+            "en": "Materials: shoulder-actuator selection is targeted for 30 June 2027; PR5 permits ordering only afterward. 30 June is the nominal A02 work slot, not a promise of same-day receipt. Motor-dependent work and loaded qualification wait for actual delivery; independent fixture preparation may continue. If resequencing cannot absorb the wait, reforecast A02 completion and dependent dates."
           }
         },
         {
@@ -4613,8 +4613,8 @@
             "en": "Three sections/six drives assembled; distal tendon routing and inter-section coupling verified."
           },
           "material_ready_condition": {
-            "ru": "Поставка: ещё четыре привода заказываются только после PASS первой активной секции T04, намеченного на 22.09.2028. Слот T05 с 22.09 не предполагает поставку в тот же день. Монтаж этих приводов, полная калибровка и завершение T05 зависят от получения деталей; на время доставки перенести независимые работы и при необходимости пересчитать даты. 0 ч свободной ёмкости не гарантируют покрытие календарного срока доставки.",
-            "en": "Materials: order the other four drives only after first-active-section T04 PASS, targeted for 22 September 2028. The T05 slot from 22 September does not assume same-day delivery. Installing these drives, full calibration and T05 completion depend on receipt; bring independent work forward during shipping and reforecast dates when needed. The 0 h of unallocated capacity do not guarantee coverage of elapsed delivery time."
+            "ru": "Поставка: ещё четыре привода заказываются только после PASS первой активной секции T04, намеченного на 23.09.2027. Слот T05 с 23.09 не предполагает поставку в тот же день. Монтаж этих приводов, полная калибровка и завершение T05 зависят от получения деталей; на время доставки перенести независимые работы и при необходимости пересчитать даты. 0 ч свободной ёмкости не гарантируют покрытие календарного срока доставки.",
+            "en": "Materials: order the other four drives only after first-active-section T04 PASS, targeted for 23 September 2027. The T05 slot from 23 September does not assume same-day delivery. Installing these drives, full calibration and T05 completion depend on receipt; bring independent work forward during shipping and reforecast dates when needed. The 0 h of unallocated capacity do not guarantee coverage of elapsed delivery time."
           }
         },
         {
@@ -5317,8 +5317,8 @@
     "CAP": {
       "id": "CAP",
       "title": {
-        "ru": "Запас на задержки и переделки до конца 2028",
-        "en": "Buffer for delays and rework through 2028"
+        "ru": "Запас на задержки и переделки до конца 2027",
+        "en": "Buffer for delays and rework through 2027"
       },
       "base": 0,
       "track": "capacity",
@@ -5362,14 +5362,14 @@
     "M24",
     "G4"
   ],
-  "base_hours": 2600,
+  "base_hours": 2591.6666666666665,
   "reserve_hours": 0,
-  "allocated_hours": 2600,
-  "hours": 2600,
+  "allocated_hours": 2591.6666666666665,
+  "hours": 2591.6666666666665,
   "padding_hours": 0,
-  "weeks": 53,
-  "full_weeks": 52,
-  "final_partial_week_hours": 0,
+  "weeks": 52,
+  "full_weeks": 51,
+  "final_partial_week_hours": 41.666666666666664,
   "source_model": "Individually reviewed nominal task effort for experienced Python/TS developer; new hardware/robotics learning preserved.",
   "reports": {
     "math": {
@@ -11614,8 +11614,8 @@
                 "M06"
               ],
               "material_ready_condition": {
-                "ru": "Поставка: образец привода нужен к началу L1 18.04.2028. Ещё два совместимых привода заказываются после проверки образца, намеченной на 19.04; сборка трёх приводов с 21.04 возможна только после их получения. Время доставки не подтверждено. Пока детали в пути, выполнять независимые CAD/подготовительные работы и пересчитать даты зависимой сборки и испытаний.",
-                "en": "Materials: the actuator sample is needed before L1 on 18 April 2028. Order two more compatible drives after the sample check targeted for 19 April; the three-drive assembly slot from 21 April is conditional on receipt. Delivery time is unconfirmed. Use independent CAD/preparation work during the wait and reforecast dependent assembly and trials."
+                "ru": "Поставка: образец привода нужен к началу L1 19.04.2027. Ещё два совместимых привода заказываются после проверки образца, намеченной на 21.04; сборка трёх приводов с 22.04 возможна только после их получения. Время доставки не подтверждено. Пока детали в пути, выполнять независимые CAD/подготовительные работы и пересчитать даты зависимой сборки и испытаний.",
+                "en": "Materials: the actuator sample is needed before L1 on 19 April 2027. Order two more compatible drives after the sample check targeted for 21 April; the three-drive assembly slot from 22 April is conditional on receipt. Delivery time is unconfirmed. Use independent CAD/preparation work during the wait and reforecast dependent assembly and trials."
               }
             },
             {
@@ -12049,8 +12049,8 @@
                 "M07"
               ],
               "material_ready_condition": {
-                "ru": "Поставка: выбор плечевого привода завершается по плану 28.06.2028; PR5 разрешает заказ только после этого. 28.06 — начало планового слота A02, а не обещание получения привода в тот же день. Работы с приводом и нагрузочная проверка ждут фактической поставки; независимую подготовку оснастки можно продолжать. Если ожидание не помещается в перестановку работ, пересчитать окончание A02 и последующие даты.",
-                "en": "Materials: shoulder-actuator selection is targeted for 28 June 2028; PR5 permits ordering only afterward. 28 June is the nominal A02 work slot, not a promise of same-day receipt. Motor-dependent work and loaded qualification wait for actual delivery; independent fixture preparation may continue. If resequencing cannot absorb the wait, reforecast A02 completion and dependent dates."
+                "ru": "Поставка: выбор плечевого привода завершается по плану 30.06.2027; PR5 разрешает заказ только после этого. 30.06 — начало планового слота A02, а не обещание получения привода в тот же день. Работы с приводом и нагрузочная проверка ждут фактической поставки; независимую подготовку оснастки можно продолжать. Если ожидание не помещается в перестановку работ, пересчитать окончание A02 и последующие даты.",
+                "en": "Materials: shoulder-actuator selection is targeted for 30 June 2027; PR5 permits ordering only afterward. 30 June is the nominal A02 work slot, not a promise of same-day receipt. Motor-dependent work and loaded qualification wait for actual delivery; independent fixture preparation may continue. If resequencing cannot absorb the wait, reforecast A02 completion and dependent dates."
               }
             },
             {
@@ -12500,8 +12500,8 @@
                 "TAIL_T04_PASS"
               ],
               "material_ready_condition": {
-                "ru": "Поставка: ещё четыре привода заказываются только после PASS первой активной секции T04, намеченного на 22.09.2028. Слот T05 с 22.09 не предполагает поставку в тот же день. Монтаж этих приводов, полная калибровка и завершение T05 зависят от получения деталей; на время доставки перенести независимые работы и при необходимости пересчитать даты. 0 ч свободной ёмкости не гарантируют покрытие календарного срока доставки.",
-                "en": "Materials: order the other four drives only after first-active-section T04 PASS, targeted for 22 September 2028. The T05 slot from 22 September does not assume same-day delivery. Installing these drives, full calibration and T05 completion depend on receipt; bring independent work forward during shipping and reforecast dates when needed. The 0 h of unallocated capacity do not guarantee coverage of elapsed delivery time."
+                "ru": "Поставка: ещё четыре привода заказываются только после PASS первой активной секции T04, намеченного на 23.09.2027. Слот T05 с 23.09 не предполагает поставку в тот же день. Монтаж этих приводов, полная калибровка и завершение T05 зависят от получения деталей; на время доставки перенести независимые работы и при необходимости пересчитать даты. 0 ч свободной ёмкости не гарантируют покрытие календарного срока доставки.",
+                "en": "Materials: order the other four drives only after first-active-section T04 PASS, targeted for 23 September 2027. The T05 slot from 23 September does not assume same-day delivery. Installing these drives, full calibration and T05 completion depend on receipt; bring independent work forward during shipping and reforecast dates when needed. The 0 h of unallocated capacity do not guarantee coverage of elapsed delivery time."
               }
             },
             {
@@ -15217,8 +15217,8 @@
     "supplier_lead_times_validated": false,
     "elapsed_waits_reserved": false,
     "explanation": {
-      "ru": "50 ч в неделю: Пн–Сб по 8 ч 20 мин, Вс свободно. 31.12.2028 — выходной; прочие праздники и отпуск не вычтены. Обязательная работа заканчивается 30.12.2028, запас отсутствует. Все 127 заданий оценены отдельно: 701 ч изучения, 1 235 ч реализации, 664 ч проверки. Новые темы не сокращаются пропорционально сроку. Обычная отладка включена; отдельный процент на непредсказуемые переделки не добавлен. Даты зависят от приёмок и получения деталей. Поставка, автономная печать и охлаждение требуют календарного времени; их отдельные длительности не зарезервированы.",
-      "en": "50 h/week: Mon–Sat 8 h 20 min/day, Sunday off. 31 December 2028 is a day off; other holidays and vacation are not deducted. Required work finishes on 30 December 2028 with no remaining buffer. All 127 tasks are individually estimated: 701 h learning, 1,235 h implementation, 664 h verification. New learning is never proportionally scaled to a date. Routine debugging is included; no blanket rework percentage is added. Dates depend on gates and material receipt. Shipping, unattended printing and cooling require elapsed time with no separate durations reserved."
+      "ru": "2 января 2027 — ознакомление с планом; учебные задания с понедельника, 04.01.2027. Пн–Сб по 8 ч 20 мин, 50 ч в неделю; воскресенье свободно. 31 декабря 2027 — рабочий день; прочие праздники и отпуск не вычтены. 2 591 ч 40 мин обязательной работы завершаются 31.12.2027. Изучение — 701 ч, реализация — 1 231 ч, проверка — 659 ч 40 мин. Для сохранения 50 ч/неделю сняты 8 ч 20 мин знакомой подготовки среды, Python/записей и оформления выпуска; изучение новых тем и физические испытания сохранены. Даты зависят от приёмок и наличия деталей; отдельный процент на непредсказуемые переделки не добавлен.",
+      "en": "2 January 2027: programme orientation; study tasks start Monday 4 January 2027. Mon–Sat at 8 h 20 min, 50 h/week; Sunday off. 31 December 2027 is a workday; other holidays and vacation are not deducted. 2,591 h 40 min of required work finish on 31 December 2027. Learning: 701 h; implementation: 1,231 h; verification: 659 h 40 min. Retain 50 h/week by removing 8 h 20 min of familiar setup, Python/replay and release organization; new learning and physical trials are retained. Dates depend on acceptance and materials; no blanket rework percentage is added."
     },
     "material_ready_conditions": [
       {
@@ -15226,12 +15226,12 @@
         "stage": "L1",
         "task_index": 2,
         "source_task": "L1.L1c",
-        "nominal_slot_start": "2028-04-21",
+        "nominal_slot_start": "2027-04-22",
         "order_gate": "L1.L1a",
-        "nominal_gate_finish": "2028-04-19",
+        "nominal_gate_finish": "2027-04-21",
         "condition": {
-          "ru": "Поставка: образец привода нужен к началу L1 18.04.2028. Ещё два совместимых привода заказываются после проверки образца, намеченной на 19.04; сборка трёх приводов с 21.04 возможна только после их получения. Время доставки не подтверждено. Пока детали в пути, выполнять независимые CAD/подготовительные работы и пересчитать даты зависимой сборки и испытаний.",
-          "en": "Materials: the actuator sample is needed before L1 on 18 April 2028. Order two more compatible drives after the sample check targeted for 19 April; the three-drive assembly slot from 21 April is conditional on receipt. Delivery time is unconfirmed. Use independent CAD/preparation work during the wait and reforecast dependent assembly and trials."
+          "ru": "Поставка: образец привода нужен к началу L1 19.04.2027. Ещё два совместимых привода заказываются после проверки образца, намеченной на 21.04; сборка трёх приводов с 22.04 возможна только после их получения. Время доставки не подтверждено. Пока детали в пути, выполнять независимые CAD/подготовительные работы и пересчитать даты зависимой сборки и испытаний.",
+          "en": "Materials: the actuator sample is needed before L1 on 19 April 2027. Order two more compatible drives after the sample check targeted for 21 April; the three-drive assembly slot from 22 April is conditional on receipt. Delivery time is unconfirmed. Use independent CAD/preparation work during the wait and reforecast dependent assembly and trials."
         }
       },
       {
@@ -15239,12 +15239,12 @@
         "stage": "A1",
         "task_index": 1,
         "source_task": "ARM.A02",
-        "nominal_slot_start": "2028-06-28",
+        "nominal_slot_start": "2027-06-30",
         "order_gate": "ARM.A01",
-        "nominal_gate_finish": "2028-06-28",
+        "nominal_gate_finish": "2027-06-30",
         "condition": {
-          "ru": "Поставка: выбор плечевого привода завершается по плану 28.06.2028; PR5 разрешает заказ только после этого. 28.06 — начало планового слота A02, а не обещание получения привода в тот же день. Работы с приводом и нагрузочная проверка ждут фактической поставки; независимую подготовку оснастки можно продолжать. Если ожидание не помещается в перестановку работ, пересчитать окончание A02 и последующие даты.",
-          "en": "Materials: shoulder-actuator selection is targeted for 28 June 2028; PR5 permits ordering only afterward. 28 June is the nominal A02 work slot, not a promise of same-day receipt. Motor-dependent work and loaded qualification wait for actual delivery; independent fixture preparation may continue. If resequencing cannot absorb the wait, reforecast A02 completion and dependent dates."
+          "ru": "Поставка: выбор плечевого привода завершается по плану 30.06.2027; PR5 разрешает заказ только после этого. 30.06 — начало планового слота A02, а не обещание получения привода в тот же день. Работы с приводом и нагрузочная проверка ждут фактической поставки; независимую подготовку оснастки можно продолжать. Если ожидание не помещается в перестановку работ, пересчитать окончание A02 и последующие даты.",
+          "en": "Materials: shoulder-actuator selection is targeted for 30 June 2027; PR5 permits ordering only afterward. 30 June is the nominal A02 work slot, not a promise of same-day receipt. Motor-dependent work and loaded qualification wait for actual delivery; independent fixture preparation may continue. If resequencing cannot absorb the wait, reforecast A02 completion and dependent dates."
         }
       },
       {
@@ -15252,29 +15252,27 @@
         "stage": "T2",
         "task_index": 1,
         "source_task": "TAIL.T05",
-        "nominal_slot_start": "2028-09-22",
+        "nominal_slot_start": "2027-09-23",
         "order_gate": "TAIL_T04_PASS",
-        "nominal_gate_finish": "2028-09-22",
+        "nominal_gate_finish": "2027-09-23",
         "condition": {
-          "ru": "Поставка: ещё четыре привода заказываются только после PASS первой активной секции T04, намеченного на 22.09.2028. Слот T05 с 22.09 не предполагает поставку в тот же день. Монтаж этих приводов, полная калибровка и завершение T05 зависят от получения деталей; на время доставки перенести независимые работы и при необходимости пересчитать даты. 0 ч свободной ёмкости не гарантируют покрытие календарного срока доставки.",
-          "en": "Materials: order the other four drives only after first-active-section T04 PASS, targeted for 22 September 2028. The T05 slot from 22 September does not assume same-day delivery. Installing these drives, full calibration and T05 completion depend on receipt; bring independent work forward during shipping and reforecast dates when needed. The 0 h of unallocated capacity do not guarantee coverage of elapsed delivery time."
+          "ru": "Поставка: ещё четыре привода заказываются только после PASS первой активной секции T04, намеченного на 23.09.2027. Слот T05 с 23.09 не предполагает поставку в тот же день. Монтаж этих приводов, полная калибровка и завершение T05 зависят от получения деталей; на время доставки перенести независимые работы и при необходимости пересчитать даты. 0 ч свободной ёмкости не гарантируют покрытие календарного срока доставки.",
+          "en": "Materials: order the other four drives only after first-active-section T04 PASS, targeted for 23 September 2027. The T05 slot from 23 September does not assume same-day delivery. Installing these drives, full calibration and T05 completion depend on receipt; bring independent work forward during shipping and reforecast dates when needed. The 0 h of unallocated capacity do not guarantee coverage of elapsed delivery time."
         }
       }
     ]
   },
-  "work_finish": "2028-12-30",
-  "calendar_finish": "2028-12-30",
-  "calendar_capacity_minutes": 156000,
-  "allocated_minutes": 156000,
+  "work_finish": "2027-12-31",
+  "calendar_finish": "2027-12-31",
+  "calendar_capacity_minutes": 155500,
+  "allocated_minutes": 155500,
   "buffer_minutes": 0,
   "daily_minutes": 500,
-  "weekly_hours": 50,
-  "week_start": "2027-12-27",
+  "weekly_hours": 50.0,
+  "week_start": "2027-01-04",
   "first_partial_week_minutes": 0,
-  "final_partial_week_minutes": 0,
-  "excluded_dates": [
-    "2028-12-31"
-  ],
+  "final_partial_week_minutes": 2500,
+  "excluded_dates": [],
   "interior_excluded_minutes": 0,
   "practica_2027": {
     "added_on": "2026-10-19",
@@ -15310,5 +15308,13 @@
       "tendon-friction",
       "connected-foundations"
     ]
+  },
+  "orientation": {
+    "date": "2027-01-02",
+    "title": {
+      "ru": "Ознакомление с планом",
+      "en": "Programme orientation"
+    },
+    "counts_toward_core_hours": false
   }
 }

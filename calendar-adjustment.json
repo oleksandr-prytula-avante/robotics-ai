@@ -1,0 +1,141 @@
+{
+  "version": "4.8",
+  "baseline_commit": "eaa16b0",
+  "orientation": "2027-01-02",
+  "study_start": "2027-01-04",
+  "finish": "2027-12-31",
+  "weekly_hours": 50,
+  "before_minutes": 156000,
+  "after_minutes": 155500,
+  "removed_minutes": 500,
+  "learning_minutes": 42060,
+  "physical_task_hours_unchanged": true,
+  "changes": [
+    {
+      "task": "M01.1",
+      "title": {
+        "ru": "Диагностика, среда и ранняя проверка ROS/Gazebo",
+        "en": "Diagnostic, environment and early ROS/Gazebo preflight"
+      },
+      "before_minutes": {
+        "learn": 60,
+        "build": 180,
+        "verify": 120
+      },
+      "after_minutes": {
+        "learn": 60,
+        "build": 120,
+        "verify": 60
+      },
+      "removed_minutes": 120
+    },
+    {
+      "task": "M01.3",
+      "title": {
+        "ru": "Единицы, каналы и Python-анализ одного сустава",
+        "en": "Units, channels and Python analysis for one joint"
+      },
+      "before_minutes": {
+        "learn": 60,
+        "build": 60,
+        "verify": 60
+      },
+      "after_minutes": {
+        "learn": 60,
+        "build": 30,
+        "verify": 30
+      },
+      "removed_minutes": 60
+    },
+    {
+      "task": "M01.4",
+      "title": {
+        "ru": "Минимальное воспроизведение записей и контракт потока",
+        "en": "Minimal replay and stream contract"
+      },
+      "before_minutes": {
+        "learn": 60,
+        "build": 60,
+        "verify": 60
+      },
+      "after_minutes": {
+        "learn": 60,
+        "build": 30,
+        "verify": 30
+      },
+      "removed_minutes": 60
+    },
+    {
+      "task": "M24.1",
+      "title": {
+        "ru": "Сверить требования и уже собранные доказательства",
+        "en": "Reconcile requirements with existing evidence"
+      },
+      "before_minutes": {
+        "learn": 0,
+        "build": 60,
+        "verify": 120
+      },
+      "after_minutes": {
+        "learn": 0,
+        "build": 30,
+        "verify": 90
+      },
+      "removed_minutes": 60
+    },
+    {
+      "task": "M24.2",
+      "title": {
+        "ru": "Версии, сборка и единый воспроизводимый пакет",
+        "en": "Versions, build and one reproducible package"
+      },
+      "before_minutes": {
+        "learn": 60,
+        "build": 120,
+        "verify": 120
+      },
+      "after_minutes": {
+        "learn": 60,
+        "build": 90,
+        "verify": 90
+      },
+      "removed_minutes": 60
+    },
+    {
+      "task": "M24.3",
+      "title": {
+        "ru": "Точечная межпроектная проверка воспроизводимости",
+        "en": "Targeted cross-project reproducibility check"
+      },
+      "before_minutes": {
+        "learn": 0,
+        "build": 60,
+        "verify": 180
+      },
+      "after_minutes": {
+        "learn": 0,
+        "build": 30,
+        "verify": 150
+      },
+      "removed_minutes": 60
+    },
+    {
+      "task": "M24.4",
+      "title": {
+        "ru": "Портфолио, ограничения и короткая защита решений",
+        "en": "Portfolio, limitations and a concise design defence"
+      },
+      "before_minutes": {
+        "learn": 60,
+        "build": 60,
+        "verify": 120
+      },
+      "after_minutes": {
+        "learn": 60,
+        "build": 30,
+        "verify": 70
+      },
+      "removed_minutes": 80
+    }
+  ]
+}

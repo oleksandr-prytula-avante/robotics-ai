@@ -5,7 +5,7 @@ from datetime import date, timedelta
 
 
 def render_infographic(schedule, bi, duration):
-    start = date.fromisoformat(schedule['start'])
+    start = date.fromisoformat(schedule.get('orientation',{}).get('date',schedule['start']))
     deadline = date.fromisoformat(schedule['deadline'])
     days = (deadline - start).days + 1
     items = {item['id']: item for item in schedule['items']}
@@ -40,13 +40,13 @@ def render_infographic(schedule, bi, duration):
 
     out = ['<!-- timeline-infographic -->', '<section class="roadmap" id="timeline" aria-labelledby="timeline-title">',
            '<div class="roadmap-heading"><div><div class="eyebrow">'
-           + bi('Маршрут · 2028', 'The route · 2028')
+           + bi(f'Маршрут · {deadline.year}', f'The route · {deadline.year}')
            + '</div><h2 id="timeline-title">' + bi('От базы к трём роботам', 'From foundations to three robots')
            + '</h2></div><a class="roadmap-method" href="method.html">'
            + bi('Расчёт часов ↗', 'Hours & method ↗') + '</a></div>',
            '<div class="roadmap-stats">']
     for value, ru, en in [
-        (short_date(schedule['start']), 'Старт', 'Start'),
+        (short_date(schedule['start']), 'Старт учёбы', 'Study starts'),
         (short_date(schedule['work_finish']), 'Плановый финиш', 'Planned finish'),
         (duration(schedule['buffer_minutes']), 'Запас до конца года', 'Buffer through year-end'),
     ]:
@@ -83,6 +83,9 @@ def render_infographic(schedule, bi, duration):
     out += ['</div></div>', '<p class="roadmap-caption">'
             + bi('Полосы — календарные интервалы. Нажмите на этап, чтобы открыть задания.',
                  'Bars show calendar spans. Select a stage to open its tasks.') + '</p>',
+            '<p class="small"><a href="months/'+schedule['orientation']['date'][:7]+'.html#orientation">'
+            + bi(short_date(schedule['orientation']['date'])+' — ознакомление с планом; учебные часы с понедельника.',
+                 short_date(schedule['orientation']['date'])+' — programme orientation; study hours begin Monday.')+'</a></p>',
             '<div class="roadmap-milestones">']
     checkpoints = [
         ('G1', 'hexapod', 'Первая нога', 'First leg'),
@@ -99,8 +102,8 @@ def render_infographic(schedule, bi, duration):
                    + short_date(item['end']) + '</time><strong>' + bi(ru, en) + '</strong></span></a>')
     out += ['</div><div class="roadmap-footer"><span>'
             + bi('50 ч/нед · Пн–Сб · 8 ч 20 мин/день', '50 h/week · Mon–Sat · 8 h 20 min/day')
-            + '</span><span>' + bi('Выходной: 31.12.28',
-                                  'Day off: 31.12.28')
+            + '</span><span>' + bi(f'Воскресенье — выходной; {deadline:%d.%m.%y} — рабочий день',
+                                  f'Sunday off; {deadline:%d.%m.%y} is a workday')
             + '</span></div></section><!-- /timeline-infographic -->']
     return '\n'.join(out)
 

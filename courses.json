@@ -1057,8 +1057,8 @@
         "en": "This is contingency/free capacity, not a teaching topic. Select a course only for an identified gap; leave the reserve unallocated."
       },
       "title": {
-        "ru": "Свободная ёмкость до конца 2027",
-        "en": "Unallocated capacity before the end of 2027"
+        "ru": "Запас на задержки и переделки до конца 2027",
+        "en": "Buffer for delays and rework through 2027"
       }
     }
   },
