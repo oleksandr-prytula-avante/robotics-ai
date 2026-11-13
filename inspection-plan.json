@@ -1,0 +1,351 @@
+{
+  "version": "1.1",
+  "updated_on": "2026-11-13",
+  "decision": {
+    "ru": "Сохранить три устройства и полный объём основной программы редакции 4.8 с плановым завершением 31.12.2027. Автономная инспекция — отдельное продолжение в 2028 году после приёмки G4; в обязательные часы 2027 года не входит.",
+    "en": "Retain all three devices and the full revision 4.8 core programme, planned to finish on 31 December 2027. Autonomous inspection is a separate 2028 extension after G4 acceptance, outside the required 2027 hours."
+  },
+  "title": {
+    "ru": "Автономный гексапод для инспекции помещения",
+    "en": "Autonomous hexapod for indoor inspection"
+  },
+  "start": "2028-01-03",
+  "daily_minutes": 500,
+  "workdays": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "excluded_dates": [],
+  "buffer_hours": 80,
+  "base_schedule": "schedule.json",
+  "stages": [
+    {
+      "id": "N1",
+      "title": {
+        "ru": "Датчики, вычислитель и интерфейс походки",
+        "en": "Sensors, compute and gait interface"
+      },
+      "hours": 40,
+      "range_hours": [
+        30,
+        55
+      ],
+      "learn": 10,
+      "build": 22,
+      "verify": 8,
+      "prerequisites": [
+        "G4"
+      ],
+      "work": {
+        "ru": "Заморозить помещение и маршрут; выбрать один комплект датчиков и Linux-вычислитель по массе, питанию и драйверам. Проверить крепления, охлаждение, отметки времени, TF, ограничение скорости и остановку по таймауту команды. Измерить устойчивость и запас питания с новой нагрузкой.",
+        "en": "Freeze the room and route; select one sensor set and Linux computer against mass, power and driver constraints. Verify mounts, cooling, timestamps, TF, velocity limits and command-timeout stop. Measure stability and power margin with the added load."
+      },
+      "acceptance": {
+        "ru": "PASS: датчики пишут синхронизированные записи; гексапод с полной нагрузкой сохраняет принятый рабочий диапазон; потеря команды вызывает проверенную остановку. При непрохождении — HOLD до изменения комплектации.",
+        "en": "PASS: synchronized sensor recordings; the fully loaded hexapod retains its accepted operating envelope; command loss triggers a verified stop. Otherwise HOLD until the hardware configuration is corrected."
+      },
+      "planned_calendar": {
+        "start": "2028-01-03",
+        "end": "2028-01-07",
+        "start_day_offset_minutes": 0,
+        "end_day_offset_minutes": 400
+      }
+    },
+    {
+      "id": "N2",
+      "title": {
+        "ru": "Одометрия, карта и локализация",
+        "en": "Odometry, mapping and localization"
+      },
+      "hours": 90,
+      "range_hours": [
+        70,
+        120
+      ],
+      "learn": 25,
+      "build": 40,
+      "verify": 25,
+      "prerequisites": [
+        "N1"
+      ],
+      "work": {
+        "ru": "Получить измеренную одометрию: совмещение сканов или визуальная одометрия с IMU; опорные контакты использовать только при доступных проверенных измерениях. Настроить map → odom → base_link, covariance и наблюдение за качеством. Построить карту под ручным управлением, затем локализоваться на сохранённой карте. Проверить влияние качки корпуса, проскальзывания и повторяющейся геометрии.",
+        "en": "Obtain measured odometry from scan matching or visual odometry plus IMU; use support contacts only where validated measurements exist. Configure map → odom → base_link, covariance and quality monitoring. Map under teleoperation, then localize on the saved map. Evaluate body oscillation, foot slip and repetitive geometry."
+      },
+      "acceptance": {
+        "ru": "PASS: независимые контрольные точки и повторы маршрута подтверждают согласованные пределы ошибки; потеря локализации обнаруживается. Командная скорость и двойное интегрирование IMU не считаются доказанной одометрией.",
+        "en": "PASS: independent reference points and repeated routes demonstrate the agreed error limits; localization loss is detected. Commanded velocity and double-integrated IMU alone do not establish validated odometry."
+      },
+      "planned_calendar": {
+        "start": "2028-01-07",
+        "end": "2028-01-20",
+        "start_day_offset_minutes": 400,
+        "end_day_offset_minutes": 300
+      }
+    },
+    {
+      "id": "N3",
+      "title": {
+        "ru": "Nav2 на шагающей платформе",
+        "en": "Nav2 on a walking platform"
+      },
+      "hours": 60,
+      "range_hours": [
+        45,
+        80
+      ],
+      "learn": 16,
+      "build": 28,
+      "verify": 16,
+      "prerequisites": [
+        "N2"
+      ],
+      "work": {
+        "ru": "Соединить Nav2 с существующим контроллером походки через адаптер команд скорости. Ограничить направления, ускорение и поворот измеренным диапазоном. Задать контур с учётом полного размаха ног, карты препятствий, замедление, отмену задания и восстановление. Сначала симуляция, затем известная карта помещения.",
+        "en": "Connect Nav2 to the existing gait controller through a velocity-command adapter. Bound directions, acceleration and turning to the measured envelope. Model the full swept leg footprint, obstacle layers, slowdown, cancellation and recovery. Validate in simulation, then on the known room map."
+      },
+      "acceptance": {
+        "ru": "PASS: цели достигаются без касания препятствий; заблокированный путь приводит к перепланированию или остановке. Тормозной путь, задержка реакции и запас до препятствия измерены на выбранной скорости.",
+        "en": "PASS: goals are reached without obstacle contact; a blocked route leads to replanning or stopping. Stopping distance, response latency and obstacle margin are measured at the selected speed."
+      },
+      "planned_calendar": {
+        "start": "2028-01-20",
+        "end": "2028-01-28",
+        "start_day_offset_minutes": 300,
+        "end_day_offset_minutes": 400
+      }
+    },
+    {
+      "id": "N4",
+      "title": {
+        "ru": "Инспекционная миссия и интерфейс оператора",
+        "en": "Inspection mission and operator interface"
+      },
+      "hours": 40,
+      "range_hours": [
+        30,
+        50
+      ],
+      "learn": 8,
+      "build": 24,
+      "verify": 8,
+      "prerequisites": [
+        "N3"
+      ],
+      "work": {
+        "ru": "Одна миссия: старт → 3–5 контрольных точек → снимок и запись состояния в каждой точке → возврат в стартовую зону. Добавить запуск, отмену, прогресс, причину остановки и журнал. Записи сохранять локально; отсутствие Wi-Fi не должно терять результаты или оставлять устаревшую команду движения.",
+        "en": "One mission: start → 3–5 checkpoints → image and state capture at each checkpoint → return to the start area. Add start, cancel, progress, stop reason and event log. Store records locally; Wi-Fi loss must not lose results or leave stale motion commands active."
+      },
+      "acceptance": {
+        "ru": "PASS: отчёт связывает точку, время, позу, снимок и исход; перезапуск не выдаёт незавершённую миссию за успешную. Возврат — в стартовую зону, без автоматической зарядной стыковки.",
+        "en": "PASS: the report links checkpoint, time, pose, image and outcome; restart does not label an incomplete mission successful. Return means the start area, without automatic charging docking."
+      },
+      "planned_calendar": {
+        "start": "2028-01-28",
+        "end": "2028-02-03",
+        "start_day_offset_minutes": 400,
+        "end_day_offset_minutes": 300
+      }
+    },
+    {
+      "id": "N5",
+      "title": {
+        "ru": "Повторные испытания и отказы",
+        "en": "Repeated trials and fault handling"
+      },
+      "hours": 60,
+      "range_hours": [
+        55,
+        80
+      ],
+      "learn": 5,
+      "build": 15,
+      "verify": 40,
+      "prerequisites": [
+        "N4"
+      ],
+      "work": {
+        "ru": "Зафиксировать протокол до итогового прогона: 20 миссий в несколько дней, неизменённая и изменённая обстановка. Отдельно воспроизвести перекрытый проход, отсутствие сканов, потерю локализации, разрыв сети и перезапуск узла. Сравнить время, ошибки, вмешательства и расход энергии; исправить обнаруженные причины отказов.",
+        "en": "Freeze the protocol before final evaluation: 20 missions across multiple days in unchanged and modified layouts. Separately exercise blocked passage, missing scans, localization loss, network disconnect and node restart. Compare duration, errors, interventions and energy use; correct observed failure causes."
+      },
+      "acceptance": {
+        "ru": "Цель приёмки: ≥18/20 миссий без вмешательства, 0 контактов с препятствиями, полный фотоотчёт успешных миссий; каждый заявленный отказ проверен минимум 3 раза с корректной остановкой или восстановлением. Любой небезопасный исход — HOLD. Это целевые критерии, не уже достигнутые показатели.",
+        "en": "Acceptance target: ≥18/20 missions without intervention, zero obstacle contacts, complete photo reports for successful missions; each declared fault exercised at least 3 times with appropriate stop or recovery. Any unsafe outcome means HOLD. These are targets, not achieved results."
+      },
+      "planned_calendar": {
+        "start": "2028-02-03",
+        "end": "2028-02-11",
+        "start_day_offset_minutes": 300,
+        "end_day_offset_minutes": 400
+      }
+    },
+    {
+      "id": "N6",
+      "title": {
+        "ru": "Воспроизводимый выпуск и портфолио",
+        "en": "Reproducible release and portfolio"
+      },
+      "hours": 30,
+      "range_hours": [
+        30,
+        35
+      ],
+      "learn": 3,
+      "build": 12,
+      "verify": 15,
+      "prerequisites": [
+        "N5"
+      ],
+      "work": {
+        "ru": "Зафиксировать версии, конфигурации, BOM дополнения и ограничения. Выполнить сборку по инструкции на чистой Linux-среде, CI и проверки на записях. Подготовить архитектуру, видео полной миссии, таблицу метрик, разбор одного отказа и техническую презентацию на английском.",
+        "en": "Freeze versions, configurations, the extension BOM and limits. Build from the instructions in a clean Linux environment; run CI and recorded-data checks. Prepare architecture, a full-mission video, metric table, one failure analysis and an English technical presentation."
+      },
+      "acceptance": {
+        "ru": "PASS: независимый читатель может собрать ПО и воспроизвести анализ записей; журнал физических испытаний отделён от симуляции. Финальный выпуск принят только после N5.",
+        "en": "PASS: an independent reader can build the software and reproduce recorded-data analysis; physical trials are distinguished from simulation. Final release is accepted only after N5."
+      },
+      "planned_calendar": {
+        "start": "2028-02-11",
+        "end": "2028-02-16",
+        "start_day_offset_minutes": 400,
+        "end_day_offset_minutes": 200
+      }
+    }
+  ],
+  "scope": {
+    "ru": "Один заранее обследованный этаж, ровный сухой пол, медленная проверенная походка, 3–5 точек и фотоотчёт. Карта строится под ручным управлением; миссии выполняются автономно на сохранённой карте. Испытания проходят под наблюдением оператора.",
+    "en": "One surveyed floor, level dry surface, a slow validated gait, 3–5 checkpoints and a photo report. Mapping is teleoperated; missions run autonomously on the saved map. An operator supervises trials."
+  },
+  "excluded_scope": {
+    "ru": "Лестницы, пересечённая местность, выбор опоры на сложном рельефе, RL-походка, автоматическая зарядка, распознавание дефектов нейросетью и промышленная сертификация не включены.",
+    "en": "Stairs, rough terrain, terrain-aware foothold selection, RL locomotion, automatic docking, neural defect detection and industrial certification are excluded."
+  },
+  "calendar_policy": {
+    "ru": "По schedule.json редакции 4.8 основная программа и G4 планово завершаются 31.12.2027; декабрьский запас — 0 ч. Продолжение начинается после фактического PASS G4 и готовности оборудования, не раньше понедельника 03.01.2028. Пн–Сб по 8 ч 20 мин, 50 ч в полной неделе; воскресенье свободно. Праздники и отпуск отдельно не вычтены. Номинальные 320 ч заканчиваются 16.02.2028; отдельные 80 ч резерва доводят календарь до 26.02.2028. Это условный прогноз, не подтверждение приёмок. Пропуски, HOLD основной программы и задержки поставок требуют пересчёта дат; заочное прохождение приёмок не допускается.",
+    "en": "Revision 4.8 schedule.json plans core completion and G4 for 31 December 2027 with zero December buffer. The extension begins after actual G4 PASS and hardware readiness, no earlier than Monday 3 January 2028. Mon–Sat at 8 h 20 min/day, 50 h per full week; Sundays off. Holidays and vacation are not separately deducted. Nominal 320 h finish on 16 February 2028; the separate 80 h buffer extends the calendar to 26 February 2028. This is a conditional forecast, not evidence of acceptance. Missed work, core HOLD outcomes and delivery delays require reforecasting; gates cannot be waived by calendar date."
+  },
+  "estimation_basis": {
+    "ru": "Авторская предварительная оценка после готового гексапода и общего ROS/C++ стека: 260–420 ч, рабочая оценка 320 ч, отдельный запас 80 ч. Включены изучение новых тем, интеграция и испытания; исходные FK/IK, походка, IMU, интерфейсы и CI не разрабатываются заново. Это уточнение выбранного проекта из G-SLAM/G-NAVIGATION, а не сумма всех упражнений этих веток. Диапазон не является статистическим доверительным интервалом.",
+    "en": "Author planning estimate assuming an accepted hexapod and shared ROS/C++ stack: 260–420 h, nominal 320 h, separate 80 h buffer. Includes learning, integration and validation; existing FK/IK, gait, IMU, interfaces and CI are reused. Refines the selected G-SLAM/G-NAVIGATION project rather than adding every exercise in those branches. The range is not a statistical confidence interval."
+  },
+  "hardware": [
+    {
+      "id": "INSP-SENSING",
+      "quantity": 1,
+      "title": {
+        "ru": "Один комплект локализации и обзора препятствий",
+        "en": "One localization and obstacle-sensing set"
+      },
+      "condition": {
+        "ru": "Базовый кандидат — 2D LiDAR с существующей IMU; проверить качку и наклон сканов. При непригодности выбрать RGB-D/визуальную одометрию и пересчитать крепление и вычисления. Второй стек одновременно не закладывается.",
+        "en": "Baseline candidate: 2D LiDAR with the existing IMU; validate body motion and scan tilt. If unsuitable, select RGB-D/visual odometry and re-estimate mounting and compute. Two concurrent sensing stacks are not budgeted."
+      }
+    },
+    {
+      "id": "INSP-COMPUTE",
+      "quantity": 1,
+      "title": {
+        "ru": "Бортовой Linux-вычислитель с накопителем",
+        "en": "Onboard Linux compute and storage"
+      },
+      "condition": {
+        "ru": "Выбрать по измеренной нагрузке и поддержке драйверов; ранее опциональный Pi не считается автоматически подходящим. Проверить охлаждение и питание.",
+        "en": "Select against measured workload and driver support; the previously optional Pi is not assumed suitable. Verify cooling and power."
+      }
+    },
+    {
+      "id": "INSP-CAMERA",
+      "quantity": 1,
+      "title": {
+        "ru": "Камера фотоотчёта",
+        "en": "Inspection camera"
+      },
+      "condition": {
+        "ru": "Повторное использование камеры манипулятора допустимо только при доступности и повторной калибровке; иначе нужна отдельная камера.",
+        "en": "Reuse of the arm camera requires availability and recalibration; otherwise a separate camera is needed."
+      }
+    },
+    {
+      "id": "INSP-MOUNT",
+      "quantity": 1,
+      "title": {
+        "ru": "Комплект креплений, питания и кабелей",
+        "en": "Mounting, power and cabling set"
+      },
+      "condition": {
+        "ru": "Масса, центр тяжести, питание и продолжительность миссии должны пройти проверку с полной нагрузкой.",
+        "en": "Mass, centre of gravity, power and mission endurance must pass full-load qualification."
+      }
+    }
+  ],
+  "procurement_status": {
+    "ru": "Дополнительные позиции ещё не оценены в деньгах и не входят в существующий бюджет procurement.json. Совместимость и сроки поставки не подтверждены. Закупки подготовить до N1; ожидание поставки не считать рабочими часами и не скрывать в оценке.",
+    "en": "Additional items are unpriced and excluded from the existing procurement.json budget. Compatibility and delivery dates are unconfirmed. Prepare procurement before N1; delivery waiting is elapsed time, not work hours hidden in the estimate."
+  },
+  "sources": [
+    {
+      "title": "Nav2: odometry requirements",
+      "url": "https://github.com/ros-navigation/docs.nav2.org/blob/rolling/docs/configuration_and_development/first_time_robot_setup_guide/odom/setup_odom.md"
+    },
+    {
+      "title": "Nav2: robot_localization setup",
+      "url": "https://github.com/ros-navigation/docs.nav2.org/blob/rolling/docs/configuration_and_development/first_time_robot_setup_guide/odom/setup_robot_localization.md"
+    },
+    {
+      "title": "Nav2: tuning and robot footprint",
+      "url": "https://github.com/ros-navigation/docs.nav2.org/blob/rolling/docs/configuration_and_development/tuning_guide.md"
+    },
+    {
+      "title": "Nav2: Simple Commander and inspection example",
+      "url": "https://docs.nav2.org/rolling/configuration_and_development/simple_commander_api/simple_commander_api/"
+    }
+  ],
+  "base_programme": {
+    "version": "4.8",
+    "calendar_config": "calendar-config.json",
+    "calendar_review": "timeline-review.json",
+    "start": "2027-01-04",
+    "planned_finish": "2027-12-31",
+    "allocated_minutes": 155500,
+    "buffer_minutes": 0,
+    "required_gate": "G4",
+    "gate_planned_finish": "2027-12-31",
+    "gate_acceptance_verified": false,
+    "note": {
+      "ru": "Снимок планового календаря, не подтверждение выполнения. После 2 591 ч 40 мин основной работы до конца 2027 года остаётся 0 ч запаса. Резерв продолжения не является резервом основной программы.",
+      "en": "Planning-calendar snapshot, not evidence of completion. The 2,591 h 40 min core workload leaves zero buffer through the end of 2027. The extension buffer is separate from the core programme."
+    }
+  },
+  "forecast": {
+    "status": "conditional_plan",
+    "note": {
+      "ru": "Даты рассчитаны для номинальных 320 ч и последовательного выполнения N1–N6, без пересечений с основной программой. Диапазон 260–420 ч относится к работе без резерва и остаётся предварительной оценкой. Границы этапов могут попадать на один день: смещения показывают минуты от начала учебного дня. 80 ч резерва начинаются после N6, в оставшуюся часть 16.02.2028; к работе каждого этапа повторно не прибавляются.",
+      "en": "Dates use the nominal 320 h and sequential N1–N6 work, with no overlap with the core programme. The 260–420 h range excludes buffer and remains a preliminary estimate. Stages may share a boundary day; offsets are minutes from the start of the study day. The 80 h buffer starts after N6 in the remainder of 16 February 2028 and is not added again to individual stages."
+    },
+    "weekly_hours": 50,
+    "nominal_hours": 320,
+    "range_hours": [
+      260,
+      420
+    ],
+    "category_hours": {
+      "learn": 67,
+      "build": 141,
+      "verify": 112
+    },
+    "buffer_hours": 80,
+    "total_hours_with_buffer": 400,
+    "work_finish": "2028-02-16",
+    "calendar_finish": "2028-02-26",
+    "buffer_calendar": {
+      "start": "2028-02-16",
+      "end": "2028-02-26",
+      "start_day_offset_minutes": 200,
+      "end_day_offset_minutes": 500
+    }
+  }
+}
