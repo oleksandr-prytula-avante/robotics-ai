@@ -36,6 +36,8 @@ jobs:
           node --test tests/language.test.cjs
           python3 tests/site_test.py
           python3 tests/content_test.py
+          python3 tests/growth_timeline_test.py
+          python3 scripts/render_growth_timeline.py --check
           python3 scripts/render_procurement.py --check
           python3 scripts/render_gear_basics.py --check
       - name: Setup Pages

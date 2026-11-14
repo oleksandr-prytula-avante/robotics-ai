@@ -1265,12 +1265,12 @@
       "courses": [],
       "status": "gap",
       "note": {
-        "ru": "Прямого проверенного курса для этого результата не выбрано. Использовать материалы трека; не покупать смежный курс ради формального покрытия.",
-        "en": "No vetted direct course selected for this outcome. Use track resources; do not buy a neighbouring topic merely to fill a slot."
+        "ru": "BC/DAgger → ACT: использовать бесплатные статью и официальный код ALOHA/ACT, затем руководство LeRobot. Прямого проверенного Udemy-курса нет; источники и практика — в D_IL.",
+        "en": "BC/DAgger → ACT: use the free ALOHA/ACT paper and official code, then the LeRobot guide. No vetted direct Udemy course; see D_IL for sources and practice."
       },
       "title": {
-        "ru": "Обучение по демонстрациям: BC и DAgger",
-        "en": "Imitation learning: BC and DAgger"
+        "ru": "Обучение по демонстрациям: BC, DAgger и ACT; система ALOHA",
+        "en": "Imitation learning: BC, DAgger and ACT; the ALOHA system"
       }
     },
     "G-MULTILANGUAGE": {

@@ -58,3 +58,36 @@
 @media(max-width:1050px){.roadmap{padding:22px}.roadmap-heading{align-items:start}.roadmap-heading h2{font-size:27px}.roadmap-heading .eyebrow{font-size:10px}.roadmap-method{white-space:normal;max-width:100px}.roadmap-milestones{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:720px){.roadmap{padding:20px 16px}.roadmap-heading{display:block}.roadmap-method{display:inline-block;max-width:none;margin-top:12px}.roadmap-heading h2{font-size:27px}.roadmap-stats{grid-template-columns:1fr 1fr;gap:18px 10px;margin:20px 0}.roadmap-stats>div{padding-left:10px}.roadmap-stats>div:last-child{grid-column:1 / -1;border:0;padding:14px 0 0;border-top:1px solid var(--line)}.roadmap-stats strong{font-size:22px}.roadmap-stats>div:last-child strong{font-size:20px}.roadmap-caption{font-size:11px}.roadmap-milestones{gap:18px 10px}.roadmap-checkpoint{gap:7px}.roadmap-checkpoint strong{font-size:12px}.roadmap-step{width:24px;height:24px}.roadmap-footer{display:block}.roadmap-footer>span{display:block;margin-top:4px}}
 @media print{.roadmap{padding:16px;break-inside:avoid;print-color-adjust:exact;-webkit-print-color-adjust:exact}.roadmap-chart{min-width:0}.roadmap-scroll{overflow:visible}.roadmap-axis,.roadmap-row{grid-template-columns:115px minmax(0,1fr)}.roadmap-heading h2{font-size:23px}.roadmap-method{display:none}.roadmap-stats strong{font-size:20px}.roadmap-milestones{grid-template-columns:repeat(3,minmax(0,1fr))}.roadmap-assumptions>div{display:block}.roadmap-bar{font-size:7px}}
+
+/* Optional-track forecast: native radio controls also work offline without JS. */
+.growth-timeline{border-top-color:var(--blue)}
+.growth-timeline>.small{margin-top:18px}
+.growth-timeline .roadmap-stats{grid-template-columns:1fr 1fr 1.4fr}
+.growth-timeline .roadmap-stats strong{font-size:clamp(17px,1.7vw,24px)}
+.growth-estimates{border:0;padding:0;margin:0;min-width:0}
+.growth-estimates legend{font-size:12px;color:var(--muted);margin-bottom:12px}
+.growth-estimates>label{display:inline-block;padding:9px 15px;border:1px solid var(--line);font-size:13px;font-weight:700;margin:0 6px 15px 0;cursor:pointer;background:var(--panel)}
+.growth-estimate:checked+label{background:var(--ink);border-color:var(--ink);color:white}
+.growth-estimate:focus-visible+label{outline:3px solid var(--orange);outline-offset:3px}
+#growth-estimate-low:checked~.growth-scenarios .growth-scenario-high,
+#growth-estimate-high:checked~.growth-scenarios .growth-scenario-low{display:none}
+.growth-forecast{font-size:13px;margin:6px 0 14px;color:var(--muted)}
+.growth-forecast strong{color:var(--ink)}
+.growth-integration{--track:#697772}.growth-ai{--track:var(--orange)}
+.growth-models{--track:var(--blue)}.growth-control{--track:var(--green)}
+.growth-autonomy{--track:#755582}.growth-engineering{--track:var(--gold)}
+.growth-timeline .roadmap-label{font-size:11px}
+.growth-timeline .roadmap-bar{font-size:8px}
+.growth-schedule caption{text-align:left;padding:10px 14px;font-size:12px;color:var(--muted);border-bottom:1px solid var(--line)}
+.growth-schedule td{font-size:13px}
+.growth-schedule td:first-child{width:65%}
+.growth-schedule td:first-child>a{font-weight:400;text-decoration:none}
+.growth-schedule td:first-child>a:hover{text-decoration:underline}
+.growth-code{display:block;font-size:10px;font-weight:700;letter-spacing:.04em;color:var(--muted);margin-bottom:3px}
+.growth-schedule small{display:block;font-size:11px;margin-top:7px;color:var(--muted)}
+.growth-group th{background:#f2f4ef;font-size:11px}
+.growth-dates{white-space:nowrap;font-variant-numeric:tabular-nums;color:var(--muted)}
+.growth-timeline .note{margin-bottom:0}
+.growth-timeline .note p:last-child{margin:0}
+@media(max-width:720px){.growth-timeline .roadmap-stats{grid-template-columns:1fr 1fr}.growth-estimates>label{padding:9px 10px;font-size:12px}.growth-timeline .roadmap-stats>div:last-child strong{font-size:19px}.growth-schedule td{font-size:12px}.growth-schedule th,.growth-schedule td{padding:10px 8px}.growth-schedule td:first-child{width:auto}.growth-dates{font-size:10px!important}}
+@media print{.growth-timeline{break-inside:auto}.growth-estimates>label,.growth-estimates legend{display:none}.growth-schedule tr{break-inside:avoid}.growth-timeline .roadmap-stats{grid-template-columns:1fr 1fr 1.4fr}.growth-timeline .roadmap-stats strong{font-size:16px}.growth-timeline .roadmap-row{break-inside:avoid}}

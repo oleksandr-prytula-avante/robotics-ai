@@ -1,0 +1,38 @@
+{
+  "start_policy": "next_monday_after_core",
+  "daily_minutes": 500,
+  "workdays": [0, 1, 2, 3, 4, 5],
+  "excluded_dates": [],
+  "groups": [
+    {
+      "id": "integration",
+      "title": {"ru": "Интеграция и симуляция", "en": "Integration and simulation"},
+      "tracks": ["G-ROS-PERFORMANCE", "G-SIM-FIDELITY"]
+    },
+    {
+      "id": "ai",
+      "title": {"ru": "ACT, зрение и обучение", "en": "ACT, vision and learning"},
+      "tracks": ["D_IL", "G-ADV-VISION", "G-CONTACT-ML", "D_RL"]
+    },
+    {
+      "id": "models",
+      "title": {"ru": "Математика и модели", "en": "Mathematics and models"},
+      "tracks": ["D_NUM", "D_STATS", "D_KIN", "D_DYN"]
+    },
+    {
+      "id": "control",
+      "title": {"ru": "Управление и оценивание", "en": "Control and estimation"},
+      "tracks": ["D-H04-SPECTRUM", "D-H07-IDENTIFICATION", "D_FREQ", "D_STATE", "D_FORCE", "D_MPC"]
+    },
+    {
+      "id": "autonomy",
+      "title": {"ru": "SLAM и навигация", "en": "SLAM and navigation"},
+      "tracks": ["G-SLAM", "G-NAVIGATION"]
+    },
+    {
+      "id": "engineering",
+      "title": {"ru": "Инженерная практика", "en": "Engineering practice"},
+      "tracks": ["G-MULTILANGUAGE", "D-H05-FEA", "G-SECURITY-HRI", "G-ENGINEERING-EVIDENCE"]
+    }
+  ]
+}

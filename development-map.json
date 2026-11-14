@@ -410,51 +410,85 @@
     {
       "id": "D_IL",
       "title": {
-        "ru": "Обучение по демонстрациям: BC и DAgger",
-        "en": "Imitation learning: BC and DAgger"
+        "ru": "Обучение по демонстрациям: BC, DAgger и ACT; система ALOHA",
+        "en": "Imitation learning: BC, DAgger and ACT; the ALOHA system"
       },
       "themes": [
         {
-          "ru": "Проверка экспертных демонстраций, разделение данных по эпизодам, клонирование поведения (BC), одна итерация DAgger и оценка в замкнутом контуре.",
-          "en": "Expert audit, episode splits, BC, one DAgger iteration and closed-loop evaluation."
+          "ru": "ALOHA как система телеуправления и записи демонстраций; ACT как алгоритм обучения по демонстрациям. Камеры и суставы → последовательность целевых положений; action chunking, temporal ensembling, обзор transformer и CVAE.",
+          "en": "ALOHA as a teleoperation and demonstration-recording system; ACT as an imitation-learning algorithm. Cameras and joints → target-position sequences; action chunking, temporal ensembling, transformer and CVAE overview."
+        },
+        {
+          "ru": "Проверка эксперта, разделение целых эпизодов и сцен, одношаговый BC и одна итерация DAgger в симуляции; обучение ACT на той же задаче и сравнение в замкнутом контуре.",
+          "en": "Expert audit, whole-episode and scene splits, one-step BC and one simulated DAgger iteration; train ACT on the same task and compare in closed loop."
         }
       ],
       "prerequisites": [
-        "M18",
-        "M19"
+        "M08",
+        "M13",
+        "M14",
+        "M16",
+        "M17",
+        "M18"
       ],
       "entry": {
-        "ru": "Начинать после прохождения указанных проверок основной программы и выбора этого направления.",
-        "en": "Start after passing the listed core gates and choosing this direction."
+        "ru": "После проверок кинематики, симуляции, зрения, ограниченных траекторий, управления оператором и ML. До ACT уметь обучить простую модель PyTorch и объяснить train/validation/test. Для физического продолжения дополнительно пройти A3.",
+        "en": "After kinematics, simulation, vision, bounded-trajectory, operator-control and ML gates. Before ACT, train a simple PyTorch model and explain train/validation/test. Pass A3 as well before the physical extension."
       },
       "results": {
-        "ru": "Стратегия управления сравнивается с существующим классическим алгоритмом на новых эпизодах и имеет явные ограничения действий; отрицательный результат допустим.",
-        "en": "A policy is compared with the classical baseline on new episodes under explicit action bounds; a negative result is acceptable."
+        "ru": "Воспроизводимое сравнение классического алгоритма, одношагового BC и ACT на новых эпизодах: успехи/попытки, время, вмешательства, нарушения ограничений и задержка. Отдельно проверить ACT с temporal ensembling и без него; отрицательный результат допустим.",
+        "en": "Reproducible comparison of a classical algorithm, one-step BC and ACT on new episodes: successes/attempts, duration, interventions, constraint violations and latency. Compare ACT with and without temporal ensembling; a negative result is acceptable."
       },
       "outcome": {
-        "ru": "Стратегия управления сравнивается с существующим классическим алгоритмом на новых эпизодах и имеет явные ограничения действий; отрицательный результат допустим.",
-        "en": "A policy is compared with the classical baseline on new episodes under explicit action bounds; a negative result is acceptable."
+        "ru": "Воспроизводимое сравнение классического алгоритма, одношагового BC и ACT на новых эпизодах: успехи/попытки, время, вмешательства, нарушения ограничений и задержка. Отдельно проверить ACT с temporal ensembling и без него; отрицательный результат допустим.",
+        "en": "Reproducible comparison of a classical algorithm, one-step BC and ACT on new episodes: successes/attempts, duration, interventions, constraint violations and latency. Compare ACT with and without temporal ensembling; a negative result is acceptable."
       },
       "original_refs": [
         "M21 tasks1–4,11–14"
       ],
       "example_project": {
-        "ru": "В симуляции предлагать малую поправку крена и тангажа корпуса; конечный автомат походки и ограничения остаются независимыми.",
-        "en": "Propose a small simulated body roll/pitch correction while gait FSM and bounds remain independent."
+        "ru": "Начать с Transfer Cube из официального ACT в симуляции и примерно 50 экспертных эпизодов как стартового объёма, затем проверить на новых начальных положениях. Перенос лёгкого предмета собственной рукой после A3 — отдельное физическое продолжение с новым набором демонстраций.",
+        "en": "Start with the official ACT Transfer Cube simulation and roughly 50 expert episodes as an initial dataset, then test on new initial positions. Transferring a light object with the custom arm after A3 is a separate physical extension requiring new demonstrations."
       },
       "approximate_extra_hours_range": {
-        "low": 35,
-        "high": 60,
+        "low": 65,
+        "high": 105,
         "unit": "hours",
         "basis": {
-          "ru": "10–15 ч изучения метода, 15–25 ч экспертных данных, BC и DAgger, 10–20 ч независимой оценки; готовые инструменты машинного обучения и симулятор используются повторно.",
-          "en": "10–15 hours method, 15–25 expert data/BC/DAgger and 10–20 independent evaluation, reusing ML tools and the simulator."
+          "ru": "10–15 ч ALOHA/ACT и основы модели; 15–25 ч данные, BC и одна итерация DAgger; 25–40 ч ACT в симуляции; 15–25 ч независимое сравнение. Грубая оценка активной работы с готовым симулятором; вычисления, устранение несовместимости, физическая интеграция и новое оборудование оцениваются отдельно.",
+          "en": "10–15 h ALOHA/ACT and model foundations; 15–25 h data, BC and one DAgger iteration; 25–40 h simulated ACT; 15–25 h independent comparison. Rough active-work estimate with a ready simulator; compute, compatibility repairs, physical integration and new hardware are estimated separately."
         }
       },
       "not_in_core_total": true,
       "estimation_note": {
-        "ru": "Отдельная грубая оценка после завершения основной программы и при повторном использовании инфраструктуры. Это не перенесённая автоматически старая сумма, не обязательство и не срок полного освоения области; пересчитать при выборе проекта.",
-        "en": "A separate rough estimate assuming completed core and reused infrastructure. It is not an automatically transferred old total, a commitment or time to master the field; re-estimate when choosing a project."
+        "ru": "Дополнительные 65–105 ч не входят в основную программу и календарь до 31.12.2027; свободных часов в нём нет. Старый объём BC/DAgger расширен на ACT. При выборе этого трека пересчитать сроки. Полная двухрукая ALOHA не является обязательной покупкой.",
+        "en": "The additional 65–105 h are outside the core programme and calendar through 31 December 2027, which has no unallocated hours. ACT extends the previous BC/DAgger scope. Reforecast dates when selecting this track. A complete bimanual ALOHA is not a required purchase."
+      },
+      "resources": [
+        "il-aloha-act",
+        "il-lerobot-act"
+      ],
+      "practice_steps": [
+        {
+          "ru": "1. Разобрать статью ALOHA/ACT: различать телемеханику, набор данных и policy; нарисовать входы, chunk и исполнение. Зафиксировать версии среды, кода и зависимостей.",
+          "en": "1. Read the ALOHA/ACT paper: distinguish teleoperation hardware, dataset and policy; draw inputs, chunk and execution. Pin environment, code and dependency versions."
+        },
+        {
+          "ru": "2. Записать/получить экспертные эпизоды. Согласовать timestamps, единицы, порядок суставов, камеры, частоту и смысл action. Разделить эпизоды/сцены до нарезки chunks; статистики нормализации вычислять только на train. Обучить BC и выполнить одну итерацию DAgger с доступным экспертом в симуляции; дополнения брать только из обучающих запусков.",
+          "en": "2. Record/obtain expert episodes. Align timestamps, units, joint order, cameras, rate and action meaning. Split episodes/scenes before chunking; fit normalization only on train. Train BC and run one DAgger iteration with an available simulation expert; collect additions only from training rollouts."
+        },
+        {
+          "ru": "3. Обучить ACT: сначала официальный симуляционный пример, затем один контролируемый эксперимент с длиной chunk и temporal ensembling. BC и ACT сравнивать при одинаковых наблюдениях и исходных демонстрациях; результат после дополнительных данных DAgger показывать отдельно.",
+          "en": "3. Train ACT: first the official simulation example, then one controlled experiment with chunk length and temporal ensembling. Compare BC and ACT using the same observations and original demonstrations; report the result after extra DAgger data separately."
+        },
+        {
+          "ru": "4. Выбрать checkpoint на validation; заморозить его до теста. Провести не менее 30 попыток на метод на одинаковых новых начальных состояниях, записать seed и метрики. Проверить новые положения и один сдвиг условий, например освещение; loss сам по себе не является успехом задачи.",
+          "en": "4. Select the checkpoint on validation; freeze it before testing. Run at least 30 attempts per method on identical new initial states, recording seeds and metrics. Test new positions and one condition shift, such as lighting; loss alone does not measure task success."
+        }
+      ],
+      "physical_extension": {
+        "ru": "После A3 проверить обратную связь суставов, запись команд оператора и синхронизацию камеры; при отсутствии этих интерфейсов сначала оценить доработку. Предобученную policy для ALOHA нельзя напрямую переносить на другую кинематику. Обучать на данных своей руки; выполнять команды через независимые пределы положения/скорости/рабочей зоны, watchdog и существующий STOP. Измерить задержку и поведение при устаревшем кадре или остановке процесса.",
+        "en": "After A3, verify joint feedback, operator-command recording and camera synchronization; estimate interface work first if these are missing. An ALOHA-trained policy cannot be directly transferred to different kinematics. Train on the custom arm’s data; execute through independent position/velocity/workspace limits, watchdog and the existing STOP. Measure latency and stale-frame/process-stop behaviour."
       }
     },
     {

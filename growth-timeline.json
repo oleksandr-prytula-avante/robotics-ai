@@ -1,0 +1,2670 @@
+{
+  "start": "2028-01-03",
+  "core_finish": "2027-12-31",
+  "daily_minutes": 500,
+  "workdays": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "excluded_dates": [],
+  "groups": [
+    {
+      "id": "integration",
+      "title": {
+        "ru": "Интеграция и симуляция",
+        "en": "Integration and simulation"
+      },
+      "tracks": [
+        "G-ROS-PERFORMANCE",
+        "G-SIM-FIDELITY"
+      ]
+    },
+    {
+      "id": "ai",
+      "title": {
+        "ru": "ACT, зрение и обучение",
+        "en": "ACT, vision and learning"
+      },
+      "tracks": [
+        "D_IL",
+        "G-ADV-VISION",
+        "G-CONTACT-ML",
+        "D_RL"
+      ]
+    },
+    {
+      "id": "models",
+      "title": {
+        "ru": "Математика и модели",
+        "en": "Mathematics and models"
+      },
+      "tracks": [
+        "D_NUM",
+        "D_STATS",
+        "D_KIN",
+        "D_DYN"
+      ]
+    },
+    {
+      "id": "control",
+      "title": {
+        "ru": "Управление и оценивание",
+        "en": "Control and estimation"
+      },
+      "tracks": [
+        "D-H04-SPECTRUM",
+        "D-H07-IDENTIFICATION",
+        "D_FREQ",
+        "D_STATE",
+        "D_FORCE",
+        "D_MPC"
+      ]
+    },
+    {
+      "id": "autonomy",
+      "title": {
+        "ru": "SLAM и навигация",
+        "en": "SLAM and navigation"
+      },
+      "tracks": [
+        "G-SLAM",
+        "G-NAVIGATION"
+      ]
+    },
+    {
+      "id": "engineering",
+      "title": {
+        "ru": "Инженерная практика",
+        "en": "Engineering practice"
+      },
+      "tracks": [
+        "G-MULTILANGUAGE",
+        "D-H05-FEA",
+        "G-SECURITY-HRI",
+        "G-ENGINEERING-EVIDENCE"
+      ]
+    }
+  ],
+  "scenarios": {
+    "low": {
+      "tracks": [
+        {
+          "id": "G-ROS-PERFORMANCE",
+          "title": {
+            "ru": "Промежуточное ПО ROS и производительность",
+            "en": "ROS middleware and performance"
+          },
+          "hours_range": [
+            30,
+            55
+          ],
+          "dependencies": [],
+          "minutes": 1800,
+          "start": "2028-01-03",
+          "end": "2028-01-06"
+        },
+        {
+          "id": "G-SIM-FIDELITY",
+          "title": {
+            "ru": "Углублённая модель цифрового двойника",
+            "en": "Deeper digital-twin validation"
+          },
+          "hours_range": [
+            25,
+            50
+          ],
+          "dependencies": [],
+          "minutes": 1500,
+          "start": "2028-01-06",
+          "end": "2028-01-10"
+        },
+        {
+          "id": "D_IL",
+          "title": {
+            "ru": "Обучение по демонстрациям: BC, DAgger и ACT; система ALOHA",
+            "en": "Imitation learning: BC, DAgger and ACT; the ALOHA system"
+          },
+          "hours_range": [
+            65,
+            105
+          ],
+          "dependencies": [],
+          "minutes": 3900,
+          "start": "2028-01-10",
+          "end": "2028-01-19"
+        },
+        {
+          "id": "G-ADV-VISION",
+          "title": {
+            "ru": "3D-зрение и обучаемое восприятие",
+            "en": "3D vision and learned perception"
+          },
+          "hours_range": [
+            50,
+            85
+          ],
+          "dependencies": [],
+          "minutes": 3000,
+          "start": "2028-01-19",
+          "end": "2028-01-26"
+        },
+        {
+          "id": "G-CONTACT-ML",
+          "title": {
+            "ru": "ML для контакта и состояния гексапода",
+            "en": "ML for hexapod contact and state"
+          },
+          "hours_range": [
+            35,
+            65
+          ],
+          "dependencies": [],
+          "minutes": 2100,
+          "start": "2028-01-26",
+          "end": "2028-01-31"
+        },
+        {
+          "id": "D_RL",
+          "title": {
+            "ru": "Ограниченный PPO и проверка переноса",
+            "en": "Bounded PPO and transfer evaluation"
+          },
+          "hours_range": [
+            60,
+            105
+          ],
+          "dependencies": [],
+          "minutes": 3600,
+          "start": "2028-01-31",
+          "end": "2028-02-08"
+        },
+        {
+          "id": "D_NUM",
+          "title": {
+            "ru": "Численные методы и дополнительные математические упражнения",
+            "en": "Numerical methods and additional mathematics"
+          },
+          "hours_range": [
+            30,
+            55
+          ],
+          "dependencies": [],
+          "minutes": 1800,
+          "start": "2028-02-08",
+          "end": "2028-02-12"
+        },
+        {
+          "id": "D_STATS",
+          "title": {
+            "ru": "Расширенная статистика и идентификация",
+            "en": "Advanced statistics and identification"
+          },
+          "hours_range": [
+            40,
+            70
+          ],
+          "dependencies": [],
+          "minutes": 2400,
+          "start": "2028-02-12",
+          "end": "2028-02-18"
+        },
+        {
+          "id": "D_KIN",
+          "title": {
+            "ru": "Углублённая кинематика и альтернативные представления",
+            "en": "Deeper kinematics and alternative representations"
+          },
+          "hours_range": [
+            25,
+            45
+          ],
+          "dependencies": [],
+          "minutes": 1500,
+          "start": "2028-02-18",
+          "end": "2028-02-22"
+        },
+        {
+          "id": "D_DYN",
+          "title": {
+            "ru": "Собственный вывод многозвенной динамики",
+            "en": "Deriving multibody dynamics"
+          },
+          "hours_range": [
+            40,
+            70
+          ],
+          "dependencies": [],
+          "minutes": 2400,
+          "start": "2028-02-22",
+          "end": "2028-02-26"
+        },
+        {
+          "id": "D-H04-SPECTRUM",
+          "title": {
+            "ru": "Расширенный спектральный анализ сигналов",
+            "en": "Extended signal spectrum analysis"
+          },
+          "hours_range": [
+            10,
+            10
+          ],
+          "dependencies": [],
+          "minutes": 600,
+          "start": "2028-02-28",
+          "end": "2028-02-29"
+        },
+        {
+          "id": "D-H07-IDENTIFICATION",
+          "title": {
+            "ru": "Параметрическая идентификация привода",
+            "en": "Parametric actuator identification"
+          },
+          "hours_range": [
+            20,
+            20
+          ],
+          "dependencies": [],
+          "minutes": 1200,
+          "start": "2028-02-29",
+          "end": "2028-03-02"
+        },
+        {
+          "id": "D_FREQ",
+          "title": {
+            "ru": "Частотное управление и расширенная настройка",
+            "en": "Frequency-domain control and advanced tuning"
+          },
+          "hours_range": [
+            30,
+            55
+          ],
+          "dependencies": [],
+          "minutes": 1800,
+          "start": "2028-03-02",
+          "end": "2028-03-07"
+        },
+        {
+          "id": "D_STATE",
+          "title": {
+            "ru": "KF/EKF, LQR и контактное оценивание",
+            "en": "KF/EKF, LQR and contact-aided estimation"
+          },
+          "hours_range": [
+            80,
+            135
+          ],
+          "dependencies": [],
+          "minutes": 4800,
+          "start": "2028-03-07",
+          "end": "2028-03-17"
+        },
+        {
+          "id": "D_FORCE",
+          "title": {
+            "ru": "Распределение сил через QP",
+            "en": "QP contact-force allocation"
+          },
+          "hours_range": [
+            80,
+            125
+          ],
+          "dependencies": [],
+          "minutes": 4800,
+          "start": "2028-03-17",
+          "end": "2028-03-29"
+        },
+        {
+          "id": "D_MPC",
+          "title": {
+            "ru": "MPC и постановка задач управления всем телом",
+            "en": "MPC and whole-body formulations"
+          },
+          "hours_range": [
+            25,
+            45
+          ],
+          "dependencies": [
+            "D_FORCE"
+          ],
+          "minutes": 1500,
+          "start": "2028-03-29",
+          "end": "2028-04-01"
+        },
+        {
+          "id": "G-SLAM",
+          "title": {
+            "ru": "Локализация и SLAM",
+            "en": "Localization and SLAM"
+          },
+          "hours_range": [
+            80,
+            120
+          ],
+          "dependencies": [],
+          "minutes": 4800,
+          "start": "2028-04-01",
+          "end": "2028-04-12"
+        },
+        {
+          "id": "G-NAVIGATION",
+          "title": {
+            "ru": "Автономная навигация и сравнение планировщиков",
+            "en": "Autonomous navigation and planner comparisons"
+          },
+          "hours_range": [
+            50,
+            85
+          ],
+          "dependencies": [
+            "G-SLAM"
+          ],
+          "minutes": 3000,
+          "start": "2028-04-13",
+          "end": "2028-04-19"
+        },
+        {
+          "id": "G-MULTILANGUAGE",
+          "title": {
+            "ru": "Rust и сравнение реализаций",
+            "en": "Rust and implementation comparisons"
+          },
+          "hours_range": [
+            20,
+            40
+          ],
+          "dependencies": [],
+          "minutes": 1200,
+          "start": "2028-04-20",
+          "end": "2028-04-22"
+        },
+        {
+          "id": "D-H05-FEA",
+          "title": {
+            "ru": "FEA и сходимость по трём сеткам",
+            "en": "FEA and three-mesh convergence"
+          },
+          "hours_range": [
+            15,
+            15
+          ],
+          "dependencies": [],
+          "minutes": 900,
+          "start": "2028-04-22",
+          "end": "2028-04-25"
+        },
+        {
+          "id": "G-SECURITY-HRI",
+          "title": {
+            "ru": "Защита, HRI и промышленная интеграция",
+            "en": "Security, HRI and industrial integration"
+          },
+          "hours_range": [
+            35,
+            60
+          ],
+          "dependencies": [],
+          "minutes": 2100,
+          "start": "2028-04-25",
+          "end": "2028-04-29"
+        },
+        {
+          "id": "G-ENGINEERING-EVIDENCE",
+          "title": {
+            "ru": "Расширенная верификация и инженерная коммуникация",
+            "en": "Extended verification and engineering communication"
+          },
+          "hours_range": [
+            20,
+            40
+          ],
+          "dependencies": [],
+          "minutes": 1200,
+          "start": "2028-04-29",
+          "end": "2028-05-02"
+        }
+      ],
+      "segments": [
+        {
+          "track": "G-ROS-PERFORMANCE",
+          "date": "2028-01-03",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "G-ROS-PERFORMANCE",
+          "date": "2028-01-04",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "G-ROS-PERFORMANCE",
+          "date": "2028-01-05",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "G-ROS-PERFORMANCE",
+          "date": "2028-01-06",
+          "day_offset_minutes": 0,
+          "minutes": 300
+        },
+        {
+          "track": "G-SIM-FIDELITY",
+          "date": "2028-01-06",
+          "day_offset_minutes": 300,
+          "minutes": 200
+        },
+        {
+          "track": "G-SIM-FIDELITY",
+          "date": "2028-01-07",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "G-SIM-FIDELITY",
+          "date": "2028-01-08",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "G-SIM-FIDELITY",
+          "date": "2028-01-10",
+          "day_offset_minutes": 0,
+          "minutes": 300
+        },
+        {
+          "track": "D_IL",
+          "date": "2028-01-10",
+          "day_offset_minutes": 300,
+          "minutes": 200
+        },
+        {
+          "track": "D_IL",
+          "date": "2028-01-11",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_IL",
+          "date": "2028-01-12",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_IL",
+          "date": "2028-01-13",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_IL",
+          "date": "2028-01-14",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_IL",
+          "date": "2028-01-15",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_IL",
+          "date": "2028-01-17",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_IL",
+          "date": "2028-01-18",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_IL",
+          "date": "2028-01-19",
+          "day_offset_minutes": 0,
+          "minutes": 200
+        },
+        {
+          "track": "G-ADV-VISION",
+          "date": "2028-01-19",
+          "day_offset_minutes": 200,
+          "minutes": 300
+        },
+        {
+          "track": "G-ADV-VISION",
+          "date": "2028-01-20",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "G-ADV-VISION",
+          "date": "2028-01-21",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "G-ADV-VISION",
+          "date": "2028-01-22",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "G-ADV-VISION",
+          "date": "2028-01-24",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "G-ADV-VISION",
+          "date": "2028-01-25",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "G-ADV-VISION",
+          "date": "2028-01-26",
+          "day_offset_minutes": 0,
+          "minutes": 200
+        },
+        {
+          "track": "G-CONTACT-ML",
+          "date": "2028-01-26",
+          "day_offset_minutes": 200,
+          "minutes": 300
+        },
+        {
+          "track": "G-CONTACT-ML",
+          "date": "2028-01-27",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "G-CONTACT-ML",
+          "date": "2028-01-28",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "G-CONTACT-ML",
+          "date": "2028-01-29",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "G-CONTACT-ML",
+          "date": "2028-01-31",
+          "day_offset_minutes": 0,
+          "minutes": 300
+        },
+        {
+          "track": "D_RL",
+          "date": "2028-01-31",
+          "day_offset_minutes": 300,
+          "minutes": 200
+        },
+        {
+          "track": "D_RL",
+          "date": "2028-02-01",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_RL",
+          "date": "2028-02-02",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_RL",
+          "date": "2028-02-03",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_RL",
+          "date": "2028-02-04",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_RL",
+          "date": "2028-02-05",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_RL",
+          "date": "2028-02-07",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_RL",
+          "date": "2028-02-08",
+          "day_offset_minutes": 0,
+          "minutes": 400
+        },
+        {
+          "track": "D_NUM",
+          "date": "2028-02-08",
+          "day_offset_minutes": 400,
+          "minutes": 100
+        },
+        {
+          "track": "D_NUM",
+          "date": "2028-02-09",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_NUM",
+          "date": "2028-02-10",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_NUM",
+          "date": "2028-02-11",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_NUM",
+          "date": "2028-02-12",
+          "day_offset_minutes": 0,
+          "minutes": 200
+        },
+        {
+          "track": "D_STATS",
+          "date": "2028-02-12",
+          "day_offset_minutes": 200,
+          "minutes": 300
+        },
+        {
+          "track": "D_STATS",
+          "date": "2028-02-14",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_STATS",
+          "date": "2028-02-15",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_STATS",
+          "date": "2028-02-16",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_STATS",
+          "date": "2028-02-17",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_STATS",
+          "date": "2028-02-18",
+          "day_offset_minutes": 0,
+          "minutes": 100
+        },
+        {
+          "track": "D_KIN",
+          "date": "2028-02-18",
+          "day_offset_minutes": 100,
+          "minutes": 400
+        },
+        {
+          "track": "D_KIN",
+          "date": "2028-02-19",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_KIN",
+          "date": "2028-02-21",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_KIN",
+          "date": "2028-02-22",
+          "day_offset_minutes": 0,
+          "minutes": 100
+        },
+        {
+          "track": "D_DYN",
+          "date": "2028-02-22",
+          "day_offset_minutes": 100,
+          "minutes": 400
+        },
+        {
+          "track": "D_DYN",
+          "date": "2028-02-23",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_DYN",
+          "date": "2028-02-24",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_DYN",
+          "date": "2028-02-25",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_DYN",
+          "date": "2028-02-26",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D-H04-SPECTRUM",
+          "date": "2028-02-28",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D-H04-SPECTRUM",
+          "date": "2028-02-29",
+          "day_offset_minutes": 0,
+          "minutes": 100
+        },
+        {
+          "track": "D-H07-IDENTIFICATION",
+          "date": "2028-02-29",
+          "day_offset_minutes": 100,
+          "minutes": 400
+        },
+        {
+          "track": "D-H07-IDENTIFICATION",
+          "date": "2028-03-01",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D-H07-IDENTIFICATION",
+          "date": "2028-03-02",
+          "day_offset_minutes": 0,
+          "minutes": 300
+        },
+        {
+          "track": "D_FREQ",
+          "date": "2028-03-02",
+          "day_offset_minutes": 300,
+          "minutes": 200
+        },
+        {
+          "track": "D_FREQ",
+          "date": "2028-03-03",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_FREQ",
+          "date": "2028-03-04",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_FREQ",
+          "date": "2028-03-06",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_FREQ",
+          "date": "2028-03-07",
+          "day_offset_minutes": 0,
+          "minutes": 100
+        },
+        {
+          "track": "D_STATE",
+          "date": "2028-03-07",
+          "day_offset_minutes": 100,
+          "minutes": 400
+        },
+        {
+          "track": "D_STATE",
+          "date": "2028-03-08",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_STATE",
+          "date": "2028-03-09",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_STATE",
+          "date": "2028-03-10",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_STATE",
+          "date": "2028-03-11",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_STATE",
+          "date": "2028-03-13",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_STATE",
+          "date": "2028-03-14",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_STATE",
+          "date": "2028-03-15",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_STATE",
+          "date": "2028-03-16",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_STATE",
+          "date": "2028-03-17",
+          "day_offset_minutes": 0,
+          "minutes": 400
+        },
+        {
+          "track": "D_FORCE",
+          "date": "2028-03-17",
+          "day_offset_minutes": 400,
+          "minutes": 100
+        },
+        {
+          "track": "D_FORCE",
+          "date": "2028-03-18",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_FORCE",
+          "date": "2028-03-20",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_FORCE",
+          "date": "2028-03-21",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_FORCE",
+          "date": "2028-03-22",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_FORCE",
+          "date": "2028-03-23",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_FORCE",
+          "date": "2028-03-24",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_FORCE",
+          "date": "2028-03-25",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_FORCE",
+          "date": "2028-03-27",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_FORCE",
+          "date": "2028-03-28",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_FORCE",
+          "date": "2028-03-29",
+          "day_offset_minutes": 0,
+          "minutes": 200
+        },
+        {
+          "track": "D_MPC",
+          "date": "2028-03-29",
+          "day_offset_minutes": 200,
+          "minutes": 300
+        },
+        {
+          "track": "D_MPC",
+          "date": "2028-03-30",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_MPC",
+          "date": "2028-03-31",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_MPC",
+          "date": "2028-04-01",
+          "day_offset_minutes": 0,
+          "minutes": 200
+        },
+        {
+          "track": "G-SLAM",
+          "date": "2028-04-01",
+          "day_offset_minutes": 200,
+          "minutes": 300
+        },
+        {
+          "track": "G-SLAM",
+          "date": "2028-04-03",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "G-SLAM",
+          "date": "2028-04-04",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "G-SLAM",
+          "date": "2028-04-05",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "G-SLAM",
+          "date": "2028-04-06",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "G-SLAM",
+          "date": "2028-04-07",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "G-SLAM",
+          "date": "2028-04-08",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "G-SLAM",
+          "date": "2028-04-10",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "G-SLAM",
+          "date": "2028-04-11",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "G-SLAM",
+          "date": "2028-04-12",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "G-NAVIGATION",
+          "date": "2028-04-13",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "G-NAVIGATION",
+          "date": "2028-04-14",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "G-NAVIGATION",
+          "date": "2028-04-15",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "G-NAVIGATION",
+          "date": "2028-04-17",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "G-NAVIGATION",
+          "date": "2028-04-18",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "G-NAVIGATION",
+          "date": "2028-04-19",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "G-MULTILANGUAGE",
+          "date": "2028-04-20",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "G-MULTILANGUAGE",
+          "date": "2028-04-21",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "G-MULTILANGUAGE",
+          "date": "2028-04-22",
+          "day_offset_minutes": 0,
+          "minutes": 200
+        },
+        {
+          "track": "D-H05-FEA",
+          "date": "2028-04-22",
+          "day_offset_minutes": 200,
+          "minutes": 300
+        },
+        {
+          "track": "D-H05-FEA",
+          "date": "2028-04-24",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D-H05-FEA",
+          "date": "2028-04-25",
+          "day_offset_minutes": 0,
+          "minutes": 100
+        },
+        {
+          "track": "G-SECURITY-HRI",
+          "date": "2028-04-25",
+          "day_offset_minutes": 100,
+          "minutes": 400
+        },
+        {
+          "track": "G-SECURITY-HRI",
+          "date": "2028-04-26",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "G-SECURITY-HRI",
+          "date": "2028-04-27",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "G-SECURITY-HRI",
+          "date": "2028-04-28",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "G-SECURITY-HRI",
+          "date": "2028-04-29",
+          "day_offset_minutes": 0,
+          "minutes": 200
+        },
+        {
+          "track": "G-ENGINEERING-EVIDENCE",
+          "date": "2028-04-29",
+          "day_offset_minutes": 200,
+          "minutes": 300
+        },
+        {
+          "track": "G-ENGINEERING-EVIDENCE",
+          "date": "2028-05-01",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "G-ENGINEERING-EVIDENCE",
+          "date": "2028-05-02",
+          "day_offset_minutes": 0,
+          "minutes": 400
+        }
+      ],
+      "total_minutes": 51900,
+      "start": "2028-01-03",
+      "end": "2028-05-02"
+    },
+    "high": {
+      "tracks": [
+        {
+          "id": "G-ROS-PERFORMANCE",
+          "title": {
+            "ru": "Промежуточное ПО ROS и производительность",
+            "en": "ROS middleware and performance"
+          },
+          "hours_range": [
+            30,
+            55
+          ],
+          "dependencies": [],
+          "minutes": 3300,
+          "start": "2028-01-03",
+          "end": "2028-01-10"
+        },
+        {
+          "id": "G-SIM-FIDELITY",
+          "title": {
+            "ru": "Углублённая модель цифрового двойника",
+            "en": "Deeper digital-twin validation"
+          },
+          "hours_range": [
+            25,
+            50
+          ],
+          "dependencies": [],
+          "minutes": 3000,
+          "start": "2028-01-10",
+          "end": "2028-01-17"
+        },
+        {
+          "id": "D_IL",
+          "title": {
+            "ru": "Обучение по демонстрациям: BC, DAgger и ACT; система ALOHA",
+            "en": "Imitation learning: BC, DAgger and ACT; the ALOHA system"
+          },
+          "hours_range": [
+            65,
+            105
+          ],
+          "dependencies": [],
+          "minutes": 6300,
+          "start": "2028-01-17",
+          "end": "2028-02-01"
+        },
+        {
+          "id": "G-ADV-VISION",
+          "title": {
+            "ru": "3D-зрение и обучаемое восприятие",
+            "en": "3D vision and learned perception"
+          },
+          "hours_range": [
+            50,
+            85
+          ],
+          "dependencies": [],
+          "minutes": 5100,
+          "start": "2028-02-01",
+          "end": "2028-02-12"
+        },
+        {
+          "id": "G-CONTACT-ML",
+          "title": {
+            "ru": "ML для контакта и состояния гексапода",
+            "en": "ML for hexapod contact and state"
+          },
+          "hours_range": [
+            35,
+            65
+          ],
+          "dependencies": [],
+          "minutes": 3900,
+          "start": "2028-02-12",
+          "end": "2028-02-22"
+        },
+        {
+          "id": "D_RL",
+          "title": {
+            "ru": "Ограниченный PPO и проверка переноса",
+            "en": "Bounded PPO and transfer evaluation"
+          },
+          "hours_range": [
+            60,
+            105
+          ],
+          "dependencies": [],
+          "minutes": 6300,
+          "start": "2028-02-22",
+          "end": "2028-03-07"
+        },
+        {
+          "id": "D_NUM",
+          "title": {
+            "ru": "Численные методы и дополнительные математические упражнения",
+            "en": "Numerical methods and additional mathematics"
+          },
+          "hours_range": [
+            30,
+            55
+          ],
+          "dependencies": [],
+          "minutes": 3300,
+          "start": "2028-03-07",
+          "end": "2028-03-15"
+        },
+        {
+          "id": "D_STATS",
+          "title": {
+            "ru": "Расширенная статистика и идентификация",
+            "en": "Advanced statistics and identification"
+          },
+          "hours_range": [
+            40,
+            70
+          ],
+          "dependencies": [],
+          "minutes": 4200,
+          "start": "2028-03-15",
+          "end": "2028-03-24"
+        },
+        {
+          "id": "D_KIN",
+          "title": {
+            "ru": "Углублённая кинематика и альтернативные представления",
+            "en": "Deeper kinematics and alternative representations"
+          },
+          "hours_range": [
+            25,
+            45
+          ],
+          "dependencies": [],
+          "minutes": 2700,
+          "start": "2028-03-24",
+          "end": "2028-03-31"
+        },
+        {
+          "id": "D_DYN",
+          "title": {
+            "ru": "Собственный вывод многозвенной динамики",
+            "en": "Deriving multibody dynamics"
+          },
+          "hours_range": [
+            40,
+            70
+          ],
+          "dependencies": [],
+          "minutes": 4200,
+          "start": "2028-03-31",
+          "end": "2028-04-10"
+        },
+        {
+          "id": "D-H04-SPECTRUM",
+          "title": {
+            "ru": "Расширенный спектральный анализ сигналов",
+            "en": "Extended signal spectrum analysis"
+          },
+          "hours_range": [
+            10,
+            10
+          ],
+          "dependencies": [],
+          "minutes": 600,
+          "start": "2028-04-10",
+          "end": "2028-04-11"
+        },
+        {
+          "id": "D-H07-IDENTIFICATION",
+          "title": {
+            "ru": "Параметрическая идентификация привода",
+            "en": "Parametric actuator identification"
+          },
+          "hours_range": [
+            20,
+            20
+          ],
+          "dependencies": [],
+          "minutes": 1200,
+          "start": "2028-04-11",
+          "end": "2028-04-14"
+        },
+        {
+          "id": "D_FREQ",
+          "title": {
+            "ru": "Частотное управление и расширенная настройка",
+            "en": "Frequency-domain control and advanced tuning"
+          },
+          "hours_range": [
+            30,
+            55
+          ],
+          "dependencies": [],
+          "minutes": 3300,
+          "start": "2028-04-14",
+          "end": "2028-04-21"
+        },
+        {
+          "id": "D_STATE",
+          "title": {
+            "ru": "KF/EKF, LQR и контактное оценивание",
+            "en": "KF/EKF, LQR and contact-aided estimation"
+          },
+          "hours_range": [
+            80,
+            135
+          ],
+          "dependencies": [],
+          "minutes": 8100,
+          "start": "2028-04-21",
+          "end": "2028-05-10"
+        },
+        {
+          "id": "D_FORCE",
+          "title": {
+            "ru": "Распределение сил через QP",
+            "en": "QP contact-force allocation"
+          },
+          "hours_range": [
+            80,
+            125
+          ],
+          "dependencies": [],
+          "minutes": 7500,
+          "start": "2028-05-11",
+          "end": "2028-05-27"
+        },
+        {
+          "id": "D_MPC",
+          "title": {
+            "ru": "MPC и постановка задач управления всем телом",
+            "en": "MPC and whole-body formulations"
+          },
+          "hours_range": [
+            25,
+            45
+          ],
+          "dependencies": [
+            "D_FORCE"
+          ],
+          "minutes": 2700,
+          "start": "2028-05-29",
+          "end": "2028-06-03"
+        },
+        {
+          "id": "G-SLAM",
+          "title": {
+            "ru": "Локализация и SLAM",
+            "en": "Localization and SLAM"
+          },
+          "hours_range": [
+            80,
+            120
+          ],
+          "dependencies": [],
+          "minutes": 7200,
+          "start": "2028-06-03",
+          "end": "2028-06-20"
+        },
+        {
+          "id": "G-NAVIGATION",
+          "title": {
+            "ru": "Автономная навигация и сравнение планировщиков",
+            "en": "Autonomous navigation and planner comparisons"
+          },
+          "hours_range": [
+            50,
+            85
+          ],
+          "dependencies": [
+            "G-SLAM"
+          ],
+          "minutes": 5100,
+          "start": "2028-06-20",
+          "end": "2028-07-01"
+        },
+        {
+          "id": "G-MULTILANGUAGE",
+          "title": {
+            "ru": "Rust и сравнение реализаций",
+            "en": "Rust and implementation comparisons"
+          },
+          "hours_range": [
+            20,
+            40
+          ],
+          "dependencies": [],
+          "minutes": 2400,
+          "start": "2028-07-03",
+          "end": "2028-07-07"
+        },
+        {
+          "id": "D-H05-FEA",
+          "title": {
+            "ru": "FEA и сходимость по трём сеткам",
+            "en": "FEA and three-mesh convergence"
+          },
+          "hours_range": [
+            15,
+            15
+          ],
+          "dependencies": [],
+          "minutes": 900,
+          "start": "2028-07-07",
+          "end": "2028-07-10"
+        },
+        {
+          "id": "G-SECURITY-HRI",
+          "title": {
+            "ru": "Защита, HRI и промышленная интеграция",
+            "en": "Security, HRI and industrial integration"
+          },
+          "hours_range": [
+            35,
+            60
+          ],
+          "dependencies": [],
+          "minutes": 3600,
+          "start": "2028-07-10",
+          "end": "2028-07-18"
+        },
+        {
+          "id": "G-ENGINEERING-EVIDENCE",
+          "title": {
+            "ru": "Расширенная верификация и инженерная коммуникация",
+            "en": "Extended verification and engineering communication"
+          },
+          "hours_range": [
+            20,
+            40
+          ],
+          "dependencies": [],
+          "minutes": 2400,
+          "start": "2028-07-18",
+          "end": "2028-07-24"
+        }
+      ],
+      "segments": [
+        {
+          "track": "G-ROS-PERFORMANCE",
+          "date": "2028-01-03",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "G-ROS-PERFORMANCE",
+          "date": "2028-01-04",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "G-ROS-PERFORMANCE",
+          "date": "2028-01-05",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "G-ROS-PERFORMANCE",
+          "date": "2028-01-06",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "G-ROS-PERFORMANCE",
+          "date": "2028-01-07",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "G-ROS-PERFORMANCE",
+          "date": "2028-01-08",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "G-ROS-PERFORMANCE",
+          "date": "2028-01-10",
+          "day_offset_minutes": 0,
+          "minutes": 300
+        },
+        {
+          "track": "G-SIM-FIDELITY",
+          "date": "2028-01-10",
+          "day_offset_minutes": 300,
+          "minutes": 200
+        },
+        {
+          "track": "G-SIM-FIDELITY",
+          "date": "2028-01-11",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "G-SIM-FIDELITY",
+          "date": "2028-01-12",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "G-SIM-FIDELITY",
+          "date": "2028-01-13",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "G-SIM-FIDELITY",
+          "date": "2028-01-14",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "G-SIM-FIDELITY",
+          "date": "2028-01-15",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "G-SIM-FIDELITY",
+          "date": "2028-01-17",
+          "day_offset_minutes": 0,
+          "minutes": 300
+        },
+        {
+          "track": "D_IL",
+          "date": "2028-01-17",
+          "day_offset_minutes": 300,
+          "minutes": 200
+        },
+        {
+          "track": "D_IL",
+          "date": "2028-01-18",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_IL",
+          "date": "2028-01-19",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_IL",
+          "date": "2028-01-20",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_IL",
+          "date": "2028-01-21",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_IL",
+          "date": "2028-01-22",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_IL",
+          "date": "2028-01-24",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_IL",
+          "date": "2028-01-25",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_IL",
+          "date": "2028-01-26",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_IL",
+          "date": "2028-01-27",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_IL",
+          "date": "2028-01-28",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_IL",
+          "date": "2028-01-29",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_IL",
+          "date": "2028-01-31",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_IL",
+          "date": "2028-02-01",
+          "day_offset_minutes": 0,
+          "minutes": 100
+        },
+        {
+          "track": "G-ADV-VISION",
+          "date": "2028-02-01",
+          "day_offset_minutes": 100,
+          "minutes": 400
+        },
+        {
+          "track": "G-ADV-VISION",
+          "date": "2028-02-02",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "G-ADV-VISION",
+          "date": "2028-02-03",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "G-ADV-VISION",
+          "date": "2028-02-04",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "G-ADV-VISION",
+          "date": "2028-02-05",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "G-ADV-VISION",
+          "date": "2028-02-07",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "G-ADV-VISION",
+          "date": "2028-02-08",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "G-ADV-VISION",
+          "date": "2028-02-09",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "G-ADV-VISION",
+          "date": "2028-02-10",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "G-ADV-VISION",
+          "date": "2028-02-11",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "G-ADV-VISION",
+          "date": "2028-02-12",
+          "day_offset_minutes": 0,
+          "minutes": 200
+        },
+        {
+          "track": "G-CONTACT-ML",
+          "date": "2028-02-12",
+          "day_offset_minutes": 200,
+          "minutes": 300
+        },
+        {
+          "track": "G-CONTACT-ML",
+          "date": "2028-02-14",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "G-CONTACT-ML",
+          "date": "2028-02-15",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "G-CONTACT-ML",
+          "date": "2028-02-16",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "G-CONTACT-ML",
+          "date": "2028-02-17",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "G-CONTACT-ML",
+          "date": "2028-02-18",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "G-CONTACT-ML",
+          "date": "2028-02-19",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "G-CONTACT-ML",
+          "date": "2028-02-21",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "G-CONTACT-ML",
+          "date": "2028-02-22",
+          "day_offset_minutes": 0,
+          "minutes": 100
+        },
+        {
+          "track": "D_RL",
+          "date": "2028-02-22",
+          "day_offset_minutes": 100,
+          "minutes": 400
+        },
+        {
+          "track": "D_RL",
+          "date": "2028-02-23",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_RL",
+          "date": "2028-02-24",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_RL",
+          "date": "2028-02-25",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_RL",
+          "date": "2028-02-26",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_RL",
+          "date": "2028-02-28",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_RL",
+          "date": "2028-02-29",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_RL",
+          "date": "2028-03-01",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_RL",
+          "date": "2028-03-02",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_RL",
+          "date": "2028-03-03",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_RL",
+          "date": "2028-03-04",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_RL",
+          "date": "2028-03-06",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_RL",
+          "date": "2028-03-07",
+          "day_offset_minutes": 0,
+          "minutes": 400
+        },
+        {
+          "track": "D_NUM",
+          "date": "2028-03-07",
+          "day_offset_minutes": 400,
+          "minutes": 100
+        },
+        {
+          "track": "D_NUM",
+          "date": "2028-03-08",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_NUM",
+          "date": "2028-03-09",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_NUM",
+          "date": "2028-03-10",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_NUM",
+          "date": "2028-03-11",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_NUM",
+          "date": "2028-03-13",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_NUM",
+          "date": "2028-03-14",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_NUM",
+          "date": "2028-03-15",
+          "day_offset_minutes": 0,
+          "minutes": 200
+        },
+        {
+          "track": "D_STATS",
+          "date": "2028-03-15",
+          "day_offset_minutes": 200,
+          "minutes": 300
+        },
+        {
+          "track": "D_STATS",
+          "date": "2028-03-16",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_STATS",
+          "date": "2028-03-17",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_STATS",
+          "date": "2028-03-18",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_STATS",
+          "date": "2028-03-20",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_STATS",
+          "date": "2028-03-21",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_STATS",
+          "date": "2028-03-22",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_STATS",
+          "date": "2028-03-23",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_STATS",
+          "date": "2028-03-24",
+          "day_offset_minutes": 0,
+          "minutes": 400
+        },
+        {
+          "track": "D_KIN",
+          "date": "2028-03-24",
+          "day_offset_minutes": 400,
+          "minutes": 100
+        },
+        {
+          "track": "D_KIN",
+          "date": "2028-03-25",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_KIN",
+          "date": "2028-03-27",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_KIN",
+          "date": "2028-03-28",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_KIN",
+          "date": "2028-03-29",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_KIN",
+          "date": "2028-03-30",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_KIN",
+          "date": "2028-03-31",
+          "day_offset_minutes": 0,
+          "minutes": 100
+        },
+        {
+          "track": "D_DYN",
+          "date": "2028-03-31",
+          "day_offset_minutes": 100,
+          "minutes": 400
+        },
+        {
+          "track": "D_DYN",
+          "date": "2028-04-01",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_DYN",
+          "date": "2028-04-03",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_DYN",
+          "date": "2028-04-04",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_DYN",
+          "date": "2028-04-05",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_DYN",
+          "date": "2028-04-06",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_DYN",
+          "date": "2028-04-07",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_DYN",
+          "date": "2028-04-08",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_DYN",
+          "date": "2028-04-10",
+          "day_offset_minutes": 0,
+          "minutes": 300
+        },
+        {
+          "track": "D-H04-SPECTRUM",
+          "date": "2028-04-10",
+          "day_offset_minutes": 300,
+          "minutes": 200
+        },
+        {
+          "track": "D-H04-SPECTRUM",
+          "date": "2028-04-11",
+          "day_offset_minutes": 0,
+          "minutes": 400
+        },
+        {
+          "track": "D-H07-IDENTIFICATION",
+          "date": "2028-04-11",
+          "day_offset_minutes": 400,
+          "minutes": 100
+        },
+        {
+          "track": "D-H07-IDENTIFICATION",
+          "date": "2028-04-12",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D-H07-IDENTIFICATION",
+          "date": "2028-04-13",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D-H07-IDENTIFICATION",
+          "date": "2028-04-14",
+          "day_offset_minutes": 0,
+          "minutes": 100
+        },
+        {
+          "track": "D_FREQ",
+          "date": "2028-04-14",
+          "day_offset_minutes": 100,
+          "minutes": 400
+        },
+        {
+          "track": "D_FREQ",
+          "date": "2028-04-15",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_FREQ",
+          "date": "2028-04-17",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_FREQ",
+          "date": "2028-04-18",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_FREQ",
+          "date": "2028-04-19",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_FREQ",
+          "date": "2028-04-20",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_FREQ",
+          "date": "2028-04-21",
+          "day_offset_minutes": 0,
+          "minutes": 400
+        },
+        {
+          "track": "D_STATE",
+          "date": "2028-04-21",
+          "day_offset_minutes": 400,
+          "minutes": 100
+        },
+        {
+          "track": "D_STATE",
+          "date": "2028-04-22",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_STATE",
+          "date": "2028-04-24",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_STATE",
+          "date": "2028-04-25",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_STATE",
+          "date": "2028-04-26",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_STATE",
+          "date": "2028-04-27",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_STATE",
+          "date": "2028-04-28",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_STATE",
+          "date": "2028-04-29",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_STATE",
+          "date": "2028-05-01",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_STATE",
+          "date": "2028-05-02",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_STATE",
+          "date": "2028-05-03",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_STATE",
+          "date": "2028-05-04",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_STATE",
+          "date": "2028-05-05",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_STATE",
+          "date": "2028-05-06",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_STATE",
+          "date": "2028-05-08",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_STATE",
+          "date": "2028-05-09",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_STATE",
+          "date": "2028-05-10",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_FORCE",
+          "date": "2028-05-11",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_FORCE",
+          "date": "2028-05-12",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_FORCE",
+          "date": "2028-05-13",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_FORCE",
+          "date": "2028-05-15",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_FORCE",
+          "date": "2028-05-16",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_FORCE",
+          "date": "2028-05-17",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_FORCE",
+          "date": "2028-05-18",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_FORCE",
+          "date": "2028-05-19",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_FORCE",
+          "date": "2028-05-20",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_FORCE",
+          "date": "2028-05-22",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_FORCE",
+          "date": "2028-05-23",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_FORCE",
+          "date": "2028-05-24",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_FORCE",
+          "date": "2028-05-25",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_FORCE",
+          "date": "2028-05-26",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_FORCE",
+          "date": "2028-05-27",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_MPC",
+          "date": "2028-05-29",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_MPC",
+          "date": "2028-05-30",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_MPC",
+          "date": "2028-05-31",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_MPC",
+          "date": "2028-06-01",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_MPC",
+          "date": "2028-06-02",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D_MPC",
+          "date": "2028-06-03",
+          "day_offset_minutes": 0,
+          "minutes": 200
+        },
+        {
+          "track": "G-SLAM",
+          "date": "2028-06-03",
+          "day_offset_minutes": 200,
+          "minutes": 300
+        },
+        {
+          "track": "G-SLAM",
+          "date": "2028-06-05",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "G-SLAM",
+          "date": "2028-06-06",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "G-SLAM",
+          "date": "2028-06-07",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "G-SLAM",
+          "date": "2028-06-08",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "G-SLAM",
+          "date": "2028-06-09",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "G-SLAM",
+          "date": "2028-06-10",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "G-SLAM",
+          "date": "2028-06-12",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "G-SLAM",
+          "date": "2028-06-13",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "G-SLAM",
+          "date": "2028-06-14",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "G-SLAM",
+          "date": "2028-06-15",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "G-SLAM",
+          "date": "2028-06-16",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "G-SLAM",
+          "date": "2028-06-17",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "G-SLAM",
+          "date": "2028-06-19",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "G-SLAM",
+          "date": "2028-06-20",
+          "day_offset_minutes": 0,
+          "minutes": 400
+        },
+        {
+          "track": "G-NAVIGATION",
+          "date": "2028-06-20",
+          "day_offset_minutes": 400,
+          "minutes": 100
+        },
+        {
+          "track": "G-NAVIGATION",
+          "date": "2028-06-21",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "G-NAVIGATION",
+          "date": "2028-06-22",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "G-NAVIGATION",
+          "date": "2028-06-23",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "G-NAVIGATION",
+          "date": "2028-06-24",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "G-NAVIGATION",
+          "date": "2028-06-26",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "G-NAVIGATION",
+          "date": "2028-06-27",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "G-NAVIGATION",
+          "date": "2028-06-28",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "G-NAVIGATION",
+          "date": "2028-06-29",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "G-NAVIGATION",
+          "date": "2028-06-30",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "G-NAVIGATION",
+          "date": "2028-07-01",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "G-MULTILANGUAGE",
+          "date": "2028-07-03",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "G-MULTILANGUAGE",
+          "date": "2028-07-04",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "G-MULTILANGUAGE",
+          "date": "2028-07-05",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "G-MULTILANGUAGE",
+          "date": "2028-07-06",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "G-MULTILANGUAGE",
+          "date": "2028-07-07",
+          "day_offset_minutes": 0,
+          "minutes": 400
+        },
+        {
+          "track": "D-H05-FEA",
+          "date": "2028-07-07",
+          "day_offset_minutes": 400,
+          "minutes": 100
+        },
+        {
+          "track": "D-H05-FEA",
+          "date": "2028-07-08",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "D-H05-FEA",
+          "date": "2028-07-10",
+          "day_offset_minutes": 0,
+          "minutes": 300
+        },
+        {
+          "track": "G-SECURITY-HRI",
+          "date": "2028-07-10",
+          "day_offset_minutes": 300,
+          "minutes": 200
+        },
+        {
+          "track": "G-SECURITY-HRI",
+          "date": "2028-07-11",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "G-SECURITY-HRI",
+          "date": "2028-07-12",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "G-SECURITY-HRI",
+          "date": "2028-07-13",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "G-SECURITY-HRI",
+          "date": "2028-07-14",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "G-SECURITY-HRI",
+          "date": "2028-07-15",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "G-SECURITY-HRI",
+          "date": "2028-07-17",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "G-SECURITY-HRI",
+          "date": "2028-07-18",
+          "day_offset_minutes": 0,
+          "minutes": 400
+        },
+        {
+          "track": "G-ENGINEERING-EVIDENCE",
+          "date": "2028-07-18",
+          "day_offset_minutes": 400,
+          "minutes": 100
+        },
+        {
+          "track": "G-ENGINEERING-EVIDENCE",
+          "date": "2028-07-19",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "G-ENGINEERING-EVIDENCE",
+          "date": "2028-07-20",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "G-ENGINEERING-EVIDENCE",
+          "date": "2028-07-21",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "G-ENGINEERING-EVIDENCE",
+          "date": "2028-07-22",
+          "day_offset_minutes": 0,
+          "minutes": 500
+        },
+        {
+          "track": "G-ENGINEERING-EVIDENCE",
+          "date": "2028-07-24",
+          "day_offset_minutes": 0,
+          "minutes": 300
+        }
+      ],
+      "total_minutes": 87300,
+      "start": "2028-01-03",
+      "end": "2028-07-24"
+    }
+  }
+}

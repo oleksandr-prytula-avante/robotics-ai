@@ -2007,6 +2007,98 @@
         "ru": "Проверено индексированное содержание авторской статьи в PMC; прямое открытие возвращало проверку браузера.",
         "en": "Indexed primary article content checked; direct opening returned a browser challenge."
       }
+    },
+    {
+      "id": "il-aloha-act",
+      "title": {
+        "ru": "ALOHA и ACT: Learning Fine-Grained Bimanual Manipulation with Low-Cost Hardware",
+        "en": "ALOHA and ACT: Learning Fine-Grained Bimanual Manipulation with Low-Cost Hardware"
+      },
+      "authors": "Tony Z. Zhao, Vikash Kumar, Sergey Levine, Chelsea Finn",
+      "edition": {
+        "ru": "RSS 2023; первичная статья и официальный код",
+        "en": "RSS 2023; original paper and official code"
+      },
+      "access": {
+        "ru": "Статья, проект и код доступны бесплатно; английский. Аппаратная ALOHA приобретается отдельно.",
+        "en": "Paper, project and code freely accessible; English. ALOHA hardware is acquired separately."
+      },
+      "url": "https://tonyzhaozh.github.io/aloha/",
+      "selection": {
+        "ru": "D_IL: постановка телеуправления, action chunking, temporal ensembling, CVAE и оценка. В официальном коде воспроизвести Transfer Cube; Bimanual Insertion — последующее расширение.",
+        "en": "D_IL: teleoperation setup, action chunking, temporal ensembling, CVAE and evaluation. Reproduce Transfer Cube with the official code; Bimanual Insertion is a later extension."
+      },
+      "links": [
+        {
+          "title": "Paper (arXiv)",
+          "url": "https://arxiv.org/abs/2304.13705"
+        },
+        {
+          "title": "Official ACT code",
+          "url": "https://github.com/tonyzhaozh/act"
+        },
+        {
+          "title": "Official ALOHA hardware/software",
+          "url": "https://github.com/tonyzhaozh/aloha"
+        }
+      ],
+      "limitations": {
+        "ru": "Оригинальная система двухрукая. Её геометрия, оборудование, частоты и результаты не являются спецификацией своей руки. Окружение исследовательского кода фиксировать отдельно от основного ROS-стека.",
+        "en": "The original system is bimanual. Its geometry, hardware, rates and results do not specify the custom arm. Pin the research-code environment separately from the main ROS stack."
+      },
+      "stages": [
+        "D_IL"
+      ],
+      "group": "software",
+      "role": "optional_reference",
+      "status": {
+        "ru": "Первичный источник проверен 14.11.2026; практическое обучение в этом репозитории не выполнялось.",
+        "en": "Primary source checked on 14 November 2026; practical training was not run in this repository."
+      }
+    },
+    {
+      "id": "il-lerobot-act",
+      "title": {
+        "ru": "LeRobot: ACT и подключение собственного оборудования",
+        "en": "LeRobot: ACT and custom hardware integration"
+      },
+      "authors": "Hugging Face LeRobot contributors",
+      "edition": {
+        "ru": "Обновляемая официальная документация; фиксировать версию LeRobot",
+        "en": "Living official documentation; pin the LeRobot version"
+      },
+      "access": {
+        "ru": "Бесплатные документация и открытый код; английский. Вычисления для обучения оцениваются отдельно.",
+        "en": "Free documentation and open-source code; English. Training compute is estimated separately."
+      },
+      "url": "https://huggingface.co/docs/lerobot/act",
+      "selection": {
+        "ru": "D_IL: модель ACT, формат наблюдений и действий, обучение и оценка; Bring Your Own Hardware — только для физического продолжения. Выбрать одну реализацию для основного эксперимента; перенос между форматами — отдельная работа.",
+        "en": "D_IL: ACT model, observation/action format, training and evaluation; Bring Your Own Hardware only for the physical extension. Choose one implementation for the main experiment; format conversion is separate work."
+      },
+      "links": [
+        {
+          "title": "Bring Your Own Hardware",
+          "url": "https://huggingface.co/docs/lerobot/integrate_hardware"
+        },
+        {
+          "title": "LeRobot source",
+          "url": "https://github.com/huggingface/lerobot"
+        }
+      ],
+      "limitations": {
+        "ru": "Поддержка ACT не означает готового драйвера для собственной руки. Проверить чтение состояния и командный интерфейс; наличие камеры само по себе недостаточно. Обучение оценивать на имеющемся компьютере или доступном GPU; покупка GPU не включена.",
+        "en": "ACT support does not imply a ready driver for the custom arm. Verify state readout and the command interface; a camera alone is insufficient. Assess training on the existing computer or an available GPU; no GPU purchase is included."
+      },
+      "stages": [
+        "D_IL"
+      ],
+      "group": "software",
+      "role": "optional_reference",
+      "status": {
+        "ru": "Первичный источник проверен 14.11.2026; практическое обучение в этом репозитории не выполнялось.",
+        "en": "Primary source checked on 14 November 2026; practical training was not run in this repository."
+      }
     }
   ],
   "findings": [
