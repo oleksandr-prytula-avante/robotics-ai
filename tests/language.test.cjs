@@ -85,9 +85,9 @@ test('unsupported languages normalize to English', () => {
 });
 
 test('local navigation carries language without modifying external or download links', () => {
-  const p = page('https://example.com/robotics-ai/months/2026-11.html?lang=ru', [
+  const p = page('https://example.com/robotics-ai/months/2027-01.html?lang=ru', [
     '../curriculum.html?view=all#M01',
-    '2026-12.html',
+    '2027-02.html',
     'https://example.com/robotics-ai/projects.html#arm',
     '/robotics-ai/',
     '#stage',
@@ -99,7 +99,7 @@ test('local navigation carries language without modifying external or download l
   ]);
   assert.deepEqual(p.anchors.map(a => a.attrs.href), [
     'https://example.com/robotics-ai/curriculum.html?view=all&lang=ru#M01',
-    'https://example.com/robotics-ai/months/2026-12.html?lang=ru',
+    'https://example.com/robotics-ai/months/2027-02.html?lang=ru',
     'https://example.com/robotics-ai/projects.html?lang=ru#arm',
     'https://example.com/robotics-ai/?lang=ru',
     '#stage',
@@ -116,10 +116,10 @@ test('local navigation carries language without modifying external or download l
 });
 
 test('offline file links and reloads retain the selected language', () => {
-  const p = page('file:///tmp/robotics-ai/index.html', ['months/2026-11.html#stage']);
+  const p = page('file:///tmp/robotics-ai/index.html', ['months/2027-01.html#stage']);
   p.click('ru');
   assert.equal(p.href(), 'file:///tmp/robotics-ai/index.html?lang=ru');
-  assert.equal(p.anchors[0].attrs.href, 'file:///tmp/robotics-ai/months/2026-11.html?lang=ru#stage');
+  assert.equal(p.anchors[0].attrs.href, 'file:///tmp/robotics-ai/months/2027-01.html?lang=ru#stage');
   const reloaded = page(p.href());
   assert.equal(reloaded.document.documentElement.lang, 'ru');
 });

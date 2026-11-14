@@ -116,6 +116,15 @@ class SiteTests(unittest.TestCase):
         self.assertEqual(schedule['calendar_capacity_minutes'],155500)
         self.assertEqual(schedule['buffer_minutes'], 0)
 
+    def test_first_purchase_uses_the_active_m04_date(self):
+        schedule = json.loads((ROOT / 'schedule.json').read_text())
+        first_use = next(item['start'] for item in schedule['items'] if item['id'] == 'M04')
+        rendered_date = date.fromisoformat(first_use).strftime('%d.%m.%Y')
+        source = (ROOT / 'procurement.html').read_text()
+        basket = source.split('<section id="first-basket">', 1)[1].split('</section>', 1)[0]
+        self.assertIn(f'Подготовить к началу M04 — {rendered_date}', basket)
+        self.assertIn(f'Prepare for the start of M04 — {rendered_date}', basket)
+
     def test_procurement_component_costs_and_reuse(self):
         data = json.loads((ROOT / 'procurement.json').read_text())
         items = {item['id']: item for item in data['items']}

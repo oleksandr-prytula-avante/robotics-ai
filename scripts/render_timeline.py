@@ -619,9 +619,13 @@ def main():
                 parts.append(f'<a href="{target}">{label(target[:7])}</a>')
         parts.append('</div><footer>'+bi(f'Календарь {VERSION} · 11.11.2026 · 50 ч/неделю.',f'Calendar {VERSION} · 11 November 2026 · 50 h/week.')+'</footer></main></div></body></html>')
         pages[ROOT/month['page']] = '\n'.join(parts)
-    # Keep old month URLs usable, but remove obsolete monthly assignments.
+    # Remove obsolete months before the active programme; keep later URLs usable.
     active_month_paths = {ROOT / month['page'] for month in months}
     for old_path in (ROOT / 'months').glob('*.html'):
+        if re.fullmatch(r'\d{4}-\d{2}', old_path.stem) and old_path.stem < START.strftime('%Y-%m'):
+            old_path.unlink()
+            pages.pop(old_path, None)
+            continue
         if old_path not in active_month_paths:
             pages[old_path] = prefix + '<h1>'+bi(f'Календарь перенесён на {START.year} год',f'Calendar moved to {START.year}')+'</h1><p>'+bi('2 января — ознакомление с планом; учебные задания с понедельника, 04.01.2027.','2 January is programme orientation; study tasks start Monday 4 January 2027.')+'</p><a href="2027-01.html">'+label('2027-01')+'</a></main></div></body></html>'
     for path, text in pages.items():

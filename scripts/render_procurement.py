@@ -4,6 +4,7 @@ import html
 import json
 import re
 from decimal import Decimal
+from datetime import date
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -138,8 +139,11 @@ def card(item):
 
 def first_basket(data):
     index = {item['id']: item for item in data['items']}
+    schedule = json.loads((ROOT / 'schedule.json').read_text())
+    first_use = date.fromisoformat(next(item['start'] for item in schedule['items'] if item['id'] == 'M04'))
+    first_use_date = first_use.strftime('%d.%m.%Y')
     out = '<section id="first-basket"><h2>' + span(bi('Первая закупка: к электронике M04','First purchase: for M04 electronics')) + '</h2>'
-    out += '<p>' + span(bi('Подготовить к 20 ноября 2026. Количество «1» у составной строки означает весь комплект из её карточки. Имеющиеся инструменты повторно покупать не нужно.','Prepare before 20 November 2026. Quantity “1” for a bundle means all components in its card. Reuse suitable tools already owned.')) + '</p>'
+    out += '<p>' + span(bi(f'Подготовить к началу M04 — {first_use_date}. Количество «1» у составной строки означает весь комплект из её карточки. Имеющиеся инструменты повторно покупать не нужно.',f'Prepare for the start of M04 — {first_use_date}. Quantity “1” for a bundle means all components in its card. Reuse suitable tools already owned.')) + '</p>'
     out += '<div class="table-wrap"><table><thead><tr>' + ''.join('<th>'+span(v)+'</th>' for v in [bi('Позиция','Item'),bi('Кол-во','Quantity'),bi('Сумма','Cost')]) + '</tr></thead><tbody>'
     for row in data['first_basket']:
         item = index[row['id']]

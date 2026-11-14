@@ -273,6 +273,12 @@ class ContentTests(unittest.TestCase):
             text = path.read_text()
             self.assertNotIn('120 ч чтения и целевого изучения сняты', text, path.name)
 
+    def test_month_pages_do_not_predate_the_active_calendar(self):
+        first_month = self.schedule['start'][:7]
+        for path in (ROOT / 'months').glob('*.html'):
+            if re.fullmatch(r'\d{4}-\d{2}', path.stem):
+                self.assertGreaterEqual(path.stem, first_month, path.name)
+
     def test_material_dates_match_their_scheduled_tasks(self):
         for condition in self.schedule['calendar_assumptions']['material_ready_conditions']:
             item = self.items[condition['stage']]
