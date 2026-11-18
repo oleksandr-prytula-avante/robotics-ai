@@ -76,13 +76,15 @@
     {
       "id": "estimation",
       "stages": [
+        "L1",
         "M03",
         "M11"
       ],
       "sources": [
         "SW13",
         "math-feedback",
-        "math-labbe"
+        "math-labbe",
+        "math-nist"
       ],
       "title": {
         "ru": "Измерение → неопределённость → оценивание",

@@ -2192,8 +2192,8 @@
       "key": "G2.1",
       "stage": "G2",
       "title": {
-        "ru": "Проверить результаты стояния/crawl и готовность питания/шины. После PASS разрешено планировать оставшиеся две ноги. Испытания находятся в M22.",
-        "en": "Review standing/crawl evidence and power/bus readiness. After PASS plan the remaining two legs. Trials are in M22."
+        "ru": "Сверить стояние/crawl, просадки питания, нагрев и задержки шины с заранее записанными критериями M22. PASS открывает закупку и добавление двух ног; при HOLD записать причину и пересчитать сроки.",
+        "en": "Check standing/crawl, supply dips, heating and bus latency against predefined M22 criteria. PASS opens procurement and addition of two legs. On HOLD, record the cause and reforecast."
       },
       "before": {
         "learn": 0,
@@ -2912,8 +2912,8 @@
       "key": "G3.1",
       "stage": "G3",
       "title": {
-        "ru": "Сверить ручной и автоматизированный перенос, отклонённые/неизвестные объекты, измерения под нагрузкой и границы применения ML. Использовать серию A3; не повторять её целиком.",
-        "en": "Review manual/automated transfers, reject/unknown, loaded measurements and ML limitations. Reuse the A3 series rather than repeating it."
+        "ru": "Сверить перенос, отказы, измерения под нагрузкой и эксперимент M18 на данных A3. При недопуске модели принять документированный эксперимент и проверенное исполнение по правилу M14 при выполнении остальных критериев.",
+        "en": "Review transfers, rejects, loaded measurements and M18 evidence using A3 data. If the model fails admission, accept the documented experiment and validated M14 execution when all other criteria pass."
       },
       "before": {
         "learn": 0,

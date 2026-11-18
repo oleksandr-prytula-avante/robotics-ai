@@ -437,7 +437,8 @@
         "en": "§1.3.5.2: mean confidence interval and repeated-sampling interpretation; §1.3.5.11 only for unusual noise shape. Distinguish measurement spread, mean uncertainty, bias and dependent samples. Thirty runs are a project protocol, not a guarantee of interval validity."
       },
       "stages": [
-        "M03"
+        "M03",
+        "L1"
       ],
       "group": "math",
       "role": "core_selected",
@@ -446,6 +447,11 @@
           "url": "https://www.itl.nist.gov/div898/handbook/eda/section3/eda35b.htm",
           "status": "opened_primary_page",
           "checked_on": "2026-09-19"
+        },
+        {
+          "url": "https://www.itl.nist.gov/div898/handbook/mpc/section5/mpc5.htm",
+          "status": "opened_primary_page",
+          "checked_on": "2026-11-18"
         }
       ],
       "limitations": null,
@@ -1477,8 +1483,14 @@
         },
         {
           "title": "Ubuntu Noble python3-opencv package",
-          "url": "https://packages.ubuntu.com/ja/noble/python3-opencv",
-          "status": "verified"
+          "url": "https://packages.ubuntu.com/source/noble/opencv",
+          "status": "opened_primary_page",
+          "checked_on": "2026-11-18"
+        },
+        {
+          "url": "https://github.com/opencv/opencv/blob/4.6.0/doc/py_tutorials/py_calib3d/py_calibration/py_calibration.markdown",
+          "status": "opened_primary_page",
+          "checked_on": "2026-11-18"
         }
       ],
       "limitations": {
@@ -1685,7 +1697,13 @@
       ],
       "group": "software",
       "role": "core",
-      "links": [],
+      "links": [
+        {
+          "url": "https://scikit-learn.org/stable/modules/cross_validation.html#cross-validation-iterators-for-grouped-data",
+          "status": "opened_primary_page",
+          "checked_on": "2026-11-18"
+        }
+      ],
       "limitations": {
         "ru": "Каталог всех алгоритмов, широкий перебор гиперпараметров по сетке и отдельный ML-сервис не требуются.",
         "en": "The full algorithm catalogue, broad grid searches and a separate ML service are not required."
@@ -1851,6 +1869,16 @@
         {
           "title": "Optional homography explanation",
           "url": "https://docs.opencv.org/4.6.0/d9/dab/tutorial_homography.html"
+        },
+        {
+          "url": "https://github.com/opencv/opencv/blob/4.6.0/modules/calib3d/include/opencv2/calib3d.hpp",
+          "status": "opened_primary_page",
+          "checked_on": "2026-11-18"
+        },
+        {
+          "url": "https://github.com/opencv/opencv/blob/4.6.0/doc/tutorials/features2d/homography/homography.markdown",
+          "status": "opened_primary_page",
+          "checked_on": "2026-11-18"
         }
       ],
       "status": {
@@ -2711,7 +2739,7 @@
       },
       "urls": [
         "https://docs.opencv.org/4.6.0/dc/dbb/tutorial_py_calibration.html",
-        "https://packages.ubuntu.com/ja/noble/python3-opencv"
+        "https://packages.ubuntu.com/source/noble/opencv"
       ],
       "original_url": "https://docs.opencv.org/4.x/dc/dbb/tutorial_py_calibration.html"
     },
@@ -3685,6 +3713,13 @@
             "ru": "Только ветка ST3215: питание/разъём, ID, режим, ноль, регистры, единицы и ошибки. Проверить точную модификацию ST, не использовать команды DYNAMIXEL.",
             "en": "Only the ST3215 branch: power/connector, ID, mode, zero, registers, units and errors. Check the exact ST variant; do not use DYNAMIXEL commands."
           }
+        },
+        {
+          "ref": "math-nist",
+          "selection": {
+            "ru": "Перед нагрузкой выбрать допуск, выписать вклад разрешения и повторяемости, определить независимые повторы и решение при пограничном результате.",
+            "en": "Before loading, choose a tolerance, identify resolution and repeatability contributions, and specify independent repeats and the borderline decision."
+          }
         }
       ],
       "learn_hours": 12,
@@ -3753,15 +3788,16 @@
           "task": "L1.5",
           "hours": 3,
           "sources": [
-            "H-SERVO"
+            "H-SERVO",
+            "math-nist"
           ],
           "focus": {
-            "ru": "Измеренная FK/IK и нагруженная проверка",
-            "en": "Measured FK/IK and loaded leg validation"
+            "ru": "Допуск, повторяемость и нагруженная проверка FK/IK",
+            "en": "Tolerance, repeatability and loaded FK/IK validation"
           },
           "mastery_check": {
-            "ru": "Внешне измеренный FK/IK, опорная нагрузка, текущий рабочий диапазон, ток/температура и повтор после охлаждения; PASS до тиражирования.",
-            "en": "Externally measured FK/IK, support load, current operating envelope, current/temperature and post-cooling repeat; PASS before replication."
+            "ru": "До нагрузки зафиксировать допуск FK/IK, разрешение прибора, независимые повторные установки и правило PASS/HOLD. Внешне измерить FK/IK, рабочий диапазон, нагрузку, ток и температуру. Повторить после охлаждения. Если с учётом погрешности результат может выйти за допуск, оставить HOLD. Сохранить журнал для разбора M03.",
+            "en": "Before loading, record the FK/IK tolerance, instrument resolution, independent repositioning and the PASS/HOLD rule. Independently measure FK/IK, operating range, load, current and temperature. Repeat after cooling. Use HOLD if measurement uncertainty can put the result outside tolerance. Retain the log for M03."
           }
         }
       ],
@@ -3826,8 +3862,8 @@
             "en": "One repeatable physical calibration protocol"
           },
           "mastery_check": {
-            "ru": "Заранее выбранные положения, независимые повторные установки и проверочная серия; сохранены исходные данные, температура и условия, разделение по опытам на обучающую и тестовую выборки и число независимых повторов.",
-            "en": "Predefined poses, repeated physical placements and held-out runs retain raw data, temperature/conditions, run-level splits and the independent repetition count."
+            "ru": "Разобрать протокол L1 на его журнале и применить уточнённый протокол к одной физической калибровке датчика. Заранее заданы положения, независимые повторные установки и проверочная серия; сохранены исходные данные, температура, условия и разбиение по независимым опытам.",
+            "en": "Review the L1 protocol against its log and apply the refined protocol to one physical sensor calibration. Predefine positions, independent repositioning and the validation run. Retain raw data, temperature, conditions and the independent-run split."
           }
         },
         {
@@ -3843,8 +3879,8 @@
             "en": "Result error and inference limits"
           },
           "mastery_check": {
-            "ru": "Одна пригодная оценка неопределённости для выбранной калибровки; сравнение с реальной проверочной ошибкой, чувствительностьюю и обусловленностью. Метод и размер выборки объяснены.",
-            "en": "One suitable calibration-uncertainty estimate is compared with held-out physical error, sensitivity and conditioning; method and sample size are justified."
+            "ru": "Оценить неопределённость выбранной калибровки, сравнить с независимой проверочной ошибкой и объяснить влияние чувствительности и обусловленности. Указать метод, число независимых опытов и решение при пограничном результате.",
+            "en": "Estimate calibration uncertainty, compare with independent validation error and explain sensitivity and conditioning. Record the method, number of independent runs and the decision for a borderline result."
           }
         },
         {
@@ -4424,8 +4460,8 @@
             "en": "Prototype the most heavily loaded joint"
           },
           "mastery_check": {
-            "ru": "Наиболее нагруженный сустав проходит удержание/движение/нагрев с эквивалентной нагрузкой до полного заказа.",
-            "en": "Most loaded joint passes holding/motion/thermal tests under equivalent load before the full order."
+            "ru": "Нагруженный сустав проходит удержание, движение и нагрев при эквивалентной нагрузке. Измерить отклонение на выходе под нагрузкой, проверить требования к остальным осям и зафиксировать решение по тиражу и срокам до полного заказа.",
+            "en": "The loaded joint passes hold, motion and heating checks under equivalent load. Measure output deflection under load, check the other axes’ requirements and record the replication and lead-time decision before the full order."
           }
         },
         {
@@ -4668,12 +4704,12 @@
             "math-convex"
           ],
           "focus": {
-            "ru": "Перенос ноги и пригодность точки опоры",
-            "en": "Swing and feasible footholds"
+            "ru": "Пригодность локальной опоры и проверка полной траектории переноса",
+            "en": "Local foothold suitability and full swing-path validation"
           },
           "mastery_check": {
-            "ru": "IK, проверки столкновений и зазора охватывают всю дугу переноса ноги и ограниченную сетку точек на известной поверхности; недостижимая или неизвестная цель вызывает ограничение либо остановку.",
-            "en": "IK/collision/clearance checks cover the entire path and a bounded grid on known terrain; unreachable or unknown targets trigger restriction/stopping."
+            "ru": "Для известной синтетической карты отсеять неизвестные, слишком крутые и недостаточные по опорной площади площадки. На ограниченной сетке точек проверить IK, устойчивость оставшихся опор, коллизии и зазор по всей дуге переноса. Сравнить номинальный шаг с одним альтернативным кандидатом; при отсутствии допустимого шага ограничить движение или остановиться.",
+            "en": "On a known synthetic map, reject unknown, overly steep and insufficient support patches. On a bounded candidate grid, check IK, remaining-stance stability, collision and clearance over the full swing. Compare the nominal step with one alternative candidate; restrict motion or stop if no admissible step remains."
           }
         },
         {
@@ -4903,8 +4939,8 @@
             "en": "First active pretensioned section: tension limits, zero calibration and measured loading."
           },
           "mastery_check": {
-            "ru": "Одна активная секция с двумя приводами, ограниченными траекториями и измерениями тока, нагрева и поведения при остановке.",
-            "en": "One active section with two drives, bounded motion and measured current/heating/stopping."
+            "ru": "Одна активная секция испытана в ограниченной рабочей области. До проверки записаны критерии по нагрузке, ошибке формы при движении в обе стороны, току, температуре, удержанию и остановке. Сделана короткая повторная серия с осмотром износа. Итог PASS/HOLD с журналом; без PASS сборка остальных секций блокируется.",
+            "en": "Test one active section within a bounded envelope. Before testing, record the load, bidirectional shape error, current, temperature, hold and stop criteria. Run a short repeat series and inspect wear. Record PASS/HOLD with logs; the remaining sections require PASS."
           }
         },
         {
@@ -4919,8 +4955,8 @@
             "en": "How distal tendons load proximal sections; routing and coupling of the custom layout."
           },
           "mastery_check": {
-            "ru": "Три секции/шесть приводов собраны; дальние тросы и связи секций проверены.",
-            "en": "Three sections/six drives assembled; distal tendon routing and inter-section coupling verified."
+            "ru": "После PASS одной секции собрать три секции и шесть приводов; проверить дальние тросы и связи секций. При HOLD оценить одну итерацию переделки и пересчитать даты получения деталей и сборки.",
+            "en": "After one-section PASS, assemble three sections and six drives and check distal tendons and section coupling. On HOLD, estimate one rework iteration and reforecast material and assembly dates."
           }
         },
         {
@@ -5483,8 +5519,8 @@
             "en": "Holdout, classical baseline and abstention"
           },
           "mastery_check": {
-            "ru": "Одна модель с зафиксированными параметрами сравнивается с правилом M14 на той же тестовой выборке: матрица ошибок, точность и полнота, ложные допуски и отказы, доля выданных решений и результаты по условиям. Порог выбирается по валидационной, а не тестовой выборке.",
-            "en": "Compare one frozen model with the M14 rule on the same test: confusion matrix, precision/recall, false accept/reject, abstention coverage and per-condition results. Select threshold on validation, never test."
+            "ru": "До тестовой серии заданы условия допуска модели по ложным допускам, покрытию и задержке. Порог выбирается на валидации. На отложенных сеансах сравнить одну фиксированную модель и правило M14, сохранить матрицу ошибок, точность, полноту, ложные допуски, отказы и срезы по условиям.",
+            "en": "Predefine the model admission criteria for false accepts, coverage and latency before testing. Set the decision threshold on validation. Compare one frozen model with the M14 rule on held-out sessions and retain confusion matrix, precision, recall, false accepts, rejects and condition slices."
           }
         },
         {
@@ -5500,8 +5536,8 @@
             "en": "CPU inference and bounded connection to the arm"
           },
           "mastery_check": {
-            "ru": "Сохранены набор данных, модель, конфигурация, версии, задержка выполнения на CPU и возраст данных. Модель рекомендует «целевой объект / отклонить»; геометрические ограничения и остановка независимы от неё. Включение проверяется в уже запланированных попытках A3.",
-            "en": "Retain dataset/model/config/version and CPU latency/data age. ML outputs a target/reject recommendation; geometric limits and stop remain independent. Integration is checked in already-planned A3 attempts."
+            "ru": "Сохранены данные, модель, конфигурация, версии, задержка CPU и возраст данных. В A3 модель включается только при выполнении критериев M18.3. Иначе сохранить отрицательный результат, выполнить сравнение на записанных данных и оставить правило M14 в исполнительном контуре. Геометрические ограничения и остановка действуют в обоих случаях.",
+            "en": "Retain data, model, configuration, versions, CPU latency and data age. Enable the model in A3 only if it meets M18.3. Otherwise preserve the negative result, compare on recorded data and retain the M14 rule for execution. Geometry constraints and stop apply in both cases."
           }
         }
       ],
@@ -5563,8 +5599,8 @@
             "en": "Repeatable object transfer"
           },
           "mastery_check": {
-            "ru": "30 детерминированных переносов 3 объектов×10 с известной позой, ≥ 9/10 по каждому,30 с удержания, проверенный случай 500 г.",
-            "en": "Thirty deterministic transfers:3 known-pose objects×10, ≥ 9/10 per object,30 s holding and a validated 500 g case."
+            "ru": "30 детерминированных переносов 3 объектов × 10 с известной позой, ≥9/10 по каждому, 30 с удержания и проверенный случай 500 г. На отдельной части серии проверить исполнительный режим по M14 либо M18 согласно допуску. Записать выбранный режим и причины отказа.",
+            "en": "Run 30 deterministic transfers, 3 objects × 10 at known poses, ≥9/10 for each, a 30 s hold and a tested 500 g case. Use a separate part of the series to check the admitted M14 or M18 execution path. Record the path and reject reasons."
           }
         },
         {
@@ -5636,8 +5672,8 @@
             "en": "Cycles, faults, mount, wearable trial and release"
           },
           "mastery_check": {
-            "ru": "100 циклов, проверки отказов и остановки, износа и крепления; после стенда — испытание на манекене с нагрузкой и короткая стационарная примерка с проверкой быстрого снятия.",
-            "en": "One hundred cycles, faults/stopping, wear and mounting; bench then dummy/load, followed by a brief stationary wearable trial with release."
+            "ru": "Проведены 100 циклов при записанных нагрузке и режиме; проверены отказы, остановка, износ, крепление и быстрое снятие. Испытание на манекене и стационарная примерка допускаются после стендовых проверок. Число циклов подтверждает результат короткой стендовой серии.",
+            "en": "Run 100 cycles at a recorded load and duty. Check faults, stop, wear, mounting and quick release. Loaded mannequin testing and stationary fitting follow successful bench checks. The cycle count documents a short bench series."
           }
         }
       ],

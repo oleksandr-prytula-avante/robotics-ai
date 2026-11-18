@@ -220,8 +220,8 @@
             "M02 calibration"
           ],
           "result": {
-            "ru": "Заранее выбранные положения, независимые повторные установки и проверочная серия; сохранены исходные данные, температура и условия, разделение по опытам на обучающую и тестовую выборки и число независимых повторов.",
-            "en": "Predefined poses, repeated physical placements and held-out runs retain raw data, temperature/conditions, run-level splits and the independent repetition count."
+            "ru": "Разобрать протокол L1 на его журнале и применить уточнённый протокол к одной физической калибровке датчика. Заранее заданы положения, независимые повторные установки и проверочная серия; сохранены исходные данные, температура, условия и разбиение по независимым опытам.",
+            "en": "Review the L1 protocol against its log and apply the refined protocol to one physical sensor calibration. Predefine positions, independent repositioning and the validation run. Retain raw data, temperature, conditions and the independent-run split."
           },
           "refs": [
             "M03 pp5,9,14",
@@ -242,8 +242,8 @@
             "M03 pp7–8,10,15"
           ],
           "result": {
-            "ru": "Одна пригодная оценка неопределённости для выбранной калибровки; сравнение с реальной проверочной ошибкой, чувствительностьюю и обусловленностью. Метод и размер выборки объяснены.",
-            "en": "One suitable calibration-uncertainty estimate is compared with held-out physical error, sensitivity and conditioning; method and sample size are justified."
+            "ru": "Оценить неопределённость выбранной калибровки, сравнить с независимой проверочной ошибкой и объяснить влияние чувствительности и обусловленности. Указать метод, число независимых опытов и решение при пограничном результате.",
+            "en": "Estimate calibration uncertainty, compare with independent validation error and explain sensitivity and conditioning. Record the method, number of independent runs and the decision for a borderline result."
           },
           "refs": [
             "M03 pp7–8,10,15"
@@ -1086,8 +1086,8 @@
             "M19 pp5–6,10"
           ],
           "result": {
-            "ru": "IK, проверки столкновений и зазора охватывают всю дугу переноса ноги и ограниченную сетку точек на известной поверхности; недостижимая или неизвестная цель вызывает ограничение либо остановку.",
-            "en": "IK/collision/clearance checks cover the entire path and a bounded grid on known terrain; unreachable or unknown targets trigger restriction/stopping."
+            "ru": "Для известной синтетической карты отсеять неизвестные, слишком крутые и недостаточные по опорной площади площадки. На ограниченной сетке точек проверить IK, устойчивость оставшихся опор, коллизии и зазор по всей дуге переноса. Сравнить номинальный шаг с одним альтернативным кандидатом; при отсутствии допустимого шага ограничить движение или остановиться.",
+            "en": "On a known synthetic map, reject unknown, overly steep and insufficient support patches. On a bounded candidate grid, check IK, remaining-stance stability, collision and clearance over the full swing. Compare the nominal step with one alternative candidate; restrict motion or stop if no admissible step remains."
           },
           "refs": [
             "M19 pp5–6,10"
@@ -2194,8 +2194,8 @@
             "M18 metrics/calibration/OOD task"
           ],
           "result": {
-            "ru": "Одна модель с зафиксированными параметрами сравнивается с правилом M14 на той же тестовой выборке: матрица ошибок, точность и полнота, ложные допуски и отказы, доля выданных решений и результаты по условиям. Порог выбирается по валидационной, а не тестовой выборке.",
-            "en": "Compare one frozen model with the M14 rule on the same test: confusion matrix, precision/recall, false accept/reject, abstention coverage and per-condition results. Select threshold on validation, never test."
+            "ru": "До тестовой серии заданы условия допуска модели по ложным допускам, покрытию и задержке. Порог выбирается на валидации. На отложенных сеансах сравнить одну фиксированную модель и правило M14, сохранить матрицу ошибок, точность, полноту, ложные допуски, отказы и срезы по условиям.",
+            "en": "Predefine the model admission criteria for false accepts, coverage and latency before testing. Set the decision threshold on validation. Compare one frozen model with the M14 rule on held-out sessions and retain confusion matrix, precision, recall, false accepts, rejects and condition slices."
           },
           "refs": [
             "M18 metrics/calibration/OOD task"
@@ -2216,8 +2216,8 @@
             "M17 execution contract"
           ],
           "result": {
-            "ru": "Сохранены набор данных, модель, конфигурация, версии, задержка выполнения на CPU и возраст данных. Модель рекомендует «целевой объект / отклонить»; геометрические ограничения и остановка независимы от неё. Включение проверяется в уже запланированных попытках A3.",
-            "en": "Retain dataset/model/config/version and CPU latency/data age. ML outputs a target/reject recommendation; geometric limits and stop remain independent. Integration is checked in already-planned A3 attempts."
+            "ru": "Сохранены данные, модель, конфигурация, версии, задержка CPU и возраст данных. В A3 модель включается только при выполнении критериев M18.3. Иначе сохранить отрицательный результат, выполнить сравнение на записанных данных и оставить правило M14 в исполнительном контуре. Геометрические ограничения и остановка действуют в обоих случаях.",
+            "en": "Retain data, model, configuration, versions, CPU latency and data age. Enable the model in A3 only if it meets M18.3. Otherwise preserve the negative result, compare on recorded data and retain the M14 rule for execution. Geometry constraints and stop apply in both cases."
           },
           "refs": [
             "M18 export/latency/reproduction task",
@@ -3334,8 +3334,8 @@
             "L1e"
           ],
           "result": {
-            "ru": "Внешне измеренный FK/IK, опорная нагрузка, текущий рабочий диапазон, ток/температура и повтор после охлаждения; PASS до тиражирования.",
-            "en": "Externally measured FK/IK, support load, current operating envelope, current/temperature and post-cooling repeat; PASS before replication."
+            "ru": "До нагрузки зафиксировать допуск FK/IK, разрешение прибора, независимые повторные установки и правило PASS/HOLD. Внешне измерить FK/IK, рабочий диапазон, нагрузку, ток и температуру. Повторить после охлаждения. Если с учётом погрешности результат может выйти за допуск, оставить HOLD. Сохранить журнал для разбора M03.",
+            "en": "Before loading, record the FK/IK tolerance, instrument resolution, independent repositioning and the PASS/HOLD rule. Independently measure FK/IK, operating range, load, current and temperature. Repeat after cooling. Use HOLD if measurement uncertainty can put the result outside tolerance. Retain the log for M03."
           }
         }
       ],
@@ -4268,8 +4268,8 @@
             "A02"
           ],
           "result": {
-            "ru": "Наиболее нагруженный сустав проходит удержание/движение/нагрев с эквивалентной нагрузкой до полного заказа.",
-            "en": "Most loaded joint passes holding/motion/thermal tests under equivalent load before the full order."
+            "ru": "Нагруженный сустав проходит удержание, движение и нагрев при эквивалентной нагрузке. Измерить отклонение на выходе под нагрузкой, проверить требования к остальным осям и зафиксировать решение по тиражу и срокам до полного заказа.",
+            "en": "The loaded joint passes hold, motion and heating checks under equivalent load. Measure output deflection under load, check the other axes’ requirements and record the replication and lead-time decision before the full order."
           },
           "material_ready_condition": {
             "ru": "Поставка: выбор плечевого привода завершается по плану 30.06.2027; PR5 разрешает заказ только после этого. 30.06 — начало планового слота A02, а не обещание получения привода в тот же день. Работы с приводом и нагрузочная проверка ждут фактической поставки; независимую подготовку оснастки можно продолжать. Если ожидание не помещается в перестановку работ, пересчитать окончание A02 и последующие даты.",
@@ -4449,8 +4449,8 @@
             "A09"
           ],
           "result": {
-            "ru": "30 детерминированных переносов 3 объектов×10 с известной позой, ≥ 9/10 по каждому,30 с удержания, проверенный случай 500 г.",
-            "en": "Thirty deterministic transfers:3 known-pose objects×10, ≥ 9/10 per object,30 s holding and a validated 500 g case."
+            "ru": "30 детерминированных переносов 3 объектов × 10 с известной позой, ≥9/10 по каждому, 30 с удержания и проверенный случай 500 г. На отдельной части серии проверить исполнительный режим по M14 либо M18 согласно допуску. Записать выбранный режим и причины отказа.",
+            "en": "Run 30 deterministic transfers, 3 objects × 10 at known poses, ≥9/10 for each, a 30 s hold and a tested 500 g case. Use a separate part of the series to check the admitted M14 or M18 execution path. Record the path and reject reasons."
           }
         },
         {
@@ -4592,8 +4592,8 @@
             "T04"
           ],
           "result": {
-            "ru": "Одна активная секция с двумя приводами, ограниченными траекториями и измерениями тока, нагрева и поведения при остановке.",
-            "en": "One active section with two drives, bounded motion and measured current/heating/stopping."
+            "ru": "Одна активная секция испытана в ограниченной рабочей области. До проверки записаны критерии по нагрузке, ошибке формы при движении в обе стороны, току, температуре, удержанию и остановке. Сделана короткая повторная серия с осмотром износа. Итог PASS/HOLD с журналом; без PASS сборка остальных секций блокируется.",
+            "en": "Test one active section within a bounded envelope. Before testing, record the load, bidirectional shape error, current, temperature, hold and stop criteria. Run a short repeat series and inspect wear. Record PASS/HOLD with logs; the remaining sections require PASS."
           }
         },
         {
@@ -4609,8 +4609,8 @@
             "T05"
           ],
           "result": {
-            "ru": "Три секции/шесть приводов собраны; дальние тросы и связи секций проверены.",
-            "en": "Three sections/six drives assembled; distal tendon routing and inter-section coupling verified."
+            "ru": "После PASS одной секции собрать три секции и шесть приводов; проверить дальние тросы и связи секций. При HOLD оценить одну итерацию переделки и пересчитать даты получения деталей и сборки.",
+            "en": "After one-section PASS, assemble three sections and six drives and check distal tendons and section coupling. On HOLD, estimate one rework iteration and reforecast material and assembly dates."
           },
           "material_ready_condition": {
             "ru": "Поставка: ещё четыре привода заказываются только после PASS первой активной секции T04, намеченного на 23.09.2027. Слот T05 с 23.09 не предполагает поставку в тот же день. Монтаж этих приводов, полная калибровка и завершение T05 зависят от получения деталей; на время доставки перенести независимые работы и при необходимости пересчитать даты. 0 ч свободной ёмкости не гарантируют покрытие календарного срока доставки.",
@@ -4693,8 +4693,8 @@
             "T08"
           ],
           "result": {
-            "ru": "100 циклов, проверки отказов и остановки, износа и крепления; после стенда — испытание на манекене с нагрузкой и короткая стационарная примерка с проверкой быстрого снятия.",
-            "en": "One hundred cycles, faults/stopping, wear and mounting; bench then dummy/load, followed by a brief stationary wearable trial with release."
+            "ru": "Проведены 100 циклов при записанных нагрузке и режиме; проверены отказы, остановка, износ, крепление и быстрое снятие. Испытание на манекене и стационарная примерка допускаются после стендовых проверок. Число циклов подтверждает результат короткой стендовой серии.",
+            "en": "Run 100 cycles at a recorded load and duty. Check faults, stop, wear, mounting and quick release. Loaded mannequin testing and stationary fitting follow successful bench checks. The cycle count documents a short bench series."
           }
         }
       ],
@@ -5175,8 +5175,8 @@
       "tasks": [
         {
           "title": {
-            "ru": "Проверить результаты стояния/crawl и готовность питания/шины. После PASS разрешено планировать оставшиеся две ноги. Испытания находятся в M22.",
-            "en": "Review standing/crawl evidence and power/bus readiness. After PASS plan the remaining two legs. Trials are in M22."
+            "ru": "Сверить стояние/crawl, просадки питания, нагрев и задержки шины с заранее записанными критериями M22. PASS открывает закупку и добавление двух ног; при HOLD записать причину и пересчитать сроки.",
+            "en": "Check standing/crawl, supply dips, heating and bus latency against predefined M22 criteria. PASS opens procurement and addition of two legs. On HOLD, record the cause and reforecast."
           },
           "learn": 0,
           "build": 1,
@@ -5209,8 +5209,8 @@
       "tasks": [
         {
           "title": {
-            "ru": "Сверить ручной и автоматизированный перенос, отклонённые/неизвестные объекты, измерения под нагрузкой и границы применения ML. Использовать серию A3; не повторять её целиком.",
-            "en": "Review manual/automated transfers, reject/unknown, loaded measurements and ML limitations. Reuse the A3 series rather than repeating it."
+            "ru": "Сверить перенос, отказы, измерения под нагрузкой и эксперимент M18 на данных A3. При недопуске модели принять документированный эксперимент и проверенное исполнение по правилу M14 при выполнении остальных критериев.",
+            "en": "Review transfers, rejects, loaded measurements and M18 evidence using A3 data. If the model fails admission, accept the documented experiment and validated M14 execution when all other criteria pass."
           },
           "learn": 0,
           "build": 1,

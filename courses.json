@@ -528,13 +528,12 @@
     },
     "S1": {
       "courses": [
-        "ros",
-        "model"
+        "ros"
       ],
       "status": "strong",
       "note": {
-        "ru": "Сначала узлы и интерфейсы, затем URDF/TF и новый Gazebo. Сделать простой сустав и записать данные.",
-        "en": "Start with nodes/interfaces, then URDF/TF and new Gazebo. Build a simple joint and record data."
+        "ru": "Узлы, сообщения, launch, QoS и запись. Готовая сцена служит пробой среды в M01. Собственную URDF/TF изучать в S2, контактную симуляцию — в M13.",
+        "en": "Study nodes, messages, launch, QoS and recording. Use an existing scene for the M01 environment check. Build your own URDF/TF model in S2 and study contact simulation in M13."
       },
       "title": {
         "ru": "Раннее знакомство с ROS на простой имитации сустава",
@@ -732,8 +731,8 @@
       ],
       "status": "partial",
       "note": {
-        "ru": "Основной фильтр — Fusion без магнитометра; Kalman — один ручной шаг для понимания, не вторая реализация. Источники, единицы и проверка — рядом с заданием.",
-        "en": "Use no-magnetometer Fusion; one hand-worked Kalman step explains estimation without a second implementation. Task-linked sources, units and checks are provided."
+        "ru": "Повторить дискретизацию и шум. Практический алгоритм — x-io Fusion. Из Advanced Kalman взять только модель состояния, прогноз и коррекцию после разбора наблюдаемости; расширенный курс оставить для D_STATE.",
+        "en": "Review sampling and noise. Use x-io Fusion for the working algorithm. Use only state description, prediction and correction from Advanced Kalman after observability; defer deeper study to D_STATE."
       },
       "title": {
         "ru": "Практическая IMU-фильтрация и наблюдаемость",
@@ -809,8 +808,8 @@
       ],
       "status": "gap",
       "note": {
-        "ru": "Походки — статья OpenSHC и собственные фазовые диаграммы; контакт — Tedrake; плоская QP — Boyd/CVXPY. ROS-курс используется для инструментов.",
-        "en": "Use OpenSHC/custom phase diagrams for gait, Tedrake for contact and Boyd/CVXPY for planar QP; ROS courses supply tooling."
+        "ru": "ROS/Gazebo — опора для симуляции. Локальные площадки, достижимость, опорную устойчивость и зазор проверить по маршруту M19-D. Для картирования и последовательности шагов использовать отдельный маршрут Terrain Traversability / Footstep Planning.",
+        "en": "Use ROS/Gazebo for simulation. Work through M19-D for local patches, reachability, stance stability and clearance. Follow the separate Terrain Traversability / Footstep Planning route for mapping and step sequences."
       },
       "title": {
         "ru": "Медленная походка, контакты и устойчивость в симуляции",
@@ -951,8 +950,8 @@
       ],
       "status": "strong",
       "note": {
-        "ru": "Небольшой CPU-проект, свои данные, независимая проверка и сравнение с baseline. Статистику повторять по необходимости.",
-        "en": "Small CPU project, your data, independent validation and baseline comparison. Revisit statistics only as needed."
+        "ru": "Выбрать тензоры, один цикл обучения, бинарную модель, валидацию и CPU-инференс. Разделить съёмочные сеансы до обучения; правила допуска модели определить до тестовой серии.",
+        "en": "Select tensors, one training loop, a binary model, validation and CPU inference. Split capture sessions before training and define model admission before testing."
       },
       "title": {
         "ru": "Один полезный эксперимент машинного обучения для манипулятора",
@@ -1437,8 +1436,8 @@
     }
   },
   "starter": [
-    "cpp",
     "ros",
+    "cpp",
     "algebra"
   ],
   "next": [
@@ -1447,5 +1446,6 @@
     "esp32"
   ],
   "learning_path": "learning-path.json",
-  "materials_updated_on": "2026-11-11"
+  "materials_updated_on": "2026-11-11",
+  "public_pages_rechecked_on": "2026-11-18"
 }

@@ -47,6 +47,13 @@ for cid in DATA['starter']:
     parts.append(f'<li>{link(cid, True)} · ${c["price_usd_snapshot"]:.2f}</li>')
 starter_total = sum(round(COURSES[cid]['price_usd_snapshot'] * 100) for cid in DATA['starter']) / 100
 parts.append('</ol><p>'+bi(f'Эти три курса стоили ${starter_total:.2f} на момент проверки. C++ брать, если диагностика M01 выявила пробелы; ROS и математику проходить параллельно с заданиями. Следующая очередь: электроника → один CAD → ESP-IDF.', f'These three courses totalled ${starter_total:.2f} at verification. Buy C++ if the M01 diagnostic finds gaps; study ROS and mathematics alongside the tasks. Next: electronics → one CAD tool → ESP-IDF.')+'</p><p>'+bi('Видео заменяет часть изучения внутри секции. Полную длительность всех курсов нельзя добавлять к плану как обязательную: часы практики и проверки сохраняются, дополнительное обучение требует пересчёта.', 'Video replaces part of a section’s study time. Full course durations are not mandatory additions to the plan: retain build and verification time, and reforecast any extra study.')+'</p></section>')
+public_recheck = DATA.get('public_pages_rechecked_on')
+if public_recheck:
+    date_ru = '.'.join(reversed(public_recheck.split('-')))
+    parts.append('<p class="note">'+bi(
+        f'Открытые страницы всех 23 курсов перепроверены {date_ru}. Цены остаются снимком от 15.10.2026.',
+        f'All 23 public course pages were rechecked on {public_recheck}. Prices are the 15 October 2026 snapshot.')
+        +' <a href="theory-audit.md">'+bi('Темы и самостоятельные проверки', 'Topics and mastery checks')+'</a></p>')
 parts.append('<p><a href="library.html#foundation-path">'+bi('Связная база и часы изучения →', 'Connected foundations and learning hours →')+'</a> · <a href="learning-guides.md">'+bi('Пояснения к лабораторным', 'Lab study notes')+'</a></p>')
 parts.append('<p class="course-jumps">'+ ' · '.join(f'<a href="#{id}">{bi(ru,en)}</a>' for id,ru,en in [('core','Все секции','All sections'),('catalog','23 курса','23 courses'),('legacy','Исходные модули','Original modules'),('growth','Развитие','Development')])+'</p>')
 parts.append('<section id="core"><h2>'+bi('Основная программа: секция → курс', 'Core programme: section → course')+'</h2>'+route_table(DATA['core_routes'],'core','curriculum.html')+'</section>')

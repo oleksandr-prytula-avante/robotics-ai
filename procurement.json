@@ -334,15 +334,15 @@
       "stage": "A1",
       "price": 5398.0,
       "currency": "UAH",
-      "url": "https://prom.ua/ua/p3176822463-dynamixel-u2d2.html",
-      "seller": "Vevor / Prom.ua",
+      "url": "https://robotis.us/products/u2d2",
+      "seller": "ROBOTIS America",
       "quantity_text": {
         "ru": "1 только при выборе ROBOTIS; иначе 0.",
         "en": "1 only when selecting ROBOTIS; otherwise 0."
       },
       "status_label": {
-        "ru": "Под заказ; цена за 1 шт., срок уточняется при оформлении.",
-        "en": "To order; single-unit price, lead time at checkout."
+        "ru": "Страница производителя. Цена в UAH — исторический ориентир. Запросить местную цену и срок.",
+        "en": "Manufacturer page. UAH price is historical. Request a local quote and lead time."
       },
       "classification_label": {
         "ru": "Условно · альтернатива / решение отложено",
@@ -557,8 +557,8 @@
         "en": "Board, not bare IC. Confirm suitable diametric magnet inclusion; center it on output shaft. Resolution is not accuracy; test gap, nonlinearity and independent homing. Ukraine: local seller; confirm inventory and lead time at order. UAH 1,317.17 excludes VAT; obtain the final invoice total."
       },
       "sources": [
-        "https://look.ams-osram.com/m/d6b55afbdfe4b3d0/original/AS5048_UG000223_1-00.pdf",
-        "https://look.ams-osram.com/m/287d7ad97d1ca22e/original/AS5048-DS000298.pdf"
+        "https://datasheet.datasheetarchive.com/originals/dk/DKDS-7/120560.pdf",
+        "https://cdn.sparkfun.com/assets/e/d/e/1/d/AS5048_DS000298_4-00.pdf"
       ],
       "timing": {
         "ru": "Первое использование: A1. Дата — в календаре закупок выше.",
@@ -1434,15 +1434,15 @@
       "stage": "T3",
       "price": 115,
       "currency": "UAH",
-      "url": "https://evaplast-pazl.com.ua/kylymok-pazl-start-50kh50sm.-siryi/",
+      "url": "https://evaplast.kiev.ua/",
       "seller": "EVAPLAST-PAZL",
       "quantity_text": {
         "ru": "1 плитка 500 × 500 × 10 мм для образцов; расход по креплению.",
         "en": "One 500 × 500 × 10 mm tile for coupons; final usage from mounting design."
       },
       "status_label": {
-        "ru": "Карточка: в наличии / готов к отправке; количество партии не подтверждено.",
-        "en": "Listing: in stock / ready to ship; batch quantity unconfirmed."
+        "ru": "Каталог поставщика. Уточнить исполнение и цену EV090090.",
+        "en": "Supplier catalogue. Confirm EV090090 variant and price."
       },
       "classification_label": {
         "ru": "Обязательная позиция · вариант для подбора",
@@ -2392,7 +2392,7 @@
         "en": " Seller order minimum: UAH 300; not the price of one module."
       },
       "sources": [
-        "https://look.ams-osram.com/m/7059eac7531a86fd/original/AS5600-DS000365.pdf",
+        "https://cdn-learn.adafruit.com/assets/assets/000/138/130/original/Magnetic_Rotary_Position_Sensor_AS5600_Datasheet.pdf",
         "https://stack.in.ua/p1713901866-magnitnyj-enkoder-datchik.html"
       ],
       "timing": {
@@ -2729,7 +2729,7 @@
         "en": "Compatible magnetic field type; the assembled fixture is not yet accuracy-qualified. Rotate manually through 360°, check magnet-detect, weak/strong-field flags, angle continuity and repeatability before PID. AS5600 operating field is 30–90 mT; set the gap on the actual assembly. Filament and fasteners come from shared stock. The current sensor price is listed separately in wb-encoder. Sensor and magnet shipping are separate; Runok lists Nova Poshta delivery within Ukraine."
       },
       "sources": [
-        "https://look.ams-osram.com/m/1f9fec31c21d8f4d/original/Magnet-selection-guide-rotary-magnetic-position-sensors.pdf"
+        "https://ams-osram.com/documents/20143/80162/AnglePositionOnAxis_AN000271_2-00.pdf/bd13692b-b589-af7f-560c-4d62bf25d9dd"
       ],
       "timing": {
         "ru": "Первое использование: M07. Дата — в календаре закупок выше.",
@@ -5924,8 +5924,8 @@
               "ru": "TAKEL 500978: HSC8 6-4 + 1200 втулочных наконечников",
               "en": "TAKEL 500978: HSC8 6-4 + 1,200 ferrules"
             },
-            "url": "https://prom.ua/p3207892771-nabor-nakonechnikov-no4.html",
-            "seller": "AimTeleCom / Prom.ua",
+            "url": "https://prom.ua/ua/p3128469530-nabor-nakonechnikov-no4.html",
+            "seller": "Prom.ua",
             "unit_price": 1110.09,
             "currency": "UAH",
             "quantity": 1,
@@ -5940,11 +5940,10 @@
               "en": "Domestic Ukraine delivery; price and lead time at checkout."
             },
             "evidence_note": {
-              "ru": "Прямая HTTP-проверка подтвердила 1110,09 грн и состав TAKEL: восемь размеров 0,5–10 мм² и кримпер. При использовании сечений 6–10 мм² проверить допустимый диапазон конкретного инструмента.",
-              "en": "Direct HTTP audit confirms UAH 1,110.09 and TAKEL contents: eight ferrule sizes 0.5–10 mm² and crimper. Verify the specific tool range before using 6–10 mm² ferrules."
+              "ru": "Предыдущее объявление перенаправляет на категорию. Новая карточка содержит артикул TK500978. Наличие и допустимое сечение инструмента уточнить перед заказом.",
+              "en": "The old listing redirects to a category. The replacement page shows TK500978. Confirm stock and the tool’s supported wire range before ordering."
             },
             "sources": [
-              "https://prom.ua/p3207892771-nabor-nakonechnikov-no4.html",
               "https://takel.com.ua/catalog/nabory-nakonechnikov-konnektorov-i-gilz"
             ]
           },
@@ -8639,8 +8638,8 @@
         "en": ""
       },
       "sources": [
-        "https://look.ams-osram.com/m/d6b55afbdfe4b3d0/original/AS5048_UG000223_1-00.pdf",
-        "https://look.ams-osram.com/m/287d7ad97d1ca22e/original/AS5048-DS000298.pdf"
+        "https://datasheet.datasheetarchive.com/originals/dk/DKDS-7/120560.pdf",
+        "https://cdn.sparkfun.com/assets/e/d/e/1/d/AS5048_DS000298_4-00.pdf"
       ],
       "timing": {
         "ru": "Подготовить к этапу A1; дата использования указана в календаре закупок.",
@@ -8678,7 +8677,7 @@
             "sources": [
               "https://source-robotics.com/products/6x2-5mm-diametrical-neodymium-magnet",
               "https://source-robotics.com/pages/shipping-policy",
-              "https://look.ams-osram.com/m/d6b55afbdfe4b3d0/original/AS5048_UG000223_1-00.pdf"
+              "https://datasheet.datasheetarchive.com/originals/dk/DKDS-7/120560.pdf"
             ]
           }
         ],
