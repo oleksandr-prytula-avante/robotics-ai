@@ -40,6 +40,7 @@ jobs:
           python3 scripts/render_growth_timeline.py --check
           python3 scripts/render_procurement.py --check
           python3 scripts/render_gear_basics.py --check
+          python3 scripts/render_search_index.py --check
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
