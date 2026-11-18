@@ -34,7 +34,6 @@ setLanguage(languageFromUrl());
 document.querySelectorAll('[data-lang]').forEach(b=>b.addEventListener('click',()=>setLanguage(b.dataset.lang,'push')));
 window.addEventListener('popstate',()=>{setLanguage(languageFromUrl());openHash();});
 document.querySelectorAll('[data-print]').forEach(b=>b.addEventListener('click',()=>window.print()));
-const search=document.getElementById('nav-search');if(search)search.addEventListener('input',()=>{const q=search.value.toLowerCase().trim();document.querySelectorAll('.month-links a').forEach(a=>a.hidden=!a.textContent.toLowerCase().includes(q))});
 function openHash() {
  let id;
  try { id = decodeURIComponent(location.hash.slice(1)); } catch { return; }

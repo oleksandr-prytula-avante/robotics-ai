@@ -86,6 +86,8 @@ def render_infographic(schedule, bi, duration):
         ('gate', 'Приёмки', 'Acceptance'),
         ('capacity', 'Запас', 'Buffer'),
     ]
+    active_tracks = {item['track'] for item in items.values()}
+    tracks = [track for track in tracks if track[0] in active_tracks]
 
     def position(day):
         return (day - start).days / days * 100
@@ -119,8 +121,7 @@ def render_infographic(schedule, bi, duration):
     ]:
         out.append('<div><span class="roadmap-stat-label">' + bi(ru, en)
                    + '</span><strong>' + value + '</strong></div>')
-    out += ['</div>', render_controls([row for row in tracks if any(i['track'] == row[0] for i in items.values())],
-                                    items.values(), bi),
+    out += ['</div>', render_controls(tracks, items.values(), bi),
             '<div class="roadmap-scroll" tabindex="0" role="region" aria-labelledby="timeline-title">',
             '<div class="roadmap-chart"><div class="roadmap-axis"><div>'
             + bi('Направление / часы', 'Track / hours') + '</div><div class="roadmap-months">'
