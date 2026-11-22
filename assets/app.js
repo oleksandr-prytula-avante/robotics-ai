@@ -26,7 +26,7 @@ function setLanguage(lang,historyMode='replace'){
   url.searchParams.set('lang',lang);
   a.setAttribute('href',url.href);
  });
- document.querySelectorAll('.page-finder, .site-search, .table-filter').forEach(finder=>{
+ document.querySelectorAll('.page-finder, .site-search, .table-filter, .study-progress').forEach(finder=>{
   finder.dispatchEvent(new Event('languagechange'));
  });
 }
@@ -188,6 +188,180 @@ if (sidebar) {
  sidebar.before(toggle);
 }
 
+if (scriptUrl && pageTitle) {
+ const root = new URL('../', scriptUrl);
+ const current = new URL(location.href);
+ const page = current.pathname.slice(root.pathname.length);
+ const month = /^months\/\d{4}-\d{2}\.html$/.test(page);
+ const storagePrefix = `robotics-ai:study:${root.pathname}:`;
+ const memory = new Map();
+ let storageAvailable = true;
+
+ function readProgress(key) {
+  if (memory.has(key)) return memory.get(key);
+  try { return localStorage.getItem(storagePrefix + key); }
+  catch { storageAvailable = false; return null; }
+ }
+
+ function saveProgress(key, value) {
+  try { localStorage.setItem(storagePrefix + key, value); }
+  catch { storageAvailable = false; memory.set(key, value); }
+ }
+
+ function savedTask() {
+  try { return JSON.parse(readProgress('resume')); } catch { return null; }
+ }
+
+ const insertionPoint = pageTitle.closest('.hero') || pageTitle;
+ if (month) {
+  const tasks = [...main.querySelectorAll('td [data-task][data-part-minutes]')];
+  if (tasks.length) {
+   const toolbar = document.createElement('section');
+   toolbar.className = 'study-progress';
+   toolbar.innerHTML = '<h2 id="study-progress-title"></h2><p class="study-status" aria-live="polite"></p>'
+    + '<progress aria-labelledby="study-progress-title"></progress><div class="study-actions">'
+    + '<a class="button study-next"></a><label class="study-check"><input type="checkbox"></label></div>'
+    + '<label class="study-search"><input type="search"></label>'
+    + '<p class="small study-storage"></p>';
+   toolbar.setAttribute('aria-labelledby', 'study-progress-title');
+   toolbar.querySelector('h2').append(bilingual('Прогресс за месяц', 'Monthly progress'));
+   toolbar.querySelector('.study-check').append(bilingual('Только незавершённое', 'Show incomplete only'));
+   const status = toolbar.querySelector('.study-status');
+   const progress = toolbar.querySelector('progress');
+   const next = toolbar.querySelector('.study-next');
+   const filter = toolbar.querySelector('input[type="checkbox"]');
+   const search = toolbar.querySelector('input[type="search"]');
+   const storageNote = toolbar.querySelector('.study-storage');
+   const parts = tasks.map(task => {
+    const row = task.closest('tr');
+    const table = task.closest('.table-wrap');
+    const week = table.previousElementSibling?.previousElementSibling?.id;
+    table.classList.add('study-table');
+    const id = `study-${week}-${task.dataset.task}`;
+    const key = `${page}#${id}`;
+    const label = document.createElement('label');
+    label.className = 'study-check study-task-check';
+    const check = document.createElement('input');
+    check.type = 'checkbox';
+    const titles = {};
+    for (const title of task.querySelectorAll(':scope > span[lang]')) {
+     title.id = `${id}-${title.lang}`;
+     titles[title.lang] = title.textContent;
+    }
+    function remember() {
+     saveProgress('resume', JSON.stringify({ page, id, titles }));
+    }
+    check.checked = readProgress(key) === 'done';
+    label.append(check, bilingual('Часть выполнена', 'Part complete'));
+    for (const word of label.querySelectorAll('[lang]')) word.id = `${id}-complete-${word.lang}`;
+    const bookmark = document.createElement('button');
+    bookmark.type = 'button';
+    bookmark.className = 'study-check';
+    bookmark.append(bilingual('Продолжить отсюда', 'Resume here'));
+    bookmark.addEventListener('click', () => {
+     remember();
+     render();
+    });
+    const actions = document.createElement('div');
+    actions.className = 'study-actions';
+    actions.append(label, bookmark);
+    task.append(actions);
+    row.id = id;
+    check.addEventListener('change', () => {
+     saveProgress(key, check.checked ? 'done' : 'pending');
+     if (filter.checked && check.checked) filter.focus();
+     render();
+    });
+    return { row, check, id, key, bookmark, remember, minutes: Number(task.dataset.partMinutes),
+     text: row.textContent.toLocaleLowerCase() };
+   });
+   const plannedMinutes = parts.reduce((sum, part) => sum + part.minutes, 0);
+   next.append(bilingual('К следующему заданию ↓', 'Go to next task ↓'));
+   function render() {
+    const ru = document.documentElement.lang === 'ru';
+    const done = parts.filter(part => part.check.checked);
+    const minutes = done.reduce((sum, part) => sum + part.minutes, 0);
+    const saved = savedTask();
+    const terms = search.value.trim().toLocaleLowerCase().split(/\s+/);
+    let visible = 0;
+    for (const { row, check, id, text, bookmark } of parts) {
+     const matches = terms.every(term => text.includes(term));
+     row.hidden = !matches || (filter.checked && check.checked);
+     if (!row.hidden) visible++;
+     row.classList.toggle('study-complete', check.checked);
+     const lang = ru ? 'ru' : 'en';
+     check.setAttribute('aria-labelledby', `${id}-complete-${lang} ${id}-${lang}`);
+     const marked = saved?.page === page && saved.id === id;
+     bookmark.setAttribute('aria-pressed', String(marked));
+    }
+    const pending = parts.find(part => !part.check.checked && !part.row.hidden);
+    progress.max = plannedMinutes;
+    progress.value = minutes;
+    const duration = value => `${Math.floor(value / 60)} ${ru ? 'ч' : 'h'} ${value % 60} ${ru ? 'мин' : 'min'}`;
+    status.textContent = ru
+     ? `Выполнено ${done.length} из ${parts.length} частей · ${duration(minutes)} из ${duration(plannedMinutes)} по плану`
+     : `${done.length} of ${parts.length} parts complete · ${duration(minutes)} of ${duration(plannedMinutes)} planned`;
+    if (visible !== parts.length) status.textContent += ru ? ` · Показано ${visible}` : ` · ${visible} shown`;
+    search.placeholder = ru ? 'Поиск по заданиям месяца' : 'Search this month’s tasks';
+    search.setAttribute('aria-label', search.placeholder);
+    next.hidden = !pending;
+    if (pending) next.href = `#${pending.id}`;
+    storageNote.textContent = storageAvailable
+     ? (ru ? 'Отметки сохраняются в этом браузере.' : 'Progress is saved in this browser.')
+     : (ru ? 'Хранилище недоступно. Новые отметки действуют до перезагрузки.' : 'Storage is unavailable. New changes last until reload.');
+   }
+   filter.addEventListener('change', render);
+   search.addEventListener('input', render);
+   toolbar.addEventListener('languagechange', render);
+   window.addEventListener('storage', event => {
+    if (event.key !== null && !event.key.startsWith(storagePrefix)) return;
+    parts.forEach(({ check, key }) => { check.checked = readProgress(key) === 'done'; });
+    render();
+   });
+   next.addEventListener('click', event => {
+    if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+    const pending = parts.find(part => !part.check.checked && !part.row.hidden);
+    pending?.remember();
+    render();
+    pending?.check.focus({ preventScroll: true });
+   });
+   insertionPoint.after(toolbar);
+   render();
+   const target = parts.find(part => `#${part.id}` === location.hash);
+   if (target) window.requestAnimationFrame(() => target.row.scrollIntoView());
+  }
+ } else if (page === '' || page === 'index.html') {
+  const resume = document.createElement('div');
+  resume.className = 'study-progress';
+  const link = document.createElement('a');
+  link.className = 'button';
+  link.append(bilingual('Продолжить обучение', 'Resume learning'));
+  const title = document.createElement('span');
+  title.className = 'study-resume-month';
+  function updateResume() {
+   const saved = savedTask();
+   const lastMonth = saved?.page || readProgress('last-month');
+   const monthLink = [...(sidebar?.querySelectorAll('.month-links a') || [])].find(link =>
+    new URL(link.href).pathname === root.pathname + lastMonth);
+   resume.hidden = !monthLink;
+   if (!monthLink) return;
+   const url = new URL(monthLink.href);
+   url.searchParams.set('lang', document.documentElement.lang);
+   url.hash = /^study-week-\d+-[\w.]+$/.test(saved?.id) ? saved.id : 'study-progress-title';
+   link.href = url.href;
+   title.replaceChildren();
+   if (saved?.titles) title.append(bilingual(saved.titles.ru, saved.titles.en));
+   else for (const name of monthLink.querySelectorAll(':scope > span[lang]')) title.append(name.cloneNode(true));
+  }
+  resume.append(link, title);
+  resume.addEventListener('languagechange', updateResume);
+  window.addEventListener('pageshow', updateResume);
+  window.addEventListener('storage', updateResume);
+  insertionPoint.after(resume);
+  updateResume();
+ }
+}
+
 if (main) {
  const folds = [...main.querySelectorAll('details:not(.page-finder)')];
  if (folds.length > 1 && !main.querySelector('#expand-pages')) {
@@ -204,6 +378,7 @@ if (main) {
   (finder || pageTitle)?.after(controls);
  }
  main.querySelectorAll('.table-wrap > table').forEach(table => {
+  if (table.querySelector('.study-task-check')) return;
   const rows = [...table.tBodies].flatMap(body => [...body.rows]).filter(row => row.querySelector('td'));
   if (rows.length < 12 || rows.some(row => row.querySelector('[colspan], [rowspan]'))) return;
   const form = document.createElement('div');
