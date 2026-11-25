@@ -109,8 +109,8 @@
         "en": "The short project L1 row lists zeros, FK/IK and timing but omits explicit support-load and thermal verification. The original L1 estimate contains it; the current schedule.json gates field was empty. This allows an apparent jump from unloaded motion to twelve actuators."
       },
       "action": {
-        "ru": "Вернуть полный критерий: ограниченные траектории, реальные знаки/нули/пределы, внешне измеренный FK/IK, согласованная опорная нагрузка, ток/температура, независимая остановка и повторяемость. До PASS не тиражировать ноги. 70 ч L1 уже включают эти работы.",
-        "en": "Restore the complete gate: bounded trajectories, physical signs/zeros/limits, externally measured FK/IK, agreed support loading, current/temperature, independent stopping and repeatability. Do not replicate until PASS. The existing L1 70 h already include this work."
+        "ru": "Вернуть полный критерий: ограниченные траектории, реальные знаки/нули/пределы, внешне измеренный FK/IK, согласованная опорная нагрузка, ток/температура, независимая остановка и повторяемость. До PASS не тиражировать ноги. 76 ч L1 уже включают эти работы.",
+        "en": "Restore the complete gate: bounded trajectories, physical signs/zeros/limits, externally measured FK/IK, agreed support loading, current/temperature, independent stopping and repeatability. Do not replicate until PASS. The existing L1 76 h already include this work."
       },
       "wbs_refs": [
         "L1.L1a",
@@ -325,7 +325,7 @@
       "existing_wbs_mapping": [
         "M19-C (25 h): FSM/weight transfer",
         "M19-E (25 h): COM/support experiment",
-        "M22/Q5 (30 h): hardware transfer and standing/crawl"
+        "M22/Q5 (26 h): hardware transfer and standing/crawl"
       ],
       "acceptance_checks": [
         {
@@ -361,8 +361,8 @@
         "en": "Wave uses sequential single-leg transfer with at most one leg swinging. Ripple has its own saved phase table and allowed leg combinations; the first version may limit overlap to two swinging legs if every remaining-support combination passes analysis. This is a project constraint, not a universal definition of ripple. Check forward, turning and sideways motion separately. Switch wave↔ripple through an aligned phase or stopping. Tripod and five-leg walking remain extensions."
       },
       "existing_wbs_mapping": [
-        "M23/X3 (32 h): wave/ripple/transitions/contacts",
-        "M23/X5 (35 h): trial series"
+        "M23/X3 (29 h): wave/ripple/transitions/contacts",
+        "M23/X5 (32 h): trial series"
       ],
       "acceptance_checks": [
         {
@@ -398,8 +398,8 @@
       "existing_wbs_mapping": [
         "M08-F (16 h): fixed-world-point scenario",
         "M10-E (27 h): outer tilt loop",
-        "M22/Q5 (30 h): physical tracking",
-        "M23/X4 (33 h): levelling/envelope"
+        "M22/Q5 (26 h): physical tracking",
+        "M23/X4 (30 h): levelling/envelope"
       ],
       "acceptance_checks": [
         {
@@ -439,8 +439,8 @@
         "M08-E (22 h): JᵀF and virtual work",
         "M09-A/C (24/40 h): mass/gravity/dynamics",
         "M20-C (25 h): full command/signs",
-        "M22/Q4 (30 h): calibrated telemetry",
-        "M23/X4 (33 h): envelope"
+        "M22/Q4 (27 h): calibrated telemetry",
+        "M23/X4 (30 h): envelope"
       ],
       "acceptance_checks": [
         {
@@ -557,7 +557,7 @@
       },
       "existing_wbs_mapping": [
         "M03-D (25 h): conditioning/covariance reuse",
-        "M23/X4 (33 h): source tasks 5/7/8"
+        "M23/X4 (30 h): source tasks 5/7/8"
       ],
       "acceptance_checks": [
         {
@@ -631,8 +631,8 @@
         "en": "M22 independently demonstrates ≥60 s physical standing, crawl and stop; M23 demonstrates ≥120 s, wave/ripple and leveling on validated surfaces. M23 uses forty trials: ten wave, ten ripple, ten leveling and ten start/stop/transition with controlled faults. Define independent attempts, revisions, limits, N and failures; a smaller N requires a prospectively narrower conclusion. This series does not establish service life or industrial reliability."
       },
       "existing_wbs_mapping": [
-        "M22/Q5 (30 h)",
-        "M23/X5 (35 h)",
+        "M22/Q5 (26 h)",
+        "M23/X5 (32 h)",
         "M24/G4 final traceability review"
       ],
       "acceptance_checks": [
@@ -1096,8 +1096,8 @@
             "en": "The short project L1 row lists zeros, FK/IK and timing but omits explicit support-load and thermal verification. The original L1 estimate contains it; the current schedule.json gates field was empty. This allows an apparent jump from unloaded motion to twelve actuators."
           },
           "action": {
-            "ru": "Вернуть полный критерий: ограниченные траектории, реальные знаки/нули/пределы, внешне измеренный FK/IK, согласованная опорная нагрузка, ток/температура, независимая остановка и повторяемость. До PASS не тиражировать ноги. 70 ч L1 уже включают эти работы.",
-            "en": "Restore the complete gate: bounded trajectories, physical signs/zeros/limits, externally measured FK/IK, agreed support loading, current/temperature, independent stopping and repeatability. Do not replicate until PASS. The existing L1 70 h already include this work."
+            "ru": "Вернуть полный критерий: ограниченные траектории, реальные знаки/нули/пределы, внешне измеренный FK/IK, согласованная опорная нагрузка, ток/температура, независимая остановка и повторяемость. До PASS не тиражировать ноги. 76 ч L1 уже включают эти работы.",
+            "en": "Restore the complete gate: bounded trajectories, physical signs/zeros/limits, externally measured FK/IK, agreed support loading, current/temperature, independent stopping and repeatability. Do not replicate until PASS. The existing L1 76 h already include this work."
           },
           "wbs_refs": [
             "L1.L1a",
@@ -1612,12 +1612,12 @@
       ],
       "timing_constraints": [
         {
-          "ru": "L1 70 ч предполагают один основной вариант привода и одну локальную механическую коррекцию. Переход на новое семейство после тиражирования — не бесплатная замена.",
-          "en": "L1’s 70 h assume one main actuator candidate and one local mechanical correction. Changing actuator families after replication is not a free substitution."
+          "ru": "L1 76 ч предполагают один основной вариант привода и одну локальную механическую коррекцию. Переход на новое семейство после тиражирования — не бесплатная замена.",
+          "en": "L1’s 76 h assume one main actuator candidate and one local mechanical correction. Changing actuator families after replication is not a free substitution."
         },
         {
-          "ru": "M22 155 ч предполагают пригодную ногу L1 и доступные девять дополнительных совместимых приводов. M23 155 ч предполагают успешное прохождение M22 и шесть дополнительных приводов после этого допуска. Доставка, автономная печать и охлаждение могут идти параллельно независимым задачам; последовательную зависимость нельзя обнулить.",
-          "en": "M22’s 155 h assume an accepted L1 leg and nine available compatible additional actuators. M23’s 155 h assume M22 PASS and six further actuators after that gate. Delivery, unattended printing and cooling may overlap independent work; sequential dependencies cannot be erased."
+          "ru": "M22 145 ч предполагают пригодную ногу L1 и доступные девять дополнительных совместимых приводов. M23 140 ч предполагают успешное прохождение M22 и шесть дополнительных приводов после этого допуска. Доставка, автономная печать и охлаждение могут идти параллельно независимым задачам; последовательную зависимость нельзя обнулить.",
+          "en": "M22’s 145 h assume an accepted L1 leg and nine available compatible additional actuators. M23’s 140 h assume M22 PASS and six further actuators after that gate. Delivery, unattended printing and cooling may overlap independent work; sequential dependencies cannot be erased."
         },
         {
           "ru": "Первые измерения L1/M22 служат точкой пересчёта: если масса, рабочий момент, нагрев или шина не соответствуют проекту, обновить объём и прогноз явно. Инженерные часы — оценка, не статистическая норма для любого человека.",
@@ -1699,7 +1699,7 @@
           "existing_wbs_mapping": [
             "M19-C (25 h): FSM/weight transfer",
             "M19-E (25 h): COM/support experiment",
-            "M22/Q5 (30 h): hardware transfer and standing/crawl"
+            "M22/Q5 (26 h): hardware transfer and standing/crawl"
           ],
           "acceptance_checks": [
             {
@@ -1735,8 +1735,8 @@
             "en": "Wave uses sequential single-leg transfer with at most one leg swinging. Ripple has its own saved phase table and allowed leg combinations; the first version may limit overlap to two swinging legs if every remaining-support combination passes analysis. This is a project constraint, not a universal definition of ripple. Check forward, turning and sideways motion separately. Switch wave↔ripple through an aligned phase or stopping. Tripod and five-leg walking remain extensions."
           },
           "existing_wbs_mapping": [
-            "M23/X3 (32 h): wave/ripple/transitions/contacts",
-            "M23/X5 (35 h): trial series"
+            "M23/X3 (29 h): wave/ripple/transitions/contacts",
+            "M23/X5 (32 h): trial series"
           ],
           "acceptance_checks": [
             {
@@ -1772,8 +1772,8 @@
           "existing_wbs_mapping": [
             "M08-F (16 h): fixed-world-point scenario",
             "M10-E (27 h): outer tilt loop",
-            "M22/Q5 (30 h): physical tracking",
-            "M23/X4 (33 h): levelling/envelope"
+            "M22/Q5 (26 h): physical tracking",
+            "M23/X4 (30 h): levelling/envelope"
           ],
           "acceptance_checks": [
             {
@@ -1813,8 +1813,8 @@
             "M08-E (22 h): JᵀF and virtual work",
             "M09-A/C (24/40 h): mass/gravity/dynamics",
             "M20-C (25 h): full command/signs",
-            "M22/Q4 (30 h): calibrated telemetry",
-            "M23/X4 (33 h): envelope"
+            "M22/Q4 (27 h): calibrated telemetry",
+            "M23/X4 (30 h): envelope"
           ],
           "acceptance_checks": [
             {
@@ -1931,7 +1931,7 @@
           },
           "existing_wbs_mapping": [
             "M03-D (25 h): conditioning/covariance reuse",
-            "M23/X4 (33 h): source tasks 5/7/8"
+            "M23/X4 (30 h): source tasks 5/7/8"
           ],
           "acceptance_checks": [
             {
@@ -2005,8 +2005,8 @@
             "en": "M22 independently demonstrates ≥60 s physical standing, crawl and stop; M23 demonstrates ≥120 s, wave/ripple and leveling on validated surfaces. M23 uses forty trials: ten wave, ten ripple, ten leveling and ten start/stop/transition with controlled faults. Define independent attempts, revisions, limits, N and failures; a smaller N requires a prospectively narrower conclusion. This series does not establish service life or industrial reliability."
           },
           "existing_wbs_mapping": [
-            "M22/Q5 (30 h)",
-            "M23/X5 (35 h)",
+            "M22/Q5 (26 h)",
+            "M23/X5 (32 h)",
             "M24/G4 final traceability review"
           ],
           "acceptance_checks": [

@@ -26,7 +26,7 @@ function setLanguage(lang,historyMode='replace'){
   url.searchParams.set('lang',lang);
   a.setAttribute('href',url.href);
  });
- document.querySelectorAll('.page-finder, .site-search, .table-filter, .study-progress').forEach(finder=>{
+ document.querySelectorAll('.page-finder, .site-search, .table-filter, .study-progress, .growth-comparison').forEach(finder=>{
   finder.dispatchEvent(new Event('languagechange'));
  });
 }
@@ -106,6 +106,7 @@ if (roadmap?.querySelector('[data-roadmap-controls]')) {
 // Search headings while keeping the full content and its links in place.
 const main = document.querySelector?.('main');
 const pageTitle = main?.querySelector('h1');
+let revealStudyTarget;
 const entries = main ? [...main.querySelectorAll('section[id], article[id], details[id], h2[id], h3[id]')]
  .filter(section => !section.closest('#timeline, #growth-timeline, #timeline-summary'))
  .map(section => ({
@@ -152,6 +153,7 @@ if (pageTitle && entries.length > 0) {
   const link = event.target.closest('a');
   if (!link || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
   const target = document.getElementById(decodeURIComponent(link.hash.slice(1)));
+  revealStudyTarget?.(target.id);
   for (let detail = target.closest('details'); detail; detail = detail.parentElement.closest('details')) {
    detail.open = true;
   }
@@ -170,6 +172,68 @@ function bilingual(ru, en) {
   text.append(span);
  }
  return text;
+}
+
+const growth = document.getElementById('growth-timeline');
+if (growth?.querySelector('.growth-scenarios')) {
+ const scenarios = ['low', 'high'].map(key => growth.querySelector(`[data-growth-scenario="${key}"]`));
+ const rows = scenarios.map(scenario => new Map([...(scenario?.querySelectorAll('[data-growth-stage]') || [])]
+  .map(row => [row.dataset.growthStage, row])));
+ const comparison = document.createElement('div');
+ comparison.className = 'growth-comparison';
+ const label = document.createElement('label');
+ const picker = document.createElement('select');
+ picker.add(new Option('', ''));
+ for (const key of rows[0].keys()) {
+  if (rows[1].has(key)) picker.add(new Option('', key));
+ }
+ label.append(bilingual('Сравнить оценки по направлению', 'Compare estimates for a track'), picker);
+ const result = document.createElement('div');
+ result.className = 'growth-comparison-result';
+ result.setAttribute('aria-live', 'polite');
+ const task = document.createElement('a');
+ task.append(bilingual('Открыть задания направления', 'Open track tasks'));
+ comparison.append(label, result, task);
+ growth.querySelector('.growth-estimates').before(comparison);
+
+ function compare() {
+  const key = picker.value;
+  result.replaceChildren();
+  task.hidden = !key;
+  if (key) {
+   task.href = '#' + key;
+   rows.forEach((scenario, index) => {
+    const row = scenario.get(key);
+    const summary = document.createElement('p');
+    const heading = document.createElement('strong');
+    heading.append(index === 0 ? bilingual('Нижняя оценка', 'Lower estimate') : bilingual('Верхняя оценка', 'Upper estimate'));
+    summary.append(heading, `${row.cells[1].textContent} `, bilingual('ч', 'h'),
+     ` · ${[...row.cells[2].childNodes].filter(node => node.nodeType === 3).map(node => node.textContent).join(' – ')}`);
+    result.append(summary);
+   });
+  }
+  growth.querySelectorAll('[data-growth-track], [data-growth-stage]').forEach(element => {
+   element.classList.toggle('growth-selected', (element.dataset.growthTrack || element.dataset.growthStage) === key);
+  });
+ }
+ function localizePicker() {
+  const lang = document.documentElement.lang;
+  picker.options[0].textContent = lang === 'ru' ? 'Выберите направление' : 'Choose a track';
+  for (const option of [...picker.options].slice(1)) {
+   const title = rows[0].get(option.value).cells[0].querySelector(`a [lang="${lang}"]`);
+   option.textContent = `${option.value} · ${title.textContent}`;
+  }
+ }
+ function selectFromHash() {
+  const key = location.hash.slice(1);
+  if ([...picker.options].some(option => option.value === key)) picker.value = key;
+  compare();
+ }
+ picker.addEventListener('change', compare);
+ comparison.addEventListener('languagechange', localizePicker);
+ window.addEventListener('hashchange', selectFromHash);
+ localizePicker();
+ selectFromHash();
 }
 
 const sidebar = document.querySelector?.('.sidebar');
@@ -231,11 +295,20 @@ if (scriptUrl && pageTitle) {
    const next = toolbar.querySelector('.study-next');
    const filter = toolbar.querySelector('input[type="checkbox"]');
    const search = toolbar.querySelector('input[type="search"]');
+   const weekFilter = document.createElement('select');
+   const weekLabel = document.createElement('label');
+   weekLabel.className = 'study-search study-week';
+   weekLabel.append(bilingual('Неделя', 'Week'), weekFilter);
+   toolbar.querySelector('.study-search').after(weekLabel);
    const storageNote = toolbar.querySelector('.study-storage');
+   const weekBlocks = new Map();
    const parts = tasks.map(task => {
     const row = task.closest('tr');
     const table = task.closest('.table-wrap');
-    const week = table.previousElementSibling?.previousElementSibling?.id;
+    const summary = table.previousElementSibling;
+    const heading = summary?.previousElementSibling;
+    const week = heading?.id;
+    if (/^week-\d+$/.test(week)) weekBlocks.set(week, [heading, summary, table]);
     table.classList.add('study-table');
     const id = `study-${week}-${task.dataset.task}`;
     const key = `${page}#${id}`;
@@ -272,9 +345,12 @@ if (scriptUrl && pageTitle) {
      if (filter.checked && check.checked) filter.focus();
      render();
     });
-    return { row, check, id, key, bookmark, remember, minutes: Number(task.dataset.partMinutes),
+    return { row, check, id, key, week, bookmark, remember, minutes: Number(task.dataset.partMinutes),
      text: row.textContent.toLocaleLowerCase() };
    });
+   weekFilter.add(new Option('', ''));
+   for (const week of weekBlocks.keys()) weekFilter.add(new Option('', week));
+   weekLabel.hidden = weekBlocks.size < 2;
    const plannedMinutes = parts.reduce((sum, part) => sum + part.minutes, 0);
    next.append(bilingual('К следующему заданию ↓', 'Go to next task ↓'));
    function render() {
@@ -283,9 +359,12 @@ if (scriptUrl && pageTitle) {
     const minutes = done.reduce((sum, part) => sum + part.minutes, 0);
     const saved = savedTask();
     const terms = search.value.trim().toLocaleLowerCase().split(/\s+/);
+    for (const [week, block] of weekBlocks) {
+     block.forEach(element => element.classList.toggle('study-week-excluded', Boolean(weekFilter.value && weekFilter.value !== week)));
+    }
     let visible = 0;
-    for (const { row, check, id, text, bookmark } of parts) {
-     const matches = terms.every(term => text.includes(term));
+    for (const { row, check, id, text, bookmark, week } of parts) {
+     const matches = (!weekFilter.value || weekFilter.value === week) && terms.every(term => text.includes(term));
      row.hidden = !matches || (filter.checked && check.checked);
      if (!row.hidden) visible++;
      row.classList.toggle('study-complete', check.checked);
@@ -304,6 +383,9 @@ if (scriptUrl && pageTitle) {
     if (visible !== parts.length) status.textContent += ru ? ` · Показано ${visible}` : ` · ${visible} shown`;
     search.placeholder = ru ? 'Поиск по заданиям месяца' : 'Search this month’s tasks';
     search.setAttribute('aria-label', search.placeholder);
+    for (const option of weekFilter.options) {
+     option.textContent = option.value ? option.value.slice(5) : (ru ? 'Все недели' : 'All weeks');
+    }
     next.hidden = !pending;
     if (pending) next.href = `#${pending.id}`;
     storageNote.textContent = storageAvailable
@@ -312,6 +394,24 @@ if (scriptUrl && pageTitle) {
    }
    filter.addEventListener('change', render);
    search.addEventListener('input', render);
+   weekFilter.addEventListener('change', render);
+   revealStudyTarget = id => {
+    const part = parts.find(part => part.id === id);
+    const week = part?.week || (weekBlocks.has(id) ? id : null);
+    const excluded = week && weekFilter.value && weekFilter.value !== week;
+    if (!excluded && !part?.row.hidden) return null;
+    if (excluded) weekFilter.value = '';
+    if (part?.row.hidden) {
+     const terms = search.value.trim().toLocaleLowerCase().split(/\s+/);
+     if (!terms.every(term => part.text.includes(term))) search.value = '';
+     if (part.check.checked) filter.checked = false;
+    }
+    render();
+    return part?.row || weekBlocks.get(week)?.[0];
+   };
+   window.addEventListener('hashchange', () => {
+    revealStudyTarget(location.hash.slice(1))?.scrollIntoView();
+   });
    toolbar.addEventListener('languagechange', render);
    window.addEventListener('storage', event => {
     if (event.key !== null && !event.key.startsWith(storagePrefix)) return;
@@ -504,6 +604,24 @@ if (scriptUrl && topActions) {
  });
  dialog.addEventListener('languagechange', searchSite);
  field.addEventListener('input', searchSite);
+ dialog.addEventListener('keydown', event => {
+  if (event.isComposing || event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) return;
+  const active = document.activeElement;
+  const links = [...resultList.querySelectorAll('a')];
+  const index = links.indexOf(active);
+  if (active !== field && index === -1) return;
+  let next;
+  if (event.key === 'ArrowDown') next = links[index + 1];
+  if (event.key === 'ArrowUp' && index >= 0) next = links[index - 1] || field;
+  if (event.key === 'Enter' && active === field && field.value.trim() && links.length) {
+   event.preventDefault();
+   links[0]?.click();
+  }
+  if (next) {
+   event.preventDefault();
+   next.focus();
+  }
+ });
  document.addEventListener('keydown', event => {
   if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === 'k' && !event.altKey) {
    event.preventDefault();

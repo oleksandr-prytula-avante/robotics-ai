@@ -9361,7 +9361,7 @@
       "assumptions": [
         {
           "ru": "До входа заказаны 9 дополнительных совместимых рабочих приводов и резервные по исходнику, но не шестиприводное расширение M23. Закупки выполняет пользователь после расчётов.",
-          "en": "Nine additional compatible working actuators and source-listed spares are available at entry, but not the six-actuator M23 expansion. Purchases remain user decisions after calculations."
+          "en": "Nine additional compatible working actuators and source-listed spares are ordered before the stage starts, excluding the six actuators for the M23 expansion. Purchases remain user decisions after calculations."
         },
         {
           "ru": "Планово одна партия повторных ног, одна локальная ревизия крепления/жгута; не переделка всего корпуса с нуля.",
@@ -12635,7 +12635,7 @@
           ],
           "result": {
             "ru": "Физический драйвер привязан к MoveIt/ros2_control, проверены реальные пределы/временные характеристики/отмена/восстановление.",
-            "en": "Physical driver bound to MoveIt/ros 2_control; actual limits/timing/cancel/recovery verified."
+            "en": "Physical driver bound to MoveIt/ros2_control; actual limits/timing/cancel/recovery verified."
           },
           "segments": [
             {

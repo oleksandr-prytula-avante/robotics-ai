@@ -544,7 +544,8 @@ def main():
                 audit.append('<details><summary>'+stage+' · '+bi(item['title'])+f' · {amount(item["minutes"])} '+bi('ч','h')+'</summary><div><p>'+bi(item['rationale'])+'</p><table><thead><tr><th>'+bi('Задание','Task')+'</th><th>'+bi('Изучение / реализация / проверка','Learn / build / verify')+'</th><th>'+bi('Всего','Total')+'</th></tr></thead><tbody>')
                 for row in rows:
                     h = row['after']
-                    audit.append('<tr><td>'+bi(row['title'])+f'<p class="small" lang="ru">{html.escape(row["reason"])}</p></td><td>{amount(round(h["learn"]*60))} / {amount(round(h["build"]*60))} / {amount(round(h["verify"]*60))}</td><td>{amount(round(row["hours"]*60))}</td></tr>')
+                    reason = bi(row['reason'], row['reason_en'])
+                    audit.append('<tr><td>'+bi(row['title'])+f'<p class="small">{reason}</p></td><td>{amount(round(h["learn"]*60))} / {amount(round(h["build"]*60))} / {amount(round(h["verify"]*60))}</td><td>{amount(round(row["hours"]*60))}</td></tr>')
                 audit.append('</tbody></table></div></details>')
             audit.append('<p><a href="task-hour-review.md">'+bi('Полный отчёт с причинами изменений','Full review with change reasons')+'</a> · <a href="task-hour-review.json">JSON</a></p></section><!-- /task-hour-review -->')
             text = text.replace('<footer>', ''.join(audit)+'<footer>', 1)

@@ -117,10 +117,9 @@ def render_infographic(schedule, bi, duration):
     for value, ru, en in [
         (short_date(schedule['start']), 'Старт учёбы', 'Study starts'),
         (short_date(schedule['work_finish']), 'Номинальный финиш', 'Nominal finish'),
-        (duration(schedule['buffer_minutes']), 'Запас до конца года', 'Buffer through year-end'),
     ]:
         out.append('<div><span class="roadmap-stat-label">' + bi(ru, en)
-                   + '</span><strong>' + value + '</strong></div>')
+                   + '</span> <strong>' + value + '</strong></div>')
     out += ['</div>', render_controls(tracks, items.values(), bi),
             '<div class="roadmap-scroll" tabindex="0" role="region" aria-labelledby="timeline-title">',
             '<div class="roadmap-chart"><div class="roadmap-axis"><div>'

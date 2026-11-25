@@ -2257,8 +2257,8 @@
         "en": "Reading fits existing learn hours and split stages"
       },
       "issue": {
-        "ru": "654 ч включают 193 ч изучения, 311 ч реализации и 150 ч проверки. D1 = 40 ч, из них 12 ч изучения; D2 = 58 ч, из них 19 ч изучения. Силы, центр масс и опоры изучаются до L1; динамика по данным стенда — в D2. S1 не требует полного курса кинематики; S2 использует ранее проверенные системы координат, прямую кинематику и инерции. Повторное чтение в S2, ARM и TAIL не учитывается.",
-        "en": "654 h includes 193 h learn, 311 h build, 150 h verify. D1=40h with12h learn; D2=58h with19h learn. Read forces/COM/supports before L1; rig-based dynamics belongs to D2. S1 does not require a full kinematics course; S2 reuses verified frames/FK/inertia. Do not count rereading again in S2, ARM and TAIL."
+        "ru": "В действующем плане D1 занимает 42 ч, из них 14 ч изучения. D2 занимает 54 ч, из них 19 ч изучения. Силы, центр масс и опоры изучаются до L1; динамика по данным стенда — в D2. S1 не требует полного курса кинематики; S2 использует ранее проверенные системы координат, прямую кинематику и инерции. Повторное чтение в S2, ARM и TAIL не учитывается.",
+        "en": "In the active plan, D1 takes 42 h, including 14 h of learning. D2 takes 54 h, including 19 h of learning. Read forces/COM/supports before L1; rig-based dynamics belongs to D2. S1 does not require a full kinematics course; S2 reuses verified frames/FK/inertia. Do not count rereading again in S2, ARM and TAIL."
       },
       "action": null,
       "urls": [],
@@ -5584,7 +5584,7 @@
           },
           "mastery_check": {
             "ru": "Физический драйвер привязан к MoveIt/ros2_control, проверены реальные пределы/временные характеристики/отмена/восстановление.",
-            "en": "Physical driver bound to MoveIt/ros 2_control; actual limits/timing/cancel/recovery verified."
+            "en": "Physical driver bound to MoveIt/ros2_control; actual limits/timing/cancel/recovery verified."
           }
         },
         {

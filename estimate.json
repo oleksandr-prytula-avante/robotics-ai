@@ -3224,8 +3224,8 @@
         "en": "One ROS stack: an early mock, then real interfaces for one leg."
       },
       "rationale": {
-        "ru": "30 ч S1 и 40 ч S2 — части одного модуля, без повторной установки.",
-        "en": "S1 30 h and S2 40 h are parts of one module without repeated installation."
+        "ru": "36 ч S1 и 54 ч S2 — части одного модуля, без повторной установки.",
+        "en": "S1 36 h and S2 54 h are parts of one module without repeated installation."
       },
       "core_reading": {
         "ru": "M12 pp3–4, 6–7: граф, стандартные интерфейсы, QoS, rosbag, единицы и время. Полные лаборатории сравнения исполнителей ROS пока не нужны. M12 pp5–8: TF, URDF, реальные интерфейсы состояния и команд, жизненный цикл, время, диагностика и отрицательные сценарии.",
@@ -3497,7 +3497,7 @@
       "assumptions": [
         {
           "ru": "До входа заказаны 9 дополнительных совместимых рабочих приводов и резервные по исходнику, но не шестиприводное расширение M23. Закупки выполняет пользователь после расчётов.",
-          "en": "Nine additional compatible working actuators and source-listed spares are available at entry, but not the six-actuator M23 expansion. Purchases remain user decisions after calculations."
+          "en": "Nine additional compatible working actuators and source-listed spares are ordered before the stage starts, excluding the six actuators for the M23 expansion. Purchases remain user decisions after calculations."
         },
         {
           "ru": "Планово одна партия повторных ног, одна локальная ревизия крепления/жгута; не переделка всего корпуса с нуля.",
@@ -3823,7 +3823,7 @@
           ],
           "result": {
             "ru": "Физический драйвер привязан к MoveIt/ros2_control, проверены реальные пределы/временные характеристики/отмена/восстановление.",
-            "en": "Physical driver bound to MoveIt/ros 2_control; actual limits/timing/cancel/recovery verified."
+            "en": "Physical driver bound to MoveIt/ros2_control; actual limits/timing/cancel/recovery verified."
           }
         },
         {
@@ -4433,7 +4433,7 @@
           ],
           "result": {
             "ru": "Физический драйвер привязан к MoveIt/ros2_control, проверены реальные пределы/временные характеристики/отмена/восстановление.",
-            "en": "Physical driver bound to MoveIt/ros 2_control; actual limits/timing/cancel/recovery verified."
+            "en": "Physical driver bound to MoveIt/ros2_control; actual limits/timing/cancel/recovery verified."
           }
         },
         {
@@ -12170,7 +12170,7 @@
               "id": "A08",
               "title": {
                 "ru": "Реальное исполнение MoveIt/ros2_control",
-                "en": "Physical execution with MoveIt/ros 2_control"
+                "en": "Physical execution with MoveIt/ros2_control"
               },
               "learn": 3,
               "build": 22,
@@ -12181,7 +12181,7 @@
               ],
               "result": {
                 "ru": "Физический драйвер привязан к MoveIt/ros2_control, проверены реальные пределы/временные характеристики/отмена/восстановление.",
-                "en": "Physical driver bound to MoveIt/ros 2_control; actual limits/timing/cancel/recovery verified."
+                "en": "Physical driver bound to MoveIt/ros2_control; actual limits/timing/cancel/recovery verified."
               },
               "required_prerequisites": [
                 "ARM.A07",

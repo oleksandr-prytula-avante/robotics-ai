@@ -166,6 +166,8 @@ summary:hover { color: var(--green); }
   padding: 15px;
   gap: 12px;
 }
+#timeline .roadmap-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+#timeline .roadmap-stats > div:last-child { grid-column: auto; border-top: 0; padding-block: 0; }
 #timeline .roadmap-stats strong { color: var(--ink); }
 #timeline .roadmap-scroll { padding: 5px 10px 9px 5px; border: 1px solid var(--line); border-radius: 12px; }
 #timeline .roadmap-axis, #timeline .roadmap-row { grid-template-columns: 128px minmax(0, 1fr); }
@@ -624,6 +626,43 @@ html[lang=ru] .topbar button[data-lang=ru], html[lang=en] .topbar button[data-la
 
 .study-actions .button { margin: 0; }
 .study-search { display: block; margin-top: 12px; max-width: 420px; }
+.study-week select, .growth-comparison select {
+  display: block;
+  width: 100%;
+  margin-top: 6px;
+  padding: 9px 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface-soft);
+  color: var(--ink);
+  font: inherit;
+}
+.study-week select:focus-visible, .growth-comparison select:focus-visible {
+  outline: 3px solid var(--orange);
+  outline-offset: 3px;
+}
+.growth-comparison {
+  margin-bottom: 20px;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+.growth-comparison label { display: block; max-width: 480px; }
+.growth-comparison-result {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+  gap: 12px;
+}
+.growth-comparison-result:not(:empty) { margin-block: 14px; }
+.growth-comparison-result p {
+  margin: 0;
+  padding: 10px 12px;
+  border-radius: 8px;
+  background: var(--surface-soft);
+}
+.growth-comparison-result strong { display: block; }
+.growth-schedule tr.growth-selected { background: var(--surface-active); }
+.growth-timeline .roadmap-bar.growth-selected { box-shadow: 0 0 0 2px var(--ink); }
 .study-check {
   display: inline-flex;
   align-items: center;
@@ -650,6 +689,10 @@ html[lang=ru] .topbar button[data-lang=ru], html[lang=en] .topbar button[data-la
 .study-table tbody tr:target { background: var(--surface-active); }
 .study-table tr:target td:first-child a { color: var(--green); text-decoration-thickness: 2px; }
 
+@media screen {
+  .study-week-excluded { display: none !important; }
+}
+
 @media screen and (max-width: 600px) {
   .study-table { overflow: visible; background: transparent; border: 0; }
   .study-table table, .study-table tbody { display: block; }
@@ -670,5 +713,5 @@ html[lang=ru] .topbar button[data-lang=ru], html[lang=en] .topbar button[data-la
 }
 
 @media print {
-  .study-progress, .study-task-check { display: none !important; }
+  .study-progress, .study-task-check, .growth-comparison { display: none !important; }
 }

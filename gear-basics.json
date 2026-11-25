@@ -10,8 +10,8 @@
     "en": "Gears and gearboxes: from teeth to a robot joint"
   },
   "budget": {
-    "ru": "Пройти в начале M07.A1 до сборки стенда; даты указаны в действующем календаре. 6 часов внутри существующих 25 часов A1: 3 ч изучения, 2 ч модели и расчётов, 1 ч проверки. На остальные требования и выбор привода остаётся 19 ч (8/8/3). M07 сохраняет 100 ч; испытания A2–A4 сохраняются полностью.",
-    "en": "Complete at the start of M07.A1 before assembling the rig; use the dates in the active calendar. Six hours within A1’s existing 25: 3 h learning, 2 h modeling/calculation, 1 h verification. Other requirements and actuator selection retain 19 h (8/8/3). M07 remains 100 h; all A2–A4 tests are retained."
+    "ru": "Пройти в начале M07.A1 до сборки стенда; даты указаны в действующем календаре. 6 часов внутри существующих 26 часов задания M07.A1: 3 ч изучения, 2 ч модели и расчётов, 1 ч проверки. На остальные требования и выбор привода остаётся 20 ч (9/8/3). Итого на M07 отведено 104 ч; испытания A2–A4 сохраняются полностью.",
+    "en": "Complete at the start of M07.A1 before assembling the rig; use the dates in the active calendar. Six hours within the 26 h for M07.A1: 3 h learning, 2 h modeling/calculation, 1 h verification. Other requirements and actuator selection retain 20 h (9/8/3). M07 totals 104 h; all A2–A4 tests are retained."
   },
   "steps": [
     {

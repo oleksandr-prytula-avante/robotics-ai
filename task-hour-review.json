@@ -40,6 +40,7 @@
       },
       "hours": 4,
       "reason": "Готовые команды установки и smoke-тесты; знакомые Linux/Git и среда. В 2027 году подготовка и сверка сокращены на 2 ч, новый C++ не затронут.",
+      "reason_en": "Ready-made installation commands and smoke tests use a familiar Linux/Git environment. The 2027 revision cuts setup and checking by two hours and preserves time for new C++ material.",
       "previous_stage_rationale": {
         "ru": "40 ч получены отбором работ: знакомый Python применяется сразу, а владение ресурсами в C++, физические единицы и настройка среды изучаются отдельно. Обработка потоков данных продолжается в рабочей прошивке. Вводная задача на 14 ч не означает освоения C++: практика продолжается в коде микроконтроллера, адаптере S2 и общем HIL-коде. При выявлении пробелов нужно использовать резерв и пересчитать прогноз.",
         "en": "The 40 h follow selected work: familiar Python is used directly; new C++ boundaries, physical units and environment work remain. Streaming mechanisms continue in real firmware instead of forming a second teaching product. The 14 h introductory C++ task does not establish language proficiency: practice continues in the MCU, S2 adapter and shared HIL code; use contingency and reforecast if gaps appear."
@@ -65,6 +66,7 @@
       },
       "hours": 12,
       "reason": "Шесть часов нового C++ сохранены; один небольшой компонент вместо учебного приложения.",
+      "reason_en": "Six hours for new C++ material are preserved. The exercise uses one small component in place of a standalone tutorial app.",
       "previous_stage_rationale": {
         "ru": "40 ч получены отбором работ: знакомый Python применяется сразу, а владение ресурсами в C++, физические единицы и настройка среды изучаются отдельно. Обработка потоков данных продолжается в рабочей прошивке. Вводная задача на 14 ч не означает освоения C++: практика продолжается в коде микроконтроллера, адаптере S2 и общем HIL-коде. При выявлении пробелов нужно использовать резерв и пересчитать прогноз.",
         "en": "The 40 h follow selected work: familiar Python is used directly; new C++ boundaries, physical units and environment work remain. Streaming mechanisms continue in real firmware instead of forming a second teaching product. The 14 h introductory C++ task does not establish language proficiency: practice continues in the MCU, S2 adapter and shared HIL code; use contingency and reforecast if gaps appear."
@@ -90,6 +92,7 @@
       },
       "hours": 2,
       "reason": "Python/графики знакомы: готовый скрипт и один контроль. Час изучения единиц и контракта сохранён; снят 1 ч знакомой реализации/сверки.",
+      "reason_en": "Python and plotting are familiar. Use an existing script and one check. One hour for units and the data contract is preserved, and familiar implementation and checking take one hour less.",
       "previous_stage_rationale": {
         "ru": "40 ч получены отбором работ: знакомый Python применяется сразу, а владение ресурсами в C++, физические единицы и настройка среды изучаются отдельно. Обработка потоков данных продолжается в рабочей прошивке. Вводная задача на 14 ч не означает освоения C++: практика продолжается в коде микроконтроллера, адаптере S2 и общем HIL-коде. При выявлении пробелов нужно использовать резерв и пересчитать прогноз.",
         "en": "The 40 h follow selected work: familiar Python is used directly; new C++ boundaries, physical units and environment work remain. Streaming mechanisms continue in real firmware instead of forming a second teaching product. The 14 h introductory C++ task does not establish language proficiency: practice continues in the MCU, S2 adapter and shared HIL code; use contingency and reforecast if gaps appear."
@@ -115,6 +118,7 @@
       },
       "hours": 2,
       "reason": "Знакомое воспроизведение записей на готовом формате; снят 1 ч реализации/сверки. Изучение и физические очередь/watchdog M06 сохранены.",
+      "reason_en": "Replay uses a familiar workflow and an existing format, cutting one hour of implementation and checking. Learning and the physical queue and watchdog work in M06 are preserved.",
       "previous_stage_rationale": {
         "ru": "40 ч получены отбором работ: знакомый Python применяется сразу, а владение ресурсами в C++, физические единицы и настройка среды изучаются отдельно. Обработка потоков данных продолжается в рабочей прошивке. Вводная задача на 14 ч не означает освоения C++: практика продолжается в коде микроконтроллера, адаптере S2 и общем HIL-коде. При выявлении пробелов нужно использовать резерв и пересчитать прогноз.",
         "en": "The 40 h follow selected work: familiar Python is used directly; new C++ boundaries, physical units and environment work remain. Streaming mechanisms continue in real firmware instead of forming a second teaching product. The 14 h introductory C++ task does not establish language proficiency: practice continues in the MCU, S2 adapter and shared HIL code; use contingency and reforecast if gaps appear."
@@ -140,6 +144,7 @@
       },
       "hours": 12,
       "reason": "ROS новый: понятия графа, сообщений и времени изучаются на одном имитаторе.",
+      "reason_en": "ROS is new. Learn graphs, messages and timing with one simulator.",
       "previous_stage_rationale": null
     },
     {
@@ -162,6 +167,7 @@
       },
       "hours": 5,
       "reason": "Один launch и конфигурация; повторная инфраструктура проекта не создаётся.",
+      "reason_en": "Use one launch file and configuration and reuse the project infrastructure.",
       "previous_stage_rationale": null
     },
     {
@@ -184,6 +190,7 @@
       },
       "hours": 19,
       "reason": "Отдельное время на QoS, запись/воспроизведение и отрицательный сценарий.",
+      "reason_en": "Allow separate time for QoS, recording and replay, and a failure case.",
       "previous_stage_rationale": null
     },
     {
@@ -206,6 +213,7 @@
       },
       "hours": 5,
       "reason": "Высшая математика изучалась ранее: диагностика и адресное восстановление.",
+      "reason_en": "Use a diagnostic and targeted review of previously studied university mathematics.",
       "previous_stage_rationale": {
         "ru": "72 ч включают восстановление высшей математики и новое применение к роботу. Программирование и оформление используют имеющийся опыт. Часы не означают, что уже решённую диагностическую задачу надо повторять до исчерпания бюджета.",
         "en": "72 hours cover university-maths refresh and new robotics application. Coding/presentation use existing experience; a passed diagnostic does not require repetition merely to consume budget."
@@ -231,6 +239,7 @@
       },
       "hours": 10,
       "reason": "Ручной геометрический пример обязателен; NumPy и визуализация уже знакомы.",
+      "reason_en": "A hand-worked geometry example is required. NumPy and visualisation are familiar.",
       "previous_stage_rationale": {
         "ru": "72 ч включают восстановление высшей математики и новое применение к роботу. Программирование и оформление используют имеющийся опыт. Часы не означают, что уже решённую диагностическую задачу надо повторять до исчерпания бюджета.",
         "en": "72 hours cover university-maths refresh and new robotics application. Coding/presentation use existing experience; a passed diagnostic does not require repetition merely to consume budget."
@@ -256,6 +265,7 @@
       },
       "hours": 13,
       "reason": "Обусловленность и независимая проверка изучаются полностью; используется готовый QR/SVD.",
+      "reason_en": "Cover conditioning and independent validation in full using existing QR/SVD routines.",
       "previous_stage_rationale": {
         "ru": "72 ч включают восстановление высшей математики и новое применение к роботу. Программирование и оформление используют имеющийся опыт. Часы не означают, что уже решённую диагностическую задачу надо повторять до исчерпания бюджета.",
         "en": "72 hours cover university-maths refresh and new robotics application. Coding/presentation use existing experience; a passed diagnostic does not require repetition merely to consume budget."
@@ -281,6 +291,7 @@
       },
       "hours": 10,
       "reason": "Производная восстанавливается на одном звене, код конечных разностей короткий.",
+      "reason_en": "Review derivatives on one link with a short finite-difference implementation.",
       "previous_stage_rationale": {
         "ru": "72 ч включают восстановление высшей математики и новое применение к роботу. Программирование и оформление используют имеющийся опыт. Часы не означают, что уже решённую диагностическую задачу надо повторять до исчерпания бюджета.",
         "en": "72 hours cover university-maths refresh and new robotics application. Coding/presentation use existing experience; a passed diagnostic does not require repetition merely to consume budget."
@@ -306,6 +317,7 @@
       },
       "hours": 11,
       "reason": "Один ОДУ-пример и два шага; готовый решатель вместо собственной численной библиотеки.",
+      "reason_en": "Use one ODE example and two step sizes with an existing solver.",
       "previous_stage_rationale": {
         "ru": "72 ч включают восстановление высшей математики и новое применение к роботу. Программирование и оформление используют имеющийся опыт. Часы не означают, что уже решённую диагностическую задачу надо повторять до исчерпания бюджета.",
         "en": "72 hours cover university-maths refresh and new robotics application. Coding/presentation use existing experience; a passed diagnostic does not require repetition merely to consume budget."
@@ -331,6 +343,7 @@
       },
       "hours": 7,
       "reason": "Единый проверяемый модуль; время оставлено на объяснение ошибок единиц и вырожденности.",
+      "reason_en": "Build one testable module and retain time to explain unit errors and degeneracy.",
       "previous_stage_rationale": {
         "ru": "72 ч включают восстановление высшей математики и новое применение к роботу. Программирование и оформление используют имеющийся опыт. Часы не означают, что уже решённую диагностическую задачу надо повторять до исчерпания бюджета.",
         "en": "72 hours cover university-maths refresh and new robotics application. Coding/presentation use existing experience; a passed diagnostic does not require repetition merely to consume budget."
@@ -356,6 +369,7 @@
       },
       "hours": 40,
       "reason": "Электроника с нуля: токовые пути, схема, расчёт, паспорт и самостоятельное измерение.",
+      "reason_en": "Electronics starts from scratch and covers current paths, schematics, calculations, datasheets and independent measurements.",
       "previous_stage_rationale": {
         "ru": "Опыт Python позволяет быстро строить графики, но электроника остаётся новой. Убирается одна расширенная DSP-лабораторная; расчёт схем, приборы, соединения, наложение спектров, причинность и защитные измерения сохранены.",
         "en": "Python experience accelerates plotting, but electronics is new. Defer one extended DSP laboratory; retain circuit calculations, instruments, connections, aliasing, causality and protective measurements."
@@ -381,6 +395,7 @@
       },
       "hours": 28,
       "reason": "Новые ручные навыки пайки/обжима и подключения приборов требуют практики.",
+      "reason_en": "Practise the new manual skills of soldering, crimping and connecting instruments.",
       "previous_stage_rationale": {
         "ru": "Опыт Python позволяет быстро строить графики, но электроника остаётся новой. Убирается одна расширенная DSP-лабораторная; расчёт схем, приборы, соединения, наложение спектров, причинность и защитные измерения сохранены.",
         "en": "Python experience accelerates plotting, but electronics is new. Defer one extended DSP laboratory; retain circuit calculations, instruments, connections, aliasing, causality and protective measurements."
@@ -406,6 +421,7 @@
       },
       "hours": 26,
       "reason": "RC, логические уровни и защита нагрузки изучаются с физическими опытами.",
+      "reason_en": "Learn RC circuits, logic levels and load protection through physical experiments.",
       "previous_stage_rationale": {
         "ru": "Опыт Python позволяет быстро строить графики, но электроника остаётся новой. Убирается одна расширенная DSP-лабораторная; расчёт схем, приборы, соединения, наложение спектров, причинность и защитные измерения сохранены.",
         "en": "Python experience accelerates plotting, but electronics is new. Defer one extended DSP laboratory; retain circuit calculations, instruments, connections, aliasing, causality and protective measurements."
@@ -431,6 +447,7 @@
       },
       "hours": 26,
       "reason": "Сигналы новые; Python используется как инструмент без повторного обучения языку.",
+      "reason_en": "Signals are new. Use familiar Python as a tool.",
       "previous_stage_rationale": {
         "ru": "Опыт Python позволяет быстро строить графики, но электроника остаётся новой. Убирается одна расширенная DSP-лабораторная; расчёт схем, приборы, соединения, наложение спектров, причинность и защитные измерения сохранены.",
         "en": "Python experience accelerates plotting, but electronics is new. Defer one extended DSP laboratory; retain circuit calculations, instruments, connections, aliasing, causality and protective measurements."
@@ -456,6 +473,7 @@
       },
       "hours": 34,
       "reason": "Новый CAD: ограничения эскиза, параметризация и самостоятельное воспроизведение.",
+      "reason_en": "CAD is new. Cover sketch constraints, parametrisation and independent reproduction.",
       "previous_stage_rationale": {
         "ru": "FEA полезна для развития, но не обязательна для первых малых роботов при сохранённых ручных расчётах, консервативных пределах и физических образцах. Новые навыки CAD/посадок/материалов не сокращаются до просмотра уроков.",
         "en": "FEA is useful development work but is not essential for the first small robots when hand calculations, conservative bounds and physical coupons remain. New CAD/fit/material skills are not reduced to watching tutorials."
@@ -481,6 +499,7 @@
       },
       "hours": 43,
       "reason": "Первая собственная трёхосная сборка, кабельные трассы и доступ к крепежу.",
+      "reason_en": "Build the first custom three-axis assembly, including cable routing and fastener access.",
       "previous_stage_rationale": {
         "ru": "FEA полезна для развития, но не обязательна для первых малых роботов при сохранённых ручных расчётах, консервативных пределах и физических образцах. Новые навыки CAD/посадок/материалов не сокращаются до просмотра уроков.",
         "en": "FEA is useful development work but is not essential for the first small robots when hand calculations, conservative bounds and physical coupons remain. New CAD/fit/material skills are not reduced to watching tutorials."
@@ -506,6 +525,7 @@
       },
       "hours": 33,
       "reason": "Посадки и элементы конструкций новые; образцы и повторная сборка обязательны.",
+      "reason_en": "Fits and structural features are new. Test samples and repeat the assembly.",
       "previous_stage_rationale": {
         "ru": "FEA полезна для развития, но не обязательна для первых малых роботов при сохранённых ручных расчётах, консервативных пределах и физических образцах. Новые навыки CAD/посадок/материалов не сокращаются до просмотра уроков.",
         "en": "FEA is useful development work but is not essential for the first small robots when hand calculations, conservative bounds and physical coupons remain. New CAD/fit/material skills are not reduced to watching tutorials."
@@ -531,6 +551,7 @@
       },
       "hours": 33,
       "reason": "Механика новая: ручная статика, прочность, прогиб и ограничения материала.",
+      "reason_en": "Mechanics is new. Work out statics, strength, deflection and material limits by hand.",
       "previous_stage_rationale": {
         "ru": "FEA полезна для развития, но не обязательна для первых малых роботов при сохранённых ручных расчётах, консервативных пределах и физических образцах. Новые навыки CAD/посадок/материалов не сокращаются до просмотра уроков.",
         "en": "FEA is useful development work but is not essential for the first small robots when hand calculations, conservative bounds and physical coupons remain. New CAD/fit/material skills are not reduced to watching tutorials."
@@ -556,6 +577,7 @@
       },
       "hours": 17,
       "reason": "Профиль имеющегося принтера используется повторно; измерения образцов сохранены.",
+      "reason_en": "Reuse the existing printer profile and retain sample measurements.",
       "previous_stage_rationale": {
         "ru": "FEA полезна для развития, но не обязательна для первых малых роботов при сохранённых ручных расчётах, консервативных пределах и физических образцах. Новые навыки CAD/посадок/материалов не сокращаются до просмотра уроков.",
         "en": "FEA is useful development work but is not essential for the first small robots when hand calculations, conservative bounds and physical coupons remain. New CAD/fit/material skills are not reduced to watching tutorials."
@@ -581,6 +603,7 @@
       },
       "hours": 19,
       "reason": "Новые MCU и электрические пределы; обычная организация кода уже знакома.",
+      "reason_en": "Microcontrollers and electrical limits are new. Code organisation is familiar.",
       "previous_stage_rationale": {
         "ru": "Сокращение не обосновано: исходник уже реализует только один основной транспорт и один сенсорный интерфейс. Минимальные RTOS/ISR, очередь, временные характеристики, сторожевой таймер и независимая остановка нужны всем трём устройствам; 110 ч сохранены.",
         "en": "No reduction is justified: the source already implements only one primary transport and one sensor interface. Minimal RTOS/ISR, queues, timing, watchdog and independent stopping serve all three devices; retain 110 h."
@@ -606,6 +629,7 @@
       },
       "hours": 30,
       "reason": "Освоение периферии и одной реальной шины по измеренным сигналам.",
+      "reason_en": "Learn peripherals and one physical bus using measured signals.",
       "previous_stage_rationale": {
         "ru": "Сокращение не обосновано: исходник уже реализует только один основной транспорт и один сенсорный интерфейс. Минимальные RTOS/ISR, очередь, временные характеристики, сторожевой таймер и независимая остановка нужны всем трём устройствам; 110 ч сохранены.",
         "en": "No reduction is justified: the source already implements only one primary transport and one sensor interface. Minimal RTOS/ISR, queues, timing, watchdog and independent stopping serve all three devices; retain 110 h."
@@ -631,6 +655,7 @@
       },
       "hours": 17,
       "reason": "Формат пакета и владение данными используют опыт разработки; ограничения MCU изучаются отдельно.",
+      "reason_en": "Apply prior development experience to packet format and data ownership. Study MCU constraints separately.",
       "previous_stage_rationale": {
         "ru": "Сокращение не обосновано: исходник уже реализует только один основной транспорт и один сенсорный интерфейс. Минимальные RTOS/ISR, очередь, временные характеристики, сторожевой таймер и независимая остановка нужны всем трём устройствам; 110 ч сохранены.",
         "en": "No reduction is justified: the source already implements only one primary transport and one sensor interface. Minimal RTOS/ISR, queues, timing, watchdog and independent stopping serve all three devices; retain 110 h."
@@ -656,6 +681,7 @@
       },
       "hours": 25,
       "reason": "Новые RTOS/ISR, измерение джиттера и аппаратный watchdog.",
+      "reason_en": "RTOS and ISRs are new, along with jitter measurement and the hardware watchdog.",
       "previous_stage_rationale": {
         "ru": "Сокращение не обосновано: исходник уже реализует только один основной транспорт и один сенсорный интерфейс. Минимальные RTOS/ISR, очередь, временные характеристики, сторожевой таймер и независимая остановка нужны всем трём устройствам; 110 ч сохранены.",
         "en": "No reduction is justified: the source already implements only one primary transport and one sensor interface. Minimal RTOS/ISR, queues, timing, watchdog and independent stopping serve all three devices; retain 110 h."
@@ -681,6 +707,7 @@
       },
       "hours": 29,
       "reason": "Физические F1–F10 и независимая остановка сохранены полностью.",
+      "reason_en": "Preserve all physical F1–F10 tests and the independent stop.",
       "previous_stage_rationale": {
         "ru": "Сокращение не обосновано: исходник уже реализует только один основной транспорт и один сенсорный интерфейс. Минимальные RTOS/ISR, очередь, временные характеристики, сторожевой таймер и независимая остановка нужны всем трём устройствам; 110 ч сохранены.",
         "en": "No reduction is justified: the source already implements only one primary transport and one sensor interface. Minimal RTOS/ISR, queues, timing, watchdog and independent stopping serve all three devices; retain 110 h."
@@ -706,6 +733,7 @@
       },
       "hours": 26,
       "reason": "Новые приводы/редукторы: требования, передаточное отношение, потери и люфт.",
+      "reason_en": "Actuators and gearboxes are new. Cover requirements, gear ratio, losses and backlash.",
       "previous_stage_rationale": {
         "ru": "Настольный привод нужен как первый замкнутый контур и основа DC-приводов хвоста. Для основной программы достаточно измеренного поведения и ограниченного рабочего диапазона; исследовательское восстановление всей модели переносится. Проверка пригодности L1 остаётся отдельной: другой привод и нагруженная нога с тремя степенями свободы.",
         "en": "The tabletop drive is the first closed loop and foundation for tail DC drives. Core needs measured behavior and a bounded envelope; research-style model recovery is deferred. L1 qualification remains separate: a different actuator and a loaded 3 DOF leg."
@@ -731,6 +759,7 @@
       },
       "hours": 31,
       "reason": "Новый физический стенд, калибровки и нагрев; измерения не заменяются симуляцией.",
+      "reason_en": "Build a new physical rig and measure calibration and heating on the hardware.",
       "previous_stage_rationale": {
         "ru": "Настольный привод нужен как первый замкнутый контур и основа DC-приводов хвоста. Для основной программы достаточно измеренного поведения и ограниченного рабочего диапазона; исследовательское восстановление всей модели переносится. Проверка пригодности L1 остаётся отдельной: другой привод и нагруженная нога с тремя степенями свободы.",
         "en": "The tabletop drive is the first closed loop and foundation for tail DC drives. Core needs measured behavior and a bounded envelope; research-style model recovery is deferred. L1 qualification remains separate: a different actuator and a loaded 3 DOF leg."
@@ -756,6 +785,7 @@
       },
       "hours": 25,
       "reason": "Первый позиционный контур на готовом стенде; границы и остановка обязательны.",
+      "reason_en": "Implement the first position loop on the existing rig, including limits and stop behaviour.",
       "previous_stage_rationale": {
         "ru": "Настольный привод нужен как первый замкнутый контур и основа DC-приводов хвоста. Для основной программы достаточно измеренного поведения и ограниченного рабочего диапазона; исследовательское восстановление всей модели переносится. Проверка пригодности L1 остаётся отдельной: другой привод и нагруженная нога с тремя степенями свободы.",
         "en": "The tabletop drive is the first closed loop and foundation for tail DC drives. Core needs measured behavior and a bounded envelope; research-style model recovery is deferred. L1 qualification remains separate: a different actuator and a loaded 3 DOF leg."
@@ -781,6 +811,7 @@
       },
       "hours": 22,
       "reason": "Идентификация, независимый нагрузочный опыт и повтор после охлаждения.",
+      "reason_en": "Include identification, an independent load test and a repeat after cooling.",
       "previous_stage_rationale": {
         "ru": "Настольный привод нужен как первый замкнутый контур и основа DC-приводов хвоста. Для основной программы достаточно измеренного поведения и ограниченного рабочего диапазона; исследовательское восстановление всей модели переносится. Проверка пригодности L1 остаётся отдельной: другой привод и нагруженная нога с тремя степенями свободы.",
         "en": "The tabletop drive is the first closed loop and foundation for tail DC drives. Core needs measured behavior and a bounded envelope; research-style model recovery is deferred. L1 qualification remains separate: a different actuator and a loaded 3 DOF leg."
@@ -806,6 +837,7 @@
       },
       "hours": 16,
       "reason": "Новые робототехнические системы координат; общая математика и CAD уже подготовлены.",
+      "reason_en": "Robot coordinate frames are new. General mathematics and CAD are already in place.",
       "previous_stage_rationale": {
         "ru": "108 ч оставлены почти целиком: кинематика для пользователя новая и непосредственно нужна всем проектам. Убрано главным образом оформление и дублирующие учебные цепи, а не проверка геометрии.",
         "en": "108 hours are largely retained: kinematics is new and directly useful across the projects. Cuts mainly remove presentation and duplicate teaching chains, not geometric verification."
@@ -831,6 +863,7 @@
       },
       "hours": 18,
       "reason": "FK собственной ноги, эталонные позы и зеркальность; один общий модуль.",
+      "reason_en": "Use one shared module for custom leg FK, reference poses and mirroring.",
       "previous_stage_rationale": {
         "ru": "108 ч оставлены почти целиком: кинематика для пользователя новая и непосредственно нужна всем проектам. Убрано главным образом оформление и дублирующие учебные цепи, а не проверка геометрии.",
         "en": "108 hours are largely retained: kinematics is new and directly useful across the projects. Cuts mainly remove presentation and duplicate teaching chains, not geometric verification."
@@ -856,6 +889,7 @@
       },
       "hours": 21,
       "reason": "Ветви IK, достижимость и вся траектория, а не только учебная конечная точка.",
+      "reason_en": "Check IK branches, reachability and the full trajectory, including intermediate poses.",
       "previous_stage_rationale": {
         "ru": "108 ч оставлены почти целиком: кинематика для пользователя новая и непосредственно нужна всем проектам. Убрано главным образом оформление и дублирующие учебные цепи, а не проверка геометрии.",
         "en": "108 hours are largely retained: kinematics is new and directly useful across the projects. Cuts mainly remove presentation and duplicate teaching chains, not geometric verification."
@@ -881,6 +915,7 @@
       },
       "hours": 19,
       "reason": "Якобиан и виртуальная работа изучаются полностью; код и тестовые данные переиспользуются.",
+      "reason_en": "Cover the Jacobian and virtual work in full. Reuse code and test data.",
       "previous_stage_rationale": {
         "ru": "108 ч оставлены почти целиком: кинематика для пользователя новая и непосредственно нужна всем проектам. Убрано главным образом оформление и дублирующие учебные цепи, а не проверка геометрии.",
         "en": "108 hours are largely retained: kinematics is new and directly useful across the projects. Cuts mainly remove presentation and duplicate teaching chains, not geometric verification."
@@ -906,6 +941,7 @@
       },
       "hours": 13,
       "reason": "Один готовый численный метод IK на короткой цепи; собственный оптимизатор не нужен.",
+      "reason_en": "Use one existing numerical IK method on a short chain.",
       "previous_stage_rationale": {
         "ru": "108 ч оставлены почти целиком: кинематика для пользователя новая и непосредственно нужна всем проектам. Убрано главным образом оформление и дублирующие учебные цепи, а не проверка геометрии.",
         "en": "108 hours are largely retained: kinematics is new and directly useful across the projects. Cuts mainly remove presentation and duplicate teaching chains, not geometric verification."
@@ -931,6 +967,7 @@
       },
       "hours": 12,
       "reason": "Опорная точка и контракт используют уже реализованные преобразования.",
+      "reason_en": "Use the existing transforms for the support point and interface contract.",
       "previous_stage_rationale": {
         "ru": "108 ч оставлены почти целиком: кинематика для пользователя новая и непосредственно нужна всем проектам. Убрано главным образом оформление и дублирующие учебные цепи, а не проверка геометрии.",
         "en": "108 hours are largely retained: kinematics is new and directly useful across the projects. Cuts mainly remove presentation and duplicate teaching chains, not geometric verification."
@@ -956,6 +993,7 @@
       },
       "hours": 21,
       "reason": "Новая оценка реальной массы/инерции и нагрузок до выбора окончательной комплектации.",
+      "reason_en": "Estimate actual mass, inertia and loads before selecting the final configuration.",
       "previous_stage_rationale": null
     },
     {
@@ -978,6 +1016,7 @@
       },
       "hours": 21,
       "reason": "Опоры, сцепление и устойчивость: самостоятельный расчёт и контрпример.",
+      "reason_en": "Work out support, traction and stability independently and include a counterexample.",
       "previous_stage_rationale": null
     },
     {
@@ -1000,6 +1039,7 @@
       },
       "hours": 11,
       "reason": "Паспорт и измерение именно интеллектуального сервопривода, отдельно от DC-стенда.",
+      "reason_en": "Read the smart servo datasheet and measure the servo itself separately from the DC rig.",
       "previous_stage_rationale": {
         "ru": "70 ч физической постройки первой ноги учтены один раз в L1. M08 содержит кинематику, M13 повторно использует готовую ногу для сравнения с моделью, а M22 исключает повторную постройку первой ноги.",
         "en": "The 70 h of first-leg fabrication are budgeted once in L1. M08 covers kinematics, M13 reuses the completed leg for model comparison, and M22 excludes building the first leg again."
@@ -1025,6 +1065,7 @@
       },
       "hours": 14,
       "reason": "Готовая параметрическая нога адаптируется к фактическим креплениям.",
+      "reason_en": "Adapt the existing parametric leg to the actual mounts.",
       "previous_stage_rationale": {
         "ru": "70 ч физической постройки первой ноги учтены один раз в L1. M08 содержит кинематику, M13 повторно использует готовую ногу для сравнения с моделью, а M22 исключает повторную постройку первой ноги.",
         "en": "The 70 h of first-leg fabrication are budgeted once in L1. M08 covers kinematics, M13 reuses the completed leg for model comparison, and M22 excludes building the first leg again."
@@ -1050,6 +1091,7 @@
       },
       "hours": 13,
       "reason": "Одна физическая трёхосная сборка с уже освоенными проводкой и остановкой.",
+      "reason_en": "Assemble one physical three-axis leg using the wiring and stop methods already practised.",
       "previous_stage_rationale": {
         "ru": "70 ч физической постройки первой ноги учтены один раз в L1. M08 содержит кинематику, M13 повторно использует готовую ногу для сравнения с моделью, а M22 исключает повторную постройку первой ноги.",
         "en": "The 70 h of first-leg fabrication are budgeted once in L1. M08 covers kinematics, M13 reuses the completed leg for model comparison, and M22 excludes building the first leg again."
@@ -1075,6 +1117,7 @@
       },
       "hours": 15,
       "reason": "Новый конкретный драйвер и цикл шины; общий протокол и анализ уже готовы.",
+      "reason_en": "Learn the specific new driver and bus cycle. Reuse the shared protocol and analysis.",
       "previous_stage_rationale": {
         "ru": "70 ч физической постройки первой ноги учтены один раз в L1. M08 содержит кинематику, M13 повторно использует готовую ногу для сравнения с моделью, а M22 исключает повторную постройку первой ноги.",
         "en": "The 70 h of first-leg fabrication are budgeted once in L1. M08 covers kinematics, M13 reuses the completed leg for model comparison, and M22 excludes building the first leg again."
@@ -1100,6 +1143,7 @@
       },
       "hours": 23,
       "reason": "Внешняя проверка FK/IK, нагрузка, нагрев и охлаждение сохранены.",
+      "reason_en": "Retain external FK/IK validation, load, heating and cooling checks.",
       "previous_stage_rationale": {
         "ru": "70 ч физической постройки первой ноги учтены один раз в L1. M08 содержит кинематику, M13 повторно использует готовую ногу для сравнения с моделью, а M22 исключает повторную постройку первой ноги.",
         "en": "The 70 h of first-leg fabrication are budgeted once in L1. M08 covers kinematics, M13 reuses the completed leg for model comparison, and M22 excludes building the first leg again."
@@ -1125,6 +1169,7 @@
       },
       "hours": 4,
       "reason": "Решение по готовым данным L1 и один контроль, без повторения всей серии.",
+      "reason_en": "Make the decision from the L1 data and one confirmation check.",
       "previous_stage_rationale": null
     },
     {
@@ -1147,6 +1192,7 @@
       },
       "hours": 11,
       "reason": "Новая измерительная статистика на уже собранном IMU-журнале.",
+      "reason_en": "Learn measurement statistics using the existing IMU log.",
       "previous_stage_rationale": {
         "ru": "56 ч — одна качественная измерительная работа вместо обязательной серии самостоятельных статистических лабораторных. Количество повторов выбирается под калибровку до сбора данных; исходное упражнение с 30 установками сохранено как готовый расширенный протокол.",
         "en": "56 hours cover one sound measurement study rather than a compulsory sequence of standalone statistics labs. Repetition count is chosen before collection; the original thirty-placement exercise remains an extended protocol."
@@ -1172,6 +1218,7 @@
       },
       "hours": 15,
       "reason": "Одна реальная калибровка; транспорт, сбор и графики используются готовые.",
+      "reason_en": "Perform one physical calibration using existing transport, collection and plotting.",
       "previous_stage_rationale": {
         "ru": "56 ч — одна качественная измерительная работа вместо обязательной серии самостоятельных статистических лабораторных. Количество повторов выбирается под калибровку до сбора данных; исходное упражнение с 30 установками сохранено как готовый расширенный протокол.",
         "en": "56 hours cover one sound measurement study rather than a compulsory sequence of standalone statistics labs. Repetition count is chosen before collection; the original thirty-placement exercise remains an extended protocol."
@@ -1197,6 +1244,7 @@
       },
       "hours": 11,
       "reason": "Один метод неопределённости с независимой ошибкой; пакет анализа переиспользуется.",
+      "reason_en": "Apply one uncertainty method with an independent error check. Reuse the analysis package.",
       "previous_stage_rationale": {
         "ru": "56 ч — одна качественная измерительная работа вместо обязательной серии самостоятельных статистических лабораторных. Количество повторов выбирается под калибровку до сбора данных; исходное упражнение с 30 установками сохранено как готовый расширенный протокол.",
         "en": "56 hours cover one sound measurement study rather than a compulsory sequence of standalone statistics labs. Repetition count is chosen before collection; the original thirty-placement exercise remains an extended protocol."
@@ -1222,6 +1270,7 @@
       },
       "hours": 11,
       "reason": "Один готовый SciPy-решатель; ограничения и утечки данных изучаются отдельно.",
+      "reason_en": "Use one existing SciPy solver and study constraints and data leakage separately.",
       "previous_stage_rationale": {
         "ru": "56 ч — одна качественная измерительная работа вместо обязательной серии самостоятельных статистических лабораторных. Количество повторов выбирается под калибровку до сбора данных; исходное упражнение с 30 установками сохранено как готовый расширенный протокол.",
         "en": "56 hours cover one sound measurement study rather than a compulsory sequence of standalone statistics labs. Repetition count is chosen before collection; the original thirty-placement exercise remains an extended protocol."
@@ -1247,6 +1296,7 @@
       },
       "hours": 17,
       "reason": "URDF/TF и преобразования во времени новые; запас изучения увеличен.",
+      "reason_en": "URDF, TF and time-dependent transforms are new, so the learning allowance is larger.",
       "previous_stage_rationale": null
     },
     {
@@ -1269,6 +1319,7 @@
       },
       "hours": 23,
       "reason": "Собственный адаптер ros2_control на C++ получает 23 ч вместо 13.",
+      "reason_en": "Allow 23 hours, up from 13, for a custom ros2_control adapter in C++.",
       "previous_stage_rationale": null
     },
     {
@@ -1291,6 +1342,7 @@
       },
       "hours": 14,
       "reason": "Новые исполнитель и жизненный цикл; готовые сценарии отказов используются повторно.",
+      "reason_en": "Executors and lifecycle behaviour are new. Reuse the existing failure cases.",
       "previous_stage_rationale": null
     },
     {
@@ -1313,6 +1365,7 @@
       },
       "hours": 18,
       "reason": "Вывод одной физической модели; интегратор и измерительный стенд уже готовы.",
+      "reason_en": "Derive one physical model using the existing integrator and measurement rig.",
       "previous_stage_rationale": null
     },
     {
@@ -1335,6 +1388,7 @@
       },
       "hours": 13,
       "reason": "Самостоятельный вывод одной плоской 2R-модели и независимый библиотечный эталон; полный вывод 6-DOF не добавляется.",
+      "reason_en": "Derive one planar 2R model and obtain an independent library reference. The scope covers the planar model.",
       "previous_stage_rationale": null
     },
     {
@@ -1357,6 +1411,7 @@
       },
       "hours": 23,
       "reason": "Реальная независимая серия и объяснение расхождений сохранены.",
+      "reason_en": "Preserve an independent physical test series and explain discrepancies.",
       "previous_stage_rationale": null
     },
     {
@@ -1379,6 +1434,7 @@
       },
       "hours": 10,
       "reason": "Оси/единицы изучаются, но калибровка M03 и формат M06 не создаются заново.",
+      "reason_en": "Study axes and units and reuse M03 calibration and the M06 data format.",
       "previous_stage_rationale": {
         "ru": "60 ч на проверенную оценку ориентации по IMU, достаточную для медленного робота. Отличие от прежних 150 ч связано с выбором одного метода и отказом от обязательного академического сравнения. Основы причинной фильтрации из M04 используются повторно; здесь проверяются реальный IMU и объединение данных его датчиков.",
         "en": "60 hours provide validated IMU estimates needed by a slow robot. The reduction from 150 hours comes from method selection and removing compulsory academic comparisons, not another blanket maths cut. Reuse M04 introductory causal-filter concepts; this block evaluates the actual IMU and operational fusion of its channels."
@@ -1404,6 +1460,7 @@
       },
       "hours": 22,
       "reason": "Новый AHRS/комплементарный фильтр и физический смысл его параметров.",
+      "reason_en": "Learn the AHRS/complementary filter and the physical meaning of its parameters.",
       "previous_stage_rationale": {
         "ru": "60 ч на проверенную оценку ориентации по IMU, достаточную для медленного робота. Отличие от прежних 150 ч связано с выбором одного метода и отказом от обязательного академического сравнения. Основы причинной фильтрации из M04 используются повторно; здесь проверяются реальный IMU и объединение данных его датчиков.",
         "en": "60 hours provide validated IMU estimates needed by a slow robot. The reduction from 150 hours comes from method selection and removing compulsory academic comparisons, not another blanket maths cut. Reuse M04 introductory causal-filter concepts; this block evaluates the actual IMU and operational fusion of its channels."
@@ -1429,6 +1486,7 @@
       },
       "hours": 19,
       "reason": "Физические эталоны, дрейф и отказ; дополнительное время на интерпретацию.",
+      "reason_en": "Allow time for physical references, drift, a failure case and interpretation.",
       "previous_stage_rationale": {
         "ru": "60 ч на проверенную оценку ориентации по IMU, достаточную для медленного робота. Отличие от прежних 150 ч связано с выбором одного метода и отказом от обязательного академического сравнения. Основы причинной фильтрации из M04 используются повторно; здесь проверяются реальный IMU и объединение данных его датчиков.",
         "en": "60 hours provide validated IMU estimates needed by a slow robot. The reduction from 150 hours comes from method selection and removing compulsory academic comparisons, not another blanket maths cut. Reuse M04 introductory causal-filter concepts; this block evaluates the actual IMU and operational fusion of its channels."
@@ -1454,6 +1512,7 @@
       },
       "hours": 9,
       "reason": "Наблюдаемость изучается явно; общий контракт качества данных уже есть.",
+      "reason_en": "Study observability explicitly and reuse the shared data quality contract.",
       "previous_stage_rationale": {
         "ru": "60 ч на проверенную оценку ориентации по IMU, достаточную для медленного робота. Отличие от прежних 150 ч связано с выбором одного метода и отказом от обязательного академического сравнения. Основы причинной фильтрации из M04 используются повторно; здесь проверяются реальный IMU и объединение данных его датчиков.",
         "en": "60 hours provide validated IMU estimates needed by a slow robot. The reduction from 150 hours comes from method selection and removing compulsory academic comparisons, not another blanket maths cut. Reuse M04 introductory causal-filter concepts; this block evaluates the actual IMU and operational fusion of its channels."
@@ -1479,6 +1538,7 @@
       },
       "hours": 18,
       "reason": "Теория PID сохранена; используются модель D2 и стенд M07.",
+      "reason_en": "Retain PID theory and use the D2 model and M07 rig.",
       "previous_stage_rationale": {
         "ru": "100 ч используют готовые стенд M07 и модель M09. Встроенный PID сервопривода с закрытой реализацией не считается собственным контуром управления моментом; физическая проверка крена и тангажа здесь повторно не учитывается. Добавлен отдельный вводный практикум: 20 ч; оценка предполагает готовую инфраструктуру предыдущих заданий.",
         "en": "100 hours reuse the M07/M09 rig and model. A proprietary servo PID is not presented as a custom torque loop, and physical roll/pitch testing is not counted twice. A separate introductory lab adds 20 h, assuming the preceding tasks provide working infrastructure."
@@ -1504,6 +1564,7 @@
       },
       "hours": 15,
       "reason": "Дискретизация и задержки изучаются; измерительный код берётся из M06.",
+      "reason_en": "Study discretisation and delays using the M06 measurement code.",
       "previous_stage_rationale": {
         "ru": "100 ч используют готовые стенд M07 и модель M09. Встроенный PID сервопривода с закрытой реализацией не считается собственным контуром управления моментом; физическая проверка крена и тангажа здесь повторно не учитывается. Добавлен отдельный вводный практикум: 20 ч; оценка предполагает готовую инфраструктуру предыдущих заданий.",
         "en": "100 hours reuse the M07/M09 rig and model. A proprietary servo PID is not presented as a custom torque loop, and physical roll/pitch testing is not counted twice. A separate introductory lab adds 20 h, assuming the preceding tasks provide working infrastructure."
@@ -1529,6 +1590,7 @@
       },
       "hours": 17,
       "reason": "Физическая настройка и независимые подтверждающие повторы.",
+      "reason_en": "Tune on hardware and run independent confirmation trials.",
       "previous_stage_rationale": {
         "ru": "100 ч используют готовые стенд M07 и модель M09. Встроенный PID сервопривода с закрытой реализацией не считается собственным контуром управления моментом; физическая проверка крена и тангажа здесь повторно не учитывается. Добавлен отдельный вводный практикум: 20 ч; оценка предполагает готовую инфраструктуру предыдущих заданий.",
         "en": "100 hours reuse the M07/M09 rig and model. A proprietary servo PID is not presented as a custom torque loop, and physical roll/pitch testing is not counted twice. A separate introductory lab adds 20 h, assuming the preceding tasks provide working infrastructure."
@@ -1554,6 +1616,7 @@
       },
       "hours": 18,
       "reason": "Новый внешний контур использует готовые IMU и IK.",
+      "reason_en": "The new outer loop uses the existing IMU and IK.",
       "previous_stage_rationale": {
         "ru": "100 ч используют готовые стенд M07 и модель M09. Встроенный PID сервопривода с закрытой реализацией не считается собственным контуром управления моментом; физическая проверка крена и тангажа здесь повторно не учитывается. Добавлен отдельный вводный практикум: 20 ч; оценка предполагает готовую инфраструктуру предыдущих заданий.",
         "en": "100 hours reuse the M07/M09 rig and model. A proprietary servo PID is not presented as a custom torque loop, and physical roll/pitch testing is not counted twice. A separate introductory lab adds 20 h, assuming the preceding tasks provide working infrastructure."
@@ -1579,6 +1642,7 @@
       },
       "hours": 6,
       "reason": "Общий анализ и регрессионные журналы используются повторно.",
+      "reason_en": "Reuse the shared analysis and regression logs.",
       "previous_stage_rationale": {
         "ru": "100 ч используют готовые стенд M07 и модель M09. Встроенный PID сервопривода с закрытой реализацией не считается собственным контуром управления моментом; физическая проверка крена и тангажа здесь повторно не учитывается. Добавлен отдельный вводный практикум: 20 ч; оценка предполагает готовую инфраструктуру предыдущих заданий.",
         "en": "100 hours reuse the M07/M09 rig and model. A proprietary servo PID is not presented as a custom torque loop, and physical roll/pitch testing is not counted twice. A separate introductory lab adds 20 h, assuming the preceding tasks provide working infrastructure."
@@ -1604,6 +1668,7 @@
       },
       "hours": 20,
       "reason": "Вводная robust-лабораторная: одна линейная ось, полюса/запасы и контрпример; не полный robust-курс.",
+      "reason_en": "The introductory robust control lab covers one linear axis, poles, margins and a counterexample.",
       "previous_stage_rationale": {
         "ru": "100 ч используют готовые стенд M07 и модель M09. Встроенный PID сервопривода с закрытой реализацией не считается собственным контуром управления моментом; физическая проверка крена и тангажа здесь повторно не учитывается. Добавлен отдельный вводный практикум: 20 ч; оценка предполагает готовую инфраструктуру предыдущих заданий.",
         "en": "100 hours reuse the M07/M09 rig and model. A proprietary servo PID is not presented as a custom torque loop, and physical roll/pitch testing is not counted twice. A separate introductory lab adds 20 h, assuming the preceding tasks provide working infrastructure."
@@ -1629,6 +1694,7 @@
       },
       "hours": 18,
       "reason": "Симуляция новой физики на готовых URDF, геометрии и установленном движке.",
+      "reason_en": "Simulate new physics using the existing URDF, geometry and installed engine.",
       "previous_stage_rationale": {
         "ru": "86 ч сохраняют реальную аппаратную границу и проверку физики. Установка уже выполнена в M01; вся нога и её драйвер уже созданы в L1; сборка четырёхногой модели и генератор походки здесь повторно не оплачиваются. Добавлен отдельный вводный практикум: 16 ч; оценка предполагает готовую инфраструктуру предыдущих заданий.",
         "en": "The 86 h retain the real hardware boundary and physics checks. M01 owns installation; L1 owns the leg and driver; the four-leg model and gait generator are not counted again here. A separate introductory lab adds 16 h, assuming the preceding tasks provide working infrastructure."
@@ -1654,6 +1720,7 @@
       },
       "hours": 14,
       "reason": "Контакт и модельные сенсоры изучаются отдельно от интерфейсного кода.",
+      "reason_en": "Study contact and simulated sensors separately from interface code.",
       "previous_stage_rationale": {
         "ru": "86 ч сохраняют реальную аппаратную границу и проверку физики. Установка уже выполнена в M01; вся нога и её драйвер уже созданы в L1; сборка четырёхногой модели и генератор походки здесь повторно не оплачиваются. Добавлен отдельный вводный практикум: 16 ч; оценка предполагает готовую инфраструктуру предыдущих заданий.",
         "en": "The 86 h retain the real hardware boundary and physics checks. M01 owns installation; L1 owns the leg and driver; the four-leg model and gait generator are not counted again here. A separate introductory lab adds 16 h, assuming the preceding tasks provide working infrastructure."
@@ -1679,6 +1746,7 @@
       },
       "hours": 22,
       "reason": "HIL и согласование времени новые; выделено 22 ч на одну замкнутую связку.",
+      "reason_en": "HIL and synchronisation are new. Allow 22 hours for one closed-loop setup.",
       "previous_stage_rationale": {
         "ru": "86 ч сохраняют реальную аппаратную границу и проверку физики. Установка уже выполнена в M01; вся нога и её драйвер уже созданы в L1; сборка четырёхногой модели и генератор походки здесь повторно не оплачиваются. Добавлен отдельный вводный практикум: 16 ч; оценка предполагает готовую инфраструктуру предыдущих заданий.",
         "en": "The 86 h retain the real hardware boundary and physics checks. M01 owns installation; L1 owns the leg and driver; the four-leg model and gait generator are not counted again here. A separate introductory lab adds 16 h, assuming the preceding tasks provide working infrastructure."
@@ -1704,6 +1772,7 @@
       },
       "hours": 14,
       "reason": "Готовый физический сценарий L1 сопоставляется с моделью, без второй серии разработки.",
+      "reason_en": "Compare the existing physical L1 case with the model.",
       "previous_stage_rationale": {
         "ru": "86 ч сохраняют реальную аппаратную границу и проверку физики. Установка уже выполнена в M01; вся нога и её драйвер уже созданы в L1; сборка четырёхногой модели и генератор походки здесь повторно не оплачиваются. Добавлен отдельный вводный практикум: 16 ч; оценка предполагает готовую инфраструктуру предыдущих заданий.",
         "en": "The 86 h retain the real hardware boundary and physics checks. M01 owns installation; L1 owns the leg and driver; the four-leg model and gait generator are not counted again here. A separate introductory lab adds 16 h, assuming the preceding tasks provide working infrastructure."
@@ -1729,6 +1798,7 @@
       },
       "hours": 16,
       "reason": "Вводный контактный опыт на существующей стопе и движке; эталоны и dt/dt2 сохранены.",
+      "reason_en": "Run an introductory contact experiment with the existing foot and engine. Preserve the references and the dt and dt/2 checks.",
       "previous_stage_rationale": {
         "ru": "86 ч сохраняют реальную аппаратную границу и проверку физики. Установка уже выполнена в M01; вся нога и её драйвер уже созданы в L1; сборка четырёхногой модели и генератор походки здесь повторно не оплачиваются. Добавлен отдельный вводный практикум: 16 ч; оценка предполагает готовую инфраструктуру предыдущих заданий.",
         "en": "The 86 h retain the real hardware boundary and physics checks. M01 owns installation; L1 owns the leg and driver; the four-leg model and gait generator are not counted again here. A separate introductory lab adds 16 h, assuming the preceding tasks provide working infrastructure."
@@ -1754,6 +1824,7 @@
       },
       "hours": 37,
       "reason": "Новая шестикоординатная конструкция, плечевые нагрузки и выбор приводов.",
+      "reason_en": "The six-axis design, arm loads and actuator selection are new.",
       "previous_stage_rationale": null
     },
     {
@@ -1776,6 +1847,7 @@
       },
       "hours": 48,
       "reason": "Нагруженный физический прототип до заказа остальных приводов.",
+      "reason_en": "Test a loaded physical prototype before ordering the remaining actuators.",
       "previous_stage_rationale": null
     },
     {
@@ -1798,6 +1870,7 @@
       },
       "hours": 71,
       "reason": "Собственная CAD-механика, модель и готовый IK получают 71 ч; суммы подработ согласованы.",
+      "reason_en": "Allow 71 hours for custom mechanical CAD, the model and an existing IK implementation. The subtasks add up to that total.",
       "previous_stage_rationale": null
     },
     {
@@ -1820,6 +1893,7 @@
       },
       "hours": 24,
       "reason": "Простой параллельный захват; CAD и стендовая методика уже освоены.",
+      "reason_en": "Use a simple parallel gripper and established CAD and bench methods.",
       "previous_stage_rationale": null
     },
     {
@@ -1842,6 +1916,7 @@
       },
       "hours": 34,
       "reason": "Континуальная геометрия и нагрузка новые: теория не сокращается из-за Python-опыта.",
+      "reason_en": "Continuum geometry and loading are new and receive the full theory allowance.",
       "previous_stage_rationale": null
     },
     {
@@ -1864,6 +1939,7 @@
       },
       "hours": 56,
       "reason": "Три варианта хребта и пассивная секция: изготовление и сравнение физических образцов.",
+      "reason_en": "Build and compare physical samples for three backbone variants and one passive section.",
       "previous_stage_rationale": null
     },
     {
@@ -1886,6 +1962,7 @@
       },
       "hours": 50,
       "reason": "Новые тросовые передачи, натяжение, трение и гистерезис.",
+      "reason_en": "Learn cable transmissions, tensioning, friction and hysteresis.",
       "previous_stage_rationale": null
     },
     {
@@ -1908,6 +1985,7 @@
       },
       "hours": 13,
       "reason": "Параметрическое тиражирование готовой ноги, без повторного моделирования каждого сустава.",
+      "reason_en": "Replicate the existing parametrised leg design across joints.",
       "previous_stage_rationale": {
         "ru": "160 ч = 120 ч на интеграцию походки, контактов и управления + 16 ч на расширение модели + 24 ч на вводный плоский QP. Физические испытания принимаются отдельно в M22/M23.",
         "en": "160 h = 120 h for gait/contact/control integration + 16 h for model expansion + 24 h for introductory planar QP. Physical tests are accepted separately in M22/M23."
@@ -1933,6 +2011,7 @@
       },
       "hours": 20,
       "reason": "Новая логика контактов поверх готовых фильтра и временных меток.",
+      "reason_en": "Add new contact logic on top of the existing filter and timestamps.",
       "previous_stage_rationale": {
         "ru": "160 ч = 120 ч на интеграцию походки, контактов и управления + 16 ч на расширение модели + 24 ч на вводный плоский QP. Физические испытания принимаются отдельно в M22/M23.",
         "en": "160 h = 120 h for gait/contact/control integration + 16 h for model expansion + 24 h for introductory planar QP. Physical tests are accepted separately in M22/M23."
@@ -1958,6 +2037,7 @@
       },
       "hours": 24,
       "reason": "Новая походка и перенос веса; программный автомат использует обычный опыт разработки.",
+      "reason_en": "Gait and weight transfer are new. The software state machine uses familiar techniques.",
       "previous_stage_rationale": {
         "ru": "160 ч = 120 ч на интеграцию походки, контактов и управления + 16 ч на расширение модели + 24 ч на вводный плоский QP. Физические испытания принимаются отдельно в M22/M23.",
         "en": "160 h = 120 h for gait/contact/control integration + 16 h for model expansion + 24 h for introductory planar QP. Physical tests are accepted separately in M22/M23."
@@ -1983,6 +2063,7 @@
       },
       "hours": 19,
       "reason": "Новый выбор опоры использует готовые IK и проверки всей дуги.",
+      "reason_en": "New foothold selection uses existing IK and checks the full swing arc.",
       "previous_stage_rationale": {
         "ru": "160 ч = 120 ч на интеграцию походки, контактов и управления + 16 ч на расширение модели + 24 ч на вводный плоский QP. Физические испытания принимаются отдельно в M22/M23.",
         "en": "160 h = 120 h for gait/contact/control integration + 16 h for model expansion + 24 h for introductory planar QP. Physical tests are accepted separately in M22/M23."
@@ -2008,6 +2089,7 @@
       },
       "hours": 23,
       "reason": "Физически осмысленное свободное стояние и возмущение сохраняются.",
+      "reason_en": "Retain physically meaningful unsupported standing and disturbance tests.",
       "previous_stage_rationale": {
         "ru": "160 ч = 120 ч на интеграцию походки, контактов и управления + 16 ч на расширение модели + 24 ч на вводный плоский QP. Физические испытания принимаются отдельно в M22/M23.",
         "en": "160 h = 120 h for gait/contact/control integration + 16 h for model expansion + 24 h for introductory planar QP. Physical tests are accepted separately in M22/M23."
@@ -2033,6 +2115,7 @@
       },
       "hours": 17,
       "reason": "Один параметризованный набор регрессий использует существующие механизмы отказов.",
+      "reason_en": "A single parameterised regression suite uses the existing failure mechanisms.",
       "previous_stage_rationale": {
         "ru": "160 ч = 120 ч на интеграцию походки, контактов и управления + 16 ч на расширение модели + 24 ч на вводный плоский QP. Физические испытания принимаются отдельно в M22/M23.",
         "en": "160 h = 120 h for gait/contact/control integration + 16 h for model expansion + 24 h for introductory planar QP. Physical tests are accepted separately in M22/M23."
@@ -2058,6 +2141,7 @@
       },
       "hours": 20,
       "reason": "Одна плоская QP с готовым решателем и ручным эталоном; не полноценное силовое управление.",
+      "reason_en": "Solve one planar QP with an existing solver and a hand-worked reference. The exercise covers force allocation.",
       "previous_stage_rationale": {
         "ru": "160 ч = 120 ч на интеграцию походки, контактов и управления + 16 ч на расширение модели + 24 ч на вводный плоский QP. Физические испытания принимаются отдельно в M22/M23.",
         "en": "160 h = 120 h for gait/contact/control integration + 16 h for model expansion + 24 h for introductory planar QP. Physical tests are accepted separately in M22/M23."
@@ -2083,6 +2167,7 @@
       },
       "hours": 18,
       "reason": "Новые нагрузки четырёх ног; шаблоны массы/питания уже готовы.",
+      "reason_en": "Four-leg loads are new. The mass and power templates already exist.",
       "previous_stage_rationale": {
         "ru": "На входе есть реально работающая трёхкоординатная нога и контроллер. Увеличение до 155 ч включает повторение механики/проводки, 12 калибровок и физическую интеграцию. Теория ROS, IK и управления здесь заново не изучается.",
         "en": "Entry requires a physically functioning 3-DOF leg and controller. The 155 hours pay for replicated mechanics/wiring, twelve calibrations and physical integration. ROS, IK and control theory are not relearned."
@@ -2108,6 +2193,7 @@
       },
       "hours": 45,
       "reason": "Физическое изготовление ещё трёх ног и корпуса сохранено.",
+      "reason_en": "Retain physical fabrication of three additional legs and the body.",
       "previous_stage_rationale": {
         "ru": "На входе есть реально работающая трёхкоординатная нога и контроллер. Увеличение до 155 ч включает повторение механики/проводки, 12 калибровок и физическую интеграцию. Теория ROS, IK и управления здесь заново не изучается.",
         "en": "Entry requires a physically functioning 3-DOF leg and controller. The 155 hours pay for replicated mechanics/wiring, twelve calibrations and physical integration. ROS, IK and control theory are not relearned."
@@ -2133,6 +2219,7 @@
       },
       "hours": 29,
       "reason": "Новая многоприводная разводка, последовательный запуск и независимая остановка.",
+      "reason_en": "Multi-actuator wiring, sequential startup and independent stopping are new.",
       "previous_stage_rationale": {
         "ru": "На входе есть реально работающая трёхкоординатная нога и контроллер. Увеличение до 155 ч включает повторение механики/проводки, 12 калибровок и физическую интеграцию. Теория ROS, IK и управления здесь заново не изучается.",
         "en": "Entry requires a physically functioning 3-DOF leg and controller. The 155 hours pay for replicated mechanics/wiring, twelve calibrations and physical integration. ROS, IK and control theory are not relearned."
@@ -2158,6 +2245,7 @@
       },
       "hours": 27,
       "reason": "Все 12 физических калибровок сохранены; общий скрипт и протокол используются повторно.",
+      "reason_en": "Retain all 12 physical calibrations and reuse the shared script and protocol.",
       "previous_stage_rationale": {
         "ru": "На входе есть реально работающая трёхкоординатная нога и контроллер. Увеличение до 155 ч включает повторение механики/проводки, 12 калибровок и физическую интеграцию. Теория ROS, IK и управления здесь заново не изучается.",
         "en": "Entry requires a physically functioning 3-DOF leg and controller. The 155 hours pay for replicated mechanics/wiring, twelve calibrations and physical integration. ROS, IK and control theory are not relearned."
@@ -2183,6 +2271,7 @@
       },
       "hours": 26,
       "reason": "Стояние, crawl и заранее заданная серия попыток сохраняются; анализ единым скриптом.",
+      "reason_en": "Retain standing, crawl and the predefined trials. Use one analysis script.",
       "previous_stage_rationale": {
         "ru": "На входе есть реально работающая трёхкоординатная нога и контроллер. Увеличение до 155 ч включает повторение механики/проводки, 12 калибровок и физическую интеграцию. Теория ROS, IK и управления здесь заново не изучается.",
         "en": "Entry requires a physically functioning 3-DOF leg and controller. The 155 hours pay for replicated mechanics/wiring, twelve calibrations and physical integration. ROS, IK and control theory are not relearned."
@@ -2208,6 +2297,7 @@
       },
       "hours": 4,
       "reason": "Приёмка уже выполненной серии M22, без второго полного испытания.",
+      "reason_en": "Base acceptance on the completed M22 trials.",
       "previous_stage_rationale": null
     },
     {
@@ -2230,6 +2320,7 @@
       },
       "hours": 47,
       "reason": "Первая активная секция: новое управление тросовой механикой и её физические ограничения.",
+      "reason_en": "The first active section introduces cable mechanism control and its physical limits.",
       "previous_stage_rationale": null
     },
     {
@@ -2252,6 +2343,7 @@
       },
       "hours": 57,
       "reason": "Три секции/шесть приводов; монтаж и проверка дальних тросов сохранены.",
+      "reason_en": "Preserve installation and checks of the remote cable runs across three sections and six actuators.",
       "previous_stage_rationale": null
     },
     {
@@ -2274,6 +2366,7 @@
       },
       "hours": 46,
       "reason": "Новая калибровка формы и взаимовлияния; независимые измерения сохранены.",
+      "reason_en": "Shape and coupling calibration are new. Preserve independent measurements.",
       "previous_stage_rationale": null
     },
     {
@@ -2296,6 +2389,7 @@
       },
       "hours": 32,
       "reason": "Добавление двух ног по уже принятой технологии, с повторным расчётом корпуса.",
+      "reason_en": "Add two legs using the accepted fabrication method and recalculate the body.",
       "previous_stage_rationale": {
         "ru": "155 ч — дальнейшая работа с той же проверенной машиной: две дополнительные ноги, новый режим контактов и испытания. Не повторяется создание драйвера, всего CAD и телеметрии.",
         "en": "The 155 hours continue work on the same validated machine: two added legs, new contact modes and testing. Driver creation, all CAD and telemetry are not repeated."
@@ -2321,6 +2415,7 @@
       },
       "hours": 17,
       "reason": "Все 18 каналов проверяются; инструменты калибровки и анализа переиспользуются.",
+      "reason_en": "Check all 18 channels and reuse calibration and analysis tools.",
       "previous_stage_rationale": {
         "ru": "155 ч — дальнейшая работа с той же проверенной машиной: две дополнительные ноги, новый режим контактов и испытания. Не повторяется создание драйвера, всего CAD и телеметрии.",
         "en": "The 155 hours continue work on the same validated machine: two added legs, new contact modes and testing. Driver creation, all CAD and telemetry are not repeated."
@@ -2346,6 +2441,7 @@
       },
       "hours": 29,
       "reason": "Новые wave/ripple изучаются полностью на готовом автомате crawl.",
+      "reason_en": "Cover the new wave and ripple gaits in full using the existing crawl state machine.",
       "previous_stage_rationale": {
         "ru": "155 ч — дальнейшая работа с той же проверенной машиной: две дополнительные ноги, новый режим контактов и испытания. Не повторяется создание драйвера, всего CAD и телеметрии.",
         "en": "The 155 hours continue work on the same validated machine: two added legs, new contact modes and testing. Driver creation, all CAD and telemetry are not repeated."
@@ -2371,6 +2467,7 @@
       },
       "hours": 30,
       "reason": "Новые плоскость опоры и уклоны; датчики и контур ориентации уже готовы.",
+      "reason_en": "The support plane and slopes are new. The sensors and orientation loop are ready.",
       "previous_stage_rationale": {
         "ru": "155 ч — дальнейшая работа с той же проверенной машиной: две дополнительные ноги, новый режим контактов и испытания. Не повторяется создание драйвера, всего CAD и телеметрии.",
         "en": "The 155 hours continue work on the same validated machine: two added legs, new contact modes and testing. Driver creation, all CAD and telemetry are not repeated."
@@ -2396,6 +2493,7 @@
       },
       "hours": 32,
       "reason": "40 физических попыток и тепловые/энергетические данные сохранены; один итоговый пакет.",
+      "reason_en": "Preserve 40 physical trials plus thermal and power data in one final evidence package.",
       "previous_stage_rationale": {
         "ru": "155 ч — дальнейшая работа с той же проверенной машиной: две дополнительные ноги, новый режим контактов и испытания. Не повторяется создание драйвера, всего CAD и телеметрии.",
         "en": "The 155 hours continue work on the same validated machine: two added legs, new contact modes and testing. Driver creation, all CAD and telemetry are not repeated."
@@ -2421,6 +2519,7 @@
       },
       "hours": 10,
       "reason": "Новый MoveIt подключается к готовой модели A1; URDF повторно не создаётся.",
+      "reason_en": "Integrate MoveIt with the existing A1 model and reuse its URDF.",
       "previous_stage_rationale": {
         "ru": "40 ч на интеграцию и понимание одной цепочки планирования движений после изучения кинематики. Повторная реализация IK, URDF и собственного планировщика не требуется.",
         "en": "The 40 h integrate and explain one planning chain after kinematics. Do not rewrite IK, URDF or a motion planner."
@@ -2446,6 +2545,7 @@
       },
       "hours": 10,
       "reason": "Одна сцена и готовый планировщик, с самостоятельной проверкой отказов.",
+      "reason_en": "Use one scene and an existing planner with independent failure checks.",
       "previous_stage_rationale": {
         "ru": "40 ч на интеграцию и понимание одной цепочки планирования движений после изучения кинематики. Повторная реализация IK, URDF и собственного планировщика не требуется.",
         "en": "The 40 h integrate and explain one planning chain after kinematics. Do not rewrite IK, URDF or a motion planner."
@@ -2471,6 +2571,7 @@
       },
       "hours": 10,
       "reason": "Временная параметризация и проверка реальных пределов всей траектории.",
+      "reason_en": "Cover time parametrisation and check physical limits along the entire trajectory.",
       "previous_stage_rationale": {
         "ru": "40 ч на интеграцию и понимание одной цепочки планирования движений после изучения кинематики. Повторная реализация IK, URDF и собственного планировщика не требуется.",
         "en": "The 40 h integrate and explain one planning chain after kinematics. Do not rewrite IK, URDF or a motion planner."
@@ -2496,6 +2597,7 @@
       },
       "hours": 10,
       "reason": "Готовые ROS-контракты S2 используются для отмены и устаревшей сцены.",
+      "reason_en": "Reuse S2 ROS contracts for cancellation and stale scene handling.",
       "previous_stage_rationale": {
         "ru": "40 ч на интеграцию и понимание одной цепочки планирования движений после изучения кинематики. Повторная реализация IK, URDF и собственного планировщика не требуется.",
         "en": "The 40 h integrate and explain one planning chain after kinematics. Do not rewrite IK, URDF or a motion planner."
@@ -2521,6 +2623,7 @@
       },
       "hours": 49,
       "reason": "Полная собственная физическая сборка; изготовление и контроль диапазонов сохранены.",
+      "reason_en": "Retain full custom physical assembly, fabrication and range-of-motion checks.",
       "previous_stage_rationale": null
     },
     {
@@ -2543,6 +2646,7 @@
       },
       "hours": 34,
       "reason": "Питание/жгуты и поддержка вертикальных звеньев сохраняются; методика остановки уже освоена.",
+      "reason_en": "Retain power wiring, harnesses and support for vertical links. The stop method is already established.",
       "previous_stage_rationale": null
     },
     {
@@ -2565,6 +2669,7 @@
       },
       "hours": 47,
       "reason": "Новые калибровки осей/TCP, люфт и прогиб; повторно используется анализ M03.",
+      "reason_en": "Axis and TCP calibration, backlash and deflection are new. Reuse M03 analysis.",
       "previous_stage_rationale": null
     },
     {
@@ -2587,6 +2692,7 @@
       },
       "hours": 7,
       "reason": "Один обычный автомат состояний; поведение хватания новое, программная техника знакома.",
+      "reason_en": "Use a conventional state machine. Grasping behaviour is new and the programming technique is familiar.",
       "previous_stage_rationale": {
         "ru": "25 ч отведены на новые правила выполнения манипуляций. Драйвер, физические калибровки, удержание, 30 успешных переносов и проверки отказов уже учтены в A2/A3 в составе 425 ч проекта манипулятора.",
         "en": "The 25 h cover new manipulation semantics. Physical driver, calibration, retention, 30 positive transfers and faults are already budgeted in A2/A3 within the 425 h arm project."
@@ -2612,6 +2718,7 @@
       },
       "hours": 6,
       "reason": "Согласовать уже существующие интерфейсы, не реализовывать второй ROS-слой.",
+      "reason_en": "Align existing interfaces within the shared ROS layer.",
       "previous_stage_rationale": {
         "ru": "25 ч отведены на новые правила выполнения манипуляций. Драйвер, физические калибровки, удержание, 30 успешных переносов и проверки отказов уже учтены в A2/A3 в составе 425 ч проекта манипулятора.",
         "en": "The 25 h cover new manipulation semantics. Physical driver, calibration, retention, 30 positive transfers and faults are already budgeted in A2/A3 within the 425 h arm project."
@@ -2637,6 +2744,7 @@
       },
       "hours": 3,
       "reason": "Минимальное разрешение/отмена в существующем интерфейсе, без отдельного UI-проекта.",
+      "reason_en": "Add minimal authorisation and cancellation controls to the existing interface.",
       "previous_stage_rationale": {
         "ru": "25 ч отведены на новые правила выполнения манипуляций. Драйвер, физические калибровки, удержание, 30 успешных переносов и проверки отказов уже учтены в A2/A3 в составе 425 ч проекта манипулятора.",
         "en": "The 25 h cover new manipulation semantics. Physical driver, calibration, retention, 30 positive transfers and faults are already budgeted in A2/A3 within the 425 h arm project."
@@ -2662,6 +2770,7 @@
       },
       "hours": 21,
       "reason": "Новая геометрическая калибровка камеры и независимые позы сохраняются.",
+      "reason_en": "Retain the new geometric camera calibration and independent test poses.",
       "previous_stage_rationale": {
         "ru": "55 ч создают одну работающую задачу зрения для манипулятора. Не обещаются произвольные предметы, неизвестная высота стола или автономная работа в незнакомой среде. Классика и последующий ML сравниваются на одной задаче.",
         "en": "The 55 h produce one working arm-vision task. Do not promise arbitrary objects, unknown table height or autonomy in unfamiliar scenes. Classical and later ML methods are compared on the same task."
@@ -2687,6 +2796,7 @@
       },
       "hours": 11,
       "reason": "Один простой цветовой/геометрический метод в фиксированной рабочей области.",
+      "reason_en": "Use one simple colour or geometry method in a fixed workspace.",
       "previous_stage_rationale": {
         "ru": "55 ч создают одну работающую задачу зрения для манипулятора. Не обещаются произвольные предметы, неизвестная высота стола или автономная работа в незнакомой среде. Классика и последующий ML сравниваются на одной задаче.",
         "en": "The 55 h produce one working arm-vision task. Do not promise arbitrary objects, unknown table height or autonomy in unfamiliar scenes. Classical and later ML methods are compared on the same task."
@@ -2712,6 +2822,7 @@
       },
       "hours": 10,
       "reason": "Новая связь камера–манипулятор; готовые преобразования и границы используются повторно.",
+      "reason_en": "The camera-to-arm relationship is new. Reuse the existing transforms and limits.",
       "previous_stage_rationale": {
         "ru": "55 ч создают одну работающую задачу зрения для манипулятора. Не обещаются произвольные предметы, неизвестная высота стола или автономная работа в незнакомой среде. Классика и последующий ML сравниваются на одной задаче.",
         "en": "The 55 h produce one working arm-vision task. Do not promise arbitrary objects, unknown table height or autonomy in unfamiliar scenes. Classical and later ML methods are compared on the same task."
@@ -2737,6 +2848,7 @@
       },
       "hours": 8,
       "reason": "Один ROS-узел на готовом каркасе S2, со всеми отрицательными сценариями.",
+      "reason_en": "Build one ROS node on the S2 scaffold and retain all failure cases.",
       "previous_stage_rationale": {
         "ru": "55 ч создают одну работающую задачу зрения для манипулятора. Не обещаются произвольные предметы, неизвестная высота стола или автономная работа в незнакомой среде. Классика и последующий ML сравниваются на одной задаче.",
         "en": "The 55 h produce one working arm-vision task. Do not promise arbitrary objects, unknown table height or autonomy in unfamiliar scenes. Classical and later ML methods are compared on the same task."
@@ -2762,6 +2874,7 @@
       },
       "hours": 18,
       "reason": "Новые разбиения по сеансам; сбор и ROI используются из M14.",
+      "reason_en": "Session-based splits are new. Reuse data collection and ROI from M14.",
       "previous_stage_rationale": {
         "ru": "70 ч используют готовую камеру, область интереса, ROS и измерения M14. Новые задачи — постановка задачи машинного обучения, подготовка данных, обучение и оценка. Отсутствие улучшения относительно классического метода — допустимый научно корректный результат; слабую модель нельзя считать готовой системой управления.",
         "en": "The 70 h reuse M14 camera, ROIs, ROS and measurements. New work is ML formulation, dataset discipline, training and evaluation. Failure to beat the classical method is a valid result, not a reason to present a weak model as a qualified controller."
@@ -2787,6 +2900,7 @@
       },
       "hours": 18,
       "reason": "Новый цикл PyTorch и одна небольшая модель; Python/DataLoader-код короткий.",
+      "reason_en": "The PyTorch training loop and one small model are new. Keep Python and DataLoader code short.",
       "previous_stage_rationale": {
         "ru": "70 ч используют готовую камеру, область интереса, ROS и измерения M14. Новые задачи — постановка задачи машинного обучения, подготовка данных, обучение и оценка. Отсутствие улучшения относительно классического метода — допустимый научно корректный результат; слабую модель нельзя считать готовой системой управления.",
         "en": "The 70 h reuse M14 camera, ROIs, ROS and measurements. New work is ML formulation, dataset discipline, training and evaluation. Failure to beat the classical method is a valid result, not a reason to present a weak model as a qualified controller."
@@ -2812,6 +2926,7 @@
       },
       "hours": 18,
       "reason": "Новые метрики и выбор порога изучаются; анализ автоматизирован без сокращения тестовых случаев.",
+      "reason_en": "Learn new metrics and threshold selection. Automate analysis and retain the complete test set.",
       "previous_stage_rationale": {
         "ru": "70 ч используют готовую камеру, область интереса, ROS и измерения M14. Новые задачи — постановка задачи машинного обучения, подготовка данных, обучение и оценка. Отсутствие улучшения относительно классического метода — допустимый научно корректный результат; слабую модель нельзя считать готовой системой управления.",
         "en": "The 70 h reuse M14 camera, ROIs, ROS and measurements. New work is ML formulation, dataset discipline, training and evaluation. Failure to beat the classical method is a valid result, not a reason to present a weak model as a qualified controller."
@@ -2837,6 +2952,7 @@
       },
       "hours": 10,
       "reason": "Одна CPU-модель в готовом ROS-конвейере; физическая проверка включена в A3.",
+      "reason_en": "Deploy one CPU model to the existing ROS pipeline. A3 includes the physical check.",
       "previous_stage_rationale": {
         "ru": "70 ч используют готовую камеру, область интереса, ROS и измерения M14. Новые задачи — постановка задачи машинного обучения, подготовка данных, обучение и оценка. Отсутствие улучшения относительно классического метода — допустимый научно корректный результат; слабую модель нельзя считать готовой системой управления.",
         "en": "The 70 h reuse M14 camera, ROIs, ROS and measurements. New work is ML formulation, dataset discipline, training and evaluation. Failure to beat the classical method is a valid result, not a reason to present a weak model as a qualified controller."
@@ -2862,6 +2978,7 @@
       },
       "hours": 30,
       "reason": "Один реальный исполнитель на готовых S2/MoveIt и измеренной модели A2.",
+      "reason_en": "Use one real executor with the existing S2 and MoveIt setup and the measured A2 model.",
       "previous_stage_rationale": null
     },
     {
@@ -2884,6 +3001,7 @@
       },
       "hours": 32,
       "reason": "Все 30 переносов, удержание и случай 500 г сохранены; подсчёт и графики автоматические.",
+      "reason_en": "Retain all 30 transfers, the hold test and the 500 g case. Automate counts and plots.",
       "previous_stage_rationale": null
     },
     {
@@ -2906,6 +3024,7 @@
       },
       "hours": 34,
       "reason": "Все 100 циклов, осмотры, тепловой опыт и отказы сохранены; отчёт из общих журналов.",
+      "reason_en": "Retain all 100 cycles, inspections, thermal testing and failure cases. Report from the shared logs.",
       "previous_stage_rationale": null
     },
     {
@@ -2928,6 +3047,7 @@
       },
       "hours": 4,
       "reason": "Сверка физической серии A3 и результата ML; повторять всю серию не требуется.",
+      "reason_en": "Review the A3 physical trial series and ML results for acceptance.",
       "previous_stage_rationale": null
     },
     {
@@ -2950,6 +3070,7 @@
       },
       "hours": 27,
       "reason": "Пять движений и минимальный редактор на готовых ROS/прошивке; без второго UI-фреймворка.",
+      "reason_en": "Use the existing ROS and firmware setup for five motions and a minimal editor.",
       "previous_stage_rationale": null
     },
     {
@@ -2972,6 +3093,7 @@
       },
       "hours": 23,
       "reason": "100 циклов, отказы, манекен и примерка сохранены; шаблоны испытаний и выпуска общие.",
+      "reason_en": "Retain 100 cycles, failure cases, mannequin and fitting checks. Share test and release templates.",
       "previous_stage_rationale": null
     },
     {
@@ -2994,6 +3116,7 @@
       },
       "hours": 2,
       "reason": "Сверить готовую матрицу доказательств, собранную по ходу работ; на новую вёрстку и повторный обзор снят 1 ч.",
+      "reason_en": "Check the evidence matrix assembled throughout the work. Cut one hour of new layout and repeat review.",
       "previous_stage_rationale": {
         "ru": "30 ч на объединение готовых результатов проектов. Физическая безопасность, ресурс и повторные испытания проверяются внутри проектов; независимая проверка G4 оценивает готовность, не создавая ещё один процесс подготовки выпуска.",
         "en": "The 30 h integrate completed releases. Physical safety, endurance and repeated trials belong to projects; independent G4 checks readiness rather than creating another release pipeline."
@@ -3019,6 +3142,7 @@
       },
       "hours": 4,
       "reason": "Упаковать существующие CI/окружение/CAD по единому шаблону; снят 1 ч повторной организации. Изучение сохранено.",
+      "reason_en": "Package existing CI, environment and CAD assets using one template. Cut one hour of reorganisation and retain the learning time.",
       "previous_stage_rationale": {
         "ru": "30 ч на объединение готовых результатов проектов. Физическая безопасность, ресурс и повторные испытания проверяются внутри проектов; независимая проверка G4 оценивает готовность, не создавая ещё один процесс подготовки выпуска.",
         "en": "The 30 h integrate completed releases. Physical safety, endurance and repeated trials belong to projects; independent G4 checks readiness rather than creating another release pipeline."
@@ -3044,6 +3168,7 @@
       },
       "hours": 3,
       "reason": "Воспроизвести те же три готовых сценария общим запуском; снят 1 ч подготовки и оформления. Физическая приёмка не повторяется.",
+      "reason_en": "Reproduce the same three existing scenarios through a shared launch. Cut one hour of setup and presentation and reuse the physical acceptance evidence.",
       "previous_stage_rationale": {
         "ru": "30 ч на объединение готовых результатов проектов. Физическая безопасность, ресурс и повторные испытания проверяются внутри проектов; независимая проверка G4 оценивает готовность, не создавая ещё один процесс подготовки выпуска.",
         "en": "The 30 h integrate completed releases. Physical safety, endurance and repeated trials belong to projects; independent G4 checks readiness rather than creating another release pipeline."
@@ -3069,6 +3194,7 @@
       },
       "hours": 2.6666666666666665,
       "reason": "Портфолио из готовых материалов по короткому шаблону; сняты 1 ч 20 мин подготовки/редактирования. Час изучения и объяснение решений сохранены.",
+      "reason_en": "Build the portfolio from existing materials using a short template. Cut one hour and 20 minutes of setup and editing and retain one hour of study and the design explanation.",
       "previous_stage_rationale": {
         "ru": "30 ч на объединение готовых результатов проектов. Физическая безопасность, ресурс и повторные испытания проверяются внутри проектов; независимая проверка G4 оценивает готовность, не создавая ещё один процесс подготовки выпуска.",
         "en": "The 30 h integrate completed releases. Physical safety, endurance and repeated trials belong to projects; independent G4 checks readiness rather than creating another release pipeline."
@@ -3094,6 +3220,7 @@
       },
       "hours": 4,
       "reason": "Итоговое решение по собранным доказательствам всех проектов, без второго выпуска.",
+      "reason_en": "Make the final decision using the evidence already collected across all projects.",
       "previous_stage_rationale": null
     }
   ],

@@ -1,4 +1,5 @@
 """Source, schedule and rendered-content checks. Run: python3 tests/content_test.py."""
+import html
 import json
 import re
 import unittest
@@ -91,6 +92,45 @@ class ContentBlocks(HTMLParser):
 
 
 class ContentTests(unittest.TestCase):
+    def test_project_overviews_use_current_stage_effort(self):
+        items = read_json('estimate.json')['items']
+        projects = (ROOT / 'projects.html').read_text()
+        review = (ROOT / 'hexapod-review.html').read_text()
+        stages = ('L1', 'M19', 'M22', 'M23')
+        total = sum(items[stage]['hours'] for stage in stages)
+        quantity = ' + '.join(f"{stage} {items[stage]['hours']}" for stage in stages)
+        for unit in ('ч', 'h'):
+            self.assertIn(f'{quantity} = {total} {unit}', projects)
+            for stage in stages:
+                self.assertIn(f"{stage}: {items[stage]['hours']} {unit}", review)
+            vision, learning = (items[stage]['hours'] for stage in ('M14', 'M18'))
+            self.assertIn(f'M14 {vision} {unit} + M18 {learning} {unit} = {vision + learning} {unit}', projects)
+
+    def test_project_package_tables_match_active_estimates(self):
+        items = read_json('estimate.json')['items']
+        stages = ('A1', 'A2', 'A3', 'T1', 'T2', 'T3')
+        expected = {task['refs'][0]: task['hours']
+                    for stage in stages for task in items[stage]['tasks']}
+        page = (ROOT / 'projects.html').read_text()
+        counts = Counter()
+        for row in re.findall(r'<tr>.*?</tr>', page, flags=re.S):
+            cells = re.findall(r'<td>(.*?)</td>', row, flags=re.S)
+            if not cells or not cells[-1].isdigit():
+                continue
+            package = cells[0].split(' · ', 1)[0]
+            if package in expected:
+                self.assertEqual(int(cells[-1]), expected[package], package)
+                counts[package] += 1
+        self.assertEqual(counts, {key: 2 if key.startswith('A') else 1 for key in expected})
+
+    def test_method_shows_every_estimate_rationale_in_both_languages(self):
+        page = (ROOT / 'method.html').read_text()
+        for row in read_json('task-hour-review.json')['tasks']:
+            ru = html.escape(row['reason'])
+            en = html.escape(row['reason_en'])
+            self.assertTrue(en.strip(), row['key'])
+            self.assertIn(f'<span lang="ru">{ru}</span><span lang="en">{en}</span>', page, row['key'])
+
     @classmethod
     def setUpClass(cls):
         cls.schedule = read_json('schedule.json')
