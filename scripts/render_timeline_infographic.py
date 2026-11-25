@@ -5,7 +5,7 @@ from datetime import date, timedelta
 
 
 def forecast_dates(schedule, weekly_hours, extra_percent, vacation):
-    """Apply the scenarios documented in plan-forecast.md to cumulative effort."""
+    """Apply the selected forecast scenario to cumulative effort."""
     day = date.fromisoformat(schedule['start'])
     excluded = {date.fromisoformat(value) for value in schedule['excluded_dates']}
     if vacation:
@@ -174,8 +174,7 @@ def render_infographic(schedule, bi, duration):
     ]
     out.append('<div class="roadmap-forecast"><div class="roadmap-forecast-heading"><h3>'
                + bi('Когда будут готовы проекты', 'When the projects are ready')
-               + '</h3><a href="plan-forecast.md">' + bi('Допущения прогноза ↗', 'Forecast assumptions ↗')
-               + '</a></div><fieldset class="roadmap-scenarios"><legend>'
+               + '</h3></div><fieldset class="roadmap-scenarios"><legend>'
                + bi('Сравните сроки приёмок · отдых = две недели', 'Compare acceptance dates · time off = two weeks')
                + '</legend>')
     for index, (ru, en, _) in enumerate(scenarios):
